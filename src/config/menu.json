@@ -5,20 +5,20 @@
       "url": "/"
     },
     {
-      "name": "Blog",
-      "url": "/blogs"
+      "name": "Services",
+      "url": "/services"
     },
     {
-      "name": "Pricing",
-      "url": "/pricing"
+      "name": "How It Works",
+      "url": "/how-it-works"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Why Us",
+      "url": "/why-us"
     },
     {
       "name": "FAQ",
-      "url": "/faq"
+      "url": "/help"
     }
   ],
   "footer": [

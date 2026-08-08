@@ -10,11 +10,11 @@ const Logo = ({ src }) => {
   return (
     <Link
       href={base_url}
-      className="navbar-brand block py-1"
-      style={{
+      className="navbar-brand flex items-center py-1"
+      style={src || logo ? {
         height: logo_height.replace("px", "") + "px",
         width: logo_width.replace("px", "") + "px",
-      }}
+      } : undefined}
     >
       {src || logo ? (
         <Image

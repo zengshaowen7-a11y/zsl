@@ -6,15 +6,15 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #0aa8a7;
+  --color-primary: #18d7a0;
   --color-body: #fff;
   --color-border: #e9e9e9;
-  --color-light: #edf6f5;
+  --color-light: #f1f7f5;
   --color-text: #777;
   --color-text-dark: #222;
 
   /* === Font Families === */
-  --font-primary: Lato, sans-serif;
+  --font-primary: Manrope, sans-serif;
 
   /* === Font Sizes === */
   --text-base: 16px;

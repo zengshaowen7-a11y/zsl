@@ -4,24 +4,50 @@ import Logo from "@components/Logo";
 import menu from "@config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import config from "../../config/config.json";
 
 const Header = () => {
   const pathname = usePathname();
+  const isChinese = pathname === "/zh" || pathname.startsWith("/zh/");
+  const basePathname = isChinese ? pathname.replace(/^\/zh/, "") || "/" : pathname;
+  const languageTarget = isChinese ? basePathname : `/zh${pathname === "/" ? "" : pathname}`;
+  const hasOverlayHeader = ["/", "/services", "/how-it-works", "/why-us", "/help"].includes(basePathname);
 
   // distructuring the main menu from menu object
   const { main } = menu;
 
   // states declaration
   const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [navTheme, setNavTheme] = useState("dark");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 24);
+      const marker = 96;
+      const activeSection = Array.from(
+        document.querySelectorAll("main > section")
+      ).find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= marker && rect.bottom > marker;
+      });
+      const usesDarkNav = activeSection?.matches(
+        ".smt-hero, .smt-process, .smt-quote, .detail-hero, .detail-dark"
+      );
+      setNavTheme(usesDarkNav ? "dark" : "light");
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // logo source
   const { logo } = config.site;
   const { enable, label, link } = config.nav_button;
 
   return (
-    <header className="header">
+    <header className={`header ${hasOverlayHeader ? "header-transparent" : "header-solid"} ${scrolled ? "is-scrolled" : ""} nav-on-${navTheme}`}>
       <nav className="navbar container">
         {/* logo */}
         <div className="order-0">
@@ -70,7 +96,7 @@ const Header = () => {
                       {menu.children.map((child, i) => (
                         <li className="nav-dropdown-item" key={`children-${i}`}>
                           <Link
-                            href={child.url}
+                            href={isChinese ? `/zh${child.url}` : child.url}
                             className="nav-dropdown-link block"
                           >
                             {child.name}
@@ -82,10 +108,10 @@ const Header = () => {
                 ) : (
                   <li className="nav-item">
                     <Link
-                      href={menu.url}
+                      href={isChinese ? `/zh${menu.url === "/" ? "" : menu.url}` : menu.url}
                       onClick={() => setNavOpen(false)}
                       className={`nav-link block ${
-                        pathname === menu.url ? "nav-link-active" : ""
+                        basePathname === menu.url ? "nav-link-active" : ""
                       }`}
                     >
                       {menu.name}
@@ -107,9 +133,12 @@ const Header = () => {
             )}
           </ul>
         </div>
+        <a className="language-switch order-1 md:order-2" href={languageTarget} aria-label="Switch language">
+          {isChinese ? "EN" : "中文"}
+        </a>
         {enable && (
           <div className="d-flex order-1 ml-auto hidden min-w-[200px] items-center justify-end md:order-2 md:ml-0 md:flex">
-            <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
+            <Link className="btn btn-primary z-0 py-[14px]" href={isChinese ? "/zh#quote" : link} rel="">
               {label}
             </Link>
           </div>

@@ -1,0 +1,52 @@
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+export default function ScrollReveal() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const groups = [
+      ["main section:not(:first-child) h2, main section:not(:first-child) .smt-kicker", "reveal-up"],
+      [".smt-service-card, .detail-card-grid article, .detail-result-grid article", "reveal-scale"],
+      [".smt-step, .detail-list > div, .detail-guide-panel > div", "reveal-right"],
+      [".smt-adv-main, .detail-guide-panel:first-child", "reveal-left"],
+      [".smt-adv-stack, .detail-guide-panel:last-child", "reveal-right"],
+      [".smt-form, .detail-hero-card", "reveal-scale"],
+      [".smt-faq details, .detail-mini-faq details", "reveal-up"],
+    ];
+
+    const elements = [];
+    groups.forEach(([selector, effect]) => {
+      document.querySelectorAll(selector).forEach((element, index) => {
+        element.classList.add("scroll-reveal", effect);
+        element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 90}ms`);
+        elements.push(element);
+      });
+    });
+
+    const heroItems = document.querySelectorAll(".smt-hero-grid > *, .detail-hero-grid > *");
+    heroItems.forEach((element, index) => {
+      element.classList.add("scroll-reveal", index % 2 ? "reveal-right" : "reveal-left");
+      element.style.setProperty("--reveal-delay", `${180 + index * 120}ms`);
+      requestAnimationFrame(() => element.classList.add("is-visible"));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  return null;
+}
