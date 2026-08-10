@@ -6,16 +6,18 @@ import { serviceCatalog } from "@config/service-catalog";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { FiCheck, FiChevronDown, FiGlobe } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronDown, FiGlobe } from "react-icons/fi";
 
 export default function Header() {
   const pathname = usePathname();
   const { nav } = getFulfillmentCopy("en");
   const [navOpen, setNavOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [navTheme, setNavTheme] = useState("dark");
   const languageRef = useRef(null);
+  const servicesRef = useRef(null);
 
   const homeHref = "/";
   const servicesHref = "/services";
@@ -42,20 +44,24 @@ export default function Header() {
       );
     };
 
-    const closeLanguageMenu = (event) => {
+    const closeHeaderMenus = (event) => {
       if (!languageRef.current?.contains(event.target)) setLanguageOpen(false);
+      if (!servicesRef.current?.contains(event.target)) setServicesOpen(false);
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    document.addEventListener("pointerdown", closeLanguageMenu);
+    document.addEventListener("pointerdown", closeHeaderMenus);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("pointerdown", closeLanguageMenu);
+      document.removeEventListener("pointerdown", closeHeaderMenus);
     };
   }, [pathname]);
 
-  const closeNav = () => setNavOpen(false);
+  const closeNav = () => {
+    setNavOpen(false);
+    setServicesOpen(false);
+  };
 
   return (
     <header
@@ -90,24 +96,42 @@ export default function Header() {
                 {nav.home}
               </Link>
             </li>
-            <li className="nav-item nav-dropdown group relative">
-              <Link
-                className={`nav-link inline-flex items-center gap-1 ${pathname === "/services" ? "nav-link-active" : ""}`}
-                href={servicesHref}
-                onClick={closeNav}
+            <li
+              className="nav-item nav-dropdown relative"
+              ref={servicesRef}
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setServicesOpen(false);
+              }}
+            >
+              <button
+                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${pathname === "/services" ? "nav-link-active" : ""}`}
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((open) => !open)}
               >
                 {nav.services}
-                <FiChevronDown aria-hidden="true" />
-              </Link>
-              <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
-                {serviceCatalog.map((service) => (
+                <FiChevronDown className={servicesOpen ? "is-open" : ""} aria-hidden="true" />
+              </button>
+              <div className={`service-mega-menu ${servicesOpen ? "is-open" : ""}`} role="menu">
+                <div className="service-menu-heading">
+                  <div><small>OUR SERVICES</small><strong>Everything from factory to doorstep</strong></div>
+                  <Link href={servicesHref} onClick={closeNav}>View all services<FiArrowRight /></Link>
+                </div>
+                <ul className="service-menu-grid">
+                {serviceCatalog.map((service, index) => (
                   <li className="nav-dropdown-item" key={service.id}>
-                    <Link className="nav-dropdown-link block" href={`/services#${service.id}`} onClick={closeNav}>
-                      {service.menuTitle}
+                    <Link className="service-menu-link" href={`/services#${service.id}`} onClick={closeNav} role="menuitem">
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <strong>{service.menuTitle}</strong>
+                      <FiArrowRight />
                     </Link>
                   </li>
                 ))}
-              </ul>
+                </ul>
+              </div>
             </li>
             <li className="nav-item">
               <Link
