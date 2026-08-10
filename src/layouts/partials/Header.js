@@ -2,7 +2,7 @@
 
 import Logo from "@components/Logo";
 import { getFulfillmentCopy } from "@config/fulfillment-content";
-import { serviceCatalog } from "@config/service-catalog";
+import { servicePages } from "@config/service-page-content";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -106,7 +106,7 @@ export default function Header() {
               }}
             >
               <button
-                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${pathname === "/services" ? "nav-link-active" : ""}`}
+                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${pathname.startsWith("/services") ? "nav-link-active" : ""}`}
                 type="button"
                 aria-haspopup="menu"
                 aria-expanded={servicesOpen}
@@ -116,14 +116,13 @@ export default function Header() {
                 <FiChevronDown className={servicesOpen ? "is-open" : ""} aria-hidden="true" />
               </button>
               <div className={`service-mega-menu ${servicesOpen ? "is-open" : ""}`} role="menu">
-                <div className="service-menu-heading">
-                  <div><small>OUR SERVICES</small><strong>Everything from factory to doorstep</strong></div>
-                  <Link href={servicesHref} onClick={closeNav}>View all services<FiArrowRight /></Link>
-                </div>
+                <Link className="service-menu-overview" href={servicesHref} onClick={closeNav} role="menuitem">
+                  <strong>Our Services Overview</strong><FiArrowRight />
+                </Link>
                 <ul className="service-menu-grid">
-                {serviceCatalog.map((service, index) => (
-                  <li className="nav-dropdown-item" key={service.id}>
-                    <Link className="service-menu-link" href={`/services#${service.id}`} onClick={closeNav} role="menuitem">
+                {servicePages.map((service, index) => (
+                  <li className="nav-dropdown-item" key={service.slug}>
+                    <Link className="service-menu-link" href={`/services/${service.slug}`} onClick={closeNav} role="menuitem">
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <strong>{service.menuTitle}</strong>
                       <FiArrowRight />
