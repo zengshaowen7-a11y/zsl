@@ -2,6 +2,7 @@
 
 import Logo from "@components/Logo";
 import { getFulfillmentCopy } from "@config/fulfillment-content";
+import { serviceCatalog } from "@config/service-catalog";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -99,10 +100,10 @@ export default function Header() {
                 <FiChevronDown aria-hidden="true" />
               </Link>
               <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
-                {nav.serviceItems.map(([name, url]) => (
-                  <li className="nav-dropdown-item" key={name}>
-                    <Link className="nav-dropdown-link block" href={url} onClick={closeNav}>
-                      {name}
+                {serviceCatalog.map((service) => (
+                  <li className="nav-dropdown-item" key={service.id}>
+                    <Link className="nav-dropdown-link block" href={`/services#${service.id}`} onClick={closeNav}>
+                      {service.menuTitle}
                     </Link>
                   </li>
                 ))}

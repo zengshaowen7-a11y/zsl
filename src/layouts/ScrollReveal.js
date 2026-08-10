@@ -15,7 +15,7 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card",
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-workflow-grid article",
         "reveal-scale",
       ],
       [
@@ -23,11 +23,11 @@ export default function ScrollReveal() {
         "reveal-right",
       ],
       [
-        ".smt-adv-main, .detail-guide-panel:first-child, .ff-quality-copy, .ff-inner-section:nth-of-type(even) .ff-inner-copy",
+        ".smt-adv-main, .detail-guide-panel:first-child, .ff-quality-copy, .ff-inner-section:nth-of-type(even) .ff-inner-copy, .fsp-assurance-grid > div:first-child, .fsp-feature > div:last-child",
         "reveal-left",
       ],
       [
-        ".smt-adv-stack, .detail-guide-panel:last-child, .ff-quality-media, .ff-inner-section:nth-of-type(odd) .ff-inner-copy",
+        ".smt-adv-stack, .detail-guide-panel:last-child, .ff-quality-media, .ff-inner-section:nth-of-type(odd) .ff-inner-copy, .fsp-issue-panel, .fsp-feature-media",
         "reveal-right",
       ],
       [
@@ -50,7 +50,7 @@ export default function ScrollReveal() {
     });
 
     const heroItems = document.querySelectorAll(
-      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *",
+      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *, .fsp-hero-grid > *",
     );
     heroItems.forEach((element, index) => {
       element.classList.add("scroll-reveal", index % 2 ? "reveal-right" : "reveal-left");

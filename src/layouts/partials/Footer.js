@@ -1,4 +1,5 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
+import { serviceCatalog } from "@config/service-catalog";
 import Link from "next/link";
 import { FiArrowUpRight, FiGlobe, FiMail, FiMessageCircle } from "react-icons/fi";
 
@@ -19,10 +20,9 @@ export default function Footer() {
           </div>
           <div>
             <h3>{footer.services}</h3>
-            <Link href="/services#sourcing">{nav.serviceItems[0][0]}</Link>
-            <Link href="/services#quality">{nav.serviceItems[1][0]}</Link>
-            <Link href="/services#warehousing">{nav.serviceItems[2][0]}</Link>
-            <Link href="/services#fulfillment">{nav.serviceItems[3][0]}</Link>
+            {serviceCatalog.slice(0, 4).map((service) => (
+              <Link href={`/services#${service.id}`} key={service.id}>{service.menuTitle}</Link>
+            ))}
           </div>
           <div>
             <h3>{footer.company}</h3>

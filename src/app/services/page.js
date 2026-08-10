@@ -1,6 +1,6 @@
 import SeoMeta from "@layouts/SeoMeta";
-import { FulfillmentServices } from "@layouts/FulfillmentInnerPage";
+import FulfillmentServicesPage from "@layouts/FulfillmentServicesPage";
 
 export default function ServicesPage() {
-  return <><SeoMeta title="China Sourcing, QC & Fulfillment Services" /><FulfillmentServices lang="en" /></>;
+  return <><SeoMeta title="China Sourcing, QC & Fulfillment Services" /><FulfillmentServicesPage /></>;
 }
