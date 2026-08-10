@@ -1,60 +1,24 @@
-import Social from "@components/Social";
-import config from "@config/config.json";
-import menu from "@config/menu.json";
-import social from "@config/social.json";
-import { markdownify } from "@lib/utils/textConverter";
-import Image from "next/image";
+"use client";
+
+import { getFulfillmentCopy } from "@config/fulfillment-content";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FiArrowUpRight, FiGlobe, FiMail, FiMessageCircle } from "react-icons/fi";
 
-const Footer = () => {
-  const { copyright, footer_content } = config.params;
-  const { footer } = menu;
-  return (
-    <footer className="section bg-light pb-0">
-      <div className="container">
-        {/* footer menu */}
-        <div className="row">
-          {footer.map((col) => {
-            return (
-              <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
-                {markdownify(col.name, "h2", "h5")}
-                <ul className="mt-6">
-                  {col?.menu.map((item) => (
-                    <li className="mb-1" key={item.text}>
-                      <Link href={item.url} rel="">
-                        {item.text}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-          {/* social icons */}
-          <div className="md-12 sm:col-6 lg:col-3">
-            <Link href="/" aria-label={config.site.title} className="footer-brand">
-              {config.site.logo ? (
-                <Image
-                  src={config.site.logo}
-                  width={config.site.logo_width}
-                  height={config.site.logo_height}
-                  alt={config.site.title}
-                />
-              ) : (
-                <><span>F</span>{config.site.logo_text || config.site.title}</>
-              )}
-            </Link>
-            {markdownify(footer_content, "p", "mt-3 mb-6")}
-            <Social source={social} className="social-icons mb-8" />
-          </div>
-        </div>
-        {/* copyright */}
-        <div className="border-t border-border py-6">
-          {markdownify(copyright, "p", "text-sm text-center")}
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+export default function Footer() {
+  const pathname = usePathname();
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const { footer, nav } = getFulfillmentCopy(isZh ? "zh" : "en");
+  const home = isZh ? "/zh" : "/";
+  const services = isZh ? "/zh/services" : "/services";
+  const about = isZh ? "/zh/about-us" : "/about-us";
+  return <footer className="ff-footer"><div className="container">
+    <div className="ff-footer-main">
+      <div className="ff-footer-brand"><Link href={home}><span>F</span>FlowBridge</Link><p>{footer.lead}</p><div><span><FiGlobe />Global fulfillment</span><span><FiMessageCircle />Human support</span></div></div>
+      <div><h3>{footer.services}</h3><Link href={`${services}#sourcing`}>{nav.serviceItems[0][0]}</Link><Link href={`${services}#quality`}>{nav.serviceItems[1][0]}</Link><Link href={`${services}#warehousing`}>{nav.serviceItems[2][0]}</Link><Link href={`${services}#fulfillment`}>{nav.serviceItems[3][0]}</Link></div>
+      <div><h3>{footer.company}</h3><Link href={home}>{nav.home}</Link><Link href={services}>{nav.services}</Link><Link href={about}>{nav.about}</Link><Link href={`${home}/#faq`.replace("//", "/")}>{isZh ? "常见问题" : "FAQ"}</Link></div>
+      <div><h3>{footer.contact}</h3><Link className="ff-footer-quote" href={`${home}/#quote`.replace("//", "/")}>{nav.quote}<FiArrowUpRight /></Link><span className="ff-footer-note"><FiMail />{isZh ? "公司邮箱待补充" : "Company email to be added"}</span></div>
+    </div>
+    <div className="ff-footer-bottom"><p>{footer.rights}</p><p>{isZh ? "中国采购 · 质量检验 · 全球履约" : "China sourcing · Quality control · Global fulfillment"}</p></div>
+  </div></footer>;
+}

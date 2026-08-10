@@ -1,7 +1,6 @@
-import { detailPages } from "@config/detail-pages";
-import MarketingDetail from "@layouts/MarketingDetail";
 import SeoMeta from "@layouts/SeoMeta";
+import { FulfillmentServices } from "@layouts/FulfillmentInnerPage";
 
 export default function ServicesPage() {
-  return <><SeoMeta title="Shopify to Mabang ERP Services" /><MarketingDetail page={detailPages.services} /></>;
+  return <><SeoMeta title="China Sourcing, QC & Fulfillment Services" /><FulfillmentServices lang="en" /></>;
 }

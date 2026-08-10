@@ -10,13 +10,34 @@ export default function ScrollReveal() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const groups = [
-      ["main section:not(:first-child) h2, main section:not(:first-child) .smt-kicker", "reveal-up"],
-      [".smt-service-card, .detail-card-grid article, .detail-result-grid article", "reveal-scale"],
-      [".smt-step, .detail-list > div, .detail-guide-panel > div", "reveal-right"],
-      [".smt-adv-main, .detail-guide-panel:first-child", "reveal-left"],
-      [".smt-adv-stack, .detail-guide-panel:last-child", "reveal-right"],
-      [".smt-form, .detail-hero-card", "reveal-scale"],
-      [".smt-faq details, .detail-mini-faq details", "reveal-up"],
+      [
+        "main section:not(:first-child) h2, main section:not(:first-child) .smt-kicker, main section:not(:first-child) .ff-eyebrow",
+        "reveal-up",
+      ],
+      [
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card",
+        "reveal-scale",
+      ],
+      [
+        ".smt-step, .detail-list > div, .detail-guide-panel > div, .ff-process-list article, .ff-scope-list article, .ff-expectation-list article",
+        "reveal-right",
+      ],
+      [
+        ".smt-adv-main, .detail-guide-panel:first-child, .ff-quality-copy, .ff-inner-section:nth-of-type(even) .ff-inner-copy",
+        "reveal-left",
+      ],
+      [
+        ".smt-adv-stack, .detail-guide-panel:last-child, .ff-quality-media, .ff-inner-section:nth-of-type(odd) .ff-inner-copy",
+        "reveal-right",
+      ],
+      [
+        ".smt-form, .detail-hero-card, .ff-quote-panel, .ff-media-placeholder, .ff-inner-media",
+        "reveal-scale",
+      ],
+      [
+        ".smt-faq details, .detail-mini-faq details, .ff-faq details",
+        "reveal-up",
+      ],
     ];
 
     const elements = [];
@@ -28,7 +49,9 @@ export default function ScrollReveal() {
       });
     });
 
-    const heroItems = document.querySelectorAll(".smt-hero-grid > *, .detail-hero-grid > *");
+    const heroItems = document.querySelectorAll(
+      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *",
+    );
     heroItems.forEach((element, index) => {
       element.classList.add("scroll-reveal", index % 2 ? "reveal-right" : "reveal-left");
       element.style.setProperty("--reveal-delay", `${180 + index * 120}ms`);

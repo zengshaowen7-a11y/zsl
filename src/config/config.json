@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "FlowBridge",
+    "title": "FlowBridge Fulfillment",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "",
@@ -17,13 +17,13 @@
 
   "nav_button": {
     "enable": true,
-    "label": "Get a Free Assessment",
+    "label": "Get a Free Quote",
     "link": "/#quote"
   },
 
   "params": {
     "contact_form_action": "#",
-    "footer_content": "Shopify to Mabang ERP connection support for ambitious cross-border merchants.",
+    "footer_content": "China sourcing, quality control and global order fulfillment for independent brands.",
     "copyright": "© 2026 FlowBridge. All rights reserved."
   },
 
@@ -35,6 +35,6 @@
   "metadata": {
     "meta_author": "FlowBridge",
     "meta_image": "",
-    "meta_description": "Shopify to Mabang ERP integration and human-led onboarding support."
+    "meta_description": "China product sourcing, quality inspection, warehousing, custom packaging and worldwide dropshipping fulfillment for independent brands."
   }
 }

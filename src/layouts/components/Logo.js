@@ -2,14 +2,14 @@ import config from "@config/config.json";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({ src }) => {
+const Logo = ({ src, href }) => {
   // destructuring items from config object
   const { base_url, logo, logo_width, logo_height, logo_text, title } =
     config.site;
 
   return (
     <Link
-      href={base_url}
+      href={href || base_url}
       className="navbar-brand flex items-center py-1"
       style={src || logo ? {
         height: logo_height.replace("px", "") + "px",

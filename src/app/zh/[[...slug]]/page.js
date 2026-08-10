@@ -1,16 +1,24 @@
 import ChineseTranslator from "@layouts/ChineseTranslator";
-import Home from "../../page";
-import ServicesPage from "../../services/page";
-import ProcessPage from "../../how-it-works/page";
-import WhyUsPage from "../../why-us/page";
-import HelpPage from "../../help/page";
+import FulfillmentHome from "@layouts/FulfillmentHome";
+import { FulfillmentAbout, FulfillmentServices } from "@layouts/FulfillmentInnerPage";
+import { getFulfillmentCopy } from "@config/fulfillment-content";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const pages = { services: ServicesPage, "how-it-works": ProcessPage, "why-us": WhyUsPage, help: HelpPage };
+function ChineseThanks() {
+  const c = getFulfillmentCopy("zh").thanks;
+  return <main className="ff-thanks"><div><span>✓</span><h1>{c.title}</h1><p>{c.text}</p><Link className="ff-btn ff-btn-primary" href="/zh">{c.button}</Link></div></main>;
+}
+
+const pages = {
+  services: () => <FulfillmentServices lang="zh" />,
+  "about-us": () => <FulfillmentAbout lang="zh" />,
+  "thank-you": ChineseThanks,
+};
 
 export default async function ChinesePage({ params }) {
   const { slug = [] } = await params;
-  const Page = slug.length === 0 ? Home : pages[slug.join("/")];
+  const Page = slug.length === 0 ? () => <FulfillmentHome lang="zh" /> : pages[slug.join("/")];
   if (!Page) notFound();
   return <><ChineseTranslator /><Page /></>;
 }
