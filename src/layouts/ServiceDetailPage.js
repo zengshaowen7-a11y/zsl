@@ -98,6 +98,24 @@ export default function ServiceDetailPage({ service }) {
         </div>
       </section>
 
+      <section className={`ff-section sdp-spotlight sdp-spotlight-${service.spotlight.style}`}>
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">{service.spotlight.eyebrow}</span><h2>{service.spotlight.title}</h2></div>
+            <p>{service.spotlight.lead}</p>
+          </div>
+          <div className="sdp-spotlight-grid">
+            {service.spotlight.items.map(([title, text], index) => (
+              <article key={title}>
+                <span>0{index + 1}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="ff-section sdp-feature">
         <div className="container sdp-feature-grid">
           <div className="sdp-feature-image"><Image src="/images/fulfillment/packing-team.jpg" alt="Fulfillment quality check" fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />Human-led quality checkpoints</span></div>

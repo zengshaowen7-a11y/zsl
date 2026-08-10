@@ -15,7 +15,7 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-workflow-grid article, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-related-grid > a",
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-workflow-grid article, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a",
         "reveal-scale",
       ],
       [

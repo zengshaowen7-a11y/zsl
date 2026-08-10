@@ -105,7 +105,7 @@ export default function FulfillmentServicesPage() {
                     <h3>{service.title}</h3>
                     <p>{service.summary}</p>
                     <ul>{service.points.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul>
-                    <Link href="/#quote">Discuss this service<FiArrowRight /></Link>
+                    <Link href={`/services/${service.slug}`}>Explore service<FiArrowRight /></Link>
                   </div>
                 </article>
               );

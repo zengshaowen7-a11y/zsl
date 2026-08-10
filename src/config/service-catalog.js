@@ -1,85 +1,26 @@
-export const serviceCatalog = [
-  {
-    id: "sourcing",
-    title: "Product Sourcing",
-    menuTitle: "Product Sourcing",
-    icon: "search",
-    image: "/images/fulfillment/warehouse.jpg",
-    summary:
-      "Turn a product idea or supplier link into clear factory options with comparable pricing, lead times and order requirements.",
-    points: ["Factory and quotation comparison", "Sample and specification coordination"],
-  },
-  {
-    id: "private-label",
-    title: "Private Label & Packaging",
-    menuTitle: "Private Label",
-    icon: "tag",
-    image: "/images/fulfillment/packaging.jpg",
-    summary:
-      "Build a recognizable brand with labels, inserts, bags, boxes and production details coordinated around your product.",
-    points: ["Custom packaging and inserts", "MOQ and production planning"],
-  },
-  {
-    id: "quality-control",
-    title: "Quality Control",
-    menuTitle: "Quality Control",
-    icon: "shield",
-    image: "/images/fulfillment/packing-team.jpg",
-    summary:
-      "Set practical inspection checkpoints for incoming goods, product variants, visible condition, packaging and order accuracy.",
-    points: ["Incoming and pre-shipment checks", "Photo-backed issue reporting"],
-  },
-  {
-    id: "dropshipping",
-    title: "Dropshipping Fulfillment",
-    menuTitle: "Dropshipping Fulfillment",
-    icon: "package",
-    image: "/images/fulfillment/shipping.jpg",
-    summary:
-      "Pick, pack and ship individual customer orders from China with a workflow designed for independent online stores.",
-    points: ["Order-level pick and pack", "Tracked international delivery options"],
-  },
-  {
-    id: "3pl",
-    title: "3PL Warehousing",
-    menuTitle: "3PL Warehousing",
-    icon: "box",
-    image: "/images/fulfillment/warehouse.jpg",
-    summary:
-      "Receive and organize products, packaging materials and multi-SKU inventory before daily fulfillment begins.",
-    points: ["SKU-based inventory organization", "Packaging material storage"],
-  },
-  {
-    id: "pod",
-    title: "Print on Demand Support",
-    menuTitle: "Print on Demand",
-    icon: "printer",
-    image: "/images/fulfillment/packaging.jpg",
-    summary:
-      "Coordinate suitable print-on-demand products, artwork requirements, production and direct-to-customer fulfillment.",
-    points: ["Artwork and sample confirmation", "Production-to-shipping coordination"],
-  },
-  {
-    id: "fashion",
-    title: "Fashion & Apparel Fulfillment",
-    menuTitle: "Fashion Fulfillment",
-    icon: "shopping",
-    image: "/images/fulfillment/packing-team.jpg",
-    summary:
-      "Manage apparel variants, sizing, packaging and stock with extra attention to product consistency and presentation.",
-    points: ["Size and variant organization", "Brand-ready folding and packing"],
-  },
-  {
-    id: "automation",
-    title: "Automatic Order Fulfillment",
-    menuTitle: "Order Automation",
-    icon: "refresh",
-    image: "/images/fulfillment/shipping.jpg",
-    summary:
-      "Create a repeatable handoff from your store to warehouse operations, then return shipment and tracking updates.",
-    points: ["SKU and order mapping", "Tracking feedback workflow"],
-  },
-];
+import { servicePages } from "@config/service-page-content";
+
+const serviceIcons = {
+  "dropshipping-supplier": "package",
+  "3pl-fulfillment-services": "box",
+  "pod-fulfillment": "printer",
+  "private-label": "tag",
+  "product-sourcing": "search",
+  "automatic-order-fulfillment": "refresh",
+  "china-fulfillment-center": "box",
+};
+
+// The overview, header dropdown and detail routes all use the same seven services.
+export const serviceCatalog = servicePages.map((service) => ({
+  id: service.slug,
+  slug: service.slug,
+  title: service.menuTitle,
+  menuTitle: service.menuTitle,
+  icon: serviceIcons[service.slug],
+  image: service.image,
+  summary: service.lead,
+  points: service.heroPoints.slice(0, 2),
+}));
 
 export const serviceWorkflow = [
   ["01", "Share your requirements", "Send product links, destination markets, order volume and branding needs."],
