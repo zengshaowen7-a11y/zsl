@@ -84,16 +84,19 @@ export default function ServiceDetailPage({ service }) {
         </div>
       </section>
 
-      <section className="ff-section sdp-capabilities">
+      <section className={`ff-section sdp-capabilities sdp-capabilities-${service.capabilityStyle}`}>
         <div className="container">
-          <div className="ff-heading ff-heading-split ff-heading-dark"><div><span className="ff-kicker ff-kicker-light">WHAT WE HANDLE</span><h2>{service.capabilitiesTitle}</h2></div><p>Build a focused scope or combine these capabilities into an end-to-end service.</p></div>
+          <div className="ff-heading ff-heading-split ff-heading-dark"><div><span className="ff-kicker ff-kicker-light">WHAT WE HANDLE</span><h2>{service.capabilitiesTitle}</h2></div><p>{service.capabilitiesLead}</p></div>
           <div className="sdp-capability-grid">{service.capabilities.map(([title, text], index) => { const Icon = capabilityIcons[index]; return <article key={title}><span><Icon /></span><h3>{title}</h3><p>{text}</p></article>; })}</div>
         </div>
       </section>
 
-      <section className="ff-section sdp-process">
+      <section className={`ff-section sdp-process sdp-process-${service.processStyle}`}>
         <div className="container">
-          <div className="ff-heading ff-heading-centered"><span className="ff-kicker">HOW IT WORKS</span><h2>A practical four-step path to launch the service.</h2></div>
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">{service.processEyebrow}</span><h2>{service.processTitle}</h2></div>
+            <p>{service.processLead}</p>
+          </div>
           <div className="sdp-process-grid">{service.process.map(([number, title, text]) => <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
         </div>
       </section>
@@ -118,7 +121,7 @@ export default function ServiceDetailPage({ service }) {
 
       <section className="ff-section sdp-feature">
         <div className="container sdp-feature-grid">
-          <div className="sdp-feature-image"><Image src="/images/fulfillment/packing-team.jpg" alt="Fulfillment quality check" fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />Human-led quality checkpoints</span></div>
+          <div className="sdp-feature-image"><Image src={service.image} alt={`${service.menuTitle} service illustration`} fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />Human-led quality checkpoints</span></div>
           <div><span className="ff-kicker">BUILT FOR DAILY OPERATIONS</span><h2>{service.featureTitle}</h2><p>{service.featureLead}</p><ul>{service.featurePoints.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul><Link className="ff-btn ff-btn-dark" href="/#quote">Build your service plan<FiArrowRight /></Link></div>
         </div>
       </section>
