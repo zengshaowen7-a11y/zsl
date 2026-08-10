@@ -35,7 +35,7 @@ export const detailGuides = {
       ["What could delay the connection?", "Missing access, unclear product data, unresolved ownership or changes in scope are common causes."],
     ]
   },
-  "WHY FLOWBRIDGE": {
+  "WHY JW DROPSHIPPING": {
     kicker: "HOW WE WORK DIFFERENTLY", title: "Support built around business context, not generic tickets.", text: "Our value comes from connecting technical actions to the operational reason behind them and keeping communication accountable.",
     leftLabel: "OUR PRINCIPLES", left: [
       { title: "Context before configuration", text: "We understand the store and workflow before recommending technical action." },
@@ -48,7 +48,7 @@ export const detailGuides = {
       { title: "More useful conversations", text: "Follow-up stays focused on your store and priorities." },
       { title: "A maintainable foundation", text: "The resulting process is easier for your team to understand and continue." },
     ], faq: [
-      ["Are you affiliated with Shopify or Mabang?", "FlowBridge is presented as an independent service provider; partnership claims require confirmed agreements."],
+      ["Are you affiliated with Shopify or Mabang?", "JW Dropshipping is presented as an independent service provider; partnership claims require confirmed agreements."],
       ["How do you handle store information?", "Only information needed for the agreed service should be collected, with access handled through a defined process."],
       ["Can you guarantee a business result?", "We can commit to an agreed process and deliverables, but commercial results depend on factors outside the integration."],
     ]

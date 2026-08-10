@@ -2,35 +2,31 @@ import config from "@config/config.json";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({ src, href }) => {
-  // destructuring items from config object
-  const { base_url, logo, logo_width, logo_height, logo_text, title } =
-    config.site;
-
-  return (
-    <Link
-      href={href || base_url}
-      className="navbar-brand flex items-center py-1"
-      style={src || logo ? {
-        height: logo_height.replace("px", "") + "px",
-        width: logo_width.replace("px", "") + "px",
-      } : undefined}
-    >
-      {src || logo ? (
-        <Image
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
-          src={src ? src : logo}
-          alt={title}
-          priority
-        />
-      ) : logo_text ? (
-        logo_text
-      ) : (
-        title
-      )}
-    </Link>
-  );
-};
+const Logo = ({ href, className = "" }) => (
+  <Link
+    href={href || config.site.base_url}
+    className={`navbar-brand jw-brand-lockup ${className}`.trim()}
+    aria-label="JW Dropshipping home"
+  >
+    <span className="jw-brand-symbol" aria-hidden="true">
+      <Image
+        src="/images/brand/jw-symbol.png"
+        alt=""
+        fill
+        priority
+        sizes="52px"
+      />
+    </span>
+    <span className="jw-brand-wordmark">
+      <Image
+        src="/images/brand/jw-wordmark.png"
+        alt="JW Dropshipping - Connect, Fulfill, Grow"
+        fill
+        priority
+        sizes="190px"
+      />
+    </span>
+  </Link>
+);
 
 export default Logo;

@@ -4,6 +4,7 @@ import {
   serviceWorkflow,
   supportedPlatforms,
 } from "@config/service-catalog";
+import { serviceComparison } from "@config/service-conversion-content";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -71,9 +72,13 @@ export default function FulfillmentServicesPage() {
         <div className="container fsp-hero-grid">
           <div className="fsp-hero-copy">
             <span className="ff-kicker ff-kicker-light">ALL-IN-ONE FULFILLMENT SERVICES</span>
-            <h1>Source, brand and ship with one team in China.</h1>
+            <h1>
+              <span>From product sourcing to</span>
+              <span>worldwide delivery, one team</span>
+              <span>keeps every order moving.</span>
+            </h1>
             <p>
-              Build the exact operating scope your store needs—from factory search and quality control to branded packing and worldwide delivery.
+              Build a flexible fulfillment operation around the needs of your store. We coordinate supplier communication, product inspection, inventory, branded packing, order processing, and tracked delivery—giving your team a clearer path from purchase order to customer doorstep.
             </p>
             <div className="ff-actions">
               <Link className="ff-btn ff-btn-primary" href="/#quote">Get a free quote<FiArrowRight /></Link>
@@ -138,6 +143,33 @@ export default function FulfillmentServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="ff-section fsp-comparison" id="service-comparison">
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">SERVICE COMPARISON</span><h2>Choose the service that matches your current operating gap.</h2></div>
+            <p>Start with one focused service or combine several into an end-to-end sourcing and fulfillment workflow.</p>
+          </div>
+          <div className="fsp-comparison-wrap">
+            <table>
+              <thead><tr><th>Service</th><th>Best suited for</th><th>Inventory model</th><th>Branding</th><th>Best starting information</th><th><span className="sr-only">Explore</span></th></tr></thead>
+              <tbody>
+                {serviceComparison.map(([slug, title, bestFor, inventory, branding, startingPoint]) => (
+                  <tr key={slug}>
+                    <th scope="row"><Link href={`/services/${slug}`}>{title}</Link></th>
+                    <td>{bestFor}</td>
+                    <td><span className="fsp-comparison-chip">{inventory}</span></td>
+                    <td>{branding}</td>
+                    <td>{startingPoint}</td>
+                    <td><Link className="fsp-comparison-arrow" aria-label={`Explore ${title}`} href={`/services/${slug}`}><FiArrowRight /></Link></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="fsp-comparison-help"><FiMessageCircle /><div><strong>Not sure where to start?</strong><p>Send a product link, your current order volume and the problem you want to solve. We will recommend the smallest practical starting scope.</p></div><Link href="/#quote">Ask for a recommendation<FiArrowRight /></Link></div>
         </div>
       </section>
 

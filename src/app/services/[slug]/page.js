@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const service = getServicePage(slug);
   if (!service) return {};
   return {
-    title: `${service.menuTitle} | FlowBridge`,
+    title: `${service.menuTitle} | JW Dropshipping`,
     description: service.lead,
   };
 }

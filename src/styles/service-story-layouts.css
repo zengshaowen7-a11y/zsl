@@ -1,0 +1,758 @@
+/* Eight service-specific operating-story layouts. */
+.sdp-story {
+  --story-accent: #1267c4;
+  --story-soft: #eaf4ff;
+  overflow: hidden;
+}
+
+.sdp-story-grid {
+  position: relative;
+}
+
+.sdp-story-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.sdp-story-copy > p {
+  max-width: 670px;
+}
+
+.sdp-story-visual {
+  isolation: isolate;
+  box-shadow: 0 28px 70px rgba(5, 31, 69, 0.14);
+}
+
+.sdp-story-visual > img {
+  z-index: -2;
+}
+
+.sdp-story-visual-contain > img {
+  object-fit: contain;
+  padding: 72px 38px;
+  background: linear-gradient(145deg, #031d2e, #0a3b54);
+}
+
+.sdp-story-visual::after {
+  z-index: -1;
+  background: linear-gradient(180deg, transparent 42%, rgba(4, 20, 45, 0.7));
+}
+
+.sdp-story-badge {
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ff-navy);
+  font-size: 0.65rem;
+  font-weight: 900;
+  box-shadow: 0 10px 28px rgba(5, 31, 69, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+.sdp-story-badge svg {
+  color: var(--story-accent);
+}
+
+.sdp-problem-visual > .sdp-story-panel {
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 18px 42px rgba(5, 31, 69, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.sdp-story-panel article {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  grid-template-columns: 32px 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 18px 15px;
+}
+
+.sdp-story-panel article + article {
+  border-left: 1px solid #e4ebf3;
+}
+
+.sdp-story-panel article > span {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--story-soft);
+  color: var(--story-accent);
+  font-size: 0.55rem;
+  font-weight: 950;
+}
+
+.sdp-story-panel article > div {
+  display: grid;
+  gap: 3px;
+}
+
+.sdp-story-panel strong {
+  color: var(--ff-navy);
+  font-size: 0.66rem;
+}
+
+.sdp-story-panel small {
+  color: #718198;
+  font-size: 0.53rem;
+  line-height: 1.35;
+}
+
+.sdp-story-panel article > svg {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--story-accent);
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+/* 01 — classic supplier-to-customer journey */
+.sdp-story-journey {
+  --story-accent: #1267c4;
+  --story-soft: #e6f3ff;
+  background: #fff;
+}
+
+.sdp-story-journey .sdp-story-visual {
+  border-radius: 34px 8px 34px 8px;
+}
+
+.sdp-story-journey .sdp-story-visual::before {
+  position: absolute;
+  z-index: -3;
+  top: -24px;
+  right: -24px;
+  width: 44%;
+  height: 55%;
+  border-radius: 28px;
+  background: #dcebfa;
+  content: "";
+}
+
+/* 02 — warehouse manifest, reversed and dark */
+.sdp-story-warehouse {
+  --story-accent: #ffbb12;
+  --story-soft: #fff0bd;
+  background: linear-gradient(135deg, #061a3a, #0a438b);
+}
+
+.sdp-story-warehouse .sdp-story-grid {
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 70px;
+}
+
+.sdp-story-warehouse .sdp-story-copy {
+  order: 2;
+}
+
+.sdp-story-warehouse .sdp-story-visual {
+  order: 1;
+  min-height: 620px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+
+.sdp-story-warehouse .sdp-story-copy h2,
+.sdp-story-warehouse .sdp-story-copy > p {
+  color: #fff;
+}
+
+.sdp-story-warehouse .sdp-story-copy > p {
+  color: #b9cee7;
+}
+
+.sdp-story-warehouse .ff-kicker {
+  color: #ffcc4b;
+}
+
+.sdp-story-warehouse .ff-btn {
+  background: var(--ff-yellow);
+  color: var(--ff-navy);
+}
+
+.sdp-story-warehouse .sdp-problem-visual > .sdp-story-panel {
+  top: 92px;
+  right: 22px;
+  bottom: auto;
+  left: auto;
+  width: min(310px, calc(100% - 44px));
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.sdp-story-warehouse .sdp-story-panel article {
+  grid-template-columns: 42px 1fr;
+  padding: 16px;
+}
+
+.sdp-story-warehouse .sdp-story-panel article + article {
+  border-top: 1px solid #e4ebf3;
+  border-left: 0;
+}
+
+.sdp-story-warehouse .sdp-story-panel article > span {
+  border-radius: 8px;
+}
+
+.sdp-story-warehouse .sdp-story-panel article > svg {
+  display: none;
+}
+
+/* 03 — warm creative studio with a floating 2x2 production board */
+.sdp-story-studio {
+  --story-accent: #b76b00;
+  --story-soft: #fff0c7;
+  background: #fff8e9;
+}
+
+.sdp-story-studio .sdp-story-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 72px;
+}
+
+.sdp-story-studio .sdp-story-copy {
+  order: 2;
+}
+
+.sdp-story-studio .sdp-story-visual {
+  order: 1;
+  min-height: 650px;
+  border-radius: 50% 50% 24px 24px / 28% 28% 24px 24px;
+}
+
+.sdp-story-studio .sdp-story-visual::after {
+  background: linear-gradient(180deg, transparent 55%, rgba(68, 35, 0, 0.64));
+}
+
+.sdp-story-studio .sdp-problem-visual > .sdp-story-panel {
+  right: -38px;
+  bottom: 28px;
+  left: auto;
+  width: 430px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8px;
+  border-color: #f2dba4;
+  background: #fffdf7;
+}
+
+.sdp-story-studio .sdp-story-panel article {
+  padding: 16px 13px;
+  border: 0;
+}
+
+.sdp-story-studio .sdp-story-panel article:nth-child(even) {
+  border-left: 1px solid #f0dfb9;
+}
+
+.sdp-story-studio .sdp-story-panel article:nth-child(n + 3) {
+  border-top: 1px solid #f0dfb9;
+}
+
+.sdp-story-studio .sdp-story-panel article > svg {
+  display: none;
+}
+
+/* 04 — editorial brand card overlapping the image */
+.sdp-story-brand {
+  --story-accent: #b35a34;
+  --story-soft: #ffe7dc;
+  background: linear-gradient(135deg, #fff6ee, #f8eee8);
+}
+
+.sdp-story-brand .sdp-story-grid {
+  grid-template-columns: 0.95fr 1.15fr;
+  gap: 0;
+}
+
+.sdp-story-brand .sdp-story-copy {
+  margin-right: -72px;
+  padding: 54px;
+  border: 1px solid #efd9cd;
+  border-radius: 3px 32px 3px 32px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 28px 70px rgba(79, 41, 25, 0.13);
+}
+
+.sdp-story-brand .sdp-story-visual {
+  min-height: 650px;
+  border-radius: 120px 18px 18px 18px;
+  box-shadow: 24px 24px 0 #ffbb12;
+}
+
+.sdp-story-brand .sdp-problem-visual > .sdp-story-panel {
+  left: 90px;
+  border-radius: 4px;
+}
+
+.sdp-story-brand .sdp-story-panel article > span {
+  border-radius: 8px;
+}
+
+/* 05 — sourcing comparison board */
+.sdp-story-compare {
+  --story-accent: #1267c4;
+  --story-soft: #e7f2ff;
+  background: #eef5fb;
+}
+
+.sdp-story-compare .sdp-story-grid {
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 66px;
+}
+
+.sdp-story-compare .sdp-story-copy {
+  padding: 36px 0;
+}
+
+.sdp-story-compare .sdp-story-visual {
+  min-height: 610px;
+  border: 10px solid #fff;
+  border-radius: 22px;
+}
+
+.sdp-story-compare .sdp-problem-visual > .sdp-story-panel {
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(245, 249, 253, 0.96);
+}
+
+.sdp-story-compare .sdp-story-panel article {
+  border: 1px solid #d9e6f2;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.sdp-story-compare .sdp-story-panel article > svg {
+  display: none;
+}
+
+/* 06 — dark connected-data dashboard */
+.sdp-story-data {
+  --story-accent: #35d5ae;
+  --story-soft: rgba(53, 213, 174, 0.15);
+  background: #031d2e;
+}
+
+.sdp-story-data .sdp-story-grid {
+  gap: 76px;
+}
+
+.sdp-story-data .sdp-story-copy h2 {
+  color: #fff;
+}
+
+.sdp-story-data .sdp-story-copy > p {
+  color: #aac3cf;
+}
+
+.sdp-story-data .ff-kicker {
+  color: #35d5ae;
+}
+
+.sdp-story-data .ff-btn {
+  background: #35d5ae;
+  color: #06202d;
+}
+
+.sdp-story-data .sdp-story-visual {
+  min-height: 580px;
+  border: 1px solid rgba(53, 213, 174, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 0 0 12px rgba(53, 213, 174, 0.04), 0 35px 90px rgba(0, 0, 0, 0.28);
+}
+
+.sdp-story-data .sdp-problem-visual > .sdp-story-panel {
+  top: 50%;
+  bottom: auto;
+  border-color: rgba(53, 213, 174, 0.25);
+  background: rgba(3, 29, 46, 0.94);
+  transform: translateY(-50%);
+}
+
+.sdp-story-data .sdp-story-panel article + article {
+  border-left-color: rgba(255, 255, 255, 0.12);
+}
+
+.sdp-story-data .sdp-story-panel strong {
+  color: #fff;
+}
+
+.sdp-story-data .sdp-story-panel small {
+  color: #8eb0bd;
+}
+
+.sdp-story-data .sdp-story-panel article > svg {
+  background: #35d5ae;
+  color: #06202d;
+}
+
+/* 07 — fulfillment-center zone map */
+.sdp-story-zones {
+  --story-accent: #ffbb12;
+  --story-soft: #fff1c3;
+  background-color: #0b55a5;
+  background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 90px 90px;
+}
+
+.sdp-story-zones .sdp-story-grid {
+  grid-template-columns: 1fr;
+  gap: 46px;
+}
+
+.sdp-story-zones .sdp-story-copy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 90px;
+  align-items: end;
+}
+
+.sdp-story-zones .sdp-story-copy .ff-kicker,
+.sdp-story-zones .sdp-story-copy h2 {
+  grid-column: 1;
+  color: #fff;
+}
+
+.sdp-story-zones .sdp-story-copy > p,
+.sdp-story-zones .sdp-story-copy > .ff-btn {
+  grid-column: 2;
+}
+
+.sdp-story-zones .sdp-story-copy > p {
+  grid-row: 1 / span 2;
+  color: #c7ddf2;
+}
+
+.sdp-story-zones .sdp-story-copy > .ff-btn {
+  width: fit-content;
+  background: var(--ff-yellow);
+  color: var(--ff-navy);
+}
+
+.sdp-story-zones .sdp-story-visual {
+  min-height: 650px;
+  border: 12px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+}
+
+.sdp-story-zones .sdp-problem-visual > .sdp-story-panel {
+  top: 50%;
+  right: 35px;
+  bottom: auto;
+  left: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(6, 35, 73, 0.91);
+  transform: translateY(-50%);
+}
+
+.sdp-story-zones .sdp-story-panel article {
+  border: 1px dashed rgba(255, 255, 255, 0.26);
+  border-radius: 8px;
+}
+
+.sdp-story-zones .sdp-story-panel strong {
+  color: #fff;
+}
+
+.sdp-story-zones .sdp-story-panel small {
+  color: #b7d0e8;
+}
+
+.sdp-story-zones .sdp-story-panel article > svg {
+  display: none;
+}
+
+/* 08 — inspection report, image first and checklist overlay */
+.sdp-story-report {
+  --story-accent: #18a44a;
+  --story-soft: #e5f8ec;
+  background: #f5f7f8;
+}
+
+.sdp-story-report .sdp-story-grid {
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 84px;
+}
+
+.sdp-story-report .sdp-story-copy {
+  order: 2;
+}
+
+.sdp-story-report .sdp-story-visual {
+  order: 1;
+  min-height: 640px;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #dce4e7, 18px 18px 0 #dfe8eb;
+}
+
+.sdp-story-report .sdp-problem-visual > .sdp-story-panel {
+  top: 44px;
+  right: -44px;
+  bottom: 44px;
+  left: auto;
+  width: 330px;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.sdp-story-report .sdp-story-panel::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #718198;
+  content: "INSPECTION RECORD";
+  font-size: 0.55rem;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+}
+
+.sdp-story-report .sdp-story-panel article {
+  grid-template-columns: 36px 1fr;
+  padding: 17px 20px;
+}
+
+.sdp-story-report .sdp-story-panel article + article {
+  border-top: 1px solid #e4ebf3;
+  border-left: 0;
+}
+
+.sdp-story-report .sdp-story-panel article > svg {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .sdp-story-warehouse .sdp-story-grid,
+  .sdp-story-studio .sdp-story-grid,
+  .sdp-story-brand .sdp-story-grid,
+  .sdp-story-compare .sdp-story-grid,
+  .sdp-story-report .sdp-story-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .sdp-story-warehouse .sdp-story-copy,
+  .sdp-story-studio .sdp-story-copy,
+  .sdp-story-report .sdp-story-copy {
+    order: 1;
+  }
+
+  .sdp-story-warehouse .sdp-story-visual,
+  .sdp-story-studio .sdp-story-visual,
+  .sdp-story-report .sdp-story-visual {
+    order: 2;
+  }
+
+  .sdp-story-brand .sdp-story-copy {
+    margin-right: 0;
+  }
+
+  .sdp-story-studio .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-report .sdp-problem-visual > .sdp-story-panel {
+    right: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sdp-story-zones .sdp-story-copy {
+    display: block;
+  }
+
+  .sdp-story-zones .sdp-story-copy > p {
+    margin-top: 22px;
+  }
+
+  .sdp-story-copy,
+  .sdp-story-brand .sdp-story-copy {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .sdp-story-visual,
+  .sdp-story-warehouse .sdp-story-visual,
+  .sdp-story-studio .sdp-story-visual,
+  .sdp-story-brand .sdp-story-visual,
+  .sdp-story-compare .sdp-story-visual,
+  .sdp-story-data .sdp-story-visual,
+  .sdp-story-zones .sdp-story-visual,
+  .sdp-story-report .sdp-story-visual {
+    min-height: 590px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(5, 31, 69, 0.14);
+  }
+
+  .sdp-story-badge {
+    top: 15px;
+    right: 15px;
+    max-width: calc(100% - 30px);
+  }
+
+  .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-warehouse .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-studio .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-brand .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-compare .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-data .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-zones .sdp-problem-visual > .sdp-story-panel,
+  .sdp-story-report .sdp-problem-visual > .sdp-story-panel {
+    top: auto;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7px;
+    flex-direction: unset;
+    border-radius: 13px;
+    transform: none;
+  }
+
+  .sdp-story-panel article,
+  .sdp-story-warehouse .sdp-story-panel article,
+  .sdp-story-report .sdp-story-panel article {
+    grid-template-columns: 36px 1fr;
+    padding: 10px;
+    border: 0;
+  }
+
+  .sdp-story-panel article + article,
+  .sdp-story-studio .sdp-story-panel article:nth-child(even),
+  .sdp-story-studio .sdp-story-panel article:nth-child(n + 3) {
+    border-top: 1px solid rgba(124, 139, 160, 0.2);
+    border-left: 0;
+  }
+
+  .sdp-story-panel article > svg,
+  .sdp-story-report .sdp-story-panel::before {
+    display: none;
+  }
+}
+
+/* The second editorial image also changes rhythm and color by service. */
+.sdp-feature-warehouse,
+.sdp-feature-brand,
+.sdp-feature-data,
+.sdp-feature-report {
+  background: #eef5fb;
+}
+
+.sdp-feature-warehouse .sdp-feature-image,
+.sdp-feature-brand .sdp-feature-image,
+.sdp-feature-data .sdp-feature-image,
+.sdp-feature-report .sdp-feature-image {
+  order: 2;
+}
+
+.sdp-feature-warehouse .sdp-feature-grid > div:last-child,
+.sdp-feature-brand .sdp-feature-grid > div:last-child,
+.sdp-feature-data .sdp-feature-grid > div:last-child,
+.sdp-feature-report .sdp-feature-grid > div:last-child {
+  order: 1;
+}
+
+.sdp-feature-studio,
+.sdp-feature-brand {
+  background: #fff5dc;
+}
+
+.sdp-feature-data {
+  background: linear-gradient(145deg, #e8f7f4, #f4fbfa);
+}
+
+.sdp-feature-zones {
+  background: #eaf4ff;
+}
+
+.sdp-feature-report {
+  background: #f3f6f7;
+}
+
+.sdp-feature-journey .sdp-feature-image,
+.sdp-feature-compare .sdp-feature-image {
+  border-radius: 80px 24px 24px 24px;
+}
+
+.sdp-feature-studio .sdp-feature-image,
+.sdp-feature-brand .sdp-feature-image {
+  border-radius: 24px 80px 24px 24px;
+}
+
+.sdp-feature-data .sdp-feature-image {
+  border: 10px solid #d7f0eb;
+  border-radius: 18px;
+}
+
+.sdp-feature-zones .sdp-feature-image {
+  border: 10px solid #cfe4f7;
+  border-radius: 8px;
+}
+
+.sdp-feature-report .sdp-feature-image {
+  border-radius: 4px;
+  box-shadow: 18px 18px 0 #dfe8eb;
+}
+
+.sdp-feature-warehouse .sdp-feature-image span,
+.sdp-feature-brand .sdp-feature-image span,
+.sdp-feature-data .sdp-feature-image span,
+.sdp-feature-report .sdp-feature-image span {
+  right: 21px;
+  left: auto;
+}
+
+@media (max-width: 1100px) {
+  .sdp-feature-warehouse .sdp-feature-image,
+  .sdp-feature-brand .sdp-feature-image,
+  .sdp-feature-data .sdp-feature-image,
+  .sdp-feature-report .sdp-feature-image {
+    order: 1;
+  }
+
+  .sdp-feature-warehouse .sdp-feature-grid > div:last-child,
+  .sdp-feature-brand .sdp-feature-grid > div:last-child,
+  .sdp-feature-data .sdp-feature-grid > div:last-child,
+  .sdp-feature-report .sdp-feature-grid > div:last-child {
+    order: 2;
+  }
+}

@@ -1,0 +1,297 @@
+:root {
+  --jw-forest: #153f38;
+  --jw-deep: #082f2c;
+  --jw-green: #79c85a;
+  --jw-teal: #2bb7a4;
+  --jw-aqua: #47c9b7;
+  --jw-cream: #f8fbf5;
+  --jw-mint: #e9f6ec;
+  --jw-line: #cfe5dc;
+  --ff-navy: #0b3834;
+  --ff-blue: #197f73;
+  --ff-blue-2: #2bb7a4;
+  --ff-yellow: #79c85a;
+  --ff-orange: #47c9b7;
+  --ff-paper: #f3f8f3;
+  --ff-ink: #163d37;
+  --ff-muted: #667b76;
+  --ff-border: #d7e7df;
+}
+
+/* Separate symbol and wordmark assets */
+.jw-brand-lockup {
+  display: flex !important;
+  width: auto !important;
+  height: auto !important;
+  align-items: center;
+  gap: 11px;
+  padding: 0;
+  letter-spacing: 0;
+}
+.jw-brand-lockup::before { display: none !important; }
+.jw-brand-symbol,
+.jw-brand-wordmark { position: relative; display: block; flex: none; overflow: hidden; }
+.jw-brand-symbol { width: 52px; height: 48px; }
+.jw-brand-wordmark { width: 188px; height: 45px; }
+.jw-brand-symbol img,
+.jw-brand-wordmark img { object-fit: contain; mix-blend-mode: multiply; }
+
+/* Navigation uses a quiet cream surface so both logo files remain crisp. */
+.header { border: 0; background: transparent; }
+.header .navbar {
+  min-height: 72px;
+  padding: 0 18px;
+  border: 1px solid rgba(21, 63, 56, .08);
+  border-radius: 999px;
+  background: rgba(249, 252, 247, .96);
+  color: var(--jw-forest);
+  box-shadow: 0 14px 45px rgba(8, 47, 44, .1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.header-transparent { border: 0; }
+.header-transparent .navbar-brand,
+.header-transparent .nav-link,
+.header-transparent #show-button,
+.header-transparent .language-trigger { color: var(--jw-forest); }
+.header-transparent .nav-link { opacity: .82; }
+.header-transparent .nav-link:hover,
+.header-transparent .nav-link-active,
+.header-solid .nav-link:hover,
+.header-solid .nav-link-active { color: var(--jw-teal) !important; opacity: 1; }
+.header-transparent.is-scrolled.nav-on-dark .navbar,
+.header-transparent.is-scrolled.nav-on-light .navbar {
+  border-color: rgba(21, 63, 56, .09);
+  background: rgba(249, 252, 247, .96);
+}
+.header-transparent.is-scrolled.nav-on-light .navbar-brand,
+.header-transparent.is-scrolled.nav-on-light .nav-link,
+.header-transparent.is-scrolled.nav-on-light #show-button { color: var(--jw-forest); }
+.language-trigger { border-color: rgba(21, 63, 56, .35); color: var(--jw-forest); }
+.language-trigger:hover,
+.language-trigger:focus-visible { border-color: var(--jw-teal); color: var(--jw-teal); }
+.language-menu,
+.service-mega-menu { border-color: var(--jw-line); box-shadow: 0 24px 65px rgba(8, 47, 44, .16); }
+.service-menu-overview {
+  background: linear-gradient(100deg, var(--jw-green), var(--jw-teal));
+  color: var(--jw-deep) !important;
+}
+.service-menu-overview:hover { background: linear-gradient(100deg, #8bd46f, #3cc5b1); }
+.service-menu-link:hover { background: var(--jw-mint); color: var(--jw-deep); }
+
+/* Core brand surfaces */
+.ff-hero,
+.fsp-hero,
+.ff-inner-hero {
+  background:
+    radial-gradient(circle at 84% 24%, rgba(71, 201, 183, .48) 0, rgba(43, 183, 164, .2) 23%, transparent 47%),
+    linear-gradient(135deg, #082f2c 0%, #10564f 58%, #218d80 100%);
+}
+.ff-hero-glow,
+.fsp-orbit { border-color: rgba(121, 200, 90, .3); box-shadow: 0 0 120px rgba(43, 183, 164, .16); }
+.ff-hero-copy-wrap > p,
+.fsp-hero-copy > p { color: #c9dfd9; }
+.ff-proof-list span,
+.fsp-hero-proofs span { color: #d8e9e4; }
+.ff-hero-visual,
+.fsp-hero-visual { box-shadow: 20px 20px 0 var(--jw-green), 0 35px 80px rgba(3, 35, 32, .28); }
+.ff-journey-card,
+.fsp-flow-card { background: rgba(8, 47, 44, .9); }
+.ff-hero-shade,
+.fsp-hero-visual::after { background: linear-gradient(180deg, rgba(8, 47, 44, .04), rgba(8, 47, 44, .8)); }
+.ff-floating-badge > svg,
+.fsp-visual-label > svg,
+.ff-quality-tag svg,
+.fh-evidence-media svg,
+.fh-service-body li svg,
+.ff-quality-copy li svg { color: var(--jw-teal); }
+
+.ff-process,
+.ff-quote,
+.ff-team,
+.ff-real-team,
+.ff-inner-cta,
+.ff-footer,
+.fsp-final-cta,
+.sdp-final-cta,
+.sdp-capabilities,
+.sdp-capabilities-inspection,
+.sdp-process-dataflow,
+.sdp-spotlight-workflow {
+  background: linear-gradient(135deg, #082f2c, #105b53 70%, #197f73);
+}
+.ff-footer { background: #072b28; }
+.ff-kicker,
+.ff-text-link,
+.fh-proof-band strong,
+.fh-service-body > a,
+.sdp-related-grid strong { color: var(--jw-teal); }
+.ff-kicker-light,
+.sdp-dataflow .ff-kicker,
+.sdp-process-dataflow .ff-kicker,
+.sdp-spotlight-workflow .ff-kicker { color: #8bdfcf; }
+
+/* Buttons and accent elements */
+.ff-btn-primary,
+.smt-button-primary,
+.smt-submit {
+  border-color: transparent;
+  background: linear-gradient(105deg, var(--jw-green), var(--jw-teal));
+  color: #082f2c !important;
+  box-shadow: 0 12px 28px rgba(43, 183, 164, .22);
+}
+.ff-btn-primary:hover,
+.smt-button-primary:hover,
+.smt-submit:hover { background: linear-gradient(105deg, #8bd46f, #40c8b5); }
+.ff-btn-dark { background: var(--jw-deep); }
+.ff-btn-outline:hover { border-color: var(--jw-teal); background: rgba(43, 183, 164, .1); }
+.ff-proof-list svg,
+.fsp-hero-proofs svg,
+.fsp-flow-card svg,
+.fsp-trust-visual span svg { color: var(--jw-green); }
+.ff-journey-card b,
+.fh-service-image > span,
+.fsp-card-icon,
+.fsp-card-media > span,
+.sdp-capability-grid article > span,
+.fsp-workflow-grid article:not(:last-child)::after {
+  background: linear-gradient(135deg, var(--jw-green), var(--jw-teal));
+  color: var(--jw-deep);
+}
+
+/* Services overview */
+.fsp-promise-bar { background: linear-gradient(90deg, var(--jw-green), var(--jw-teal)); color: var(--jw-deep); }
+.fsp-catalog { background: linear-gradient(145deg, #0b443f, #177d73); }
+.fsp-catalog .ff-heading > p { color: #c5ded8; }
+.fsp-service-card { box-shadow: 0 18px 45px rgba(8, 47, 44, .13); }
+.fsp-service-card:hover { box-shadow: 0 24px 55px rgba(8, 47, 44, .22); }
+.fsp-card-body > small,
+.fsp-card-body li svg,
+.fsp-card-body > a,
+.fsp-feature li svg,
+.fsp-feature-media > span svg,
+.fsp-platforms .container > span { color: var(--jw-teal); }
+.fsp-card-body > a:hover { color: var(--jw-forest); }
+.fsp-trust,
+.fsp-workflow { background: var(--jw-cream); }
+.fsp-trust-visual > div { background: rgba(8, 47, 44, .88); }
+.fsp-trust-visual small { color: #8edecf; }
+.fsp-proof-grid article > div > span { background: var(--jw-mint); color: var(--jw-teal); }
+.fsp-assurance { background: #f2f8ef; }
+.fsp-issue-panel { background: var(--jw-deep); box-shadow: 18px 18px 0 #91d477; }
+.fsp-issue-panel small { color: #8ccfc3; }
+.fsp-issue-panel li span { background: #174f48; color: #9cdd82; }
+.fsp-issue-panel > p { background: rgba(121, 200, 90, .12); color: #c9e9bb; }
+
+/* Service detail variants: keep distinct layouts, unify the palette. */
+.sdp-capabilities .ff-heading > p,
+.sdp-capability-grid p,
+.sdp-process-dataflow .ff-heading > p,
+.sdp-process-dataflow .sdp-process-grid p,
+.sdp-spotlight-workflow .ff-heading > p,
+.sdp-spotlight-workflow .sdp-spotlight-grid p { color: #b9d4ce; }
+.sdp-capabilities-brand { background: linear-gradient(145deg, #e3f2dc, #f6faf1); }
+.sdp-capabilities-decision,
+.sdp-process-zones,
+.sdp-spotlight-comparison,
+.sdp-spotlight-requirements,
+.sdp-spotlight-zones { background: #edf7f2; }
+.sdp-capabilities-brand .ff-kicker-light,
+.sdp-capabilities-decision .ff-kicker-light { color: var(--jw-teal); }
+.sdp-capabilities-brand .sdp-capability-grid article,
+.sdp-capabilities-decision .sdp-capability-grid article { border-color: #cfe4d9; }
+.sdp-process { background: var(--jw-cream); }
+.sdp-process-grid article > span { background: var(--jw-mint); color: var(--jw-teal); }
+.sdp-process-warehouse,
+.sdp-process-ladder,
+.sdp-process-funnel,
+.sdp-feature { background: #f3f8ef; }
+.sdp-process-funnel .sdp-process-grid article:nth-child(5) { border-color: var(--jw-green); background: #edf8e9; }
+.sdp-process-gates .sdp-process-grid article { border-top-color: var(--jw-teal); }
+.sdp-process-zones .sdp-process-grid article { border-color: #9ed8ca; }
+.sdp-process-dataflow .sdp-process-grid article > span { background: rgba(71, 201, 183, .15); color: #8be1d1; }
+.sdp-process-dataflow .sdp-process-grid article:not(:last-child)::after { color: var(--jw-green); }
+.sdp-spotlight { --spot-accent: var(--jw-teal); --spot-soft: var(--jw-mint); }
+.sdp-spotlight-pricing,
+.sdp-spotlight-packaging { --spot-accent: #4f9e39; --spot-soft: #e7f4df; background: #f7faf3; }
+.sdp-spotlight-requirements,
+.sdp-spotlight-comparison { --spot-accent: #197f73; --spot-soft: #dff2ec; }
+.sdp-spotlight-workflow { --spot-accent: #79c85a; --spot-soft: rgba(121, 200, 90, .14); }
+.sdp-related { background: var(--jw-cream); }
+.sdp-related-grid > a:hover { box-shadow: 0 20px 50px rgba(8, 47, 44, .12); }
+
+/* Story, case-study and comparison modules inherit the same brand family. */
+.sdp-story { --story-accent: var(--jw-teal); --story-soft: var(--jw-mint); }
+.sdp-story-journey { --story-accent: var(--jw-teal); --story-soft: #e4f5ef; }
+.sdp-story-journey .sdp-story-visual::before { background: #d6eee5; }
+.sdp-story-warehouse {
+  --story-accent: var(--jw-green);
+  --story-soft: #e6f4df;
+  background: linear-gradient(135deg, #082f2c, #176f65);
+}
+.sdp-story-studio { --story-accent: #58aa45; --story-soft: #e8f5e2; background: #f5f9f1; }
+.sdp-story-brand { --story-accent: var(--jw-teal); --story-soft: #def3ed; background: linear-gradient(135deg, #f7faf3, #e8f5ed); }
+.sdp-story-brand .sdp-story-visual { box-shadow: 24px 24px 0 #8bd672; }
+.sdp-story-compare { --story-accent: #197f73; --story-soft: #e2f3ee; background: #edf7f3; }
+.sdp-story-data { --story-accent: var(--jw-aqua); --story-soft: #dcf5ef; background: #082f2c; }
+.sdp-story-zones { --story-accent: var(--jw-green); --story-soft: #e6f4df; background-color: #197f73; }
+.sdp-story-report { --story-accent: #58aa45; --story-soft: #e8f5e2; }
+.sdp-story-visual-contain > img { background: linear-gradient(145deg, #082f2c, #176f65); }
+
+.sdp-case { --case-accent: var(--jw-teal); --case-soft: var(--jw-mint); background: var(--jw-cream); }
+.sdp-case-studio,
+.sdp-case-brand { --case-accent: #58a944; --case-soft: #e8f5e2; background: #f7faf3; }
+.sdp-case-data { --case-accent: var(--jw-teal); --case-soft: #def4ee; background: #edf8f4; }
+.sdp-case-zones { --case-accent: #197f73; --case-soft: #ddf2ec; background: #f0f8f5; }
+.sdp-case-report { --case-accent: #58a944; --case-soft: #e7f4e2; background: #f4f9f2; }
+.sdp-case-board { border-color: var(--jw-line); box-shadow: 0 24px 60px rgba(8, 47, 44, .1); }
+.fsp-comparison-wrap { border-color: var(--jw-line); }
+
+/* Forms, cards, and soft UI */
+.ff-compare-accent { border-color: #addccf; background: #eaf7f1; }
+.fh-services-cta { border-color: var(--jw-line); background: var(--jw-mint); }
+.fh-evidence-list small { background: rgba(121, 200, 90, .14); color: var(--jw-green); }
+.ff-form input:focus,
+.ff-form select:focus,
+.ff-form textarea:focus,
+.sdp-form input:focus,
+.sdp-form select:focus,
+.sdp-form textarea:focus {
+  border-color: var(--jw-teal);
+  box-shadow: 0 0 0 3px rgba(43, 183, 164, .12);
+}
+
+/* Footer logo sits on a light brand plate, preserving the supplied artwork. */
+.jw-footer-lockup {
+  display: inline-flex !important;
+  width: fit-content !important;
+  padding: 8px 13px !important;
+  border-radius: 15px;
+  background: var(--jw-cream);
+  color: var(--jw-forest) !important;
+}
+.ff-footer-brand > a span { margin-right: 0; background: transparent; }
+.ff-footer-brand .jw-brand-symbol { width: 46px; height: 43px; border-radius: 0; }
+.ff-footer-brand .jw-brand-wordmark { width: 180px; height: 43px; border-radius: 0; }
+.ff-footer-main a:hover,
+.ff-footer-quote { color: #84d9c9 !important; }
+.ff-footer-brand > p { margin-top: 22px; }
+
+@media (max-width: 1099px) {
+  .jw-brand-symbol { width: 46px; height: 43px; }
+  .jw-brand-wordmark { width: 158px; height: 40px; }
+}
+@media (max-width: 767px) {
+  .header .navbar { min-height: 64px; padding: 0 13px; }
+  .header-transparent #nav-menu {
+    border-color: rgba(21, 63, 56, .1);
+    background: rgba(249, 252, 247, .98);
+  }
+  .header-transparent #nav-menu .nav-link { color: var(--jw-forest); }
+  .jw-brand-symbol { width: 40px; height: 38px; }
+  .jw-brand-wordmark { width: 132px; height: 34px; }
+}
+@media (max-width: 420px) {
+  .jw-brand-lockup { gap: 7px; }
+  .jw-brand-wordmark { width: 108px; height: 31px; }
+}

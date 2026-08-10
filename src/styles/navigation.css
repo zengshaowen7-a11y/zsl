@@ -84,6 +84,15 @@
   @apply w-full overflow-hidden md:max-h-full md:w-auto;
 }
 
+@media (min-width: 1100px) {
+  .navbar > #nav-menu {
+    position: absolute;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 767px) {
   .header-transparent #nav-menu {
     margin-top: 12px;

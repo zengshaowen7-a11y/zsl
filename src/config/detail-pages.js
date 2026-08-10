@@ -44,7 +44,7 @@ export const detailPages = {
     ]}, cta: "Start with a short store assessment and a clear next step."
   },
   whyUs: {
-    eyebrow: "WHY FLOWBRIDGE", title: "ERP knowledge with an ", highlight: "eCommerce mindset.",
+    eyebrow: "WHY JW DROPSHIPPING", title: "ERP knowledge with an ", highlight: "eCommerce mindset.",
     intro: "We combine practical Shopify understanding, Mabang ERP familiarity and responsive human support to make the connection process easier to trust.",
     secondary: { label: "See how we work", href: "/how-it-works" },
     card: { label: "OUR DIFFERENCE", value: "Operations first", text: "Technology decisions are grounded in the way your store actually works.", points: ["Cross-border context", "Responsive specialists", "Clear service boundaries"] },

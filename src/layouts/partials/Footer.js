@@ -1,5 +1,6 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { serviceCatalog } from "@config/service-catalog";
+import Logo from "@components/Logo";
 import Link from "next/link";
 import { FiArrowUpRight, FiGlobe, FiMail, FiMessageCircle } from "react-icons/fi";
 
@@ -11,7 +12,7 @@ export default function Footer() {
       <div className="container">
         <div className="ff-footer-main">
           <div className="ff-footer-brand">
-            <Link href="/"><span>F</span>FlowBridge</Link>
+            <Logo href="/" className="jw-footer-lockup" />
             <p>{footer.lead}</p>
             <div>
               <span><FiGlobe />Global fulfillment</span>
@@ -39,7 +40,7 @@ export default function Footer() {
         </div>
         <div className="ff-footer-bottom">
           <p>{footer.rights}</p>
-          <p>China sourcing · Quality control · Global fulfillment</p>
+          <p>Product sourcing · Quality control · Global fulfillment</p>
         </div>
       </div>
     </footer>

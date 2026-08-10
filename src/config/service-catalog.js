@@ -8,9 +8,10 @@ const serviceIcons = {
   "product-sourcing": "search",
   "automatic-order-fulfillment": "refresh",
   "china-fulfillment-center": "box",
+  "quality-control-inspection": "shield",
 };
 
-// The overview, header dropdown and detail routes all use the same seven services.
+// The overview, header dropdown and detail routes all use the same service source.
 export const serviceCatalog = servicePages.map((service) => ({
   id: service.slug,
   slug: service.slug,

@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "FlowBridge Fulfillment",
+    "title": "JW Dropshipping",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
-    "logo": "",
+    "favicon": "/images/brand/jw-symbol.png",
+    "logo": "/images/brand/jw-symbol.png",
     "logo_width": "200",
     "logo_height": "48",
-    "logo_text": "FlowBridge"
+    "logo_text": "JW Dropshipping"
   },
 
   "settings": {
@@ -24,7 +24,7 @@
   "params": {
     "contact_form_action": "#",
     "footer_content": "China sourcing, quality control and global order fulfillment for independent brands.",
-    "copyright": "© 2026 FlowBridge. All rights reserved."
+    "copyright": "© 2026 JW Dropshipping. All rights reserved."
   },
 
   "google_tag_manager": {
@@ -33,7 +33,7 @@
   },
 
   "metadata": {
-    "meta_author": "FlowBridge",
+    "meta_author": "JW Dropshipping",
     "meta_image": "",
     "meta_description": "China product sourcing, quality inspection, warehousing, custom packaging and worldwide dropshipping fulfillment for independent brands."
   }

@@ -1,0 +1,241 @@
+/* Shared conversion and layout polish for the Services dropdown and eight detail pages. */
+@media (min-width: 768px) {
+  .service-mega-menu {
+    width: min(720px, calc(100vw - 48px));
+    padding: 14px;
+    transform: translateX(-40%);
+    overflow: visible;
+    border-radius: 18px;
+  }
+
+  .service-menu-overview {
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+
+  .service-menu-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 10px;
+    padding: 10px 0 0;
+  }
+
+  .service-menu-link {
+    min-height: 56px;
+    padding: 11px 14px;
+    border-radius: 12px;
+  }
+}
+
+.sdp-hero {
+  min-height: auto;
+  padding: 64px 0 72px;
+}
+
+.sdp-hero-grid {
+  align-items: start;
+  gap: 48px;
+}
+
+.sdp-hero-card,
+.sdp-form {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 24px 65px rgba(4, 20, 45, 0.26);
+}
+
+.sdp-hero-card {
+  padding: 42px;
+}
+
+.sdp-hero-card > .ff-kicker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border: 1px solid #cfe2f5;
+  border-radius: 999px;
+  background: #edf6ff;
+}
+
+.sdp-hero-card > p {
+  max-width: 720px;
+  font-size: 0.88rem;
+}
+
+.sdp-hero-card ul {
+  padding: 18px;
+  border: 1px solid #e1e9f2;
+  border-radius: 14px;
+  background: #f7fafc;
+}
+
+.sdp-hero-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  padding: 13px 17px;
+  border-radius: 10px;
+  background: var(--ff-navy);
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 900;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.sdp-hero-jump:hover {
+  transform: translateY(-2px);
+  background: var(--ff-blue);
+  color: #fff;
+}
+
+.sdp-form {
+  scroll-margin-top: 120px;
+  padding: 34px;
+  background: #fff;
+}
+
+.sdp-form-intro > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #eaf4ff;
+  color: var(--ff-blue);
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sdp-form-intro > span svg {
+  color: var(--ff-blue-2);
+}
+
+.sdp-form-intro h2 {
+  margin-top: 15px;
+}
+
+.sdp-form-intro > p {
+  max-width: 520px;
+  margin-top: 8px;
+  color: var(--ff-muted);
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
+.sdp-form input,
+.sdp-form select {
+  min-height: 50px;
+}
+
+.sdp-form textarea {
+  min-height: 122px;
+  resize: vertical;
+}
+
+.sdp-form input,
+.sdp-form select,
+.sdp-form textarea {
+  padding: 12px 14px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.sdp-form input:hover,
+.sdp-form select:hover,
+.sdp-form textarea:hover {
+  border-color: #b8c9dc;
+  background: #fff;
+}
+
+.sdp-form input::placeholder,
+.sdp-form textarea::placeholder {
+  color: #9aa8ba;
+}
+
+.sdp-form button {
+  min-height: 54px;
+  margin-top: 20px;
+}
+
+.sdp-form-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 17px;
+  margin-top: 13px;
+}
+
+.sdp-form-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #506079;
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+.sdp-form-trust svg {
+  color: #18a44a;
+}
+
+.sdp-page .ff-section {
+  padding-top: 104px;
+  padding-bottom: 104px;
+}
+
+.sdp-capability-grid article,
+.sdp-process-grid article,
+.sdp-spotlight-grid article,
+.sdp-related-grid > a {
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+}
+
+.sdp-capability-grid article:hover,
+.sdp-process-grid article:hover,
+.sdp-spotlight-grid article:hover,
+.sdp-related-grid > a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(5, 31, 69, 0.12);
+}
+
+.sdp-faq .ff-faq-list details {
+  border-radius: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sdp-faq .ff-faq-list details:hover {
+  border-color: #bcd3ea;
+  box-shadow: 0 10px 28px rgba(5, 31, 69, 0.06);
+}
+
+@media (max-width: 1100px) {
+  .sdp-hero-grid {
+    gap: 32px;
+  }
+
+  .sdp-hero-card,
+  .sdp-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sdp-hero {
+    padding: 28px 0 52px;
+  }
+
+  .sdp-hero-card,
+  .sdp-form {
+    padding: 25px;
+  }
+
+  .sdp-page .ff-section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .sdp-form-trust {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

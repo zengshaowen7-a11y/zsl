@@ -1,0 +1,18 @@
+/* Keep the main display-heading hierarchy consistent across Services pages. */
+.fsp-page .fsp-hero-copy h1,
+.fsp-page .ff-heading h2,
+.fsp-page .fsp-assurance h2,
+.fsp-page .fsp-feature h2,
+.fsp-page .ff-faq-intro h2,
+.fsp-page .fsp-final-cta h2,
+.sdp-page .sdp-hero-card h1,
+.sdp-page .sdp-problem h2,
+.sdp-page .ff-heading h2,
+.sdp-page .sdp-feature-grid h2,
+.sdp-page .sdp-case h2,
+.sdp-page .ff-faq-intro h2,
+.sdp-page .sdp-final-cta h2 {
+  font-size: 42px !important;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
