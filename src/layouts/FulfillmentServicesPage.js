@@ -36,6 +36,33 @@ const icons = {
   refresh: FiRefreshCw,
 };
 
+const trustProofs = [
+  {
+    icon: FiClipboard,
+    title: "Approved service scope",
+    text: "A written checklist clarifies sourcing, inspection, packing and shipping responsibilities before launch.",
+    proof: "Scope checklist",
+  },
+  {
+    icon: FiShield,
+    title: "Quality-check evidence",
+    text: "Agreed checkpoints and issue photos give your team useful context before an affected order continues.",
+    proof: "Inspection record",
+  },
+  {
+    icon: FiPackage,
+    title: "Packing standard",
+    text: "SKU, label, insert and parcel-protection rules create a repeatable reference for daily fulfillment.",
+    proof: "Packing instruction",
+  },
+  {
+    icon: FiGlobe,
+    title: "Shipping visibility",
+    text: "The selected route, carrier handoff and available tracking details remain connected to the customer order.",
+    proof: "Tracking handoff",
+  },
+];
+
 export default function FulfillmentServicesPage() {
   return (
     <main className="ff-site fsp-page">
@@ -61,7 +88,7 @@ export default function FulfillmentServicesPage() {
 
           <div className="fsp-hero-visual">
             <Image
-              src="/images/fulfillment/packing-team.jpg"
+              src="/images/services/china-fulfillment-center.webp"
               alt="Fulfillment team preparing customer orders"
               fill
               priority
@@ -97,7 +124,7 @@ export default function FulfillmentServicesPage() {
               return (
                 <article className="fsp-service-card" id={service.id} key={service.id}>
                   <div className="fsp-card-media">
-                    <Image src={service.image} alt="" fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
+                    <Image src={service.image} alt={`${service.title} workflow illustration`} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
                     <span><Icon /></span>
                   </div>
                   <div className="fsp-card-body">
@@ -110,6 +137,35 @@ export default function FulfillmentServicesPage() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="ff-section fsp-trust">
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">PROOF BEFORE PROMISES</span><h2>Trust should come from visible operating evidence.</h2></div>
+            <p>Before order volume grows, your team should know what will be checked, how exceptions are reported and which records can support each handoff.</p>
+          </div>
+          <div className="fsp-trust-grid">
+            <div className="fsp-trust-visual">
+              <Image src="/images/services/dropshipping-supplier.webp" alt="Illustration of a coordinated ecommerce fulfillment workflow" fill sizes="(max-width: 1023px) 100vw, 48vw" />
+              <div>
+                <small>WHAT YOUR TEAM CAN VERIFY</small>
+                <strong>Clear scope, documented checks and order-level visibility.</strong>
+                <span><FiCheck />Workflow imagery shown for service illustration</span>
+              </div>
+            </div>
+            <div className="fsp-proof-grid">
+              {trustProofs.map(({ icon: Icon, title, text, proof }, index) => (
+                <article key={title}>
+                  <div><span><Icon /></span><small>0{index + 1}</small></div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <strong><FiCheck />{proof}</strong>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

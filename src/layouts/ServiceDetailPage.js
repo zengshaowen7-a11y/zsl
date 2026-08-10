@@ -60,7 +60,7 @@ export default function ServiceDetailPage({ service }) {
   return (
     <main className="ff-site sdp-page">
       <section className="sdp-hero">
-        <Image src={service.image} alt="" fill priority sizes="100vw" />
+        <Image src={service.image} alt={`${service.menuTitle} workflow illustration`} fill priority sizes="100vw" />
         <div className="sdp-hero-overlay" />
         <div className="container sdp-hero-grid">
           <article className="sdp-hero-card">
