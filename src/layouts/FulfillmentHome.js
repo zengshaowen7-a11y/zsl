@@ -1,4 +1,5 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
+import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import {
   FiCheck,
   FiClipboard,
   FiGlobe,
+  FiImage,
   FiPackage,
   FiPrinter,
   FiRefreshCw,
@@ -15,6 +17,8 @@ import {
   FiShield,
   FiTag,
   FiUsers,
+  FiVideo,
+  FiExternalLink,
 } from "react-icons/fi";
 
 const serviceIcons = {
@@ -27,10 +31,30 @@ const serviceIcons = {
   tag: FiTag,
 };
 
+function MaterialSlot({ item, kind = "image", className = "" }) {
+  const Icon = kind === "video" ? FiVideo : FiImage;
+  return (
+    <div className={`fh-material-slot ${className}`.trim()}>
+      <div className="fh-material-slot-icon"><Icon aria-hidden="true" /></div>
+      <span>{item.label}</span>
+      <strong>{item.title}</strong>
+      <p>{item.brief}</p>
+      <small>{item.spec}</small>
+    </div>
+  );
+}
+
+function ExternalLinkSlot({ item }) {
+  if (item.url) {
+    return <a className="fh-external-link" href={item.url} target="_blank" rel="noreferrer">Open link<FiExternalLink /></a>;
+  }
+  return <span className="fh-link-needed"><FiExternalLink />Link needed: {item.label}</span>;
+}
+
 export default function FulfillmentHome({ lang = "en" }) {
   const { home: c } = getFulfillmentCopy(lang);
   const isZh = lang === "zh";
-  const operatingProofs = c.operatingProofs || [["8", "focused fulfillment services"], ["1", "accountable operating workflow"], ["3", "documented control stages"], ["Order-level", "tracking handoff"]];
+  const operatingProofs = homeMaterialPlan.proofStats;
   const evidenceItems = c.evidenceItems || [["01", "Approved service scope", "Responsibilities are confirmed before launch."], ["02", "Quality-check evidence", "Agreed checkpoints provide context before an order continues."], ["03", "Order handoff visibility", "SKU, packing and tracking details follow the order workflow."]];
 
   return (
@@ -52,14 +76,14 @@ export default function FulfillmentHome({ lang = "en" }) {
             </div>
           </div>
 
-          <div className="ff-hero-visual">
-            <Image src="/images/services/china-fulfillment-center.webp" alt="International fulfillment team preparing customer orders" fill priority sizes="(max-width: 1024px) 100vw, 48vw" />
-            <div className="ff-hero-shade" />
+          <div className="ff-hero-visual fh-hero-media-slot">
+            <MaterialSlot item={homeMaterialPlan.media.heroVideo} kind="video" className="fh-material-slot-dark" />
             <div className="ff-journey-card">
               <small>{c.visualLabel}</small>
               <div>{c.visualSteps.map((step, index) => <span key={step}><b>{index + 1}</b>{step}</span>)}</div>
             </div>
             <div className="ff-floating-badge"><FiGlobe /><span><strong>Worldwide</strong><small>Tracked delivery</small></span></div>
+            <div className="fh-hero-link-slot"><ExternalLinkSlot item={homeMaterialPlan.links.heroVideo} /></div>
           </div>
         </div>
       </section>
@@ -71,9 +95,9 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="fh-proof-band" aria-label="JW Dropshipping operating scope">
+      <section className="fh-proof-band" aria-label="JW Dropshipping verified business figures">
         <div className="container fh-proof-band-grid">
-          {operatingProofs.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}
+          {operatingProofs.map(({ value, label, note }) => <div key={label}><strong>{value}</strong><span>{label}<small>{note}</small></span></div>)}
         </div>
       </section>
 
@@ -108,6 +132,20 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
+      <section className="ff-section fh-brand-showcase">
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">BUILD A BRAND, NOT A GREY PARCEL</span><h2>Show customers what makes the unboxing experience yours.</h2></div>
+            <div className="fh-heading-support"><p>This section follows the strongest reference sites by showing packaging, private-label details and creative production before asking visitors to enquire.</p><ExternalLinkSlot item={homeMaterialPlan.links.whatsapp} /></div>
+          </div>
+          <div className="fh-brand-material-grid">
+            <MaterialSlot item={homeMaterialPlan.media.packagingPhoto} />
+            <MaterialSlot item={homeMaterialPlan.media.privateLabelPhoto} />
+            <MaterialSlot item={homeMaterialPlan.media.creativeVideo} kind="video" />
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="ff-section ff-services">
         <div className="container">
           <div className="ff-heading ff-heading-centered">
@@ -137,8 +175,8 @@ export default function FulfillmentHome({ lang = "en" }) {
 
       <section className="ff-section ff-quality">
         <div className="container ff-quality-grid">
-          <div className="ff-quality-media">
-            <Image src="/images/fulfillment/packing-team.jpg" alt="Warehouse staff preparing packaging" fill sizes="(max-width: 1024px) 100vw, 50vw" />
+          <div className="ff-quality-media fh-quality-material">
+            <MaterialSlot item={homeMaterialPlan.media.qualityPhoto} />
             <div className="ff-quality-tag"><FiShield /><span>Quality checkpoint</span></div>
           </div>
           <div className="ff-quality-copy">
@@ -149,16 +187,40 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
+      <section className="ff-section fh-cases">
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">REAL CUSTOMER STORIES</span><h2>Replace promises with approved results.</h2></div>
+            <div className="fh-heading-support"><p>Two focused cases are enough for launch. Each one should explain the problem, what changed operationally and the verified business outcome.</p><ExternalLinkSlot item={homeMaterialPlan.links.caseStudies} /></div>
+          </div>
+          <div className="fh-case-grid">
+            {[homeMaterialPlan.media.caseOne, homeMaterialPlan.media.caseTwo].map((item, index) => (
+              <article className="fh-case-card" key={item.label}>
+                <MaterialSlot item={item} />
+                <div className="fh-case-copy">
+                  <small>CUSTOMER STORY {String(index + 1).padStart(2, "0")}</small>
+                  <h3>Case title and customer name required</h3>
+                  <p>Challenge, solution and a short client-approved testimonial will appear here.</p>
+                  <div><span><strong>--</strong>Metric one</span><span><strong>--</strong>Metric two</span></div>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="fh-review-link"><ExternalLinkSlot item={homeMaterialPlan.links.reviews} /></div>
+        </div>
+      </section>
+
       <section className="ff-section ff-team fh-evidence">
         <div className="container">
           <div className="ff-heading ff-heading-split ff-heading-dark">
             <div><span className="ff-kicker ff-kicker-light">{c.teamEyebrow}</span><h2>{c.teamTitle}</h2></div><p>{c.teamLead}</p>
           </div>
           <div className="fh-evidence-grid">
-            <article className="fh-evidence-media">
-              <Image src="/images/services/quality-control-inspection.webp" alt="Fulfillment team documenting a quality inspection" fill sizes="(max-width: 900px) 100vw, 55vw" />
-              <span><FiShield /> Documented quality checkpoints</span>
-            </article>
+            <div className="fh-team-material-grid">
+              <MaterialSlot item={homeMaterialPlan.media.teamPhoto} className="fh-material-slot-dark" />
+              <MaterialSlot item={homeMaterialPlan.media.warehouseVideo} kind="video" className="fh-material-slot-dark" />
+              <ExternalLinkSlot item={homeMaterialPlan.links.warehouseTour} />
+            </div>
             <div className="fh-evidence-list">
               {evidenceItems.map(([number, title, text]) => <article key={number}><small>{number}</small><div><h3>{title}</h3><p>{text}</p></div></article>)}
               <Link className="ff-text-link" href="/services#service-comparison">See the complete service scope<FiArrowRight /></Link>
