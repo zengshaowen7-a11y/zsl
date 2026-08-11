@@ -92,13 +92,14 @@ export default function FulfillmentServicesPage() {
           </div>
 
           <div className="fsp-hero-visual">
-            <Image
-              src="/images/services/china-fulfillment-center.webp"
-              alt="Fulfillment team preparing customer orders"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 48vw"
-            />
+            <div className="fsp-ops-map" aria-hidden="true">
+              <span className="fsp-ops-hub"><FiPackage /></span>
+              <span className="fsp-ops-node fsp-ops-node-source"><FiSearch /><small>Source</small></span>
+              <span className="fsp-ops-node fsp-ops-node-qc"><FiShield /><small>Inspect</small></span>
+              <span className="fsp-ops-node fsp-ops-node-pack"><FiBox /><small>Pack</small></span>
+              <span className="fsp-ops-node fsp-ops-node-ship"><FiGlobe /><small>Deliver</small></span>
+              <i className="fsp-ops-route fsp-ops-route-one" /><i className="fsp-ops-route fsp-ops-route-two" /><i className="fsp-ops-route fsp-ops-route-three" />
+            </div>
             <div className="fsp-visual-label"><FiGlobe /><span><strong>Worldwide delivery</strong><small>Route selected per order</small></span></div>
             <div className="fsp-flow-card">
               <small>ONE PARTNER · COMPLETE ORDER JOURNEY</small>
@@ -181,7 +182,7 @@ export default function FulfillmentServicesPage() {
           </div>
           <div className="fsp-trust-grid">
             <div className="fsp-trust-visual">
-              <Image src="/images/services/dropshipping-supplier.webp" alt="Illustration of a coordinated ecommerce fulfillment workflow" fill sizes="(max-width: 1023px) 100vw, 48vw" />
+              <div className="fsp-proof-visual" aria-hidden="true"><span><FiClipboard /></span><i /><i /><i /><b><FiCheck /></b></div>
               <div>
                 <small>WHAT YOUR TEAM CAN VERIFY</small>
                 <strong>Clear scope, documented checks and order-level visibility.</strong>
@@ -225,11 +226,11 @@ export default function FulfillmentServicesPage() {
       <section className="ff-section fsp-features">
         <div className="container">
           <article className="fsp-feature">
-            <div className="fsp-feature-media fsp-support-media"><Image src="/images/fulfillment/warehouse.jpg" alt="Warehouse operations" fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiMessageCircle />Operations support</span></div>
+            <div className="fsp-feature-media fsp-support-media fsp-feature-art"><div aria-hidden="true"><FiUsers /><span /><span /><span /></div><span><FiMessageCircle />Operations support</span></div>
             <div><span className="ff-kicker">HUMAN SUPPORT</span><h2>Work with people who understand the complete order journey.</h2><p>A consistent operating contact helps connect supplier conversations, warehouse actions, packaging requirements and shipping decisions.</p><ul><li><FiCheck />One clear point of coordination</li><li><FiCheck />English communication for overseas teams</li><li><FiCheck />Product and order context kept together</li></ul></div>
           </article>
           <article className="fsp-feature fsp-feature-reverse">
-            <div className="fsp-feature-media"><Image src="/images/fulfillment/packing-team.jpg" alt="Quality inspection during fulfillment" fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />Quality checkpoints</span></div>
+            <div className="fsp-feature-media fsp-feature-art fsp-feature-art-qc"><div aria-hidden="true"><FiShield /><span /><span /><span /></div><span><FiShield />Quality checkpoints</span></div>
             <div><span className="ff-kicker">QUALITY CONTROL</span><h2>Define what must be checked before products leave China.</h2><p>Inspection is most useful when the scope is specific. We agree the relevant checks for your product, packaging and customer promise before daily operations begin.</p><ul><li><FiCheck />Quantity, variant and appearance review</li><li><FiCheck />Packaging and order accuracy checks</li><li><FiCheck />Photo evidence when an issue needs a decision</li></ul></div>
           </article>
         </div>

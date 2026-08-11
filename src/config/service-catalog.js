@@ -11,6 +11,17 @@ const serviceIcons = {
   "quality-control-inspection": "shield",
 };
 
+const serviceOverviewImages = {
+  "dropshipping-supplier": "/images/services/dropshipping-supplier.webp",
+  "3pl-fulfillment-services": "/images/services/3pl-fulfillment.webp",
+  "pod-fulfillment": "/images/services/pod-fulfillment.webp",
+  "private-label": "/images/services/private-label.webp",
+  "product-sourcing": "/images/services/product-sourcing.webp",
+  "automatic-order-fulfillment": "/images/services/order-automation.webp",
+  "china-fulfillment-center": "/images/services/china-fulfillment-center.webp",
+  "quality-control-inspection": "/images/services/quality-control-inspection.webp",
+};
+
 // The overview, header dropdown and detail routes all use the same service source.
 export const serviceCatalog = servicePages.map((service) => ({
   id: service.slug,
@@ -18,7 +29,7 @@ export const serviceCatalog = servicePages.map((service) => ({
   title: service.menuTitle,
   menuTitle: service.menuTitle,
   icon: serviceIcons[service.slug],
-  image: service.image,
+  image: serviceOverviewImages[service.slug],
   summary: service.lead,
   points: service.heroPoints.slice(0, 2),
 }));

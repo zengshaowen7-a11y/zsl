@@ -1,5 +1,4 @@
 import { aboutMaterialPlan } from "@config/about-materials";
-import Image from "next/image";
 import Link from "next/link";
 import {
   FiArrowRight,
@@ -53,15 +52,30 @@ const trustQuestions = [
   ["What company details can we verify?", "The final page will show the registered company name, office and warehouse addresses, independent review profile and official social or founder links after they are provided and verified."],
 ];
 
+const mediaVisualIcons = {
+  film: FiVideo,
+  founder: FiUser,
+  warehouse: FiBox,
+  quality: FiShield,
+  packing: FiPackage,
+  dispatch: FiTruck,
+  team: FiUsers,
+};
+
 function MediaCard({ item, className = "", video = false }) {
   const TypeIcon = video ? FiVideo : FiImage;
+  const VisualIcon = mediaVisualIcons[item.visual] || TypeIcon;
   return (
-    <article className={`about-media-card ${className}`.trim()}>
-      <Image src={item.preview} alt="Temporary fulfillment operations preview" fill sizes="(max-width: 900px) 100vw, 50vw" />
+    <article className={`about-media-card about-media-${item.visual || "placeholder"} ${className}`.trim()}>
+      {video && item.src ? (
+        <video src={item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+      ) : (
+        <div className="about-material-visual" aria-hidden="true"><span><VisualIcon /></span><i /><i /><i /></div>
+      )}
       <div className="about-media-shade" />
-      <span className="about-material-label"><TypeIcon />{item.type} · COMPANY MATERIAL NEEDED</span>
+      <span className="about-material-label"><TypeIcon />{item.type} · {item.src ? "LICENSED TEMPORARY FOOTAGE" : "COMPANY MATERIAL NEEDED"}</span>
       {video && <span className="about-play"><FiPlay /></span>}
-      <div className="about-media-copy"><strong>{item.title}</strong><p>{item.brief}</p><small>{item.spec}</small></div>
+      <div className="about-media-copy"><strong>{item.title}</strong><p>{item.brief}</p><small>{item.credit || item.spec}</small></div>
     </article>
   );
 }
@@ -105,7 +119,7 @@ export default function FulfillmentAboutPage() {
 
       <section className="ff-section about-facility">
         <div className="container">
-          <div className="ff-heading ff-heading-split"><div><span className="ff-kicker">SHOW THE OPERATION, NOT JUST THE PROMISE</span><h2>Replace stock imagery with evidence from the real workplace.</h2></div><p>These production-sized slots show exactly which company assets are needed. Until supplied, the current images remain clearly marked as temporary previews.</p></div>
+          <div className="ff-heading ff-heading-split"><div><span className="ff-kicker">SHOW THE OPERATION, NOT JUST THE PROMISE</span><h2>Replace visual placeholders with evidence from the real workplace.</h2></div><p>These production-sized slots show exactly which company assets are needed. Their distinct visual treatments prevent duplicate stock photography while the real materials are prepared.</p></div>
           <div className="about-facility-grid"><MediaCard item={aboutMaterialPlan.media.warehouseWide} className="about-media-wide" /><MediaCard item={aboutMaterialPlan.media.qualityCloseup} /><MediaCard item={aboutMaterialPlan.media.packingFilm} video /><MediaCard item={aboutMaterialPlan.media.dispatchPhoto} className="about-media-wide" /></div>
         </div>
       </section>

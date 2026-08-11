@@ -1,7 +1,6 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
-import Image from "next/image";
 import Link from "next/link";
 import { FaAmazon } from "react-icons/fa";
 import {
@@ -61,6 +60,15 @@ const processIcons = [FiClipboard, FiSearch, FiShield, FiPackage, FiGlobe];
 
 function MaterialSlot({ item, kind = "image", className = "" }) {
   const Icon = kind === "video" ? FiVideo : FiImage;
+  if (kind === "video" && item.src) {
+    return (
+      <div className={`fh-material-slot fh-material-video ${className}`.trim()}>
+        <video src={item.src} poster={item.poster || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+        <div className="fh-material-video-shade" />
+        <div className="fh-material-video-copy"><span><FiVideo />{item.label}</span><strong>{item.title}</strong><small>{item.credit}</small></div>
+      </div>
+    );
+  }
   return (
     <div className={`fh-material-slot ${className}`.trim()}>
       <div className="fh-material-slot-icon"><Icon aria-hidden="true" /></div>
@@ -227,8 +235,11 @@ export default function FulfillmentHome({ lang = "en" }) {
               return (
                 <article className="fh-service-card" key={service.slug}>
                   <Link className="fh-service-image" href={`/services/${service.slug}`} aria-label={`Explore ${service.title}`}>
-                    <Image src={service.image} alt={`${service.title} service`} fill sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 25vw" />
-                    <span><Icon /></span>
+                    <div className={`fh-service-art fh-service-art-${index + 1}`} aria-hidden="true">
+                      <span className="fh-service-art-icon"><Icon /></span>
+                      <i /><i /><i />
+                      <b>{String(index + 1).padStart(2, "0")}</b>
+                    </div>
                   </Link>
                   <div className="fh-service-body">
                     <small>{String(index + 1).padStart(2, "0")}</small><h3>{service.title}</h3><p>{service.summary}</p>

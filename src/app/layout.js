@@ -13,6 +13,7 @@ import "../styles/home-polish.css";
 import "../styles/brand-refresh.css";
 import "../styles/about-polish.css";
 import "../styles/contact-page.css";
+import "../styles/media-motion.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),

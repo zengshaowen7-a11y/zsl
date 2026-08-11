@@ -5,6 +5,8 @@ export const homeMaterialPlan = {
       title: "Warehouse and fulfillment overview",
       brief: "20-30 second horizontal video: receiving, inspection, packing and parcel dispatch.",
       spec: "MP4/WebM + 1920x1080 poster image",
+      src: "/videos/packing-boxes-pexels-4277472.mp4",
+      credit: "Licensed temporary footage · Pexels / Ketut Subiyanto",
     },
     packagingPhoto: {
       label: "IMAGE 01",
@@ -63,7 +65,7 @@ export const homeMaterialPlan = {
   ],
   links: {
     whatsapp: { url: "", label: "WhatsApp consultation URL" },
-    heroVideo: { url: "", label: "Hero video URL" },
+    heroVideo: { url: "https://www.pexels.com/video/person-packing-boxes-4277472/", label: "Licensed video source" },
     caseStudies: { url: "", label: "Customer stories page URL" },
     reviews: { url: "", label: "Independent review profile URL" },
     warehouseTour: { url: "", label: "Warehouse tour video URL" },

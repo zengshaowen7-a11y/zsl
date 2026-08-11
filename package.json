@@ -10,7 +10,9 @@
     "export": "next build && next export",
     "lint": "next lint",
     "start": "next start",
-    "preview": "next start"
+    "preview": "next start",
+    "media:audit": "node scripts/audit-core-media.mjs",
+    "media:optimize": "node scripts/optimize-generated-media.mjs"
   },
   "dependencies": {
     "github-slugger": "^2.0.0",

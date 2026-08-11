@@ -2,8 +2,6 @@ const serviceStories = {
   "dropshipping-supplier": {
     style: "journey",
     eyebrow: "ONE PARTNER BEHIND EVERY ORDER",
-    image: "/images/fulfillment/packing-team.jpg",
-    imageAlt: "Packing team preparing individual customer orders",
     badge: "Supplier-to-customer control",
     stages: [
       ["Supplier", "Product and availability confirmed"],
@@ -11,8 +9,6 @@ const serviceStories = {
       ["Customer", "Tracked doorstep delivery"],
     ],
     feature: {
-      image: "/images/fulfillment/shipping.jpg",
-      imageAlt: "International shipping containers ready for tracked delivery",
       eyebrow: "DESIGNED FOR REPEAT ORDERS",
       badge: "Tracked international delivery",
     },
@@ -20,8 +16,6 @@ const serviceStories = {
   "3pl-fulfillment-services": {
     style: "warehouse",
     eyebrow: "A WAREHOUSE RHYTHM BUILT TO SCALE",
-    image: "/images/fulfillment/warehouse.jpg",
-    imageAlt: "Warehouse aisle used for organized inventory movement",
     badge: "Inventory movement log",
     stages: [
       ["Receive", "Count and register incoming stock"],
@@ -30,8 +24,6 @@ const serviceStories = {
       ["Dispatch", "Ship and return tracking"],
     ],
     feature: {
-      image: "/images/fulfillment/packing-team.jpg",
-      imageAlt: "Warehouse team preparing packaging for outbound orders",
       eyebrow: "FROM BULK RECEIVING TO SINGLE ORDERS",
       badge: "SKU-level inventory control",
     },
@@ -39,8 +31,6 @@ const serviceStories = {
   "pod-fulfillment": {
     style: "studio",
     eyebrow: "FROM ARTWORK TO A FINISHED PRODUCT",
-    image: "/images/services/private-label.webp",
-    imageAlt: "Creative team reviewing branded product details",
     badge: "Made after each order",
     stages: [
       ["Artwork", "Check size, color and print area"],
@@ -49,8 +39,6 @@ const serviceStories = {
       ["Ship", "Pack and deliver directly"],
     ],
     feature: {
-      image: "/images/fulfillment/packaging.jpg",
-      imageAlt: "Packaging materials prepared for made-to-order products",
       eyebrow: "QUALITY BEFORE THE FIRST LIVE ORDER",
       badge: "Artwork-approved production",
     },
@@ -58,8 +46,6 @@ const serviceStories = {
   "private-label": {
     style: "brand",
     eyebrow: "MAKE EVERY DELIVERY FEEL LIKE YOUR BRAND",
-    image: "/images/fulfillment/packaging.jpg",
-    imageAlt: "Custom packaging formats ready for brand application",
     badge: "Brand-ready order experience",
     stages: [
       ["Product", "Confirm the private-label specification"],
@@ -68,8 +54,6 @@ const serviceStories = {
       ["Unbox", "Deliver a consistent brand moment"],
     ],
     feature: {
-      image: "/images/services/pod-fulfillment.webp",
-      imageAlt: "Production specialists preparing customized branded products",
       eyebrow: "TURN PACKAGING INTO RECOGNITION",
       badge: "Brand details checked before packing",
     },
@@ -77,8 +61,6 @@ const serviceStories = {
   "product-sourcing": {
     style: "compare",
     eyebrow: "MAKE SUPPLIER DECISIONS WITH EVIDENCE",
-    image: "/images/services/quality-control-inspection.webp",
-    imageAlt: "Specialists reviewing product specifications and physical quality",
     badge: "Comparable supplier shortlist",
     stages: [
       ["Brief", "Define product, target cost and market"],
@@ -87,8 +69,6 @@ const serviceStories = {
       ["Approve", "Lock specification and next steps"],
     ],
     feature: {
-      image: "/images/fulfillment/shipping.jpg",
-      imageAlt: "Freight containers representing the delivery component of landed cost",
       eyebrow: "SOURCE FOR THE FULL LANDED COST",
       badge: "Samples compared before production",
     },
@@ -96,9 +76,6 @@ const serviceStories = {
   "automatic-order-fulfillment": {
     style: "data",
     eyebrow: "ONE CONNECTED ORDER DATA FLOW",
-    image: "/images/service-slide-2.png",
-    imageAlt: "Order and fulfillment performance dashboard",
-    imageMode: "contain",
     badge: "Order and tracking sync",
     stages: [
       ["Store", "New paid order received"],
@@ -107,8 +84,6 @@ const serviceStories = {
       ["Tracking", "Status returned to the store"],
     ],
     feature: {
-      image: "/images/services/3pl-fulfillment.webp",
-      imageAlt: "Fulfillment operators receiving digital pick and pack tasks",
       eyebrow: "AUTOMATION WITH HUMAN OVERSIGHT",
       badge: "Exceptions remain visible",
     },
@@ -116,8 +91,6 @@ const serviceStories = {
   "china-fulfillment-center": {
     style: "zones",
     eyebrow: "A CLEAR PLACE FOR EVERY HANDOFF",
-    image: "/images/fulfillment/warehouse.jpg",
-    imageAlt: "Warehouse storage aisle organized for controlled inventory handling",
     badge: "Four controlled operating zones",
     stages: [
       ["Receiving", "Register factory deliveries"],
@@ -126,8 +99,6 @@ const serviceStories = {
       ["Dispatch", "Prepare tracked outbound parcels"],
     ],
     feature: {
-      image: "/images/services/3pl-fulfillment.webp",
-      imageAlt: "Fulfillment center team preparing daily customer orders",
       eyebrow: "ONE CONTROL POINT BEFORE EXPORT",
       badge: "Final parcel check before handoff",
     },
@@ -135,8 +106,6 @@ const serviceStories = {
   "quality-control-inspection": {
     style: "report",
     eyebrow: "INSPECTION THAT PRODUCES USEFUL EVIDENCE",
-    image: "/images/services/product-sourcing.webp",
-    imageAlt: "Specialists comparing a product sample against requirements",
     badge: "Documented release decision",
     stages: [
       ["Standard", "Agree what must be checked"],
@@ -145,8 +114,6 @@ const serviceStories = {
       ["Release", "Approve, rework or hold the batch"],
     ],
     feature: {
-      image: "/images/services/dropshipping-supplier.webp",
-      imageAlt: "Warehouse specialists scanning and checking packed products",
       eyebrow: "DECISIONS BACKED BY INSPECTION RECORDS",
       badge: "Evidence attached to every finding",
     },

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FiArrowRight,
+  FiBox,
   FiCheck,
   FiClipboard,
   FiClock,
@@ -16,6 +17,17 @@ import {
 } from "react-icons/fi";
 
 const capabilityIcons = [FiSearch, FiShield, FiPackage, FiClipboard, FiGlobe, FiMessageCircle];
+
+const serviceVisualIcons = {
+  "dropshipping-supplier": FiPackage,
+  "3pl-fulfillment-services": FiBox,
+  "pod-fulfillment": FiClipboard,
+  "private-label": FiShield,
+  "product-sourcing": FiSearch,
+  "automatic-order-fulfillment": FiClock,
+  "china-fulfillment-center": FiGlobe,
+  "quality-control-inspection": FiShield,
+};
 
 function ServiceField({ field }) {
   if (field.type === "select") {
@@ -85,9 +97,10 @@ export default function ServiceDetailPage({ service }) {
   const related = servicePages.filter((item) => item.slug !== service.slug).slice(0, 3);
   const story = getServiceStory(service.slug);
   const conversion = getServiceConversion(service.slug);
+  const VisualIcon = serviceVisualIcons[service.slug] || FiPackage;
 
   return (
-    <main className="ff-site sdp-page">
+    <main className={`ff-site sdp-page sdp-page-${service.slug}`}>
       <section className="sdp-hero">
         <Image src={service.image} alt={`${service.menuTitle} workflow illustration`} fill priority sizes="100vw" />
         <div className="sdp-hero-overlay" />
@@ -110,8 +123,15 @@ export default function ServiceDetailPage({ service }) {
       <section className={`ff-section sdp-problem sdp-story sdp-story-${story.style}`}>
         <div className="container sdp-problem-grid sdp-story-grid">
           <div className="sdp-story-copy"><span className="ff-kicker">{story.eyebrow}</span><h2>{service.problemTitle}</h2><p>{service.problemLead}</p><Link className="ff-btn ff-btn-dark" href="/contact">Discuss your requirements<FiArrowRight /></Link></div>
-          <div className={`sdp-problem-visual sdp-story-visual${story.imageMode === "contain" ? " sdp-story-visual-contain" : ""}`}>
-            <Image src={story.image} alt={story.imageAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+          <div className={`sdp-problem-visual sdp-story-visual sdp-story-art-${story.style}`}>
+            <div className="sdp-story-art" aria-hidden="true">
+              <span className="sdp-story-art-core"><VisualIcon /></span>
+              <i className="sdp-story-art-orbit sdp-story-art-orbit-one" />
+              <i className="sdp-story-art-orbit sdp-story-art-orbit-two" />
+              <span className="sdp-story-art-pulse sdp-story-art-pulse-one" />
+              <span className="sdp-story-art-pulse sdp-story-art-pulse-two" />
+              <span className="sdp-story-art-pulse sdp-story-art-pulse-three" />
+            </div>
             <span className="sdp-story-badge"><FiCheck />{story.badge}</span>
             <div className="sdp-story-panel">
               {story.stages.map(([title, text], index) => (
@@ -163,7 +183,13 @@ export default function ServiceDetailPage({ service }) {
 
       <section className={`ff-section sdp-feature sdp-feature-${story.style}`}>
         <div className="container sdp-feature-grid">
-          <div className="sdp-feature-image"><Image src={story.feature.image} alt={story.feature.imageAlt} fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />{story.feature.badge}</span></div>
+          <div className={`sdp-feature-image sdp-feature-system sdp-feature-system-${story.style}`}>
+            <div className="sdp-feature-system-head"><span><VisualIcon /></span><small>{story.feature.eyebrow}</small><strong>{story.feature.badge}</strong></div>
+            <div className="sdp-feature-system-flow">
+              {story.stages.slice(0, 3).map(([title, text], index) => <article key={title}><small>0{index + 1}</small><strong>{title}</strong><span>{text}</span></article>)}
+            </div>
+            <span className="sdp-feature-system-badge"><FiShield />{story.feature.badge}</span>
+          </div>
           <div><span className="ff-kicker">{story.feature.eyebrow}</span><h2>{service.featureTitle}</h2><p>{service.featureLead}</p><ul>{service.featurePoints.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul><Link className="ff-btn ff-btn-dark" href="/contact">Build your service plan<FiArrowRight /></Link></div>
         </div>
       </section>

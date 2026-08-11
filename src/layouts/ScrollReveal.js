@@ -15,7 +15,7 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a, .fh-service-card, .fh-case-card, .fh-brand-material-grid > .fh-material-slot, .fh-proof-band-grid > div, .about-proof-grid article, .about-department-grid article, .about-principle-grid article, .about-role-grid article, .about-link-grid article",
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .fsp-ops-node, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a, .sdp-feature-system-flow article, .fh-service-card, .fh-service-art-icon, .fh-case-card, .fh-brand-material-grid > .fh-material-slot, .fh-proof-band-grid > div, .about-proof-grid article, .about-department-grid article, .about-principle-grid article, .about-role-grid article, .about-link-grid article, .about-material-visual > span",
         "reveal-scale",
       ],
       [
