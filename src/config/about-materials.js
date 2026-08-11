@@ -1,0 +1,71 @@
+export const aboutMaterialPlan = {
+  proofStats: [
+    { value: "--", label: "Years in operation", note: "Company verification required" },
+    { value: "--", label: "In-house specialists", note: "Current headcount required" },
+    { value: "--", label: "Orders handled daily", note: "Recent verified average required" },
+    { value: "--", label: "Markets delivered to", note: "Shipping records required" },
+  ],
+  media: {
+    heroFilm: {
+      type: "VIDEO 01",
+      title: "Meet JW Dropshipping",
+      brief: "A 45–60 second founder-led introduction filmed inside the real office and warehouse.",
+      spec: "MP4/WebM, 1920×1080, English captions + poster image",
+      preview: "/images/fulfillment/packing-team.jpg",
+    },
+    founderStory: {
+      type: "IMAGE 01",
+      title: "Founder or leadership portrait",
+      brief: "A natural portrait in the workplace, supported by a short, factual founding story.",
+      spec: "Landscape WebP/JPG, at least 1800px wide",
+      preview: "/images/fulfillment/warehouse.jpg",
+    },
+    warehouseWide: {
+      type: "IMAGE 02",
+      title: "Real warehouse overview",
+      brief: "Show receiving, racking, SKU locations and the working team in one wide frame.",
+      spec: "Landscape WebP/JPG, at least 2000px wide",
+      preview: "/images/fulfillment/warehouse.jpg",
+    },
+    qualityCloseup: {
+      type: "IMAGE 03",
+      title: "Quality inspection in progress",
+      brief: "A close-up of staff checking quantity, variants, function, appearance and packaging.",
+      spec: "Landscape or portrait WebP/JPG, at least 1600px",
+      preview: "/images/fulfillment/packing-team.jpg",
+    },
+    packingFilm: {
+      type: "VIDEO 02",
+      title: "A real order from shelf to dispatch",
+      brief: "A 30–45 second sequence covering picking, QC, branded packing, label printing and handoff.",
+      spec: "MP4/WebM, horizontal, English captions + poster image",
+      preview: "/images/fulfillment/packaging.jpg",
+    },
+    dispatchPhoto: {
+      type: "IMAGE 04",
+      title: "Daily parcel dispatch",
+      brief: "Show labeled parcels, carrier collection and the actual dispatch environment.",
+      spec: "Landscape WebP/JPG, at least 1800px wide",
+      preview: "/images/fulfillment/shipping.jpg",
+    },
+    teamGroup: {
+      type: "IMAGE 05",
+      title: "Real team group photograph",
+      brief: "Founder, account managers, sourcing, QC, warehouse and logistics staff together.",
+      spec: "Horizontal team photo + optional role portraits",
+      preview: "/images/fulfillment/packing-team.jpg",
+    },
+  },
+  companyProfile: [
+    ["Registered company name", "Company input required"],
+    ["Year established", "Company input required"],
+    ["Office address", "Company input required"],
+    ["Warehouse address", "Company input required"],
+  ],
+  links: [
+    ["Warehouse tour", "YouTube / Vimeo URL required"],
+    ["Independent reviews", "Trustpilot / Google profile URL required"],
+    ["Founder profile", "LinkedIn URL required"],
+    ["Direct consultation", "WhatsApp business URL required"],
+  ],
+};

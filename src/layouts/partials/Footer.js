@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <h3>{footer.services}</h3>
             {serviceCatalog.slice(0, 4).map((service) => (
-              <Link href={`/services#${service.id}`} key={service.id}>{service.menuTitle}</Link>
+              <Link href={`/services/${service.slug}`} key={service.id}>{service.menuTitle}</Link>
             ))}
           </div>
           <div>
@@ -30,11 +30,12 @@ export default function Footer() {
             <Link href="/">{nav.home}</Link>
             <Link href="/services">{nav.services}</Link>
             <Link href="/about-us">{nav.about}</Link>
-            <Link href="/#faq">FAQ</Link>
+            <Link href="/contact">{nav.contact || "Contact"}</Link>
+            <a href="/#faq">FAQ</a>
           </div>
           <div>
             <h3>{footer.contact}</h3>
-            <Link className="ff-footer-quote" href="/#quote">{nav.quote}<FiArrowUpRight /></Link>
+            <Link className="ff-footer-quote" href="/contact">{nav.quote}<FiArrowUpRight /></Link>
             <span className="ff-footer-note"><FiMail />Company email to be added</span>
           </div>
         </div>

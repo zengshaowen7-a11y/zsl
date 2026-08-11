@@ -24,7 +24,7 @@ export default function HeroSlider() {
       <h1>{slide.title}<br/><span>{slide.highlight}</span></h1>
       <p className="smt-hero-copy">{slide.copy}</p>
     </div>)}</div>
-    <div className="smt-hero-actions"><Link className="smt-button smt-button-primary" href="#quote">Get a free assessment <FiArrowRight /></Link><Link className="smt-button smt-button-ghost" href="#process">See how it works</Link></div>
+    <div className="smt-hero-actions"><Link className="smt-button smt-button-primary" href="/contact">Get a free assessment <FiArrowRight /></Link><a className="smt-button smt-button-ghost" href="#process">See how it works</a></div>
     <div className="smt-proof-row"><span><FiCheck /> Human-led setup</span><span><FiCheck /> Clear service scope</span><span><FiCheck /> Fast response</span></div>
     <div className="hero-slider-controls"><button onClick={()=>move(-1)} aria-label="Previous slide"><FiArrowLeft/></button><div>{slides.map((_,index)=><button className={index===active?"active":""} onClick={()=>setActive(index)} aria-label={`Go to slide ${index+1}`} key={`${active}-${index}`}><span/></button>)}</div><button onClick={()=>move(1)} aria-label="Next slide"><FiArrowRight/></button></div>
   </div>;

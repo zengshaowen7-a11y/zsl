@@ -15,11 +15,11 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a",
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a, .fh-service-card, .fh-case-card, .fh-brand-material-grid > .fh-material-slot, .fh-proof-band-grid > div, .about-proof-grid article, .about-department-grid article, .about-principle-grid article, .about-role-grid article, .about-link-grid article",
         "reveal-scale",
       ],
       [
-        ".smt-step, .detail-list > div, .detail-guide-panel > div, .ff-process-list article, .ff-scope-list article, .ff-expectation-list article",
+        ".smt-step, .detail-list > div, .detail-guide-panel > div, .ff-process-list article, .ff-scope-list article, .ff-expectation-list article, .fh-evidence-list article, .about-facility-grid .about-media-card",
         "reveal-right",
       ],
       [
@@ -31,11 +31,11 @@ export default function ScrollReveal() {
         "reveal-right",
       ],
       [
-        ".smt-form, .detail-hero-card, .ff-quote-panel, .ff-media-placeholder, .ff-inner-media",
+        ".smt-form, .detail-hero-card, .ff-quote-panel, .ff-media-placeholder, .ff-inner-media, .about-story-visual, .about-team-photo, .about-company-card",
         "reveal-scale",
       ],
       [
-        ".smt-faq details, .detail-mini-faq details, .ff-faq details",
+        ".smt-faq details, .detail-mini-faq details, .ff-faq details, .fh-services-cta, .fh-review-link, .fh-platform-heading",
         "reveal-up",
       ],
     ];
@@ -50,7 +50,7 @@ export default function ScrollReveal() {
     });
 
     const heroItems = document.querySelectorAll(
-      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *, .fsp-hero-grid > *, .sdp-hero-grid > *",
+      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *, .fsp-hero-grid > *, .sdp-hero-grid > *, .about-hero-grid > *",
     );
     heroItems.forEach((element, index) => {
       element.classList.add("scroll-reveal", index % 2 ? "reveal-right" : "reveal-left");

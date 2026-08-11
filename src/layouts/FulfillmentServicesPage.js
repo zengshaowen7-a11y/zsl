@@ -81,7 +81,7 @@ export default function FulfillmentServicesPage() {
               Build a flexible fulfillment operation around the needs of your store. We coordinate supplier communication, product inspection, inventory, branded packing, order processing, and tracked delivery—giving your team a clearer path from purchase order to customer doorstep.
             </p>
             <div className="ff-actions">
-              <Link className="ff-btn ff-btn-primary" href="/#quote">Get a free quote<FiArrowRight /></Link>
+              <Link className="ff-btn ff-btn-primary" href="/contact">Get a free quote<FiArrowRight /></Link>
               <a className="ff-btn ff-btn-outline" href="#our-services">Explore our services</a>
             </div>
             <div className="fsp-hero-proofs">
@@ -169,7 +169,7 @@ export default function FulfillmentServicesPage() {
               </tbody>
             </table>
           </div>
-          <div className="fsp-comparison-help"><FiMessageCircle /><div><strong>Not sure where to start?</strong><p>Send a product link, your current order volume and the problem you want to solve. We will recommend the smallest practical starting scope.</p></div><Link href="/#quote">Ask for a recommendation<FiArrowRight /></Link></div>
+          <div className="fsp-comparison-help"><FiMessageCircle /><div><strong>Not sure where to start?</strong><p>Send a product link, your current order volume and the problem you want to solve. We will recommend the smallest practical starting scope.</p></div><Link href="/contact">Ask for a recommendation<FiArrowRight /></Link></div>
         </div>
       </section>
 
@@ -208,7 +208,7 @@ export default function FulfillmentServicesPage() {
             <span className="ff-kicker">CLEAR UPDATES · FEWER SURPRISES</span>
             <h2>Catch operational issues before they become customer issues.</h2>
             <p>When a supplier, product or shipment needs attention, the useful response is context, evidence and a clear next decision—not another unexplained delay.</p>
-            <Link className="ff-btn ff-btn-dark" href="/#quote">Plan your workflow<FiArrowRight /></Link>
+            <Link className="ff-btn ff-btn-dark" href="/contact">Plan your workflow<FiArrowRight /></Link>
           </div>
           <div className="fsp-issue-panel">
             <div><FiAlertCircle /><span><small>ISSUE DETECTED</small><strong>Packaging does not match the approved sample</strong></span></div>
@@ -251,13 +251,13 @@ export default function FulfillmentServicesPage() {
 
       <section className="ff-section fsp-faq">
         <div className="container ff-faq-grid">
-          <div className="ff-faq-intro"><span className="ff-kicker">SERVICE FAQ</span><h2>Questions before you get started?</h2><p>Share your product and destination details for a service recommendation built around your actual order flow.</p><Link className="ff-btn ff-btn-dark" href="/#quote">Request a free quote<FiArrowRight /></Link></div>
+          <div className="ff-faq-intro"><span className="ff-kicker">SERVICE FAQ</span><h2>Questions before you get started?</h2><p>Share your product and destination details for a service recommendation built around your actual order flow.</p><Link className="ff-btn ff-btn-dark" href="/contact">Request a free quote<FiArrowRight /></Link></div>
           <div className="ff-faq-list">{serviceFaqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
         </div>
       </section>
 
       <section className="fsp-final-cta">
-        <div className="container"><div><span>READY TO BUILD A CLEARER SUPPLY CHAIN?</span><h2>Tell us what you want to source, pack and ship.</h2></div><Link className="ff-btn ff-btn-primary" href="/#quote">Start with a product link<FiArrowRight /></Link></div>
+        <div className="container"><div><span>READY TO BUILD A CLEARER SUPPLY CHAIN?</span><h2>Tell us what you want to source, pack and ship.</h2></div><Link className="ff-btn ff-btn-primary" href="/contact">Start with a product link<FiArrowRight /></Link></div>
       </section>
     </main>
   );

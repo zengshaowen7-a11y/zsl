@@ -15,7 +15,7 @@ export default function MarketingDetail({ page }) {
               <h1>{page.title}<span>{page.highlight}</span></h1>
               <p>{page.intro}</p>
               <div className="smt-hero-actions">
-                <Link className="smt-button smt-button-primary" href="/#quote">Get a free assessment <FiArrowRight /></Link>
+                <Link className="smt-button smt-button-primary" href="/contact">Get a free assessment <FiArrowRight /></Link>
                 <Link className="smt-button smt-button-ghost" href={page.secondary.href}>{page.secondary.label}</Link>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function MarketingDetail({ page }) {
         <div className="detail-result-grid">{page.results.items.map((item) => <article key={item.title}><strong>{item.value}</strong><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
       </div></section>
 
-      <section className="detail-cta detail-dark"><div className="container"><div><span className="smt-kicker light">READY TO MOVE FORWARD?</span><h2>{page.cta}</h2></div><Link className="smt-button smt-button-primary" href="/#quote">Talk to a specialist <FiMessageCircle /></Link></div></section>
+      <section className="detail-cta detail-dark"><div className="container"><div><span className="smt-kicker light">READY TO MOVE FORWARD?</span><h2>{page.cta}</h2></div><Link className="smt-button smt-button-primary" href="/contact">Talk to a specialist <FiMessageCircle /></Link></div></section>
     </main>
   );
 }

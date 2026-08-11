@@ -8,7 +8,7 @@ function InnerHero({ copy, lang }) {
     <section className="ff-inner-hero">
       <div className="ff-hero-glow" />
       <div className="container ff-inner-hero-grid">
-        <div><span className="ff-kicker ff-kicker-light">{copy.eyebrow}</span><h1>{copy.title}</h1><p>{copy.lead}</p><Link className="ff-btn ff-btn-primary" href={`${lang === "zh" ? "/zh" : ""}/#quote`}>{lang === "zh" ? "获取免费报价" : "Get a free quote"}<FiArrowRight /></Link></div>
+        <div><span className="ff-kicker ff-kicker-light">{copy.eyebrow}</span><h1>{copy.title}</h1><p>{copy.lead}</p><Link className="ff-btn ff-btn-primary" href="/contact">{lang === "zh" ? "获取免费报价" : "Get a free quote"}<FiArrowRight /></Link></div>
         <article className="ff-inner-summary"><small>{lang === "zh" ? "服务范围" : "SERVICE SCOPE"}</small><h2>{copy.cardTitle}</h2><p>{copy.cardLead}</p><ul>{copy.cardPoints.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul></article>
       </div>
     </section>
@@ -29,7 +29,7 @@ export function FulfillmentServices({ lang = "en" }) {
       </div></section>
       <section className="ff-section ff-service-workflow"><div className="container"><div className="ff-heading ff-heading-dark"><span className="ff-kicker ff-kicker-light">{isZh ? "合作流程" : "OPERATING WORKFLOW"}</span><h2>{c.workflowTitle}</h2></div><div className="ff-workflow-grid">{c.workflow.map(([title, text], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
       <section className="ff-section ff-scope"><div className="container"><div className="ff-heading ff-heading-centered"><span className="ff-kicker">{isZh ? "按阶段选择" : "BUILT TO SCALE"}</span><h2>{c.compareTitle}</h2></div><div className="ff-scope-grid">{c.compare.map(([title, text], index) => <article key={title}><small>0{index + 1}</small><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-      <section className="ff-inner-cta"><div className="container"><h2>{c.cta}</h2><Link className="ff-btn ff-btn-primary" href={`${isZh ? "/zh" : ""}/#quote`}>{isZh ? "提交产品信息" : "Send your product details"}<FiArrowRight /></Link></div></section>
+      <section className="ff-inner-cta"><div className="container"><h2>{c.cta}</h2><Link className="ff-btn ff-btn-primary" href="/contact">{isZh ? "提交产品信息" : "Send your product details"}<FiArrowRight /></Link></div></section>
     </main>
   );
 }
@@ -58,7 +58,7 @@ export function FulfillmentAbout({ lang = "en" }) {
       <section className="ff-section ff-values"><div className="container"><div className="ff-heading ff-heading-centered"><span className="ff-kicker">{isZh ? "我们的工作原则" : "HOW WE WORK"}</span><h2>{isZh ? "把复杂供应链变成清晰日常运营" : "Turn a complex supply chain into a clear daily operation"}</h2></div><div className="ff-values-grid">{c.values.map(([title, text], index) => <article key={title}><small>0{index + 1}</small><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
       <section className="ff-section ff-real-team"><div className="container"><div className="ff-heading ff-heading-split ff-heading-dark"><div><span className="ff-kicker ff-kicker-light">{isZh ? "真实团队" : "THE PEOPLE BEHIND THE PARCELS"}</span><h2>{c.teamTitle}</h2></div><p>{c.teamLead}</p></div><div className="ff-team-grid"><div className="ff-media-placeholder"><FiUsers /><strong>{isZh ? "团队合影" : "Team photography"}</strong><small>{isZh ? "替换为真实团队照片" : "Replace with your real team photo"}</small></div><div className="ff-media-placeholder"><span><FiPlay /></span><strong>{isZh ? "仓库参观视频" : "Warehouse walkthrough"}</strong><small>{isZh ? "替换为真实工作视频" : "Replace with your real operations video"}</small></div><div className="ff-media-placeholder ff-small-placeholder"><FiImage /><strong>{isZh ? "工作细节" : "Daily operations"}</strong></div></div></div></section>
       <section className="ff-section ff-operations"><div className="container ff-operations-grid"><div><span className="ff-kicker">{isZh ? "合作体验" : "WHAT YOU CAN EXPECT"}</span><h2>{c.operationsTitle}</h2></div><ul>{c.operations.map((item) => <li key={item}><FiCheck />{item}</li>)}</ul></div></section>
-      <section className="ff-inner-cta"><div className="container"><h2>{c.cta}</h2><Link className="ff-btn ff-btn-primary" href={`${isZh ? "/zh" : ""}/#quote`}>{isZh ? "联系我们" : "Start a conversation"}<FiArrowRight /></Link></div></section>
+      <section className="ff-inner-cta"><div className="container"><h2>{c.cta}</h2><Link className="ff-btn ff-btn-primary" href="/contact">{isZh ? "联系我们" : "Start a conversation"}<FiArrowRight /></Link></div></section>
     </main>
   );
 }

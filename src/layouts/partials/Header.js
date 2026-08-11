@@ -22,8 +22,9 @@ export default function Header() {
   const homeHref = "/";
   const servicesHref = "/services";
   const aboutHref = "/about-us";
-  const quoteHref = "/#quote";
-  const hasOverlayHeader = ["/", "/services", "/about-us"].includes(pathname);
+  const contactHref = "/contact";
+  const quoteHref = "/contact";
+  const hasOverlayHeader = ["/", "/services", "/about-us", "/contact"].includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,6 +140,15 @@ export default function Header() {
                 onClick={closeNav}
               >
                 {nav.about}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link block ${pathname === "/contact" ? "nav-link-active" : ""}`}
+                href={contactHref}
+                onClick={closeNav}
+              >
+                {nav.contact || "Contact"}
               </Link>
             </li>
             <li className="nav-item md:hidden">

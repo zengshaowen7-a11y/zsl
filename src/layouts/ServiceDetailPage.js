@@ -109,7 +109,7 @@ export default function ServiceDetailPage({ service }) {
 
       <section className={`ff-section sdp-problem sdp-story sdp-story-${story.style}`}>
         <div className="container sdp-problem-grid sdp-story-grid">
-          <div className="sdp-story-copy"><span className="ff-kicker">{story.eyebrow}</span><h2>{service.problemTitle}</h2><p>{service.problemLead}</p><Link className="ff-btn ff-btn-dark" href="/#quote">Discuss your requirements<FiArrowRight /></Link></div>
+          <div className="sdp-story-copy"><span className="ff-kicker">{story.eyebrow}</span><h2>{service.problemTitle}</h2><p>{service.problemLead}</p><Link className="ff-btn ff-btn-dark" href="/contact">Discuss your requirements<FiArrowRight /></Link></div>
           <div className={`sdp-problem-visual sdp-story-visual${story.imageMode === "contain" ? " sdp-story-visual-contain" : ""}`}>
             <Image src={story.image} alt={story.imageAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
             <span className="sdp-story-badge"><FiCheck />{story.badge}</span>
@@ -164,7 +164,7 @@ export default function ServiceDetailPage({ service }) {
       <section className={`ff-section sdp-feature sdp-feature-${story.style}`}>
         <div className="container sdp-feature-grid">
           <div className="sdp-feature-image"><Image src={story.feature.image} alt={story.feature.imageAlt} fill sizes="(max-width: 900px) 100vw, 50vw" /><span><FiShield />{story.feature.badge}</span></div>
-          <div><span className="ff-kicker">{story.feature.eyebrow}</span><h2>{service.featureTitle}</h2><p>{service.featureLead}</p><ul>{service.featurePoints.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul><Link className="ff-btn ff-btn-dark" href="/#quote">Build your service plan<FiArrowRight /></Link></div>
+          <div><span className="ff-kicker">{story.feature.eyebrow}</span><h2>{service.featureTitle}</h2><p>{service.featureLead}</p><ul>{service.featurePoints.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul><Link className="ff-btn ff-btn-dark" href="/contact">Build your service plan<FiArrowRight /></Link></div>
         </div>
       </section>
 
@@ -175,7 +175,7 @@ export default function ServiceDetailPage({ service }) {
             <h2>{conversion.caseStudy.title}</h2>
             <p className="sdp-case-profile"><FiGlobe />{conversion.caseStudy.profile}</p>
             <div className="sdp-case-challenge"><small>THE OPERATING CHALLENGE</small><p>{conversion.caseStudy.challenge}</p></div>
-            <Link className="ff-btn ff-btn-dark" href="#service-quote">Discuss a similar project<FiArrowRight /></Link>
+            <a className="ff-btn ff-btn-dark" href="#service-quote">Discuss a similar project<FiArrowRight /></a>
           </div>
           <div className="sdp-case-board">
             <div className="sdp-case-plan">
@@ -198,7 +198,7 @@ export default function ServiceDetailPage({ service }) {
 
       <section className="ff-section sdp-faq">
         <div className="container ff-faq-grid">
-          <div className="ff-faq-intro"><span className="ff-kicker">SERVICE FAQ</span><h2>Questions about {service.menuTitle}?</h2><p>The exact operating scope depends on your product, markets, volume and customer promise.</p><Link className="ff-btn ff-btn-dark" href="/#quote">Ask our team<FiArrowRight /></Link></div>
+          <div className="ff-faq-intro"><span className="ff-kicker">SERVICE FAQ</span><h2>Questions about {service.menuTitle}?</h2><p>The exact operating scope depends on your product, markets, volume and customer promise.</p><Link className="ff-btn ff-btn-dark" href="/contact">Ask our team<FiArrowRight /></Link></div>
           <div className="ff-faq-list">{service.faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function ServiceDetailPage({ service }) {
         <div className="container"><div className="ff-heading ff-heading-split"><div><span className="ff-kicker">RELATED SERVICES</span><h2>Connect the rest of the order journey.</h2></div><Link href="/services">View all services<FiArrowRight /></Link></div><div className="sdp-related-grid">{related.map((item) => <Link href={`/services/${item.slug}`} key={item.slug}><span>{item.eyebrow}</span><h3>{item.menuTitle}</h3><p>{item.lead}</p><strong>Explore service<FiArrowRight /></strong></Link>)}</div></div>
       </section>
 
-      <section className="sdp-final-cta"><div className="container"><div><span>START WITH YOUR CURRENT PRODUCT OR STORE</span><h2>Build a service scope around the way you actually sell.</h2></div><Link className="ff-btn ff-btn-primary" href="/#quote">Get a free quote<FiArrowRight /></Link></div></section>
+      <section className="sdp-final-cta"><div className="container"><div><span>START WITH YOUR CURRENT PRODUCT OR STORE</span><h2>Build a service scope around the way you actually sell.</h2></div><Link className="ff-btn ff-btn-primary" href="/contact">Get a free quote<FiArrowRight /></Link></div></section>
     </main>
   );
 }

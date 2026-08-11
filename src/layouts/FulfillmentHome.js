@@ -3,9 +3,11 @@ import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
 import Image from "next/image";
 import Link from "next/link";
+import { FaAmazon } from "react-icons/fa";
 import {
   FiArrowRight,
   FiBox,
+  FiCalendar,
   FiCheck,
   FiClipboard,
   FiGlobe,
@@ -14,12 +16,23 @@ import {
   FiPrinter,
   FiRefreshCw,
   FiSearch,
+  FiShoppingBag,
   FiShield,
   FiTag,
   FiUsers,
   FiVideo,
   FiExternalLink,
 } from "react-icons/fi";
+import {
+  SiBigcommerce,
+  SiEbay,
+  SiEtsy,
+  SiShopify,
+  SiSquarespace,
+  SiTiktok,
+  SiWix,
+  SiWoocommerce,
+} from "react-icons/si";
 
 const serviceIcons = {
   search: FiSearch,
@@ -30,6 +43,21 @@ const serviceIcons = {
   refresh: FiRefreshCw,
   tag: FiTag,
 };
+
+const platformLogos = [
+  { name: "Shopify", Icon: SiShopify, color: "#75a943" },
+  { name: "WooCommerce", Icon: SiWoocommerce, color: "#96588a" },
+  { name: "TikTok Shop", Icon: SiTiktok, color: "#111111" },
+  { name: "Amazon", Icon: FaAmazon, color: "#ff9900" },
+  { name: "Etsy", Icon: SiEtsy, color: "#f1641e" },
+  { name: "eBay", Icon: SiEbay, color: "#e53238" },
+  { name: "BigCommerce", Icon: SiBigcommerce, color: "#34313f" },
+  { name: "Wix", Icon: SiWix, color: "#0c0c0c" },
+  { name: "Squarespace", Icon: SiSquarespace, color: "#111111" },
+];
+
+const proofIcons = [FiCalendar, FiPackage, FiShoppingBag, FiGlobe];
+const processIcons = [FiClipboard, FiSearch, FiShield, FiPackage, FiGlobe];
 
 function MaterialSlot({ item, kind = "image", className = "" }) {
   const Icon = kind === "video" ? FiVideo : FiImage;
@@ -67,8 +95,8 @@ export default function FulfillmentHome({ lang = "en" }) {
             <h1>{c.title}</h1>
             <p>{c.lead}</p>
             <div className="ff-actions">
-              <Link className="ff-btn ff-btn-primary" href="#quote">{c.primary}<FiArrowRight /></Link>
-              <Link className="ff-btn ff-btn-ghost" href="#process">{c.secondary}</Link>
+              <a className="ff-btn ff-btn-primary" href="/contact">{c.primary}<FiArrowRight /></a>
+              <a className="ff-btn ff-btn-ghost" href="#process">{c.secondary}</a>
             </div>
             <p className="fh-response-note"><FiUsers /> Human review. No obligation. A practical next step for your store.</p>
             <div className="ff-proof-list">
@@ -90,24 +118,45 @@ export default function FulfillmentHome({ lang = "en" }) {
 
       <section className="ff-platforms">
         <div className="container">
-          <p>{c.platformTitle}</p>
-          <div>{c.platforms.map((platform) => <span key={platform}>{platform}</span>)}</div>
+          <p className="fh-platform-heading">{c.platformTitle}</p>
+          <div className="fh-platform-marquee" role="region" aria-label="Supported eCommerce platforms">
+            <div className="fh-platform-track">
+              {[0, 1].map((copyIndex) => (
+                <div className="fh-platform-group" key={copyIndex} aria-hidden={copyIndex === 1 ? "true" : undefined}>
+                  {platformLogos.map(({ name, Icon, color }) => (
+                    <span className="fh-platform-logo" style={{ "--platform-color": color }} key={`${copyIndex}-${name}`}>
+                      <Icon aria-hidden="true" />
+                      <strong>{name}</strong>
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="fh-proof-band" aria-label="JW Dropshipping verified business figures">
         <div className="container fh-proof-band-grid">
-          {operatingProofs.map(({ value, label, note }) => <div key={label}><strong>{value}</strong><span>{label}<small>{note}</small></span></div>)}
+          {operatingProofs.map(({ value, label, note }, index) => {
+            const ProofIcon = proofIcons[index] || FiCheck;
+            return <div className="fh-proof-stat" key={label}><ProofIcon className="fh-proof-icon" aria-hidden="true" /><strong>{value}</strong><span>{label}<small>{note}</small></span></div>;
+          })}
         </div>
       </section>
 
-      <section className="ff-section ff-problem">
+      <section className="ff-section ff-problem fh-problem-section">
         <div className="container">
           <div className="ff-heading ff-heading-split">
             <div><span className="ff-kicker">{c.problemEyebrow}</span><h2>{c.problemTitle}</h2></div>
             <p>{c.problemLead}</p>
           </div>
           <div className="ff-compare-grid">
+            <div className="fh-compare-bridge" aria-hidden="true">
+              <span>Fragmented handoffs</span>
+              <i><FiArrowRight /></i>
+              <strong>One accountable workflow</strong>
+            </div>
             <article className="ff-compare-card ff-compare-muted">
               <small>01</small><h3>{c.without.title}</h3>
               <ul>{c.without.items.map((item) => <li key={item}><span>×</span>{item}</li>)}</ul>
@@ -120,14 +169,35 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="process" className="ff-section ff-process">
+      <section id="process" className="ff-section ff-process fh-process-section">
         <div className="container">
-          <div className="ff-heading ff-heading-dark">
-            <span className="ff-kicker ff-kicker-light">{c.processEyebrow}</span>
-            <h2>{c.processTitle}</h2><p>{c.processLead}</p>
+          <div className="ff-heading ff-heading-dark fh-process-heading">
+            <div>
+              <span className="ff-kicker ff-kicker-light">{c.processEyebrow}</span>
+              <h2>{c.processTitle}</h2>
+            </div>
+            <p>{c.processLead}</p>
           </div>
-          <div className="ff-process-list">
-            {c.steps.map(([number, title, text]) => <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div><FiArrowRight /></article>)}
+          <div className="fh-process-stage">
+            <div className="fh-process-rail" aria-hidden="true">
+              <span className="fh-process-parcel"><FiPackage /></span>
+            </div>
+            <div className="ff-process-list fh-process-timeline">
+              {c.steps.map(([number, title, text], index) => {
+                const ProcessIcon = processIcons[index] || FiCheck;
+                return (
+                  <article key={number} style={{ "--process-index": index }}>
+                    <div className="fh-process-node"><ProcessIcon aria-hidden="true" /></div>
+                    <span>{number}</span>
+                    <div><h3>{title}</h3><p>{text}</p></div>
+                    <FiArrowRight />
+                  </article>
+                );
+              })}
+            </div>
+            <div className="fh-process-route" aria-hidden="true">
+              <span>Product brief</span><i /><strong>Tracked delivery</strong>
+            </div>
           </div>
         </div>
       </section>
@@ -182,7 +252,7 @@ export default function FulfillmentHome({ lang = "en" }) {
           <div className="ff-quality-copy">
             <span className="ff-kicker">{c.qcEyebrow}</span><h2>{c.qcTitle}</h2><p>{c.qcLead}</p>
             <ul>{c.qcChecks.map((item) => <li key={item}><FiCheck />{item}</li>)}</ul>
-            <Link className="ff-text-link" href="#quote">Discuss your QC requirements<FiArrowRight /></Link>
+            <Link className="ff-text-link" href="/contact">Discuss your QC requirements<FiArrowRight /></Link>
           </div>
         </div>
       </section>
@@ -231,7 +301,7 @@ export default function FulfillmentHome({ lang = "en" }) {
 
       <section id="faq" className="ff-section ff-faq">
         <div className="container ff-faq-grid">
-          <div className="ff-faq-intro"><span className="ff-kicker">{c.faqEyebrow}</span><h2>{c.faqTitle}</h2><p>The practical questions most independent sellers ask before getting started.</p><Link className="ff-btn ff-btn-dark" href="#quote">{c.primary}<FiArrowRight /></Link></div>
+          <div className="ff-faq-intro"><span className="ff-kicker">{c.faqEyebrow}</span><h2>{c.faqTitle}</h2><p>The practical questions most independent sellers ask before getting started.</p><Link className="ff-btn ff-btn-dark" href="/contact">{c.primary}<FiArrowRight /></Link></div>
           <div className="ff-faq-list">{c.faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
         </div>
       </section>

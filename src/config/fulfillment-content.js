@@ -4,6 +4,7 @@ export const fulfillmentCopy = {
       home: "Home",
       services: "Services",
       about: "About Us",
+      contact: "Contact",
       quote: "Get a Free Quote",
       serviceItems: [
         ["Product Sourcing", "/services#sourcing"],

@@ -43,7 +43,9 @@ export default RegularPages;
 // for regular page routes
 export const generateStaticParams = async () => {
   const allslugs = getSinglePage("src/content");
-  const slugs = allslugs.map((item) => item.slug);
+  const slugs = allslugs
+    .map((item) => item.slug)
+    .filter((slug) => slug !== "contact");
   const paths = slugs.map((slug) => ({
     regular: slug,
   }));

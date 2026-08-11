@@ -1,6 +1,11 @@
-import SeoMeta from "@layouts/SeoMeta";
-import { FulfillmentAbout } from "@layouts/FulfillmentInnerPage";
+import FulfillmentAboutPage from "@layouts/FulfillmentAboutPage";
+
+export const metadata = {
+  title: "About JW Dropshipping | The Team Behind Your Fulfillment",
+  description:
+    "Meet the people, operating principles and fulfillment workflow behind JW Dropshipping's sourcing, quality control, warehouse and global delivery services.",
+};
 
 export default function AboutPage() {
-  return <><SeoMeta title="About JW Dropshipping | Global Fulfillment Team" /><FulfillmentAbout lang="en" /></>;
+  return <FulfillmentAboutPage />;
 }
