@@ -1,7 +1,6 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
-import HomeTestimonials from "@layouts/HomeTestimonials";
 import Link from "next/link";
 import { FaAmazon } from "react-icons/fa";
 import {
@@ -268,8 +267,6 @@ export default function FulfillmentHome({ lang = "en" }) {
           </div>
         </div>
       </section>
-
-      <HomeTestimonials />
 
       <section className="ff-section ff-team fh-evidence">
         <div className="container">

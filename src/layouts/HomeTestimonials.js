@@ -67,7 +67,7 @@ const proofSteps = [
   ["03", "Evidence behind the story", "Pair customer feedback with approved workflow, warehouse or delivery evidence."],
 ];
 
-export default function HomeTestimonials() {
+export default function HomeTestimonials({ standalone = false }) {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function HomeTestimonials() {
   const showPage = (nextPage) => setPage((nextPage + 2) % 2);
 
   return (
-    <section id="testimonials" className="ff-section fh-testimonials" aria-labelledby="testimonials-title">
+    <section id="testimonials" className={`ff-section fh-testimonials ${standalone ? "fh-testimonials-standalone" : ""}`} aria-labelledby="testimonials-title">
       <div className="fh-testimonial-orbit" aria-hidden="true"><i /><i /><i /></div>
       <div className="container">
         <div className="fh-testimonial-heading">
