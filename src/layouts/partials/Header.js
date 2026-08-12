@@ -143,6 +143,11 @@ export default function Header() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link block" href="/#testimonials" onClick={closeNav}>
+                Testimonials
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link
                 className={`nav-link block ${pathname === "/contact" ? "nav-link-active" : ""}`}
                 href={contactHref}

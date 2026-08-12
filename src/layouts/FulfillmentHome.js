@@ -1,6 +1,7 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
+import HomeTestimonials from "@layouts/HomeTestimonials";
 import Link from "next/link";
 import { FaAmazon } from "react-icons/fa";
 import {
@@ -268,28 +269,7 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="ff-section fh-cases">
-        <div className="container">
-          <div className="ff-heading ff-heading-split">
-            <div><span className="ff-kicker">REAL CUSTOMER STORIES</span><h2>Replace promises with approved results.</h2></div>
-            <div className="fh-heading-support"><p>Two focused cases are enough for launch. Each one should explain the problem, what changed operationally and the verified business outcome.</p><ExternalLinkSlot item={homeMaterialPlan.links.caseStudies} /></div>
-          </div>
-          <div className="fh-case-grid">
-            {[homeMaterialPlan.media.caseOne, homeMaterialPlan.media.caseTwo].map((item, index) => (
-              <article className="fh-case-card" key={item.label}>
-                <MaterialSlot item={item} />
-                <div className="fh-case-copy">
-                  <small>CUSTOMER STORY {String(index + 1).padStart(2, "0")}</small>
-                  <h3>Case title and customer name required</h3>
-                  <p>Challenge, solution and a short client-approved testimonial will appear here.</p>
-                  <div><span><strong>--</strong>Metric one</span><span><strong>--</strong>Metric two</span></div>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="fh-review-link"><ExternalLinkSlot item={homeMaterialPlan.links.reviews} /></div>
-        </div>
-      </section>
+      <HomeTestimonials />
 
       <section className="ff-section ff-team fh-evidence">
         <div className="container">
