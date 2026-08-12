@@ -10,7 +10,9 @@ import { FiArrowRight, FiCheck, FiChevronDown, FiGlobe } from "react-icons/fi";
 
 export default function Header() {
   const pathname = usePathname();
-  const { nav } = getFulfillmentCopy("en");
+  const isZh = pathname === "/zh" || pathname.startsWith("/zh/");
+  const langPrefix = isZh ? "/zh" : "";
+  const { nav } = getFulfillmentCopy(isZh ? "zh" : "en");
   const [navOpen, setNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -19,12 +21,14 @@ export default function Header() {
   const languageRef = useRef(null);
   const servicesRef = useRef(null);
 
-  const homeHref = "/";
-  const servicesHref = "/services";
-  const aboutHref = "/about-us";
-  const contactHref = "/contact";
-  const quoteHref = "/contact";
-  const hasOverlayHeader = ["/", "/services", "/about-us", "/contact"].includes(pathname);
+  const homeHref = isZh ? "/zh" : "/";
+  const servicesHref = `${langPrefix}/services`;
+  const aboutHref = `${langPrefix}/about-us`;
+  const testimonialsHref = `${langPrefix}/testimonials`;
+  const contactHref = `${langPrefix}/contact`;
+  const quoteHref = contactHref;
+  const comparablePathname = isZh ? pathname.replace(/^\/zh(?=\/|$)/, "") || "/" : pathname;
+  const hasOverlayHeader = ["/", "/services", "/about-us", "/contact"].includes(comparablePathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,12 +68,27 @@ export default function Header() {
     setServicesOpen(false);
   };
 
+  const handleNavLinkClick = (href) => (event) => {
+    closeNav();
+    if (href === pathname) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleServicesTriggerClick = () => {
+    if (comparablePathname === "/services") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    setServicesOpen((open) => !open);
+  };
+
   return (
     <header
       className={`header ${hasOverlayHeader ? "header-transparent" : "header-solid"} ${scrolled ? "is-scrolled" : ""} nav-on-${navTheme}`}
     >
       <nav className="navbar container" aria-label="Primary navigation">
-        <Logo href={homeHref} />
+        <Logo href={homeHref} onClick={handleNavLinkClick(homeHref)} />
 
         <button
           id="show-button"
@@ -90,9 +109,9 @@ export default function Header() {
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
             <li className="nav-item">
               <Link
-                className={`nav-link block ${pathname === "/" ? "nav-link-active" : ""}`}
+                className={`nav-link block ${comparablePathname === "/" ? "nav-link-active" : ""}`}
                 href={homeHref}
-                onClick={closeNav}
+                onClick={handleNavLinkClick(homeHref)}
               >
                 {nav.home}
               </Link>
@@ -107,23 +126,23 @@ export default function Header() {
               }}
             >
               <button
-                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${pathname.startsWith("/services") ? "nav-link-active" : ""}`}
+                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${comparablePathname.startsWith("/services") ? "nav-link-active" : ""}`}
                 type="button"
                 aria-haspopup="menu"
                 aria-expanded={servicesOpen}
-                onClick={() => setServicesOpen((open) => !open)}
+                onClick={handleServicesTriggerClick}
               >
                 {nav.services}
                 <FiChevronDown className={servicesOpen ? "is-open" : ""} aria-hidden="true" />
               </button>
               <div className={`service-mega-menu ${servicesOpen ? "is-open" : ""}`} role="menu">
-                <Link className="service-menu-overview" href={servicesHref} onClick={closeNav} role="menuitem">
-                  <strong>Our Services Overview</strong><FiArrowRight />
+                <Link className="service-menu-overview" href={servicesHref} onClick={handleNavLinkClick(servicesHref)} role="menuitem">
+                  <strong>{isZh ? "服务总览" : "Our Services Overview"}</strong><FiArrowRight />
                 </Link>
                 <ul className="service-menu-grid">
                 {servicePages.map((service, index) => (
                   <li className="nav-dropdown-item" key={service.slug}>
-                    <Link className="service-menu-link" href={`/services/${service.slug}`} onClick={closeNav} role="menuitem">
+                    <Link className="service-menu-link" href={`${langPrefix}/services/${service.slug}`} onClick={handleNavLinkClick(`${langPrefix}/services/${service.slug}`)} role="menuitem">
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <strong>{service.menuTitle}</strong>
                       <FiArrowRight />
@@ -135,33 +154,33 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link block ${pathname === "/about-us" ? "nav-link-active" : ""}`}
+                className={`nav-link block ${comparablePathname === "/about-us" ? "nav-link-active" : ""}`}
                 href={aboutHref}
-                onClick={closeNav}
+                onClick={handleNavLinkClick(aboutHref)}
               >
                 {nav.about}
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link block ${pathname === "/testimonials" ? "nav-link-active" : ""}`}
-                href="/testimonials"
-                onClick={closeNav}
+                className={`nav-link block ${comparablePathname === "/testimonials" ? "nav-link-active" : ""}`}
+                href={testimonialsHref}
+                onClick={handleNavLinkClick(testimonialsHref)}
               >
-                Testimonials
+                {isZh ? "用户评价" : "Testimonials"}
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link block ${pathname === "/contact" ? "nav-link-active" : ""}`}
+                className={`nav-link block ${comparablePathname === "/contact" ? "nav-link-active" : ""}`}
                 href={contactHref}
-                onClick={closeNav}
+                onClick={handleNavLinkClick(contactHref)}
               >
                 {nav.contact || "Contact"}
               </Link>
             </li>
             <li className="nav-item md:hidden">
-              <Link className="ff-btn ff-btn-primary" href={quoteHref} onClick={closeNav}>
+              <Link className="ff-btn ff-btn-primary" href={quoteHref} onClick={handleNavLinkClick(quoteHref)}>
                 {nav.quote}
               </Link>
             </li>
@@ -192,7 +211,7 @@ export default function Header() {
         </div>
 
         <div className="order-1 ml-auto hidden items-center justify-end md:order-2 md:ml-0 md:flex">
-          <Link className="ff-btn ff-btn-primary ff-nav-cta" href={quoteHref}>
+          <Link className="ff-btn ff-btn-primary ff-nav-cta" href={quoteHref} onClick={handleNavLinkClick(quoteHref)}>
             {nav.quote}
           </Link>
         </div>

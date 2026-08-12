@@ -1,12 +1,13 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { homeMaterialPlan } from "@config/home-materials";
 import { serviceCatalog } from "@config/service-catalog";
+import Image from "next/image";
 import Link from "next/link";
+import PhoneCountryInput from "./components/PhoneCountryInput";
 import { FaAmazon } from "react-icons/fa";
 import {
   FiArrowRight,
   FiBox,
-  FiCalendar,
   FiCheck,
   FiClipboard,
   FiGlobe,
@@ -15,7 +16,6 @@ import {
   FiPrinter,
   FiRefreshCw,
   FiSearch,
-  FiShoppingBag,
   FiShield,
   FiTag,
   FiUsers,
@@ -43,6 +43,27 @@ const serviceIcons = {
   tag: FiTag,
 };
 
+const processVisuals = [
+  {
+    src: "/images/process/warehouse-aisle-workers.jpg",
+    label: "01 / SUPPLIER + STOCK",
+    title: "Warehouse context before orders move",
+    credit: "Pexels / Tiger Lily",
+  },
+  {
+    src: "/images/process/warehouse-picking-overhead.jpg",
+    label: "02 / CHECK + HANDOFF",
+    title: "Goods are checked before packing rules apply",
+    credit: "Pexels / Tiger Lily",
+  },
+  {
+    src: "/images/process/delivery-truck-boxes.jpg",
+    label: "03 / TRACKED DELIVERY",
+    title: "Parcels leave with a traceable handoff",
+    credit: "Pexels / Wojciech Kotlicki",
+  },
+];
+
 const platformLogos = [
   { name: "Shopify", Icon: SiShopify, color: "#75a943" },
   { name: "WooCommerce", Icon: SiWoocommerce, color: "#96588a" },
@@ -55,8 +76,25 @@ const platformLogos = [
   { name: "Squarespace", Icon: SiSquarespace, color: "#111111" },
 ];
 
-const proofIcons = [FiCalendar, FiPackage, FiShoppingBag, FiGlobe];
 const processIcons = [FiClipboard, FiSearch, FiShield, FiPackage, FiGlobe];
+
+const quoteDialCountries = [
+  { flag: "🇺🇸", name: "United States", code: "+1" },
+  { flag: "🇬🇧", name: "United Kingdom", code: "+44" },
+  { flag: "🇨🇦", name: "Canada", code: "+1" },
+  { flag: "🇦🇺", name: "Australia", code: "+61" },
+  { flag: "🇩🇪", name: "Germany", code: "+49" },
+  { flag: "🇫🇷", name: "France", code: "+33" },
+  { flag: "🇮🇹", name: "Italy", code: "+39" },
+  { flag: "🇪🇸", name: "Spain", code: "+34" },
+  { flag: "🇳🇱", name: "Netherlands", code: "+31" },
+  { flag: "🇦🇪", name: "United Arab Emirates", code: "+971" },
+  { flag: "🇸🇦", name: "Saudi Arabia", code: "+966" },
+  { flag: "🇯🇵", name: "Japan", code: "+81" },
+  { flag: "🇰🇷", name: "South Korea", code: "+82" },
+  { flag: "🇸🇬", name: "Singapore", code: "+65" },
+  { flag: "🇨🇳", name: "China", code: "+86" },
+];
 
 function MaterialSlot({ item, kind = "image", className = "" }) {
   const Icon = kind === "video" ? FiVideo : FiImage;
@@ -65,8 +103,21 @@ function MaterialSlot({ item, kind = "image", className = "" }) {
       <div className={`fh-material-slot fh-material-video ${className}`.trim()}>
         <video src={item.src} poster={item.poster || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
         <div className="fh-material-video-shade" />
-        <div className="fh-material-video-copy"><span><FiVideo />{item.label}</span><strong>{item.title}</strong><small>{item.credit}</small></div>
+        <div className="fh-material-video-copy"><span><FiVideo />{item.label}</span><strong>{item.title}</strong><p>{item.brief}</p><small>{item.credit}</small></div>
       </div>
+    );
+  }
+  if (item.src) {
+    return (
+      <figure className={`fh-material-slot fh-material-image ${className}`.trim()}>
+        <Image src={item.src} alt={item.title} fill sizes="(max-width: 767px) 100vw, 33vw" />
+        <figcaption className="fh-material-media-copy">
+          <span><Icon aria-hidden="true" />{item.label}</span>
+          <strong>{item.title}</strong>
+          <p>{item.brief}</p>
+          <small>{item.credit || item.spec}</small>
+        </figcaption>
+      </figure>
     );
   }
   return (
@@ -90,7 +141,6 @@ function ExternalLinkSlot({ item }) {
 export default function FulfillmentHome({ lang = "en" }) {
   const { home: c } = getFulfillmentCopy(lang);
   const isZh = lang === "zh";
-  const operatingProofs = homeMaterialPlan.proofStats;
   const evidenceItems = c.evidenceItems || [["01", "Approved service scope", "Responsibilities are confirmed before launch."], ["02", "Quality-check evidence", "Agreed checkpoints provide context before an order continues."], ["03", "Order handoff visibility", "SKU, packing and tracking details follow the order workflow."]];
 
   return (
@@ -144,15 +194,6 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="fh-proof-band" aria-label="JW Dropshipping verified business figures">
-        <div className="container fh-proof-band-grid">
-          {operatingProofs.map(({ value, label, note }, index) => {
-            const ProofIcon = proofIcons[index] || FiCheck;
-            return <div className="fh-proof-stat" key={label}><ProofIcon className="fh-proof-icon" aria-hidden="true" /><strong>{value}</strong><span>{label}<small>{note}</small></span></div>;
-          })}
-        </div>
-      </section>
-
       <section className="ff-section ff-problem fh-problem-section">
         <div className="container">
           <div className="ff-heading ff-heading-split">
@@ -185,6 +226,18 @@ export default function FulfillmentHome({ lang = "en" }) {
               <h2>{c.processTitle}</h2>
             </div>
             <p>{c.processLead}</p>
+          </div>
+          <div className="fh-process-visual-grid" aria-label="Fulfillment workflow visuals">
+            {processVisuals.map((visual, index) => (
+              <figure className={`fh-process-visual fh-process-visual-${index + 1}`} key={visual.src}>
+                <Image src={visual.src} alt={visual.title} fill sizes="(max-width: 767px) 100vw, 33vw" />
+                <figcaption>
+                  <span>{visual.label}</span>
+                  <strong>{visual.title}</strong>
+                  <small>{visual.credit}</small>
+                </figcaption>
+              </figure>
+            ))}
           </div>
           <div className="fh-process-stage">
             <div className="fh-process-rail" aria-hidden="true">
@@ -235,11 +288,9 @@ export default function FulfillmentHome({ lang = "en" }) {
               return (
                 <article className="fh-service-card" key={service.slug}>
                   <Link className="fh-service-image" href={`/services/${service.slug}`} aria-label={`Explore ${service.title}`}>
-                    <div className={`fh-service-art fh-service-art-${index + 1}`} aria-hidden="true">
-                      <span className="fh-service-art-icon"><Icon /></span>
-                      <i /><i /><i />
-                      <b>{String(index + 1).padStart(2, "0")}</b>
-                    </div>
+                    <Image src={service.image} alt={service.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
+                    <span className="fh-service-art-icon"><Icon /></span>
+                    <b>{String(index + 1).padStart(2, "0")}</b>
                   </Link>
                   <div className="fh-service-body">
                     <small>{String(index + 1).padStart(2, "0")}</small><h3>{service.title}</h3><p>{service.summary}</p>
@@ -258,6 +309,32 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container ff-quality-grid">
           <div className="ff-quality-media fh-quality-material">
             <MaterialSlot item={homeMaterialPlan.media.qualityPhoto} />
+            <div className="fh-quality-gallery" aria-label="Quality inspection photo carousel">
+              {homeMaterialPlan.media.qualityGallery.map((image, imageIndex) => (
+                <figure className="fh-quality-gallery-slide" key={image.src} style={{ "--quality-slide": imageIndex }}>
+                  <Image src={image.src} alt={image.label} fill sizes="(max-width: 1023px) 100vw, 50vw" />
+                  <figcaption>
+                    <span>{String(imageIndex + 1).padStart(2, "0")}</span>
+                    <strong>{image.label}</strong>
+                    <small>{image.credit}</small>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <div className="fh-quality-thumbs" aria-hidden="true">
+              {homeMaterialPlan.media.qualityGallery.map((image, imageIndex) => (
+                <span key={image.src} style={{ "--quality-thumb": imageIndex }}>
+                  <Image src={image.src} alt="" fill sizes="72px" />
+                </span>
+              ))}
+            </div>
+            <div className="fh-quality-checks-card">
+              <span>01</span>
+              <strong>Check quantity, variant, finish</strong>
+              <i />
+              <span>02</span>
+              <strong>Approve pack before dispatch</strong>
+            </div>
             <div className="ff-quality-tag"><FiShield /><span>Quality checkpoint</span></div>
           </div>
           <div className="ff-quality-copy">
@@ -276,8 +353,8 @@ export default function FulfillmentHome({ lang = "en" }) {
           <div className="fh-evidence-grid">
             <div className="fh-team-material-grid">
               <MaterialSlot item={homeMaterialPlan.media.teamPhoto} className="fh-material-slot-dark" />
-              <MaterialSlot item={homeMaterialPlan.media.warehouseVideo} kind="video" className="fh-material-slot-dark" />
-              <ExternalLinkSlot item={homeMaterialPlan.links.warehouseTour} />
+              <MaterialSlot item={homeMaterialPlan.media.warehouseVideo} className="fh-material-slot-dark" />
+              <MaterialSlot item={homeMaterialPlan.media.handoffPhoto} className="fh-evidence-mini-card fh-material-slot-dark" />
             </div>
             <div className="fh-evidence-list">
               {evidenceItems.map(([number, title, text]) => <article key={number}><small>{number}</small><div><h3>{title}</h3><p>{text}</p></div></article>)}
@@ -301,9 +378,9 @@ export default function FulfillmentHome({ lang = "en" }) {
             <input type="hidden" name="form-name" value="fulfillment-quote" /><input type="hidden" name="language" value={lang} />
             <p className="fh-honeypot"><label>Do not fill this out<input name="company-website" /></label></p>
             <div className="ff-form-row"><label>{c.form.name}<input name="name" autoComplete="name" placeholder="Your name" required /></label><label>{c.form.email}<input name="email" type="email" autoComplete="email" placeholder="name@company.com" required /></label></div>
-            <div className="ff-form-row"><label>{c.form.phone}<input name="phone" autoComplete="tel" placeholder="WhatsApp or phone number" required /></label><label>{c.form.store}<input name="store" type="url" placeholder="https://" /></label></div>
+            <label>{c.form.phone}<PhoneCountryInput /></label>
             <label>{c.form.product}<input name="product-url" type="url" placeholder="https://" /></label>
-            <div className="ff-form-row"><label>{c.form.volume}<select name="volume" defaultValue=""><option value="" disabled>Select a range</option><option>0–10</option><option>11–50</option><option>51–200</option><option>201–500</option><option>500+</option></select></label><label>{c.form.market}<select name="market" defaultValue=""><option value="" disabled>Select a market</option><option>United States</option><option>European Union</option><option>United Kingdom</option><option>Australia / New Zealand</option><option>Worldwide</option><option>Other</option></select></label></div>
+            <label>{c.form.volume}<select name="volume" defaultValue=""><option value="" disabled>Select a range</option><option>0-10</option><option>11-50</option><option>51-200</option><option>201-500</option><option>500+</option></select></label>
             <label>{c.form.message}<textarea name="message" rows="4" placeholder="Products, destination markets, current challenges and the support you need." /></label>
             <button className="ff-btn ff-btn-primary" type="submit">{c.form.submit}<FiArrowRight /></button><small>{c.form.consent}</small>
           </form>

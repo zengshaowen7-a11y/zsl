@@ -3,6 +3,7 @@
 import { servicePages } from "@config/service-page-content";
 import { useState } from "react";
 import { FiArrowRight, FiCheck, FiLock } from "react-icons/fi";
+import PhoneCountryInput from "./components/PhoneCountryInput";
 
 export default function ContactForm() {
   const [platform, setPlatform] = useState("");
@@ -40,7 +41,7 @@ export default function ContactForm() {
         <label>Work email *<input name="email" type="email" autoComplete="email" required placeholder="you@company.com" /></label>
       </div>
       <div className="contact-form-row">
-        <label>WhatsApp / Phone *<input name="phone" type="tel" autoComplete="tel" required placeholder="Include country code" /></label>
+        <label>WhatsApp / Phone *<PhoneCountryInput /></label>
         <label>Store URL<input name="store" type="url" placeholder="https://yourstore.com" /></label>
       </div>
       <div className="contact-form-row">

@@ -3,6 +3,7 @@ import { getServiceConversion } from "@config/service-conversion-content";
 import { getServiceStory } from "@config/service-story-content";
 import Image from "next/image";
 import Link from "next/link";
+import PhoneCountryInput from "./components/PhoneCountryInput";
 import {
   FiArrowRight,
   FiBox,
@@ -65,7 +66,7 @@ function ServiceQuoteForm({ service, formConfig }) {
         <label>Work email *<input name="email" type="email" autoComplete="email" placeholder="name@company.com" required /></label>
       </div>
       <div className="sdp-form-row">
-        <label>WhatsApp / Phone *<input name="phone" type="text" autoComplete="tel" placeholder="WhatsApp or phone number" required /></label>
+        <label>WhatsApp / Phone *<PhoneCountryInput /></label>
         <label>Store URL<input name="store" type="url" autoComplete="url" placeholder="https://yourstore.com" /></label>
       </div>
       <div className="sdp-form-service-fields">

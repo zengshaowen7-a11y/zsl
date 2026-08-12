@@ -2,11 +2,12 @@ import config from "@config/config.json";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({ href, className = "" }) => (
+const Logo = ({ href, className = "", onClick }) => (
   <Link
     href={href || config.site.base_url}
     className={`navbar-brand jw-brand-lockup ${className}`.trim()}
     aria-label="JW Dropshipping home"
+    onClick={onClick}
   >
     <span className="jw-brand-symbol" aria-hidden="true">
       <Image

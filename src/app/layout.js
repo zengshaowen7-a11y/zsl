@@ -15,6 +15,7 @@ import "../styles/about-polish.css";
 import "../styles/contact-page.css";
 import "../styles/media-motion.css";
 import "../styles/home-testimonials.css";
+import "../styles/light-green-theme.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),
@@ -59,7 +60,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <meta name="theme-name" content="flowbridge-fulfillment" />
-        <meta name="msapplication-TileColor" content="#071d33" />
+        <meta name="msapplication-TileColor" content="#e8f6ed" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"
@@ -68,7 +69,7 @@ export default function RootLayout({ children }) {
         <meta
           name="theme-color"
           media="(prefers-color-scheme: dark)"
-          content="#071d33"
+          content="#e8f6ed"
         />
       </head>
       <body suppressHydrationWarning>
