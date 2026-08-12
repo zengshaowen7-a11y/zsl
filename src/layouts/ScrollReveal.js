@@ -15,7 +15,7 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .fsp-ops-node, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a, .sdp-feature-system-flow article, .fh-service-card, .fh-service-art-icon, .fh-testimonial-card, .fh-youtube-placeholder, .fh-testimonial-proof-grid article, .fh-brand-material-grid > .fh-material-slot, .fh-proof-band-grid > div, .about-proof-grid article, .about-department-grid article, .about-principle-grid article, .about-role-grid article, .about-link-grid article, .about-material-visual > span",
+        ".smt-service-card, .detail-card-grid article, .detail-result-grid article, .ff-service-card, .ff-compare-card, .ff-stage-card, .ff-value-card, .fsp-service-card, .fsp-proof-grid article, .fsp-workflow-grid article, .fsp-ops-node, .sdp-outcomes article, .sdp-capability-grid article, .sdp-process-grid article, .sdp-spotlight-grid article, .sdp-related-grid > a, .sdp-feature-system-flow article, .fh-service-card, .fh-service-art-icon, .fh-testimonial-card, .fh-profile-card, .fh-story-card, .fh-video-slot, .fh-gallery-item, .fh-youtube-placeholder, .fh-testimonial-proof-grid article, .fh-brand-material-grid > .fh-material-slot, .fh-proof-band-grid > div, .about-proof-grid article, .about-department-grid article, .about-principle-grid article, .about-role-grid article, .about-link-grid article, .about-material-visual > span",
         "reveal-scale",
       ],
       [
@@ -50,7 +50,7 @@ export default function ScrollReveal() {
     });
 
     const heroItems = document.querySelectorAll(
-      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *, .fsp-hero-grid > *, .sdp-hero-grid > *, .about-hero-grid > *",
+      ".smt-hero-grid > *, .detail-hero-grid > *, .ff-hero-grid > *, .ff-inner-hero-grid > *, .fsp-hero-grid > *, .sdp-hero-grid > *, .about-hero-grid > *, .testimonial-page-hero-grid > *",
     );
     heroItems.forEach((element, index) => {
       element.classList.add("scroll-reveal", index % 2 ? "reveal-right" : "reveal-left");
