@@ -6,12 +6,12 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #58b884;
+  --color-primary: #2FAE68;
   --color-body: #fff;
-  --color-border: #cfe5d8;
-  --color-light: #f1f9f4;
-  --color-text: #637c71;
-  --color-text-dark: #173f33;
+  --color-border: #b9dec8;
+  --color-light: #eaf7f0;
+  --color-text: #557265;
+  --color-text-dark: #123d30;
 
   /* === Font Families === */
   --font-primary: Manrope, sans-serif;

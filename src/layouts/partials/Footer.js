@@ -2,7 +2,7 @@ import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { serviceCatalog } from "@config/service-catalog";
 import Logo from "@components/Logo";
 import Link from "next/link";
-import { FiArrowUpRight, FiGlobe, FiMail, FiMessageCircle } from "react-icons/fi";
+import { FiArrowUpRight, FiGlobe, FiMessageCircle } from "react-icons/fi";
 
 export default function Footer() {
   const { footer, nav } = getFulfillmentCopy("en");
@@ -36,7 +36,6 @@ export default function Footer() {
           <div>
             <h3>{footer.contact}</h3>
             <Link className="ff-footer-quote" href="/contact">{nav.quote}<FiArrowUpRight /></Link>
-            <span className="ff-footer-note"><FiMail />Company email to be added</span>
           </div>
         </div>
         <div className="ff-footer-bottom">

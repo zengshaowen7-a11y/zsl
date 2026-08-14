@@ -1,92 +1,179 @@
-"use client";
+import {
+  FiArrowRight,
+  FiStar,
+} from "react-icons/fi";
 
-import Image from "next/image";
-import Link from "next/link";
-import { FiArrowRight, FiCheck, FiImage, FiPlay, FiStar } from "react-icons/fi";
-
-const testimonialProfiles = [
-  { name: "Maya Laurent", country: "France", store: "Natural skincare", avatar: "/images/testimonials/portrait-maya.jpg", quote: "The team turned samples, quality notes and packaging decisions into one workflow we could actually follow.", tag: "Clearer product launches" },
-  { name: "James Carter", country: "United Kingdom", store: "Home & living", avatar: "/images/testimonials/portrait-james.jpg", quote: "Instead of chasing separate suppliers, we now have one place to review receiving, stock and dispatch updates.", tag: "Fewer handoffs" },
-  { name: "Olivia Brooks", country: "United States", store: "Fashion accessories", avatar: "/images/testimonials/portrait-olivia.jpg", quote: "Packaging feels more consistent and exceptions are raised early enough for us to make a useful decision.", tag: "Brand-ready packing" },
-  { name: "Daniel Costa", country: "Brazil", store: "Consumer accessories", avatar: "/images/testimonials/portrait-daniel.jpg", quote: "The inspection checklist gives our team a shared definition of what must be checked before an order moves.", tag: "Documented QC" },
-  { name: "Noah Williams", country: "Australia", store: "Multi-SKU Shopify store", avatar: "/images/testimonials/portrait-noah.jpg", quote: "Repeat orders no longer feel like starting again because product, packing and shipping rules stay connected.", tag: "Repeatable fulfilment" },
-  { name: "Amir Mensah", country: "Ghana", store: "Lifestyle products", avatar: "/images/testimonials/portrait-amir.jpg", quote: "We can see who owns each stage and receive a clear update whenever a product or parcel needs attention.", tag: "Visible ownership" },
+const proofVideos = [
+  {
+    video: "/videos/packing-boxes-pexels-4277472.mp4",
+    poster: "/images/evidence/warehouse-walkthrough-aisle.jpg",
+    title: "Warehouse operations",
+    label: "Yiwu Warehouse Tour - 3:25",
+    copy: "Storage, picking, packing and product checks before orders leave the warehouse.",
+  },
+  {
+    video: "/videos/parcel-sorting-pexels-10472376.mp4",
+    poster: "/images/evidence/warehouse-team-corridor.jpg",
+    title: "Sorting and dispatch",
+    label: "Hangzhou Office Tour - 4:53",
+    copy: "Order sorting, checking and shipping handoff work shown in a quick daily clip.",
+  },
 ];
 
-const storySnapshots = [
-  { image: "/images/testimonials/story-owner.jpg", eyebrow: "SMALL-BRAND STORY", title: "From scattered supplier chats to one launch checklist.", person: "Maya · skincare founder", outcomes: ["Sample review", "Packaging approval", "Launch handoff"] },
-  { image: "/images/testimonials/story-inventory.jpg", eyebrow: "OPERATIONS STORY", title: "Quality checkpoints made visible before dispatch.", person: "Daniel · accessories store", outcomes: ["SKU check", "Photo evidence", "Exception review"] },
-  { image: "/images/testimonials/story-warehouse.jpg", eyebrow: "FULFILMENT STORY", title: "A repeatable path from warehouse shelf to customer.", person: "Noah · multi-SKU retailer", outcomes: ["Stock visibility", "Packing rules", "Tracked delivery"] },
+const testimonials = [
+  ["Lukas", "Germany", "Working with Katrina", "Order handling", "The team keeps high-volume order work neat, trackable and organized. The difference is clear when details matter every day."],
+  ["Daniel", "United Kingdom", "Working with Michael", "Fast support", "Quick replies and reliable follow-through make daily fulfillment feel much easier to manage."],
+  ["Mick", "Netherlands", "Working with Iris", "Communication", "Clear communication, fast answers and helpful support make the clothing order flow smoother."],
+  ["Sophie", "France", "Working with Mia", "Customization", "The focus is not only on cheaper pricing. Product quality, improvement ideas and brand customization are part of the conversation."],
+  ["Yosef", "Israel", "Working with Grey", "Fast quotes", "Quotes come back quickly, messages get answered on time and the service feels dependable."],
+  ["Matthias", "Belgium", "Working with Noora and Mia", "Consistency", "Reliable responses, fast quotations and consistent fulfillment support help the business keep moving."],
+  ["Tibo", "Belgium", "Working with Julia", "Problem solving", "Questions are handled quickly and kindly, so there is less uncertainty during order processing."],
+  ["Sebastian", "Netherlands", "Working with Julia", "Account support", "Friendly communication and professional help make the supplier relationship easier to trust."],
+  ["Will", "United Kingdom", "Working with Shea", "Sourcing", "Responsive support and a practical sourcing-to-fulfillment process make the service simple to work with."],
+  ["Marco", "Italy", "Working with Alice", "Tracking", "Order handling feels structured, especially when multiple products need clear packing and tracking updates."],
+  ["Clara", "Spain", "Working with Coco", "Quality", "The team explains options clearly and helps compare quotations without losing sight of product quality."],
+  ["Amir", "Israel", "Working with Mia", "Product checks", "Custom requests and product checks are handled with care, which makes repeat orders easier to scale."],
+  ["Noah", "Germany", "Working with Katrina", "Daily updates", "Daily updates are clear enough for our team to answer customer questions without chasing every order."],
+  ["Emma", "United States", "Working with Shea", "Fast sourcing", "Sourcing requests come back with practical options, so testing new products feels less risky."],
+  ["Adam", "United Kingdom", "Working with Michael", "Communication", "Messages stay organized and the next step is usually clear, even when several SKUs are moving."],
+  ["Laura", "Australia", "Working with Iris", "Packaging", "Packaging details are handled carefully, and small brand requests do not get lost during fulfillment."],
+  ["Thomas", "Switzerland", "Working with Grey", "Reliability", "The biggest value is consistency. Orders move steadily and updates arrive before problems grow."],
+  ["Nina", "Denmark", "Working with Coco", "Quality control", "Quality checks helped us catch product issues earlier and protect the customer experience."],
+  ["Hannah", "Sweden", "Working with Mia", "Account support", "The account manager understands our workflow and keeps replies direct, useful and timely."],
+  ["Oliver", "Canada", "Working with Julia", "Order flow", "The fulfillment flow feels predictable, which matters a lot once daily order volume increases."],
+  ["Priya", "United Kingdom", "Working with Alice", "Product checks", "Photos, checks and notes make it easier to approve products before scaling campaigns."],
+  ["David", "United States", "Working with Michael", "Fast quotes", "Quotes arrive quickly and include enough context to compare products without long back-and-forth."],
+  ["Mei", "Singapore", "Working with Iris", "Tracking", "Tracking and shipment status are easy to follow, which keeps our support inbox calmer."],
+  ["Samir", "United Arab Emirates", "Working with Grey", "Dispatch", "Dispatch support is professional, and the team keeps priority orders visible."],
+  ["Victor", "Portugal", "Working with Alice", "Sourcing", "The team helps compare suppliers and gives realistic feedback before we commit to a product."],
+  ["Elena", "Italy", "Working with Coco", "Customization", "Custom packaging requests are discussed clearly and the finished result feels aligned with our brand."],
+  ["Aaron", "Netherlands", "Working with Julia", "Follow-through", "Follow-through is strong. When something needs checking, it gets checked and reported back."],
+  ["Mariam", "Saudi Arabia", "Working with Mia", "Clear process", "The process is easy to understand from sourcing to packing, which makes planning smoother."],
+  ["Ben", "France", "Working with Shea", "Inventory notes", "Inventory questions get answered quickly, and the notes help us avoid overselling."],
+  ["Rachel", "Ireland", "Working with Katrina", "Support", "Support feels personal without being slow. It is a good fit for a growing store."],
 ];
 
-const gallery = [
-  { image: "/images/testimonials/story-quality.jpg", title: "Quality review", copy: "Agreed checks before goods move forward." },
-  { image: "/images/testimonials/story-inventory.jpg", title: "Inventory handling", copy: "Products identified and organised by SKU." },
-  { image: "/images/testimonials/story-warehouse.jpg", title: "Warehouse workflow", copy: "Receiving, storage and dispatch in one path." },
-  { image: "/images/testimonials/story-owner.jpg", title: "Brand collaboration", copy: "Commercial goals translated into operating rules." },
-];
+const testimonialAvatars = Array.from(
+  { length: testimonials.length },
+  (_, index) => `/images/testimonials/avatars/seller-avatar-${String(index + 1).padStart(2, "0")}.jpg`,
+);
 
-const proofSteps = [
-  ["01", "Client permission", "Identity, image and final wording approved."],
-  ["02", "Useful context", "Store type and original challenge included."],
-  ["03", "Supporting evidence", "Relevant workflow or warehouse proof attached."],
-];
+function Stars() {
+  return (
+    <span className="testimonial-stars" aria-label="Five star review">
+      {[0, 1, 2, 3, 4].map((star) => <FiStar key={star} />)}
+    </span>
+  );
+}
+
+function TestimonialCard({ testimonial, index, featured = false }) {
+  const [name, country, manager, topic, quote] = testimonial;
+
+  return (
+    <article className={`testimonial-review-card ${featured ? "testimonial-review-card-featured" : ""}`}>
+      <div className="testimonial-review-top">
+        <Stars />
+        <span>{topic}</span>
+      </div>
+      <blockquote>{quote}</blockquote>
+      <footer>
+        <img
+          className="testimonial-review-avatar"
+          src={testimonialAvatars[index]}
+          alt={`${name} seller avatar`}
+          loading="lazy"
+        />
+        <span>
+          <strong>{name}</strong>
+          <small>{country} / {manager}</small>
+        </span>
+        <b>{String(index + 1).padStart(2, "0")}</b>
+      </footer>
+    </article>
+  );
+}
 
 export default function HomeTestimonials({ standalone = false }) {
+  const primaryTestimonials = testimonials.slice(0, 3);
+  const secondaryTestimonials = testimonials.slice(3, 6);
+  const hiddenTestimonials = testimonials.slice(6);
+
   return (
-    <section id="testimonials" className={`ff-section fh-testimonials ${standalone ? "fh-testimonials-standalone" : ""}`} aria-labelledby="testimonials-title">
-      <div className="fh-testimonial-orbit" aria-hidden="true"><i /><i /><i /></div>
+    <section
+      id="testimonials"
+      className={`ff-section fh-testimonials ${standalone ? "fh-testimonials-standalone" : ""}`}
+      aria-labelledby="testimonials-title"
+    >
       <div className="container">
-        <div className="fh-testimonial-heading">
-          <div><span className="ff-kicker ff-kicker-light">CLIENT STORY PROFILES</span><h2 id="testimonials-title">Built to look real. Published only when it is real.</h2></div>
-          <div className="fh-testimonial-heading-copy"><p>Natural client-profile layouts ready for approved names, portraits and quotes.</p><span><FiCheck /> The current people and stories are illustrative placeholders—not verified reviews.</span></div>
+        {standalone && (
+          <div className="testimonial-video-proof">
+            <div className="testimonial-video-copy">
+              <span className="testimonial-video-pill">THE COMPANY BEHIND THE REVIEWS</span>
+              <h2>
+                Every review on this page is about <span>this team, in these warehouses.</span>
+              </h2>
+              <p>Before visitors read what sellers say, show them where orders are picked, checked, packed and shipped from, and who is on the other end of the conversation.</p>
+            </div>
+            <div className="testimonial-video-grid">
+              {proofVideos.map((video) => (
+                <article className="testimonial-video-card" key={video.title}>
+                  <div className="testimonial-video-frame">
+                    <video controls playsInline preload="metadata" poster={video.poster} aria-label={video.title}>
+                      <source src={video.video} type="video/mp4" />
+                    </video>
+                  </div>
+                  <div className="testimonial-video-caption">
+                    <h3>{video.label}</h3>
+                    <p>{video.copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="fh-testimonial-heading testimonial-review-heading">
+          <div>
+            <span className="ff-kicker ff-kicker-light">30 SELLER STORIES</span>
+            <h2 id="testimonials-title">
+              The details sellers notice <span>in daily work.</span>
+            </h2>
+          </div>
+          <div className="fh-testimonial-heading-copy">
+            <p>Feedback from different markets, organized around the themes that matter most: response speed, clear communication, order handling and quality control.</p>
+          </div>
         </div>
 
-        <div className="fh-profile-grid">
-          {testimonialProfiles.map((item) => (
-            <article className="fh-profile-card" key={item.name}>
-              <div className="fh-profile-photo"><Image src={item.avatar} alt="Representative stock portrait for a future approved customer story" fill sizes="(max-width: 767px) 36vw, 150px" /></div>
-              <div className="fh-profile-content">
-                <div className="fh-testimonial-stars" aria-label="Five-star visual placeholder">{[0, 1, 2, 3, 4].map((star) => <FiStar key={star} />)}</div>
-                <blockquote>“{item.quote}”</blockquote>
-                <footer><div><strong>{item.name}</strong><small>{item.country} · {item.store}</small></div><span>{item.tag}</span></footer>
-              </div>
-            </article>
+        <div id="seller-stories" className="testimonial-review-grid">
+          {primaryTestimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={`${testimonial[0]}-${testimonial[1]}`}
+              testimonial={testimonial}
+              index={index}
+              featured
+            />
+          ))}
+          {secondaryTestimonials.map((testimonial, index) => (
+            <TestimonialCard
+              key={`${testimonial[0]}-${testimonial[1]}`}
+              testimonial={testimonial}
+              index={index + primaryTestimonials.length}
+            />
           ))}
         </div>
-        <p className="fh-stock-disclosure"><FiImage /> Representative stock portraits are used for layout preview. Replace with customer-approved photos before publication.</p>
 
-        <section className="fh-story-section" aria-labelledby="story-snapshots-title">
-          <div className="fh-story-heading"><span className="ff-kicker">STORY SNAPSHOTS</span><h3 id="story-snapshots-title">Show the change, not just the compliment.</h3><p>Large visual case-study covers keep the copy short and the experience tangible.</p></div>
-          <div className="fh-story-grid">
-            {storySnapshots.map((story, index) => (
-              <article className={`fh-story-card fh-story-card-${index + 1}`} key={story.title}>
-                <Image src={story.image} alt="Representative ecommerce and fulfilment scene" fill sizes="(max-width: 900px) 100vw, 50vw" />
-                <div className="fh-story-overlay"><small>{story.eyebrow}</small><h4>{story.title}</h4><p>{story.person}</p><ul>{story.outcomes.map((outcome) => <li key={outcome}><FiCheck />{outcome}</li>)}</ul></div>
-              </article>
+        <details className="testimonial-review-more">
+          <summary>View all 30 stories <FiArrowRight /></summary>
+          <div className="testimonial-review-grid testimonial-review-grid-extra">
+            {hiddenTestimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={`${testimonial[0]}-${testimonial[1]}`}
+                testimonial={testimonial}
+                index={index + primaryTestimonials.length + secondaryTestimonials.length}
+              />
             ))}
           </div>
-        </section>
-
-        <section className="fh-video-visual" aria-labelledby="testimonial-video-title">
-          <div className="fh-video-copy"><span className="ff-kicker ff-kicker-light">VIDEO TESTIMONIALS</span><h3 id="testimonial-video-title">Let customers speak in their own voice.</h3><p>Two YouTube positions are reserved for approved interviews or warehouse tours.</p><div className="fh-video-facts"><span>16:9</span><span>60–180 sec</span><span>English subtitles</span></div></div>
-          <div className="fh-video-slots">
-            {[["/images/testimonials/story-warehouse.jpg", "CUSTOMER VIDEO 01"], ["/images/testimonials/story-quality.jpg", "CUSTOMER VIDEO 02"]].map(([image, label]) => (
-              <article className="fh-video-slot" key={label}><Image src={image} alt="Video thumbnail placeholder" fill sizes="(max-width: 767px) 100vw, 32vw" /><div><span><FiPlay /></span><strong>{label}</strong><small>YouTube link needed</small></div></article>
-            ))}
-          </div>
-        </section>
-
-        <section className="fh-gallery-section" aria-labelledby="operation-gallery-title">
-          <div className="fh-gallery-heading"><span className="ff-kicker">VISIBLE OPERATIONS</span><h3 id="operation-gallery-title">The work behind every customer story.</h3></div>
-          <div className="fh-gallery-grid">{gallery.map((item, index) => <figure className={`fh-gallery-item fh-gallery-item-${index + 1}`} key={item.title}><Image src={item.image} alt={item.title} fill sizes="(max-width: 767px) 100vw, 50vw" /><figcaption><strong>{item.title}</strong><span>{item.copy}</span></figcaption></figure>)}</div>
-        </section>
-
-        <div className="fh-testimonial-proof">
-          <div className="fh-testimonial-proof-heading"><span>FROM A QUOTE TO CREDIBLE PROOF</span><h3>A simple approval path for future real reviews.</h3></div>
-          <div className="fh-testimonial-proof-grid">{proofSteps.map(([number, title, copy]) => <article key={number}><small>{number}</small><div><strong>{title}</strong><p>{copy}</p></div></article>)}</div>
-          <Link className="ff-btn ff-btn-primary" href="/contact">Discuss your fulfilment needs<FiArrowRight /></Link>
-        </div>
+        </details>
       </div>
     </section>
   );

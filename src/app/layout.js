@@ -16,6 +16,7 @@ import "../styles/contact-page.css";
 import "../styles/media-motion.css";
 import "../styles/home-testimonials.css";
 import "../styles/light-green-theme.css";
+import "../styles/site-unified-polish.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),

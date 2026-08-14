@@ -6,10 +6,10 @@ import Link from "next/link";
 const Posts = ({ posts }) => {
   const { blog_folder, summary_length } = config.settings;
   return (
-    <div className="section row pb-0">
-      <div className="col-12 pb-12 lg:pb-24">
-        <div className="row items-center">
-          <div className="col-12 md:col-6">
+    <div className="jw-blog-list">
+      <article className="jw-blog-featured">
+        <div className="jw-blog-featured-grid">
+          <div className="jw-blog-featured-media">
             {posts[0].frontmatter.image && (
               <Image
                 className="h-auto w-full rounded-lg"
@@ -21,8 +21,9 @@ const Posts = ({ posts }) => {
               />
             )}
           </div>
-          <div className="col-12 md:col-6">
-            <h2 className="h4 mb-2 mt-4">
+          <div className="jw-blog-featured-copy">
+            <span>SOURCING & FULFILLMENT GUIDE</span>
+            <h2>
               <Link
                 href={`/${blog_folder}/${posts[0].slug}`}
                 className="block hover:text-primary"
@@ -37,17 +38,17 @@ const Posts = ({ posts }) => {
               )}
             </p>
             <Link
-              className="btn btn-primary mt-4"
+              className="ff-btn ff-btn-primary"
               href={`/${blog_folder}/${posts[0].slug}`}
               rel=""
             >
-              Read More
+              Read guide
             </Link>
           </div>
         </div>
-      </div>
-      {posts.slice(1).map((post, i) => (
-        <div key={`key-${i}`} className="col-12 mb-8 sm:col-6 lg:col-4">
+      </article>
+      <div className="jw-blog-grid">{posts.slice(1).map((post, i) => (
+        <article key={`key-${i}`} className="jw-blog-card">
           {post.frontmatter.image && (
             <Image
               className="rounded-lg"
@@ -57,7 +58,7 @@ const Posts = ({ posts }) => {
               height={i === 0 ? "475" : "230"}
             />
           )}
-          <h2 className="h4 mb-2 mt-4">
+          <div className="jw-blog-card-copy"><span>JW INSIGHTS</span><h2>
             <Link
               href={`/${blog_folder}/${post.slug}`}
               className="block hover:text-primary"
@@ -67,14 +68,14 @@ const Posts = ({ posts }) => {
           </h2>
           <p className="text-text">{post.frontmatter.desc}</p>
           <Link
-            className="btn btn-primary mt-4"
+            className="jw-blog-link"
             href={`/${blog_folder}/${post.slug}`}
             rel=""
           >
-            Read More
-          </Link>
-        </div>
-      ))}
+            Read guide
+          </Link></div>
+        </article>
+      ))}</div>
     </div>
   );
 };

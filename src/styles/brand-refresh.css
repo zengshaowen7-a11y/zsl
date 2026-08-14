@@ -1,16 +1,16 @@
 :root {
   --jw-forest: #153f38;
   --jw-deep: #082f2c;
-  --jw-green: #79c85a;
-  --jw-teal: #2bb7a4;
+  --jw-green: #36BD73;
+  --jw-teal: #2FAE68;
   --jw-aqua: #47c9b7;
   --jw-cream: #f8fbf5;
   --jw-mint: #e9f6ec;
   --jw-line: #cfe5dc;
   --ff-navy: #0b3834;
   --ff-blue: #197f73;
-  --ff-blue-2: #2bb7a4;
-  --ff-yellow: #79c85a;
+  --ff-blue-2: #2FAE68;
+  --ff-yellow: #36BD73;
   --ff-orange: #47c9b7;
   --ff-paper: #f3f8f3;
   --ff-ink: #163d37;
@@ -216,7 +216,7 @@
 .sdp-spotlight-packaging { --spot-accent: #4f9e39; --spot-soft: #e7f4df; background: #f7faf3; }
 .sdp-spotlight-requirements,
 .sdp-spotlight-comparison { --spot-accent: #197f73; --spot-soft: #dff2ec; }
-.sdp-spotlight-workflow { --spot-accent: #79c85a; --spot-soft: rgba(121, 200, 90, .14); }
+.sdp-spotlight-workflow { --spot-accent: #36BD73; --spot-soft: rgba(121, 200, 90, .14); }
 .sdp-related { background: var(--jw-cream); }
 .sdp-related-grid > a:hover { box-shadow: 0 20px 50px rgba(8, 47, 44, .12); }
 
@@ -295,3 +295,4 @@
   .jw-brand-lockup { gap: 7px; }
   .jw-brand-wordmark { width: 108px; height: 31px; }
 }
+

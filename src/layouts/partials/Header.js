@@ -28,7 +28,7 @@ export default function Header() {
   const contactHref = `${langPrefix}/contact`;
   const quoteHref = contactHref;
   const comparablePathname = isZh ? pathname.replace(/^\/zh(?=\/|$)/, "") || "/" : pathname;
-  const hasOverlayHeader = ["/", "/services", "/about-us", "/contact"].includes(comparablePathname);
+  const hasOverlayHeader = ["/", "/services", "/about-us", "/testimonials", "/contact"].includes(comparablePathname);
 
   useEffect(() => {
     const handleScroll = () => {

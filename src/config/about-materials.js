@@ -1,9 +1,9 @@
 export const aboutMaterialPlan = {
   proofStats: [
-    { value: "--", label: "Years in operation", note: "Company verification required" },
-    { value: "--", label: "In-house specialists", note: "Current headcount required" },
-    { value: "--", label: "Orders handled daily", note: "Recent verified average required" },
-    { value: "--", label: "Markets delivered to", note: "Shipping records required" },
+    { value: "1", label: "Accountable contact", note: "Across every handoff" },
+    { value: "5", label: "Operating stages", note: "From link to delivery" },
+    { value: "3", label: "Quality gates", note: "Before dispatch" },
+    { value: "1", label: "Connected workflow", note: "Source, check, pack, ship" },
   ],
   media: {
     heroFilm: {
@@ -11,7 +11,7 @@ export const aboutMaterialPlan = {
       title: "Meet JW Dropshipping",
       brief: "Temporary licensed footage showing a real parcel-sorting environment. Replace it with a 45–60 second founder-led introduction filmed inside your office and warehouse.",
       spec: "MP4/WebM, 1920×1080, English captions + poster image",
-      src: "/videos/parcel-sorting-pexels-10472376.mp4",
+      src: "/images/generated/jw-receiving-team-v3.png",
       credit: "Licensed temporary footage · Pexels / Thanh Văn",
       visual: "film",
     },
@@ -21,6 +21,7 @@ export const aboutMaterialPlan = {
       brief: "A natural portrait in the workplace, supported by a short, factual founding story.",
       spec: "Landscape WebP/JPG, at least 1800px wide",
       visual: "founder",
+      src: "/images/generated/jw-account-support-v3.png",
     },
     warehouseWide: {
       type: "IMAGE 02",
@@ -28,6 +29,7 @@ export const aboutMaterialPlan = {
       brief: "Show receiving, racking, SKU locations and the working team in one wide frame.",
       spec: "Landscape WebP/JPG, at least 2000px wide",
       visual: "warehouse",
+      src: "/images/generated/jw-receiving-team-v3.png",
     },
     qualityCloseup: {
       type: "IMAGE 03",
@@ -35,6 +37,7 @@ export const aboutMaterialPlan = {
       brief: "A close-up of staff checking quantity, variants, function, appearance and packaging.",
       spec: "Landscape or portrait WebP/JPG, at least 1600px",
       visual: "quality",
+      src: "/images/generated/jw-qc-inspection-v3.png",
     },
     packingFilm: {
       type: "VIDEO 02",
@@ -42,6 +45,7 @@ export const aboutMaterialPlan = {
       brief: "A 30–45 second sequence covering picking, QC, branded packing, label printing and handoff.",
       spec: "MP4/WebM, horizontal, English captions + poster image",
       visual: "packing",
+      src: "/images/generated/jw-branded-packing-v3.png",
     },
     dispatchPhoto: {
       type: "IMAGE 04",
@@ -49,6 +53,7 @@ export const aboutMaterialPlan = {
       brief: "Show labeled parcels, carrier collection and the actual dispatch environment.",
       spec: "Landscape WebP/JPG, at least 1800px wide",
       visual: "dispatch",
+      src: "/images/generated/jw-dispatch-scan-v3.png",
     },
     teamGroup: {
       type: "IMAGE 05",
@@ -56,6 +61,7 @@ export const aboutMaterialPlan = {
       brief: "Founder, account managers, sourcing, QC, warehouse and logistics staff together.",
       spec: "Horizontal team photo + optional role portraits",
       visual: "team",
+      src: "/images/generated/jw-account-support-v3.png",
     },
   },
   companyProfile: [

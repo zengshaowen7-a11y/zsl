@@ -3,5 +3,5 @@ import MarketingDetail from "@layouts/MarketingDetail";
 import SeoMeta from "@layouts/SeoMeta";
 
 export default function ProcessPage() {
-  return <><SeoMeta title="How Our Integration Process Works" /><MarketingDetail page={detailPages.process} /></>;
+  return <><SeoMeta title="How JW Dropshipping Works" /><MarketingDetail page={detailPages.process} /></>;
 }

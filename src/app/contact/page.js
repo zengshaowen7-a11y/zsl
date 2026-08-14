@@ -5,7 +5,6 @@ import {
   FiCheck,
   FiClock,
   FiFileText,
-  FiMail,
   FiMessageCircle,
   FiPackage,
   FiShield,
@@ -73,23 +72,6 @@ export default function ContactPage() {
               <div>
                 <strong>Response target</strong>
                 <span>Within one business day after reviewing your enquiry.</span>
-              </div>
-            </div>
-
-            <div className="contact-channel-list">
-              <div>
-                <FiMessageCircle aria-hidden="true" />
-                <div>
-                  <small>WHATSAPP</small>
-                  <strong>Business number to be added</strong>
-                </div>
-              </div>
-              <div>
-                <FiMail aria-hidden="true" />
-                <div>
-                  <small>EMAIL</small>
-                  <strong>Customer-service email to be added</strong>
-                </div>
               </div>
             </div>
 

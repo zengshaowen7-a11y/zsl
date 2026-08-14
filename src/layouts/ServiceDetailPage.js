@@ -30,6 +30,26 @@ const serviceVisualIcons = {
   "quality-control-inspection": FiShield,
 };
 
+const mediaLibrary = {
+  receive: { src: "/images/generated/jw-receiving-team-v3.png", label: "RECEIVE", title: "Goods received and matched to the product brief" },
+  check: { src: "/images/generated/jw-qc-inspection-v3.png", label: "CHECK", title: "Product details checked before fulfillment" },
+  pack: { src: "/images/generated/jw-branded-packing-v3.png", label: "PACK", title: "Packing rules applied to each order" },
+  dispatch: { src: "/images/generated/jw-dispatch-scan-v3.png", label: "DISPATCH", title: "Parcels scanned for carrier handoff" },
+  support: { src: "/images/generated/jw-account-support-v3.png", label: "COORDINATE", title: "One contact keeps decisions connected" },
+  pod: { src: "/images/generated/jw-pod-production-v3.png", label: "PRODUCE", title: "Small-batch production checked at source" },
+};
+
+const serviceMediaMap = {
+  "dropshipping-supplier": [mediaLibrary.support, mediaLibrary.check, mediaLibrary.dispatch],
+  "3pl-fulfillment-services": [mediaLibrary.receive, mediaLibrary.pack, mediaLibrary.dispatch],
+  "pod-fulfillment": [mediaLibrary.pod, mediaLibrary.check, mediaLibrary.pack],
+  "private-label": [mediaLibrary.support, mediaLibrary.pack, mediaLibrary.check],
+  "product-sourcing": [mediaLibrary.support, mediaLibrary.receive, mediaLibrary.check],
+  "automatic-order-fulfillment": [mediaLibrary.support, mediaLibrary.pack, mediaLibrary.dispatch],
+  "china-fulfillment-center": [mediaLibrary.receive, mediaLibrary.pack, mediaLibrary.dispatch],
+  "quality-control-inspection": [mediaLibrary.check, mediaLibrary.pack, mediaLibrary.dispatch],
+};
+
 function ServiceField({ field }) {
   if (field.type === "select") {
     return <label>{field.label}{field.required ? " *" : ""}<select name={field.name} defaultValue="" required={field.required}><option value="" disabled>Select an option</option>{field.options.map((option) => <option key={option} value={option}>{option}</option>)}</select></label>;
@@ -99,6 +119,7 @@ export default function ServiceDetailPage({ service }) {
   const story = getServiceStory(service.slug);
   const conversion = getServiceConversion(service.slug);
   const VisualIcon = serviceVisualIcons[service.slug] || FiPackage;
+  const serviceMedia = serviceMediaMap[service.slug] || [mediaLibrary.receive, mediaLibrary.check, mediaLibrary.dispatch];
 
   return (
     <main className={`ff-site sdp-page sdp-page-${service.slug}`}>
@@ -119,6 +140,23 @@ export default function ServiceDetailPage({ service }) {
 
       <section className="sdp-outcomes">
         <div className="container">{service.outcomes.map(([title, text], index) => <article key={title}><small>0{index + 1}</small><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </section>
+
+      <section className="ff-section sdp-media-proof">
+        <div className="container">
+          <div className="ff-heading ff-heading-split">
+            <div><span className="ff-kicker">THE WORK BEHIND THE SERVICE</span><h2>See the physical handoffs behind every order.</h2></div>
+            <p>Supplier coordination becomes reliable only when receiving, checking, packing and dispatch follow the same product brief.</p>
+          </div>
+          <div className="sdp-media-grid">
+            {serviceMedia.map((item, index) => (
+              <figure key={item.label}>
+                <Image src={item.src} alt={item.title} fill sizes="(max-width: 767px) 100vw, 33vw" unoptimized />
+                <figcaption><small>0{index + 1} / {item.label}</small><strong>{item.title}</strong></figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className={`ff-section sdp-problem sdp-story sdp-story-${story.style}`}>

@@ -92,20 +92,22 @@ export default function FulfillmentServicesPage() {
           </div>
 
           <div className="fsp-hero-visual">
-            <div className="fsp-ops-map" aria-hidden="true">
-              <span className="fsp-ops-hub"><FiPackage /></span>
-              <span className="fsp-ops-node fsp-ops-node-source"><FiSearch /><small>Source</small></span>
-              <span className="fsp-ops-node fsp-ops-node-qc"><FiShield /><small>Inspect</small></span>
-              <span className="fsp-ops-node fsp-ops-node-pack"><FiBox /><small>Pack</small></span>
-              <span className="fsp-ops-node fsp-ops-node-ship"><FiGlobe /><small>Deliver</small></span>
-              <i className="fsp-ops-route fsp-ops-route-one" /><i className="fsp-ops-route fsp-ops-route-two" /><i className="fsp-ops-route fsp-ops-route-three" />
-            </div>
+            <Image className="fsp-hero-photo" src="/images/generated/jw-receiving-team-v3.png" alt="JW receiving team scanning incoming cartons" fill priority sizes="(max-width: 991px) 100vw, 48vw" unoptimized />
             <div className="fsp-visual-label"><FiGlobe /><span><strong>Worldwide delivery</strong><small>Route selected per order</small></span></div>
             <div className="fsp-flow-card">
               <small>ONE PARTNER · COMPLETE ORDER JOURNEY</small>
               <div><span>Source</span><FiArrowRight /><span>Inspect</span><FiArrowRight /><span>Pack</span><FiArrowRight /><span>Deliver</span></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="fsp-operating-metrics" aria-label="JW operating model">
+        <div className="container">
+          <article><strong>1</strong><span>Accountable contact</span></article>
+          <article><strong>3</strong><span>Quality gates</span></article>
+          <article><strong>5</strong><span>Order stages</span></article>
+          <article><strong>8</strong><span>Focused services</span></article>
         </div>
       </section>
 
@@ -182,11 +184,11 @@ export default function FulfillmentServicesPage() {
           </div>
           <div className="fsp-trust-grid">
             <div className="fsp-trust-visual">
-              <div className="fsp-proof-visual" aria-hidden="true"><span><FiClipboard /></span><i /><i /><i /><b><FiCheck /></b></div>
+              <video className="fsp-trust-video" src="/videos/parcel-sorting-pexels-10472376.mp4" autoPlay muted loop playsInline preload="metadata" aria-label="Parcel sorting and fulfillment workflow" />
               <div>
-                <small>WHAT YOUR TEAM CAN VERIFY</small>
-                <strong>Clear scope, documented checks and order-level visibility.</strong>
-                <span><FiCheck />Workflow imagery shown for service illustration</span>
+                <small>INSIDE THE OPERATION</small>
+                <strong>Receiving, sorting and dispatch happen in one visible workflow.</strong>
+                <span><FiCheck />Clear scope, checks and order-level handoffs</span>
               </div>
             </div>
             <div className="fsp-proof-grid">

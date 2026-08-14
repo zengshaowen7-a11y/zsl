@@ -1,4 +1,5 @@
 import { aboutMaterialPlan } from "@config/about-materials";
+import Image from "next/image";
 import Link from "next/link";
 import {
   FiArrowRight,
@@ -67,8 +68,10 @@ function MediaCard({ item, className = "", video = false }) {
   const VisualIcon = mediaVisualIcons[item.visual] || TypeIcon;
   return (
     <article className={`about-media-card about-media-${item.visual || "placeholder"} ${className}`.trim()}>
-      {video && item.src ? (
+      {video && item.src && item.src.endsWith(".mp4") ? (
         <video src={item.src} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+      ) : item.src ? (
+        <Image src={item.src} alt={item.title} fill sizes="(max-width: 767px) 100vw, 50vw" unoptimized={item.src.includes("/generated/")} />
       ) : (
         <div className="about-material-visual" aria-hidden="true"><span><VisualIcon /></span><i /><i /><i /></div>
       )}
@@ -93,7 +96,7 @@ export default function FulfillmentAboutPage() {
             <div className="ff-actions"><Link className="ff-btn ff-btn-primary" href="/contact">Meet your fulfillment team<FiArrowRight /></Link><a className="ff-btn ff-btn-ghost" href="#inside">See how we operate</a></div>
             <div className="about-hero-points"><span><FiCheck />Human-led support</span><span><FiCheck />Documented checkpoints</span><span><FiCheck />Clear ownership</span></div>
           </div>
-          <MediaCard item={aboutMaterialPlan.media.heroFilm} className="about-hero-media" video />
+          <MediaCard item={aboutMaterialPlan.media.heroFilm} className="about-hero-media" />
         </div>
       </section>
 
@@ -119,8 +122,8 @@ export default function FulfillmentAboutPage() {
 
       <section className="ff-section about-facility">
         <div className="container">
-          <div className="ff-heading ff-heading-split"><div><span className="ff-kicker">SHOW THE OPERATION, NOT JUST THE PROMISE</span><h2>Replace visual placeholders with evidence from the real workplace.</h2></div><p>These production-sized slots show exactly which company assets are needed. Their distinct visual treatments prevent duplicate stock photography while the real materials are prepared.</p></div>
-          <div className="about-facility-grid"><MediaCard item={aboutMaterialPlan.media.warehouseWide} className="about-media-wide" /><MediaCard item={aboutMaterialPlan.media.qualityCloseup} /><MediaCard item={aboutMaterialPlan.media.packingFilm} video /><MediaCard item={aboutMaterialPlan.media.dispatchPhoto} className="about-media-wide" /></div>
+          <div className="ff-heading ff-heading-split"><div><span className="ff-kicker">INSIDE THE WORKFLOW</span><h2>See where orders are received, checked and dispatched.</h2></div><p>Each stage has a clear owner and a visible handoff.</p></div>
+          <div className="about-facility-grid"><MediaCard item={aboutMaterialPlan.media.warehouseWide} className="about-media-wide" /><MediaCard item={aboutMaterialPlan.media.qualityCloseup} /><MediaCard item={aboutMaterialPlan.media.packingFilm} /><MediaCard item={aboutMaterialPlan.media.dispatchPhoto} className="about-media-wide" /></div>
         </div>
       </section>
 
@@ -133,7 +136,7 @@ export default function FulfillmentAboutPage() {
 
       <section className="ff-section about-team">
         <div className="container about-team-grid">
-          <div><span className="ff-kicker ff-kicker-light">THE PEOPLE YOU WILL ACTUALLY WORK WITH</span><h2>Put real names and faces behind every responsibility.</h2><p>Replace these role cards with approved portraits, names, experience and short personal introductions. Keep the language practical: what each person owns and when a client will hear from them.</p><MediaCard item={aboutMaterialPlan.media.teamGroup} className="about-team-photo" /></div>
+          <div><span className="ff-kicker ff-kicker-light">ONE TEAM, CLEAR OWNERSHIP</span><h2>Know who owns each stage.</h2><p>Your account lead connects the specialists responsible for sourcing, quality, warehouse work and delivery.</p><MediaCard item={aboutMaterialPlan.media.teamGroup} className="about-team-photo" /></div>
           <div className="about-role-grid">{teamRoles.map(([role, text], index) => <article key={role}><span><FiUser /></span><small>PORTRAIT 0{index + 1} NEEDED</small><h3>{role}</h3><p>{text}</p></article>)}</div>
         </div>
       </section>
@@ -146,7 +149,7 @@ export default function FulfillmentAboutPage() {
       </section>
 
       <section className="ff-section about-faq">
-        <div className="container ff-faq-grid"><div className="ff-faq-intro"><span className="ff-kicker">BEFORE WE WORK TOGETHER</span><h2>Questions a careful brand should ask.</h2><p>Trust should come from visible people, defined work and verifiable company information.</p><Link className="ff-btn ff-btn-dark" href="/contact">Ask our team<FiArrowRight /></Link></div><div className="ff-faq-list">{trustQuestions.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div>
+        <div className="container ff-faq-grid"><div className="ff-faq-intro"><span className="ff-kicker">BEFORE WE WORK TOGETHER</span><h2>Questions a careful brand should ask.</h2><p>Trust should come from visible people, defined work and verifiable company information.</p><Link className="ff-btn ff-btn-dark" href="/contact">Ask our team<FiArrowRight /></Link></div><div className="ff-faq-list">{trustQuestions.slice(0, 4).map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div>
       </section>
 
       <section className="about-final-cta"><div className="container"><div><span>READY TO DISCUSS YOUR OPERATION?</span><h2>Meet the people who will be responsible for your orders.</h2></div><Link className="ff-btn ff-btn-primary" href="/contact">Start a conversation<FiArrowRight /></Link></div></section>

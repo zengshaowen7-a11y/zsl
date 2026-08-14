@@ -1,12 +1,11 @@
 export const homeMaterialPlan = {
   media: {
     heroVideo: {
-      label: "VIDEO 01",
-      title: "Warehouse and fulfillment overview",
-      brief: "20-30 second horizontal video: receiving, inspection, packing and parcel dispatch.",
-      spec: "MP4/WebM + 1920x1080 poster image",
-      src: "/videos/packing-boxes-pexels-4277472.mp4",
-      credit: "Licensed temporary footage · Pexels / Ketut Subiyanto",
+      label: "OPERATIONS",
+      title: "One team. One workflow.",
+      brief: "Orders move from sourcing to QC, packing and tracked delivery in one clear handoff.",
+      spec: "Source / Inspect / Pack / Deliver",
+      src: "/images/generated/jw-warehouse-team-v2.png",
     },
     packagingPhoto: {
       label: "IMAGE 01",
@@ -34,19 +33,16 @@ export const homeMaterialPlan = {
       credit: "Licensed temporary footage · Pexels",
     },
     qualityPhoto: {
-      label: "IMAGE 03",
-      title: "Real quality inspection",
-      brief: "Close-up of staff checking quantity, variants, function and packaging.",
+      label: "QUALITY CHECK",
+      title: "Inspection before dispatch",
+      brief: "Quantity, variants and packaging checked before shipping.",
       spec: "Landscape JPG/WebP, at least 1800px wide",
-      src: "/images/quality-gallery/clipboard-package-check.jpg",
-      credit: "Pexels / Tima Miroshnichenko",
+      src: "/images/generated/jw-quality-check-v2.png",
     },
     qualityGallery: [
-      { src: "/images/quality-gallery/clipboard-package-check.jpg", label: "Checklist before dispatch", credit: "Pexels / Tima Miroshnichenko" },
-      { src: "/images/quality-gallery/warehouse-package-check.jpg", label: "Package condition review", credit: "Pexels / Tima Miroshnichenko" },
-      { src: "/images/quality-gallery/fragile-box-inspection.jpg", label: "Fragile handling confirmation", credit: "Pexels / Tima Miroshnichenko" },
-      { src: "/images/quality-gallery/shelf-parcel-inspection.jpg", label: "Shelf parcel inspection", credit: "Pexels / Tima Miroshnichenko" },
-      { src: "/images/quality-gallery/tablet-quality-check.jpg", label: "Issue record and approval", credit: "Pexels / Bulat843" },
+      { src: "/images/generated/jw-quality-check-v2.png", label: "Product check" },
+      { src: "/images/generated/jw-warehouse-team-v2.png", label: "Order preparation" },
+      { src: "/images/generated/jw-dispatch-v2.png", label: "Final dispatch" },
     ],
     caseOne: {
       label: "CASE 01",
