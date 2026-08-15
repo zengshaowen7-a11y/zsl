@@ -17,6 +17,24 @@ import "../styles/media-motion.css";
 import "../styles/home-testimonials.css";
 import "../styles/light-green-theme.css";
 import "../styles/site-unified-polish.css";
+import "../styles/header-redesign.css";
+import "../styles/hero-redesign.css";
+import "../styles/platform-data-strip.css";
+import "../styles/core-advantages.css";
+import "../styles/fixed-process.css";
+import "../styles/core-services.css";
+import "../styles/fulfillment-compare.css";
+import "../styles/qc-proof.css";
+import "../styles/home-testimonial-summary.css";
+import "../styles/home-faq-quote.css";
+import "../styles/home-visual-system.css";
+import "../styles/service-detail-redesign.css";
+import "../styles/service-detail-final.css";
+import "../styles/services-overview-redesign.css";
+import "../styles/how-it-works-redesign.css";
+import "../styles/why-jw-redesign.css";
+import "../styles/testimonials-redesign.css";
+import "../styles/contact-redesign.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),

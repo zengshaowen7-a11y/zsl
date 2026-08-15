@@ -2632,7 +2632,7 @@ textarea:focus,
 .fh-home .ff-hero-copy-wrap h1 {
   max-width: 930px !important;
   margin-top: 0 !important;
-  color: #fff !important;
+  color: #f6fff8 !important;
   font-size: clamp(3.05rem, 3.45vw, 4.25rem) !important;
   font-weight: 850 !important;
   line-height: 1.06 !important;
@@ -2640,10 +2640,15 @@ textarea:focus,
   text-wrap: balance;
 }
 
+.fh-home .ff-hero-copy-wrap h1 span,
+.fh-home .ff-hero-copy-wrap h1 em {
+  color: #f6fff8 !important;
+}
+
 .fh-home .ff-hero-copy-wrap > p:not(.fh-response-note) {
   max-width: 720px !important;
   margin-top: 22px !important;
-  color: rgba(255, 255, 255, .82) !important;
+  color: #e5f7ec !important;
   font-size: clamp(1.02rem, 1.18vw, 1.24rem) !important;
   font-weight: 650 !important;
   line-height: 1.22 !important;
@@ -2659,7 +2664,7 @@ textarea:focus,
 
 .fh-home .ff-proof-list span {
   gap: 14px !important;
-  color: #fff !important;
+  color: #f6fff8 !important;
   font-size: clamp(.9rem, .94vw, 1rem) !important;
   font-weight: 850 !important;
   line-height: 1.25 !important;

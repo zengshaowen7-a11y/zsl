@@ -65,7 +65,7 @@
   border: 1px solid rgba(255, 255, 255, .34) !important;
   border-radius: 999px !important;
   background: rgba(255, 255, 255, .13) !important;
-  color: rgba(255, 255, 255, .9) !important;
+  color: #e5f7ec !important;
   font-size: .72rem !important;
   letter-spacing: .12em !important;
   backdrop-filter: blur(10px) !important;
@@ -76,7 +76,7 @@
   max-width: 880px !important;
   gap: 2px !important;
   margin-top: 28px !important;
-  color: #fff !important;
+  color: #f6fff8 !important;
   font-size: clamp(3.75rem, 5.05vw, 5.65rem) !important;
   line-height: 1.02 !important;
   letter-spacing: 0 !important;
@@ -88,7 +88,7 @@
 
 .fh-home .fh-hero-title em {
   display: inline !important;
-  color: #dff7e9 !important;
+  color: #f6fff8 !important;
   font-style: normal !important;
   text-shadow: 0 10px 36px rgba(5, 62, 41, .22) !important;
 }
@@ -96,7 +96,7 @@
 .fh-home .ff-hero-copy-wrap > p {
   max-width: 720px !important;
   margin-top: 26px !important;
-  color: rgba(255, 255, 255, .9) !important;
+  color: #e5f7ec !important;
   font-size: 1.13rem !important;
   line-height: 1.72 !important;
 }
@@ -110,10 +110,10 @@
 .fh-home .ff-proof-list span {
   min-height: 42px !important;
   padding: 0 16px !important;
-  border: 1px solid rgba(255, 255, 255, .2) !important;
+  border: 1px solid rgba(0, 0, 0, .18) !important;
   border-radius: 999px !important;
   background: rgba(255, 255, 255, .16) !important;
-  color: rgba(255, 255, 255, .92) !important;
+  color: #f6fff8 !important;
   font-size: .82rem !important;
   font-weight: 850 !important;
   backdrop-filter: blur(10px) !important;
@@ -122,7 +122,7 @@
 
 .fh-home .ff-proof-list span:hover {
   transform: translateY(-3px) !important;
-  border-color: rgba(255, 255, 255, .42) !important;
+  border-color: rgba(0, 0, 0, .28) !important;
   background: rgba(255, 255, 255, .24) !important;
 }
 
@@ -150,20 +150,21 @@
 }
 
 .fh-home .ff-hero .ff-btn-primary {
-  background: #fff !important;
-  color: #0b5a3c !important;
+  border-color: rgba(255, 255, 255, .5) !important;
+  background: rgba(255, 255, 255, .18) !important;
+  color: #f6fff8 !important;
   box-shadow: 0 22px 46px rgba(5, 54, 35, .2) !important;
 }
 
 .fh-home .ff-hero .ff-btn-primary:hover {
-  background: #f2fbf6 !important;
+  background: rgba(255, 255, 255, .26) !important;
   box-shadow: 0 28px 56px rgba(5, 54, 35, .26) !important;
 }
 
 .fh-home .ff-hero .ff-btn-ghost {
   border-color: rgba(255, 255, 255, .56) !important;
   background: rgba(255, 255, 255, .13) !important;
-  color: #fff !important;
+  color: #f6fff8 !important;
 }
 
 .fh-home .ff-hero .ff-btn svg {

@@ -1,5 +1,5 @@
 import { getServicePage, servicePages } from "@config/service-page-content";
-import ServiceDetailPage from "@layouts/ServiceDetailPage";
+import ServiceDetailRedesign from "@layouts/ServiceDetailRedesign";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
@@ -20,5 +20,5 @@ export default async function ServicePage({ params }) {
   const { slug } = await params;
   const service = getServicePage(slug);
   if (!service) notFound();
-  return <ServiceDetailPage service={service} />;
+  return <ServiceDetailRedesign service={service} />;
 }

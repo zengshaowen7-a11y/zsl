@@ -1,35 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import { homeMaterialPlan } from "@config/home-materials";
-import { serviceCatalog } from "@config/service-catalog";
 import Image from "next/image";
 import Link from "next/link";
-import PhoneCountryInput from "./components/PhoneCountryInput";
 import { FaAmazon } from "react-icons/fa";
 import {
   FiArrowRight,
-  FiBox,
   FiCheck,
-  FiChevronLeft,
-  FiChevronRight,
   FiClipboard,
   FiGlobe,
   FiImage,
   FiPackage,
-  FiPrinter,
-  FiRefreshCw,
   FiSearch,
   FiShield,
-  FiTag,
+  FiStar,
   FiUsers,
   FiVideo,
   FiX,
-  FiCalendar,
-  FiLayers,
-  FiMapPin,
-  FiTruck,
 } from "react-icons/fi";
 import {
   SiBigcommerce,
@@ -41,34 +30,6 @@ import {
   SiWix,
   SiWoocommerce,
 } from "react-icons/si";
-
-const serviceIcons = {
-  search: FiSearch,
-  shield: FiShield,
-  box: FiBox,
-  package: FiPackage,
-  printer: FiPrinter,
-  refresh: FiRefreshCw,
-  tag: FiTag,
-};
-
-const processVisuals = [
-  {
-    src: "/images/generated/jw-warehouse-team-v2.png",
-    label: "01 / RECEIVE",
-    title: "Stock received",
-  },
-  {
-    src: "/images/generated/jw-quality-check-v2.png",
-    label: "02 / CHECK",
-    title: "Goods checked",
-  },
-  {
-    src: "/images/generated/jw-dispatch-v2.png",
-    label: "03 / DISPATCH",
-    title: "Parcels shipped",
-  },
-];
 
 const platformLogos = [
   { name: "Shopify", Icon: SiShopify, color: "#75a943" },
@@ -82,82 +43,164 @@ const platformLogos = [
   { name: "Squarespace", Icon: SiSquarespace, color: "#111111" },
 ];
 
-const processIcons = [FiClipboard, FiSearch, FiShield, FiPackage, FiGlobe];
-
-const whySlides = [
+const workflowSteps = [
   {
-    src: "/images/generated/jw-warehouse-team-v2.png",
-    title: "One operating team",
-    caption: "Sourcing, receiving and fulfillment stay in one workflow.",
+    number: "01",
+    title: "Share your product",
+    text: "Send the product link, target market and your key requirements.",
+    Icon: FiClipboard,
   },
   {
-    src: "/images/generated/jw-quality-check-v2.png",
-    title: "Quality before dispatch",
-    caption: "Quantity, variants and packaging are checked before shipping.",
+    number: "02",
+    title: "Source and quote",
+    text: "We compare suitable suppliers, pricing, MOQ and lead times.",
+    Icon: FiSearch,
   },
   {
-    src: "/images/generated/jw-dispatch-v2.png",
-    title: "Packed and dispatched",
-    caption: "Brand-ready parcels leave with a clear tracking handoff.",
+    number: "03",
+    title: "Sample and inspect",
+    text: "Approve a sample and confirm the agreed quality checkpoints.",
+    Icon: FiShield,
+  },
+  {
+    number: "04",
+    title: "Store and fulfill",
+    text: "Inventory is received, stored, picked and packed by one team.",
+    Icon: FiPackage,
+  },
+  {
+    number: "05",
+    title: "Ship and sync tracking",
+    text: "Orders ship worldwide and tracking is returned to your store.",
+    Icon: FiGlobe,
   },
 ];
 
-const whyWithout = [
-  "Scattered supplier chats",
-  "Late quality issues",
-  "Generic packaging",
-  "Unclear handoffs",
+const homeServices = [
+  {
+    title: "Product Sourcing",
+    audience: "For stores testing products or replacing suppliers.",
+    points: ["Supplier comparison", "Sample coordination", "MOQ and lead-time review"],
+    slug: "product-sourcing",
+    image: "/images/services/product-sourcing.webp",
+  },
+  {
+    title: "Quality Control",
+    audience: "For stores that need fewer product and packing surprises.",
+    points: ["Product and variant checks", "Quantity confirmation", "Packaging inspection"],
+    slug: "quality-control-inspection",
+    image: "/images/services/quality-control-inspection.webp",
+  },
+  {
+    title: "Private Label & Packaging",
+    audience: "For brands building a consistent customer experience.",
+    points: ["Logo and label coordination", "Custom boxes and inserts", "Packaging sample approval"],
+    slug: "private-label",
+    image: "/images/services/private-label.webp",
+  },
+  {
+    title: "Dropshipping Fulfillment",
+    audience: "For stores shipping individual orders without holding stock locally.",
+    points: ["Daily order handling", "Pick and pack", "Worldwide tracked shipping"],
+    slug: "dropshipping-supplier",
+    image: "/images/services/dropshipping-supplier.webp",
+  },
+  {
+    title: "China 3PL Fulfillment",
+    audience: "For growing stores managing inventory and multiple SKUs.",
+    points: ["Inventory receiving", "Warehouse storage", "Returns coordination"],
+    slug: "3pl-fulfillment-services",
+    image: "/images/services/3pl-fulfillment.webp",
+  },
+  {
+    title: "Order Automation",
+    audience: "For stores ready to reduce repetitive order handoffs.",
+    points: ["Store order sync", "Fulfillment status updates", "Tracking return workflow"],
+    slug: "automatic-order-fulfillment",
+    image: "/images/services/order-automation.webp",
+  },
 ];
 
-const whyWith = [
-  "One order workflow",
-  "Pre-dispatch checks",
-  "Brand-ready packing",
-  "Tracked delivery",
+const fulfillmentComparison = [
+  ["Multiple supplier conversations", "One dedicated contact"],
+  ["Product shipped without clear checks", "QC before dispatch"],
+  ["Generic packaging", "Branding and packaging options"],
+  ["Separate warehouse and shipping teams", "One operating workflow"],
+  ["Unclear tracking handoff", "Structured shipment updates"],
 ];
 
-const proofStats = [
-  // Draft figures for layout preview. Replace with verified data before launch.
-  { value: 6, suffix: "+", label: "Years in fulfillment", note: "Experienced support for repeat daily operations.", Icon: FiCalendar },
-  { value: 30, suffix: "+", label: "Delivery markets", note: "Routes planned around your destination countries.", Icon: FiMapPin },
-  { value: 3, suffix: "", label: "QC stages", note: "Incoming, product and packing checks before dispatch.", Icon: FiLayers },
-  { value: 1, suffix: "-on-1", label: "Support contact", note: "A dedicated person keeps order details clear.", Icon: FiTruck },
+const qcCapabilities = [
+  "SKU and variant",
+  "Quantity",
+  "Appearance and finish",
+  "Size and weight",
+  "Packaging and barcode",
+  "Final parcel check",
 ];
 
-function AnimatedNumber({ value, prefix = "", suffix = "", active, plain = false, delay = 0 }) {
-  const [display, setDisplay] = useState(0);
+const homeTestimonials = [
+  {
+    name: "Lukas",
+    country: "Germany",
+    tag: "Fulfillment",
+    quote: "The team keeps high-volume order work neat, trackable and organized. The difference is clear when details matter every day.",
+    featured: true,
+  },
+  {
+    name: "Emma",
+    country: "United States",
+    tag: "Product Sourcing",
+    quote: "Sourcing requests come back with practical options, so testing new products feels less risky.",
+  },
+  {
+    name: "Laura",
+    country: "Australia",
+    tag: "Branding",
+    quote: "Packaging details are handled carefully, and small brand requests do not get lost during fulfillment.",
+  },
+];
 
-  useEffect(() => {
-    if (!active) {
-      setDisplay(0);
-      return;
-    }
-    let frame;
-    let timeout;
-    const startRun = () => {
-      const start = performance.now();
-      const duration = 1200;
-      const tick = (now) => {
-        const progress = Math.max(0, Math.min((now - start) / duration, 1));
-        const eased = 1 - Math.pow(1 - progress, 3);
-        setDisplay(Math.round(value * eased));
-        if (progress < 1) frame = requestAnimationFrame(tick);
-      };
-      frame = requestAnimationFrame(tick);
-    };
-    timeout = window.setTimeout(startRun, delay);
-    return () => {
-      window.clearTimeout(timeout);
-      cancelAnimationFrame(frame);
-    };
-  }, [active, value, delay]);
+const homeFaqs = [
+  ["How do I get started?", "Send us a product or store link, your target market and expected daily order volume. We will review the request and recommend a practical next step."],
+  ["Is there a minimum order quantity?", "It depends on the product, supplier and customization required. Standard fulfillment can often start small, while custom products and packaging may have supplier MOQs."],
+  ["Which eCommerce platforms do you support?", "We support workflows for Shopify, WooCommerce, TikTok Shop, Amazon, Etsy, eBay and custom stores through direct or structured order handoffs."],
+  ["Can you inspect products before shipping?", "Yes. The agreed QC scope can cover SKU, variant, quantity, appearance, size, weight, packaging, barcode and final parcel checks."],
+  ["How is fulfillment pricing calculated?", "Pricing is based on product handling, storage, packaging, order volume, destination markets and shipping method. We quote after reviewing your workflow."],
+];
 
-  return <>
-    {prefix ? <span className="fh-stat-prefix">{prefix}</span> : null}
-    <span className="fh-stat-number">{plain ? display : display.toLocaleString()}</span>
-    {suffix ? <span className="fh-stat-suffix">{suffix}</span> : null}
-  </>;
-}
+const quoteHelpOptions = [
+  "Product sourcing",
+  "Quality issues",
+  "Custom packaging",
+  "Slow shipping",
+  "Order fulfillment",
+  "Replacing current supplier",
+];
+
+const coreAdvantages = [
+  {
+    title: "Source with clarity",
+    text: "Compare suppliers, samples, MOQ, pricing and production time.",
+    Icon: FiSearch,
+  },
+  {
+    title: "Check before shipping",
+    text: "Review product, variant, quantity and packaging before dispatch.",
+    Icon: FiShield,
+  },
+  {
+    title: "Fulfill with one team",
+    text: "Store, pick, pack, ship and return tracking through one workflow.",
+    Icon: FiPackage,
+  },
+];
+
+const platformStats = [
+  { value: "6+", label: "Years Experience", labelZh: "年行业经验" },
+  { value: "30+", label: "Markets", labelZh: "服务市场" },
+  { value: "3", label: "QC Stages", labelZh: "道质检流程" },
+  { value: "1-on-1", label: "Support", labelZh: "专属支持" },
+];
 
 const quoteDialCountries = [
   { flag: "🇺🇸", name: "United States", code: "+1" },
@@ -216,61 +259,21 @@ export default function FulfillmentHome({ lang = "en" }) {
   const { home: c } = getFulfillmentCopy(lang);
   const isZh = lang === "zh";
   const evidenceItems = c.evidenceItems || [["01", "Approved service scope", "Responsibilities are confirmed before launch."], ["02", "Quality-check evidence", "Agreed checkpoints provide context before an order continues."], ["03", "Order handoff visibility", "SKU, packing and tracking details follow the order workflow."]];
-  const [whySlide, setWhySlide] = useState(0);
-  const [processSlide, setProcessSlide] = useState(0);
-  const [statsVisible, setStatsVisible] = useState(false);
-  const statsRef = useRef(null);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setWhySlide((current) => (current + 1) % whySlides.length);
-    }, 4200);
-    return () => window.clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setProcessSlide((current) => (current + 1) % processVisuals.length);
-    }, 3600);
-    return () => window.clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    const node = statsRef.current;
-    if (!node) return;
-    const showStats = () => {
-      const rect = node.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 1.15 && rect.bottom > 0) {
-        setStatsVisible(true);
-        window.removeEventListener("scroll", showStats);
-        window.removeEventListener("resize", showStats);
-      }
-    };
-    showStats();
-    window.addEventListener("scroll", showStats, { passive: true });
-    window.addEventListener("resize", showStats);
-    return () => {
-      window.removeEventListener("scroll", showStats);
-      window.removeEventListener("resize", showStats);
-    };
-  }, []);
-
-  const moveWhySlide = (direction) => {
-    setWhySlide((current) => (current + direction + whySlides.length) % whySlides.length);
-  };
-
+  const [openFaq, setOpenFaq] = useState(0);
   return (
     <main className="ff-site fh-home">
-      <section className="ff-hero">
-        <div className="ff-hero-glow" />
-        <div className="container ff-hero-grid">
+      <section className="ff-hero fh-hero-redesign">
+        <div className="ff-hero-grid">
           <div className="ff-hero-copy-wrap">
             <span className="ff-kicker ff-kicker-light">
-              {isZh ? c.eyebrow : "SOURCING / QC / BRANDING / FULFILLMENT"}
+              {isZh ? "中国采购与履约服务" : "CHINA-BASED SOURCING & FULFILLMENT"}
             </span>
             <h1 className="fh-hero-title">
               {isZh ? (
-                c.title
+                <>
+                  <span>您的中国一站式代发合作伙伴</span>
+                  <span>采购、质检与全球履约</span>
+                </>
               ) : (
                 <>
                   <span>Your China Dropshipping Agent</span>
@@ -280,290 +283,267 @@ export default function FulfillmentHome({ lang = "en" }) {
                 </>
               )}
             </h1>
-            <p>{c.lead}</p>
-            <div className="ff-proof-list">
-              {c.proofs.map((item) => <span key={item}><FiCheck />{item}</span>)}
-            </div>
+            <p>
+              {isZh
+                ? "通过一个中国本地团队完成产品采购、质量检查、品牌包装和全球发货，让订单履约更清晰、更稳定。"
+                : "Source products, inspect quality, customize packaging and ship worldwide through one dedicated China-based fulfillment team."}
+            </p>
             <div className="ff-actions">
-              <a className="ff-btn ff-btn-primary" href="#quote">{c.primary}<FiArrowRight /></a>
-              <a className="ff-btn ff-btn-ghost" href="#process">{c.secondary}</a>
+              <a className="ff-btn ff-btn-primary" href="#quote">{isZh ? c.primary : "Get a Free Quote"}<FiArrowRight /></a>
+              <a className="ff-btn ff-btn-ghost" href="#process">{isZh ? c.secondary : "See How It Works"}</a>
+            </div>
+            <div className="ff-proof-list" aria-label={isZh ? "核心服务承诺" : "Core service commitments"}>
+              {(isZh
+                ? ["发货前质量检查", "专属客户经理", "全球可追踪配送"]
+                : ["Quality checks before dispatch", "Dedicated account support", "Tracked worldwide shipping"]
+              ).map((item) => <span key={item}><FiCheck />{item}</span>)}
             </div>
           </div>
-
-          <div className="ff-hero-visual fh-hero-media-slot">
-            <MaterialSlot item={homeMaterialPlan.media.heroVideo} className="fh-material-slot-dark" />
-            <div className="ff-journey-card">
-              <small>{c.visualLabel}</small>
-              <div>{c.visualSteps.map((step, index) => <span key={step}><b>{index + 1}</b>{step}</span>)}</div>
-            </div>
-            <div className="ff-floating-badge"><FiGlobe /><span><strong>Worldwide</strong><small>Tracked delivery</small></span></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="ff-platforms">
-        <div className="container">
-          <div className="fh-platform-marquee" role="region" aria-label="Supported eCommerce platforms">
-            <div className="fh-platform-track">
-              {[0, 1].map((copyIndex) => (
-                <div className="fh-platform-group" key={copyIndex} aria-hidden={copyIndex === 1 ? "true" : undefined}>
-                  {platformLogos.map(({ name, Icon, color }) => (
-                    <span className="fh-platform-logo" style={{ "--platform-color": color }} key={`${copyIndex}-${name}`}>
-                      <Icon aria-hidden="true" />
-                      <strong>{name}</strong>
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
+          <div className="fh-hero-visual-panel">
+            <Image
+              src="/images/generated/jw-receiving-team-v3.png"
+              alt="Warehouse team receiving, scanning and recording incoming cartons"
+              fill
+              priority
+              sizes="(max-width: 767px) 100vw, 52vw"
+              unoptimized
+            />
           </div>
         </div>
       </section>
 
-      <section className="ff-section ff-problem fh-problem-section fh-why-section">
+      <section id="platforms" className="ff-platforms fh-platform-data-strip">
         <div className="container">
-          <div className="fh-why-heading">
+          <div className="fh-platform-row">
+            <p className="fh-platform-heading">
+              {isZh ? "适配您正在使用的电商平台" : "Works with the platforms you already sell on"}
+            </p>
+            <div className="fh-platform-marquee" role="region" aria-label="Supported eCommerce platforms">
+              <div className="fh-platform-track">
+                {[0, 1].map((copyIndex) => (
+                  <div className="fh-platform-group" key={copyIndex} aria-hidden={copyIndex === 1 ? "true" : undefined}>
+                    {platformLogos.slice(0, 6).map(({ name, Icon, color }) => (
+                      <span className="fh-platform-logo" style={{ "--platform-color": color }} key={`${copyIndex}-${name}`}>
+                        <Icon aria-hidden="true" />
+                        <strong>{name}</strong>
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="fh-platform-stats" aria-label="Operating overview">
+            {platformStats.map(({ value, label, labelZh }) => (
+              <div className="fh-platform-stat" key={label}>
+                <strong>{value}</strong>
+                <span>{isZh ? labelZh : label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="ff-section fh-core-advantages">
+        <div className="container">
+          <div className="fh-core-heading">
             <span className="ff-kicker">WHY JW DROPSHIPPING</span>
-            <h2>
-              Why choose <span>JW Dropshipping</span>
-            </h2>
-            <p>One China team for sourcing, QC, packing and delivery.</p>
+            <h2>One China team behind every order</h2>
           </div>
-
-          <div className="fh-why-grid">
-            <div className="fh-why-carousel" aria-label="JW Dropshipping operating photos">
-              <div className="fh-why-green-block" aria-hidden="true" />
-              <div className="fh-why-frame">
-                {whySlides.map((slide, index) => (
-                  <figure className={`fh-why-slide${index === whySlide ? " is-active" : ""}`} key={slide.src} aria-hidden={index === whySlide ? undefined : "true"}>
-                    <Image src={slide.src} alt={slide.title} fill sizes="(max-width: 1023px) 100vw, 46vw" unoptimized />
-                    <figcaption>
-                      <strong>{slide.title}</strong>
-                      <span>{slide.caption}</span>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-              <button className="fh-why-nav fh-why-nav-prev" type="button" onClick={() => moveWhySlide(-1)} aria-label="Previous operating photo"><FiChevronLeft /></button>
-              <button className="fh-why-nav fh-why-nav-next" type="button" onClick={() => moveWhySlide(1)} aria-label="Next operating photo"><FiChevronRight /></button>
-              <div className="fh-why-dots" aria-label="Choose operating photo">
-                {whySlides.map((slide, index) => (
-                  <button className={index === whySlide ? "is-active" : ""} type="button" key={slide.src} onClick={() => setWhySlide(index)} aria-label={`Show ${slide.title}`} />
-                ))}
-              </div>
-            </div>
-
-            <div className="fh-why-copy">
-              <div className="fh-why-compare">
-                <article className="fh-why-card fh-why-without">
-                  <h3>Without JW Dropshipping</h3>
-                  <ul>{whyWithout.map((item) => <li key={item}><span><FiX /></span>{item}</li>)}</ul>
-                </article>
-                <article className="fh-why-card fh-why-with">
-                  <h3>With JW Dropshipping</h3>
-                  <ul>{whyWith.map((item) => <li key={item}><span><FiCheck /></span>{item}</li>)}</ul>
-                </article>
-              </div>
-              <Link className="ff-btn ff-btn-dark fh-why-cta" href="#quote">Get a Free Quote<FiArrowRight /></Link>
-              <div className="fh-why-footnote">
-                <span>No obligation</span>
-                <span>Human review</span>
-                <span>Reply within 1 business day</span>
-              </div>
-            </div>
+          <div className="fh-core-grid">
+            {coreAdvantages.map(({ title, text, Icon }) => (
+              <article className="fh-core-item" key={title}>
+                <span className="fh-core-icon"><Icon aria-hidden="true" /></span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
+          <Link className="fh-core-link" href="/why-us">Why JW Dropshipping<FiArrowRight aria-hidden="true" /></Link>
         </div>
       </section>
 
-      <section className="ff-section ff-problem fh-problem-section fh-problem-legacy" hidden aria-hidden="true">
+      <section id="process" className="ff-section ff-process fh-process-section fh-fixed-process">
         <div className="container">
-          <div className="ff-heading ff-heading-split">
-            <div><span className="ff-kicker">{c.problemEyebrow}</span><h2>{c.problemTitle}</h2></div>
-            <p>{c.problemLead}</p>
+          <div className="fh-section-heading fh-process-heading">
+            <span className="ff-kicker">HOW IT WORKS</span>
+            <h2>From product link to tracked delivery</h2>
+            <p>Five clear steps, managed by one China-based team.</p>
           </div>
-          <div className="ff-compare-grid">
-            <div className="fh-compare-bridge" aria-hidden="true">
-              <span>Fragmented handoffs</span>
-              <i><FiArrowRight /></i>
-              <strong>One accountable workflow</strong>
-            </div>
-            <article className="ff-compare-card ff-compare-muted">
-              <small>01</small><h3>{c.without.title}</h3>
-              <ul>{c.without.items.map((item) => <li key={item}><span>×</span>{item}</li>)}</ul>
-            </article>
-            <article className="ff-compare-card ff-compare-accent">
-              <small>02</small><h3>{c.with.title}</h3>
-              <ul>{c.with.items.map((item) => <li key={item}><FiCheck />{item}</li>)}</ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="fh-stat-band" ref={statsRef}>
-        <div className="container fh-stat-layout">
-          <div className="fh-section-heading fh-stat-heading">
-            <span className="ff-kicker">OPERATING SNAPSHOT</span>
-            <h2>Built for clear daily fulfillment.</h2>
-            <p>Proof points that show how the daily operation is organized around support, quality control and delivery coverage.</p>
-          </div>
-          <div className="fh-stat-items">
-            {proofStats.map(({ value, prefix, suffix, label, note, Icon, plain }, index) => (
-              <article className={statsVisible ? "is-counting" : ""} style={{ "--stat-index": index }} key={label}>
-                <Icon aria-hidden="true" />
-                <strong><AnimatedNumber value={value} prefix={prefix} suffix={suffix} active={statsVisible} plain={plain} delay={index * 160} /></strong>
-                <span>{label}</span>
-                <p>{note}</p>
+          <div className="fh-fixed-process-grid">
+            {workflowSteps.map(({ number, title, text, Icon }) => (
+              <article className="fh-fixed-process-step" key={number}>
+                <div className="fh-fixed-process-node"><Icon aria-hidden="true" /></div>
+                <span className="fh-fixed-process-number">{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="process" className="ff-section ff-process fh-process-section">
+      <section id="services" className="ff-section ff-services fh-core-services">
         <div className="container">
-          <div className="fh-section-heading fh-process-heading">
-            <span className="ff-kicker">{c.processEyebrow}</span>
-            <h2>{c.processTitle}</h2>
-            <p>{c.processLead}</p>
+          <div className="fh-section-heading fh-services-heading">
+            <span className="ff-kicker">CORE SERVICES</span>
+            <h2>What we handle for your store</h2>
+            <p>Start with one service or connect them into one managed workflow.</p>
           </div>
-          <div className="fh-process-orbit">
-            <div className="fh-process-visual-grid" aria-label="Fulfillment workflow visuals">
-            {processVisuals.map((visual, index) => (
-              <figure className={`fh-process-visual fh-process-visual-${index + 1}${index === processSlide ? " is-active" : ""}`} key={visual.src}>
-                <Image src={visual.src} alt={visual.title} fill sizes="(max-width: 767px) 100vw, 33vw" unoptimized />
-                <figcaption>
-                  <span>{visual.label}</span>
-                  <strong>{visual.title}</strong>
-                </figcaption>
-              </figure>
+          <div className="fh-core-services-grid">
+            {homeServices.map((service) => (
+              <Link className="fh-core-service-card" href={`/services/${service.slug}`} key={service.slug} aria-label={`Explore ${service.title}`}>
+                <div className="fh-core-service-image">
+                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" />
+                </div>
+                <div className="fh-core-service-body">
+                  <h3>{service.title}</h3>
+                  <p>{service.audience}</p>
+                  <ul>{service.points.map((point) => <li key={point}><FiCheck aria-hidden="true" />{point}</li>)}</ul>
+                  <span>Explore Service<FiArrowRight aria-hidden="true" /></span>
+                </div>
+              </Link>
             ))}
+          </div>
+          <div className="fh-core-services-cta"><Link className="ff-btn ff-btn-dark" href="/services#service-comparison">Compare All Services<FiArrowRight /></Link></div>
+        </div>
+      </section>
+
+      <section className="fh-fulfillment-compare">
+        <div className="container fh-fulfillment-compare-heading">
+          <span className="ff-kicker">THE JW DIFFERENCE</span>
+          <h2>A clearer way to manage fulfillment from China</h2>
+        </div>
+        <div className="fh-fulfillment-compare-columns">
+          <article className="fh-fulfillment-compare-side fh-fulfillment-compare-typical">
+            <div className="fh-fulfillment-compare-inner">
+              <h3>Typical sourcing agent</h3>
+              <ul>
+                {fulfillmentComparison.map(([typical]) => (
+                  <li key={typical}><FiX aria-hidden="true" /><span>{typical}</span></li>
+                ))}
+              </ul>
             </div>
-            <div className="fh-process-rail" aria-hidden="true">
-              <span className="fh-process-parcel"><FiPackage /></span>
+          </article>
+          <article className="fh-fulfillment-compare-side fh-fulfillment-compare-jw">
+            <div className="fh-fulfillment-compare-inner">
+              <h3>JW Dropshipping</h3>
+              <ul>
+                {fulfillmentComparison.map(([, jw]) => (
+                  <li key={jw}><FiCheck aria-hidden="true" /><span>{jw}</span></li>
+                ))}
+              </ul>
             </div>
-            <div className="ff-process-list fh-process-timeline">
-              {c.steps.map(([number, title, text], index) => {
-                const ProcessIcon = processIcons[index] || FiCheck;
-                return (
-                  <article key={number} style={{ "--process-index": index }}>
-                    <div className="fh-process-node"><ProcessIcon aria-hidden="true" /></div>
-                    <span>{number}</span>
-                    <div><h3>{title}</h3><p>{text}</p></div>
-                    <FiArrowRight />
-                  </article>
-                );
-              })}
+          </article>
+        </div>
+      </section>
+
+      <section className="fh-qc-proof">
+        <div className="container fh-qc-proof-grid">
+          <div className="fh-qc-proof-media" aria-label="Quality control inspection photos">
+            <figure className="fh-qc-proof-main">
+              <Image src="/images/generated/jw-qc-inspection-v3.png" alt="Quality control specialist inspecting products before dispatch" fill sizes="(max-width: 1023px) 100vw, 50vw" unoptimized />
+              <figcaption>Product inspection before dispatch</figcaption>
+            </figure>
+            <figure className="fh-qc-proof-detail">
+              <Image src="/images/quality-gallery/tablet-quality-check.jpg" alt="Inspector recording product quality details" fill sizes="(max-width: 767px) 50vw, 25vw" />
+              <figcaption>Inspection record</figcaption>
+            </figure>
+            <figure className="fh-qc-proof-detail">
+              <Image src="/images/quality-gallery/fragile-box-inspection.jpg" alt="Packaging and parcel condition inspection" fill sizes="(max-width: 767px) 50vw, 25vw" />
+              <figcaption>Packaging check</figcaption>
+            </figure>
+          </div>
+          <div className="fh-qc-proof-content">
+            <span className="ff-kicker">QUALITY CONTROL</span>
+            <h2>Quality control before products leave China</h2>
+            <ul className="fh-qc-proof-list">
+              {qcCapabilities.map((item) => <li key={item}><FiCheck aria-hidden="true" />{item}</li>)}
+            </ul>
+            <div className="fh-qc-report" aria-label="Example quality control report">
+              <div className="fh-qc-report-header"><FiShield aria-hidden="true" /><strong>QC report</strong><span>JW-1024</span></div>
+              <dl>
+                <div><dt>SKU</dt><dd>JW-1024</dd></div>
+                <div><dt>Checked</dt><dd>50 units</dd></div>
+                <div><dt>Passed</dt><dd>48</dd></div>
+                <div><dt>Issues</dt><dd>2</dd></div>
+                <div className="fh-qc-report-status"><dt>Status</dt><dd>Waiting for approval</dd></div>
+              </dl>
             </div>
+            <Link className="fh-qc-proof-link" href="/services/quality-control-inspection">Explore Quality Control<FiArrowRight aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
 
-      <section id="services" className="ff-section ff-services">
+      <section className="fh-home-testimonials" aria-labelledby="home-testimonials-title">
         <div className="container">
-          <div className="fh-section-heading fh-services-heading">
-            <span className="ff-kicker">{c.servicesEyebrow}</span>
-            <h2>{c.servicesTitle}</h2>
-            <p>Use each service on its own, or combine them into one sourcing, QC, packing and delivery workflow.</p>
+          <div className="fh-home-testimonials-heading">
+            <span className="ff-kicker">SELLER FEEDBACK</span>
+            <h2 id="home-testimonials-title">What sellers say about working with JW</h2>
           </div>
-          <div className="fh-service-grid">
-            {serviceCatalog.slice(0, 4).map((service, index) => {
-              const Icon = serviceIcons[service.icon] || FiPackage;
+          <div className="fh-home-testimonials-grid">
+            {homeTestimonials.map(({ name, country, tag, quote, featured }) => (
+              <article className={`fh-home-testimonial${featured ? " is-featured" : ""}`} key={`${name}-${tag}`}>
+                <div className="fh-home-testimonial-stars" aria-label="Five star review">
+                  {[0, 1, 2, 3, 4].map((star) => <FiStar key={star} aria-hidden="true" />)}
+                </div>
+                <blockquote>{quote}</blockquote>
+                <footer>
+                  <div><strong>{name}</strong><span>{country}</span></div>
+                  <small>{tag}</small>
+                </footer>
+              </article>
+            ))}
+          </div>
+          <Link className="fh-home-testimonials-link" href="/testimonials">Read More Seller Stories<FiArrowRight aria-hidden="true" /></Link>
+        </div>
+      </section>
+
+      <section id="faq" className="fh-home-faq">
+        <div className="container fh-home-faq-grid">
+          <div className="fh-home-faq-intro">
+            <span className="ff-kicker">FREQUENTLY ASKED QUESTIONS</span>
+            <h2>What to know before you start</h2>
+            <p>Quick answers about sourcing, minimum quantities, quality checks and fulfillment pricing.</p>
+          </div>
+          <div className="fh-home-faq-list">
+            {homeFaqs.map(([question, answer], index) => {
+              const isOpen = openFaq === index;
               return (
-                <article className="fh-service-card" key={service.slug}>
-                  <Link className="fh-service-image" href={`/services/${service.slug}`} aria-label={`Explore ${service.title}`}>
-                    <Image src={service.image} alt={service.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1100px) 50vw, 25vw" />
-                    <span className="fh-service-art-icon"><Icon /></span>
-                    <b>{String(index + 1).padStart(2, "0")}</b>
-                  </Link>
-                  <div className="fh-service-body">
-                    <small>{String(index + 1).padStart(2, "0")}</small><h3>{service.title}</h3>
-                    <ul>{service.points.map((point) => <li key={point}><FiCheck />{point}</li>)}</ul>
-                    <Link href={`/services/${service.slug}`}>Explore service<FiArrowRight /></Link>
-                  </div>
+                <article className={isOpen ? "is-open" : ""} key={question}>
+                  <button type="button" aria-expanded={isOpen} aria-controls={`home-faq-answer-${index}`} onClick={() => setOpenFaq(index)}>
+                    <span>{question}</span><i aria-hidden="true">+</i>
+                  </button>
+                  <div id={`home-faq-answer-${index}`} hidden={!isOpen}><p>{answer}</p></div>
                 </article>
               );
             })}
           </div>
-          <div className="fh-services-cta"><p>Not sure which scope fits your store?</p><Link className="ff-btn ff-btn-dark" href="/services#service-comparison">Compare all services<FiArrowRight /></Link></div>
         </div>
       </section>
 
-      <section className="ff-section ff-quality">
-        <div className="container">
-          <div className="fh-section-heading fh-quality-heading">
-            <span className="ff-kicker">{c.qcEyebrow}</span>
-            <h2>{c.qcTitle}</h2>
-            <p>{c.qcLead}</p>
+      <section id="quote" className="fh-home-quote">
+        <div className="container fh-home-quote-grid">
+          <div className="fh-home-quote-copy">
+            <span className="ff-kicker ff-kicker-light">GET A FREE QUOTE</span>
+            <h2>Start with one product link</h2>
+            <p>Tell us what you sell, where you ship and your expected daily volume. Our team will recommend the next step.</p>
           </div>
-          <div className="ff-quality-grid">
-            <div className="ff-quality-media fh-quality-material">
-              <MaterialSlot item={homeMaterialPlan.media.qualityPhoto} />
-              <div className="fh-quality-gallery" aria-label="Quality inspection photo carousel">
-                {homeMaterialPlan.media.qualityGallery.map((image, imageIndex) => (
-                  <figure className="fh-quality-gallery-slide" key={image.src} style={{ "--quality-slide": imageIndex }}>
-                    <Image src={image.src} alt={image.label} fill sizes="(max-width: 1023px) 100vw, 50vw" unoptimized />
-                    <figcaption>
-                      <span>{String(imageIndex + 1).padStart(2, "0")}</span>
-                      <strong>{image.label}</strong>
-                      <small>{image.credit}</small>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-              <div className="fh-quality-thumbs" aria-hidden="true">
-                {homeMaterialPlan.media.qualityGallery.map((image, imageIndex) => (
-                  <span key={image.src} style={{ "--quality-thumb": imageIndex }}>
-                    <Image src={image.src} alt="" fill sizes="72px" unoptimized />
-                  </span>
-                ))}
-              </div>
-              <div className="fh-quality-checks-card">
-                <span>01</span>
-                <strong>Check quantity, variant, finish</strong>
-                <i />
-                <span>02</span>
-                <strong>Approve pack before dispatch</strong>
-              </div>
-              <div className="ff-quality-tag"><FiShield /><span>Quality checkpoint</span></div>
-            </div>
-            <div className="ff-quality-copy fh-quality-check-panel">
-              <div>
-                <span className="ff-kicker">BEFORE DISPATCH</span>
-                <h3>What gets checked before orders leave China</h3>
-                <p>Keep visible product, variant and packing issues from becoming customer problems.</p>
-              </div>
-              <ul>{c.qcChecks.map((item) => <li key={item}><FiCheck />{item}</li>)}</ul>
-              <Link className="ff-text-link" href="#quote">Get a Free Quote<FiArrowRight /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" className="ff-section ff-faq">
-        <div className="container fh-faq-layout">
-          <div className="fh-section-heading fh-faq-heading">
-            <span className="ff-kicker">{c.faqEyebrow}</span>
-            <h2>{c.faqTitle}</h2>
-            <p>Clear answers before you start.</p>
-          </div>
-          <div className="ff-faq-list">{c.faqs.slice(0, 4).map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
-          <div className="fh-faq-cta">
-            <Link className="ff-btn ff-btn-dark" href="#quote">{c.primary}<FiArrowRight /></Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="quote" className="ff-section ff-quote">
-        <div className="container ff-quote-grid">
-          <div className="ff-quote-copy"><span className="ff-kicker ff-kicker-light">{c.quoteEyebrow}</span><h2>{c.quoteTitle}</h2><p>{c.quoteLead}</p><div><span><FiSearch />Product review</span><span><FiClipboard />Clear next step</span><span><FiUsers />Human reply</span></div></div>
-          <form className="ff-form" name="fulfillment-quote" method="POST" action={isZh ? "/zh/thank-you" : "/thank-you"} data-netlify="true" data-netlify-honeypot="company-website">
+          <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={isZh ? "/zh/thank-you" : "/thank-you"} data-netlify="true" data-netlify-honeypot="company-website">
             <input type="hidden" name="form-name" value="fulfillment-quote" /><input type="hidden" name="language" value={lang} />
             <p className="fh-honeypot"><label>Do not fill this out<input name="company-website" /></label></p>
-            <label>{c.form.name}<input name="name" autoComplete="name" placeholder="Your name" required /></label>
-            <label>{c.form.phone}<PhoneCountryInput /></label>
-            <label>{c.form.product}<input name="product-url" type="url" placeholder="https://" required /></label>
-            <label>{c.form.volume}<select name="volume" defaultValue=""><option value="" disabled>Select a range</option><option>0-10</option><option>11-50</option><option>51-200</option><option>201-500</option><option>500+</option></select></label>
-            <button className="ff-btn ff-btn-primary" type="submit">{c.form.submit}<FiArrowRight /></button><small>{c.form.consent}</small>
+            <div className="fh-home-quote-fields">
+              <label>Name<input name="name" autoComplete="name" placeholder="Your name" required /></label>
+              <label>WhatsApp / Email<input name="contact" autoComplete="email" placeholder="WhatsApp number or email" required /></label>
+              <label className="fh-home-quote-wide">Product or Store URL<input name="product-url" type="url" placeholder="https://" required /></label>
+              <label>Daily Order Volume<select name="volume" defaultValue="" required><option value="" disabled>Select a range</option><option>0-10</option><option>11-50</option><option>51-200</option><option>201-500</option><option>500+</option></select></label>
+              <label>Main Market<input name="main-market" placeholder="e.g. United States" required /></label>
+            </div>
+            <fieldset className="fh-home-quote-help">
+              <legend>What do you need help with?</legend>
+              <div>{quoteHelpOptions.map((option) => <label key={option}><input type="checkbox" name="help-with" value={option} /><span>{option}</span></label>)}</div>
+            </fieldset>
+            <button className="ff-btn ff-btn-primary" type="submit">Get a Free Quote<FiArrowRight /></button>
           </form>
         </div>
       </section>

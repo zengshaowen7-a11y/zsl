@@ -1,0 +1,241 @@
+.fh-home .fh-qc-proof {
+  padding: 112px 0;
+  background: #ffffff;
+}
+
+.fh-home .fh-qc-proof > .container {
+  width: min(100% - 48px, 1180px);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.fh-home .fh-qc-proof-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  gap: 82px;
+  align-items: center;
+}
+
+.fh-home .fh-qc-proof-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+
+.fh-home .fh-qc-proof-media figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: #e7eee9;
+  border-radius: 6px;
+}
+
+.fh-home .fh-qc-proof-media img {
+  object-fit: cover;
+}
+
+.fh-home .fh-qc-proof-main {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 3;
+}
+
+.fh-home .fh-qc-proof-detail {
+  aspect-ratio: 4 / 3;
+}
+
+.fh-home .fh-qc-proof-media figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 18px 16px 12px;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(8, 35, 26, 0.78), transparent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.fh-home .fh-qc-proof-content .ff-kicker {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2fae68;
+}
+
+.fh-home .fh-qc-proof-content h2 {
+  margin: 0 0 30px;
+  color: #103b2d;
+  font-size: clamp(2.15rem, 3.6vw, 3.35rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.fh-home .fh-qc-proof-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 20px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.fh-home .fh-qc-proof-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #3f534a;
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.fh-home .fh-qc-proof-list svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  color: #2fae68;
+  stroke-width: 3;
+}
+
+.fh-home .fh-qc-report {
+  overflow: hidden;
+  margin-bottom: 28px;
+  background: #f8faf9;
+  border: 1px solid #d7e3dc;
+  border-radius: 6px;
+}
+
+.fh-home .fh-qc-report-header {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 15px 18px;
+  color: #173c2f;
+  background: #e7f6ed;
+  border-bottom: 1px solid #d1e4d8;
+}
+
+.fh-home .fh-qc-report-header svg {
+  width: 19px;
+  height: 19px;
+  color: #2fae68;
+}
+
+.fh-home .fh-qc-report-header strong {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fh-home .fh-qc-report-header span {
+  color: #60736a;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.fh-home .fh-qc-report dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+}
+
+.fh-home .fh-qc-report dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 17px;
+  border-right: 1px solid #e0e8e3;
+  border-bottom: 1px solid #e0e8e3;
+}
+
+.fh-home .fh-qc-report dl > div:nth-child(even) {
+  border-right: 0;
+}
+
+.fh-home .fh-qc-report dl .fh-qc-report-status {
+  grid-column: 1 / -1;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.fh-home .fh-qc-report dt,
+.fh-home .fh-qc-report dd {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.fh-home .fh-qc-report dt {
+  color: #718078;
+}
+
+.fh-home .fh-qc-report dd {
+  color: #173c2f;
+  font-weight: 750;
+}
+
+.fh-home .fh-qc-report-status dd {
+  color: #9a6714;
+}
+
+.fh-home .fh-qc-proof-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #176b48;
+  font-size: 0.88rem;
+  font-weight: 750;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.fh-home .fh-qc-proof-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 180ms ease;
+}
+
+.fh-home .fh-qc-proof-link:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1023px) {
+  .fh-home .fh-qc-proof-grid {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+}
+
+@media (max-width: 640px) {
+  .fh-home .fh-qc-proof {
+    padding: 76px 0 80px;
+  }
+
+  .fh-home .fh-qc-proof > .container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .fh-home .fh-qc-proof-grid {
+    gap: 42px;
+  }
+
+  .fh-home .fh-qc-proof-media {
+    gap: 10px;
+  }
+
+  .fh-home .fh-qc-proof-content h2 {
+    font-size: 2.05rem;
+  }
+
+  .fh-home .fh-qc-proof-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .fh-home .fh-qc-report dl > div {
+    padding: 11px 13px;
+  }
+}

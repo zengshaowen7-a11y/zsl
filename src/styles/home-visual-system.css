@@ -1,0 +1,220 @@
+.fh-home {
+  --jw-primary: #167449;
+  --jw-deep: #0b2920;
+  --jw-accent: #42b978;
+  --jw-page: #ffffff;
+  --jw-soft: #f3f7f4;
+  --jw-text: #27332e;
+  --jw-muted: #67746e;
+  color: var(--jw-text);
+  background: var(--jw-page);
+}
+
+.fh-home h1,
+.fh-home h2,
+.fh-home h3 {
+  letter-spacing: 0 !important;
+}
+
+.fh-home p,
+.fh-home li,
+.fh-home blockquote {
+  color: var(--jw-muted);
+}
+
+.fh-home .ff-kicker {
+  min-height: 0 !important;
+  padding: 0 !important;
+  color: var(--jw-primary) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.fh-home .fh-hero-redesign,
+.fh-home .fh-hero-redesign .ff-hero-copy-wrap {
+  background: var(--jw-primary) !important;
+}
+
+.fh-home .fh-hero-redesign .ff-hero-copy-wrap .ff-kicker,
+.fh-home .fh-hero-redesign .fh-hero-title,
+.fh-home .fh-hero-redesign .fh-hero-title em,
+.fh-home .fh-hero-redesign .ff-proof-list span {
+  color: #ffffff !important;
+}
+
+.fh-home .fh-hero-redesign .ff-kicker::before,
+.fh-home .fh-hero-redesign .ff-proof-list svg,
+.fh-home .fh-hero-redesign .ff-btn-primary {
+  color: #ffffff !important;
+  background: var(--jw-deep) !important;
+  border-color: var(--jw-deep) !important;
+}
+
+.fh-home .fh-hero-redesign .ff-hero-copy-wrap > p {
+  max-width: 570px !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.fh-home .fh-hero-redesign .ff-btn-ghost {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.fh-home .fh-hero-redesign .ff-btn-ghost:hover {
+  color: #ffffff !important;
+  background: rgba(11, 41, 32, 0.14) !important;
+  border-color: #ffffff !important;
+}
+
+.fh-home .fh-platform-marquee {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+.fh-home .fh-platform-stat strong,
+.fh-home .fh-core-heading .ff-kicker,
+.fh-home .fh-process-heading .ff-kicker,
+.fh-home .fh-services-heading .ff-kicker,
+.fh-home .fh-fulfillment-compare-heading .ff-kicker,
+.fh-home .fh-qc-proof-content .ff-kicker,
+.fh-home .fh-home-testimonials-heading .ff-kicker,
+.fh-home .fh-home-faq-intro .ff-kicker {
+  color: var(--jw-primary) !important;
+}
+
+.fh-home .fh-core-advantages,
+.fh-home .fh-core-services,
+.fh-home .fh-home-testimonials {
+  background: var(--jw-soft) !important;
+}
+
+.fh-home .fh-core-heading h2,
+.fh-home .fh-core-item h3,
+.fh-home .fh-process-heading h2,
+.fh-home .fh-fixed-process-step h3,
+.fh-home .fh-services-heading h2,
+.fh-home .fh-core-service-body h3,
+.fh-home .fh-fulfillment-compare-heading h2,
+.fh-home .fh-qc-proof-content h2,
+.fh-home .fh-home-testimonials-heading h2,
+.fh-home .fh-home-faq-intro h2,
+.fh-home .fh-home-faq-list button {
+  color: var(--jw-text) !important;
+}
+
+.fh-home .fh-core-icon,
+.fh-home .fh-fixed-process-node,
+.fh-home .fh-home-quote-form > button {
+  background: var(--jw-accent) !important;
+}
+
+.fh-home .fh-fixed-process-number,
+.fh-home .fh-qc-proof-list svg,
+.fh-home .fh-qc-report-header svg,
+.fh-home .fh-home-faq-list button i,
+.fh-home .fh-core-service-body li svg {
+  color: var(--jw-accent) !important;
+}
+
+.fh-home .fh-core-link,
+.fh-home .fh-core-service-body > span,
+.fh-home .fh-qc-proof-link,
+.fh-home .fh-home-testimonials-link {
+  color: var(--jw-primary) !important;
+}
+
+.fh-home .fh-core-service-card {
+  box-shadow: none !important;
+}
+
+.fh-home .fh-core-service-card:hover {
+  border-color: var(--jw-accent) !important;
+  box-shadow: none !important;
+}
+
+.fh-home .fh-core-service-card:focus-visible {
+  outline-color: rgba(66, 185, 120, 0.38) !important;
+}
+
+.fh-home .fh-fulfillment-compare-typical {
+  background: #f0f2f1 !important;
+}
+
+.fh-home .fh-fulfillment-compare-jw,
+.fh-home .fh-qc-report-header {
+  background: #e8f5ed !important;
+}
+
+.fh-home .fh-qc-proof-media figcaption {
+  background: rgba(11, 41, 32, 0.9) !important;
+}
+
+.fh-home .fh-home-testimonial.is-featured,
+.fh-home .fh-home-quote {
+  background: var(--jw-deep) !important;
+  border-color: var(--jw-deep) !important;
+}
+
+.fh-home .fh-home-quote-form input:focus,
+.fh-home .fh-home-quote-form select:focus {
+  border-color: var(--jw-accent) !important;
+  box-shadow: 0 0 0 3px rgba(66, 185, 120, 0.14) !important;
+}
+
+.fh-home .fh-home-quote-help input[type="checkbox"] {
+  accent-color: var(--jw-primary);
+}
+
+.fh-home .ff-btn,
+.fh-home .fh-core-service-card,
+.fh-home .fh-qc-report,
+.fh-home .fh-home-testimonial,
+.fh-home .fh-home-quote-form {
+  border-radius: 8px !important;
+}
+
+.header.is-scrolled {
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(11, 41, 32, 0.08) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.header .nav-link::after {
+  background: #167449 !important;
+}
+
+.header .ff-nav-cta {
+  background: #167449 !important;
+  border-color: #167449 !important;
+  color: #ffffff !important;
+}
+
+.header .language-trigger:hover,
+.header .service-mega-menu {
+  border-color: #42b978 !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-hero-redesign .fh-hero-title {
+    font-size: 40px !important;
+  }
+
+  .fh-home .fh-process-section .fh-process-heading.fh-section-heading {
+    justify-items: start !important;
+    text-align: left !important;
+  }
+
+  .fh-home .fh-process-section .fh-process-heading.fh-section-heading .ff-kicker,
+  .fh-home .fh-process-section .fh-process-heading.fh-section-heading h2,
+  .fh-home .fh-process-section .fh-process-heading.fh-section-heading p {
+    justify-self: start !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+}

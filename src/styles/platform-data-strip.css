@@ -1,0 +1,187 @@
+.fh-home .fh-platform-data-strip {
+  overflow: hidden;
+  padding: 0 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #dfe8e2;
+}
+
+.fh-home .fh-platform-data-strip > .container {
+  width: min(100% - 48px, 1240px);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 !important;
+}
+
+.fh-home .fh-platform-row {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+  min-height: 104px;
+}
+
+.fh-home .fh-platform-heading {
+  max-width: 250px;
+  margin: 0 !important;
+  color: #173c2f;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: left !important;
+}
+
+.fh-home .fh-platform-marquee {
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.fh-home .fh-platform-track {
+  display: flex;
+  width: max-content;
+  animation: fhPlatformMarquee 58s linear infinite !important;
+  will-change: transform;
+}
+
+.fh-home .fh-platform-marquee:hover .fh-platform-track {
+  animation-play-state: paused !important;
+}
+
+.fh-home .fh-platform-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 42px !important;
+  padding-right: 42px !important;
+}
+
+.fh-home .fh-platform-logo {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 9px;
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  color: #384c44;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.fh-home .fh-platform-logo svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--platform-color);
+}
+
+.fh-home .fh-platform-logo strong {
+  color: #384c44;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.fh-home .fh-platform-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  min-height: 74px;
+  border-top: 1px solid #dfe8e2;
+}
+
+.fh-home .fh-platform-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 14px 20px;
+  border-right: 1px solid #dfe8e2;
+}
+
+.fh-home .fh-platform-stat:last-child {
+  border-right: 0;
+}
+
+.fh-home .fh-platform-stat strong {
+  color: #2fae68;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.fh-home .fh-platform-stat span {
+  color: #52645d;
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-platform-data-strip > .container {
+    width: 100%;
+  }
+
+  .fh-home .fh-platform-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    min-height: 0;
+    padding: 28px 20px 24px;
+  }
+
+  .fh-home .fh-platform-heading {
+    max-width: none;
+    font-size: 0.78rem;
+    text-align: center !important;
+  }
+
+  .fh-home .fh-platform-group {
+    gap: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .fh-home .fh-platform-track {
+    animation-duration: 48s !important;
+  }
+
+  .fh-home .fh-platform-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fh-home .fh-platform-stat {
+    min-height: 62px;
+    padding: 12px 8px;
+  }
+
+  .fh-home .fh-platform-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .fh-home .fh-platform-stat:nth-child(-n + 2) {
+    border-bottom: 1px solid #dfe8e2;
+  }
+
+  .fh-home .fh-platform-stat strong {
+    font-size: 1.08rem;
+  }
+
+  .fh-home .fh-platform-stat span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-home .fh-platform-track {
+    animation-play-state: paused !important;
+  }
+}

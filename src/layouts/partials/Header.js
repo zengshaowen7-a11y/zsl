@@ -6,7 +6,14 @@ import { servicePages } from "@config/service-page-content";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { FiArrowRight, FiCheck, FiChevronDown, FiGlobe } from "react-icons/fi";
+import {
+  FiArrowRight,
+  FiCheck,
+  FiChevronDown,
+  FiGlobe,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 
 export default function Header() {
   const pathname = usePathname();
@@ -23,11 +30,14 @@ export default function Header() {
 
   const homeHref = isZh ? "/zh" : "/";
   const servicesHref = `${langPrefix}/services`;
-  const aboutHref = `${langPrefix}/about-us`;
+  const howItWorksHref = `${langPrefix}/how-it-works`;
+  const whyUsHref = `${langPrefix}/why-us`;
   const testimonialsHref = `${langPrefix}/testimonials`;
   const contactHref = `${langPrefix}/contact`;
   const quoteHref = contactHref;
   const comparablePathname = isZh ? pathname.replace(/^\/zh(?=\/|$)/, "") || "/" : pathname;
+  const englishHref = comparablePathname;
+  const chineseHref = comparablePathname === "/" ? "/zh" : `/zh${comparablePathname}`;
   const hasOverlayHeader = ["/", "/services", "/about-us", "/testimonials", "/contact"].includes(comparablePathname);
 
   useEffect(() => {
@@ -87,19 +97,17 @@ export default function Header() {
     <header
       className={`header ${hasOverlayHeader ? "header-transparent" : "header-solid"} ${scrolled ? "is-scrolled" : ""} nav-on-${navTheme}`}
     >
-      <nav className="navbar container" aria-label="Primary navigation">
+      <nav className="navbar container header-navbar" aria-label="Primary navigation">
         <Logo href={homeHref} onClick={handleNavLinkClick(homeHref)} />
 
         <button
           id="show-button"
-          className="order-2 flex cursor-pointer items-center md:order-1 md:hidden"
+          className="header-menu-toggle order-2 flex cursor-pointer items-center md:order-1 md:hidden"
           aria-expanded={navOpen}
           aria-label={navOpen ? "Close menu" : "Open menu"}
           onClick={() => setNavOpen((open) => !open)}
         >
-          <span className="ff-menu-icon" aria-hidden="true">
-            {navOpen ? "×" : "☰"}
-          </span>
+          {navOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
         </button>
 
         <div
@@ -107,15 +115,6 @@ export default function Header() {
           className={`order-3 md:order-1 ${navOpen ? "max-h-250 md:max-h-auto" : "hidden md:block"}`}
         >
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
-            <li className="nav-item">
-              <Link
-                className={`nav-link block ${comparablePathname === "/" ? "nav-link-active" : ""}`}
-                href={homeHref}
-                onClick={handleNavLinkClick(homeHref)}
-              >
-                {nav.home}
-              </Link>
-            </li>
             <li
               className="nav-item nav-dropdown relative"
               ref={servicesRef}
@@ -154,11 +153,20 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link block ${comparablePathname === "/about-us" ? "nav-link-active" : ""}`}
-                href={aboutHref}
-                onClick={handleNavLinkClick(aboutHref)}
+                className={`nav-link block ${comparablePathname === "/how-it-works" ? "nav-link-active" : ""}`}
+                href={howItWorksHref}
+                onClick={handleNavLinkClick(howItWorksHref)}
               >
-                {nav.about}
+                {isZh ? "合作流程" : "How It Works"}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link block ${comparablePathname === "/why-us" ? "nav-link-active" : ""}`}
+                href={whyUsHref}
+                onClick={handleNavLinkClick(whyUsHref)}
+              >
+                {isZh ? "为什么选择我们" : "Why JW"}
               </Link>
             </li>
             <li className="nav-item">
@@ -196,16 +204,19 @@ export default function Header() {
             onClick={() => setLanguageOpen((open) => !open)}
           >
             <FiGlobe aria-hidden="true" />
-            <span>English</span>
+            <span>{isZh ? "中文" : "EN"}</span>
             <FiChevronDown className={languageOpen ? "is-open" : ""} aria-hidden="true" />
           </button>
           {languageOpen && (
             <div className="language-menu" role="listbox" aria-label="Choose language">
-              <button className="language-option is-selected" type="button" role="option" aria-selected="true">
-                <span><strong>English</strong><small>Current language</small></span>
-                <FiCheck aria-hidden="true" />
-              </button>
-              <div className="language-coming-soon">More languages coming soon</div>
+              <Link className={`language-option ${!isZh ? "is-selected" : ""}`} href={englishHref} role="option" aria-selected={!isZh} onClick={() => setLanguageOpen(false)}>
+                <span><strong>English</strong><small>International site</small></span>
+                {!isZh && <FiCheck aria-hidden="true" />}
+              </Link>
+              <Link className={`language-option ${isZh ? "is-selected" : ""}`} href={chineseHref} role="option" aria-selected={isZh} onClick={() => setLanguageOpen(false)}>
+                <span><strong>中文</strong><small>中文网站</small></span>
+                {isZh && <FiCheck aria-hidden="true" />}
+              </Link>
             </div>
           )}
         </div>

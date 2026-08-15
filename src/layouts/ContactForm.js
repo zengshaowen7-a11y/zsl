@@ -47,19 +47,18 @@ export default function ContactForm() {
             <option>500+ orders</option>
           </select>
         </label>
-        <label>
-          Main need *
-          <select name="main-need" required defaultValue="">
-            <option value="" disabled>Select one</option>
-            <option>Product sourcing</option>
-            <option>Quality control</option>
-            <option>Warehousing and fulfillment</option>
-            <option>Brand packaging</option>
-            <option>Global delivery</option>
-            <option>Not sure yet</option>
-          </select>
-        </label>
+        <label>Main market *<input name="main-market" type="text" required placeholder="e.g. United States, UK, EU" /></label>
       </div>
+
+      <fieldset className="contact-service-fieldset">
+        <legend>What do you need help with?</legend>
+        <p>Select all that apply.</p>
+        <div className="contact-service-options">
+          {["Product sourcing", "Quality issues", "Custom packaging", "Slow shipping", "Order fulfillment", "Replacing current supplier"].map((service) => (
+            <label key={service}><input name="help-needed" type="checkbox" value={service} /><span><FiArrowRight /></span>{service}</label>
+          ))}
+        </div>
+      </fieldset>
 
       <label className="contact-field-full">
         Anything we should know?
@@ -71,7 +70,7 @@ export default function ContactForm() {
         <span>I agree to be contacted about this enquiry. *</span>
       </label>
       <button className="ff-btn ff-btn-primary contact-submit" type="submit">
-        Request my review <FiArrowRight />
+        Get a Free Quote <FiArrowRight />
       </button>
       <small className="contact-privacy"><FiLock />Your details are only used to respond to this enquiry.</small>
     </form>

@@ -1,7 +1,6 @@
-import { detailPages } from "@config/detail-pages";
-import MarketingDetail from "@layouts/MarketingDetail";
+import HowItWorksRedesign from "@layouts/HowItWorksRedesign";
 import SeoMeta from "@layouts/SeoMeta";
 
 export default function ProcessPage() {
-  return <><SeoMeta title="How JW Dropshipping Works" /><MarketingDetail page={detailPages.process} /></>;
+  return <><SeoMeta title="How JW Dropshipping Works" /><HowItWorksRedesign /></>;
 }

@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .sdr-hero-copy h1 {
+    font-size: clamp(3.25rem, 4.5vw, 3.625rem);
+  }
+}
+
+.sdr-proof-content,
+.sdr-proof-table {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .sdr-proof-table {
+    overflow-x: auto;
+  }
+}
