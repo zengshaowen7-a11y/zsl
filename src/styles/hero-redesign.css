@@ -175,17 +175,6 @@
   object-position: 54% center;
 }
 
-.fh-home .fh-hero-redesign .ff-kicker,
-.fh-home .fh-hero-redesign .fh-hero-title span,
-.fh-home .fh-hero-redesign .ff-hero-copy-wrap > p,
-.fh-home .fh-hero-redesign .ff-actions,
-.fh-home .fh-hero-redesign .ff-proof-list,
-.fh-home .fh-hero-redesign .fh-hero-visual-panel {
-  opacity: 1 !important;
-  animation: none !important;
-  transform: none !important;
-}
-
 @media (max-width: 1180px) {
   .fh-home .fh-hero-redesign .ff-hero-copy-wrap {
     padding-right: 38px;

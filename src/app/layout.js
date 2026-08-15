@@ -35,6 +35,10 @@ import "../styles/how-it-works-redesign.css";
 import "../styles/why-jw-redesign.css";
 import "../styles/testimonials-redesign.css";
 import "../styles/contact-redesign.css";
+import "../styles/home-premium-refresh.css";
+import "../styles/home-brief-v1.css";
+import "../styles/home-brief-v2.css";
+import "../styles/home-module-upgrade-v3.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),
