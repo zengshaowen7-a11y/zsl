@@ -11,7 +11,7 @@ const Logo = ({ href, className = "", onClick }) => (
   >
     <span className="jw-brand-symbol" aria-hidden="true">
       <Image
-        src="/images/brand/jw-symbol.png"
+        src="/images/brand/jw-symbol-clean.png"
         alt=""
         fill
         priority
@@ -20,8 +20,8 @@ const Logo = ({ href, className = "", onClick }) => (
     </span>
     <span className="jw-brand-wordmark">
       <Image
-        src="/images/brand/jw-wordmark.png"
-        alt="JW Dropshipping - Connect, Fulfill, Grow"
+        src="/images/brand/jw-wordmark-clean.png"
+        alt="JW Dropshipping"
         fill
         priority
         sizes="190px"

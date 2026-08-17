@@ -39,6 +39,23 @@ import "../styles/home-premium-refresh.css";
 import "../styles/home-brief-v1.css";
 import "../styles/home-brief-v2.css";
 import "../styles/home-module-upgrade-v3.css";
+import "../styles/global-heading-scale.css";
+import "../styles/home-stats-responsive.css";
+import "../styles/dropshipping-supplier-hero.css";
+import "../styles/three-pl-fulfillment-hero.css";
+import "../styles/pod-fulfillment-hero.css";
+import "../styles/private-label-hero.css";
+import "../styles/remaining-service-heroes.css";
+import "../styles/services-overview-hero.css";
+import "../styles/testimonials-hero.css";
+import "../styles/service-detail-module-enhancements.css";
+import "../styles/service-detail-branding-module-enhancements.css";
+import "../styles/service-detail-operations-module-enhancements.css";
+import "../styles/why-jw-module-enhancements.css";
+import "../styles/testimonials-module-enhancements.css";
+import "../styles/contact-module-enhancements.css";
+import "../styles/service-form-unification.css";
+import "../styles/green-button-theme.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),
@@ -95,7 +112,7 @@ export default function RootLayout({ children }) {
           content="#e8f6ed"
         />
       </head>
-      <body suppressHydrationWarning>
+      <body className="jw-green-buttons" suppressHydrationWarning>
         <Header />
         <ScrollReveal />
         <Providers>{children}</Providers>

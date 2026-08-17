@@ -1,0 +1,85 @@
+/* Unified green treatment for site-wide text action buttons. */
+:root {
+  --jw-button-green: #176f43;
+  --jw-button-green-hover: #0f5935;
+  --jw-button-green-border: #0d5130;
+}
+
+body.jw-green-buttons.jw-green-buttons.jw-green-buttons.jw-green-buttons :is(
+  .ff-btn-primary,
+  .ff-btn-ghost,
+  .ff-btn-outline,
+  .ff-btn-dark,
+  .btn-primary,
+  .btn-outline-primary,
+  .smt-button-primary,
+  .smt-button-ghost,
+  .hiw-button-primary,
+  .hiw-button-ghost,
+  .hiw-button-light,
+  .wjw-button-primary,
+  .wjw-button-ghost,
+  .wjw-button-light,
+  .tst-button-primary,
+  .tst-button-ghost,
+  .tst-button-light,
+  .sov-button-primary,
+  .sov-button-secondary,
+  .sov-button-light
+) {
+  border-color: var(--jw-button-green-border) !important;
+  background: var(--jw-button-green) !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(15, 89, 53, 0.2) !important;
+}
+
+body.jw-green-buttons.jw-green-buttons.jw-green-buttons.jw-green-buttons :is(
+  .ff-btn-primary,
+  .ff-btn-ghost,
+  .ff-btn-outline,
+  .ff-btn-dark,
+  .btn-primary,
+  .btn-outline-primary,
+  .smt-button-primary,
+  .smt-button-ghost,
+  .hiw-button-primary,
+  .hiw-button-ghost,
+  .hiw-button-light,
+  .wjw-button-primary,
+  .wjw-button-ghost,
+  .wjw-button-light,
+  .tst-button-primary,
+  .tst-button-ghost,
+  .tst-button-light,
+  .sov-button-primary,
+  .sov-button-secondary,
+  .sov-button-light
+):hover {
+  border-color: var(--jw-button-green-hover) !important;
+  background: var(--jw-button-green-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 16px 32px rgba(15, 89, 53, 0.28) !important;
+}
+
+body.jw-green-buttons.jw-green-buttons.jw-green-buttons.jw-green-buttons :is(
+  .ff-btn-primary,
+  .ff-btn-ghost,
+  .ff-btn-outline,
+  .ff-btn-dark,
+  .btn-primary,
+  .btn-outline-primary,
+  .smt-button,
+  .hiw-button,
+  .wjw-button,
+  .tst-button,
+  .sov-button
+):focus-visible {
+  outline: 3px solid rgba(23, 111, 67, 0.32) !important;
+  outline-offset: 3px;
+}
+
+body.jw-green-buttons.jw-green-buttons.jw-green-buttons.jw-green-buttons :is(.ff-btn, .btn, .smt-button, .hiw-button, .wjw-button, .tst-button, .sov-button):disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+  box-shadow: none !important;
+}

@@ -1,0 +1,432 @@
+/* Interior module systems for the Dropshipping Supplier and 3PL service pages. */
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) {
+  --module-line: rgba(22, 116, 73, 0.18);
+  --module-soft: #eef7f2;
+  --module-surface: #ffffff;
+  --module-ink: #18392f;
+  --module-muted: #61736b;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+  :is(.sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--module-line);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+  :is(.sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote)
+  > .container {
+  position: relative;
+  z-index: 1;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-section-heading {
+  width: 100%;
+  max-width: 920px;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-section-heading > p {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+  :is(.sdr-section-heading h2, .sdr-heading-split h2, .sdr-proof-content h2, .sdr-case h2, .sdr-faq h2, .sdr-quote h2) {
+  max-width: 920px;
+  color: var(--module-ink);
+  text-wrap: balance;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-heading-split {
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.65fr);
+  gap: clamp(40px, 7vw, 96px);
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--module-line);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+  :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a) {
+  position: relative;
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+  :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a):hover {
+  z-index: 2;
+  border-color: rgba(22, 116, 73, 0.48);
+  box-shadow: 0 18px 38px rgba(16, 70, 47, 0.11);
+  transform: translateY(-4px);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid {
+  gap: 14px;
+  border: 0;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid article {
+  min-height: 220px;
+  padding: 30px 26px;
+  border: 1px solid var(--module-line) !important;
+  border-radius: 8px;
+  background: var(--module-surface);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid article::before {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  left: 24px;
+  height: 3px;
+  content: "";
+  background: #258b58;
+  transform: scaleX(0.28);
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid article:hover::before {
+  transform: scaleX(1);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 28px;
+  border: 1px solid var(--module-line);
+  border-radius: 4px;
+  background: var(--module-soft);
+  color: #176f43;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid h3 {
+  margin-top: 36px;
+  color: var(--module-ink);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-scope-grid {
+  gap: 1px;
+  border: 0;
+  background: var(--module-line);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-scope-grid article {
+  min-height: 170px;
+  border: 0 !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-scope-grid article > span {
+  transition: transform 220ms ease, background-color 220ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-scope-grid article:hover > span {
+  transform: translateY(-3px) rotate(-4deg);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof-grid {
+  gap: clamp(44px, 6vw, 82px);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof figure {
+  min-height: 570px;
+  border: 1px solid var(--module-line);
+  border-radius: 8px;
+  box-shadow: 0 24px 54px rgba(12, 54, 39, 0.14);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof figure img {
+  transition: transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 300ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof figure:hover img {
+  filter: saturate(1.05);
+  transform: scale(1.025);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof-table {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(15, 64, 44, 0.08);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof-row {
+  transition: background-color 180ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof-row:not(.sdr-proof-head):hover {
+  background: #edf8f1;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid {
+  position: relative;
+  gap: 12px;
+  border: 0;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid::before {
+  position: absolute;
+  top: 48px;
+  right: 7%;
+  left: 7%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, transparent, #42b978 12%, #42b978 88%, transparent);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid article {
+  z-index: 1;
+  min-height: 250px;
+  padding: 28px 22px;
+  border: 1px solid var(--module-line) !important;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid article > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid #42b978;
+  border-radius: 50%;
+  background: #fff;
+  color: #176f43;
+  box-shadow: 0 0 0 7px var(--module-soft);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid h3 {
+  min-height: 48px;
+  margin-top: 34px;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-planning-grid {
+  gap: 14px;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-planning-grid article {
+  min-height: 230px;
+  padding: 28px;
+  border-color: var(--module-line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-planning-grid small {
+  color: #176f43;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-case-grid {
+  align-items: center;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-case-board {
+  border-top: 4px solid #258b58;
+  box-shadow: 0 24px 54px rgba(15, 64, 44, 0.1);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-case-board li span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--module-soft);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-faq details {
+  border-color: var(--module-line);
+  transition: background-color 180ms ease, padding 180ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-faq details[open] {
+  padding-right: 18px;
+  padding-left: 18px;
+  background: var(--module-soft);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-faq summary span {
+  transition: transform 200ms ease;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-related-grid > a {
+  border-top: 3px solid transparent;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-related-grid > a:hover {
+  border-top-color: #258b58;
+}
+
+/* Dropshipping page: an order-flow rhythm with a dark operational scope. */
+.sdr-page-dropshipping-supplier .sdr-fit,
+.sdr-page-dropshipping-supplier .sdr-proof,
+.sdr-page-dropshipping-supplier .sdr-planning,
+.sdr-page-dropshipping-supplier .sdr-faq {
+  background: #f7faf8;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope {
+  background: #0d3328;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope :is(h2, h3) {
+  color: #fff;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope .sdr-heading-split {
+  border-bottom-color: rgba(255, 255, 255, 0.16);
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope .sdr-heading-split > p,
+.sdr-page-dropshipping-supplier .sdr-scope-grid p {
+  color: #bdd0c8;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope-grid {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope-grid article {
+  background: #123d30 !important;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope-grid article:hover {
+  background: #174936 !important;
+}
+
+.sdr-page-dropshipping-supplier .sdr-scope-grid article > span {
+  background: #42b978;
+  color: #fff;
+}
+
+.sdr-page-dropshipping-supplier .sdr-case {
+  background: #edf6f1;
+}
+
+/* 3PL page: a lighter warehouse-control system with reversed proof flow. */
+.sdr-page-3pl-fulfillment-services .sdr-fit,
+.sdr-page-3pl-fulfillment-services .sdr-process,
+.sdr-page-3pl-fulfillment-services .sdr-case,
+.sdr-page-3pl-fulfillment-services .sdr-related {
+  background: #edf7f1;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope,
+.sdr-page-3pl-fulfillment-services .sdr-planning,
+.sdr-page-3pl-fulfillment-services .sdr-faq {
+  background: #f8fbf9;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope :is(h2, h3) {
+  color: var(--module-ink);
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope .ff-kicker {
+  color: #176f43;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope-grid {
+  gap: 14px;
+  background: transparent;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope-grid article {
+  border: 1px solid var(--module-line) !important;
+  border-left: 4px solid #258b58 !important;
+  border-radius: 6px;
+  background: #fff !important;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-scope-grid article > span {
+  background: #dff2e7;
+  color: #176f43;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-proof figure {
+  order: 2;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-proof-content {
+  order: 1;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-planning-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-planning-grid article {
+  min-height: 200px;
+  border-left: 4px solid #258b58;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-process-grid::before {
+  display: none;
+}
+
+.sdr-page-3pl-fulfillment-services .sdr-process-grid article {
+  min-height: 230px;
+  border-top: 4px solid #258b58 !important;
+}
+
+@media (max-width: 1023px) {
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-heading-split {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid::before {
+    display: none;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid article {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-section-heading {
+    text-align: left;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-fit-grid,
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-scope-grid,
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-process-grid,
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-planning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+    :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article) {
+    min-height: 0;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-proof figure {
+    min-height: 360px;
+  }
+
+  .sdr-page-3pl-fulfillment-services .sdr-proof figure,
+  .sdr-page-3pl-fulfillment-services .sdr-proof-content {
+    order: initial;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-faq details[open] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services)
+    :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a, .sdr-proof figure img) {
+    transition: none;
+  }
+}

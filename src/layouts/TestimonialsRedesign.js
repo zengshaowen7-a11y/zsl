@@ -32,9 +32,23 @@ function Review({ review, featured = false, index }) {
 
 export default function TestimonialsRedesign() {
   return <main className="tst-page">
-    <section className="tst-hero"><div className="tst-hero-copy"><p className="tst-kicker">SELLER STORIES</p><h1>What sellers notice in the daily work.</h1><p>Feedback about sourcing, product checks, communication, branded packing and fulfillment from sellers working across different markets.</p><div className="tst-actions"><Link href="/contact" className="tst-button tst-button-primary">Get a Free Quote <FiArrowRight /></Link><a href="#seller-stories" className="tst-button tst-button-ghost">Read Seller Stories</a></div><ul><li><FiCheck /> Named seller feedback</li><li><FiCheck /> Service context included</li><li><FiCheck /> Team and warehouse proof</li></ul></div><div className="tst-hero-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt="JW team behind seller sourcing and fulfillment work" fill priority sizes="(max-width: 767px) 100vw, 52vw" /></div></section>
+    <section className="tst-hero">
+      <div className="tst-hero-copy">
+        <p className="tst-kicker">SELLER STORIES</p>
+        <h1>What sellers notice in the daily work.</h1>
+        <p>Feedback about sourcing, product checks, communication, branded packing and fulfillment from sellers working across different markets.</p>
+        <div className="tst-actions"><Link href="/contact" className="tst-button tst-button-primary">Get a Free Quote <FiArrowRight /></Link><a href="#seller-stories" className="tst-button tst-button-ghost">Read Seller Stories</a></div>
+        <ul><li><FiCheck /> Named seller feedback</li><li><FiCheck /> Service context included</li><li><FiCheck /> Team and warehouse proof</li></ul>
+      </div>
+      <figure className="tst-hero-voice">
+        <div className="tst-hero-stars" aria-label="Five star review">{[1,2,3,4,5].map(star => <FiStar key={star} />)}</div>
+        <blockquote>“The team keeps high-volume order work neat, trackable and organized.”</blockquote>
+        <figcaption><strong>Lukas</strong><span>Germany · Order handling</span></figcaption>
+      </figure>
+      <div className="tst-hero-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt="JW team behind seller sourcing and fulfillment work" fill priority sizes="100vw" /></div>
+    </section>
 
-    <section className="tst-facts"><div className="tst-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>1-on-1</strong><span>Account Support</span></div></div></section>
+    <section className="tst-facts"><div className="tst-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>One-on-One</strong><span>Expert Support</span></div></div></section>
 
     <section className="tst-featured" id="seller-stories"><div className="tst-container"><header className="tst-heading"><div><p className="tst-kicker">FEATURED FEEDBACK</p><h2>Three parts of the partnership sellers remember.</h2></div><p>Clear order handling, thoughtful product decisions and a responsive person who keeps the work moving.</p></header><div className="tst-featured-grid">{reviews.slice(0,3).map((review,index)=><Review review={review} featured index={index} key={review[0]} />)}</div></div></section>
 

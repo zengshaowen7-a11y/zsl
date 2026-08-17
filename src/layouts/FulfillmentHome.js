@@ -247,7 +247,7 @@ const platformStats = [
   { value: "6+", number: 6, suffix: "+", label: "Years Experience", labelZh: "年行业经验" },
   { value: "30+", number: 30, suffix: "+", label: "Markets", labelZh: "服务市场" },
   { value: "3", number: 3, suffix: "", label: "QC Stages", labelZh: "道质检流程" },
-  { value: "1-on-1", label: "Support", labelZh: "专属支持" },
+  { value: "One-on-One", label: "Expert Support", labelZh: "专属支持" },
 ];
 
 function AnimatedStat({ value, number, suffix = "" }) {
@@ -499,8 +499,8 @@ export default function FulfillmentHome({ lang = "en" }) {
       <section className="ff-section fh-core-advantages">
         <div className="container">
           <div className="fh-core-heading">
-            <span className="ff-kicker">WHY JW DROPSHIPPING</span>
-            <h2>One China team behind every order</h2>
+            <span className="ff-kicker">Why choose JW Dropshipping?</span>
+            <h2>Every Order Is Supported by a Integrated China Team</h2>
             <p>Source, inspect, pack and fulfill through one coordinated China-based team.</p>
           </div>
           <div className="fh-core-grid">

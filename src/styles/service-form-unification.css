@@ -1,0 +1,200 @@
+/* Keep all eight service-page forms aligned with the Home quote form. */
+.sdr-page .sdr-quote-grid {
+  grid-template-columns: minmax(300px, 0.72fr) minmax(540px, 1.28fr);
+  gap: clamp(52px, 7vw, 92px);
+  align-items: center;
+}
+
+.sdr-page .fh-home-quote-form.sdr-form {
+  width: 100%;
+  padding: 36px !important;
+  border: 1px solid rgba(23, 58, 49, 0.16) !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 26px 58px rgba(20, 64, 48, 0.13) !important;
+  transition: box-shadow 260ms ease, transform 260ms ease;
+}
+
+.sdr-page .fh-home-quote-form.sdr-form:focus-within {
+  box-shadow: 0 30px 66px rgba(20, 64, 48, 0.17) !important;
+  transform: translateY(-2px);
+}
+
+.sdr-page .fh-home-quote-form .fh-home-quote-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 18px;
+}
+
+.sdr-page .fh-home-quote-form .fh-home-quote-wide {
+  grid-column: 1 / -1;
+}
+
+.sdr-page .fh-home-quote-form label {
+  margin: 0;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.sdr-page .fh-home-quote-form .fh-home-quote-required {
+  color: #dc3f45;
+  font-weight: 850;
+}
+
+.sdr-page .fh-home-quote-form :is(input, select, textarea) {
+  width: 100%;
+  margin-top: 9px;
+  border: 1px solid rgba(31, 41, 55, 0.18);
+  border-radius: 6px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 16px;
+  box-shadow: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.sdr-page .fh-home-quote-form :is(input, select) {
+  min-height: 50px;
+}
+
+.sdr-page .fh-home-quote-form textarea {
+  min-height: 150px;
+  padding: 16px 18px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.sdr-page .fh-home-quote-form select {
+  padding: 0 44px 0 16px;
+  cursor: pointer;
+}
+
+.sdr-page .fh-home-quote-form :is(input, select, textarea):focus {
+  border-color: #18764a;
+  outline: 0;
+  background: #fbfefc;
+  box-shadow: 0 0 0 3px rgba(24, 118, 74, 0.12);
+}
+
+.sdr-page .fh-home-quote-form :is(input, textarea)::placeholder {
+  color: rgba(31, 41, 55, 0.48);
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-control {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.42fr) minmax(0, 1fr);
+  position: relative;
+  overflow: visible;
+  margin-top: 9px;
+  border: 1px solid rgba(31, 41, 55, 0.18);
+  border-radius: 6px;
+  background: #fff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-control:focus-within {
+  border-color: #18764a;
+  box-shadow: 0 0 0 3px rgba(24, 118, 74, 0.12);
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-control input {
+  min-height: 54px;
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-control input:focus {
+  background: transparent;
+  box-shadow: none;
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-country > button {
+  height: 54px !important;
+  min-height: 54px !important;
+  padding: 0 16px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(31, 41, 55, 0.18) !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  color: #1f2937 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.sdr-page .fh-home-quote-form .fh-phone-country > button:hover {
+  background: #fff !important;
+  color: #1f2937 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.sdr-page .fh-home-quote-form .contact-submit {
+  min-height: 56px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 7px;
+}
+
+.sdr-page .fh-home-quote-form .contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none !important;
+}
+
+.sdr-page .fh-home-quote-form .contact-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 13px;
+  color: #718079;
+  font-size: 12px;
+}
+
+.sdr-page .fh-home-quote-form .contact-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+@media (max-width: 1023px) {
+  .sdr-page .sdr-quote-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .sdr-page .fh-home-quote-form.sdr-form {
+    padding: 24px !important;
+  }
+
+  .sdr-page .fh-home-quote-form .fh-home-quote-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .sdr-page .fh-home-quote-form .fh-home-quote-wide {
+    grid-column: auto;
+  }
+
+  .sdr-page .fh-home-quote-form .fh-phone-control {
+    grid-template-columns: 1fr;
+  }
+
+  .sdr-page .fh-home-quote-form .fh-phone-country > button {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.18) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sdr-page .fh-home-quote-form.sdr-form,
+  .sdr-page .fh-home-quote-form :is(input, select, textarea),
+  .sdr-page .fh-home-quote-form .fh-phone-control {
+    transition: none;
+  }
+}

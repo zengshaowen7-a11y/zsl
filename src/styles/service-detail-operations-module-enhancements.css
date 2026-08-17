@@ -1,0 +1,468 @@
+/* Operational modules for sourcing, automation, warehouse and QC service pages. */
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) {
+  --ops-ink: #173a31;
+  --ops-muted: #61736b;
+  --ops-green: #18764a;
+  --ops-line: rgba(23, 58, 49, 0.16);
+  --ops-paper: rgba(255, 255, 255, 0.92);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--ops-line);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote)
+  > .container {
+  position: relative;
+  z-index: 1;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-section-heading {
+  max-width: 930px;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-section-heading > p {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-heading-split {
+  grid-template-columns: minmax(0, 1.08fr) minmax(290px, 0.72fr);
+  gap: clamp(40px, 7vw, 92px);
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--ops-line);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-section-heading h2, .sdr-heading-split h2, .sdr-proof-content h2, .sdr-case h2, .sdr-faq h2, .sdr-quote h2) {
+  max-width: 930px;
+  color: var(--ops-ink);
+  text-wrap: balance;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-fit-grid, .sdr-scope-grid, .sdr-process-grid, .sdr-planning-grid) {
+  gap: 14px;
+  border: 0;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a) {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ops-line) !important;
+  border-radius: 8px;
+  background: var(--ops-paper) !important;
+  transition: transform 230ms ease, border-color 230ms ease, box-shadow 230ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+  :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a):hover {
+  z-index: 2;
+  border-color: color-mix(in srgb, var(--ops-accent, var(--ops-green)) 58%, transparent) !important;
+  box-shadow: 0 18px 38px rgba(18, 58, 45, 0.12);
+  transform: translateY(-4px);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-fit-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-fit-grid article {
+  min-height: 184px;
+  padding: 27px;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-fit-grid small {
+  display: grid;
+  width: 36px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid var(--ops-line);
+  border-radius: 4px;
+  color: var(--ops-accent, var(--ops-green));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-fit-grid h3 {
+  margin-top: 27px;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-scope-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-scope-grid article {
+  min-height: 190px;
+  grid-template-columns: 42px 1fr;
+  padding: 27px;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-scope-grid article > span {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-scope-grid article:hover > span {
+  box-shadow: 0 10px 22px rgba(20, 64, 48, 0.14);
+  transform: translateY(-3px) rotate(-3deg);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof-grid {
+  gap: clamp(44px, 6vw, 82px);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof figure {
+  min-height: 550px;
+  border: 1px solid var(--ops-line);
+  border-radius: 8px;
+  box-shadow: 0 24px 52px rgba(20, 64, 48, 0.13);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof figure img {
+  transition: transform 720ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 320ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof figure:hover img {
+  filter: saturate(1.06);
+  transform: scale(1.025);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof-table {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(20, 64, 48, 0.08);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof-row {
+  transition: background-color 180ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof-row:not(.sdr-proof-head):hover {
+  background: var(--ops-row-hover, #eef8f2);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid {
+  position: relative;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid article {
+  z-index: 1;
+  min-height: 250px;
+  padding: 28px 22px;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid article > span {
+  display: inline-grid;
+  min-width: 48px;
+  height: 34px;
+  place-items: center;
+  padding: 0 9px;
+  border: 1px solid var(--ops-line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ops-accent, var(--ops-green));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid h3 {
+  min-height: 48px;
+  margin-top: 30px;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-planning-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-planning-grid article {
+  min-height: 200px;
+  padding: 28px;
+  box-shadow: none;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-case-grid {
+  align-items: center;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-case-board {
+  border-radius: 8px;
+  box-shadow: 0 24px 54px rgba(20, 64, 48, 0.1);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-case-board li span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ops-chip, #edf7f1);
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details {
+  border-color: var(--ops-line);
+  transition: background-color 180ms ease, padding 180ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details[open] {
+  padding-right: 18px;
+  padding-left: 18px;
+  background: #fff;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq summary span {
+  transition: transform 200ms ease;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-related-grid > a {
+  border-top: 3px solid transparent !important;
+}
+
+:is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-related-grid > a:hover {
+  border-top-color: var(--ops-accent, var(--ops-green)) !important;
+}
+
+/* Product sourcing: shortlist and supplier-comparison language. */
+.sdr-page-product-sourcing {
+  --ops-accent: #287b57;
+  --ops-secondary: #c58b36;
+  --ops-row-hover: #f7f3e9;
+  --ops-chip: #f5efe2;
+}
+
+.sdr-page-product-sourcing :is(.sdr-fit, .sdr-proof, .sdr-planning, .sdr-faq) { background: #fbf8f0; }
+.sdr-page-product-sourcing :is(.sdr-scope, .sdr-process, .sdr-case, .sdr-related) { background: #eef7f1; }
+.sdr-page-product-sourcing .sdr-fit-grid article { border-left: 5px solid var(--ops-secondary) !important; }
+.sdr-page-product-sourcing .sdr-fit-grid article:nth-child(even) { border-left-color: var(--ops-accent) !important; }
+.sdr-page-product-sourcing .sdr-scope-grid article { border-top: 4px solid var(--ops-accent) !important; }
+.sdr-page-product-sourcing .sdr-scope-grid article:nth-child(3n + 2) { border-top-color: var(--ops-secondary) !important; }
+.sdr-page-product-sourcing .sdr-scope-grid article > span { background: #e4f1e9; color: var(--ops-accent); }
+.sdr-page-product-sourcing .sdr-process-grid::before {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  left: 5%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, var(--ops-secondary), #70a27e 62%, var(--ops-accent));
+}
+.sdr-page-product-sourcing .sdr-process-grid article { border-top: 4px solid var(--ops-secondary) !important; }
+.sdr-page-product-sourcing .sdr-process-grid article:nth-child(n + 3) { border-top-color: #70a27e !important; }
+.sdr-page-product-sourcing .sdr-process-grid article:last-child { border-top-color: var(--ops-accent) !important; }
+.sdr-page-product-sourcing .sdr-process-grid article > span { box-shadow: 0 0 0 7px #f6f2e7; }
+.sdr-page-product-sourcing .sdr-planning-grid article::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 42px;
+  height: 42px;
+  border-right: 3px solid var(--ops-secondary);
+  border-bottom: 3px solid var(--ops-secondary);
+  content: "";
+}
+.sdr-page-product-sourcing .sdr-proof-head { background: #f4ecda; }
+.sdr-page-product-sourcing .sdr-case-board { border-top: 4px solid var(--ops-secondary); }
+
+/* Automatic fulfillment: a connected data pipeline with a visible exception state. */
+.sdr-page-automatic-order-fulfillment {
+  --ops-accent: #16826d;
+  --ops-secondary: #e29a3b;
+  --ops-row-hover: #e9f7f4;
+  --ops-chip: #e3f4ef;
+}
+
+.sdr-page-automatic-order-fulfillment :is(.sdr-fit, .sdr-proof, .sdr-planning, .sdr-faq) { background: #f3faf7; }
+.sdr-page-automatic-order-fulfillment :is(.sdr-scope, .sdr-process, .sdr-case, .sdr-related) { background: #e9f5f2; }
+.sdr-page-automatic-order-fulfillment .sdr-fit-grid article::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  content: "";
+  background: linear-gradient(90deg, var(--ops-accent), #66b9a7);
+}
+.sdr-page-automatic-order-fulfillment .sdr-scope-grid article { border-left: 4px solid var(--ops-accent) !important; }
+.sdr-page-automatic-order-fulfillment .sdr-scope-grid article:nth-child(3n) { border-left-color: var(--ops-secondary) !important; }
+.sdr-page-automatic-order-fulfillment .sdr-scope-grid article > span { background: #def2ed; color: var(--ops-accent); }
+.sdr-page-automatic-order-fulfillment .sdr-process { background: #123d39; }
+.sdr-page-automatic-order-fulfillment .sdr-process :is(.ff-kicker, h2) { color: #fff; }
+.sdr-page-automatic-order-fulfillment .sdr-process .sdr-section-heading > p { color: #bdd7d1; }
+.sdr-page-automatic-order-fulfillment .sdr-process-grid::before {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  left: 5%;
+  height: 3px;
+  content: "";
+  background: repeating-linear-gradient(90deg, #62d1ba 0 16px, transparent 16px 24px);
+  background-size: 48px 3px;
+  animation: order-data-flow 2.8s linear infinite;
+}
+.sdr-page-automatic-order-fulfillment .sdr-process-grid article { border-color: rgba(255, 255, 255, 0.16) !important; background: rgba(255, 255, 255, 0.96) !important; }
+.sdr-page-automatic-order-fulfillment .sdr-process-grid article:nth-child(3) { border-top: 5px solid var(--ops-secondary) !important; }
+.sdr-page-automatic-order-fulfillment .sdr-process-grid article > span { box-shadow: 0 0 0 7px #dff4ef; }
+.sdr-page-automatic-order-fulfillment .sdr-process-grid article:nth-child(3) > span { color: #a76412; box-shadow: 0 0 0 7px #fff0d9; }
+.sdr-page-automatic-order-fulfillment .sdr-planning-grid article { border-left: 5px solid var(--ops-accent) !important; }
+.sdr-page-automatic-order-fulfillment .sdr-proof-head { background: #e4f3ef; }
+.sdr-page-automatic-order-fulfillment .sdr-case-board { border-top: 4px solid var(--ops-accent); }
+
+@keyframes order-data-flow { to { background-position: 48px 0; } }
+
+/* Fulfillment center: physical warehouse zones and handoff lanes. */
+.sdr-page-china-fulfillment-center {
+  --ops-accent: #256f58;
+  --ops-secondary: #557f91;
+  --ops-row-hover: #edf5f6;
+  --ops-chip: #e6f0f2;
+}
+
+.sdr-page-china-fulfillment-center :is(.sdr-fit, .sdr-proof, .sdr-planning, .sdr-faq) { background: #f4f7f5; }
+.sdr-page-china-fulfillment-center :is(.sdr-scope, .sdr-process, .sdr-case, .sdr-related) { background: #eaf3ef; }
+.sdr-page-china-fulfillment-center .sdr-fit-grid article { border-bottom: 5px solid var(--ops-accent) !important; }
+.sdr-page-china-fulfillment-center .sdr-fit-grid article:nth-child(2),
+.sdr-page-china-fulfillment-center .sdr-fit-grid article:nth-child(3) { border-bottom-color: var(--ops-secondary) !important; }
+.sdr-page-china-fulfillment-center .sdr-scope-grid article::after {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  content: "ZONE " counter(warehouse-module, upper-alpha);
+  counter-increment: warehouse-module;
+  color: var(--ops-secondary);
+  font-size: 9px;
+  font-weight: 850;
+}
+.sdr-page-china-fulfillment-center .sdr-scope-grid { counter-reset: warehouse-module; }
+.sdr-page-china-fulfillment-center .sdr-scope-grid article > span { background: #e1eef0; color: var(--ops-secondary); }
+.sdr-page-china-fulfillment-center .sdr-process-grid::before {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  left: 5%;
+  height: 4px;
+  content: "";
+  background: linear-gradient(90deg, var(--ops-accent) 0 49%, #fff 49% 51%, var(--ops-secondary) 51% 100%);
+}
+.sdr-page-china-fulfillment-center .sdr-process-grid article { border-top: 5px solid var(--ops-accent) !important; }
+.sdr-page-china-fulfillment-center .sdr-process-grid article:nth-child(even) { margin-top: 22px; border-top-color: var(--ops-secondary) !important; }
+.sdr-page-china-fulfillment-center .sdr-process-grid article > span { box-shadow: 0 0 0 7px #e8f2ee; }
+.sdr-page-china-fulfillment-center .sdr-planning-grid article { border-left: 6px solid var(--ops-secondary) !important; }
+.sdr-page-china-fulfillment-center .sdr-planning-grid article:nth-child(even) { border-left-color: var(--ops-accent) !important; }
+.sdr-page-china-fulfillment-center .sdr-proof-head { background: #e5eff1; }
+.sdr-page-china-fulfillment-center .sdr-case-board { border-top: 4px solid var(--ops-secondary); }
+
+/* Quality control: inspection checkpoints and release records. */
+.sdr-page-quality-control-inspection {
+  --ops-accent: #247c9b;
+  --ops-secondary: #1b8058;
+  --ops-row-hover: #edf7fa;
+  --ops-chip: #e3f1f6;
+}
+
+.sdr-page-quality-control-inspection :is(.sdr-fit, .sdr-proof, .sdr-planning, .sdr-faq) { background: #f3f9fa; }
+.sdr-page-quality-control-inspection :is(.sdr-scope, .sdr-process, .sdr-case, .sdr-related) { background: #eaf5f3; }
+.sdr-page-quality-control-inspection .sdr-fit-grid article::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--ops-secondary);
+  content: "✓";
+  color: var(--ops-secondary);
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+.sdr-page-quality-control-inspection .sdr-scope-grid article { border-top: 4px solid var(--ops-accent) !important; }
+.sdr-page-quality-control-inspection .sdr-scope-grid article:nth-child(even) { border-top-color: var(--ops-secondary) !important; }
+.sdr-page-quality-control-inspection .sdr-scope-grid article > span { background: #dff0f5; color: var(--ops-accent); }
+.sdr-page-quality-control-inspection .sdr-process-grid::before {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+  left: 5%;
+  height: 2px;
+  content: "";
+  background: var(--ops-accent);
+}
+.sdr-page-quality-control-inspection .sdr-process-grid article { border-top: 4px solid var(--ops-accent) !important; }
+.sdr-page-quality-control-inspection .sdr-process-grid article:last-child { border-top-color: var(--ops-secondary) !important; }
+.sdr-page-quality-control-inspection .sdr-process-grid article > span { box-shadow: 0 0 0 7px #e4f2f6; }
+.sdr-page-quality-control-inspection .sdr-process-grid article:last-child > span { color: var(--ops-secondary); box-shadow: 0 0 0 7px #e3f3ea; }
+.sdr-page-quality-control-inspection .sdr-planning-grid article { border-right: 5px solid var(--ops-accent) !important; }
+.sdr-page-quality-control-inspection .sdr-planning-grid article:nth-child(even) { border-right-color: var(--ops-secondary) !important; }
+.sdr-page-quality-control-inspection .sdr-proof-head { background: #e1f0f5; }
+.sdr-page-quality-control-inspection .sdr-case-board { border-top: 4px solid var(--ops-accent); }
+
+@media (max-width: 1023px) {
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-heading-split {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid::before {
+    display: none;
+  }
+
+  .sdr-page-china-fulfillment-center .sdr-process-grid article:nth-child(even) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-section-heading {
+    text-align: left;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+    :is(.sdr-fit-grid, .sdr-scope-grid, .sdr-process-grid, .sdr-planning-grid) {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+    :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article) {
+    min-height: 0;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid {
+    border-left: 0;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid article {
+    padding: 24px 20px;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-process-grid h3 {
+    min-height: 0;
+    margin-top: 20px;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-proof figure {
+    min-height: 360px;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details[open] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sdr-page-automatic-order-fulfillment .sdr-process-grid::before {
+    animation: none;
+  }
+
+  :is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection)
+    :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a, .sdr-proof figure img) {
+    transition: none;
+  }
+}

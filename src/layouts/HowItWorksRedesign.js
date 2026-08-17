@@ -12,7 +12,28 @@ import {
   FiTruck,
 } from "react-icons/fi";
 
-const startingDetails = ["Product or supplier link", "Main destination markets", "Expected order volume", "Branding or QC requirements"];
+const startingDetails = [
+  {
+    title: "Product or supplier link",
+    copy: "A product URL, supplier page or reference image is enough to start the first review.",
+    Icon: FiSearch,
+  },
+  {
+    title: "Main destination markets",
+    copy: "Tell us where customers are located so shipping routes and limits can be checked early.",
+    Icon: FiSend,
+  },
+  {
+    title: "Expected order volume",
+    copy: "A rough daily range helps us recommend the right warehouse and fulfillment setup.",
+    Icon: FiClipboard,
+  },
+  {
+    title: "Branding or QC requirements",
+    copy: "Share packaging, label or inspection details that should be protected before dispatch.",
+    Icon: FiShield,
+  },
+];
 
 const stages = [
   {
@@ -77,27 +98,36 @@ export default function HowItWorksRedesign() {
       <section className="hiw-hero">
         <div className="hiw-hero-copy">
           <p className="hiw-kicker">HOW JW DROPSHIPPING WORKS</p>
-          <h1>From one product link to tracked delivery.</h1>
-          <p>Five visible stages connect sourcing, approval, fulfillment and shipping, with a clear owner and output at every handoff.</p>
+          <h1>From product link to tracked delivery</h1>
+          <p>One China-based workflow for sourcing, approval, fulfillment and shipment updates.</p>
           <div className="hiw-actions">
             <Link href="/contact" className="hiw-button hiw-button-primary">Start with a Product Link <FiArrowRight /></Link>
             <a href="#five-stages" className="hiw-button hiw-button-ghost">See the Five Stages</a>
           </div>
           <ul><li><FiCheck /> Clear approval points</li><li><FiCheck /> One dedicated contact</li><li><FiCheck /> Tracking returned</li></ul>
         </div>
-        <div className="hiw-hero-media"><Image src="/images/generated/jw-branded-packing-v3.png" alt="JW fulfillment team preparing customer orders" fill priority sizes="(max-width: 767px) 100vw, 52vw" /></div>
+        <div className="hiw-hero-media">
+          <Image src="/images/generated/jw-branded-packing-v3.png" alt="JW fulfillment team preparing customer orders" fill priority sizes="(max-width: 767px) 100vw, 52vw" />
+          <div className="hiw-hero-board" aria-hidden="true">
+            <span><b>01</b> Product link</span>
+            <span><b>02</b> Quote</span>
+            <span><b>03</b> QC</span>
+            <span><b>04</b> Fulfill</span>
+            <span><b>05</b> Tracking</span>
+          </div>
+        </div>
       </section>
 
       <section className="hiw-start">
         <div className="hiw-container hiw-start-grid">
-          <div><p className="hiw-kicker">WHAT TO SEND FIRST</p><h2>You do not need a complete specification to begin.</h2></div>
-          <ul>{startingDetails.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ul>
+          <div><p className="hiw-kicker">WHAT TO SEND FIRST</p><h2>Start before every detail is ready.</h2><p>Send the basics first. JW can review the missing details during the next step.</p></div>
+          <ul>{startingDetails.map(({ title, copy, Icon }, index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><Icon /><strong>{title}</strong><p>{copy}</p></li>)}</ul>
         </div>
       </section>
 
       <section className="hiw-stages" id="five-stages">
         <div className="hiw-container">
-          <header className="hiw-heading"><div><p className="hiw-kicker">THE COMPLETE ORDER JOURNEY</p><h2>Know what happens, who acts and what comes next.</h2></div><p>The workflow is fixed enough to stay clear and flexible enough to match your product and current stage.</p></header>
+          <header className="hiw-heading"><div><p className="hiw-kicker">THE COMPLETE ORDER JOURNEY</p><h2>Know each step before the order moves.</h2></div><p>The workflow stays flexible while every owner, approval and handoff remains clear.</p></header>
           <div className="hiw-stage-list">
             {stages.map(({ number, title, kicker, Icon, image, intro, provide, handle, receive }) => (
               <article className="hiw-stage" key={number}>
@@ -115,14 +145,14 @@ export default function HowItWorksRedesign() {
 
       <section className="hiw-approval">
         <div className="hiw-container hiw-approval-grid">
-          <div><p className="hiw-kicker">APPROVAL BEFORE VOLUME</p><h2>Three checkpoints protect the next stage.</h2><p>Important questions are resolved before they become repeat production, inventory or customer-service problems.</p></div>
+          <div><p className="hiw-kicker">APPROVAL BEFORE VOLUME</p><h2>Three checkpoints protect each handoff.</h2><p>Important questions are resolved before they become repeat production, inventory or service problems.</p><div className="hiw-approval-proof" aria-hidden="true"><span><strong>3</strong> approval gates</span><span><strong>0</strong> unclear handoffs</span><span><strong>1</strong> shared decision record</span></div></div>
           <ol>{checkpoints.map(([title, copy], index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{copy}</p></div><FiCheckCircle /></li>)}</ol>
         </div>
       </section>
 
       <section className="hiw-tracks">
         <div className="hiw-container">
-          <header className="hiw-heading"><div><p className="hiw-kicker">START AT YOUR CURRENT STAGE</p><h2>The process adapts without becoming unclear.</h2></div><p>You can enter with a product idea, an existing supplier or inventory already ready to ship.</p></header>
+          <header className="hiw-heading"><div><p className="hiw-kicker">START AT YOUR CURRENT STAGE</p><h2>Use the workflow from where you are.</h2></div><p>Start with a product idea, an existing supplier or inventory already ready to ship.</p></header>
           <div className="hiw-track-grid">
             <article><FiSearch /><p className="hiw-kicker">TESTING A PRODUCT</p><h3>Begin with sourcing and samples.</h3><p>Use stages 01–03 to compare suppliers and approve the product before deciding how much stock or fulfillment support you need.</p><Link href="/services/product-sourcing">Explore Product Sourcing <FiArrowRight /></Link></article>
             <article><FiClipboard /><p className="hiw-kicker">EXISTING SUPPLIER</p><h3>Begin with receiving and QC.</h3><p>Your current factory can send goods to JW for inspection, storage, branded packing and order-level fulfillment.</p><Link href="/services/quality-control-inspection">Explore Quality Control <FiArrowRight /></Link></article>
@@ -133,8 +163,27 @@ export default function HowItWorksRedesign() {
 
       <section className="hiw-exceptions">
         <div className="hiw-container hiw-exception-grid">
-          <div className="hiw-exception-media"><Image src="/images/generated/jw-qc-inspection-v3.png" alt="Product issue being checked before approval" fill sizes="(max-width: 850px) 100vw, 48vw" /></div>
-          <div><p className="hiw-kicker">WHEN SOMETHING DOES NOT MATCH</p><h2>Exceptions pause with context, not confusion.</h2><p>Quality issues, missing stock, unmapped SKUs or unusual customer requests are separated from normal orders before they create a fulfillment mistake.</p><ul><li><FiShield /> Affected goods or orders are identified</li><li><FiClipboard /> Evidence and the decision required are shared</li><li><FiCheckCircle /> Work continues after approval or correction</li></ul></div>
+          <div className="hiw-exception-media">
+            <Image src="/images/generated/jw-qc-inspection-v3.png" alt="Product issue being checked before approval" fill sizes="(max-width: 850px) 100vw, 48vw" />
+            <div className="hiw-exception-status" aria-hidden="true">
+              <span>Exception review</span>
+              <strong>Waiting for decision</strong>
+            </div>
+          </div>
+          <div className="hiw-exception-copy">
+            <p className="hiw-kicker">WHEN SOMETHING DOES NOT MATCH</p>
+            <h2>Exceptions Pause with Context, Not Confusion.</h2>
+            <p>Quality issues, missing stock, unmapped SKUs or unusual requests are separated before they create a fulfillment mistake.</p>
+            <div className="hiw-exception-flow">
+              <article><FiShield /><span>01</span><strong>Identify</strong><p>Affected goods or orders are separated from normal dispatch.</p></article>
+              <article><FiClipboard /><span>02</span><strong>Document</strong><p>Photos, SKU details and the decision needed are shared clearly.</p></article>
+              <article><FiCheckCircle /><span>03</span><strong>Resume</strong><p>Work continues after approval, correction or replacement.</p></article>
+            </div>
+            <div className="hiw-exception-note">
+              <span>Decision queue</span>
+              <strong>QC photo review · stock variance · packaging approval</strong>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -145,7 +194,21 @@ export default function HowItWorksRedesign() {
         </div>
       </section>
 
-      <section className="hiw-final"><div className="hiw-container"><div><p className="hiw-kicker">YOUR FIRST STEP</p><h2>Start with one product link.</h2><p>Tell us where you sell, expected volume and what needs to improve. We will recommend the next practical stage.</p></div><Link href="/contact" className="hiw-button hiw-button-light">Get a Free Quote <FiArrowRight /></Link></div></section>
+      <section className="hiw-final">
+        <div className="hiw-container">
+          <div className="hiw-final-copy">
+            <p className="hiw-kicker">YOUR FIRST STEP</p>
+            <h2>Start with one product link.</h2>
+            <p>Tell us where you sell, expected volume and what needs to improve. We will recommend the next practical stage.</p>
+          </div>
+          <div className="hiw-final-guide" aria-hidden="true">
+            <span>Product link</span>
+            <i />
+            <span>Free quote</span>
+          </div>
+          <Link href="/contact" className="hiw-button hiw-button-light">Get a Free Quote <FiArrowRight /></Link>
+        </div>
+      </section>
     </main>
   );
 }

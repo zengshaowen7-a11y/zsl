@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
   FiArrowRight,
-  FiCheck,
   FiChevronDown,
   FiGlobe,
   FiMenu,
@@ -22,10 +21,8 @@ export default function Header() {
   const { nav } = getFulfillmentCopy(isZh ? "zh" : "en");
   const [navOpen, setNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [languageOpen, setLanguageOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [navTheme, setNavTheme] = useState("dark");
-  const languageRef = useRef(null);
   const servicesRef = useRef(null);
 
   const homeHref = isZh ? "/zh" : "/";
@@ -36,8 +33,6 @@ export default function Header() {
   const contactHref = `${langPrefix}/contact`;
   const quoteHref = contactHref;
   const comparablePathname = isZh ? pathname.replace(/^\/zh(?=\/|$)/, "") || "/" : pathname;
-  const englishHref = comparablePathname;
-  const chineseHref = comparablePathname === "/" ? "/zh" : `/zh${comparablePathname}`;
   const hasOverlayHeader = ["/", "/services", "/about-us", "/testimonials", "/contact"].includes(comparablePathname);
 
   useEffect(() => {
@@ -60,7 +55,6 @@ export default function Header() {
     };
 
     const closeHeaderMenus = (event) => {
-      if (!languageRef.current?.contains(event.target)) setLanguageOpen(false);
       if (!servicesRef.current?.contains(event.target)) setServicesOpen(false);
     };
 
@@ -87,10 +81,15 @@ export default function Header() {
   };
 
   const handleServicesTriggerClick = () => {
-    if (comparablePathname === "/services") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
     setServicesOpen((open) => !open);
+  };
+
+  const handleServicesMouseEnter = () => {
+    if (window.matchMedia("(min-width: 768px)").matches) setServicesOpen(true);
+  };
+
+  const handleServicesMouseLeave = () => {
+    if (window.matchMedia("(min-width: 768px)").matches) setServicesOpen(false);
   };
 
   return (
@@ -118,26 +117,32 @@ export default function Header() {
             <li
               className="nav-item nav-dropdown relative"
               ref={servicesRef}
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
+              onMouseEnter={handleServicesMouseEnter}
+              onMouseLeave={handleServicesMouseLeave}
               onBlur={(event) => {
                 if (!event.currentTarget.contains(event.relatedTarget)) setServicesOpen(false);
               }}
             >
-              <button
-                className={`nav-link nav-services-trigger inline-flex items-center gap-1 ${comparablePathname.startsWith("/services") ? "nav-link-active" : ""}`}
-                type="button"
-                aria-haspopup="menu"
-                aria-expanded={servicesOpen}
-                onClick={handleServicesTriggerClick}
-              >
-                {nav.services}
-                <FiChevronDown className={servicesOpen ? "is-open" : ""} aria-hidden="true" />
-              </button>
-              <div className={`service-mega-menu ${servicesOpen ? "is-open" : ""}`} role="menu">
-                <Link className="service-menu-overview" href={servicesHref} onClick={handleNavLinkClick(servicesHref)} role="menuitem">
-                  <strong>{isZh ? "服务总览" : "Our Services Overview"}</strong><FiArrowRight />
+              <div className="nav-services-control">
+                <Link
+                  className={`nav-link nav-services-link ${comparablePathname.startsWith("/services") ? "nav-link-active" : ""}`}
+                  href={servicesHref}
+                  onClick={handleNavLinkClick(servicesHref)}
+                >
+                  {nav.services}
                 </Link>
+                <button
+                  className="nav-services-trigger"
+                  type="button"
+                  aria-label={isZh ? "展开服务菜单" : "Toggle services menu"}
+                  aria-haspopup="menu"
+                  aria-expanded={servicesOpen}
+                  onClick={handleServicesTriggerClick}
+                >
+                  <FiChevronDown className={servicesOpen ? "is-open" : ""} aria-hidden="true" />
+                </button>
+              </div>
+              <div className={`service-mega-menu ${servicesOpen ? "is-open" : ""}`} role="menu">
                 <ul className="service-menu-grid">
                 {servicePages.map((service, index) => (
                   <li className="nav-dropdown-item" key={service.slug}>
@@ -166,7 +171,7 @@ export default function Header() {
                 href={whyUsHref}
                 onClick={handleNavLinkClick(whyUsHref)}
               >
-                {isZh ? "为什么选择我们" : "Why JW"}
+                {isZh ? "为什么选择我们" : "Why JW Dropshipping"}
               </Link>
             </li>
             <li className="nav-item">
@@ -195,30 +200,11 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className="language-dropdown order-1 md:order-2" ref={languageRef}>
-          <button
-            className="language-trigger"
-            type="button"
-            aria-haspopup="listbox"
-            aria-expanded={languageOpen}
-            onClick={() => setLanguageOpen((open) => !open)}
-          >
+        <div className="language-dropdown order-1 md:order-2">
+          <span className="language-trigger language-static" aria-label="English site">
             <FiGlobe aria-hidden="true" />
-            <span>{isZh ? "中文" : "EN"}</span>
-            <FiChevronDown className={languageOpen ? "is-open" : ""} aria-hidden="true" />
-          </button>
-          {languageOpen && (
-            <div className="language-menu" role="listbox" aria-label="Choose language">
-              <Link className={`language-option ${!isZh ? "is-selected" : ""}`} href={englishHref} role="option" aria-selected={!isZh} onClick={() => setLanguageOpen(false)}>
-                <span><strong>English</strong><small>International site</small></span>
-                {!isZh && <FiCheck aria-hidden="true" />}
-              </Link>
-              <Link className={`language-option ${isZh ? "is-selected" : ""}`} href={chineseHref} role="option" aria-selected={isZh} onClick={() => setLanguageOpen(false)}>
-                <span><strong>中文</strong><small>中文网站</small></span>
-                {isZh && <FiCheck aria-hidden="true" />}
-              </Link>
-            </div>
-          )}
+            <span>EN</span>
+          </span>
         </div>
 
         <div className="order-1 ml-auto hidden items-center justify-end md:order-2 md:ml-0 md:flex">

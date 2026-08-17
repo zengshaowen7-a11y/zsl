@@ -29,7 +29,7 @@ export const detailPages = {
     cta: "Start with one product link and a clear next step.",
   },
   whyUs: {
-    eyebrow: "WHY JW DROPSHIPPING", title: "One team behind ", highlight: "every order.",
+    eyebrow: "Why choose JW Dropshipping?", title: "One team behind ", highlight: "every order.",
     intro: "We connect China sourcing, quality control, inventory, branded packing and worldwide delivery in one accountable operating flow.",
     secondary: { label: "See how we work", href: "/how-it-works" },
     card: { label: "OUR DIFFERENCE", value: "Operations first", text: "The work is organized around the physical product and customer promise.", points: ["One operating contact", "Visible QC evidence", "Flexible service scope"] },

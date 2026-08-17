@@ -16,7 +16,7 @@ export default function Footer() {
             <p>{footer.lead}</p>
             <div>
               <span><FiGlobe />Global fulfillment</span>
-              <span><FiMessageCircle />Human support</span>
+              <span><FiMessageCircle />Operations Team Support</span>
             </div>
           </div>
           <div>

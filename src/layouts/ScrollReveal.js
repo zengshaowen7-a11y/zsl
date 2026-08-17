@@ -19,6 +19,90 @@ export default function ScrollReveal() {
         "reveal-scale",
       ],
       [
+        ":is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a)",
+        "reveal-scale",
+      ],
+      [
+        ":is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) :is(.sdr-proof figure, .sdr-case-grid > div:first-child, .sdr-quote-grid > div:first-child)",
+        "reveal-left",
+      ],
+      [
+        ":is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) :is(.sdr-proof-content, .sdr-case-board, .sdr-form)",
+        "reveal-right",
+      ],
+      [
+        ":is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services) .sdr-faq details",
+        "reveal-up",
+      ],
+      [
+        ":is(.sdr-page-pod-fulfillment, .sdr-page-private-label) :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a)",
+        "reveal-scale",
+      ],
+      [
+        ":is(.sdr-page-pod-fulfillment, .sdr-page-private-label) :is(.sdr-proof figure, .sdr-case-grid > div:first-child, .sdr-quote-grid > div:first-child)",
+        "reveal-left",
+      ],
+      [
+        ":is(.sdr-page-pod-fulfillment, .sdr-page-private-label) :is(.sdr-proof-content, .sdr-case-board, .sdr-form)",
+        "reveal-right",
+      ],
+      [
+        ":is(.sdr-page-pod-fulfillment, .sdr-page-private-label) .sdr-faq details",
+        "reveal-up",
+      ],
+      [
+        ":is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) :is(.sdr-fit-grid article, .sdr-scope-grid article, .sdr-process-grid article, .sdr-planning-grid article, .sdr-related-grid > a)",
+        "reveal-scale",
+      ],
+      [
+        ":is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) :is(.sdr-proof figure, .sdr-case-grid > div:first-child, .sdr-quote-grid > div:first-child)",
+        "reveal-left",
+      ],
+      [
+        ":is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) :is(.sdr-proof-content, .sdr-case-board, .sdr-form)",
+        "reveal-right",
+      ],
+      [
+        ":is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details",
+        "reveal-up",
+      ],
+      [
+        ".wjw-page :is(.wjw-compare-list > div, .wjw-principle-grid article, .wjw-fit-grid > div, .wjw-accordion details, .wjw-facts .wjw-container > div)",
+        "reveal-scale",
+      ],
+      [
+        ".wjw-page :is(.wjw-evidence-media, .wjw-support-grid > div:first-child, .wjw-final .wjw-container > div)",
+        "reveal-left",
+      ],
+      [
+        ".wjw-page :is(.wjw-evidence-copy, .wjw-support-media, .wjw-final .wjw-button)",
+        "reveal-right",
+      ],
+      [
+        ".tst-page :is(.tst-featured-grid .tst-review, .tst-review-grid .tst-review, .tst-video-grid article, .tst-facts .tst-container > div)",
+        "reveal-scale",
+      ],
+      [
+        ".tst-page :is(.tst-theme-grid > div, .tst-final .tst-container > div)",
+        "reveal-left",
+      ],
+      [
+        ".tst-page :is(.tst-theme-grid li, .tst-proof-link, .tst-final .tst-button)",
+        "reveal-right",
+      ],
+      [
+        ".ctw-page :is(.ctw-intro-copy, .ctw-prepare .ctw-container > div, .ctw-faq-grid > div:first-child, .ctw-direct .ctw-container > svg, .ctw-direct .ctw-container > div)",
+        "reveal-left",
+      ],
+      [
+        ".ctw-page :is(.ctw-form-side, .ctw-prepare li, .ctw-faq-grid > div:last-child, .ctw-direct a)",
+        "reveal-right",
+      ],
+      [
+        ".ctw-page :is(.ctw-next-grid article, .ctw-accordion details)",
+        "reveal-scale",
+      ],
+      [
         ".smt-step, .detail-list > div, .detail-guide-panel > div, .ff-process-list article, .ff-scope-list article, .ff-expectation-list article, .fh-evidence-list article, .about-facility-grid .about-media-card",
         "reveal-right",
       ],

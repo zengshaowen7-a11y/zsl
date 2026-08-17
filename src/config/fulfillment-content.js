@@ -134,7 +134,7 @@ export const fulfillmentCopy = {
       cta: "Talk to the team that will handle your orders.",
     },
     footer: {
-      lead: "China sourcing, quality control and global fulfillment for independent eCommerce brands.",
+      lead: "China sourcing, quality control and global fulfillment for independent E-Commerce.",
       services: "Services", company: "Company", contact: "Get Started", rights: "© 2026 JW Dropshipping. All rights reserved.",
     },
     thanks: { title: "Thank you — we received your request.", text: "Our team will review your product and store details and contact you with the next step.", button: "Back to home" },

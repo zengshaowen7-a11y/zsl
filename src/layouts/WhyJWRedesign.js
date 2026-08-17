@@ -54,16 +54,16 @@ export default function WhyJWRedesign() {
     <main className="wjw-page">
       <section className="wjw-hero">
         <div className="wjw-hero-copy">
-          <p className="wjw-kicker">WHY JW DROPSHIPPING</p>
-          <h1>One accountable China team behind every order.</h1>
+          <p className="wjw-kicker">Why choose JW Dropshipping?</p>
+          <h1>We assign one dedicated China team to your order — fully accountable for quality, timelines, and communication at every stage.</h1>
           <p>JW connects sourcing, quality control, inventory, branded packing and delivery so your team manages fewer handoffs and makes better-informed decisions.</p>
           <div className="wjw-actions"><Link href="/contact" className="wjw-button wjw-button-primary">Talk to the Team <FiArrowRight /></Link><a href="#jw-difference" className="wjw-button wjw-button-ghost">See the Difference</a></div>
-          <ul><li><FiCheck /> Human account support</li><li><FiCheck /> Agreed QC checkpoints</li><li><FiCheck /> Clear order handoff</li></ul>
+          <ul><li><FiCheck /> Live Account Support</li><li><FiCheck /> Agreed QC checkpoints</li><li><FiCheck /> Clear order handoff</li></ul>
         </div>
         <div className="wjw-hero-media"><Image src="/images/generated/jw-account-support-v3.png" alt="JW account and fulfillment team reviewing an order" fill priority sizes="(max-width: 767px) 100vw, 52vw" /></div>
       </section>
 
-      <section className="wjw-facts"><div className="wjw-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>1-on-1</strong><span>Account Support</span></div></div></section>
+      <section className="wjw-facts"><div className="wjw-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>One-on-One</strong><span>Expert Support</span></div></div></section>
 
       <section className="wjw-compare" id="jw-difference">
         <div className="wjw-container">
@@ -83,8 +83,27 @@ export default function WhyJWRedesign() {
       <section className="wjw-evidence">
         <div className="wjw-container wjw-evidence-grid">
           <div className="wjw-evidence-media"><Image src="/images/generated/jw-qc-inspection-v3.png" alt="JW team recording product inspection results" fill sizes="(max-width: 850px) 100vw, 50vw" /></div>
-          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Quality decisions should have something behind them.</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
-            <div className="wjw-report"><div><span>QC REVIEW</span><strong>SKU: JW-1024</strong></div><dl><div><dt>Checked</dt><dd>50 units</dd></div><div><dt>Passed</dt><dd>48</dd></div><div><dt>Issues</dt><dd>2</dd></div><div><dt>Status</dt><dd>Waiting for approval</dd></div></dl></div>
+          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Quality decisions should have clear rationale</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
+            <div className="wjw-report">
+              <div><span>QC REVIEW</span><strong>SKU: JW-1024</strong></div>
+              <dl>
+                <div><dt>Checked</dt><dd>50 units</dd></div>
+                <div><dt>Sampling</dt><dd>100%</dd></div>
+                <div><dt>Passed</dt><dd>50</dd></div>
+                <div><dt>Issues</dt><dd>0</dd></div>
+                <div><dt>Packaging</dt><dd>Verified</dd></div>
+                <div><dt>Barcode</dt><dd>Matched</dd></div>
+                <div className="wjw-report-status"><dt>Status</dt><dd>Approved for dispatch</dd></div>
+              </dl>
+              <ul className="wjw-report-checks">
+                <li><FiCheck /> Variant match</li>
+                <li><FiCheck /> Quantity count</li>
+                <li><FiCheck /> Finish check</li>
+                <li><FiCheck /> Carton label</li>
+              </ul>
+              <div className="wjw-report-progress"><span></span></div>
+              <p><strong>50 passed</strong><span>0 issues</span></p>
+            </div>
             <Link href="/services/quality-control-inspection" className="wjw-text-link">Explore Quality Control <FiArrowRight /></Link>
           </div>
         </div>
@@ -92,7 +111,7 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-support">
         <div className="wjw-container wjw-support-grid">
-          <div><p className="wjw-kicker">HUMAN ACCOUNT SUPPORT</p><h2>Keep the context when an order crosses teams.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
+          <div><p className="wjw-kicker">LIVE ACCOUNT SUPPORT</p><h2>All order information is fully synchronized and seamlessly transferred across all team handovers.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
           <div className="wjw-support-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt="JW warehouse and account support team" fill sizes="(max-width: 850px) 100vw, 48vw" /></div>
         </div>
       </section>

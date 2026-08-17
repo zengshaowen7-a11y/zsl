@@ -71,7 +71,7 @@ export const serviceConversionContent = {
   "pod-fulfillment": {
     form: {
       eyebrow: "POD PRODUCT REVIEW",
-      title: "Review your print-on-demand product",
+      title: "Review Your Custom Product Order",
       lead: "Share the base product, artwork readiness and expected order pattern so we can assess sampling, production and fulfillment feasibility.",
       fields: [
         select("pod_product", "Product type", ["Apparel", "Accessories", "Home and lifestyle", "Paper goods", "Other product"]),
@@ -104,7 +104,7 @@ export const serviceConversionContent = {
     },
     caseStudy: {
       eyebrow: "REPRESENTATIVE PRIVATE-LABEL CASE",
-      title: "Build the brand in stages instead of committing to every custom element at once.",
+      title: "Build the brand in stages around cash flow and customer impact.",
       profile: "Growing personal-care accessories brand preparing its first branded inventory",
       challenge: "The brand wanted a stronger unboxing experience but needed to balance custom-material minimums, storage space and launch timing.",
       plan: ["Rank packaging elements by customer impact", "Approve labels and inserts before larger packaging commitments", "Connect stored brand materials to the daily packing rule"],
@@ -170,7 +170,7 @@ export const serviceConversionContent = {
     },
     caseStudy: {
       eyebrow: "REPRESENTATIVE FULFILLMENT-CENTER CASE",
-      title: "Create one controlled handoff between factory batches and global customer orders.",
+      title: "Connect factory batches to global customer orders.",
       profile: "Brand consolidating products and packaging from several suppliers",
       challenge: "Products, inserts and packaging arrived on different schedules but had to become one complete, customer-ready parcel.",
       plan: ["Schedule and identify every inbound delivery", "Route goods through receiving, QC and assigned storage", "Combine products and brand materials during order preparation"],

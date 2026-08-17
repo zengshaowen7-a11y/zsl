@@ -107,8 +107,8 @@ const countries = [
   { iso: "vn", name: "Vietnam", code: "+84" },
 ];
 
-export default function PhoneCountryInput({ placeholder = "WhatsApp or phone number" }) {
-  const [selected, setSelected] = useState(countries[0]);
+export default function PhoneCountryInput({ placeholder = "WhatsApp or phone number", initialIso = "af" }) {
+  const [selected, setSelected] = useState(() => countries.find((country) => country.iso === initialIso) || null);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const rootRef = useRef(null);
@@ -124,13 +124,15 @@ export default function PhoneCountryInput({ placeholder = "WhatsApp or phone num
 
   return (
     <div className="fh-phone-control" ref={rootRef}>
-      <input type="hidden" name="phone-country" value={selected.code} />
-      <input type="hidden" name="phone-country-name" value={selected.name} />
+      <input type="hidden" name="phone-country" value={selected?.code || ""} />
+      <input type="hidden" name="phone-country-name" value={selected?.name || ""} />
       <div className="fh-phone-country">
-        <button type="button" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
-          <img src={`https://flagcdn.com/w40/${selected.iso}.png`} alt="" loading="lazy" />
-          <span>{selected.name}</span>
-          <strong>{selected.code}</strong>
+        <button type="button" aria-expanded={open} aria-required="true" onClick={() => setOpen((value) => !value)}>
+          {selected ? <>
+            <img src={`https://flagcdn.com/w40/${selected.iso}.png`} alt="" loading="lazy" />
+            <span>{selected.name}</span>
+            <strong>{selected.code}</strong>
+          </> : <span>Select code</span>}
         </button>
         {open && (
           <div className="fh-phone-menu">
@@ -138,7 +140,7 @@ export default function PhoneCountryInput({ placeholder = "WhatsApp or phone num
             <div>
               {filtered.map((country) => (
                 <button
-                  className={country.iso === selected.iso ? "is-selected" : ""}
+                  className={country.iso === selected?.iso ? "is-selected" : ""}
                   key={`${country.iso}-${country.code}`}
                   type="button"
                   onClick={() => {

@@ -1,0 +1,227 @@
+/* Shared responsive page-title scale across the site. */
+body main[class][class][class] h1 {
+  max-width: 100% !important;
+  font-size: 44px !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+body main[class][class][class] h1 span {
+  max-width: 100% !important;
+  white-space: normal !important;
+}
+
+body main[class][class][class] section h2 {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+@media (max-width: 1023px) {
+  body main[class][class][class] h1,
+  body main[class][class][class] section h2 {
+    font-size: 40px !important;
+    line-height: 1.08 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main[class][class][class] h1,
+  body main[class][class][class] section h2 {
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body main[class][class][class] h1,
+  body main[class][class][class] section h2 {
+    font-size: 30px !important;
+    line-height: 1.08 !important;
+  }
+}
+
+/* The home hero is authored as two deliberate lines. Scale it to its column. */
+.fh-home .ff-hero-copy-wrap {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-hero-title {
+  font-size: clamp(18px, 6.4cqw, 46px) !important;
+  line-height: 1.08 !important;
+}
+
+body main.fh-home[class][class] .fh-hero-title > span {
+  white-space: nowrap !important;
+}
+
+/* Match the eight home-module H2 titles to the responsive hero-title scale. */
+body main.fh-home[class][class] section h2 {
+  font-size: clamp(39px, 2.45vw, 46px) !important;
+  line-height: 1.08 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body main.fh-home[class][class] section h2 {
+    font-size: clamp(40px, 5vw, 44.9px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.fh-home[class][class] section h2 {
+    font-size: clamp(18px, 5vw, 34px) !important;
+  }
+}
+
+/* How It Works: one H1 and seven module H2 titles share the approved scale. */
+body main.hiw-page[class][class] :is(h1, section h2) {
+  max-width: 100% !important;
+  font-size: clamp(39px, 2.4375vw, 46px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  white-space: normal !important;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body main.hiw-page[class][class] :is(h1, section h2) {
+    font-size: clamp(40px, 4.9889vw, 44.9px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page[class][class] :is(h1, section h2) {
+    font-size: clamp(18px, 5vw, 34px) !important;
+  }
+}
+
+/* Services, Why JW, Testimonials and Contact share the same title scale. */
+body main:is(.sov-page, .sdr-page, .wjw-page, .tst-page, .ctw-page)[class][class]
+  :is(h1, section h2) {
+  max-width: 100% !important;
+  font-size: clamp(39px, 2.4375vw, 46px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  white-space: normal !important;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  body main:is(.sov-page, .sdr-page, .wjw-page, .tst-page, .ctw-page)[class][class]
+    :is(h1, section h2) {
+    font-size: clamp(40px, 4.9889vw, 44.9px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main:is(.sov-page, .sdr-page, .wjw-page, .tst-page, .ctw-page)[class][class]
+    :is(h1, section h2) {
+    font-size: clamp(18px, 5vw, 34px) !important;
+  }
+}
+
+/* Give long service and support titles enough room to remain fully visible. */
+@media (min-width: 1200px) {
+  .sdr-page .sdr-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sdr-page :is(.sdr-heading-split, .sdr-case-grid, .sdr-faq-grid, .sdr-quote-grid) {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+    gap: 52px;
+  }
+
+  .sdr-page .sdr-proof-grid {
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
+    gap: 52px;
+  }
+
+  .sdr-page .sdr-case-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sdr-page .sdr-section-heading {
+    max-width: 1040px;
+  }
+
+  .sdr-page .sdr-hero-copy {
+    padding-left: max(36px, calc((100vw - 1400px) / 2)) !important;
+    padding-right: 36px !important;
+  }
+
+  .sdr-page .sdr-hero-image {
+    min-height: 520px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sov-page :is(
+    .sov-hero,
+    .sov-heading,
+    .sov-proof-grid,
+    .sov-platform-row,
+    .sov-faq-grid
+  ),
+  .tst-page .tst-theme-grid,
+  .ctw-page :is(.ctw-prepare > .ctw-container, .ctw-faq-grid) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .sov-page :is(.sov-heading, .sov-proof-grid, .sov-platform-row, .sov-faq-grid),
+  .tst-page .tst-theme-grid,
+  .ctw-page :is(.ctw-prepare > .ctw-container, .ctw-faq-grid) {
+    gap: 36px !important;
+  }
+
+  .sov-page .sov-final-inner,
+  .tst-page .tst-final > .tst-container {
+    display: block !important;
+  }
+
+  .sov-page .sov-final-inner > div,
+  .tst-page .tst-final > .tst-container > div {
+    width: 100%;
+  }
+
+  .sdr-page .sdr-section-heading {
+    max-width: none;
+  }
+
+  .sdr-page :is(
+    .sdr-heading-split,
+    .sdr-proof-grid,
+    .sdr-case-grid,
+    .sdr-faq-grid,
+    .sdr-quote-grid
+  ) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page[class][class] .sdr-title-long {
+    font-size: 36px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .sdr-page .container {
+    width: min(100% - 24px, 1180px) !important;
+  }
+
+  .sdr-page .sdr-hero {
+    padding-inline: 12px !important;
+  }
+
+  .sdr-page .sdr-hero-copy {
+    padding-inline: 0 !important;
+  }
+
+  body main.sdr-page[class][class] .sdr-title-long {
+    font-size: 16px !important;
+  }
+}

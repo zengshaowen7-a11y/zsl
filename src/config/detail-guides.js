@@ -20,7 +20,7 @@ export const detailGuides = {
       { title: "Clear next action", text: "Sample, quotation, inbound plan or test-order recommendation." },
     ], faq: workflowFaq,
   },
-  "WHY JW DROPSHIPPING": {
+  "Why choose JW Dropshipping?": {
     kicker: "HOW WE WORK DIFFERENTLY", title: "Support built around the physical order, not generic tickets.", text: "Commercial decisions and warehouse actions stay connected through one operating context.",
     leftLabel: "OUR PRINCIPLES", left: [
       { title: "Product before promises", text: "We review the actual item, risks and customer expectation first." },

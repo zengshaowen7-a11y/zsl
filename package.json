@@ -15,12 +15,11 @@
     "media:optimize": "node scripts/optimize-generated-media.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.9",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
-    "highlight.js": "^11.11.1",
     "marked": "^18.0.5",
     "next": "16.2.9",
-    "@next/third-parties": "^16.2.9",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
@@ -33,16 +32,19 @@
     "swiper": "^14.0.0"
   },
   "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.9",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.20",
     "concurrently": "^10.0.3",
     "eslint": "^10",
     "eslint-config-next": "16.2.9",
+    "highlight.js": "^11.11.1",
     "prettier": "^3.9.1",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "sharp": "^0.35.2",
     "tailwind-bootstrap-grid": "^7.0.0",
     "tailwindcss": "^4"
-  }
+  },
+  "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621"
 }
