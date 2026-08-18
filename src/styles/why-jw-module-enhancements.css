@@ -475,3 +475,158 @@
     transition: none;
   }
 }
+
+/* Match the Home FAQ layout: focused copy, narrow list, compact controls. */
+.wjw-page .wjw-faq {
+  padding: 108px 0 !important;
+  background: var(--wjw-mint, #eaf8f0) !important;
+}
+
+.wjw-page .wjw-faq > .wjw-container {
+  width: min(100% - 48px, 900px) !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+.wjw-page .wjw-faq-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 40px !important;
+}
+
+.wjw-page .wjw-faq-grid > div:first-child {
+  position: static !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.wjw-page .wjw-faq-grid > div:first-child .wjw-kicker {
+  display: inline-block !important;
+  margin-bottom: 16px !important;
+  color: #2fae68 !important;
+}
+
+.wjw-page .wjw-faq h2 {
+  margin: 0 0 20px !important;
+  color: #103b2d !important;
+  font-size: clamp(2.15rem, 3.5vw, 3.2rem) !important;
+  font-weight: 750 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+}
+
+.wjw-page .wjw-faq-grid > div:first-child > p:last-child {
+  max-width: 690px !important;
+  margin: 0 auto !important;
+  color: #63756d !important;
+  font-size: 0.94rem !important;
+  line-height: 1.7 !important;
+}
+
+.wjw-page .wjw-accordion {
+  overflow: visible !important;
+  border: 1px solid rgba(31, 41, 55, 0.14) !important;
+  border-radius: 7px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 14px 32px rgba(31, 41, 55, 0.08) !important;
+}
+
+.wjw-page .wjw-accordion details {
+  position: relative !important;
+  padding: 0 !important;
+  border-bottom: 1px solid #d9e3dd !important;
+  background: transparent !important;
+}
+
+.wjw-page .wjw-accordion details:last-child {
+  border-bottom: 0 !important;
+}
+
+.wjw-page .wjw-accordion details[open] {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.wjw-page .wjw-accordion details[open]::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -18px;
+  width: 3px;
+  background: #42b978;
+  content: "";
+}
+
+.wjw-page .wjw-accordion summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 26px !important;
+  gap: 24px !important;
+  align-items: center !important;
+  min-height: 58px !important;
+  padding: 25px 0 !important;
+  color: #173c2f !important;
+  font-size: 0.98rem !important;
+  font-weight: 750 !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
+}
+
+.wjw-page .wjw-accordion details[open] summary {
+  color: #167449 !important;
+}
+
+.wjw-page .wjw-accordion summary span {
+  display: block !important;
+  width: 26px !important;
+  height: auto !important;
+  flex: initial !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #2fae68 !important;
+  font-size: 1.45rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  transition: transform 180ms ease !important;
+}
+
+.wjw-page .wjw-accordion details[open] summary span {
+  background: transparent !important;
+  color: #2fae68 !important;
+  transform: rotate(45deg) !important;
+}
+
+.wjw-page .wjw-accordion details p {
+  max-width: 660px !important;
+  margin: 0 !important;
+  padding: 0 48px 25px 0 !important;
+  color: #64766e !important;
+  font-size: 0.87rem !important;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 767px) {
+  .wjw-page .wjw-faq {
+    padding: 78px 0 !important;
+  }
+
+  .wjw-page .wjw-faq > .wjw-container {
+    width: min(100% - 40px, 900px) !important;
+  }
+
+  .wjw-page .wjw-faq-grid > div:first-child {
+    text-align: left !important;
+  }
+
+  .wjw-page .wjw-accordion details[open]::before {
+    left: -10px;
+  }
+
+  .wjw-page .wjw-accordion summary {
+    gap: 16px !important;
+    padding: 22px 0 !important;
+  }
+}

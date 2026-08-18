@@ -61,6 +61,6 @@ export default function TestimonialsRedesign() {
       <article><div className="tst-video"><video controls playsInline preload="metadata" poster="/images/evidence/warehouse-team-corridor.jpg"><source src="/videos/parcel-sorting-pexels-10472376.mp4" type="video/mp4" /></video><span><FiPlay /></span></div><div><p className="tst-kicker">SORTING &amp; DISPATCH</p><h3>Orders moving toward delivery</h3><p>See how prepared parcels are sorted and handed into the shipping workflow.</p></div></article>
     </div><Link href="/why-us" className="tst-proof-link">Why sellers choose JW <FiArrowRight /></Link></div></section>
 
-    <section className="tst-final"><div className="tst-container"><div><p className="tst-kicker">YOUR FIRST STEP</p><h2>Every seller story starts with one product.</h2><p>Tell us what you sell, where you ship and what needs to work better. Our team will recommend the next practical step.</p></div><Link href="/contact" className="tst-button tst-button-light">Talk to Our Team <FiMessageCircle /></Link></div></section>
+    <section className="tst-final"><div className="tst-container"><div><p className="tst-kicker">YOUR FIRST STEP</p><h2>Start with one product.</h2><p>Tell us what you sell, where you ship and what needs to work better. Our team will recommend the next practical step.</p></div><Link href="/contact" className="tst-button tst-button-light">Talk to Our Team <FiMessageCircle /></Link></div></section>
   </main>;
 }

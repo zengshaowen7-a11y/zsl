@@ -125,6 +125,17 @@
   letter-spacing: 0;
 }
 
+.fh-home .fh-home-quote-copy .fh-home-quote-title {
+  display: block;
+  width: min(100%, 560px);
+  max-width: 560px !important;
+  font-size: clamp(2.05rem, 3vw, 3.25rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: 0;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
 .fh-home .fh-home-quote-copy p {
   max-width: 470px;
   margin: 0;
@@ -263,6 +274,14 @@
 
   .fh-home .fh-home-quote-copy h2 {
     font-size: 2.55rem;
+  }
+
+  .fh-home .fh-home-quote-copy .fh-home-quote-title {
+    width: auto;
+    max-width: 100% !important;
+    font-size: 2.55rem !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
   }
 
   .fh-home .fh-home-quote-form {

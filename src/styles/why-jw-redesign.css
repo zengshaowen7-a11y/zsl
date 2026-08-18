@@ -621,6 +621,24 @@
   }
 }
 
+.wjw-hero-media video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wjw-hero-media video {
+    display: none;
+  }
+
+  .wjw-hero-media {
+    background: url("/images/generated/why-jw-operations-video-poster.png") center / cover no-repeat;
+  }
+}
+
 @media (max-width: 767px) {
   .wjw-container {
     width: min(100% - 32px, 1240px) !important;
@@ -849,16 +867,22 @@
 }
 
 .wjw-facts .wjw-container > div {
+  flex-direction: column !important;
+  align-items: center !important;
   justify-content: center !important;
-  min-height: 88px !important;
+  gap: 6px !important;
+  min-height: 104px !important;
+  padding: 18px 16px !important;
   border-color: var(--line) !important;
+  text-align: center !important;
 }
 
 .wjw-facts strong {
-  min-width: 86px !important;
+  min-width: 0 !important;
   color: #1f2937 !important;
-  font-size: 34px !important;
+  font-size: clamp(24px, 2.2vw, 30px) !important;
   line-height: 1 !important;
+  white-space: nowrap !important;
   text-align: center !important;
 }
 
@@ -866,6 +890,8 @@
   color: var(--muted) !important;
   font-size: 15px !important;
   font-weight: 800 !important;
+  line-height: 1.25 !important;
+  white-space: normal !important;
 }
 
 .wjw-compare,
@@ -1088,7 +1114,7 @@
 
   .wjw-facts strong {
     min-width: auto !important;
-    font-size: 30px !important;
+    font-size: 26px !important;
   }
 
   .wjw-hero-media::after {

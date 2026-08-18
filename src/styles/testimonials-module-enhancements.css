@@ -151,6 +151,8 @@
 
 .tst-page .tst-theme-grid h2 {
   max-width: 520px;
+  font-size: clamp(38px, 3.2vw, 50px) !important;
+  line-height: 1.08 !important;
 }
 
 .tst-page .tst-theme-grid ol {

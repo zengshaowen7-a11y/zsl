@@ -113,7 +113,7 @@
 
 .fh-home .fh-platform-stat strong {
   color: #2fae68;
-  font-size: 1.3rem;
+  font-size: clamp(18px, 2.6cqw, 22px);
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;

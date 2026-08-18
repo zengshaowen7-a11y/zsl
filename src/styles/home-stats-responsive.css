@@ -16,16 +16,15 @@
   text-align: center;
 }
 
-.fh-home .fh-platform-stat strong,
-.fh-home .fh-platform-stat:last-child strong {
+.fh-home .fh-platform-stat strong {
   max-width: 100%;
-  font-size: clamp(26px, 5.8cqw, 36px) !important;
+  font-size: clamp(18px, 2.6cqw, 22px) !important;
   line-height: 1 !important;
   white-space: nowrap;
 }
 
 .fh-home .fh-platform-stat:last-child strong {
-  font-size: clamp(17px, 3.5cqw, 25px) !important;
+  font-size: clamp(18px, 2.6cqw, 22px) !important;
 }
 
 .fh-home .fh-platform-stat span {

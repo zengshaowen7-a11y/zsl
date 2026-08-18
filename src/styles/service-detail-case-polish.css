@@ -1,0 +1,92 @@
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-grid {
+  width: min(100% - 48px, 1280px);
+  max-width: 1280px;
+  grid-template-columns: 1fr;
+  gap: 42px;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier)
+  .sdr-case-grid
+  > div:first-child {
+  max-width: none;
+  text-align: center;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier)
+  .sdr-case-grid
+  > div:first-child
+  > p {
+  justify-content: center;
+  max-width: none;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier)
+  .sdr-case-grid
+  > div:first-child
+  > p
+  svg {
+  flex-shrink: 0;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case h2 {
+  display: block;
+  max-width: 980px;
+  margin-inline: auto;
+  font-size: clamp(32px, 3.1vw, 48px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board {
+  width: 100%;
+  border-top-width: 4px;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board > strong {
+  font-size: 0.72rem;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board > p {
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board ol {
+  margin: 22px 0;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board li {
+  gap: 12px;
+  padding: 16px 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board li span {
+  width: 32px;
+  height: 32px;
+}
+
+.sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board blockquote {
+  padding: 20px 20px 20px 19px;
+  font-size: 0.94rem;
+  line-height: 1.72;
+}
+
+@media (max-width: 767px) {
+  .sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-grid {
+    width: 100%;
+    gap: 28px;
+  }
+
+  .sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case h2 {
+    max-width: none;
+    font-size: 32px;
+  }
+
+  .sdr-page:not(.sdr-page-dropshipping-supplier) .sdr-case-board {
+    border-top-width: 4px;
+  }
+}

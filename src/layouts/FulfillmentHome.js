@@ -339,6 +339,7 @@ export default function FulfillmentHome({ lang = "en" }) {
   const evidenceItems = c.evidenceItems || [["01", "Approved service scope", "Responsibilities are confirmed before launch."], ["02", "Quality-check evidence", "Agreed checkpoints provide context before an order continues."], ["03", "Order handoff visibility", "SKU, packing and tracking details follow the order workflow."]];
   const [openFaq, setOpenFaq] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [quoteErrors, setQuoteErrors] = useState({});
   const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(false);
   const [advantageSlideIndexes, setAdvantageSlideIndexes] = useState([0, 0, 0]);
   const [selectedCountryCode, setSelectedCountryCode] = useState(null);
@@ -380,11 +381,33 @@ export default function FulfillmentHome({ lang = "en" }) {
   };
 
   const handleQuoteSubmit = (event) => {
-    if (!selectedCountryCode) {
+    const form = event.currentTarget;
+    setIsCountryCodeOpen(false);
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const phoneCountry = String(data.get("country-code") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
+    const businessDetails = String(data.get("business-details") || "").trim();
+    const dailyOrderVolume = String(data.get("daily-order-volume") || "").trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const nextErrors = {
+      name: !name ? "Name is required" : "",
+      email: !email ? "Email is required" : !emailOk ? "Enter a valid email address" : "",
+      countryCode: !phoneCountry ? "Country code is required" : "",
+      phone: !phone ? "Phone number is required" : "",
+      businessDetails: !businessDetails ? "Business details are required" : "",
+      dailyOrderVolume: !dailyOrderVolume ? "Daily order volume is required" : "",
+    };
+    const hasErrors = Object.values(nextErrors).some(Boolean);
+
+    if (hasErrors) {
       event.preventDefault();
-      setIsCountryCodeOpen(true);
+      setQuoteErrors(nextErrors);
       return;
     }
+
+    setQuoteErrors({});
     setIsSubmitting(true);
   };
 
@@ -588,7 +611,7 @@ export default function FulfillmentHome({ lang = "en" }) {
               </Link>
             ))}
           </div>
-          <div className="fh-core-services-cta"><Link className="ff-btn ff-btn-dark" href="/services#service-comparison">Compare All Services<FiArrowRight /></Link></div>
+          <div className="fh-core-services-cta"><Link className="fh-core-link" href="/services#service-comparison">Compare All Services<FiArrowRight /></Link></div>
         </div>
       </section>
 
@@ -706,7 +729,7 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container fh-home-quote-grid">
           <div className="fh-home-quote-copy">
             <span className="ff-kicker ff-kicker-light">GET A FREE QUOTE</span>
-            <h2>Start with your<br />business details</h2>
+            <h2 className="fh-home-quote-title">Start with your business details</h2>
             <p>Tell us what you sell, how we can reach you and what kind of support you need. Our team will recommend the next step.</p>
             <ul className="fh-home-quote-promises" aria-label="What happens next">
               <li><FiCheck aria-hidden="true" /><span><strong>Share the basics</strong>One product or store link is enough to begin.</span></li>
@@ -714,34 +737,55 @@ export default function FulfillmentHome({ lang = "en" }) {
               <li><FiArrowRight aria-hidden="true" /><span><strong>Get a clear next step</strong>We will respond with the information needed to proceed.</span></li>
             </ul>
           </div>
-          <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={isZh ? "/zh/thank-you" : "/thank-you"} data-netlify="true" data-netlify-honeypot="company-website" onSubmit={handleQuoteSubmit}>
+          <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={isZh ? "/zh/thank-you" : "/thank-you"} noValidate data-netlify="true" data-netlify-honeypot="company-website" onSubmit={handleQuoteSubmit} onInvalid={(event) => event.preventDefault()}>
             <input type="hidden" name="form-name" value="fulfillment-quote" /><input type="hidden" name="language" value={lang} />
             <p className="fh-honeypot"><label>Do not fill this out<input name="company-website" /></label></p>
             <div className="fh-home-quote-fields">
-              <label>Name <span className="fh-home-quote-required">*</span><input name="name" autoComplete="name" placeholder="Your name" required /></label>
-              <label>Email<input name="email" type="email" autoComplete="email" placeholder="you@example.com" /></label>
-              <div className="fh-country-code-field" ref={countryCodeRef}>
-                <span className="fh-home-quote-label">Country Code <span className="fh-home-quote-required">*</span></span>
-                <input type="hidden" name="country-code" value={selectedCountryCode ? `${selectedCountryCode.code} ${selectedCountryCode.label}` : ""} required />
-                <button type="button" className="fh-country-code-trigger" aria-haspopup="listbox" aria-expanded={isCountryCodeOpen} aria-required="true" onClick={() => setIsCountryCodeOpen((open) => !open)}>
-                  {selectedCountryCode ? <><img src={selectedCountryCode.flagSrc} alt="" aria-hidden="true" /><span>{selectedCountryCode.code}</span><small>{selectedCountryCode.label}</small></> : <span>Select code</span>}
+              <label>Name<input name="name" autoComplete="name" placeholder="Your name" />{quoteErrors.name ? <small className="fh-form-error">{quoteErrors.name}</small> : null}</label>
+              <label>Email<input name="email" type="text" inputMode="email" autoComplete="email" placeholder="you@example.com" />{quoteErrors.email ? <small className="fh-form-error">{quoteErrors.email}</small> : null}</label>
+              <div className="fh-phone-split" ref={countryCodeRef}>
+                <span className="fh-home-quote-label fh-phone-split-label">Country Code &amp; Phone Number</span>
+                <div className="fh-country-code-field">
+                <input type="hidden" name="country-code" value={selectedCountryCode ? `${selectedCountryCode.code} ${selectedCountryCode.label}` : ""} />
+                <button type="button" className="fh-country-code-trigger" aria-haspopup="listbox" aria-expanded={isCountryCodeOpen} onClick={() => setIsCountryCodeOpen((open) => !open)}>
+                  {selectedCountryCode ? (
+                    <>
+                      <img src={selectedCountryCode.flagSrc} alt="" aria-hidden="true" />
+                      <span className="fh-country-code-value">{selectedCountryCode.code}</span>
+                      <small>{selectedCountryCode.label}</small>
+                    </>
+                  ) : (
+                    <span className="fh-country-code-placeholder">Country Code</span>
+                  )}
                   <i aria-hidden="true">⌄</i>
                 </button>
                 {isCountryCodeOpen && (
-                  <div className="fh-country-code-menu" role="listbox">
+                  <div className="fh-country-code-menu" role="listbox" onClick={(event) => event.stopPropagation()}>
                     {countryCodeOptions.map((option) => (
                       <button type="button" role="option" aria-selected={selectedCountryCode?.label === option.label} key={`${option.code}-${option.label}`} onClick={() => { setSelectedCountryCode(option); setIsCountryCodeOpen(false); }}>
                         <img src={option.flagSrc} alt="" aria-hidden="true" />
                         <span>{option.code}</span>
                         <small>{option.label}</small>
                       </button>
-                    ))}
+                  ))}
                   </div>
                 )}
+                {quoteErrors.countryCode ? <small className="fh-form-error">{quoteErrors.countryCode}</small> : null}
+                </div>
+                <div className="fh-phone-number-field">
+                  <input
+                    className="fh-phone-number-input"
+                    name="phone-number"
+                    autoComplete="tel-national"
+                    placeholder="Phone Number"
+                    aria-label="Phone Number"
+                    onClick={(event) => event.stopPropagation()}
+                  />
+                  {quoteErrors.phone ? <small className="fh-form-error fh-phone-error">{quoteErrors.phone}</small> : null}
+                </div>
               </div>
-              <label>Phone Number<input name="phone-number" autoComplete="tel-national" placeholder="Phone number" /></label>
-              <label className="fh-home-quote-wide">Tell us about your business! <span className="fh-home-quote-required">*</span><textarea name="business-details" placeholder="Tell us what you sell, your current fulfillment situation, target markets, and what you need help with." required rows={5} /></label>
-              <label className="fh-home-quote-wide">Daily Order Volume<select name="daily-order-volume" defaultValue=""><option value="" disabled>Select a range</option><option>0-10 orders/day</option><option>11-50 orders/day</option><option>51-200 orders/day</option><option>201-500 orders/day</option><option>500+ orders/day</option></select></label>
+              <label className="fh-home-quote-wide">Tell us about your business!<textarea name="business-details" placeholder="Tell us what you sell, your current fulfillment situation, target markets, and what you need help with." rows={5} />{quoteErrors.businessDetails ? <small className="fh-form-error">{quoteErrors.businessDetails}</small> : null}</label>
+              <label className="fh-home-quote-wide">Daily Order Volume<select name="daily-order-volume" defaultValue=""><option value="" disabled>Select a range</option><option>0-10 orders/day</option><option>11-50 orders/day</option><option>51-200 orders/day</option><option>201-500 orders/day</option><option>500+ orders/day</option></select>{quoteErrors.dailyOrderVolume ? <small className="fh-form-error">{quoteErrors.dailyOrderVolume}</small> : null}</label>
             </div>
             <button className="ff-btn ff-btn-primary" type="submit" disabled={isSubmitting} aria-live="polite"><span>{isSubmitting ? "Sending..." : "Get a Free Quote"}</span><FiArrowRight /></button>
           </form>

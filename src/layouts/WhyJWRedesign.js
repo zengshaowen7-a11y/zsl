@@ -60,7 +60,19 @@ export default function WhyJWRedesign() {
           <div className="wjw-actions"><Link href="/contact" className="wjw-button wjw-button-primary">Talk to the Team <FiArrowRight /></Link><a href="#jw-difference" className="wjw-button wjw-button-ghost">See the Difference</a></div>
           <ul><li><FiCheck /> Live Account Support</li><li><FiCheck /> Agreed QC checkpoints</li><li><FiCheck /> Clear order handoff</li></ul>
         </div>
-        <div className="wjw-hero-media"><Image src="/images/generated/jw-account-support-v3.png" alt="JW account and fulfillment team reviewing an order" fill priority sizes="(max-width: 767px) 100vw, 52vw" /></div>
+        <div className="wjw-hero-media">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/generated/why-jw-operations-video-poster.png"
+            aria-label="JW China operations team coordinating product review, packing and parcel sorting"
+          >
+            <source src="/videos/why-jw-team-operations.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       <section className="wjw-facts"><div className="wjw-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>One-on-One</strong><span>Expert Support</span></div></div></section>
@@ -75,7 +87,7 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-principles">
         <div className="wjw-container">
-          <header className="wjw-heading wjw-heading-centered"><div><p className="wjw-kicker">WHAT WORKING WITH JW SHOULD FEEL LIKE</p><h2>Clear enough to trust. Practical enough to use.</h2></div><p>Four operating principles shape the service before daily volume begins.</p></header>
+          <header className="wjw-heading wjw-heading-centered"><div><p className="wjw-kicker">WHAT WORKING WITH JW SHOULD FEEL LIKE</p><h2>Clear, practical support you can use every day.</h2></div><p>Four operating principles shape the service before daily volume begins.</p></header>
           <div className="wjw-principle-grid">{principles.map(([Icon, title, copy], index) => <article key={title}><div><span>{String(index + 1).padStart(2, "0")}</span><Icon /></div><h3>{title}</h3><p>{copy}</p></article>)}</div>
         </div>
       </section>
@@ -83,7 +95,7 @@ export default function WhyJWRedesign() {
       <section className="wjw-evidence">
         <div className="wjw-container wjw-evidence-grid">
           <div className="wjw-evidence-media"><Image src="/images/generated/jw-qc-inspection-v3.png" alt="JW team recording product inspection results" fill sizes="(max-width: 850px) 100vw, 50vw" /></div>
-          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Quality decisions should have clear rationale</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
+          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Clear QC evidence for every decision.</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
             <div className="wjw-report">
               <div><span>QC REVIEW</span><strong>SKU: JW-1024</strong></div>
               <dl>
@@ -111,7 +123,7 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-support">
         <div className="wjw-container wjw-support-grid">
-          <div><p className="wjw-kicker">LIVE ACCOUNT SUPPORT</p><h2>All order information is fully synchronized and seamlessly transferred across all team handovers.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
+          <div><p className="wjw-kicker">LIVE ACCOUNT SUPPORT</p><h2>One clear handoff for every order.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
           <div className="wjw-support-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt="JW warehouse and account support team" fill sizes="(max-width: 850px) 100vw, 48vw" /></div>
         </div>
       </section>

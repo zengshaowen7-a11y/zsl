@@ -1,200 +1,877 @@
-/* Keep all eight service-page forms aligned with the Home quote form. */
+/* Service-page quote forms mirror the Home quote form. */
 .sdr-page .sdr-quote-grid {
   grid-template-columns: minmax(300px, 0.72fr) minmax(540px, 1.28fr);
   gap: clamp(52px, 7vw, 92px);
   align-items: center;
 }
 
-.sdr-page .fh-home-quote-form.sdr-form {
+.sdr-page .fh-home-quote-form {
   width: 100%;
   padding: 36px !important;
-  border: 1px solid rgba(23, 58, 49, 0.16) !important;
+  border: 1px solid rgba(31, 41, 55, 0.18) !important;
   border-radius: 8px !important;
   background: #fff !important;
   box-shadow: 0 26px 58px rgba(20, 64, 48, 0.13) !important;
-  transition: box-shadow 260ms ease, transform 260ms ease;
 }
 
-.sdr-page .fh-home-quote-form.sdr-form:focus-within {
-  box-shadow: 0 30px 66px rgba(20, 64, 48, 0.17) !important;
-  transform: translateY(-2px);
+.sdr-page .fh-home-quote-fields {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px 18px !important;
 }
 
-.sdr-page .fh-home-quote-form .fh-home-quote-fields {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px 18px;
-}
-
-.sdr-page .fh-home-quote-form .fh-home-quote-wide {
+.sdr-page .fh-home-quote-wide {
   grid-column: 1 / -1;
 }
 
-.sdr-page .fh-home-quote-form label {
-  margin: 0;
-  color: #1f2937;
-  font-size: 15px;
-  font-weight: 760;
+.sdr-page .fh-home-quote-form label,
+.sdr-page .fh-home-quote-label {
+  color: #1f2937 !important;
+  font-size: 15px !important;
+  font-weight: 760 !important;
   line-height: 1.35;
 }
 
-.sdr-page .fh-home-quote-form .fh-home-quote-required {
-  color: #dc3f45;
-  font-weight: 850;
+.sdr-page .fh-home-quote-required {
+  color: #ef4444 !important;
+  font-weight: 800;
 }
 
 .sdr-page .fh-home-quote-form :is(input, select, textarea) {
   width: 100%;
-  margin-top: 9px;
-  border: 1px solid rgba(31, 41, 55, 0.18);
-  border-radius: 6px;
-  background: #fff;
-  color: #1f2937;
-  font-size: 16px;
-  box-shadow: none;
+  margin-top: 9px !important;
+  border: 1px solid rgba(31, 41, 55, 0.18) !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  color: #1f2937 !important;
+  font-size: 16px !important;
+  box-shadow: none !important;
   transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 }
 
 .sdr-page .fh-home-quote-form :is(input, select) {
-  min-height: 50px;
-}
-
-.sdr-page .fh-home-quote-form textarea {
-  min-height: 150px;
-  padding: 16px 18px;
-  resize: vertical;
-  line-height: 1.55;
+  min-height: 50px !important;
 }
 
 .sdr-page .fh-home-quote-form select {
-  padding: 0 44px 0 16px;
+  padding: 0 48px 0 16px !important;
   cursor: pointer;
+  background:
+    linear-gradient(45deg, transparent 50%, #167449 50%) right 22px center / 7px 7px no-repeat,
+    linear-gradient(135deg, #167449 50%, transparent 50%) right 17px center / 7px 7px no-repeat,
+    #ffffff !important;
+  color: #1f2937 !important;
+  font-size: 16px !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+  appearance: none;
 }
 
 .sdr-page .fh-home-quote-form :is(input, select, textarea):focus {
-  border-color: #18764a;
+  border-color: #167449 !important;
   outline: 0;
-  background: #fbfefc;
-  box-shadow: 0 0 0 3px rgba(24, 118, 74, 0.12);
+  box-shadow: 0 0 0 3px rgba(22, 116, 73, 0.12) !important;
+  background: #fbfefc !important;
+}
+
+.sdr-page .fh-form-error {
+  display: block;
+  margin-top: 7px;
+  color: #dc2626 !important;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.sdr-page .fh-phone-error {
+  margin-top: 8px;
 }
 
 .sdr-page .fh-home-quote-form :is(input, textarea)::placeholder {
   color: rgba(31, 41, 55, 0.48);
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-control {
+.sdr-page .fh-home-quote-form textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 16px 18px !important;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.sdr-page .fh-home-quote-form select:focus {
+  border-color: #167449 !important;
+}
+
+.sdr-page .fh-phone-split {
   display: grid;
-  grid-template-columns: minmax(210px, 0.42fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+  grid-column: 1 / -1;
   position: relative;
-  overflow: visible;
+  z-index: 5;
+}
+
+.sdr-page .fh-phone-split-label {
+  grid-column: 1 / -1;
+  margin-bottom: -2px;
+}
+
+.sdr-page .fh-phone-number-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px !important;
+  border: 1px solid rgba(31, 41, 55, 0.18) !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  line-height: 1.2 !important;
+}
+
+.sdr-page .fh-phone-number-input:focus {
+  border-color: #167449 !important;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(22, 116, 73, 0.12) !important;
+}
+
+.sdr-page .fh-phone-number-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.sdr-page .fh-phone-number-field .fh-phone-number-input {
+  margin-top: 9px !important;
+}
+
+.sdr-page .fh-country-code-field {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.sdr-page .fh-country-code-field > input[type="hidden"] {
+  display: none;
+}
+
+.sdr-page .fh-country-code-required-proxy {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.sdr-page .fh-country-code-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px;
   margin-top: 9px;
+  padding: 0 16px;
+  cursor: pointer;
   border: 1px solid rgba(31, 41, 55, 0.18);
   border-radius: 6px;
-  background: #fff;
-  transition: border-color 180ms ease, box-shadow 180ms ease;
+  background: #ffffff;
+  color: #1f2937;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: left;
+  box-shadow: none;
+  appearance: none;
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-control:focus-within {
-  border-color: #18764a;
-  box-shadow: 0 0 0 3px rgba(24, 118, 74, 0.12);
+.sdr-page .fh-country-code-trigger:hover,
+.sdr-page .fh-country-code-trigger:focus-visible {
+  border-color: #167449;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(22, 116, 73, 0.12);
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-control input {
-  min-height: 54px;
-  margin-top: 0;
+.sdr-page .fh-country-code-trigger img,
+.sdr-page .fh-country-code-menu img {
+  width: 18px;
+  height: 13px;
+  border-radius: 1px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sdr-page .fh-country-code-placeholder {
+  color: rgba(31, 41, 55, 0.54);
+}
+
+.sdr-page .fh-country-code-value {
+  min-width: 40px;
+  font-weight: 800;
+}
+
+.sdr-page .fh-country-code-trigger small {
+  display: block;
+  min-width: 0;
+  color: rgba(31, 41, 55, 0.62);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.sdr-page .fh-country-code-trigger span {
+  flex-shrink: 0;
+}
+
+.sdr-page .fh-country-code-menu small {
+  display: block;
+  color: rgba(31, 41, 55, 0.58);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.1;
+}
+
+.sdr-page .fh-country-code-trigger i {
+  margin-left: auto;
+  color: #167449;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sdr-page .fh-country-code-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  width: min(100vw - 48px, 360px);
+  max-height: 320px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 24px 56px rgba(20, 64, 48, 0.18);
+}
+
+.sdr-page .fh-country-code-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
   border: 0;
-  border-radius: 0;
+  border-radius: 6px;
   background: transparent;
+  color: #1f2937;
+  text-align: left;
   box-shadow: none;
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-control input:focus {
-  background: transparent;
-  box-shadow: none;
+.sdr-page .fh-country-code-menu button:hover,
+.sdr-page .fh-country-code-menu button[aria-selected="true"] {
+  background: #edf7f1;
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-country > button {
-  height: 54px !important;
-  min-height: 54px !important;
-  padding: 0 16px !important;
-  border: 0 !important;
-  border-right: 1px solid rgba(31, 41, 55, 0.18) !important;
-  border-radius: 0 !important;
-  background: #fff !important;
-  color: #1f2937 !important;
-  box-shadow: none !important;
-  transform: none !important;
+.sdr-page .fh-country-code-menu button span {
+  min-width: 42px;
+  font-weight: 800;
 }
 
-.sdr-page .fh-home-quote-form .fh-phone-country > button:hover {
-  background: #fff !important;
-  color: #1f2937 !important;
-  box-shadow: none !important;
-  transform: none !important;
+.sdr-page .fh-country-code-menu button small {
+  flex: 1;
 }
 
-.sdr-page .fh-home-quote-form .contact-submit {
-  min-height: 56px;
-  justify-content: center;
+.sdr-page .fh-home-quote-form > button {
   width: 100%;
   margin-top: 24px;
-  border-radius: 7px;
 }
 
-.sdr-page .fh-home-quote-form .contact-submit:disabled {
+.sdr-page .contact-submit:disabled {
   cursor: wait;
   opacity: 0.72;
   transform: none !important;
 }
 
-.sdr-page .fh-home-quote-form .contact-privacy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 13px;
-  color: #718079;
-  font-size: 12px;
+.sdr-page .contact-privacy {
+  display: none;
 }
 
-.sdr-page .fh-home-quote-form .contact-honeypot {
+.sdr-page .contact-honeypot {
   position: absolute;
   left: -9999px;
+}
+
+.sdr-page-dropshipping-supplier .sdr-quote-grid {
+  width: min(100% - 48px, 1280px);
+  max-width: 1280px;
+  grid-template-columns: minmax(470px, 0.92fr) minmax(620px, 1.08fr);
+  gap: clamp(46px, 5vw, 72px);
+}
+
+.sdr-page-dropshipping-supplier .sdr-quote-copy {
+  align-self: center;
+}
+
+.sdr-page-dropshipping-supplier .sdr-quote-copy h2 {
+  max-width: none;
+  font-size: clamp(38px, 2.6vw, 48px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-quote-copy h2.sdr-title-long {
+  max-width: none !important;
+  font-size: clamp(31px, 2.15vw, 40px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-quote-copy .sdr-dropshipping-quote-title {
+  display: block !important;
+  max-width: none !important;
+  width: max-content !important;
+  font-size: clamp(26px, 1.75vw, 34px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case {
+  background: var(--page-bg) !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-grid {
+  width: min(100% - 48px, 1280px) !important;
+  max-width: 1280px !important;
+  grid-template-columns: 1fr !important;
+  gap: 42px !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-grid > div:first-child {
+  max-width: none !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case h2 {
+  display: block !important;
+  max-width: none !important;
+  width: 100% !important;
+  margin-inline: auto !important;
+  font-size: clamp(32px, 3.1vw, 48px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-grid > div:first-child > p {
+  justify-content: center !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-grid > div:first-child > p svg {
+  flex-shrink: 0;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-board {
+  width: 100% !important;
+  border-top: 4px solid #167449 !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq {
+  padding: 108px 0 !important;
+  background: var(--page-bg) !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid {
+  display: grid !important;
+  width: min(100% - 48px, 1440px) !important;
+  max-width: 1440px !important;
+  grid-template-columns: 1fr !important;
+  gap: 56px !important;
+  margin-inline: auto !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid > div:first-child {
+  position: static !important;
+  max-width: none !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq .ff-kicker {
+  color: #167449 !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.08em !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq h2 {
+  max-width: none !important;
+  margin: 20px auto 0 !important;
+  color: #1f2937 !important;
+  font-size: 52px !important;
+  font-weight: 750 !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid > div:first-child > p {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 18px auto 0 !important;
+  color: #5f6b76 !important;
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+  white-space: nowrap !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid > div:last-child {
+  width: min(100%, 1220px) !important;
+  margin: 0 auto !important;
+  border-top: 0 !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq details {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.28) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq details[open] {
+  background: transparent !important;
+  border-color: transparent !important;
+  border-bottom-color: rgba(31, 41, 55, 0.28) !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 32px !important;
+  align-items: center !important;
+  gap: 24px !important;
+  min-height: 0 !important;
+  padding: 28px 0 !important;
+  color: #1f2937 !important;
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  line-height: 1.28 !important;
+  list-style: none !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq summary span {
+  display: grid !important;
+  place-items: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  color: #1f2937 !important;
+  font-size: 0 !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq summary span::before {
+  content: "⌄";
+  font-size: 28px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq details[open] summary span::before {
+  color: #167449;
+  transform: rotate(180deg);
+}
+
+body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq details p {
+  max-width: 1120px !important;
+  margin: -6px 54px 30px 0 !important;
+  padding: 0 !important;
+  color: rgba(31, 41, 55, 0.72) !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+}
+
+.sdr-page-dropshipping-supplier .sdr-quote-copy > p {
+  max-width: 570px !important;
+}
+
+/* Keep all service FAQ sections on the same visual rhythm as the dropshipping page. */
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) !important;
+  gap: clamp(36px, 4vw, 58px) !important;
+  align-items: start !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid > div:first-child {
+  max-width: 620px !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq h2 {
+  max-width: 620px !important;
+  font-size: clamp(38px, 3vw, 52px) !important;
+  line-height: 1.06 !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid > div:first-child > p {
+  max-width: 460px !important;
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq summary {
+  padding: 22px 0 !important;
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details p {
+  padding: 0 40px 20px 0 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.65 !important;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-grid {
+  width: min(100% - 48px, 1280px);
+  max-width: 1280px;
+  grid-template-columns: minmax(360px, 0.84fr) minmax(0, 1.16fr);
+  gap: clamp(36px, 4.5vw, 64px);
+  align-items: start;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-copy {
+  min-width: 0;
+  max-width: 500px;
+  padding-top: 8px;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-copy h2 {
+  max-width: 100%;
+  font-size: clamp(28px, 2.1vw, 38px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-copy > p {
+  max-width: 480px;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-checklist,
+:is(.sdr-page-3pl-fulfillment-services) .sdr-quote-note {
+  max-width: 480px;
+}
+
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-grid {
+  width: min(100% - 48px, 1280px);
+  max-width: 1280px;
+  grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(36px, 4.8vw, 66px);
+  align-items: start;
+}
+
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-copy {
+  min-width: 0;
+  max-width: 520px;
+  padding-top: 8px;
+}
+
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-copy .sdr-compact-quote-title {
+  display: block;
+  width: max-content;
+  max-width: none;
+  margin-bottom: 18px;
+  font-size: clamp(22px, 1.65vw, 30px) !important;
+  font-weight: 760;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em;
+  white-space: nowrap !important;
+  text-wrap: nowrap !important;
+}
+
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-copy > p {
+  max-width: 480px;
+}
+
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-checklist,
+:is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-note {
+  max-width: 480px;
+}
+
+:is(.sdr-page-3pl-fulfillment-services) .sdr-form {
+  min-width: 0;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-grid {
+  width: min(100% - 48px, 1280px);
+  max-width: 1280px;
+  grid-template-columns: minmax(380px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(48px, 6vw, 82px);
+  align-items: start;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-copy {
+  min-width: 0;
+  max-width: 500px;
+  padding-top: 8px;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-copy h2 {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 18px;
+  font-size: clamp(22px, 1.7vw, 30px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-copy > p {
+  max-width: 470px;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-checklist,
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-note {
+  max-width: 470px;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-pod-quote-title {
+  width: max-content;
+}
+
+body main.sdr-page-pod-fulfillment[class][class][class] .sdr-form {
+  min-width: 0;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-checklist {
+  display: grid;
+  gap: 12px;
+  max-width: 540px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(31, 41, 55, 0.14);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-checklist div {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #173a31;
+  font-size: 15px;
+  font-weight: 760;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-checklist svg {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border: 1px solid rgba(22, 116, 73, 0.18);
+  border-radius: 50%;
+  color: #167449;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-note {
+  max-width: 540px;
+  margin-top: 26px;
+  padding: 18px 20px;
+  border: 1px solid rgba(22, 116, 73, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-note strong {
+  display: block;
+  color: #173a31;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+:is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-note p {
+  margin: 7px 0 0;
+  color: #5f6b76;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 @media (max-width: 1023px) {
   .sdr-page .sdr-quote-grid {
     grid-template-columns: 1fr;
   }
+
+  .sdr-page-dropshipping-supplier .sdr-quote-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+  }
 }
 
 @media (max-width: 767px) {
-  .sdr-page .fh-home-quote-form.sdr-form {
+  .sdr-page .fh-home-quote-form {
     padding: 24px !important;
   }
 
-  .sdr-page .fh-home-quote-form .fh-home-quote-fields {
+  .sdr-page .fh-home-quote-fields {
     grid-template-columns: 1fr;
   }
 
-  .sdr-page .fh-home-quote-form .fh-home-quote-wide {
+  .sdr-page .fh-home-quote-wide {
     grid-column: auto;
   }
 
-  .sdr-page .fh-home-quote-form .fh-phone-control {
+  .sdr-page .fh-phone-split {
     grid-template-columns: 1fr;
   }
 
-  .sdr-page .fh-home-quote-form .fh-phone-country > button {
-    border-right: 0 !important;
-    border-bottom: 1px solid rgba(31, 41, 55, 0.18) !important;
+  .sdr-page .fh-country-code-menu {
+    width: min(100vw - 32px, 360px);
+  }
+
+  :is(.sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-quote-copy .sdr-compact-quote-title {
+    font-size: 28px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid > div:first-child {
+    max-width: none !important;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq h2 {
+    font-size: 34px !important;
+    white-space: normal !important;
+  }
+
+  :is(.sdr-page-dropshipping-supplier, .sdr-page-3pl-fulfillment-services, .sdr-page-pod-fulfillment, .sdr-page-private-label, .sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq-grid > div:first-child > p {
+    max-width: none !important;
+    font-size: 16px !important;
+  }
+
+  .sdr-page-3pl-fulfillment-services .sdr-quote-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sdr-page-3pl-fulfillment-services .sdr-quote-copy h2 {
+    font-size: 30px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-pod-fulfillment[class][class][class] .sdr-quote-copy h2 {
+    font-size: 30px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  .sdr-page-dropshipping-supplier .sdr-quote-copy h2 {
+    font-size: 36px !important;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-quote-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-quote-copy h2.sdr-title-long {
+    font-size: 30px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-quote-copy .sdr-dropshipping-quote-title {
+    width: auto !important;
+    font-size: 30px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-case-grid {
+    width: min(100% - 32px, 1280px) !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-case h2 {
+    font-size: 30px !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq {
+    padding: 76px 0 !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid {
+    width: min(100% - 32px, 1440px) !important;
+    gap: 38px !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid > div:first-child {
+    text-align: left !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq h2 {
+    font-size: 34px !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq-grid > div:first-child > p {
+    margin-inline: 0 !important;
+    font-size: 16px !important;
+    white-space: normal !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq summary {
+    min-height: 0 !important;
+    padding: 22px 0 !important;
+    font-size: 18px !important;
+  }
+
+  body main.sdr-page-dropshipping-supplier[class][class] .sdr-faq details p {
+    margin: -4px 36px 22px 0 !important;
+    padding: 0 !important;
+    font-size: 15px !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sdr-page .fh-home-quote-form.sdr-form,
+  .sdr-page .fh-home-quote-form,
   .sdr-page .fh-home-quote-form :is(input, select, textarea),
-  .sdr-page .fh-home-quote-form .fh-phone-control {
+  .sdr-page .fh-country-code-field,
+  .sdr-page .fh-country-code-trigger,
+  .sdr-page .fh-country-code-menu {
     transition: none;
   }
 }

@@ -38,7 +38,7 @@ export const serviceConversionContent = {
     },
     caseStudy: {
       eyebrow: "REPRESENTATIVE DROPSHIPPING CASE",
-      title: "From scattered supplier messages to one order-level operating routine.",
+      title: "From supplier messages to one order workflow.",
       profile: "Independent accessories store serving North American and European customers",
       challenge: "Product updates, packing requests and shipment questions were handled in separate conversations, leaving the store team without one clear owner for an affected order.",
       plan: ["Confirm a physical product reference and supplier handoff", "Document packing, address and shipping rules", "Return order status and tracking through one agreed workflow"],
@@ -49,8 +49,8 @@ export const serviceConversionContent = {
   "3pl-fulfillment-services": {
     form: {
       eyebrow: "WAREHOUSE SCOPE REVIEW",
-      title: "Estimate your 3PL requirements",
-      lead: "Tell us how many SKUs and units need to be received, stored and fulfilled so the warehouse scope can be planned accurately.",
+      title: "Estimate your 3PL scope",
+      lead: "Share SKU counts, stored units and daily order flow so the warehouse receiving, storage and dispatch scope can be planned accurately.",
       fields: [
         select("sku_count", "Number of active SKUs", ["1–10 SKUs", "11–50 SKUs", "51–200 SKUs", "200+ SKUs"]),
         select("inventory_units", "Expected stored units", ["Under 500 units", "500–2,000 units", "2,001–10,000 units", "10,000+ units"]),

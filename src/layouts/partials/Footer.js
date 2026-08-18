@@ -30,7 +30,7 @@ export default function Footer() {
             <Link href="/">{nav.home}</Link>
             <Link href="/services">{nav.services}</Link>
             <Link href="/how-it-works">How It Works</Link>
-            <Link href="/why-us">Why JW</Link>
+            <Link href="/why-us">Why JW Dropshipping</Link>
             <Link href="/testimonials">Testimonials</Link>
             <Link href="/contact">Contact</Link>
           </div>

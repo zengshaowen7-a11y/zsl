@@ -262,12 +262,12 @@
   border-top-color: #258b58;
 }
 
-/* Dropshipping page: an order-flow rhythm with a dark operational scope. */
+/* Dropshipping page: keep the lower modules on the shared page background. */
 .sdr-page-dropshipping-supplier .sdr-fit,
 .sdr-page-dropshipping-supplier .sdr-proof,
 .sdr-page-dropshipping-supplier .sdr-planning,
 .sdr-page-dropshipping-supplier .sdr-faq {
-  background: #f7faf8;
+  background: var(--page-bg);
 }
 
 .sdr-page-dropshipping-supplier .sdr-scope {
@@ -305,7 +305,7 @@
 }
 
 .sdr-page-dropshipping-supplier .sdr-case {
-  background: #edf6f1;
+  background: var(--page-bg);
 }
 
 /* 3PL page: a lighter warehouse-control system with reversed proof flow. */

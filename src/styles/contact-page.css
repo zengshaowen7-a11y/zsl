@@ -107,6 +107,7 @@
 .contact-consent input { width: 16px; min-height: 16px; margin: 0; flex: none; accent-color: var(--jw-teal); }
 .contact-submit { width: 100%; margin-top: 18px; border: 0; cursor: pointer; }
 .contact-privacy { display: flex; gap: 6px; align-items: center; justify-content: center; margin-top: 12px; color: #899a95; font-size: .6rem; }
+.contact-enquiry-form .fh-form-error { display: block; margin-top: 7px; color: #dc2626 !important; font-size: 13px; font-weight: 650; line-height: 1.35; }
 
 .contact-next-section { padding: 105px 0; background: #edf7f2; }
 .contact-section-heading { display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px; align-items: end; }

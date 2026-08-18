@@ -1695,8 +1695,8 @@
 
 .hiw-exception-copy h2 {
   max-width: 620px;
-  font-size: clamp(44px, 3.8vw, 62px);
-  line-height: 1.06;
+  font-size: clamp(40px, 3.2vw, 56px);
+  line-height: 1.08;
 }
 
 .hiw-exception-copy > p:not(.hiw-kicker) {
@@ -2606,5 +2606,141 @@
 
   .hiw-page .hiw-hero-board {
     display: none;
+  }
+}
+
+/* Align the How It Works FAQ with the Home FAQ treatment. */
+.hiw-page .hiw-faq {
+  padding: 108px 0;
+  background: var(--soft);
+}
+
+.hiw-page .hiw-faq > .hiw-container {
+  width: min(100% - 48px, 900px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hiw-page .hiw-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.hiw-page .hiw-faq-grid > div:first-child {
+  position: static;
+  max-width: none;
+  margin: 0;
+  text-align: center;
+}
+
+.hiw-page .hiw-faq-grid > div:first-child .hiw-kicker {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2fae68;
+}
+
+.hiw-page .hiw-faq h2 {
+  margin: 0 0 20px;
+  color: #103b2d;
+  font-size: clamp(2.15rem, 3.5vw, 3.2rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.hiw-page .hiw-faq-grid > div:first-child > p:last-child {
+  max-width: 690px !important;
+  margin: 0 auto !important;
+  color: #63756d !important;
+  font-size: 0.94rem !important;
+  line-height: 1.7 !important;
+  white-space: normal !important;
+}
+
+.hiw-page .hiw-accordion {
+  border: 1px solid rgba(31, 41, 55, 0.14);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 32px rgba(31, 41, 55, 0.08);
+  overflow: visible;
+}
+
+.hiw-page .hiw-accordion details {
+  position: relative;
+  border-bottom: 1px solid #d9e3dd;
+}
+
+.hiw-page .hiw-accordion details:last-child {
+  border-bottom: 0;
+}
+
+.hiw-page .hiw-accordion details[open]::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -18px;
+  width: 3px;
+  background: #42b978;
+  content: "";
+}
+
+.hiw-page .hiw-accordion summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px;
+  gap: 24px;
+  align-items: center;
+  min-height: 58px;
+  padding: 25px 0;
+  color: #173c2f;
+  font-size: 0.98rem;
+  font-weight: 750;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.hiw-page .hiw-accordion details[open] summary {
+  color: #167449;
+}
+
+.hiw-page .hiw-accordion summary span {
+  color: #2fae68;
+  font-size: 1.45rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  transition: transform 180ms ease;
+}
+
+.hiw-page .hiw-accordion details p {
+  max-width: 660px;
+  margin: 0;
+  padding: 0 48px 25px 0;
+  color: #64766e;
+  font-size: 0.87rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+  .hiw-page .hiw-faq {
+    padding: 78px 0;
+  }
+
+  .hiw-page .hiw-faq > .hiw-container {
+    width: min(100% - 40px, 900px);
+  }
+
+  .hiw-page .hiw-faq-grid > div:first-child {
+    text-align: left;
+  }
+
+  .hiw-page .hiw-accordion details[open]::before {
+    left: -10px;
+  }
+
+  .hiw-page .hiw-accordion summary {
+    gap: 16px;
+    padding: 22px 0;
   }
 }

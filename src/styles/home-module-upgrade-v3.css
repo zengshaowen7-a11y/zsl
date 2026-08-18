@@ -85,6 +85,9 @@
 
 .fh-home .fh-core-heading {
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -93,15 +96,16 @@
 }
 
 .fh-home .fh-core-item h3 {
-  margin-top: 24px;
+  margin: 24px 0 10px;
   font-size: 21px;
+  line-height: 1.28;
 }
 
 .fh-home .fh-core-item p {
   max-width: 320px;
-  margin-inline: auto;
+  margin: 0 auto;
   color: var(--home-muted);
-  line-height: 1.7;
+  line-height: 1.68;
 }
 
 /* Process: each milestone has a stable reading area. */
@@ -1337,10 +1341,6 @@
     white-space: normal;
   }
 
-  .fh-home .fh-platform-stat:last-child strong {
-    font-size: 22px;
-  }
-
   .fh-home .fh-platform-row {
     grid-column: 1 / -1;
   }
@@ -2349,10 +2349,10 @@
 
 .fh-home .fh-platform-stat strong,
 .fh-home .fh-platform-stat:last-child strong {
-  font-size: clamp(28px, 2.45vw, 34px) !important;
+  font-size: clamp(26px, 2.15vw, 30px) !important;
   font-weight: 820 !important;
   line-height: 1 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -3219,9 +3219,10 @@
 }
 
 /* v6.0 Give the core advantages heading the same one-line explainer pattern. */
-.fh-home .fh-core-heading > p {
-  max-width: 760px !important;
-  margin: 14px auto 0 !important;
+.fh-home :is(.fh-core-heading, .fh-process-heading, .fh-services-heading, .fh-fulfillment-compare-heading, .fh-qc-proof-heading, .fh-home-testimonials-heading, .fh-home-faq-intro) > p {
+  width: min(760px, 100%);
+  margin-top: 14px !important;
+  margin-inline: auto !important;
   color: rgba(31, 41, 55, 0.72) !important;
   font-size: 18px !important;
   line-height: 1.45 !important;
@@ -3229,13 +3230,13 @@
 }
 
 @media (min-width: 1200px) {
-  .fh-home .fh-core-heading > p {
+  .fh-home :is(.fh-core-heading, .fh-process-heading, .fh-services-heading, .fh-fulfillment-compare-heading, .fh-qc-proof-heading, .fh-home-testimonials-heading, .fh-home-faq-intro) > p {
     white-space: nowrap;
   }
 }
 
 @media (max-width: 767px) {
-  .fh-home .fh-core-heading > p {
+  .fh-home :is(.fh-core-heading, .fh-process-heading, .fh-services-heading, .fh-fulfillment-compare-heading, .fh-qc-proof-heading, .fh-home-testimonials-heading, .fh-home-faq-intro) > p {
     margin-top: 12px !important;
     font-size: 15px !important;
     text-align: left !important;
@@ -3646,8 +3647,9 @@
 }
 
 .fh-home .fh-home-testimonials-link {
-  margin-right: auto !important;
-  margin-left: auto !important;
+  display: flex !important;
+  width: fit-content !important;
+  margin: 34px auto 0 !important;
 }
 
 @media (max-width: 1023px) {
@@ -4203,6 +4205,154 @@
   }
 }
 
+/* Home v7.0: unify module footer CTA links. */
+.fh-home :is(
+  .fh-core-link,
+  .fh-process-link,
+  .fh-qc-proof-link,
+  .fh-home-testimonials-link,
+  .fh-core-services-cta .ff-btn
+) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 34px auto 0 !important;
+  padding: 0 0 9px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(22, 116, 73, 0.64) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #167449 !important;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  font-weight: 820 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.fh-home .fh-core-services-cta {
+  display: flex;
+  justify-content: center;
+}
+
+.fh-home :is(
+  .fh-core-link,
+  .fh-process-link,
+  .fh-qc-proof-link,
+  .fh-home-testimonials-link,
+  .fh-core-services-cta .ff-btn
+) svg {
+  width: 19px !important;
+  height: 19px !important;
+  flex: none;
+  color: currentColor !important;
+  transition: transform 180ms ease;
+}
+
+.fh-home :is(
+  .fh-core-link,
+  .fh-process-link,
+  .fh-qc-proof-link,
+  .fh-home-testimonials-link,
+  .fh-core-services-cta .ff-btn
+):hover {
+  border-bottom-color: #0f5f3a !important;
+  background: transparent !important;
+  color: #0f5f3a !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.fh-home :is(
+  .fh-core-link,
+  .fh-process-link,
+  .fh-qc-proof-link,
+  .fh-home-testimonials-link,
+  .fh-core-services-cta .ff-btn
+):hover svg {
+  transform: translateX(4px);
+}
+
+/* Home v7.1: standardize the three-line rhythm inside every centered H2 block. */
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) .ff-kicker {
+  margin-bottom: 14px !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) h2 {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) > p {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home :is(
+    .fh-core-link,
+    .fh-process-link,
+    .fh-qc-proof-link,
+    .fh-home-testimonials-link,
+    .fh-core-services-cta .ff-btn
+  ) {
+    margin-top: 26px !important;
+    font-size: 16px !important;
+  }
+
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) .ff-kicker {
+    margin-bottom: 12px !important;
+  }
+
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) h2 {
+    margin-bottom: 12px !important;
+  }
+}
+
 /* v6.6 Keep the quote section on the mint canvas with no photo overlay. */
 .fh-home .fh-home-quote {
   overflow: visible !important;
@@ -4221,11 +4371,30 @@
   z-index: 1;
 }
 
+.fh-home .fh-home-quote-grid {
+  grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(56px, 6vw, 88px);
+}
+
+.fh-home .fh-home-quote-copy,
+.fh-home .fh-home-quote-form {
+  min-width: 0;
+}
+
+.fh-home .fh-home-quote-copy h2 {
+  max-width: 560px;
+}
+
 @media (min-width: 900px) {
   .fh-home .fh-home-quote-copy h2 {
     max-width: 620px !important;
     white-space: nowrap;
   }
+}
+
+.fh-home .fh-home-quote-copy .fh-home-quote-title {
+  font-size: clamp(1rem, 1.1vw, 1.45rem) !important;
+  line-height: 1.05 !important;
 }
 
 /* v6.7 Quote form fields tailored to the simplified inquiry flow. */
@@ -4298,6 +4467,48 @@
   color: rgba(31, 41, 55, 0.48);
 }
 
+.fh-home .fh-phone-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 5;
+}
+
+.fh-home .fh-phone-split-label {
+  grid-column: 1 / -1;
+  margin-bottom: -2px;
+}
+
+.fh-home .fh-phone-number-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 16px !important;
+  border: 1px solid rgba(31, 41, 55, 0.18) !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  line-height: 1.2 !important;
+}
+
+.fh-home .fh-phone-number-input:focus {
+  border-color: #167449 !important;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(22, 116, 73, 0.12) !important;
+}
+
+.fh-home .fh-phone-number-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.fh-home .fh-phone-number-field .fh-phone-number-input {
+  margin-top: 9px !important;
+}
+
 .fh-home .fh-home-quote-form > button {
   margin-top: 24px;
 }
@@ -4320,9 +4531,9 @@
 .fh-home .fh-country-code-trigger {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  min-height: 50px;
+  min-height: 52px;
   margin-top: 9px;
   padding: 0 16px;
   cursor: pointer;
@@ -4352,15 +4563,16 @@
   box-shadow: 0 0 0 1px rgba(31, 41, 55, 0.12);
 }
 
-.fh-home .fh-country-code-trigger > span:first-child {
+.fh-home .fh-country-code-placeholder {
   flex: 1;
   color: rgba(31, 41, 55, 0.48);
   font-weight: 760;
 }
 
-.fh-home .fh-country-code-trigger span {
+.fh-home .fh-country-code-value {
   flex: 0 0 auto;
-  font-weight: 780;
+  color: #1f2937;
+  font-weight: 820;
 }
 
 .fh-home .fh-country-code-trigger small {
@@ -4372,6 +4584,20 @@
   font-weight: 650;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.fh-home .fh-form-error {
+  display: block;
+  margin-top: 7px;
+  color: #dc2626 !important;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.fh-home .fh-country-code-trigger span {
+  flex: 0 0 auto;
+  font-weight: 780;
 }
 
 .fh-home .fh-country-code-menu small {
@@ -4392,7 +4618,7 @@
 
 .fh-home .fh-country-code-menu {
   position: absolute;
-  z-index: 20;
+  z-index: 50;
   top: calc(100% + 8px);
   right: 0;
   left: 0;
@@ -4428,6 +4654,18 @@
 }
 
 @media (max-width: 767px) {
+  .fh-home .fh-home-quote-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .fh-home .fh-home-quote-copy .fh-home-quote-title {
+    font-size: 28px !important;
+    white-space: normal !important;
+    width: auto !important;
+    text-wrap: balance !important;
+  }
+
   .fh-home .fh-home-quote-form {
     padding: 24px !important;
   }
@@ -4438,6 +4676,10 @@
 
   .fh-home .fh-home-quote-wide {
     grid-column: auto !important;
+  }
+
+  .fh-home .fh-phone-split {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -4463,4 +4705,230 @@
 .fh-home .fh-home-quote-form > button.ff-btn-primary:disabled {
   opacity: 0.72;
   transform: none;
+}
+
+/* Home v6.9: final shared rhythm for all centered H2 sections. */
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) {
+  width: min(1440px, 100%) !important;
+  margin-inline: auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) .ff-kicker {
+  margin-bottom: 0 !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) h2 {
+  font-size: clamp(38px, 2.4vw, 46px) !important;
+  line-height: 1.08 !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) > p {
+  width: min(900px, 100%) !important;
+  margin: 14px auto 0 !important;
+  color: rgba(31, 41, 55, 0.72) !important;
+  font-size: 17px !important;
+  line-height: 1.5 !important;
+}
+
+@media (min-width: 1200px) {
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) > p {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1199px) {
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) h2 {
+    font-size: clamp(34px, 4.8vw, 44px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) h2 {
+    font-size: clamp(30px, 6.2vw, 34px) !important;
+  }
+
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) > p {
+    width: 100% !important;
+    margin-top: 12px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Home v7.2: force the final heading rhythm after older section-specific rules. */
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) .ff-kicker + h2 {
+  margin-top: 18px !important;
+  margin-bottom: 16px !important;
+}
+
+.fh-home :is(
+  .fh-core-heading,
+  .fh-process-heading,
+  .fh-services-heading,
+  .fh-fulfillment-compare-heading,
+  .fh-qc-proof-heading,
+  .fh-home-testimonials-heading,
+  .fh-home-faq-intro
+) > p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .fh-home :is(
+    .fh-core-heading,
+    .fh-process-heading,
+    .fh-services-heading,
+    .fh-fulfillment-compare-heading,
+    .fh-qc-proof-heading,
+    .fh-home-testimonials-heading,
+    .fh-home-faq-intro
+  ) .ff-kicker + h2 {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+/* Home v7.3: center every module CTA explicitly. */
+.fh-home :is(
+  .fh-core-link,
+  .fh-process-link,
+  .fh-qc-proof-link,
+  .fh-home-testimonials-link,
+  .fh-core-services-cta .fh-core-link
+) {
+  display: flex !important;
+  width: fit-content !important;
+  margin: 34px auto 0 !important;
+}
+
+.fh-home .fh-core-services-cta {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home :is(
+    .fh-core-link,
+    .fh-process-link,
+    .fh-qc-proof-link,
+    .fh-home-testimonials-link,
+    .fh-core-services-cta .fh-core-link
+  ) {
+    margin-top: 26px !important;
+  }
 }
