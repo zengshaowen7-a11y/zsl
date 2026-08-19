@@ -28,6 +28,13 @@ const principles = [
   [FiPackage, "Rules that scale", "Approved SKUs, variants, packaging and exceptions become repeatable daily fulfillment instructions."],
 ];
 
+const heroSupportCards = [
+  [FiMessageCircle, "One clear contact", "Product, QC and shipment context stays with one account lead."],
+  [FiShield, "Risk checked early", "Samples, stock and packing details are reviewed before volume moves."],
+  [FiClipboard, "Shared order notes", "Approvals, exceptions and requirements stay documented for repeat work."],
+  [FiPackage, "Ready to fulfill", "SKU rules, packaging and tracking handoff are prepared before scale."],
+];
+
 const fitItems = [
   "You want one contact across sourcing, QC and fulfillment.",
   "Product consistency matters more than finding the lowest visible price.",
@@ -75,7 +82,16 @@ export default function WhyJWRedesign() {
         </div>
       </section>
 
-      <section className="wjw-facts"><div className="wjw-container"><div><strong>6+</strong><span>Years Experience</span></div><div><strong>30+</strong><span>Markets Supported</span></div><div><strong>3</strong><span>QC Stages</span></div><div><strong>One-on-One</strong><span>Expert Support</span></div></div></section>
+      <section className="wjw-facts">
+        <div className="wjw-container">
+          {heroSupportCards.map(([Icon, title, copy]) => (
+            <article key={title}>
+              <Icon aria-hidden="true" />
+              <div><strong>{title}</strong><span>{copy}</span></div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="wjw-compare" id="jw-difference">
         <div className="wjw-container">
@@ -94,8 +110,15 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-evidence">
         <div className="wjw-container wjw-evidence-grid">
-          <div className="wjw-evidence-media"><Image src="/images/generated/jw-qc-inspection-v3.png" alt="JW team recording product inspection results" fill sizes="(max-width: 850px) 100vw, 50vw" /></div>
-          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Clear QC evidence for every decision.</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
+          <div className="wjw-evidence-media">
+            <div className="wjw-evidence-shot">
+              <Image src="/images/generated/jw-qc-inspection-v3.png" alt="JW team recording product inspection results" fill sizes="(max-width: 850px) 100vw, 50vw" />
+            </div>
+            <div className="wjw-evidence-shot">
+              <Image src="/images/generated/jw-quality-check-v2.png" alt="JW team checking product quality before dispatch" fill sizes="(max-width: 850px) 100vw, 50vw" />
+            </div>
+          </div>
+          <div className="wjw-evidence-copy"><p className="wjw-kicker">VISIBLE OPERATING EVIDENCE</p><h2>Clear QC decisions.</h2><p>Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.</p>
             <div className="wjw-report">
               <div><span>QC REVIEW</span><strong>SKU: JW-1024</strong></div>
               <dl>
@@ -123,7 +146,7 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-support">
         <div className="wjw-container wjw-support-grid">
-          <div><p className="wjw-kicker">LIVE ACCOUNT SUPPORT</p><h2>One clear handoff for every order.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
+          <div><p className="wjw-kicker">LIVE ACCOUNT SUPPORT</p><h2>One handoff per order.</h2><p>Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.</p><ul><li><FiMessageCircle /> One primary communication point</li><li><FiClipboard /> Decisions and packing rules documented</li><li><FiCheckCircle /> Exceptions followed through to resolution</li></ul></div>
           <div className="wjw-support-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt="JW warehouse and account support team" fill sizes="(max-width: 850px) 100vw, 48vw" /></div>
         </div>
       </section>

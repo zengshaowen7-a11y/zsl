@@ -80,7 +80,7 @@ export default function ScrollReveal() {
       ],
       [
         ".tst-page :is(.tst-featured-grid .tst-review, .tst-review-grid .tst-review, .tst-video-grid article, .tst-facts .tst-container > div)",
-        "reveal-scale",
+        "reveal-up",
       ],
       [
         ".tst-page :is(.tst-theme-grid > div, .tst-final .tst-container > div)",

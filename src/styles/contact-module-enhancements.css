@@ -21,9 +21,10 @@
   width: 100%;
   display: grid !important;
   grid-template-columns: minmax(0, 0.82fr) minmax(540px, 1.18fr) !important;
-  gap: clamp(54px, 7vw, 104px) !important;
+  gap: clamp(42px, 5vw, 72px) !important;
   align-items: center !important;
-  padding: clamp(76px, 7vw, 112px) max(48px, calc((100vw - 1280px) / 2)) !important;
+  padding: clamp(56px, 5vw, 84px) max(48px, calc((100vw - 1280px) / 2))
+    clamp(40px, 4vw, 64px) !important;
   background: #d9f6e7 !important;
 }
 
@@ -42,7 +43,7 @@
 .ctw-page .ctw-intro h1 {
   max-width: none;
   color: var(--ctw-ink) !important;
-  font-size: clamp(32px, 2.4vw, 38px) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
   line-height: 1.08 !important;
   white-space: nowrap;
   text-wrap: nowrap;
@@ -372,19 +373,19 @@
 
 /* Preparation strip: four concise inputs shown as an intake checklist. */
 .ctw-page .ctw-prepare {
-  padding: 64px 0 !important;
+  padding: 40px 0 44px !important;
   background: #f4faf6 !important;
 }
 
 .ctw-page .ctw-prepare > .ctw-container {
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr) !important;
-  gap: clamp(48px, 7vw, 94px) !important;
+  gap: clamp(28px, 5vw, 60px) !important;
 }
 
 .ctw-page .ctw-prepare h2 {
   max-width: 420px;
   color: var(--ctw-ink) !important;
-  font-size: clamp(26px, 2.4vw, 34px) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
   line-height: 1.12 !important;
   text-wrap: balance;
 }
@@ -396,9 +397,9 @@
 }
 
 .ctw-page .ctw-prepare li {
-  min-height: 68px;
+  min-height: 58px;
   gap: 14px;
-  padding: 14px 16px !important;
+  padding: 12px 14px !important;
   border: 1px solid var(--ctw-line) !important;
   border-radius: 7px;
   background: #fff;
@@ -424,7 +425,7 @@
 
 /* Response process: three connected decisions rather than generic cards. */
 .ctw-page .ctw-next {
-  padding: clamp(76px, 7vw, 104px) 0 !important;
+  padding: clamp(54px, 5vw, 76px) 0 !important;
   background: #edf5f7 !important;
 }
 
@@ -432,9 +433,9 @@
   display: grid !important;
   max-width: none !important;
   grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.68fr) !important;
-  gap: clamp(42px, 7vw, 94px) !important;
+  gap: clamp(28px, 5vw, 64px) !important;
   align-items: end !important;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(50, 127, 153, 0.2);
   text-align: left !important;
 }
@@ -443,6 +444,7 @@
   max-width: 860px;
   margin-left: 0 !important;
   color: var(--ctw-ink) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
   text-wrap: balance;
 }
 
@@ -451,7 +453,7 @@
 .ctw-page .ctw-next-grid {
   position: relative;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 16px !important;
+  gap: 14px !important;
   border: 0 !important;
 }
 
@@ -469,8 +471,8 @@
 
 .ctw-page .ctw-next-grid article {
   z-index: 1;
-  min-height: 270px !important;
-  padding: 30px !important;
+  min-height: 240px !important;
+  padding: 24px !important;
   border: 1px solid var(--ctw-line) !important;
   border-top: 5px solid var(--ctw-blue) !important;
   border-radius: 8px !important;
@@ -489,7 +491,7 @@
 }
 
 .ctw-page .ctw-next-grid article > div {
-  margin-bottom: 54px !important;
+  margin-bottom: 38px !important;
 }
 
 .ctw-page .ctw-next-grid article svg {
@@ -511,7 +513,7 @@
 
 /* FAQ: sticky context and a clear expanded state. */
 .ctw-page .ctw-faq {
-  padding: 108px 0 !important;
+  padding: 72px 0 !important;
   background: #d9f6e7 !important;
 }
 
@@ -524,7 +526,7 @@
 .ctw-page .ctw-faq-grid {
   display: grid !important;
   grid-template-columns: 1fr !important;
-  gap: 40px !important;
+  gap: 28px !important;
   align-items: start !important;
 }
 
@@ -553,7 +555,7 @@
 
 .ctw-page .ctw-faq-grid > div:first-child > p:last-of-type {
   max-width: 760px !important;
-  margin: 0 auto !important;
+  margin: 0 auto 10px !important;
   color: #63756d !important;
   font-size: 0.94rem !important;
   line-height: 1.7 !important;
@@ -627,7 +629,7 @@
 
 /* Direct return band. */
 .ctw-page .ctw-direct {
-  padding: 64px 0 !important;
+  padding: 40px 0 !important;
   background: #d9f6e7 !important;
 }
 
@@ -757,4 +759,467 @@
 @media (prefers-reduced-motion: reduce) {
   .ctw-page .ctw-next-grid::before { animation: none; }
   .ctw-page :is(.contact-enquiry-form, .contact-enquiry-form input, .contact-enquiry-form select, .contact-enquiry-form textarea, .ctw-prepare li, .ctw-next-grid article, .ctw-next-grid article svg, .ctw-accordion details, .ctw-accordion summary span, .ctw-faq-grid a, .ctw-direct a) { transition: none; }
+}
+
+/* Final contact page canvas: keep every page section on the shared soft green. */
+body main.ctw-page.ctw-page[class][class] {
+  --ctw-page-green: #D9F6E7;
+  --ctw-ink: #173a31;
+  --ctw-muted: #53645d;
+  --ctw-green: #167449;
+  --ctw-line: rgba(22, 116, 73, 0.16);
+  color: var(--ctw-ink) !important;
+  background: var(--ctw-page-green) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] :is(
+  section.ctw-hero,
+  section.ctw-prepare,
+  section.ctw-next,
+  section.ctw-faq,
+  section.ctw-direct,
+  .ctw-intro,
+  .ctw-intro-copy,
+  .ctw-form-side
+) {
+  background: var(--ctw-page-green) !important;
+  border-color: var(--ctw-line) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-hero {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-hero::before {
+  position: absolute !important;
+  inset: 0 !important;
+  content: "" !important;
+  background-image:
+    linear-gradient(rgba(22, 116, 73, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 116, 73, 0.07) 1px, transparent 1px) !important;
+  background-size: 42px 42px !important;
+  pointer-events: none !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-hero > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro {
+  color: var(--ctw-ink) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro .ctw-kicker,
+body main.ctw-page.ctw-page[class][class] .ctw-kicker {
+  color: var(--ctw-green) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro h1,
+body main.ctw-page.ctw-page[class][class] .ctw-prepare h2,
+body main.ctw-page.ctw-page[class][class] .ctw-heading h2,
+body main.ctw-page.ctw-page[class][class] .ctw-faq h2,
+body main.ctw-page.ctw-page[class][class] .ctw-direct h2 {
+  color: var(--ctw-ink) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro-copy > p:not(.ctw-kicker),
+body main.ctw-page.ctw-page[class][class] :is(.ctw-heading > p, .ctw-faq-grid > div:first-child > p, .ctw-direct p) {
+  color: var(--ctw-muted) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro-copy > ul {
+  border-top-color: var(--ctw-line) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro-copy > ul li {
+  color: var(--ctw-ink) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro-copy > ul svg,
+body main.ctw-page.ctw-page[class][class] .ctw-response > svg {
+  color: var(--ctw-green) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-response strong {
+  color: var(--ctw-ink) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-response span {
+  color: var(--ctw-muted) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-intro-media {
+  border: 1px solid var(--ctw-line) !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] :is(.contact-enquiry-form, .ctw-prepare li, .ctw-next-grid article, .ctw-direct > .ctw-container) {
+  border-color: var(--ctw-line) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* Match the Contact FAQ scale and spacing to the Why JW FAQ reference. */
+body main.ctw-page.ctw-page[class][class] section.ctw-faq.ctw-faq {
+  padding: clamp(74px, 6vw, 92px) 0 !important;
+  background: #D9F6E7 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq > .ctw-container {
+  width: min(1220px, calc(100% - 84px)) !important;
+  max-width: 1220px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child {
+  max-width: 1160px !important;
+  margin: 0 auto clamp(54px, 5vw, 76px) !important;
+  text-align: center !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child .ctw-kicker {
+  margin: 0 0 24px !important;
+  color: #18b66f !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 18.2px !important;
+  letter-spacing: 0 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 36px !important;
+  font-weight: 760 !important;
+  line-height: 38.88px !important;
+  letter-spacing: 0 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child > p:last-of-type {
+  max-width: 980px !important;
+  margin: 32px auto 0 !important;
+  color: #61716a !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 34px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion {
+  border-top: 1px solid rgba(23, 58, 49, 0.22) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion details {
+  border-bottom: 1px solid rgba(23, 58, 49, 0.22) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  min-height: 112px !important;
+  padding: 28px 12px 28px 0 !important;
+  color: #1f2937 !important;
+  font-size: 24px !important;
+  font-weight: 760 !important;
+  line-height: 30px !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  list-style: none !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion summary:hover,
+body main.ctw-page.ctw-page[class][class] .ctw-accordion details[open] summary {
+  color: #167449 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion summary span {
+  flex: 0 0 auto !important;
+  display: grid !important;
+  width: 36px !important;
+  height: 36px !important;
+  place-items: center !important;
+  color: currentColor !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  background: transparent !important;
+  border: 0 !important;
+  transform: none !important;
+  transition: transform 220ms ease !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion details[open] summary span {
+  color: #167449 !important;
+  transform: rotate(180deg) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion summary svg {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  stroke-width: 2.4 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion details p {
+  max-width: 1580px !important;
+  margin: -8px 86px 42px 0 !important;
+  padding: 0 !important;
+  color: #61716a !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 34px !important;
+}
+
+@media (max-width: 767px) {
+  body main.ctw-page.ctw-page[class][class] section.ctw-faq.ctw-faq {
+    padding: 58px 0 !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-faq > .ctw-container {
+    width: min(100% - 32px, 1220px) !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child {
+    margin-bottom: 34px !important;
+    text-align: left !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-faq h2 {
+    font-size: 34px !important;
+    line-height: 36.72px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child > p:last-of-type {
+    margin-top: 18px !important;
+    font-size: 16px !important;
+    line-height: 27.2px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-accordion summary {
+    min-height: 88px !important;
+    padding: 22px 0 !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-accordion details p {
+    margin: -4px 42px 26px 0 !important;
+    font-size: 16px !important;
+    line-height: 27.2px !important;
+  }
+}
+
+/* Match the Contact FAQ density to the tighter Why JW FAQ reference. */
+body main.ctw-page.ctw-page[class][class] section.ctw-faq.ctw-faq {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(54px, 5vw, 70px) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child {
+  max-width: 1120px !important;
+  margin-bottom: 42px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child .ctw-kicker {
+  margin-bottom: 18px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child > p:last-of-type {
+  margin-top: 24px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion summary {
+  min-height: 85px !important;
+  padding: 24px 0 !important;
+  font-size: 24px !important;
+  line-height: 30px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-accordion details p {
+  margin: -6px 54px 30px 0 !important;
+  font-size: 16px !important;
+  line-height: 25px !important;
+}
+
+body main.ctw-page.ctw-page[class][class] :is(
+  .ctw-faq-grid > div:first-child,
+  .ctw-faq-grid > div:first-child *,
+  .ctw-accordion,
+  .ctw-accordion details,
+  .ctw-accordion summary,
+  .ctw-accordion details p
+) {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 767px) {
+  body main.ctw-page.ctw-page[class][class] section.ctw-faq.ctw-faq {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-faq-grid > div:first-child {
+    margin-bottom: 30px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-accordion summary {
+    min-height: 72px !important;
+    padding: 18px 0 !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-accordion details p {
+    margin: -3px 32px 22px 0 !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* Match the Contact final CTA card to the Testimonials final CTA. */
+body main.ctw-page.ctw-page[class][class] section.ctw-direct.ctw-direct {
+  padding: clamp(46px, 4vw, 60px) 0 !important;
+  border-top: 1px solid rgba(22, 116, 73, 0.16) !important;
+  background: #D9F6E7 !important;
+  color: #173a31 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct > .ctw-container {
+  display: flex !important;
+  width: min(1180px, calc(100% - 48px)) !important;
+  min-height: 258px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: clamp(34px, 5vw, 70px) !important;
+  padding: clamp(34px, 4vw, 56px) clamp(36px, 4vw, 58px) !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-left: 7px solid #167449 !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.68) !important;
+  box-shadow: 0 18px 42px rgba(11, 41, 32, 0.08) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct > .ctw-container > svg {
+  display: none !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct :is(.ctw-container, .ctw-container > div, .ctw-container > div *, a) {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct .ctw-kicker {
+  margin: 0 0 20px !important;
+  color: #53645d !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct h2 {
+  max-width: 760px !important;
+  margin: 0 !important;
+  color: #173a31 !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 760 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct p:not(.ctw-kicker) {
+  max-width: 650px !important;
+  margin: 17px 0 0 !important;
+  color: #53645d !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct a {
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  min-height: 54px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 11px !important;
+  padding: 0 24px !important;
+  border: 1px solid #167449 !important;
+  border-radius: 8px !important;
+  background: #167449 !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  box-shadow: 0 22px 42px rgba(22, 116, 73, 0.18) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct a:hover {
+  border-color: #0f5d38 !important;
+  background: #0f5d38 !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+body main.ctw-page.ctw-page[class][class] .ctw-direct a svg {
+  width: 19px !important;
+  height: 19px !important;
+}
+
+@media (max-width: 767px) {
+  body main.ctw-page.ctw-page[class][class] section.ctw-direct.ctw-direct {
+    padding: 34px 0 !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-direct > .ctw-container {
+    display: block !important;
+    width: min(100% - 32px, 1180px) !important;
+    min-height: 0 !important;
+    padding: 28px 22px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-direct h2 {
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-direct p:not(.ctw-kicker) {
+    margin-top: 16px !important;
+    font-size: 16px !important;
+  }
+
+  body main.ctw-page.ctw-page[class][class] .ctw-direct a {
+    width: 100% !important;
+    min-height: 56px !important;
+    margin-top: 24px !important;
+    padding: 0 20px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Final size lock for the three Contact titles the page keeps re-scaling. */
+body main.ctw-page.ctw-page[class][class][class]
+  :is(.ctw-intro h1, .ctw-prepare h2, .ctw-heading h2, .ctw-direct h2) {
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  font-weight: 760 !important;
+  text-wrap: balance !important;
+}
+
+@media (max-width: 767px) {
+  body main.ctw-page.ctw-page[class][class][class]
+    :is(.ctw-intro h1, .ctw-prepare h2, .ctw-heading h2, .ctw-direct h2) {
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+    line-height: 1.08 !important;
+  }
 }

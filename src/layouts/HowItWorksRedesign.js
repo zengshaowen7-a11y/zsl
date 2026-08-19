@@ -29,8 +29,8 @@ const startingDetails = [
     Icon: FiClipboard,
   },
   {
-    title: "Branding or QC requirements",
-    copy: "Share packaging, label or inspection details that should be protected before dispatch.",
+    title: "Branding/QC needs",
+    copy: "Send packaging, label and inspection notes before dispatch.",
     Icon: FiShield,
   },
 ];
@@ -105,9 +105,36 @@ export default function HowItWorksRedesign() {
             <a href="#five-stages" className="hiw-button hiw-button-ghost">See the Five Stages</a>
           </div>
           <ul><li><FiCheck /> Clear approval points</li><li><FiCheck /> One dedicated contact</li><li><FiCheck /> Tracking returned</li></ul>
+          <div className="hiw-hero-live" aria-hidden="true">
+            <div className="hiw-hero-live-head">
+              <span>Live workflow</span>
+              <strong>Next update in progress</strong>
+            </div>
+            <div className="hiw-hero-live-text">
+              <i>Product brief reviewed</i>
+              <i>Supplier terms connected</i>
+              <i>QC notes saved</i>
+              <i>Tracking update prepared</i>
+            </div>
+          </div>
         </div>
         <div className="hiw-hero-media">
-          <Image src="/images/generated/jw-branded-packing-v3.png" alt="JW fulfillment team preparing customer orders" fill priority sizes="(max-width: 767px) 100vw, 52vw" />
+          <div className="hiw-hero-panel" aria-hidden="true">
+            <div className="hiw-hero-panel-head">
+              <span>Live workflow</span>
+              <strong>Ready for review</strong>
+            </div>
+            <div className="hiw-hero-progress">
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="hiw-hero-review">
+              <span>Product brief</span>
+              <strong>Supplier terms, QC notes and shipping rules stay connected before orders move.</strong>
+            </div>
+          </div>
           <div className="hiw-hero-board" aria-hidden="true">
             <span><b>01</b> Product link</span>
             <span><b>02</b> Quote</span>
@@ -181,7 +208,7 @@ export default function HowItWorksRedesign() {
             </div>
             <div className="hiw-exception-note">
               <span>Decision queue</span>
-              <strong>QC photo review · stock variance · packaging approval</strong>
+              <strong>QC photos · stock · packing OK</strong>
             </div>
           </div>
         </div>
@@ -189,8 +216,8 @@ export default function HowItWorksRedesign() {
 
       <section className="hiw-faq">
         <div className="hiw-container hiw-faq-grid">
-          <div><p className="hiw-kicker">BEFORE YOU START</p><h2>Common process questions.</h2><p>Details vary by product, but the decision points should always stay visible.</p></div>
-          <div className="hiw-accordion">{faqs.map(([question, answer], index) => <details name="hiw-faq" key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
+          <div><p className="hiw-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>What to know before you start</h2><p>Quick answers about setup timing, quality checks, order handoff and tracking updates.</p></div>
+          <div className="hiw-accordion">{faqs.map(([question, answer], index) => <details name="hiw-faq" key={question} open={index === 0}><summary>{question}<span aria-hidden="true">⌄</span></summary><p>{answer}</p></details>)}</div>
         </div>
       </section>
 

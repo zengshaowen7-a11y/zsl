@@ -827,7 +827,7 @@
 .wjw-hero-media {
   width: min(100% - 96px, 1180px) !important;
   min-height: clamp(420px, 44vw, 620px) !important;
-  margin: clamp(46px, 5vw, 72px) auto 0 !important;
+  margin: clamp(18px, 2.4vw, 30px) auto 0 !important;
   overflow: hidden !important;
   border: 1px solid rgba(22, 116, 73, .18) !important;
   border-radius: 8px !important;
@@ -1123,5 +1123,536 @@
     bottom: 14px;
     padding: 12px;
     font-size: 12px;
+  }
+}
+
+/* Replace the numeric fact strip with practical support cards. */
+body main.wjw-page.wjw-page[class][class] .wjw-facts {
+  padding: clamp(44px, 4vw, 64px) 0 !important;
+  border: 0 !important;
+  background: #d9f6e7 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts > .wjw-container {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: min(100% - 96px, 1280px) !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts article {
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  align-items: start !important;
+  min-height: 150px !important;
+  padding: 24px 20px !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  box-shadow: 0 18px 40px rgba(11, 41, 32, 0.06) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts article:nth-child(1) { background: linear-gradient(135deg, #fff7d7, rgba(255,255,255,.72)) !important; }
+body main.wjw-page.wjw-page[class][class] .wjw-facts article:nth-child(2) { background: linear-gradient(135deg, #e6fff2, rgba(255,255,255,.72)) !important; }
+body main.wjw-page.wjw-page[class][class] .wjw-facts article:nth-child(3) { background: linear-gradient(135deg, #e0f1ff, rgba(255,255,255,.72)) !important; }
+body main.wjw-page.wjw-page[class][class] .wjw-facts article:nth-child(4) { background: linear-gradient(135deg, #ecffe9, rgba(255,255,255,.72)) !important; }
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts svg {
+  width: 42px !important;
+  height: 42px !important;
+  padding: 10px !important;
+  border: 1px solid rgba(22, 116, 73, 0.12) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: #167449 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts strong {
+  display: block !important;
+  min-width: 0 !important;
+  color: #1f2937 !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-facts span {
+  display: block !important;
+  margin-top: 10px !important;
+  color: #52616b !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 1000px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-facts > .wjw-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: min(100% - 48px, 1280px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-facts {
+    padding: 36px 0 !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-facts > .wjw-container {
+    grid-template-columns: 1fr !important;
+    width: min(100% - 32px, 1280px) !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-facts article {
+    min-height: 0 !important;
+  }
+}
+
+/* Keep every Why JW Dropshipping page section on the shared mint background. */
+body main.wjw-page.wjw-page[class][class],
+body main.wjw-page.wjw-page[class][class] section,
+body main.wjw-page.wjw-page[class][class] :is(
+  .wjw-hero,
+  .wjw-facts,
+  .wjw-compare,
+  .wjw-principles,
+  .wjw-evidence,
+  .wjw-support,
+  .wjw-fit,
+  .wjw-faq,
+  .wjw-final
+) {
+  background: #d9f6e7 !important;
+}
+
+/* Match the Why JW FAQ typography and rhythm to the How It Works FAQ section. */
+body main.wjw-page.wjw-page[class][class] .wjw-faq {
+  padding: 108px 0 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq > .wjw-container {
+  display: block !important;
+  width: min(100% - 48px, 1440px) !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq-grid {
+  display: block !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq-grid > div:first-child {
+  position: static !important;
+  max-width: 1180px !important;
+  margin: 0 auto 42px !important;
+  text-align: center !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq-grid > div:first-child .wjw-kicker {
+  display: inline-block !important;
+  margin-bottom: 16px !important;
+  color: #2fae68 !important;
+  font-size: 13px !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 36px !important;
+  font-weight: 760 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-faq-grid > div:first-child > p:last-child {
+  max-width: 900px !important;
+  margin: 18px auto 0 !important;
+  color: #63756d !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion {
+  width: min(100%, 1220px) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.28) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details[open],
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details[open] summary {
+  background: transparent !important;
+  color: #1f2937 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 34px !important;
+  gap: 24px !important;
+  align-items: center !important;
+  min-height: 0 !important;
+  padding: 28px 0 !important;
+  color: #1f2937 !important;
+  background: transparent !important;
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  line-height: 1.28 !important;
+  text-align: left !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion summary:hover {
+  color: #167449 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion summary span {
+  display: block !important;
+  width: 34px !important;
+  height: 34px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #1f2937 !important;
+  font-size: 0 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion summary span::before {
+  display: block !important;
+  color: currentColor !important;
+  content: "⌄";
+  font-size: 28px !important;
+  line-height: 1 !important;
+  transition: transform 180ms ease !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details[open] summary span {
+  color: #167449 !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details[open] summary span::before {
+  transform: rotate(180deg) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-accordion details p {
+  max-width: 1120px !important;
+  margin: -6px 54px 30px 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(31, 41, 55, 0.72) !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-faq {
+    padding: 78px 0 !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-faq > .wjw-container {
+    width: min(100% - 32px, 1440px) !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-faq h2 {
+    font-size: 34px !important;
+    white-space: normal !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-faq-grid > div:first-child > p:last-child {
+    font-size: 16px !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-accordion summary {
+    padding: 22px 0 !important;
+    font-size: 20px !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] .wjw-accordion details p {
+    margin: -4px 42px 24px 0 !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Tighten the gap between the Why JW hero video and the support cards. */
+body main.wjw-page.wjw-page[class][class] section.wjw-hero.wjw-hero {
+  padding-bottom: clamp(28px, 2.4vw, 34px) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] section.wjw-facts.wjw-facts {
+  padding-top: clamp(20px, 2vw, 26px) !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] section.wjw-hero.wjw-hero {
+    padding-bottom: 26px !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] section.wjw-facts.wjw-facts {
+    padding-top: 18px !important;
+  }
+}
+
+/* Align major Why JW section heading typography with the FAQ heading scale. */
+body main.wjw-page.wjw-page[class][class] :is(
+  .wjw-compare .wjw-kicker,
+  .wjw-principles .wjw-kicker,
+  .wjw-evidence .wjw-kicker,
+  .wjw-support .wjw-kicker,
+  .wjw-fit .wjw-kicker
+) {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 18.2px !important;
+}
+
+body main.wjw-page.wjw-page[class][class] :is(
+  .wjw-compare .wjw-heading h2,
+  .wjw-principles .wjw-heading h2,
+  .wjw-evidence h2,
+  .wjw-support h2,
+  .wjw-fit .wjw-heading h2
+) {
+  font-size: 36px !important;
+  font-weight: 760 !important;
+  line-height: 38.88px !important;
+}
+
+body main.wjw-page.wjw-page[class][class] :is(
+  .wjw-compare .wjw-heading > p,
+  .wjw-principles .wjw-heading-centered > p,
+  .wjw-evidence-copy > p:not(.wjw-kicker),
+  .wjw-support-grid > div:first-child > p:not(.wjw-kicker),
+  .wjw-fit .wjw-heading > p
+) {
+  font-size: 20px !important;
+  line-height: 34px !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] :is(
+    .wjw-compare .wjw-heading h2,
+    .wjw-principles .wjw-heading h2,
+    .wjw-evidence h2,
+    .wjw-support h2,
+    .wjw-fit .wjw-heading h2
+  ) {
+    font-size: 34px !important;
+    line-height: 36.72px !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] :is(
+    .wjw-compare .wjw-heading > p,
+    .wjw-principles .wjw-heading-centered > p,
+    .wjw-evidence-copy > p:not(.wjw-kicker),
+    .wjw-support-grid > div:first-child > p:not(.wjw-kicker),
+    .wjw-fit .wjw-heading > p
+  ) {
+    font-size: 16px !important;
+    line-height: 27.2px !important;
+  }
+}
+
+/* Animate the hero support strip so the three proof points feel active. */
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul {
+  position: relative !important;
+  overflow: hidden !important;
+  animation: wjwHeroSupportIn 640ms ease both !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, #167449, transparent) !important;
+  transform: translateX(-80%) !important;
+  animation: wjwHeroSupportScan 2.8s ease-in-out infinite !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li {
+  position: relative !important;
+  min-height: 52px !important;
+  border-radius: 8px !important;
+  transition: color 180ms ease, background 180ms ease, transform 220ms ease !important;
+  animation: wjwHeroSupportItem 560ms ease both !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li:nth-child(2) {
+  animation-delay: 120ms !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li:nth-child(3) {
+  animation-delay: 240ms !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li:hover {
+  color: #167449 !important;
+  background: rgba(255, 255, 255, 0.42) !important;
+  transform: translateY(-3px) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul svg {
+  color: #167449 !important;
+  animation: wjwHeroSupportCheck 2.35s ease-in-out infinite !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li:nth-child(2) svg {
+  animation-delay: 180ms !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li:nth-child(3) svg {
+  animation-delay: 360ms !important;
+}
+
+@keyframes wjwHeroSupportIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wjwHeroSupportItem {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wjwHeroSupportScan {
+  0% { transform: translateX(-80%); opacity: 0.2; }
+  45%, 65% { opacity: 0.85; }
+  100% { transform: translateX(80%); opacity: 0.2; }
+}
+
+@keyframes wjwHeroSupportCheck {
+  0%, 100% { transform: scale(1); filter: none; }
+  45% { transform: scale(1.18); filter: drop-shadow(0 0 8px rgba(22, 116, 73, 0.28)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul,
+  body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul::before,
+  body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul li,
+  body main.wjw-page.wjw-page[class][class] .wjw-hero-copy > ul svg {
+    animation: none !important;
+  }
+}
+
+/* Split the evidence media into two stacked QC photos. */
+body main.wjw-page.wjw-page[class][class] .wjw-evidence-media {
+  display: grid !important;
+  grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  min-height: clamp(560px, 47vw, 720px) !important;
+  overflow: visible !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-evidence-shot {
+  position: relative !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.56) !important;
+  box-shadow: 0 18px 42px rgba(11, 41, 32, 0.08) !important;
+  transition: transform 220ms ease, box-shadow 220ms ease !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-evidence-shot:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 24px 54px rgba(11, 41, 32, 0.12) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-evidence-shot img {
+  object-fit: cover !important;
+  transition: transform 600ms ease !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-evidence-shot:hover img {
+  transform: scale(1.035) !important;
+}
+
+@media (max-width: 1000px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-evidence-media {
+    min-height: 680px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-evidence-media {
+    min-height: 560px !important;
+    gap: 14px !important;
+  }
+}
+
+/* Match the final CTA heading size to the How It Works final CTA. */
+body main.wjw-page.wjw-page[class][class] section.wjw-final.wjw-final h2 {
+  max-width: 700px !important;
+  font-size: clamp(28px, 2vw, 36px) !important;
+  line-height: 1.1 !important;
+  font-weight: 760 !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] section.wjw-final.wjw-final h2 {
+    font-size: 28px !important;
+  }
+}
+
+/* Keep Why JW section handoffs tighter and visually consistent. */
+body main.wjw-page.wjw-page[class][class] section.wjw-facts.wjw-facts {
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] section.wjw-compare.wjw-compare,
+body main.wjw-page.wjw-page[class][class] section.wjw-principles.wjw-principles,
+body main.wjw-page.wjw-page[class][class] section.wjw-evidence.wjw-evidence,
+body main.wjw-page.wjw-page[class][class] section.wjw-support.wjw-support,
+body main.wjw-page.wjw-page[class][class] section.wjw-fit.wjw-fit {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] section.wjw-faq.wjw-faq {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] :is(
+    section.wjw-facts.wjw-facts,
+    section.wjw-compare.wjw-compare,
+    section.wjw-principles.wjw-principles,
+    section.wjw-evidence.wjw-evidence,
+    section.wjw-support.wjw-support,
+    section.wjw-fit.wjw-fit
+  ) {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+  }
+
+  body main.wjw-page.wjw-page[class][class] section.wjw-faq.wjw-faq {
+    padding-top: 34px !important;
   }
 }

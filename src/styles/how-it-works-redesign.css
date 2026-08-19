@@ -2744,3 +2744,1209 @@
     font-size: 0.95rem;
   }
 }
+
+/* Page-level rhythm pass: keep How It Works modules visually consistent. */
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-start,
+  .hiw-stages,
+  .hiw-approval,
+  .hiw-tracks,
+  .hiw-exceptions,
+  .hiw-faq,
+  .hiw-final
+) {
+  padding-top: clamp(64px, 5.6vw, 86px) !important;
+  padding-bottom: clamp(64px, 5.6vw, 86px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section:not(.hiw-hero) h2 {
+  max-width: 900px !important;
+  color: #1f2937 !important;
+  font-size: clamp(38px, 2.75vw, 46px) !important;
+  font-weight: 760 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance !important;
+}
+
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-heading,
+  .hiw-faq-grid > div:first-child
+) {
+  max-width: 940px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-bottom: clamp(34px, 3.4vw, 44px) !important;
+  text-align: center !important;
+}
+
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-heading > p,
+  .hiw-start-grid > div > p:not(.hiw-kicker),
+  .hiw-approval-grid > div > p:last-child,
+  .hiw-exception-copy > p:not(.hiw-kicker),
+  .hiw-faq-grid > div:first-child > p:last-child,
+  .hiw-final-copy > p:last-child
+) {
+  max-width: 760px !important;
+  color: #52616b !important;
+  font-size: clamp(16px, 1.05vw, 18px) !important;
+  line-height: 1.68 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-stage-content h3,
+  .hiw-track-grid h3,
+  .hiw-approval h3,
+  .hiw-exception-flow strong
+) {
+  color: #1f2937 !important;
+  font-size: clamp(21px, 1.55vw, 26px) !important;
+  font-weight: 760 !important;
+  line-height: 1.22 !important;
+  letter-spacing: 0 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-stage-intro,
+  .hiw-stage-content dd,
+  .hiw-track-grid article > p:not(.hiw-kicker),
+  .hiw-approval li p,
+  .hiw-exception-flow p,
+  .hiw-accordion details p
+) {
+  color: #52616b !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] :is(
+  .hiw-start-grid,
+  .hiw-approval-grid,
+  .hiw-exception-grid,
+  .hiw-final > .hiw-container
+) {
+  gap: clamp(34px, 4.5vw, 58px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid {
+  gap: clamp(16px, 2vw, 22px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid article {
+  min-height: 0 !important;
+  padding: clamp(24px, 2.6vw, 32px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid article > svg {
+  margin-bottom: 28px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid article > p:not(.hiw-kicker) {
+  min-height: 88px !important;
+  margin: 14px 0 22px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-stage {
+  gap: clamp(22px, 3vw, 34px) !important;
+  padding: clamp(28px, 3vw, 36px) 0 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-stage-content {
+  padding-top: 4px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-stage-media {
+  min-height: clamp(300px, 28vw, 360px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-approval-grid {
+  padding: clamp(30px, 3.4vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-approval li {
+  min-height: 84px !important;
+  padding: 18px 0 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-copy {
+  padding: clamp(28px, 3.2vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-flow article {
+  min-height: 0 !important;
+  padding: 18px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion summary {
+  padding: 24px 0 !important;
+  color: #1f2937 !important;
+  font-size: clamp(18px, 1.35vw, 22px) !important;
+  font-weight: 760 !important;
+  line-height: 1.42 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details p {
+  max-width: 900px !important;
+  padding: 0 56px 24px 0 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-final > .hiw-container {
+  padding: clamp(30px, 3.4vw, 44px) !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] :is(
+    .hiw-start,
+    .hiw-stages,
+    .hiw-approval,
+    .hiw-tracks,
+    .hiw-exceptions,
+    .hiw-faq,
+    .hiw-final
+  ) {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section:not(.hiw-hero) h2 {
+    font-size: 32px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] :is(
+    .hiw-heading,
+    .hiw-faq-grid > div:first-child
+  ) {
+    margin-bottom: 30px !important;
+    text-align: left !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] :is(
+    .hiw-heading > p,
+    .hiw-start-grid > div > p:not(.hiw-kicker),
+    .hiw-approval-grid > div > p:last-child,
+    .hiw-exception-copy > p:not(.hiw-kicker),
+    .hiw-faq-grid > div:first-child > p:last-child,
+    .hiw-final-copy > p:last-child
+  ) {
+    font-size: 15px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] :is(
+    .hiw-stage-content h3,
+    .hiw-track-grid h3,
+    .hiw-approval h3,
+    .hiw-exception-flow strong
+  ) {
+    font-size: 21px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] :is(
+    .hiw-stage-intro,
+    .hiw-stage-content dd,
+    .hiw-track-grid article > p:not(.hiw-kicker),
+    .hiw-approval li p,
+    .hiw-exception-flow p,
+    .hiw-accordion details p
+  ) {
+    font-size: 15px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-track-grid article > p:not(.hiw-kicker) {
+    min-height: 0 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion summary {
+    padding: 20px 0 !important;
+    font-size: 18px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion details p {
+    padding-right: 36px !important;
+  }
+}
+
+/* Match the Home FAQ block exactly: clean green field, wide list, chevron controls. */
+body main.hiw-page.hiw-page[class][class] .hiw-faq {
+  padding: 108px 0 !important;
+  background: #d9f6e7 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq > .hiw-container {
+  display: block !important;
+  width: min(100% - 48px, 1440px) !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child {
+  max-width: 1180px !important;
+  margin: 0 auto 42px !important;
+  text-align: center !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child .hiw-kicker {
+  display: inline-block !important;
+  margin-bottom: 16px !important;
+  color: #2fae68 !important;
+  font-size: 13px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 52px !important;
+  font-weight: 760 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child > p:last-child {
+  max-width: 900px !important;
+  margin: 18px auto 0 !important;
+  color: #63756d !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion {
+  width: min(100%, 1220px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.28) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details[open] {
+  background: transparent !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details[open]::before,
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details::after {
+  display: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 34px !important;
+  gap: 24px !important;
+  align-items: center !important;
+  min-height: 0 !important;
+  padding: 28px 0 !important;
+  color: #1f2937 !important;
+  background: transparent !important;
+  font-size: 24px !important;
+  font-weight: 750 !important;
+  line-height: 1.28 !important;
+  text-align: left !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion summary:hover {
+  color: #167449 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion summary span {
+  display: block !important;
+  width: 34px !important;
+  height: 34px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #1f2937 !important;
+  font-size: 0 !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  transform: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion summary span::before {
+  display: block !important;
+  color: currentColor !important;
+  content: "⌄";
+  font-size: 28px !important;
+  line-height: 1 !important;
+  transition: transform 180ms ease !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details[open] summary {
+  color: #1f2937 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details[open] summary span {
+  color: #167449 !important;
+  transform: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details[open] summary span::before {
+  transform: rotate(180deg) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-accordion details p {
+  max-width: 1120px !important;
+  margin: -6px 54px 30px 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: rgba(31, 41, 55, 0.72) !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-faq {
+    padding: 78px 0 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-faq > .hiw-container {
+    width: min(100% - 32px, 1440px) !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child {
+    margin-bottom: 28px !important;
+    text-align: left !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-faq h2 {
+    font-size: 34px !important;
+    white-space: normal !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child > p:last-child {
+    font-size: 15px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion summary {
+    grid-template-columns: minmax(0, 1fr) 28px !important;
+    padding: 22px 0 !important;
+    font-size: 18px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion summary span {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion summary span::before {
+    font-size: 24px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-accordion details p {
+    margin: -4px 36px 22px 0 !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Keep the approval title compact enough to sit on one line on desktop. */
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-approval-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(520px, 1fr) !important;
+    gap: clamp(28px, 3.4vw, 48px) !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-approval h2 {
+    max-width: none !important;
+    font-size: clamp(26px, 1.9vw, 34px) !important;
+    line-height: 1.08 !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+}
+
+/* Keep the FAQ heading visually centered with the list below it. */
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child {
+  display: grid !important;
+  justify-items: center !important;
+  width: min(100%, 1220px) !important;
+  max-width: 1220px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child .hiw-kicker,
+body main.hiw-page.hiw-page[class][class] .hiw-faq h2,
+body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child > p:last-child {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-faq h2 {
+  display: block !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child {
+    justify-items: start !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child .hiw-kicker,
+  body main.hiw-page.hiw-page[class][class] .hiw-faq h2,
+  body main.hiw-page.hiw-page[class][class] .hiw-faq-grid > div:first-child > p:last-child {
+    text-align: left !important;
+  }
+}
+
+/* Keep the order-journey headline on one line on desktop. */
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-stages .hiw-heading {
+    max-width: min(100%, 1280px) !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-stages .hiw-heading h2 {
+    max-width: none !important;
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+    line-height: 1.08 !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+}
+
+/* Keep the approval headline from inheriting the oversized generic H2 rule. */
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-approval.hiw-approval:not(.hiw-hero) h2 {
+    max-width: none !important;
+    font-size: clamp(24px, 1.65vw, 32px) !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+}
+
+/* Match selected How It Works section titles to the order-journey title size. */
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-start.hiw-start:not(.hiw-hero) h2,
+  body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks:not(.hiw-hero) .hiw-heading h2,
+  body main.hiw-page.hiw-page[class][class] section.hiw-faq.hiw-faq:not(.hiw-hero) h2 {
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+    line-height: 1.08 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks:not(.hiw-hero) .hiw-heading h2,
+  body main.hiw-page.hiw-page[class][class] section.hiw-faq.hiw-faq:not(.hiw-hero) h2 {
+    max-width: none !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+}
+
+/* Refine the exception block so copy stays readable and never clips. */
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-grid {
+    grid-template-columns: minmax(420px, 0.92fr) minmax(560px, 1fr) !important;
+    gap: clamp(28px, 3vw, 44px) !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-copy {
+    min-width: 0 !important;
+    overflow: visible !important;
+    padding: clamp(34px, 3vw, 48px) !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions:not(.hiw-hero) .hiw-exception-copy h2 {
+    max-width: 640px !important;
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+    line-height: 1.08 !important;
+    white-space: normal !important;
+    text-wrap: balance !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-copy > p:not(.hiw-kicker) {
+    width: 100% !important;
+    max-width: 680px !important;
+    margin-top: 16px !important;
+    font-size: 17px !important;
+    line-height: 1.58 !important;
+    white-space: normal !important;
+    text-wrap: pretty !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow {
+    width: 100% !important;
+    margin-top: 28px !important;
+    gap: 14px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow article {
+    display: grid !important;
+    grid-template-columns: 44px minmax(0, 1fr) 36px !important;
+    gap: 8px 16px !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: 16px 18px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow svg {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow span {
+    position: static !important;
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow strong {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    font-size: 22px !important;
+    line-height: 1.18 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-flow p {
+    grid-column: 2 / 4 !important;
+    grid-row: 2 !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+}
+
+/* H1 hero: no photo background, use a clean workflow dashboard instead. */
+body main.hiw-page.hiw-page[class][class] .hiw-hero {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr) !important;
+  align-items: center !important;
+  gap: clamp(36px, 5vw, 76px) !important;
+  width: 100% !important;
+  min-height: clamp(620px, 72vh, 760px) !important;
+  margin: 0 !important;
+  padding: clamp(74px, 7vw, 118px) max(40px, calc((100vw - 1440px) / 2)) 84px !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.78), rgba(217, 246, 231, 0.84) 42%, rgba(194, 239, 217, 0.94)),
+    #d9f6e7 !important;
+  color: #1f2937 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 26px !important;
+  display: block !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background:
+    linear-gradient(90deg, rgba(22, 116, 73, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(22, 116, 73, 0.07) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero::after {
+  content: none !important;
+  display: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  max-width: 780px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #1f2937 !important;
+  animation: hiwHeroRise 560ms ease both !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-kicker {
+  color: #167449 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero h1 {
+  width: min(100%, 760px) !important;
+  max-width: 760px !important;
+  color: #1f2937 !important;
+  font-size: clamp(42px, 3.15vw, 54px) !important;
+  line-height: 1.08 !important;
+  text-align: left !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > p:not(.hiw-kicker) {
+  max-width: 680px !important;
+  color: #52616b !important;
+  font-size: clamp(17px, 1.2vw, 20px) !important;
+  line-height: 1.62 !important;
+  white-space: normal !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-actions {
+  justify-content: flex-start !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-button-primary {
+  border-color: #167449 !important;
+  background: #167449 !important;
+  color: #ffffff !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-button-ghost {
+  border-color: #167449 !important;
+  background: #167449 !important;
+  color: #ffffff !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 18px 36px rgba(11, 41, 32, 0.14) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul {
+  position: static !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin-top: 34px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li,
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:first-child,
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:last-child {
+  position: relative !important;
+  min-height: 58px !important;
+  padding: 0 16px !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  color: #1f2937 !important;
+  overflow: hidden !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease !important;
+  animation: hiwHeroBadgeIn 520ms ease both !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:nth-child(2) {
+  animation-delay: 120ms !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:nth-child(3) {
+  animation-delay: 240ms !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.82) 45%, transparent 70%) !important;
+  transform: translateX(-120%) !important;
+  opacity: 0 !important;
+  transition: transform 650ms ease, opacity 650ms ease !important;
+  pointer-events: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:hover {
+  border-color: rgba(22, 116, 73, 0.34) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  box-shadow: 0 16px 34px rgba(11, 41, 32, 0.12) !important;
+  transform: translateY(-5px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:hover::before {
+  opacity: 1 !important;
+  transform: translateX(120%) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul svg {
+  position: relative !important;
+  z-index: 1 !important;
+  color: #167449 !important;
+  animation: hiwHeroCheckPulse 2.4s ease-in-out infinite !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:nth-child(2) svg {
+  animation-delay: 220ms !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li:nth-child(3) svg {
+  animation-delay: 440ms !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-media {
+  position: relative !important;
+  z-index: 2 !important;
+  inset: auto !important;
+  display: grid !important;
+  align-content: center !important;
+  gap: 18px !important;
+  width: 100% !important;
+  min-height: 460px !important;
+  padding: clamp(24px, 3vw, 34px) !important;
+  overflow: visible !important;
+  border: 1px solid rgba(22, 116, 73, 0.18) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  box-shadow: 0 26px 70px rgba(11, 41, 32, 0.14) !important;
+  animation: hiwHeroFloat 5.6s ease-in-out infinite !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-media img {
+  display: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-panel {
+  display: grid !important;
+  gap: 20px !important;
+  padding: 22px !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-panel-head,
+body main.hiw-page.hiw-page[class][class] .hiw-hero-review {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-panel-head span,
+body main.hiw-page.hiw-page[class][class] .hiw-hero-review span {
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 850 !important;
+  text-transform: uppercase !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-panel-head strong {
+  color: #1f2937 !important;
+  font-size: 18px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span {
+  height: 8px !important;
+  border-radius: 999px !important;
+  background: rgba(22, 116, 73, 0.2) !important;
+  overflow: hidden !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span::before {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  background: #167449 !important;
+  transform-origin: left center !important;
+  animation: hiwHeroProgress 2.6s ease-in-out infinite !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span:nth-child(2)::before { animation-delay: 160ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span:nth-child(3)::before { animation-delay: 320ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span:nth-child(4)::before { animation-delay: 480ms !important; }
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-review {
+  align-items: flex-start !important;
+  padding-top: 4px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-review strong {
+  max-width: 380px !important;
+  color: #52616b !important;
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  line-height: 1.55 !important;
+  text-align: right !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board::before {
+  display: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span {
+  min-height: 54px !important;
+  margin-bottom: 10px !important;
+  padding: 0 16px !important;
+  border: 1px solid rgba(22, 116, 73, 0.14) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #1f2937 !important;
+  box-shadow: 0 10px 24px rgba(11, 41, 32, 0.07) !important;
+  animation: hiwHeroStep 520ms ease both !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span:nth-child(2) { animation-delay: 80ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span:nth-child(3) { animation-delay: 160ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span:nth-child(4) { animation-delay: 240ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span:nth-child(5) { animation-delay: 320ms !important; }
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board span::before {
+  display: none !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-board b {
+  background: #d9f6e7 !important;
+  color: #167449 !important;
+}
+
+@keyframes hiwHeroRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hiwHeroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes hiwHeroProgress {
+  0% { transform: scaleX(0.18); opacity: 0.55; }
+  45%, 70% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0.18); opacity: 0.55; }
+}
+
+@keyframes hiwHeroStep {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hiwHeroBadgeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hiwHeroCheckPulse {
+  0%, 100% { transform: scale(1); filter: none; }
+  45% { transform: scale(1.18); filter: drop-shadow(0 0 8px rgba(22, 116, 73, 0.28)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-copy,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-media,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-progress span::before,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-board span,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul li,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul svg {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 1099px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-hero {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    padding: 72px 24px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-copy {
+    max-width: 860px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-media {
+    min-height: 0 !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-copy > ul {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-hero {
+    padding: 58px 16px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero h1 {
+    font-size: 34px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero .hiw-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-panel-head,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-review {
+    display: grid !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-review strong {
+    max-width: none !important;
+    text-align: left !important;
+  }
+}
+
+/* Final CTA title: keep this callout calmer than the main section headers. */
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final h2 {
+  max-width: 700px !important;
+  font-size: clamp(28px, 2vw, 36px) !important;
+  line-height: 1.1 !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final h2 {
+    font-size: 28px !important;
+  }
+}
+
+/* Hero title: reduce the opening statement so it reads like the calmer home-page scale. */
+body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero h1 {
+  width: min(100%, 900px) !important;
+  max-width: 900px !important;
+  font-size: clamp(34px, 2.05vw, 40px) !important;
+  line-height: 1.12 !important;
+}
+
+@media (min-width: 1100px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero h1 {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero h1 {
+    font-size: 32px !important;
+    white-space: normal !important;
+  }
+}
+
+/* Align the three track-card actions on the same horizontal line. */
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid article {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-track-grid article > a {
+  margin-top: auto !important;
+}
+
+/* Tighten the lower whitespace of the H1 hero. */
+body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
+  min-height: auto !important;
+  padding-top: clamp(74px, 6vw, 104px) !important;
+  padding-bottom: clamp(34px, 3.4vw, 46px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero .hiw-hero-copy {
+  margin-top: -42px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  align-items: stretch !important;
+  gap: 13px !important;
+  width: min(100%, 720px) !important;
+  margin-top: 32px !important;
+  padding: 16px 18px 17px !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 16px 34px rgba(11, 41, 32, 0.06) !important;
+  overflow: hidden !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #167449, transparent) !important;
+  transform: translateX(-70%) !important;
+  animation: hiwHeroLiveScan 2.8s ease-in-out infinite !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-head > span {
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-head > strong {
+  color: #52616b !important;
+  font-size: 13px !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text {
+  display: flex !important;
+  gap: 14px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text i {
+  flex: 0 0 auto !important;
+  color: #1f2937 !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 760 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  animation: hiwHeroLiveFade 4.8s ease-in-out infinite !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text i:nth-child(2) { animation-delay: 220ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text i:nth-child(3) { animation-delay: 440ms !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text i:nth-child(4) { animation-delay: 660ms !important; }
+
+@keyframes hiwHeroLiveScan {
+  0% { transform: translateX(-80%); opacity: 0.25; }
+  45%, 65% { opacity: 0.9; }
+  100% { transform: translateX(80%); opacity: 0.25; }
+}
+
+@keyframes hiwHeroLiveFade {
+  0%, 100% { opacity: 0.56; transform: translateY(0); }
+  45% { opacity: 1; transform: translateY(-1px); }
+}
+
+@media (max-width: 1099px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
+    padding-bottom: 46px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero .hiw-hero-copy {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
+    padding-bottom: 40px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-live {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-live::before,
+  body main.hiw-page.hiw-page[class][class] .hiw-hero-live-text i {
+    animation: none !important;
+  }
+}
+
+/* Tighten the vertical handoff from approval checkpoints into the track cards. */
+body main.hiw-page.hiw-page[class][class] section.hiw-approval.hiw-approval {
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-approval.hiw-approval {
+    padding-bottom: 34px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks {
+    padding-top: 34px !important;
+  }
+}
+
+/* Keep each How It Works section handoff tighter and more consistent. */
+body main.hiw-page.hiw-page[class][class] section.hiw-start.hiw-start {
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-stages.hiw-stages {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-approval.hiw-approval {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(34px, 3vw, 44px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-faq.hiw-faq {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] :is(
+    section.hiw-start.hiw-start,
+    section.hiw-stages.hiw-stages,
+    section.hiw-approval.hiw-approval,
+    section.hiw-tracks.hiw-tracks,
+    section.hiw-exceptions.hiw-exceptions
+  ) {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-faq.hiw-faq {
+    padding-top: 34px !important;
+  }
+}
