@@ -40,9 +40,12 @@
 }
 
 .ctw-page .ctw-intro h1 {
-  max-width: 640px;
+  max-width: none;
   color: var(--ctw-ink) !important;
-  text-wrap: balance;
+  font-size: clamp(32px, 2.4vw, 38px) !important;
+  line-height: 1.08 !important;
+  white-space: nowrap;
+  text-wrap: nowrap;
 }
 
 .ctw-page .ctw-intro-copy > p:not(.ctw-kicker) {
@@ -508,63 +511,118 @@
 
 /* FAQ: sticky context and a clear expanded state. */
 .ctw-page .ctw-faq {
-  padding: clamp(76px, 7vw, 104px) 0 !important;
-  background: #f4faf6 !important;
+  padding: 108px 0 !important;
+  background: #d9f6e7 !important;
 }
 
 .ctw-page .ctw-faq > .ctw-container {
-  width: min(100% - 48px, 1120px) !important;
-  max-width: 1120px !important;
+  width: min(100% - 48px, 1280px) !important;
+  max-width: 1280px !important;
   margin: 0 auto !important;
 }
 
 .ctw-page .ctw-faq-grid {
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr) !important;
-  gap: 96px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 40px !important;
   align-items: start !important;
 }
 
+.ctw-page .ctw-faq-grid > div:first-child {
+  position: static !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+.ctw-page .ctw-faq-grid > div:first-child .ctw-kicker {
+  display: inline-block !important;
+  margin-bottom: 16px !important;
+  color: var(--ctw-green) !important;
+}
+
 .ctw-page .ctw-faq h2 {
+  max-width: none !important;
   margin-left: 0 !important;
   color: var(--ctw-ink) !important;
+  font-size: clamp(2.15rem, 3.5vw, 3.2rem) !important;
+  font-weight: 750 !important;
+  line-height: 1.1 !important;
   text-wrap: balance;
+}
+
+.ctw-page .ctw-faq-grid > div:first-child > p:last-of-type {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  color: #63756d !important;
+  font-size: 0.94rem !important;
+  line-height: 1.7 !important;
+}
+
+.ctw-page .ctw-faq-grid > div:first-child a {
+  display: none !important;
+}
+
+.ctw-page .ctw-accordion {
+  overflow: hidden !important;
+  border-top: 1px solid rgba(23, 58, 49, 0.18) !important;
 }
 
 .ctw-page .ctw-accordion details {
   border-color: var(--ctw-line) !important;
+  padding: 0 !important;
+  background: transparent !important;
   transition: background-color 180ms ease, padding 180ms ease;
 }
 
 .ctw-page .ctw-accordion details[open] {
-  padding-right: 20px;
-  padding-left: 20px;
-  background: #fff;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.ctw-page .ctw-accordion summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 26px !important;
+  gap: 24px !important;
+  align-items: center !important;
+  min-height: 58px !important;
+  padding: 30px 0 !important;
+  color: #12233a !important;
+  font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
+  font-weight: 750 !important;
+  line-height: 1.45 !important;
+  text-align: left !important;
 }
 
 .ctw-page .ctw-accordion summary span {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-  place-items: center;
-  border: 1px solid var(--ctw-line);
-  border-radius: 50%;
+  display: block !important;
+  width: 26px !important;
+  height: auto !important;
+  flex: initial !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   color: var(--ctw-green);
+  font-size: 1.45rem !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  text-align: center !important;
   transition: transform 200ms ease, background-color 200ms ease, color 200ms ease;
 }
 
 .ctw-page .ctw-accordion details[open] summary span {
-  background: var(--ctw-green);
-  color: #fff;
+  background: transparent !important;
+  color: var(--ctw-green) !important;
+  transform: rotate(45deg) !important;
 }
 
-.ctw-page .ctw-faq-grid > div:first-child a {
-  transition: gap 220ms ease, color 220ms ease;
-}
-
-.ctw-page .ctw-faq-grid > div:first-child a:hover {
-  gap: 14px;
-  color: var(--ctw-ink);
+.ctw-page .ctw-accordion details p {
+  max-width: 1080px !important;
+  margin: 0 !important;
+  padding: 0 72px 30px 0 !important;
+  color: #64766e !important;
+  font-size: clamp(1rem, 1.35vw, 1.22rem) !important;
+  line-height: 1.75 !important;
 }
 
 /* Direct return band. */
@@ -622,6 +680,11 @@
     width: min(100%, 780px);
     margin: 0 auto;
   }
+
+  .ctw-page .ctw-intro h1 {
+    white-space: normal;
+    text-wrap: balance;
+  }
 }
 
 @media (max-width: 767px) {
@@ -667,8 +730,19 @@
   .ctw-page .ctw-faq-grid > div:first-child { position: static; }
 
   .ctw-page .ctw-accordion details[open] {
-    padding-right: 14px;
-    padding-left: 14px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .ctw-page .ctw-accordion summary {
+    gap: 16px !important;
+    padding: 22px 0 !important;
+    font-size: 1.12rem !important;
+  }
+
+  .ctw-page .ctw-accordion details p {
+    padding-right: 42px !important;
+    font-size: 0.95rem !important;
   }
 
   .ctw-page .ctw-direct > .ctw-container {

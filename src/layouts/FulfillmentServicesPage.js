@@ -253,8 +253,12 @@ export default function FulfillmentServicesPage() {
       </section>
 
       <section className="ff-section fsp-faq">
-        <div className="container ff-faq-grid">
-          <div className="ff-faq-intro"><span className="ff-kicker">SERVICE FAQ</span><h2>Questions before you get started?</h2><p>Share your product and destination details for a service recommendation built around your actual order flow.</p><Link className="ff-btn ff-btn-dark" href="/contact">Request a free quote<FiArrowRight /></Link></div>
+        <div className="container fsp-faq-layout">
+          <div className="ff-heading ff-heading-centered fsp-faq-heading">
+            <span className="ff-kicker">SERVICE FAQ</span>
+            <h2>Questions before you get started?</h2>
+            <p>Share your product and destination details for a service recommendation built around your actual order flow.</p>
+          </div>
           <div className="ff-faq-list">{serviceFaqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div>
         </div>
       </section>
