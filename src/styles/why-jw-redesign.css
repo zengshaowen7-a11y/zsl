@@ -31,7 +31,7 @@
 .wjw-hero h1 {
   max-width: 650px;
   color: var(--text);
-  font-size: clamp(48px, 4.1vw, 64px);
+  font-size: clamp(30px, 2.05vw, 36px);
   line-height: 1.08;
 }
 .wjw-hero-copy > p:not(.wjw-kicker) { margin-top: 24px; color: var(--muted); font-size: 18px; }
@@ -198,7 +198,7 @@
 .wjw-hero h1 {
   max-width: 760px !important;
   color: #063f2d !important;
-  font-size: clamp(44px, 3.45vw, 58px) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
   line-height: 1.08 !important;
   letter-spacing: 0 !important;
 }
@@ -650,7 +650,7 @@
   }
 
   .wjw-hero h1 {
-    font-size: 38px !important;
+    font-size: clamp(30px, 2.05vw, 36px) !important;
   }
 
   .wjw-hero-copy > ul {
@@ -754,8 +754,8 @@
   max-width: 980px !important;
   margin: 0 auto !important;
   color: #053e2a !important;
-  font-size: clamp(48px, 4.2vw, 68px) !important;
-  line-height: 1.06 !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  line-height: 1.08 !important;
   letter-spacing: 0 !important;
 }
 

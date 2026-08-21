@@ -168,13 +168,11 @@ body main:is(.sov-page, .sdr-page, .wjw-page, .tst-page, .ctw-page)[class][class
     .sov-platform-row,
     .sov-faq-grid
   ),
-  .tst-page .tst-theme-grid,
   .ctw-page :is(.ctw-prepare > .ctw-container, .ctw-faq-grid) {
     grid-template-columns: minmax(0, 1fr) !important;
   }
 
   .sov-page :is(.sov-heading, .sov-proof-grid, .sov-platform-row, .sov-faq-grid),
-  .tst-page .tst-theme-grid,
   .ctw-page :is(.ctw-prepare > .ctw-container, .ctw-faq-grid) {
     gap: 36px !important;
   }

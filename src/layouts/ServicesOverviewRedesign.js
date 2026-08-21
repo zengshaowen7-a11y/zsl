@@ -2,7 +2,6 @@ import {
   serviceCatalog,
   serviceFaqs,
   serviceWorkflow,
-  supportedPlatforms,
 } from "@config/service-catalog";
 import { serviceComparison } from "@config/service-conversion-content";
 import Image from "next/image";
@@ -12,6 +11,7 @@ import {
   FiCheck,
   FiCheckCircle,
   FiClipboard,
+  FiChevronDown,
   FiPackage,
   FiSearch,
   FiShield,
@@ -163,20 +163,13 @@ export default function ServicesOverviewRedesign() {
         </div>
       </section>
 
-      <section className="sov-platforms">
-        <div className="sov-container sov-platform-row">
-          <div><p className="sov-kicker">STORE WORKFLOWS</p><h2>Works with the platforms you already sell on.</h2></div>
-          <ul>{supportedPlatforms.map((platform) => <li key={platform}>{platform}</li>)}</ul>
-        </div>
-      </section>
-
       <section className="sov-section sov-faq">
         <div className="sov-container sov-faq-grid">
-          <div><p className="sov-kicker">SERVICE FAQ</p><h2>Before you choose a service.</h2><p>Share a product link and your current workflow if you are unsure where to begin.</p></div>
+          <div><p className="sov-kicker">FREQUENTLY ASKED QUESTIONS</p><h2>What to know before you start</h2><p>Quick answers about service scope, suppliers, order volume, quality checks and branded packaging.</p></div>
           <div className="sov-accordion">
             {serviceFaqs.slice(0, 5).map(([question, answer], index) => (
               <details key={question} name="services-overview-faq" open={index === 0}>
-                <summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p>
+                <summary>{question}<span aria-hidden="true"><FiChevronDown /></span></summary><p>{answer}</p>
               </details>
             ))}
           </div>
@@ -185,7 +178,7 @@ export default function ServicesOverviewRedesign() {
 
       <section className="sov-final">
         <div className="sov-container sov-final-inner">
-          <div><p className="sov-kicker">START WITH ONE PRODUCT LINK</p><h2>Tell us what needs to work better.</h2><p>We will recommend the right service scope for your product, volume and destination markets.</p></div>
+          <div><p className="sov-kicker">START WITH YOUR CURRENT BOTTLENECK</p><h2>See whether JW fits your operation.</h2><p>Share a product link, destination markets and what is slowing your team down. We will recommend a practical next step.</p></div>
           <Link className="sov-button sov-button-light" href="/contact">Get a Free Quote <FiArrowRight aria-hidden="true" /></Link>
         </div>
       </section>

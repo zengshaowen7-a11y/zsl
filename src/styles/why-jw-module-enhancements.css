@@ -713,3 +713,31 @@
     text-wrap: nowrap !important;
   }
 }
+
+/* Final Why JW hero title scale. */
+body main.wjw-page.wjw-page[class][class] section.wjw-hero.wjw-hero .wjw-hero-copy h1 {
+  max-width: 980px !important;
+  margin-inline: auto !important;
+  color: #053e2a !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 760 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-align: center !important;
+  text-wrap: balance !important;
+}
+
+body main.wjw-page.wjw-page[class][class] section.wjw-hero.wjw-hero .wjw-hero-copy > p:not(.wjw-kicker) {
+  max-width: 760px !important;
+  margin-inline: auto !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  body main.wjw-page.wjw-page[class][class] section.wjw-hero.wjw-hero .wjw-hero-copy h1 {
+    font-size: 30px !important;
+    line-height: 1.14 !important;
+  }
+}

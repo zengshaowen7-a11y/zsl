@@ -1,0 +1,80 @@
+/* Loaded last: keep the fixed header from changing size while the page scrolls. */
+body .header,
+body .header-transparent,
+body .header-solid,
+body .header.is-scrolled,
+body .header-transparent.is-scrolled,
+body .header-solid.is-scrolled {
+  box-sizing: border-box !important;
+  height: 79px !important;
+  min-height: 79px !important;
+  padding: 0 24px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(16, 61, 49, 0.1) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: background-color 180ms ease, border-color 180ms ease !important;
+}
+
+body .header .header-navbar,
+body .header .navbar,
+body .header-transparent .header-navbar,
+body .header-transparent .navbar,
+body .header-solid .header-navbar,
+body .header-solid .navbar,
+body .header.is-scrolled .header-navbar,
+body .header.is-scrolled .navbar,
+body .header-transparent.is-scrolled .header-navbar,
+body .header-transparent.is-scrolled .navbar,
+body .header-solid.is-scrolled .header-navbar,
+body .header-solid.is-scrolled .navbar,
+body .header-transparent.is-scrolled.nav-on-dark .navbar,
+body .header-transparent.is-scrolled.nav-on-light .navbar {
+  box-sizing: border-box !important;
+  height: 78px !important;
+  min-height: 78px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #173f35 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: color 180ms ease !important;
+}
+
+body .header .nav-link {
+  transition: color 180ms ease, opacity 180ms ease !important;
+}
+
+@media (max-width: 767px) {
+  body .header,
+  body .header-transparent,
+  body .header-solid,
+  body .header.is-scrolled,
+  body .header-transparent.is-scrolled,
+  body .header-solid.is-scrolled {
+    height: 71px !important;
+    min-height: 71px !important;
+    padding: 0 16px !important;
+  }
+
+  body .header .header-navbar,
+  body .header .navbar,
+  body .header-transparent .header-navbar,
+  body .header-transparent .navbar,
+  body .header-solid .header-navbar,
+  body .header-solid .navbar,
+  body .header.is-scrolled .header-navbar,
+  body .header.is-scrolled .navbar,
+  body .header-transparent.is-scrolled .header-navbar,
+  body .header-transparent.is-scrolled .navbar,
+  body .header-solid.is-scrolled .header-navbar,
+  body .header-solid.is-scrolled .navbar {
+    height: 70px !important;
+    min-height: 70px !important;
+  }
+}

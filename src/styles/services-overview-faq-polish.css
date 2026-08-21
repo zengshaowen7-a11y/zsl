@@ -96,3 +96,312 @@
     font-size: 15px;
   }
 }
+
+/* Match the services overview FAQ to the service-detail FAQ reference. */
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq {
+  padding-top: clamp(96px, 7vw, 122px) !important;
+  padding-bottom: clamp(96px, 7vw, 122px) !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-faq-grid {
+  grid-template-columns: minmax(0, 0.92fr) minmax(620px, 1.08fr) !important;
+  gap: clamp(72px, 8vw, 128px) !important;
+  align-items: start !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-faq-grid > div:first-child {
+  position: sticky !important;
+  top: 120px !important;
+  max-width: 680px !important;
+  padding-top: 8px !important;
+  text-align: left !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-faq .sov-kicker {
+  margin-bottom: 22px !important;
+  color: #22ae68 !important;
+  font-size: 13px !important;
+  font-weight: 880 !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-faq h2 {
+  max-width: 640px !important;
+  margin: 0 !important;
+  color: #173a31 !important;
+  font-size: clamp(52px, 4vw, 66px) !important;
+  font-weight: 780 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-faq-grid > div > p:last-child {
+  max-width: 600px !important;
+  margin-top: 28px !important;
+  color: #687871 !important;
+  font-size: 24px !important;
+  line-height: 1.55 !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion {
+  border-top: 1px solid rgba(23, 58, 49, 0.16) !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion details {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px solid rgba(23, 58, 49, 0.16) !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion details[open] {
+  margin: 0 !important;
+  padding: 0 26px !important;
+  border: 1px solid rgba(23, 58, 49, 0.16) !important;
+  border-radius: 0 !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  box-shadow: none !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion summary {
+  min-height: 108px !important;
+  padding: 28px 0 !important;
+  color: #263831 !important;
+  font-size: 26px !important;
+  font-weight: 820 !important;
+  line-height: 1.22 !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion details[open] summary {
+  min-height: auto !important;
+  padding-top: 30px !important;
+  padding-bottom: 22px !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion summary span {
+  color: #22ae68 !important;
+  font-size: 26px !important;
+  font-weight: 820 !important;
+  line-height: 1 !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-accordion details p {
+  max-width: 760px !important;
+  margin: 0 !important;
+  padding: 0 42px 30px 0 !important;
+  color: #687871 !important;
+  font-size: 21px !important;
+  line-height: 1.62 !important;
+}
+
+@media (max-width: 1100px) {
+  body main.sov-page.sov-page[class][class] .sov-faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-faq-grid > div:first-child {
+    position: static !important;
+    max-width: 780px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-faq h2 {
+    font-size: 36px !important;
+    line-height: 1.08 !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-faq-grid > div > p:last-child {
+    margin-top: 18px !important;
+    font-size: 17px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-accordion details[open] {
+    padding: 0 18px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-accordion summary {
+    min-height: 78px !important;
+    padding: 22px 0 !important;
+    font-size: 20px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-accordion details p {
+    padding: 0 16px 24px 0 !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Final services FAQ match: same scale and list rhythm as the green reference FAQ. */
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq {
+  padding-top: clamp(76px, 6vw, 98px) !important;
+  padding-bottom: clamp(84px, 6vw, 108px) !important;
+  background: #D9F6E7 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid {
+  display: block !important;
+  width: min(100%, 1220px) !important;
+  margin-inline: auto !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div:first-child {
+  position: static !important;
+  max-width: 1120px !important;
+  margin: 0 auto clamp(54px, 5vw, 72px) !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-kicker {
+  margin: 0 0 24px !important;
+  color: #18b66f !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 18.2px !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  color: #1f2937 !important;
+  font-size: 36px !important;
+  font-weight: 760 !important;
+  line-height: 38.88px !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div > p:last-child {
+  max-width: 1080px !important;
+  margin: 32px auto 0 !important;
+  color: #61716a !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 34px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion {
+  width: 100% !important;
+  border-top: 1px solid rgba(23, 58, 49, 0.22) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details,
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(23, 58, 49, 0.22) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary,
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] summary {
+  display: flex !important;
+  min-height: 112px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  padding: 28px 0 !important;
+  color: #1f2937 !important;
+  font-size: 24px !important;
+  font-weight: 760 !important;
+  line-height: 30px !important;
+  letter-spacing: 0 !important;
+  list-style: none !important;
+  cursor: pointer !important;
+  transition: color 180ms ease !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary:hover,
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] summary {
+  color: #167449 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary span {
+  flex: 0 0 auto !important;
+  display: grid !important;
+  width: 36px !important;
+  height: 36px !important;
+  place-items: center !important;
+  color: currentColor !important;
+  font-size: 0 !important;
+  transition: transform 220ms ease !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary svg {
+  width: 22px !important;
+  height: 22px !important;
+  stroke-width: 2.4 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] summary span {
+  transform: rotate(180deg) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details p {
+  max-width: 1580px !important;
+  margin: -8px 86px 42px 0 !important;
+  padding: 0 !important;
+  color: #61716a !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 34px !important;
+}
+
+@media (max-width: 767px) {
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid {
+    width: min(100% - 32px, 1220px) !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div:first-child {
+    margin-bottom: 34px !important;
+    text-align: left !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq h2 {
+    font-size: 34px !important;
+    line-height: 36.72px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div > p:last-child {
+    margin-top: 18px !important;
+    font-size: 16px !important;
+    line-height: 27.2px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary,
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] summary {
+    min-height: 88px !important;
+    padding: 22px 0 !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details p {
+    margin: -4px 42px 26px 0 !important;
+    font-size: 16px !important;
+    line-height: 27.2px !important;
+  }
+}

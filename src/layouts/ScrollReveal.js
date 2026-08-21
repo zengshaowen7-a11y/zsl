@@ -83,11 +83,11 @@ export default function ScrollReveal() {
         "reveal-up",
       ],
       [
-        ".tst-page :is(.tst-theme-grid > div, .tst-final .tst-container > div)",
+        ".tst-page .tst-final .tst-container > div",
         "reveal-left",
       ],
       [
-        ".tst-page :is(.tst-theme-grid li, .tst-proof-link, .tst-final .tst-button)",
+        ".tst-page :is(.tst-proof-link, .tst-final .tst-button)",
         "reveal-right",
       ],
       [

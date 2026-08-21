@@ -26,13 +26,6 @@ const reviews = [
   { name: "Ethan", country: "United States", flagSrc: "https://flagcdn.com/us.svg", avatar: "/images/testimonials/avatars/seller-avatar-25.jpg", service: "Fast Quotes", manager: "Working with Michael", quote: "Quotes arrive quickly and include enough context to compare products without long back-and-forth." },
 ];
 
-const themes = [
-  ["Clear communication", "Useful replies with enough context to make the next decision."],
-  ["Reliable follow-through", "Questions stay visible across supplier, warehouse and shipping handoffs."],
-  ["Quality awareness", "Product and packaging details remain part of the conversation before dispatch."],
-  ["Practical support", "The account team helps sellers move from uncertainty to a defined next action."],
-];
-
 const faqs = [
   ["What do these seller stories show?", "They show how sellers experience daily support: sourcing replies, QC updates, packing details, order handling and fulfillment communication."],
   ["Can I ask for support similar to a review?", "Yes. Share the product type, target market and current problem, and the team can suggest a practical workflow for your store."],
@@ -61,23 +54,25 @@ export default function TestimonialsRedesign() {
     <section className="tst-hero">
       <div className="tst-hero-copy">
         <p className="tst-kicker">SELLER STORIES</p>
-        <h1>Real feedback from sellers working with JW.</h1>
-        <p>Read how sellers describe sourcing replies, product checks, branded packing, order handling and account support during real daily workflows.</p>
+        <h1>Seller stories, made clear.</h1>
+        <p>Clear support, steady order handling and quick follow-up from a team sellers can actually use.</p>
         <div className="tst-hero-proofline">
           <span><FiCheck /> Sourcing support</span>
           <span><FiCheck /> QC updates</span>
           <span><FiCheck /> Fulfillment follow-up</span>
         </div>
         <div className="tst-actions"><Link href="/contact" className="tst-button tst-button-primary">Get a Free Quote <FiArrowRight /></Link><a href="#seller-stories" className="tst-button tst-button-ghost">Read Seller Stories</a></div>
-        <div className="tst-hero-mini-stats" aria-label="Testimonial page summary">
-          <div><strong>21</strong><span>seller voices</span></div>
-          <div><strong>10+</strong><span>service themes</span></div>
-          <div><strong>30+</strong><span>markets supported</span></div>
-        </div>
-        <div className="tst-hero-mini-flow" aria-label="How to start with JW">
-          <div><strong>1 link</strong><span>share the product</span></div>
-          <div><strong>1 owner</strong><span>keeps replies clear</span></div>
-          <div><strong>1 next step</strong><span>after the review</span></div>
+        <div className="tst-hero-balance" aria-label="What sellers most often mention">
+          <div className="tst-hero-balance-copy">
+            <span>Most mentioned</span>
+            <strong>What keeps the workflow calm.</strong>
+          </div>
+          <div className="tst-hero-balance-grid">
+            <article><strong>Clear communication</strong><p>Replies stay visible across sourcing, QC and dispatch.</p></article>
+            <article><strong>Fast answers</strong><p>Questions move forward without long back-and-forth.</p></article>
+            <article><strong>QC visibility</strong><p>Notes and photos keep review decisions grounded.</p></article>
+            <article><strong>Order ownership</strong><p>One contact keeps each handoff connected.</p></article>
+          </div>
         </div>
       </div>
       <div className="tst-hero-side">
@@ -107,18 +102,11 @@ export default function TestimonialsRedesign() {
             <article><small>Most mentioned</small><strong>Clear communication</strong></article>
             <article><small>Useful for</small><strong>Choosing your first workflow</strong></article>
           </div>
-          <div className="tst-hero-panel" aria-label="Seller support highlights">
-            <article><span>01</span><strong>Quote clarity</strong><p>Cost, timing and product details are confirmed before the next step.</p></article>
-            <article><span>02</span><strong>QC visibility</strong><p>Photos and notes make quality decisions easier to review.</p></article>
-            <article><span>03</span><strong>Order ownership</strong><p>One team keeps sourcing, packing and dispatch updates connected.</p></article>
-          </div>
         </div>
       </div>
     </section>
 
     <section className="tst-featured" id="seller-stories"><div className="tst-container"><header className="tst-heading"><div><p className="tst-kicker">FEATURED FEEDBACK</p><h2>Three parts of the partnership sellers remember.</h2></div><p>Clear order handling, thoughtful product decisions and a responsive person who keeps the work moving.</p></header><div className="tst-featured-grid">{reviews.slice(0,3).map((review,index)=><Review review={review} featured index={index} key={review.name} />)}</div><details className="tst-featured-more"><summary>More Seller Stories <FiChevronDown aria-hidden="true" /></summary><div className="tst-featured-more-grid">{reviews.slice(3,9).map((review,index)=><Review review={review} index={index+3} key={review.name} />)}</div></details></div></section>
-
-    <section className="tst-themes"><div className="tst-container tst-theme-grid"><div><p className="tst-kicker">WHAT THE FEEDBACK POINTS TO</p><h2>Trust is built in small, repeatable moments.</h2><p>Seller feedback is most useful when it describes the operating experience, not only a star rating.</p></div><ol>{themes.map(([title,copy],index)=><li key={title}><span>{String(index+1).padStart(2,"0")}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol></div></section>
 
     <section className="tst-stories"><div className="tst-container"><header className="tst-heading"><div><p className="tst-kicker">MORE SELLER STORIES</p><h2>Feedback across the order journey.</h2></div><p>Each story includes the service theme and account support context, so visitors can find experiences closer to their own needs.</p></header><div className="tst-review-grid">{reviews.slice(9,13).map((review,index)=><Review review={review} index={index+9} key={review.name} />)}</div><details className="tst-stories-more"><summary>More Seller Stories <FiChevronDown aria-hidden="true" /></summary><div className="tst-stories-more-grid">{reviews.slice(13).map((review,index)=><Review review={review} index={index+13} key={review.name} />)}</div></details></div></section>
 

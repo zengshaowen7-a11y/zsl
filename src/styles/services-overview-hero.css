@@ -6,7 +6,7 @@
   isolation: isolate;
   overflow: hidden;
   padding: 0 max(24px, calc((100vw - 1180px) / 2));
-  background: #07372c;
+  background: #d9f6e7;
 }
 .sov-page .sov-hero::after {
   position: absolute;
@@ -14,8 +14,8 @@
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(4,39,31,.96) 0%, rgba(4,39,31,.86) 36%, rgba(4,39,31,.4) 66%, rgba(4,39,31,.22) 100%),
-    linear-gradient(0deg, rgba(4,30,25,.82) 0%, transparent 48%);
+    linear-gradient(90deg, rgba(217,246,231,.96) 0%, rgba(217,246,231,.9) 36%, rgba(217,246,231,.48) 66%, rgba(217,246,231,.18) 100%),
+    linear-gradient(0deg, rgba(217,246,231,.78) 0%, rgba(217,246,231,.1) 52%, rgba(217,246,231,.36) 100%);
 }
 
 .sov-page .sov-hero-media {
@@ -30,6 +30,7 @@
 .sov-page .sov-hero-media img {
   object-fit: cover;
   object-position: center 48%;
+  filter: saturate(.88) brightness(1.05) contrast(.94);
 }
 
 .sov-page .sov-hero-copy {
@@ -40,7 +41,7 @@
   min-height: 790px;
   justify-content: flex-start;
   padding: 132px 0 226px !important;
-  color: #fff;
+  color: #1f2937;
 }
 
 .sov-page .sov-hero-copy .sov-kicker {
@@ -49,7 +50,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  color: #9ce9bd;
+  color: #167449;
 }
 
 .sov-page .sov-hero-copy .sov-kicker::before {
@@ -57,16 +58,16 @@
   width: 32px;
   height: 32px;
   place-items: center;
-  border: 1px solid rgba(156,233,189,.58);
+  border: 1px solid rgba(22,116,73,.25);
   content: "08";
-  color: #fff;
+  color: #167449;
   font-size: 10px;
   font-weight: 900;
 }
 
 body main.sov-page[class][class] .sov-hero h1 {
   max-width: 780px !important;
-  color: #fff;
+  color: #1f2937;
   text-align: left;
   text-wrap: balance;
 }
@@ -74,7 +75,7 @@ body main.sov-page[class][class] .sov-hero h1 {
 .sov-page .sov-hero-lead {
   max-width: 660px;
   margin-top: 24px;
-  color: rgba(255,255,255,.76);
+  color: #51616b;
   font-size: 16px;
   line-height: 1.68;
 }
@@ -84,9 +85,9 @@ body main.sov-page[class][class] .sov-hero h1 {
 }
 
 .sov-page .sov-hero .sov-button-secondary {
-  border-color: rgba(255,255,255,.38);
-  background: rgba(255,255,255,.12);
-  color: #fff;
+  border-color: rgba(22,116,73,.18);
+  background: rgba(255,255,255,.7);
+  color: #1f2937;
   backdrop-filter: blur(10px);
 }
 
@@ -94,16 +95,17 @@ body main.sov-page[class][class] .sov-hero h1 {
   gap: 0;
   margin-top: 34px;
   padding-top: 0;
-  border-top: 1px solid rgba(255,255,255,.28);
-  border-bottom: 1px solid rgba(255,255,255,.28);
+  border-top: 1px solid rgba(22,116,73,.18);
+  border-bottom: 1px solid rgba(22,116,73,.18);
 }
 
 .sov-page .sov-hero-points li {
   min-height: 48px;
   padding: 12px 18px;
-  border-right: 1px solid rgba(255,255,255,.22);
-  color: #fff;
-  font-size: 12px;
+  border-right: 1px solid rgba(22,116,73,.16);
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .sov-page .sov-hero-points li:first-child {
@@ -125,31 +127,35 @@ body main.sov-page[class][class] .sov-hero h1 {
 
 .sov-page .sov-quick-grid {
   grid-template-columns: repeat(4, minmax(0,1fr));
-  border-top: 1px solid rgba(255,255,255,.34);
-  border-left: 1px solid rgba(255,255,255,.22);
-  background: rgba(4,39,31,.66);
+  border-top: 1px solid rgba(22,116,73,.16);
+  border-left: 1px solid rgba(22,116,73,.12);
+  background: rgba(255,255,255,.68);
   backdrop-filter: blur(16px);
 }
 
 .sov-page .sov-quick-grid a {
-  min-height: 72px;
+  min-height: 82px;
   border: 0 !important;
-  border-right: 1px solid rgba(255,255,255,.22) !important;
-  border-bottom: 1px solid rgba(255,255,255,.22) !important;
-  color: #fff;
-  font-size: 12px;
+  border-right: 1px solid rgba(22,116,73,.12) !important;
+  border-bottom: 1px solid rgba(22,116,73,.12) !important;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 820;
+  line-height: 1.25;
 }
 
 .sov-page .sov-quick-grid a span {
-  color: #8de0ae;
+  color: #167449;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .sov-page .sov-quick-grid a svg {
-  color: #8de0ae;
+  color: #167449;
 }
 
 .sov-page .sov-quick-grid a:hover {
-  background: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.9);
 }
 
 @media (max-width: 1023px) {
@@ -173,7 +179,7 @@ body main.sov-page[class][class] .sov-hero h1 {
   }
 
   .sov-page .sov-hero::after {
-    background: linear-gradient(180deg, rgba(4,39,31,.95) 0%, rgba(4,39,31,.75) 58%, rgba(4,30,25,.92) 100%);
+    background: linear-gradient(180deg, rgba(217,246,231,.96) 0%, rgba(217,246,231,.78) 58%, rgba(217,246,231,.94) 100%);
   }
 
   .sov-page .sov-hero-media img {
@@ -224,18 +230,310 @@ body main.sov-page[class][class] .sov-hero h1 {
   .sov-page .sov-quick-nav {
     margin-top: 0;
     padding: 0 16px 30px;
-    background: #07372c;
+    background: transparent;
   }
 
   .sov-page .sov-quick-grid {
     width: 100%;
     grid-template-columns: 1fr;
-    border-color: rgba(255,255,255,.22);
-    background: rgba(255,255,255,.06);
+    border-color: rgba(22,116,73,.16);
+    background: rgba(255,255,255,.78);
     backdrop-filter: none;
   }
 
   .sov-page .sov-quick-grid a {
     min-height: 58px;
+  }
+}
+
+/* Remove the numbered hero badge and keep service card CTAs aligned. */
+.sov-page .sov-hero-copy .sov-kicker::before {
+  display: none !important;
+  content: none !important;
+}
+
+.sov-page .sov-card-grid {
+  align-items: stretch !important;
+}
+
+.sov-page .sov-service-card {
+  display: flex !important;
+  height: 100% !important;
+  flex-direction: column !important;
+}
+
+.sov-page .sov-card-body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+}
+
+.sov-page .sov-card-body ul {
+  flex: 0 0 auto !important;
+}
+
+.sov-page .sov-card-link {
+  margin-top: auto !important;
+  padding-top: 20px !important;
+}
+
+/* Match the services FAQ spacing to the How It Works FAQ rhythm. */
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq {
+  padding-top: clamp(34px, 3vw, 44px) !important;
+  padding-bottom: clamp(84px, 6vw, 108px) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div:first-child {
+  width: min(100%, 1220px) !important;
+  max-width: 1220px !important;
+  margin: 0 auto 42px !important;
+  text-align: center !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq h2 {
+  font-size: 30px !important;
+  line-height: 1.08 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-faq-grid > div > p:last-child {
+  max-width: 900px !important;
+  margin: 18px auto 0 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion summary,
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details[open] summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 34px !important;
+  min-height: 0 !important;
+  padding: 28px 0 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-faq.sov-faq .sov-accordion details p {
+  max-width: 1120px !important;
+  margin: -6px 54px 30px 0 !important;
+  line-height: 1.7 !important;
+}
+
+/* Final services hero polish: lighter proof chips and tighter handoff to the service board. */
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-copy .sov-kicker::before {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  content: "" !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points {
+  display: flex !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  list-style: none !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points li,
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points li:first-child,
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points li:last-child {
+  display: inline-flex !important;
+  min-height: 42px !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.64) !important;
+  color: #14372d !important;
+  font-size: 13px !important;
+  font-weight: 820 !important;
+  line-height: 1.2 !important;
+  box-shadow: 0 10px 24px rgba(11, 41, 32, 0.06) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points svg {
+  flex: 0 0 auto !important;
+  color: #18a766 !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-quick-nav {
+  margin-top: -238px !important;
+  padding-bottom: 18px !important;
+}
+
+body main.sov-page.sov-page[class][class] .sov-quick-grid {
+  box-shadow: 0 18px 42px rgba(11, 41, 32, 0.09) !important;
+}
+
+/* Match the services final CTA to the Why JW reference card. */
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final {
+  padding: clamp(70px, 6vw, 92px) 0 !important;
+  border-top: 1px solid rgba(22, 116, 73, 0.16) !important;
+  background: #d9f6e7 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-inner {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: clamp(42px, 6vw, 84px) !important;
+  min-height: 242px !important;
+  padding: 51px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(22, 116, 73, 0.16) !important;
+  border-left: 8px solid #167449 !important;
+  border-radius: 8px !important;
+  background: #eff8f3 !important;
+  box-shadow: 0 28px 70px rgba(11, 41, 32, 0.12) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-inner::after {
+  position: absolute !important;
+  right: -12% !important;
+  bottom: -70% !important;
+  width: 420px !important;
+  height: 420px !important;
+  border-radius: 999px !important;
+  background: rgba(22, 116, 73, 0.08) !important;
+  content: "" !important;
+  pointer-events: none !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-inner > div {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 650px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-kicker {
+  margin: 0 0 18px !important;
+  color: #087f4d !important;
+  font-size: 13px !important;
+  font-weight: 880 !important;
+  line-height: 18.2px !important;
+  letter-spacing: 0 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final h2 {
+  max-width: 650px !important;
+  margin: 0 !important;
+  color: #14372d !important;
+  font-size: 28px !important;
+  font-weight: 760 !important;
+  line-height: 30.8px !important;
+  letter-spacing: 0 !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-inner > div > p:last-child {
+  max-width: 650px !important;
+  margin: 17px 0 0 !important;
+  color: #5f6f68 !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 28.9px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-button-light {
+  position: relative !important;
+  z-index: 1 !important;
+  min-width: 210px !important;
+  min-height: 58px !important;
+  flex: 0 0 auto !important;
+  border-color: #126b42 !important;
+  background: #167449 !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  box-shadow: 0 20px 44px rgba(11, 41, 32, 0.18) !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-button-light:hover {
+  border-color: #0e5b37 !important;
+  background: #0f6a3f !important;
+  color: #fff !important;
+}
+
+/* Lock service cards into the same vertical rhythm so CTA rows read level. */
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-grid {
+  align-items: stretch !important;
+  grid-auto-rows: 1fr !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-service-card {
+  display: flex !important;
+  height: 100% !important;
+  min-height: 568px !important;
+  flex-direction: column !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body {
+  display: flex !important;
+  height: 100% !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  padding: 24px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body h3 {
+  min-height: 58px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body > p {
+  min-height: 88px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body ul {
+  min-height: 88px !important;
+}
+
+body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-link {
+  display: flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: auto !important;
+  padding-top: 0 !important;
+}
+
+@media (max-width: 767px) {
+  body main.sov-page.sov-page[class][class] section.sov-hero.sov-hero .sov-hero-points {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sov-page.sov-page[class][class] .sov-quick-nav {
+    margin-top: 0 !important;
+    padding-bottom: 30px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-inner {
+    display: block !important;
+    min-height: 0 !important;
+    padding: 34px 24px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-final.sov-final h2 {
+    font-size: 26px !important;
+    line-height: 29px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-button-light {
+    width: 100% !important;
+    margin-top: 28px !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-service-card {
+    min-height: 0 !important;
+  }
+
+  body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body h3,
+  body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body > p,
+  body main.sov-page.sov-page[class][class] section.sov-catalog.sov-catalog .sov-card-body ul {
+    min-height: 0 !important;
   }
 }

@@ -60,6 +60,7 @@ import "../styles/testimonials-module-enhancements.css";
 import "../styles/contact-module-enhancements.css";
 import "../styles/service-form-unification.css";
 import "../styles/green-button-theme.css";
+import "../styles/header-scroll-stability.css";
 
 export const metadata = {
   metadataBase: new URL("https://zsl111.netlify.app"),

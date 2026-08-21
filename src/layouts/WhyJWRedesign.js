@@ -62,7 +62,7 @@ export default function WhyJWRedesign() {
       <section className="wjw-hero">
         <div className="wjw-hero-copy">
           <p className="wjw-kicker">Why choose JW Dropshipping?</p>
-          <h1>We assign one dedicated China team to your order — fully accountable for quality, timelines, and communication at every stage.</h1>
+          <h1 className="wjw-hero-title">We assign one dedicated China team to your order — fully accountable for quality, timelines, and communication at every stage.</h1>
           <p>JW connects sourcing, quality control, inventory, branded packing and delivery so your team manages fewer handoffs and makes better-informed decisions.</p>
           <div className="wjw-actions"><Link href="/contact" className="wjw-button wjw-button-primary">Talk to the Team <FiArrowRight /></Link><a href="#jw-difference" className="wjw-button wjw-button-ghost">See the Difference</a></div>
           <ul><li><FiCheck /> Live Account Support</li><li><FiCheck /> Agreed QC checkpoints</li><li><FiCheck /> Clear order handoff</li></ul>

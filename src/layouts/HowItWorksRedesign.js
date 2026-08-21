@@ -97,7 +97,7 @@ export default function HowItWorksRedesign() {
     <main className="hiw-page">
       <section className="hiw-hero">
         <div className="hiw-hero-copy">
-          <p className="hiw-kicker">HOW JW DROPSHIPPING WORKS</p>
+          <p className="hiw-kicker">HOW IT WORKS</p>
           <h1>From product link to tracked delivery</h1>
           <p>One China-based workflow for sourcing, approval, fulfillment and shipment updates.</p>
           <div className="hiw-actions">
@@ -110,11 +110,21 @@ export default function HowItWorksRedesign() {
               <span>Live workflow</span>
               <strong>Next update in progress</strong>
             </div>
+            <div className="hiw-hero-live-progress">
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
             <div className="hiw-hero-live-text">
-              <i>Product brief reviewed</i>
-              <i>Supplier terms connected</i>
-              <i>QC notes saved</i>
-              <i>Tracking update prepared</i>
+              <i><b>01</b> Product brief reviewed</i>
+              <i><b>02</b> Supplier terms connected</i>
+              <i><b>03</b> QC notes saved</i>
+              <i><b>04</b> Tracking update prepared</i>
+            </div>
+            <div className="hiw-hero-live-foot">
+              <span>Owner: China account team</span>
+              <span>Next: dispatch rules check</span>
             </div>
           </div>
         </div>
