@@ -10901,6 +10901,1288 @@ body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-s
   }
 }
 
+/* Hallmark · operational pages compact alignment: unify margins, calm overlaps, keep page accents distinct. */
+html:has(
+    :is(
+      main.sdr-page-product-sourcing,
+      main.sdr-page-automatic-order-fulfillment,
+      main.sdr-page-china-fulfillment-center,
+      main.sdr-page-quality-control-inspection
+    )
+  ),
+body:has(
+    :is(
+      main.sdr-page-product-sourcing,
+      main.sdr-page-automatic-order-fulfillment,
+      main.sdr-page-china-fulfillment-center,
+      main.sdr-page-quality-control-inspection
+    )
+  ) {
+  overflow-x: clip !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) {
+  --ops-page-bg: #d9f6e7;
+  --ops-page-line: rgba(22, 116, 73, 0.16);
+  --ops-page-card: rgba(255, 255, 255, 0.76);
+  background: var(--ops-page-bg) !important;
+  color: #173a31 !important;
+  overflow-x: clip !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  :is(.sdr-hero, .sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
+  background: var(--ops-page-bg) !important;
+  background-image: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  :is(.container, .sdr-hero-grid, .sdr-proof-grid, .sdr-case-grid, .sdr-faq-grid, .sdr-related .container, .sdr-quote-grid) {
+  width: min(100% - 48px, 1280px) !important;
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  :is(h1, h2, .sdr-section-heading h2, .sdr-heading-split h2, .sdr-proof-content h2, .sdr-case h2, .sdr-faq h2, .sdr-related-heading h2, .sdr-quote h2) {
+  max-width: 18ch !important;
+  color: #173a31 !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-style: normal !important;
+  font-weight: 850 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  text-wrap: balance !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .ff-kicker {
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1em !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero {
+  padding: clamp(78px, 7vw, 108px) 0 clamp(44px, 5vw, 68px) !important;
+  overflow: hidden !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr) !important;
+  gap: clamp(24px, 4vw, 48px) !important;
+  align-items: center !important;
+  min-height: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  justify-content: center !important;
+  text-align: left !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy h1 {
+  max-width: 17ch !important;
+  margin-top: 16px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > p {
+  max-width: 58ch !important;
+  margin-top: 16px !important;
+  color: #52665f !important;
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-actions {
+  margin-top: 22px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin: 24px 0 0 !important;
+  padding: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > ul li {
+  display: grid !important;
+  grid-template-columns: 18px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  align-items: start !important;
+  min-height: 84px !important;
+  padding: 16px 18px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 12px !important;
+  background: var(--ops-page-card) !important;
+  color: #294a40 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > ul li::before,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > ul li::after {
+  content: none !important;
+  display: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-copy > ul svg {
+  display: grid !important;
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 auto !important;
+  padding: 4px !important;
+  border-radius: 50% !important;
+  background: #dff2e8 !important;
+  color: #167449 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-image {
+  position: relative !important;
+  inset: auto !important;
+  min-height: clamp(420px, 38vw, 560px) !important;
+  overflow: hidden !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 24px 56px rgba(11, 41, 32, 0.1) !important;
+  clip-path: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-image::before,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-hero-image::after {
+  content: none !important;
+  display: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit {
+  padding-top: 88px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  border: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit-grid article {
+  min-height: 204px !important;
+  padding: 28px 24px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: 0 18px 40px rgba(11, 41, 32, 0.07) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit-grid article::before {
+  width: 72px !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--ops-accent, #167449), var(--ops-secondary, #4d7e91)) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit-grid h3 {
+  max-width: 16ch !important;
+  margin-top: 26px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-fit-grid p {
+  max-width: 32ch !important;
+  color: #52665f !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-scope {
+  padding-top: 92px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-heading-split {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.56fr) minmax(260px, 0.44fr) !important;
+  gap: clamp(24px, 4vw, 52px) !important;
+  align-items: end !important;
+  margin-bottom: 26px !important;
+  padding-bottom: 24px !important;
+  border-bottom: 1px solid var(--ops-page-line) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-heading-split > p,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-section-heading > p {
+  margin: 0 !important;
+  color: #5f6b76 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-scope-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-scope-grid article {
+  min-height: 184px !important;
+  padding: 26px 24px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-left: 5px solid var(--ops-accent, #167449) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  box-shadow: 0 16px 36px rgba(11, 41, 32, 0.06) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-scope-grid article > span {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(223, 242, 246, 0.92), rgba(229, 239, 241, 0.92)) !important;
+  color: var(--ops-accent, #167449) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof {
+  padding-top: 92px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof figure,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof-content {
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 18px 42px rgba(12, 72, 48, 0.08) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof figure {
+  min-height: 500px !important;
+  overflow: hidden !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof-content {
+  padding: clamp(26px, 3vw, 42px) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-proof-table {
+  margin-top: 26px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  overflow: hidden !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process {
+  padding-top: 92px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process-grid {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  border: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process-grid::before {
+  position: absolute !important;
+  top: 48px !important;
+  right: 5% !important;
+  left: 5% !important;
+  height: 3px !important;
+  content: "" !important;
+  background: linear-gradient(90deg, var(--ops-accent, #167449), var(--ops-secondary, #4d7e91), var(--ops-accent, #167449)) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process-grid article {
+  min-height: 220px !important;
+  padding: 28px 22px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-top: 5px solid var(--ops-accent, #167449) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 18px 40px rgba(11, 41, 32, 0.06) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process-grid article:nth-child(even) {
+  margin-top: 0 !important;
+  border-top-color: var(--ops-secondary, #4d7e91) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-process-grid span {
+  box-shadow: 0 0 0 7px #e4f2ee !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-planning {
+  padding-top: 92px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-planning-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-planning-grid article {
+  min-height: 180px !important;
+  padding: 26px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  box-shadow: 0 16px 36px rgba(11, 41, 32, 0.06) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-case {
+  padding-top: 92px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-case-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.36fr) minmax(0, 0.64fr) !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 18px 42px rgba(12, 72, 48, 0.08) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-case-grid > div:first-child {
+  padding: 32px 34px !important;
+  border-right: 1px solid var(--ops-page-line) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-case-board {
+  padding: 32px 34px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq {
+  padding: 92px 0 !important;
+  background: var(--ops-page-bg) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr) !important;
+  gap: clamp(34px, 4vw, 58px) !important;
+  align-items: start !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq-grid > div:first-child {
+  position: static !important;
+  max-width: 620px !important;
+  text-align: left !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq-grid > div:first-child > p {
+  max-width: 460px !important;
+  margin: 16px 0 0 !important;
+  color: #5f6b76 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq details {
+  border-top: 1px solid var(--ops-page-line) !important;
+  border-bottom: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq summary {
+  padding: 22px 0 !important;
+  color: #173a31 !important;
+  font-size: 1rem !important;
+  font-weight: 780 !important;
+  line-height: 1.35 !important;
+  list-style: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq summary span {
+  display: grid !important;
+  place-items: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  transform: none !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq summary span::before {
+  content: "+" !important;
+  color: #167449 !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq details[open] summary span::before {
+  content: "−" !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-faq details p {
+  max-width: 76ch !important;
+  margin: -2px 42px 24px 0 !important;
+  padding: 0 !important;
+  color: #5f6b76 !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related {
+  padding: 92px 0 104px !important;
+  background: var(--ops-page-bg) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-heading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 24px !important;
+  align-items: end !important;
+  margin: 0 0 24px !important;
+  padding-bottom: 22px !important;
+  border-bottom: 1px solid var(--ops-page-line) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-heading a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 46px !important;
+  padding: 0 18px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: #167449 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid > a {
+  min-height: 286px !important;
+  padding: 28px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-top: 4px solid var(--ops-accent, #167449) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 16px 36px rgba(11, 41, 32, 0.06) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid small {
+  display: inline-grid !important;
+  width: 42px !important;
+  height: 34px !important;
+  place-items: center !important;
+  margin: 0 0 42px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  border-radius: 6px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid span {
+  display: block !important;
+  margin: 0 0 14px !important;
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid h3 {
+  max-width: 14ch !important;
+  margin: 0 !important;
+  color: #173a31 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.1 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid p {
+  max-width: 42ch !important;
+  margin: 16px 0 0 !important;
+  color: #5f6b76 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-related-grid strong {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  margin-top: 20px !important;
+  color: #167449 !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote {
+  padding: 96px 0 !important;
+  background: var(--ops-page-bg) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr) !important;
+  gap: clamp(28px, 4vw, 56px) !important;
+  align-items: start !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-copy,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-form {
+  min-width: 0 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-copy h2 {
+  max-width: 15ch !important;
+  margin-bottom: 18px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-copy > p {
+  max-width: 480px !important;
+  color: #5f6b76 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-checklist,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-note {
+  max-width: 480px !important;
+  border: 1px solid var(--ops-page-line) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 18px 42px rgba(12, 72, 48, 0.08) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  )
+  .sdr-quote-note strong {
+  color: #167449 !important;
+}
+
+@media (max-width: 1023px) {
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-hero-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-proof-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-case-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-quote-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-fit-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-scope-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-process-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-planning-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-faq-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    :is(.container, .sdr-hero-grid, .sdr-proof-grid, .sdr-case-grid, .sdr-faq-grid, .sdr-related .container, .sdr-quote-grid) {
+    width: min(100% - 28px, 1280px) !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-hero {
+    padding: 48px 0 36px !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-hero-copy > ul,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-fit-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-scope-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-process-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-planning-grid,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-related-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-fit,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-scope,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-proof,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-process,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-planning,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-case,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-faq,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-related,
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    )
+    .sdr-quote {
+    padding: 64px 0 !important;
+  }
+}
+
 @media (max-width: 767px) {
   html:has(main.sdr-page-product-sourcing) {
     overflow-x: clip !important;

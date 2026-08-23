@@ -1,0 +1,9 @@
+{
+  "date": "2026-08-24",
+  "framework": "Next.js 16 app router",
+  "font_stack": "Google Fonts from src/config/theme.json via src/app/layout.js",
+  "palette": "Existing JW green service tokens and CSS custom properties",
+  "motion": "CSS and ScrollReveal, no broad motion library introduced",
+  "spacing": "Existing 1180px standard rail and 1280px wide rail",
+  "preserve": ["font stack", "JW green palette", "service page route structure", "existing nav and footer"]
+}

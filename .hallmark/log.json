@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-08-24",
+    "scope": "app",
+    "macrostructure": "Map / Diagram",
+    "theme": "JW green operational alignment",
+    "enrichment": "compact hero + POD-style widths",
+    "brief": "Unified layout cleanup for product sourcing, automatic order fulfillment, China fulfillment center and quality control inspection"
+  },
+  {
+    "date": "2026-08-24",
     "macrostructure": "Map / Diagram",
     "theme": "JW green inspection dossier",
     "enrichment": "existing QC photography + POD-style FAQ/related rail",
