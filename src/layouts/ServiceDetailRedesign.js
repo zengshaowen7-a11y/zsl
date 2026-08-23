@@ -9,9 +9,12 @@ import {
   FiClipboard,
   FiClock,
   FiGlobe,
+  FiLayers,
   FiPackage,
   FiSearch,
   FiShield,
+  FiTruck,
+  FiUserCheck,
 } from "react-icons/fi";
 
 const capabilityIcons = [
@@ -22,6 +25,7 @@ const capabilityIcons = [
   FiGlobe,
   FiClock,
 ];
+const outcomeIcons = [FiUserCheck, FiLayers, FiPackage, FiTruck];
 const serviceTitleClass = (title) =>
   title.length > 48 ? "sdr-title-long" : undefined;
 
@@ -40,7 +44,7 @@ const proofContent = {
   },
   "quality-control-inspection": {
     eyebrow: "EXAMPLE QC RELEASE RECORD",
-    title: "Turn inspection findings into a clear release decision.",
+    title: "Turn findings into a release call.",
     image: "/images/generated/jw-qc-inspection-v3.png",
     columns: ["Checkpoint", "Checked", "Issues", "Status"],
     rows: [
@@ -52,7 +56,7 @@ const proofContent = {
   },
   "3pl-fulfillment-services": {
     eyebrow: "EXAMPLE INVENTORY VIEW",
-    title: "Keep receiving, available stock and exceptions visible.",
+    title: "Inventory stays visible.",
     image: "/images/generated/3pl-fulfillment-hero.webp",
     columns: ["SKU", "Received", "Available", "Status"],
     rows: [
@@ -60,7 +64,7 @@ const proofContent = {
       ["JW-BLK-M", "500", "86", "Low stock"],
       ["JW-BLK-L", "300", "0", "Reorder"],
     ],
-    note: "Illustrative inventory interface. The final workflow depends on warehouse scope.",
+    note: "Illustrative inventory view — final workflow depends on warehouse scope.",
   },
   "pod-fulfillment": {
     eyebrow: "POD APPROVAL GATES",
@@ -77,7 +81,7 @@ const proofContent = {
   "private-label": {
     eyebrow: "BRAND SCOPE PLANNER",
     title: "Choose brand elements by impact, MOQ and timing.",
-    image: "/images/generated/private-label-hero.webp",
+    image: "/images/brand-showcase/paper-packaging-detail.jpg",
     columns: ["Brand element", "Typical input", "MOQ impact", "Stage"],
     rows: [
       ["Printed insert", "Artwork", "Low", "Start"],
@@ -87,20 +91,24 @@ const proofContent = {
     note: "MOQ and timing are confirmed after material and supplier review.",
   },
   "automatic-order-fulfillment": {
-    eyebrow: "ORDER DATA FLOW",
-    title: "Move normal orders forward and keep exceptions visible.",
+    eyebrow: "ORDER CONTROL LOG",
+    title: "See which orders can move.",
     image: "/images/generated/automatic-fulfillment-hero.webp",
-    columns: ["Event", "Validation", "Warehouse action", "Result"],
+    columns: ["Signal", "Status", "Action", "Output"],
     rows: [
-      ["New order", "SKU mapped", "Release", "Ready"],
-      ["Address issue", "Field missing", "Hold", "Review"],
-      ["Dispatched", "Tracking valid", "Sync", "Complete"],
+      ["New order", "Mapped", "Release", "Ready"],
+      ["Address", "Missing", "Hold", "Review"],
+      ["Shipped", "Valid", "Sync", "Tracking"],
     ],
-    note: "Example workflow. Connection methods depend on the store platform.",
+    summary: [
+      ["Fast lane", "Orders with mapped SKUs and complete fields can move without manual chasing."],
+      ["Hold lane", "Orders with missing details stay visible before they reach packing."],
+    ],
+    note: "Example control log. Connection methods depend on the store platform.",
   },
   "china-fulfillment-center": {
     eyebrow: "WAREHOUSE CONTROL ZONES",
-    title: "Give every physical handoff a clear place and record.",
+    title: "Map each handoff before it ships.",
     image: "/images/evidence/warehouse-walkthrough-aisle.jpg",
     columns: ["Zone", "Activity", "Control", "Output"],
     rows: [
@@ -163,6 +171,23 @@ export default function ServiceDetailRedesign({ service }) {
     },
   };
   const processIntro = processIntroBySlug[service.slug] || null;
+  const fitIntroBySlug = {
+    "china-fulfillment-center": {
+      title: "Built for inbound stock and outbound export.",
+      lead: "Use this service when factory goods, brand materials and customer orders all need one warehouse flow.",
+      tag: "WAREHOUSE FIT",
+      asideTitle: "BEST FIT",
+      asideLead: "When every handoff needs a place, a lane and a clear owner.",
+    },
+    "quality-control-inspection": {
+      title: "Built for batches that need proof before release.",
+      lead: "Use this service when the warehouse needs a documented pass, review or hold decision before inventory moves on.",
+      tag: "INSPECTION FIT",
+      asideTitle: "BEST FIT",
+      asideLead: "When product risk needs a visible standard and a clear next step.",
+    },
+  };
+  const fitIntro = fitIntroBySlug[service.slug] || null;
   const quoteDetailBySlug = {
     "dropshipping-supplier": {
       checklist: [
@@ -234,13 +259,13 @@ export default function ServiceDetailRedesign({ service }) {
     },
     "automatic-order-fulfillment": {
       checklist: [
-        "Store platform and current order handoff",
+        "Store platform and order source",
         "SKU map or product catalog",
-        "Exception rules and shipping logic",
+        "Hold reasons and tracking method",
       ],
       note: {
-        title: "What helps us map automation faster",
-        text: "When the store fields, SKU records and exception handling rules are clear, the fulfillment flow is much easier to configure.",
+        title: "What helps us map the lane",
+        text: "Store fields, SKU records and hold rules make the automatic route easier to test before launch.",
       },
       titleClass: "sdr-compact-quote-title",
     },
@@ -293,6 +318,22 @@ export default function ServiceDetailRedesign({ service }) {
                 See How It Works
               </a>
             </div>
+            {service.slug === "dropshipping-supplier" ? (
+              <div className="sdr-dropship-flow" aria-label="Dropshipping order workflow">
+                {[
+                  ["01", "Source", "supplier + product"],
+                  ["02", "Check", "QC before dispatch"],
+                  ["03", "Pack", "rules by SKU"],
+                  ["04", "Ship", "tracking returned"],
+                ].map(([number, title, text]) => (
+                  <span key={title}>
+                    <b>{number}</b>
+                    <strong>{title}</strong>
+                    <small>{text}</small>
+                  </span>
+                ))}
+              </div>
+            ) : null}
             <ul>
               {service.heroPoints.map((point) => (
                 <li key={point}>
@@ -310,24 +351,92 @@ export default function ServiceDetailRedesign({ service }) {
               priority
               sizes="(max-width: 900px) 100vw, 52vw"
             />
+            {service.slug === "dropshipping-supplier" ? (
+              <div className="sdr-dropship-record" aria-hidden="true">
+                <div>
+                  <span>ORDER FLOW</span>
+                  <strong>Product link received</strong>
+                </div>
+                <ol>
+                  <li><b>Supplier</b><span>confirmed</span></li>
+                  <li><b>QC</b><span>before dispatch</span></li>
+                  <li><b>Tracking</b><span>returned</span></li>
+                </ol>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
 
       <section className="sdr-fit">
         <div className="container">
-          <div className="sdr-section-heading">
-            <span className="ff-kicker">IS THIS SERVICE RIGHT FOR YOU?</span>
-            <h2>Built around the operating result you need.</h2>
-          </div>
+          {service.slug === "dropshipping-supplier" ? (
+            <div className="sdr-fit-intro">
+              <div>
+                <span className="ff-kicker">IS THIS SERVICE RIGHT FOR YOU?</span>
+                <h2>Built around the operating result you need.</h2>
+              </div>
+              <aside>
+                <span>BEST STARTING POINT</span>
+                <strong>When supplier, QC, packing and shipping need one owner.</strong>
+                <p>Use this service when your store needs a practical operating partner behind daily direct-to-customer orders.</p>
+              </aside>
+            </div>
+          ) : service.slug === "3pl-fulfillment-services" ? (
+            <div className="sdr-fit-intro sdr-3pl-fit-intro">
+              <div>
+                <span className="ff-kicker">IS THIS SERVICE RIGHT FOR YOU?</span>
+                <h2>Built for daily stock movement.</h2>
+                <p>Use this service when received inventory, packing rules and dispatch updates need one organized warehouse routine.</p>
+              </div>
+              <aside>
+                <span>BEST FIT</span>
+                <strong>Inventory held in China, orders shipped one by one.</strong>
+              </aside>
+            </div>
+          ) : fitIntro ? (
+            <div
+              className={`sdr-fit-intro ${
+                service.slug === "quality-control-inspection"
+                  ? "sdr-qc-fit-intro"
+                  : "sdr-china-fit-intro"
+              }`}
+            >
+              <div>
+                <span className="ff-kicker">{fitIntro.tag}</span>
+                <h2>{fitIntro.title}</h2>
+                <p>{fitIntro.lead}</p>
+              </div>
+              <aside>
+                <span>{fitIntro.asideTitle}</span>
+                <strong>{fitIntro.asideLead}</strong>
+              </aside>
+            </div>
+          ) : (
+            <div className="sdr-section-heading">
+              <span className="ff-kicker">IS THIS SERVICE RIGHT FOR YOU?</span>
+              <h2>Built around the operating result you need.</h2>
+            </div>
+          )}
           <div className="sdr-fit-grid">
-            {service.outcomes.map(([title, text], index) => (
+            {service.outcomes.map(([title, text], index) => {
+              const Icon = outcomeIcons[index % outcomeIcons.length];
+              return (
               <article key={title}>
-                <small>0{index + 1}</small>
+                <div className="sdr-fit-card-top">
+                  <small>0{index + 1}</small>
+                  {["dropshipping-supplier", "3pl-fulfillment-services"].includes(service.slug) ? <Icon aria-hidden="true" /> : null}
+                </div>
                 <h3>{title}</h3>
                 <p>{text}</p>
+                {service.slug === "dropshipping-supplier" ? (
+                  <strong>{["Ownership", "Rules", "Branding", "Tracking"][index]}</strong>
+                ) : service.slug === "3pl-fulfillment-services" ? (
+                  <strong>{["Inbound", "Stock", "Packing", "Dispatch"][index]}</strong>
+                ) : null}
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -343,6 +452,12 @@ export default function ServiceDetailRedesign({ service }) {
             </div>
             <p>{service.capabilitiesLead}</p>
           </div>
+          {service.slug === "dropshipping-supplier" ? (
+            <div className="sdr-scope-hub" aria-hidden="true">
+              <span>ONE OPERATING WORKFLOW</span>
+              <strong>Source, check, pack and ship with one accountable handoff.</strong>
+            </div>
+          ) : null}
           <div className="sdr-scope-grid">
             {service.capabilities.map(([title, text], index) => {
               const Icon = capabilityIcons[index];
@@ -472,58 +587,74 @@ export default function ServiceDetailRedesign({ service }) {
         </div>
       </section>
 
-      <section className="sdr-case">
-        <div className="container sdr-case-grid">
-          <div>
-            <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
-            <h2 className={serviceTitleClass(conversion.caseStudy.title)}>
-              {conversion.caseStudy.title}
-            </h2>
-            <p>
-              <FiGlobe />
-              {conversion.caseStudy.profile}
-            </p>
+      {service.slug !== "pod-fulfillment" ? (
+        <section className="sdr-case">
+          <div className="container sdr-case-grid">
+            <div>
+              <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
+              <h2 className={serviceTitleClass(conversion.caseStudy.title)}>
+                {conversion.caseStudy.title}
+              </h2>
+              <p>
+                <FiGlobe />
+                {conversion.caseStudy.profile}
+              </p>
+            </div>
+            <div className="sdr-case-board">
+              <strong>THE OPERATING CHALLENGE</strong>
+              <p>{conversion.caseStudy.challenge}</p>
+              <ol>
+                {conversion.caseStudy.plan.map((step, index) => (
+                  <li key={step}>
+                    <span>0{index + 1}</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+              <blockquote>{conversion.caseStudy.outcome}</blockquote>
+            </div>
           </div>
-          <div className="sdr-case-board">
-            <strong>THE OPERATING CHALLENGE</strong>
-            <p>{conversion.caseStudy.challenge}</p>
-            <ol>
-              {conversion.caseStudy.plan.map((step, index) => (
-                <li key={step}>
-                  <span>0{index + 1}</span>
-                  {step}
-                </li>
-              ))}
-            </ol>
-            <blockquote>{conversion.caseStudy.outcome}</blockquote>
-          </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="sdr-faq">
         <div className="container sdr-faq-grid">
           <div>
             <span className="ff-kicker">
-              {service.slug === "dropshipping-supplier"
+              {["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label", "automatic-order-fulfillment"].includes(service.slug)
                 ? "FREQUENTLY ASKED QUESTIONS"
                 : "SERVICE FAQ"}
             </span>
             <h2
               className={serviceTitleClass(
-                service.slug === "dropshipping-supplier"
+                service.slug === "product-sourcing"
+                  ? "Sourcing questions"
+                  :
+                service.slug === "automatic-order-fulfillment"
+                  ? "Automation questions"
+                  :
+                ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug)
                   ? "What to know before you start"
                   : `Questions about ${service.menuTitle}?`,
               )}
             >
-              {service.slug === "dropshipping-supplier" ? (
+              {service.slug === "product-sourcing" ? (
+                "Sourcing questions"
+              ) : service.slug === "automatic-order-fulfillment" ? (
+                "Automation questions"
+              ) : ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug) ? (
                 "What to know before you start"
               ) : (
                 <>Questions about {service.menuTitle}?</>
               )}
             </h2>
             <p>
-              {service.slug === "dropshipping-supplier"
-                ? "Quick answers on sourcing, MOQ, QC and pricing."
+              {service.slug === "product-sourcing"
+                ? "The scope depends on product detail, supplier depth and sample decisions."
+                : service.slug === "automatic-order-fulfillment"
+                ? "The setup depends on platform access, SKU records and exception rules."
+                : ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug)
+                ? "Quick answers about service scope, suppliers, order volume, quality checks and branded packaging."
                 : "The exact scope depends on your product, markets, volume and customer promise."}
             </p>
           </div>
@@ -532,7 +663,7 @@ export default function ServiceDetailRedesign({ service }) {
               <details
                 name={`${service.slug}-faq`}
                 key={question}
-                open={index === 0}
+                open={index === 0 && !["pod-fulfillment", "private-label"].includes(service.slug)}
               >
                 <summary>
                   {question}
@@ -555,8 +686,9 @@ export default function ServiceDetailRedesign({ service }) {
             </Link>
           </div>
           <div className="sdr-related-grid">
-            {related.map((item) => (
+            {related.map((item, index) => (
               <Link href={`/services/${item.slug}`} key={item.slug}>
+                <small>0{index + 1}</small>
                 <span>{item.eyebrow}</span>
                 <h3>{item.menuTitle}</h3>
                 <p>{item.lead}</p>

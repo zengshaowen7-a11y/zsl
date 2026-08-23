@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Map / Diagram",
+    "theme": "JW green inspection dossier",
+    "enrichment": "existing QC photography + POD-style FAQ/related rail",
+    "brief": "Quality control inspection service page redesign"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Map / Diagram",
+    "theme": "JW green warehouse atlas",
+    "enrichment": "existing warehouse photography + POD-style FAQ/related rail",
+    "brief": "China fulfillment center service page redesign"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Map / Diagram",
+    "theme": "JW green order control console",
+    "enrichment": "existing order automation photography + order-flow map",
+    "brief": "Automatic order fulfillment service page redesign"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Workbench",
+    "theme": "JW green sourcing desk",
+    "enrichment": "existing sourcing photography + comparison ledger",
+    "brief": "Product sourcing service page redesign"
+  },
+  {
+    "date": "2026-08-23",
+    "macrostructure": "Narrative Workflow",
+    "theme": "JW green adaptation",
+    "enrichment": "existing photography",
+    "brief": "POD fit heading collision fix and case simplification"
+  },
+  {
+    "date": "2026-08-23",
+    "macrostructure": "Narrative Workflow",
+    "theme": "JW green adaptation",
+    "enrichment": "existing photography",
+    "brief": "POD fulfillment module layout rescue"
+  },
+  {
+    "date": "2026-08-23",
+    "macrostructure": "Narrative Workflow",
+    "theme": "JW green adaptation",
+    "enrichment": "existing photography",
+    "brief": "POD fulfillment service page optimization"
+  }
+]
