@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { useState } from "react";
 import {
   FiArrowRight,
   FiStar,
@@ -66,8 +68,69 @@ function Stars() {
   );
 }
 
+function getInitials(name) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+}
+
+function AvatarBadge({ name, src, eager = false }) {
+  return (
+    <span className="testimonial-review-avatar-shell" aria-hidden="true">
+      <span className="testimonial-review-avatar-fallback">{getInitials(name)}</span>
+      <img
+        className="testimonial-review-avatar"
+        src={src}
+        alt=""
+        loading={eager ? "eager" : "lazy"}
+        decoding="async"
+      />
+    </span>
+  );
+}
+
+function ProofVideoCard({ video }) {
+  const [ready, setReady] = useState(false);
+
+  return (
+    <article className="testimonial-video-card">
+      <div className="testimonial-video-frame">
+        <Image
+          className="testimonial-video-poster"
+          src={video.poster}
+          alt=""
+          fill
+          priority
+          sizes="(max-width: 767px) 100vw, 50vw"
+        />
+        <video
+          className={`testimonial-video-element${ready ? " is-ready" : ""}`}
+          controls
+          playsInline
+          preload="metadata"
+          poster={video.poster}
+          aria-label={video.title}
+          onLoadedData={() => setReady(true)}
+          onCanPlay={() => setReady(true)}
+        >
+          <source src={video.video} type="video/mp4" />
+        </video>
+      </div>
+      <div className="testimonial-video-caption">
+        <h3>{video.label}</h3>
+        <p>{video.copy}</p>
+      </div>
+    </article>
+  );
+}
+
 function TestimonialCard({ testimonial, index, featured = false }) {
   const [name, country, manager, topic, quote] = testimonial;
+  const eagerAvatar = featured || index < 6;
 
   return (
     <article className={`testimonial-review-card ${featured ? "testimonial-review-card-featured" : ""}`}>
@@ -77,12 +140,7 @@ function TestimonialCard({ testimonial, index, featured = false }) {
       </div>
       <blockquote>{quote}</blockquote>
       <footer>
-        <img
-          className="testimonial-review-avatar"
-          src={testimonialAvatars[index]}
-          alt={`${name} seller avatar`}
-          loading="lazy"
-        />
+        <AvatarBadge name={name} src={testimonialAvatars[index]} eager={eagerAvatar} />
         <span>
           <strong>{name}</strong>
           <small>{country} / {manager}</small>
@@ -115,19 +173,7 @@ export default function HomeTestimonials({ standalone = false }) {
               <p>Before visitors read what sellers say, show them where orders are picked, checked, packed and shipped from, and who is on the other end of the conversation.</p>
             </div>
             <div className="testimonial-video-grid">
-              {proofVideos.map((video) => (
-                <article className="testimonial-video-card" key={video.title}>
-                  <div className="testimonial-video-frame">
-                    <video controls playsInline preload="metadata" poster={video.poster} aria-label={video.title}>
-                      <source src={video.video} type="video/mp4" />
-                    </video>
-                  </div>
-                  <div className="testimonial-video-caption">
-                    <h3>{video.label}</h3>
-                    <p>{video.copy}</p>
-                  </div>
-                </article>
-              ))}
+              {proofVideos.map((video) => <ProofVideoCard key={video.title} video={video} />)}
             </div>
           </div>
         )}

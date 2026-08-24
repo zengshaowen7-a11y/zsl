@@ -36,13 +36,40 @@ const faqs = [
 
 const heroCarouselReviews = reviews.slice(0, 4);
 
+function getInitials(name) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+}
+
+function AvatarBadge({ name, src, eager = false }) {
+  return (
+    <span className="tst-avatar" aria-hidden="true">
+      <span className="tst-avatar-fallback">{getInitials(name)}</span>
+      <Image
+        className="tst-avatar-image"
+        src={src}
+        alt=""
+        width={56}
+        height={56}
+        priority={eager}
+        loading={eager ? "eager" : "lazy"}
+      />
+    </span>
+  );
+}
+
 function Review({ review, featured = false, index }) {
   const { name, country, flagSrc, avatar, service, manager, quote } = review;
   return <article className={`tst-review${featured ? " is-featured" : ""}`}>
     <div className="tst-review-top"><span className="tst-stars" aria-label="Five star review">{[1,2,3,4,5].map(star => <FiStar key={star} />)}</span></div>
     <blockquote>{quote}</blockquote>
     <footer>
-      <span className="tst-avatar" aria-hidden="true"><Image src={avatar} alt="" width={56} height={56} /></span>
+      <AvatarBadge name={name} src={avatar} eager={featured || index < 4} />
       <div><strong>{name}</strong><span><img src={flagSrc} alt="" aria-hidden="true" />{country} · {manager}</span></div>
       <small>{service}</small>
     </footer>
@@ -84,7 +111,7 @@ export default function TestimonialsRedesign() {
                   <div className="tst-hero-stars" aria-label="Five star review">{[1,2,3,4,5].map(star => <FiStar key={star} />)}</div>
                   <blockquote>{review.quote}</blockquote>
                   <footer>
-                    <span className="tst-avatar" aria-hidden="true"><Image src={review.avatar} alt="" width={56} height={56} /></span>
+                    <AvatarBadge name={review.name} src={review.avatar} eager />
                     <div>
                       <strong>{review.name}</strong>
                       <span><img src={review.flagSrc} alt="" aria-hidden="true" />{review.country} · {review.manager}</span>
