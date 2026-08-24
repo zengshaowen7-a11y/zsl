@@ -15142,3 +15142,293 @@ body main.sdr-page-quality-control-inspection[class][class] .sdr-quote-note p {
     max-width: 100% !important;
   }
 }
+
+/* Hallmark · operational pages rail tighten: align the four pages with the POD rail and calm dense modules. */
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) {
+  --ops-rail: min(100% - 48px, 1180px);
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero-grid,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) :is(.sdr-fit, .sdr-scope, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) > .container,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) :is(.sdr-proof-grid, .sdr-case-grid, .sdr-faq-grid, .sdr-quote-grid) {
+  width: var(--ops-rail) !important;
+  max-width: 1180px !important;
+  margin-inline: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 767px) {
+  :is(
+      body main.sdr-page-product-sourcing[class][class],
+      body main.sdr-page-automatic-order-fulfillment[class][class],
+      body main.sdr-page-china-fulfillment-center[class][class],
+      body main.sdr-page-quality-control-inspection[class][class]
+    ) {
+    --ops-rail: calc(100% - 40px);
+  }
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero {
+  padding-top: 72px !important;
+  padding-bottom: 48px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero-grid {
+  gap: clamp(20px, 3vw, 40px) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero-copy {
+  gap: 18px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero-copy > ul {
+  width: min(100%, 100%) !important;
+  margin-top: 18px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-hero-copy > ul li {
+  min-height: 88px !important;
+  padding: 14px 16px !important;
+  font-size: 12px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-fit,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-scope,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-proof,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-process,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-planning,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-case,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-faq,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-related,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-quote {
+  padding-top: 74px !important;
+  padding-bottom: 74px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-fit-grid,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-scope-grid,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-process-grid,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-planning-grid,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-related-grid {
+  gap: 12px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-fit-grid article,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-scope-grid article,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-process-grid article,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-planning-grid article,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-related-grid > a {
+  min-height: 164px !important;
+  padding: 20px 18px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-fit-grid h3,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-scope-grid h3,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-process-grid h3,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-planning-grid h3,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-related-grid h3 {
+  max-width: 16ch !important;
+  font-size: clamp(20px, 1.3vw, 24px) !important;
+  line-height: 1.15 !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-faq-grid {
+  width: var(--ops-rail) !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-quote-grid {
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr) !important;
+  gap: 24px !important;
+}
+
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-quote-copy,
+:is(
+    body main.sdr-page-product-sourcing[class][class],
+    body main.sdr-page-automatic-order-fulfillment[class][class],
+    body main.sdr-page-china-fulfillment-center[class][class],
+    body main.sdr-page-quality-control-inspection[class][class]
+  ) .sdr-form {
+  min-width: 0 !important;
+}
