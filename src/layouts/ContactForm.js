@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowRight, FiLock } from "react-icons/fi";
 import PhoneCountryInput from "./components/PhoneCountryInput";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpaknaj";
+const THANK_YOU_PATH = "/thank-you";
+
 const countryCodeOptions = [
   { label: "United States", flagSrc: "https://flagcdn.com/us.svg", code: "+1" },
   { label: "United Kingdom", flagSrc: "https://flagcdn.com/gb.svg", code: "+44" },
@@ -60,7 +63,7 @@ function HomeStyleQuoteForm({ id, className = "", source = "contact-page", servi
     };
   }, [isCountryCodeOpen]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     setIsCountryCodeOpen(false);
     const data = new FormData(form);
@@ -89,8 +92,28 @@ function HomeStyleQuoteForm({ id, className = "", source = "contact-page", servi
       return;
     }
 
+    event.preventDefault();
     setErrors({});
     setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
+
+      window.location.assign(THANK_YOU_PATH);
+    } catch {
+      setIsSubmitting(false);
+      form.submit();
+    }
   };
 
   return (
@@ -99,10 +122,8 @@ function HomeStyleQuoteForm({ id, className = "", source = "contact-page", servi
       className={`contact-enquiry-form ff-form fh-home-quote-form ${className}`.trim()}
       name="fulfillment-quote"
       method="POST"
-      action="/thank-you"
+      action={FORMSPREE_ENDPOINT}
       noValidate
-      data-netlify="true"
-      data-netlify-honeypot="company-website"
       onSubmit={handleSubmit}
       onInvalid={(event) => event.preventDefault()}
     >
@@ -220,7 +241,7 @@ function LegacyContactForm({ id, className = "", source = "contact-page", servic
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
@@ -246,8 +267,28 @@ function LegacyContactForm({ id, className = "", source = "contact-page", servic
       return;
     }
 
+    event.preventDefault();
     setErrors({});
     setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
+
+      window.location.assign(THANK_YOU_PATH);
+    } catch {
+      setIsSubmitting(false);
+      form.submit();
+    }
   };
 
   return (
@@ -256,10 +297,8 @@ function LegacyContactForm({ id, className = "", source = "contact-page", servic
       className={`contact-enquiry-form ff-form fh-home-quote-form ${className}`.trim()}
       name="fulfillment-quote"
       method="POST"
-      action="/thank-you"
+      action={FORMSPREE_ENDPOINT}
       noValidate
-      data-netlify="true"
-      netlify-honeypot="company-website"
       onSubmit={handleSubmit}
       onInvalid={(event) => event.preventDefault()}
     >

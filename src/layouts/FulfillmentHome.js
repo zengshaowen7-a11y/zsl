@@ -210,6 +210,9 @@ const countryCodeOptions = [
   { label: "New Zealand", flagSrc: "https://flagcdn.com/nz.svg", code: "+64" },
 ];
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpaknaj";
+const THANK_YOU_PATH = "/thank-you";
+
 const coreAdvantages = [
   {
     title: "Source with clarity",
@@ -380,14 +383,14 @@ export default function FulfillmentHome({ lang = "en" }) {
       : current.map((value, index) => index === galleryIndex ? nextIndex : value));
   };
 
-  const handleQuoteSubmit = (event) => {
+  const handleQuoteSubmit = async (event) => {
     const form = event.currentTarget;
     setIsCountryCodeOpen(false);
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
     const phoneCountry = String(data.get("country-code") || "").trim();
-    const phone = String(data.get("phone") || "").trim();
+    const phone = String(data.get("phone-number") || "").trim();
     const businessDetails = String(data.get("business-details") || "").trim();
     const dailyOrderVolume = String(data.get("daily-order-volume") || "").trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -407,8 +410,28 @@ export default function FulfillmentHome({ lang = "en" }) {
       return;
     }
 
+    event.preventDefault();
     setQuoteErrors({});
     setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: data,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Formspree responded with ${response.status}`);
+      }
+
+      window.location.assign(THANK_YOU_PATH);
+    } catch {
+      setIsSubmitting(false);
+      form.submit();
+    }
   };
 
   return (
@@ -737,7 +760,7 @@ export default function FulfillmentHome({ lang = "en" }) {
               <li><FiArrowRight aria-hidden="true" /><span><strong>Get a clear next step</strong>We will respond with the information needed to proceed.</span></li>
             </ul>
           </div>
-          <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={isZh ? "/zh/thank-you" : "/thank-you"} noValidate data-netlify="true" data-netlify-honeypot="company-website" onSubmit={handleQuoteSubmit} onInvalid={(event) => event.preventDefault()}>
+          <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={FORMSPREE_ENDPOINT} noValidate onSubmit={handleQuoteSubmit} onInvalid={(event) => event.preventDefault()}>
             <input type="hidden" name="form-name" value="fulfillment-quote" /><input type="hidden" name="language" value={lang} />
             <p className="fh-honeypot"><label>Do not fill this out<input name="company-website" /></label></p>
             <div className="fh-home-quote-fields">
