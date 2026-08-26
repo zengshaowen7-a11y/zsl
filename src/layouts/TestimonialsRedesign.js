@@ -1,30 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { FiArrowRight, FiCheck, FiChevronDown, FiMessageCircle, FiStar } from "react-icons/fi";
-
-const reviews = [
-  { name: "Lukas", country: "Germany", flagSrc: "https://flagcdn.com/de.svg", avatar: "/images/testimonials/avatars/seller-avatar-03.jpg", service: "Order Handling", manager: "Working with Katrina", quote: "The team keeps high-volume order work neat, trackable and organized. The difference is clear when details matter every day." },
-  { name: "Sophie", country: "France", flagSrc: "https://flagcdn.com/fr.svg", avatar: "/images/testimonials/avatars/seller-avatar-04.jpg", service: "Product Sourcing", manager: "Working with Mia", quote: "The focus is not only on cheaper pricing. Product quality, improvement ideas and brand customization are part of the conversation." },
-  { name: "Daniel", country: "United Kingdom", flagSrc: "https://flagcdn.com/gb.svg", avatar: "/images/testimonials/avatars/seller-avatar-12.jpg", service: "Account Support", manager: "Working with Michael", quote: "Quick replies and reliable follow-through make daily fulfillment feel much easier to manage." },
-  { name: "Mick", country: "Netherlands", flagSrc: "https://flagcdn.com/nl.svg", avatar: "/images/testimonials/avatars/seller-avatar-10.jpg", service: "Fulfillment", manager: "Working with Iris", quote: "Clear communication, fast answers and helpful support make the clothing order flow smoother." },
-  { name: "Yosef", country: "Israel", flagSrc: "https://flagcdn.com/il.svg", avatar: "/images/testimonials/avatars/seller-avatar-24.jpg", service: "Fast Quotes", manager: "Working with Grey", quote: "Quotes come back quickly, messages get answered on time and the service feels dependable." },
-  { name: "Clara", country: "Spain", flagSrc: "https://flagcdn.com/es.svg", avatar: "/images/testimonials/avatars/seller-avatar-11.jpg", service: "Quality Control", manager: "Working with Coco", quote: "The team explains options clearly and helps compare quotations without losing sight of product quality." },
-  { name: "Laura", country: "Australia", flagSrc: "https://flagcdn.com/au.svg", avatar: "/images/testimonials/avatars/seller-avatar-18.jpg", service: "Branding", manager: "Working with Iris", quote: "Packaging details are handled carefully, and small brand requests do not get lost during fulfillment." },
-  { name: "Thomas", country: "Switzerland", flagSrc: "https://flagcdn.com/ch.svg", avatar: "/images/testimonials/avatars/seller-avatar-17.jpg", service: "Reliability", manager: "Working with Grey", quote: "The biggest value is consistency. Orders move steadily and updates arrive before problems grow." },
-  { name: "Nina", country: "Denmark", flagSrc: "https://flagcdn.com/dk.svg", avatar: "/images/testimonials/avatars/seller-avatar-23.jpg", service: "Quality Control", manager: "Working with Coco", quote: "Quality checks helped us catch product issues earlier and protect the customer experience." },
-  { name: "Emma", country: "United States", flagSrc: "https://flagcdn.com/us.svg", avatar: "/images/testimonials/avatars/seller-avatar-16.jpg", service: "Product Sourcing", manager: "Working with Mia", quote: "Sourcing requests come back with practical options, so testing new products feels less risky." },
-  { name: "Marco", country: "Italy", flagSrc: "https://flagcdn.com/it.svg", avatar: "/images/testimonials/avatars/seller-avatar-15.jpg", service: "Supplier Search", manager: "Working with Katrina", quote: "Supplier options are easier to compare when pricing, samples and timing are kept in one clear thread." },
-  { name: "Olivia", country: "Canada", flagSrc: "https://flagcdn.com/ca.svg", avatar: "/images/testimonials/avatars/seller-avatar-19.jpg", service: "Packing Support", manager: "Working with Iris", quote: "Small packing notes are handled before dispatch, so the final parcel feels closer to our brand." },
-  { name: "Noah", country: "New Zealand", flagSrc: "https://flagcdn.com/nz.svg", avatar: "/images/testimonials/avatars/seller-avatar-20.jpg", service: "Inventory Updates", manager: "Working with Michael", quote: "Inventory questions are answered quickly, and that helps us plan promotions with fewer surprises." },
-  { name: "Aisha", country: "United Arab Emirates", flagSrc: "https://flagcdn.com/ae.svg", avatar: "/images/testimonials/avatars/seller-avatar-28.jpg", service: "Custom Requests", manager: "Working with Coco", quote: "Custom product details stay visible from sourcing through packing, which makes approvals easier." },
-  { name: "Kenji", country: "Japan", flagSrc: "https://flagcdn.com/jp.svg", avatar: "/images/testimonials/avatars/seller-avatar-05.jpg", service: "Shipping Follow-up", manager: "Working with Grey", quote: "Shipment updates arrive with enough context for our team to respond to customers faster." },
-  { name: "Hannah", country: "Sweden", flagSrc: "https://flagcdn.com/se.svg", avatar: "/images/testimonials/avatars/seller-avatar-26.jpg", service: "Account Support", manager: "Working with Mia", quote: "The account team understands our workflow and keeps replies direct, useful and timely." },
-  { name: "Victor", country: "Portugal", flagSrc: "https://flagcdn.com/pt.svg", avatar: "/images/testimonials/avatars/seller-avatar-27.jpg", service: "Sourcing", manager: "Working with Alice", quote: "The team helps compare suppliers and gives realistic feedback before we commit to a product." },
-  { name: "Isabella", country: "Brazil", flagSrc: "https://flagcdn.com/br.svg", avatar: "/images/testimonials/avatars/seller-avatar-14.jpg", service: "Brand Customization", manager: "Working with Iris", quote: "Brand details are discussed clearly, and the final packing direction feels easier to approve." },
-  { name: "Amir", country: "Saudi Arabia", flagSrc: "https://flagcdn.com/sa.svg", avatar: "/images/testimonials/avatars/seller-avatar-29.jpg", service: "Dispatch", manager: "Working with Grey", quote: "Dispatch support is professional, and the team keeps priority orders visible when timing matters." },
-  { name: "Grace", country: "Ireland", flagSrc: "https://flagcdn.com/ie.svg", avatar: "/images/testimonials/avatars/seller-avatar-30.jpg", service: "Support", manager: "Working with Katrina", quote: "Support feels personal without being slow, which is helpful for a growing store." },
-  { name: "Ethan", country: "United States", flagSrc: "https://flagcdn.com/us.svg", avatar: "/images/testimonials/avatars/seller-avatar-25.jpg", service: "Fast Quotes", manager: "Working with Michael", quote: "Quotes arrive quickly and include enough context to compare products without long back-and-forth." },
-];
+import { featuredTestimonials, storyTestimonials } from "../content/testimonials";
 
 const faqs = [
   ["What do these seller stories show?", "They show how sellers experience daily support: sourcing replies, QC updates, packing details, order handling and fulfillment communication."],
@@ -34,7 +14,7 @@ const faqs = [
   ["How should I use these testimonials?", "Use them to compare the kind of support you need, then start with one product or order flow to test the fit."],
 ];
 
-const heroCarouselReviews = reviews.slice(0, 4);
+const heroCarouselReviews = featuredTestimonials.slice(0, 4);
 
 function getInitials(name) {
   return name
@@ -77,6 +57,8 @@ function Review({ review, featured = false, index }) {
 }
 
 export default function TestimonialsRedesign() {
+  const [activeHeroReview, setActiveHeroReview] = useState(0);
+
   return <main className="tst-page">
     <section className="tst-hero">
       <div className="tst-hero-copy">
@@ -105,7 +87,10 @@ export default function TestimonialsRedesign() {
       <div className="tst-hero-side">
         <div className="tst-hero-board">
           <div className="tst-hero-carousel" aria-label="Featured seller feedback">
-            <div className="tst-hero-carousel-track">
+            <div
+              className="tst-hero-carousel-track"
+              style={{ transform: `translateX(-${activeHeroReview * 100}%)` }}
+            >
               {heroCarouselReviews.map((review) => (
                 <article className="tst-hero-slide" key={review.name}>
                   <div className="tst-hero-stars" aria-label="Five star review">{[1,2,3,4,5].map(star => <FiStar key={star} />)}</div>
@@ -121,21 +106,68 @@ export default function TestimonialsRedesign() {
                 </article>
               ))}
             </div>
-            <div className="tst-hero-carousel-dots" aria-hidden="true">
-              {heroCarouselReviews.map((review) => <span key={review.name} />)}
+            <div className="tst-hero-carousel-dots" role="tablist" aria-label="Switch seller stories">
+              {heroCarouselReviews.map((review, index) => (
+                <button
+                  key={review.name}
+                  type="button"
+                  className={index === activeHeroReview ? "is-active" : ""}
+                  aria-label={`Show story ${index + 1} from ${review.name}`}
+                  aria-pressed={index === activeHeroReview}
+                  onClick={() => setActiveHeroReview(index)}
+                />
+              ))}
             </div>
           </div>
-          <div className="tst-hero-board-row">
-            <article><small>Most mentioned</small><strong>Clear communication</strong></article>
-            <article><small>Useful for</small><strong>Choosing your first workflow</strong></article>
-          </div>
+        <div className="tst-hero-board-row">
+          <article><small>Most mentioned</small><strong>Clear communication</strong></article>
+          <article><small>Useful for</small><strong>First workflow</strong></article>
+        </div>
         </div>
       </div>
     </section>
 
-    <section className="tst-featured" id="seller-stories"><div className="tst-container"><header className="tst-heading"><div><p className="tst-kicker">FEATURED FEEDBACK</p><h2>Three parts of the partnership sellers remember.</h2></div><p>Clear order handling, thoughtful product decisions and a responsive person who keeps the work moving.</p></header><div className="tst-featured-grid">{reviews.slice(0,3).map((review,index)=><Review review={review} featured index={index} key={review.name} />)}</div><details className="tst-featured-more"><summary>More Seller Stories <FiChevronDown aria-hidden="true" /></summary><div className="tst-featured-more-grid">{reviews.slice(3,9).map((review,index)=><Review review={review} index={index+3} key={review.name} />)}</div></details></div></section>
+    <section className="tst-featured" id="seller-stories">
+      <div className="tst-container">
+        <header className="tst-heading">
+          <div>
+            <p className="tst-kicker">FEATURED FEEDBACK</p>
+            <h2>Three parts of the partnership sellers remember.</h2>
+          </div>
+          <p>Clear order handling, thoughtful product decisions and a responsive person who keeps the work moving.</p>
+        </header>
+        <div className="tst-featured-grid">
+          {featuredTestimonials.slice(0, 3).map((review, index) => <Review review={review} featured index={index} key={review.name} />)}
+        </div>
+        <details className="tst-featured-more">
+          <summary>View all 13 stories <FiChevronDown aria-hidden="true" /></summary>
+          <div className="tst-featured-more-grid">
+            {featuredTestimonials.slice(3).map((review, index) => <Review review={review} index={index + 3} key={review.name} />)}
+          </div>
+        </details>
+      </div>
+    </section>
 
-    <section className="tst-stories"><div className="tst-container"><header className="tst-heading"><div><p className="tst-kicker">MORE SELLER STORIES</p><h2>Feedback across the order journey.</h2></div><p>Each story includes the service theme and account support context, so visitors can find experiences closer to their own needs.</p></header><div className="tst-review-grid">{reviews.slice(9,13).map((review,index)=><Review review={review} index={index+9} key={review.name} />)}</div><details className="tst-stories-more"><summary>More Seller Stories <FiChevronDown aria-hidden="true" /></summary><div className="tst-stories-more-grid">{reviews.slice(13).map((review,index)=><Review review={review} index={index+13} key={review.name} />)}</div></details></div></section>
+    <section className="tst-stories">
+      <div className="tst-container">
+        <header className="tst-heading">
+          <div>
+            <p className="tst-kicker">MORE SELLER STORIES</p>
+            <h2>Feedback across the order journey.</h2>
+          </div>
+          <p>Each story includes the service theme and account support context, so visitors can find experiences closer to their own needs.</p>
+        </header>
+        <div className="tst-review-grid">
+          {storyTestimonials.slice(0, 2).map((review, index) => <Review review={review} index={index} key={review.name} />)}
+        </div>
+        <details className="tst-stories-more">
+          <summary>View all 12 stories <FiChevronDown aria-hidden="true" /></summary>
+          <div className="tst-stories-more-grid">
+            {storyTestimonials.slice(2).map((review, index) => <Review review={review} index={index + 2} key={review.name} />)}
+          </div>
+        </details>
+      </div>
+    </section>
 
     <section className="tst-proof"><div className="tst-container"><header className="tst-heading tst-heading-light"><div><p className="tst-kicker">THE TEAM BEHIND THE FEEDBACK</p><h2>See where daily fulfillment work happens.</h2></div><p>The strongest support for a seller story is visible warehouse, packing and dispatch work.</p></header><div className="tst-video-grid">
       <article><div className="tst-video"><video controls playsInline preload="metadata" poster="/images/evidence/warehouse-walkthrough-aisle.jpg"><source src="/videos/packing-boxes-pexels-4277472.mp4" type="video/mp4" /></video></div><div><p className="tst-kicker">WAREHOUSE OPERATIONS</p><h3>Receiving, checking and packing</h3><p>See the physical environment behind inventory and customer order preparation.</p></div></article>

@@ -34,6 +34,7 @@ import {
   SiWix,
   SiWoocommerce,
 } from "react-icons/si";
+import { testimonials as sellerTestimonials } from "../content/testimonials";
 
 const platformLogos = [
   { name: "Shopify", Icon: SiShopify, color: "#75a943" },
@@ -142,33 +143,15 @@ const qcCapabilities = [
   "Final parcel check",
 ];
 
-const homeTestimonials = [
-  {
-    name: "Lukas",
-    country: "Germany",
-    flagSrc: "https://flagcdn.com/de.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-03.jpg",
-    tag: "Fulfillment",
-    quote: "The team keeps high-volume order work neat, trackable and organized. We used to spend hours checking supplier messages, packing details and shipment updates across different chats. With JW, the process feels much more controlled, and the difference is clear when order details matter every day.",
-    featured: true,
-  },
-  {
-    name: "Emma",
-    country: "United States",
-    flagSrc: "https://flagcdn.com/us.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-16.jpg",
-    tag: "Product Sourcing",
-    quote: "Sourcing requests come back with practical options, so testing new products feels less risky.",
-  },
-  {
-    name: "Laura",
-    country: "Australia",
-    flagSrc: "https://flagcdn.com/au.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-18.jpg",
-    tag: "Branding",
-    quote: "Packaging details are handled carefully, and small brand requests do not get lost during fulfillment.",
-  },
-];
+const homeTestimonials = sellerTestimonials.slice(0, 3).map((review, index) => ({
+  name: review.name,
+  country: review.country,
+  flagSrc: review.flagSrc,
+  avatar: review.avatar,
+  tag: review.service,
+  quote: review.quote,
+  featured: index === 0,
+}));
 
 const homeFaqs = [
   ["How do I get started?", "Send us a product or store link, your target market and expected daily order volume. We will review the request and recommend a practical next step."],

@@ -20,6 +20,14 @@ import {
 
 const serviceIcons = [FiPackage, FiTruck, FiClipboard, FiPackage, FiSearch, FiArrowRight, FiTruck, FiShield];
 const workflowIcons = [FiSearch, FiClipboard, FiCheckCircle, FiPackage, FiTruck];
+const proofIcons = [FiClipboard, FiShield, FiPackage, FiTruck];
+
+const startingPoints = [
+  ["SOURCE", "Find products & suppliers", "Find, compare and validate products before committing to inventory.", "/services/product-sourcing", FiSearch],
+  ["FULFILL", "Ship orders reliably", "Connect order handling, packing and global delivery in one workflow.", "/services/dropshipping-supplier", FiTruck],
+  ["SCALE", "Scale your inventory", "Receive bulk stock, organize SKUs and fulfill from a China warehouse.", "/services/3pl-fulfillment-services", FiPackage],
+  ["BRAND", "Build your brand", "Coordinate labels, packaging, inserts and repeat production.", "/services/private-label", FiClipboard],
+];
 
 const proofItems = [
   ["Receiving records", "Inbound quantities and visible discrepancies are recorded before stock is accepted."],
@@ -62,19 +70,24 @@ export default function ServicesOverviewRedesign() {
             sizes="(max-width: 767px) 100vw, 52vw"
           />
         </div>
+        <nav className="sov-quick-nav" aria-label="Choose a service by business goal">
+          <div className="sov-quick-layout">
+            <div className="sov-quick-grid">
+              {startingPoints.map(([label, title, copy, href, Icon], index) => (
+                <Link href={href} key={label}>
+                  <div className="sov-quick-meta">
+                    <span>{String(index + 1).padStart(2, "0")} / {label}</span>
+                    <Icon aria-hidden="true" />
+                  </div>
+                  <strong>{title}</strong>
+                  <p>{copy}</p>
+                  <FiArrowRight className="sov-quick-arrow" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </nav>
       </section>
-
-      <nav className="sov-quick-nav" aria-label="Service overview navigation">
-        <div className="sov-container sov-quick-grid">
-          {serviceCatalog.map((service, index) => (
-            <Link href={`/services/${service.slug}`} key={service.slug}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {service.title}
-              <FiArrowRight aria-hidden="true" />
-            </Link>
-          ))}
-        </div>
-      </nav>
 
       <section className="sov-section sov-catalog" id="service-catalog">
         <div className="sov-container">
@@ -119,12 +132,24 @@ export default function ServicesOverviewRedesign() {
             <table>
               <thead><tr><th>Service</th><th>Best for</th><th>Inventory</th><th>Branding</th><th>What to prepare</th></tr></thead>
               <tbody>
-                {serviceComparison.map(([slug, title, bestFor, inventory, branding, prepare]) => (
-                  <tr key={slug}>
-                    <th><Link href={`/services/${slug}`}>{title}</Link></th>
-                    <td>{bestFor}</td><td>{inventory}</td><td>{branding}</td><td>{prepare}</td>
-                  </tr>
-                ))}
+                {serviceComparison.map(([slug, title, bestFor, inventory, branding, prepare], index) => {
+                  const Icon = serviceIcons[index];
+                  return (
+                    <tr key={slug}>
+                      <th>
+                        <Link className="sov-table-service" href={`/services/${slug}`}>
+                          <span className="sov-table-icon"><Icon aria-hidden="true" /></span>
+                          <span><small>{String(index + 1).padStart(2, "0")}</small><strong>{title}</strong></span>
+                          <FiArrowRight aria-hidden="true" />
+                        </Link>
+                      </th>
+                      <td className="sov-table-best">{bestFor}</td>
+                      <td><span className="sov-table-chip sov-table-chip-inventory">{inventory}</span></td>
+                      <td><span className="sov-table-chip sov-table-chip-branding">{branding}</span></td>
+                      <td><span className="sov-table-prepare"><FiClipboard aria-hidden="true" />{prepare}</span></td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -150,13 +175,17 @@ export default function ServicesOverviewRedesign() {
         <div className="sov-container sov-proof-grid">
           <div className="sov-proof-media">
             <Image src="/images/generated/jw-qc-inspection-v3.png" alt="JW team inspecting products before fulfillment" fill sizes="(max-width: 900px) 100vw, 50vw" />
+            <div className="sov-proof-badge"><strong>04</strong><span>visible operational<br />checkpoints</span></div>
           </div>
           <div className="sov-proof-copy">
             <p className="sov-kicker">PROOF BEFORE PROMISES</p>
             <h2>Operational checks you can build into the service.</h2>
             <p className="sov-proof-lead">A dependable workflow is defined by its checkpoints, records and handoffs, not decorative claims.</p>
             <div className="sov-proof-list">
-              {proofItems.map(([title, copy], index) => <div key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{copy}</p></div></div>)}
+              {proofItems.map(([title, copy], index) => {
+                const Icon = proofIcons[index];
+                return <div key={title}><div className="sov-proof-item-top"><span>{String(index + 1).padStart(2, "0")}</span><Icon aria-hidden="true" /></div><div><h3>{title}</h3><p>{copy}</p></div></div>;
+              })}
             </div>
             <Link className="sov-text-link" href="/services/quality-control-inspection">Explore Quality Control <FiArrowRight aria-hidden="true" /></Link>
           </div>

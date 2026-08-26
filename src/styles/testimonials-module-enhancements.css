@@ -471,9 +471,9 @@ body main.tst-page.tst-page[class][class] .tst-button-light {
 
 body main.tst-page.tst-page[class][class] .tst-button-ghost,
 body main.tst-page.tst-page[class][class] .tst-hero .tst-button-ghost {
-  border-color: rgba(22, 116, 73, 0.26) !important;
-  background: rgba(255, 255, 255, 0.58) !important;
-  color: var(--tst-ink) !important;
+  border-color: #167449 !important;
+  background: #167449 !important;
+  color: #fff !important;
   backdrop-filter: none !important;
 }
 
@@ -1721,20 +1721,20 @@ body main.tst-page.tst-page[class][class] .tst-hero-carousel {
 
 body main.tst-page.tst-page[class][class] .tst-hero-carousel-track {
   display: flex !important;
-  width: 400% !important;
-  animation: tstHeroCarousel 18s ease-in-out infinite !important;
+  width: 100% !important;
+  transition: transform 420ms ease !important;
 }
 
 body main.tst-page.tst-page[class][class] .tst-hero-carousel:hover .tst-hero-carousel-track {
-  animation-play-state: paused !important;
+  transform: none !important;
 }
 
 body main.tst-page.tst-page[class][class] .tst-hero-slide {
   position: relative !important;
   display: flex !important;
-  width: 25% !important;
+  width: 100% !important;
   min-height: 324px !important;
-  flex: 0 0 25% !important;
+  flex: 0 0 100% !important;
   flex-direction: column !important;
   padding: clamp(26px, 3vw, 38px) !important;
   border-right: 1px solid rgba(22, 116, 73, 0.12) !important;
@@ -1759,10 +1759,10 @@ body main.tst-page.tst-page[class][class] .tst-hero-slide blockquote {
   flex: 1 1 auto !important;
   margin: 24px 0 30px !important;
   color: #173a31 !important;
-  font-size: clamp(22px, 1.72vw, 28px) !important;
-  font-weight: 780 !important;
-  line-height: 1.42 !important;
-  letter-spacing: 0 !important;
+  font-size: clamp(17px, 1.2vw, 21px) !important;
+  font-weight: 520 !important;
+  line-height: 1.64 !important;
+  letter-spacing: -0.012em !important;
 }
 
 body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
@@ -1852,44 +1852,24 @@ body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots {
   gap: 7px !important;
 }
 
-body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots span {
+body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots button {
   width: 7px !important;
   height: 7px !important;
+  padding: 0 !important;
+  border: 0 !important;
   border-radius: 999px !important;
   background: rgba(22, 116, 73, 0.26) !important;
-  animation: tstHeroDot 18s ease-in-out infinite !important;
+  cursor: pointer !important;
 }
 
-body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots span:nth-child(2) {
-  animation-delay: 4.5s !important;
+body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots button.is-active {
+  width: 22px !important;
+  background: #167449 !important;
 }
 
-body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots span:nth-child(3) {
-  animation-delay: 9s !important;
-}
-
-body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots span:nth-child(4) {
-  animation-delay: 13.5s !important;
-}
-
-@keyframes tstHeroCarousel {
-  0%, 19% { transform: translateX(0); }
-  25%, 44% { transform: translateX(-25%); }
-  50%, 69% { transform: translateX(-50%); }
-  75%, 94% { transform: translateX(-75%); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes tstHeroDot {
-  0%, 19% {
-    width: 22px;
-    background: #167449;
-  }
-
-  25%, 100% {
-    width: 7px;
-    background: rgba(22, 116, 73, 0.26);
-  }
+body main.tst-page.tst-page[class][class] .tst-hero-carousel-dots button:focus-visible {
+  outline: 3px solid rgba(22, 116, 73, 0.3) !important;
+  outline-offset: 3px !important;
 }
 
 @keyframes tstHeroBalanceScan {
@@ -1995,9 +1975,9 @@ body main.tst-page.tst-page[class][class] section.tst-hero.tst-hero .tst-actions
 }
 
 body main.tst-page.tst-page[class][class] section.tst-hero.tst-hero .tst-actions .tst-button-ghost {
-  border-color: rgba(22, 116, 73, 0.22) !important;
-  background: rgba(255, 255, 255, 0.62) !important;
-  color: #173a31 !important;
+  border-color: #167449 !important;
+  background: #167449 !important;
+  color: #fff !important;
   box-shadow: none !important;
 }
 
@@ -2084,8 +2064,10 @@ body main.tst-page.tst-page[class][class] .tst-hero-slide::after {
 
 body main.tst-page.tst-page[class][class] .tst-hero-slide blockquote {
   margin: 18px 0 24px !important;
-  font-size: clamp(19px, 1.38vw, 23px) !important;
-  line-height: 1.45 !important;
+  font-size: clamp(16px, 1.15vw, 19px) !important;
+  font-weight: 500 !important;
+  line-height: 1.68 !important;
+  letter-spacing: -0.012em !important;
 }
 
 body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
@@ -2252,5 +2234,178 @@ body main.tst-page.tst-page[class][class][class]
     width: 100% !important;
     min-height: 100% !important;
     align-content: center !important;
+  }
+}
+
+/* Final hero-balance polish: make the four cards feel like one composed board. */
+body main.tst-page.tst-page[class][class] .tst-hero-balance {
+  width: min(100%, 700px) !important;
+  gap: 14px !important;
+  margin-top: 30px !important;
+  padding: 20px !important;
+  border: 1px solid rgba(22, 116, 73, 0.14) !important;
+  border-radius: 14px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(217, 246, 231, 0.7)) !important;
+  box-shadow: 0 18px 40px rgba(11, 41, 32, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+  overflow: hidden !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance::before {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  height: 3px !important;
+  content: "" !important;
+  background: linear-gradient(90deg, transparent, #167449 18%, #167449 82%, transparent) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-copy {
+  gap: 5px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-copy span {
+  color: #167449 !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-copy strong {
+  color: #163a31 !important;
+  font-size: 18px !important;
+  line-height: 1.22 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-grid {
+  gap: 12px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-grid article {
+  position: relative !important;
+  min-height: 98px !important;
+  padding: 18px 18px 16px !important;
+  border: 1px solid rgba(22, 116, 73, 0.12) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 10px 24px rgba(11, 41, 32, 0.05) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-grid article::before {
+  position: absolute !important;
+  top: 14px !important;
+  left: 16px !important;
+  width: 38px !important;
+  height: 3px !important;
+  content: "" !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #167449, rgba(22, 116, 73, 0.08)) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-grid strong {
+  padding-top: 12px !important;
+  color: #173a31 !important;
+  font-size: 15px !important;
+  line-height: 1.22 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-balance-grid p {
+  margin-top: 8px !important;
+  color: #53645d !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row {
+  position: relative !important;
+  gap: 12px !important;
+  padding: 14px !important;
+  border: 1px solid rgba(22, 116, 73, 0.14) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(217, 246, 231, 0.72)) !important;
+  box-shadow: 0 18px 36px rgba(11, 41, 32, 0.07) !important;
+  overflow: hidden !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row::before {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  height: 3px !important;
+  content: "" !important;
+  background: linear-gradient(90deg, transparent, #167449 18%, #167449 82%, transparent) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row article {
+  position: relative !important;
+  min-height: 94px !important;
+  padding: 18px 18px 16px !important;
+  border: 1px solid rgba(22, 116, 73, 0.12) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 10px 20px rgba(11, 41, 32, 0.05) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row article::before {
+  position: absolute !important;
+  top: 14px !important;
+  left: 16px !important;
+  width: 34px !important;
+  height: 3px !important;
+  content: "" !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #167449, rgba(22, 116, 73, 0.12)) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row small {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-top: 10px !important;
+  color: #167449 !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-board-row strong {
+  display: block !important;
+  margin-top: 8px !important;
+  color: #173a31 !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 767px) {
+  body main.tst-page.tst-page[class][class] .tst-hero-balance {
+    width: 100% !important;
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-balance-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-balance-grid article {
+    min-height: 0 !important;
+    padding: 16px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-board-row {
+    padding: 12px !important;
+    border-radius: 12px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-board-row article {
+    min-height: 0 !important;
+    padding: 16px !important;
   }
 }

@@ -4084,3 +4084,14 @@ body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero .hiw-hero-co
   content: "" !important;
   box-shadow: 0 0 0 5px rgba(22, 116, 73, 0.1) !important;
 }
+
+/* Keep the hero eyebrow clear of the fixed header. */
+body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
+  padding-top: 128px !important;
+}
+
+@media (max-width: 767px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
+    padding-top: 112px !important;
+  }
+}

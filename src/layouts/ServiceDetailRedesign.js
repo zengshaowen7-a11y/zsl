@@ -32,7 +32,7 @@ const serviceTitleClass = (title) =>
 const proofContent = {
   "product-sourcing": {
     eyebrow: "EXAMPLE SUPPLIER COMPARISON",
-    title: "Compare complete offers on the same product brief.",
+    title: "Compare supplier offers from one shared brief.",
     image: "/images/generated/product-sourcing-hero.webp",
     columns: ["Supplier", "Unit price", "MOQ", "Lead time"],
     rows: [
@@ -103,6 +103,7 @@ const proofContent = {
     summary: [
       ["Fast lane", "Orders with mapped SKUs and complete fields can move without manual chasing."],
       ["Hold lane", "Orders with missing details stay visible before they reach packing."],
+      ["Sync lane", "Released orders keep tracking and store status aligned after handoff."],
     ],
     note: "Example control log. Connection methods depend on the store platform.",
   },
@@ -169,6 +170,21 @@ export default function ServiceDetailRedesign({ service }) {
         ],
       ],
     },
+    "automatic-order-fulfillment": {
+      leftEyebrow: "AUTOMATION CASE",
+      leftTitle: "Normal orders need a lane.",
+      leftLead: "Shopify store replacing spreadsheet warehouse handoffs",
+      title: "Map your order lane.",
+      lead: "Tell us where orders start, what data is missing today and how tracking should return after dispatch.",
+      points: [
+        ["01", "Map SKUs to warehouse records"],
+        ["02", "Split exception reasons early"],
+        ["03", "Return tracking through one handoff"],
+      ],
+      noteTitle: "What helps us map the lane",
+      noteLead:
+        "Store fields, SKU records and hold rules make the automatic route easier to test before launch.",
+    },
   };
   const processIntro = processIntroBySlug[service.slug] || null;
   const fitIntroBySlug = {
@@ -178,6 +194,18 @@ export default function ServiceDetailRedesign({ service }) {
       tag: "WAREHOUSE FIT",
       asideTitle: "BEST FIT",
       asideLead: "When every handoff needs a place, a lane and a clear owner.",
+    },
+    "product-sourcing": {
+      title: "Built for supplier decisions.",
+      lead: "Each pass removes suppliers that cannot match the product brief, commercial terms or fulfillment requirements.",
+      noteTitle: "WHAT CHANGES THE QUOTE",
+      noteLead:
+        "Use one product brief so price, MOQ, sample notes and lead time stay on the same basis.",
+    },
+    "automatic-order-fulfillment": {
+      title: "Clean orders take the fast lane.",
+      lead: "Normal orders move in one direction. Exceptions split out early so they do not block or corrupt the daily flow.",
+      laneTags: ["Mapped", "Held", "Synced"],
     },
     "quality-control-inspection": {
       title: "Built for batches that need proof before release.",
@@ -394,6 +422,33 @@ export default function ServiceDetailRedesign({ service }) {
                 <strong>Inventory held in China, orders shipped one by one.</strong>
               </aside>
             </div>
+          ) : service.slug === "product-sourcing" ? (
+            <div className="sdr-fit-intro sdr-product-fit-intro">
+              <div className="sdr-product-fit-copy">
+                <span className="ff-kicker">DECISION FILTER</span>
+                <h2>{fitIntroBySlug["product-sourcing"].title}</h2>
+                <p>{fitIntroBySlug["product-sourcing"].lead}</p>
+              </div>
+              <aside>
+                <span>{fitIntroBySlug["product-sourcing"].noteTitle}</span>
+                <strong>{fitIntroBySlug["product-sourcing"].noteLead}</strong>
+              </aside>
+            </div>
+          ) : service.slug === "automatic-order-fulfillment" ? (
+            <div className="sdr-fit-intro sdr-auto-fit-intro">
+              <div className="sdr-auto-fit-copy">
+                <span className="ff-kicker">ORDER DATA FLOW</span>
+                <p>{fitIntroBySlug["automatic-order-fulfillment"].lead}</p>
+              </div>
+              <div className="sdr-auto-fit-panel">
+                <h2>{fitIntroBySlug["automatic-order-fulfillment"].title}</h2>
+                <div className="sdr-auto-fit-tags" aria-hidden="true">
+                  {fitIntroBySlug["automatic-order-fulfillment"].laneTags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           ) : fitIntro ? (
             <div
               className={`sdr-fit-intro ${
@@ -415,7 +470,13 @@ export default function ServiceDetailRedesign({ service }) {
           ) : (
             <div className="sdr-section-heading">
               <span className="ff-kicker">IS THIS SERVICE RIGHT FOR YOU?</span>
-              <h2>Built around the operating result you need.</h2>
+              <h2>
+                {service.slug === "product-sourcing"
+                  ? "Built for supplier decisions."
+                  : service.slug === "automatic-order-fulfillment"
+                  ? "Built for clean order flow."
+                  : "Built around the operating result you need."}
+              </h2>
             </div>
           )}
           <div className="sdr-fit-grid">
@@ -523,24 +584,35 @@ export default function ServiceDetailRedesign({ service }) {
       <section id="service-process" className="sdr-process">
         <div className="container">
           {processIntro ? (
-            <div className="sdr-process-intro">
-              <div className="sdr-process-intro-copy">
+            <div className="sdr-process-intro sdr-auto-process-intro">
+              <article className="sdr-auto-process-card" aria-label="Automation case">
+                <span className="ff-kicker">{processIntro.leftEyebrow}</span>
+                <h2>{processIntro.leftTitle}</h2>
+                <div className="sdr-auto-process-card-foot">
+                  <span className="sdr-auto-process-icon" aria-hidden="true">
+                    <FiGlobe />
+                  </span>
+                  <p>{processIntro.leftLead}</p>
+                </div>
+              </article>
+              <div className="sdr-auto-process-copy">
                 <span className="ff-kicker">{service.processEyebrow}</span>
                 <h2 className={serviceTitleClass(processIntro.title)}>
                   {processIntro.title}
                 </h2>
                 <p>{processIntro.lead}</p>
-              </div>
-              <div
-                className="sdr-process-intro-panel"
-                aria-label="Process context"
-              >
-                {processIntro.points.map(([title, text]) => (
-                  <article key={title}>
-                    <strong>{title}</strong>
-                    <p>{text}</p>
-                  </article>
-                ))}
+                <ol className="sdr-auto-process-list" aria-label="Order lane steps">
+                  {processIntro.points.map(([number, text]) => (
+                    <li key={number}>
+                      <span>{number}</span>
+                      <p>{text}</p>
+                    </li>
+                  ))}
+                </ol>
+                <div className="sdr-auto-process-note">
+                  <strong>{processIntro.noteTitle}</strong>
+                  <p>{processIntro.noteLead}</p>
+                </div>
               </div>
             </div>
           ) : (
@@ -596,7 +668,6 @@ export default function ServiceDetailRedesign({ service }) {
                 {conversion.caseStudy.title}
               </h2>
               <p>
-                <FiGlobe />
                 {conversion.caseStudy.profile}
               </p>
             </div>
@@ -663,7 +734,7 @@ export default function ServiceDetailRedesign({ service }) {
               <details
                 name={`${service.slug}-faq`}
                 key={question}
-                open={index === 0 && !["pod-fulfillment", "private-label"].includes(service.slug)}
+                open={index === 0 && !["pod-fulfillment", "private-label", "product-sourcing"].includes(service.slug)}
               >
                 <summary>
                   {question}

@@ -1,6 +1,104 @@
 [
   {
     "date": "2026-08-24",
+    "macrostructure": "Warehouse Map",
+    "theme": "china-fulfillment-green",
+    "enrichment": "existing warehouse photography",
+    "brief": "China fulfillment center page rails, module rhythm, FAQ, related cards and quote form aligned to the service system"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Operating Ledger",
+    "theme": "automation-green",
+    "enrichment": "existing automation warehouse image",
+    "brief": "Automatic order fulfillment page rails, module rhythm, FAQ, related cards and quote form aligned to the service system"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Fuller Proof Headline",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing comparison table",
+    "brief": "Product sourcing proof headline expanded into a balanced two-line lockup"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Centered FAQ Stack",
+    "theme": "sourcing-green",
+    "enrichment": "private-label FAQ reference layout",
+    "brief": "Product sourcing FAQ matched the private-label FAQ rhythm while keeping sourcing copy"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Compact Case Brief",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing case content",
+    "brief": "Product sourcing case module simplified from card-heavy layout into a compact decision brief"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Decision Band",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing process content",
+    "brief": "Product sourcing process header rebuilt as an aligned decision band"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Single Line Fit Header",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing fit module",
+    "brief": "Product sourcing fit header label hidden and title held to one line"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Comparison Proof",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing comparison table",
+    "brief": "Product sourcing proof title kept on one line with a larger explanatory note"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Compact Scope Header",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing content",
+    "brief": "Product sourcing what-we-handle heading tightened with a slimmer context panel"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Compact Intro Band",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing content",
+    "brief": "Product sourcing fit intro compressed into an aligned three-column heading band"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Hero Copy Fill",
+    "theme": "JW label green",
+    "enrichment": "existing private-label packaging image",
+    "brief": "Private label hero headline made fuller while keeping the compact title scale"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Balanced Decision Grid",
+    "theme": "sourcing-green",
+    "enrichment": "existing sourcing content",
+    "brief": "Product sourcing fit module balanced card layout cleanup"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Balanced Ledger",
+    "theme": "inspection-green",
+    "enrichment": "existing QC photography",
+    "brief": "Quality control inspection fit module cleanup and spacing normalization"
+  },
+  {
+    "date": "2026-08-24",
+    "macrostructure": "Split Studio",
+    "theme": "JW green sourcing desk",
+    "enrichment": "existing sourcing photography",
+    "brief": "Product sourcing hero readability and layout rebuild"
+  },
+  {
+    "date": "2026-08-24",
     "scope": "app",
     "macrostructure": "Map / Diagram",
     "theme": "JW green operational alignment",
