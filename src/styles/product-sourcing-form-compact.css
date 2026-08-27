@@ -1,0 +1,110 @@
+/* Product sourcing quote: match the compact scale of the private-label enquiry module. */
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote {
+  padding: 64px 0 !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-grid {
+  width: min(calc(100% - 48px), 1280px) !important;
+  max-width: 1280px !important;
+  grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1.14fr) !important;
+  gap: clamp(36px, 4.8vw, 66px) !important;
+  align-items: start !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy {
+  display: block !important;
+  max-width: 520px !important;
+  padding: 8px 0 0 !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy .ff-kicker {
+  margin: 0 0 16px !important;
+  font-size: 12px !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy h2.sdr-compact-quote-title {
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 0 18px !important;
+  font-size: clamp(24px, 1.65vw, 30px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy > p {
+  max-width: 480px !important;
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-checklist {
+  gap: 12px !important;
+  max-width: 480px !important;
+  margin: 30px 0 0 !important;
+  padding: 24px 0 0 !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-checklist div {
+  grid-template-columns: 32px minmax(0, 1fr) !important;
+  gap: 12px !important;
+  min-height: 44px !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-checklist svg {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 8px !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-note {
+  max-width: 480px !important;
+  margin: 26px 0 0 !important;
+  padding: 18px 20px !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-note strong {
+  font-size: 14px !important;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-note p {
+  margin-top: 7px !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-grid {
+    width: min(calc(100% - 48px), 860px) !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 34px !important;
+  }
+
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote {
+    padding: 52px 0 !important;
+  }
+
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-grid {
+    width: min(calc(100% - 32px), 520px) !important;
+  }
+
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing .sdr-quote-copy h2.sdr-compact-quote-title {
+    font-size: clamp(24px, 7vw, 30px) !important;
+  }
+}

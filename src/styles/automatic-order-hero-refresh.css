@@ -1,0 +1,1597 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4
+ * hero: narrative → conversion → closed-loop proof · theme: existing JW green
+ */
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment {
+  --auto-hero-black: #000000;
+  --auto-hero-green: #167449;
+  --auto-hero-green-deep: #0f603b;
+  --auto-hero-green-soft: rgba(22, 116, 73, 0.08);
+  --auto-hero-line-soft: rgba(22, 116, 73, 0.16);
+  --auto-hero-line-bright: rgba(47, 174, 104, 0.78);
+  --auto-hero-white: #ffffff;
+  --auto-hero-shadow: 0 20px 52px rgba(12, 72, 48, 0.14);
+  --auto-hero-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-grid {
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy {
+  z-index: 3 !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: clamp(34px, 4vw, 64px) clamp(32px, 4.2vw, 68px) clamp(32px, 3.5vw, 56px) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -58px;
+  bottom: 0;
+  width: 132px;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--auto-paper), rgba(217, 246, 231, 0));
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy h1 {
+  width: auto !important;
+  max-width: 13ch !important;
+  margin: 28px 0 0 !important;
+  color: var(--auto-hero-black) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > p {
+  max-width: 51ch !important;
+  margin-top: 24px !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-actions {
+  display: flex !important;
+  gap: 14px !important;
+  margin-top: 30px !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .sdr-actions .ff-btn {
+  min-height: 56px !important;
+  padding-inline: clamp(22px, 2vw, 32px) !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+  transition: transform 220ms var(--auto-hero-ease), background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .ff-btn-primary:hover {
+  border-color: var(--auto-hero-green-deep) !important;
+  background: var(--auto-hero-green-deep) !important;
+  box-shadow: 0 12px 26px rgba(15, 96, 59, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .ff-btn-ghost {
+  border-color: var(--auto-hero-green) !important;
+  background: transparent !important;
+  color: var(--auto-hero-green) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .ff-btn-ghost:hover {
+  background: var(--auto-hero-green-soft) !important;
+  transform: translateY(-1px) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop {
+  position: relative !important;
+  display: grid !important;
+  width: min(100%, 540px) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 38px !important;
+  overflow: visible !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop::before {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 18px !important;
+  right: 16.666% !important;
+  left: 16.666% !important;
+  display: block !important;
+  height: 2px !important;
+  content: "" !important;
+  background: linear-gradient(90deg, var(--auto-hero-line-soft), var(--auto-hero-line-bright), var(--auto-hero-line-soft)) !important;
+  transform-origin: left center !important;
+  transition: height 200ms ease, filter 200ms ease !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop::after {
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 14px !important;
+  left: 16.666% !important;
+  display: block !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  content: "" !important;
+  background: var(--auto-hero-green) !important;
+  box-shadow: 0 0 0 5px rgba(47, 174, 104, 0.13), 0 0 16px rgba(47, 174, 104, 0.5) !important;
+  animation: autoHeroFlow 6s linear infinite !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop li {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  min-height: 72px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--auto-hero-black) !important;
+  text-align: center !important;
+  transition: transform 220ms var(--auto-hero-ease) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop li::before {
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-flex !important;
+  width: 38px !important;
+  min-width: 38px !important;
+  height: 38px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 4px solid var(--auto-paper) !important;
+  border-radius: 50% !important;
+  background: var(--auto-hero-green) !important;
+  color: var(--auto-hero-white) !important;
+  box-shadow: 0 0 0 1px var(--auto-hero-line-soft) !important;
+  transition: transform 220ms var(--auto-hero-ease), background-color 220ms ease, box-shadow 220ms ease !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop li span {
+  color: var(--auto-hero-black) !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  line-height: 1.35 !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop:hover::before {
+  height: 3px !important;
+  filter: saturate(1.25) brightness(1.05) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop:hover {
+  transform: translateX(3px) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop li:hover::before {
+  background: var(--auto-hero-green-deep) !important;
+  box-shadow: 0 0 0 5px rgba(47, 174, 104, 0.14) !important;
+  transform: scale(1.13) !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-image {
+  z-index: 1 !important;
+  min-height: clamp(460px, 40vw, 620px) !important;
+  margin-left: -34px !important;
+  border-radius: 14px !important;
+  box-shadow: var(--auto-hero-shadow) !important;
+  animation: autoHeroEnterRight 760ms var(--auto-hero-ease) both, autoHeroBreathe 10s ease-in-out 900ms infinite !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-image::before,
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-image::after {
+  display: none !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(1),
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(2),
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(3),
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(4),
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(5) {
+  animation: autoHeroEnterUp 620ms var(--auto-hero-ease) both !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(1) { animation-delay: 80ms !important; }
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(2) { animation-delay: 160ms !important; }
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(3) { animation-delay: 240ms !important; }
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(4) { animation-delay: 320ms !important; }
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > :nth-child(5) { animation-delay: 400ms !important; }
+
+@keyframes autoHeroEnterUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes autoHeroEnterRight {
+  from { opacity: 0; transform: translateX(28px) scale(0.985); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes autoHeroBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+@keyframes autoHeroFlow {
+  from { left: 16.666%; }
+  to { left: calc(83.333% - 10px); }
+}
+
+@media (max-width: 980px) {
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy {
+    grid-row: 1 !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-image {
+    grid-row: 2 !important;
+    min-height: clamp(340px, 58vw, 500px) !important;
+    margin-left: 0 !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy {
+    padding: 28px 20px 24px !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy h1 {
+    font-size: clamp(30px, 2.05vw, 36px) !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-actions {
+    display: grid !important;
+    width: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop::before {
+    top: 18px !important;
+    right: auto !important;
+    bottom: 18px !important;
+    left: 18px !important;
+    width: 2px !important;
+    height: auto !important;
+    background: linear-gradient(180deg, var(--auto-hero-line-soft), var(--auto-hero-line-bright), var(--auto-hero-line-soft)) !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop::after {
+    display: none !important;
+  }
+
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop li {
+    min-height: 44px !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    text-align: left !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > *,
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-image,
+  body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-automation-loop::after {
+    animation: none !important;
+  }
+}
+
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5
+ * module: routed operations schematic · tone: technical · theme: existing brand green
+ */
+#automation-capability-route {
+  --route-ink: #000;
+  --route-copy: #435b51;
+  --route-accent: #14784a;
+  --route-accent-deep: #0a5735;
+  --route-pipe: #77d8bd;
+  --route-pipe-glow: rgba(105, 237, 210, .46);
+  --route-paper: rgba(255, 255, 255, .88);
+  --route-card: rgba(249, 253, 251, .94);
+  --route-line: rgba(16, 107, 67, .18);
+  --route-orange: #b97816;
+  --route-orange-pipe: #e7bd64;
+  --route-orange-paper: #fff5df;
+  --route-shadow: 0 16px 34px rgba(9, 70, 46, .13);
+  --route-shadow-deep: 0 22px 44px rgba(9, 70, 46, .19);
+  --route-radius: 11px;
+  --route-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+#automation-capability-route .sdr-heading-split {
+  position: relative !important;
+  z-index: 3 !important;
+  grid-template-columns: minmax(0, .5fr) minmax(0, .5fr) !important;
+  align-items: start !important;
+  margin-bottom: 46px !important;
+}
+
+#automation-capability-route .sdr-heading-split h2 {
+  max-width: 20ch !important;
+  margin-top: 9px !important;
+  color: var(--route-ink) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+  overflow-wrap: anywhere !important;
+}
+
+#automation-capability-route .sdr-heading-split > p {
+  width: min(100%, 420px) !important;
+  margin: -42px 0 0 auto !important;
+  padding: 20px 22px !important;
+  border: 1px solid var(--route-line) !important;
+  border-radius: var(--route-radius) !important;
+  background: linear-gradient(135deg, rgba(35,80,63,.68), rgba(228,246,237,.68)) !important;
+  color: var(--route-paper) !important;
+  box-shadow: var(--route-shadow-deep) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+#automation-capability-route .sdr-order-route {
+  position: relative !important;
+  isolation: isolate !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  grid-template-rows: 290px 175px !important;
+  grid-template-areas: "access sku validation exception release" "tracking tracking . exception ." !important;
+  gap: 18px !important;
+  min-height: 520px !important;
+  padding: 36px 0 18px !important;
+}
+
+#automation-capability-route .sdr-order-route-pipes {
+  position: absolute !important;
+  z-index: -2 !important;
+  top: 0 !important;
+  right: -9vw !important;
+  bottom: 0 !important;
+  left: -9vw !important;
+  width: calc(100% + 18vw) !important;
+  height: 100% !important;
+  overflow: visible !important;
+  fill: none !important;
+  filter: drop-shadow(0 5px 12px var(--route-pipe-glow)) !important;
+}
+
+#automation-capability-route .sdr-order-route-pipes path {
+  stroke: var(--route-pipe) !important;
+  stroke-width: 20 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+#automation-capability-route .sdr-order-route-pipes path::after { content: "" !important; }
+#automation-capability-route .sdr-order-route-pipes .sdr-route-pipe-exception { stroke: var(--route-orange-pipe) !important; }
+
+#automation-capability-route .sdr-order-route-node {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  flex-direction: column !important;
+  margin: 0 !important;
+  padding: 18px 16px !important;
+  border: 1px solid var(--route-line) !important;
+  border-radius: var(--route-radius) !important;
+  background: linear-gradient(145deg, var(--route-paper), var(--route-card)) !important;
+  box-shadow: var(--route-shadow) !important;
+  transition: transform 220ms var(--route-ease), box-shadow 220ms ease, border-color 220ms ease !important;
+}
+
+#automation-capability-route .sdr-order-route-node:hover { border-color: var(--route-accent) !important; box-shadow: var(--route-shadow-deep) !important; transform: translateY(-6px) !important; }
+#automation-capability-route .sdr-order-route-node-1 { grid-area: access !important; }
+#automation-capability-route .sdr-order-route-node-2 { grid-area: sku !important; }
+#automation-capability-route .sdr-order-route-node-3 { grid-area: validation !important; }
+#automation-capability-route .sdr-order-route-node-4 { grid-area: exception !important; align-self: center !important; height: 224px !important; border-color: rgba(185,120,22,.32) !important; background: var(--route-orange-paper) !important; }
+#automation-capability-route .sdr-order-route-node-5 { grid-area: release !important; }
+#automation-capability-route .sdr-order-route-node-6 { grid-area: tracking !important; justify-self: start !important; width: calc(50% - 9px) !important; }
+
+#automation-capability-route .sdr-order-route-icon {
+  display: grid !important;
+  width: 36px !important;
+  height: 36px !important;
+  flex: 0 0 auto !important;
+  place-items: center !important;
+  margin: 0 0 18px !important;
+  border: 1px solid var(--route-line) !important;
+  border-radius: 50% !important;
+  background: #e9f8ef !important;
+  color: var(--route-accent) !important;
+}
+#automation-capability-route .sdr-order-route-node-4 .sdr-order-route-icon { background: #ffe8b3 !important; color: var(--route-orange) !important; }
+#automation-capability-route .sdr-order-route-node h3 { margin: 0 0 7px !important; color: var(--route-ink) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; }
+#automation-capability-route .sdr-order-route-node p { margin: 0 !important; color: var(--route-copy) !important; font-size: 12px !important; line-height: 1.48 !important; }
+
+#automation-capability-route .sdr-order-route-visual {
+  display: flex !important;
+  min-height: 72px !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  margin-top: auto !important;
+  padding-top: 16px !important;
+  color: var(--route-accent-deep) !important;
+}
+#automation-capability-route .sdr-order-route-visual svg { width: 30px !important; height: 30px !important; padding: 5px !important; border: 1px solid var(--route-line) !important; border-radius: 7px !important; background: var(--route-paper) !important; filter: drop-shadow(0 5px 5px rgba(10,87,53,.13)) !important; }
+#automation-capability-route .sdr-order-route-node-2 .sdr-order-route-visual svg { transform: rotate(30deg) !important; }
+#automation-capability-route .sdr-order-route-node-3 .sdr-order-route-visual svg:nth-child(2) { transform: translateY(-12px) !important; }
+#automation-capability-route .sdr-order-route-node-4 .sdr-order-route-visual { color: var(--route-orange) !important; }
+#automation-capability-route .sdr-order-route-node-6 .sdr-order-route-visual { justify-content: flex-start !important; }
+
+#automation-capability-route .sdr-order-route-dots { position: absolute !important; z-index: -1 !important; width: 110px !important; height: 110px !important; opacity: .62 !important; background-image: radial-gradient(var(--route-accent-deep) 1.5px, transparent 1.5px) !important; background-size: 11px 11px !important; }
+#automation-capability-route .sdr-order-route-dots-left { top: 52px !important; left: -8vw !important; }
+#automation-capability-route .sdr-order-route-dots-right { right: -7vw !important; bottom: 28px !important; transform: rotate(-12deg) !important; }
+
+#automation-capability-route .sdr-order-route-particle { top: 145px !important; left: -4% !important; background: var(--route-paper) !important; box-shadow: 0 0 0 5px var(--route-pipe-glow), 0 0 17px var(--route-pipe) !important; animation: capabilityRouteParticle 5.8s linear infinite !important; }
+#automation-capability-route .sdr-order-route-particle-two { animation-delay: -2.9s !important; }
+#automation-capability-route .sdr-order-route-status { position: absolute !important; z-index: 3 !important; display: grid !important; width: 36px !important; height: 36px !important; place-items: center !important; border-radius: 50% !important; box-shadow: var(--route-shadow) !important; }
+#automation-capability-route .sdr-route-status-secure { left: 17% !important; bottom: 83px !important; background: var(--route-paper) !important; color: var(--route-accent) !important; }
+#automation-capability-route .sdr-route-status-alert { left: 55% !important; bottom: 54px !important; background: var(--route-orange-paper) !important; color: var(--route-orange) !important; }
+
+@keyframes capabilityRouteParticle { from { left: -4%; } to { left: 104%; } }
+
+@media (max-width: 900px) {
+  #automation-capability-route .sdr-heading-split { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }
+  #automation-capability-route .sdr-heading-split > p { width: 100% !important; margin: 0 !important; }
+  #automation-capability-route .sdr-order-route { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-template-rows: none !important; grid-template-areas: "access sku" "validation release" "exception tracking" !important; gap: 18px !important; min-height: 0 !important; padding: 22px !important; }
+  #automation-capability-route .sdr-order-route-pipes { right: 0 !important; left: 0 !important; width: 100% !important; opacity: .6 !important; }
+  #automation-capability-route .sdr-order-route-node { min-height: 240px !important; }
+  #automation-capability-route .sdr-order-route-node-4 { align-self: stretch !important; height: auto !important; }
+  #automation-capability-route .sdr-order-route-node-6 { justify-self: stretch !important; width: auto !important; }
+  #automation-capability-route .sdr-order-route-dots { display: none !important; }
+}
+
+@media (max-width: 560px) {
+  #automation-capability-route .sdr-order-route { grid-template-columns: minmax(0, 1fr) !important; grid-template-areas: "access" "sku" "validation" "exception" "release" "tracking" !important; padding: 18px 0 18px 28px !important; }
+  #automation-capability-route .sdr-order-route-pipes { display: none !important; }
+  #automation-capability-route .sdr-order-route::before { position: absolute !important; top: 18px !important; bottom: 18px !important; left: 9px !important; width: 4px !important; border-radius: 99px !important; background: linear-gradient(var(--route-pipe), var(--route-accent), var(--route-pipe)) !important; content: "" !important; }
+  #automation-capability-route .sdr-order-route-node { min-height: 0 !important; }
+  #automation-capability-route .sdr-order-route-visual { min-height: 52px !important; justify-content: flex-start !important; }
+  #automation-capability-route .sdr-order-route-particle, #automation-capability-route .sdr-order-route-status { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #automation-capability-route * { animation: none !important; transition: none !important; }
+}
+
+@layer automation-order-flow-lane {
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4
+ * module: embedded physical data lane · tone: technical · theme: existing brand green
+ */
+#automation-order-flow {
+  --lane-ink: #000;
+  --lane-copy: #33483f;
+  --lane-muted: #61736b;
+  --lane-accent: #15764a;
+  --lane-accent-deep: #0a5634;
+  --lane-accent-mid: #62b384;
+  --lane-accent-pale: #dff2e7;
+  --lane-paper: #f7fcf9;
+  --lane-card: #f4faf6;
+  --lane-border: rgba(17, 105, 65, .2);
+  --lane-track: rgba(18, 75, 53, .76);
+  --lane-glow: rgba(116, 240, 158, .78);
+  --lane-shadow: 0 13px 30px rgba(13, 75, 51, .14);
+  --lane-shadow-hover: 0 19px 38px rgba(13, 75, 51, .2);
+  --lane-radius: 14px;
+  --lane-card-radius: 12px;
+  --lane-ease: cubic-bezier(.22, 1, .36, 1);
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  padding: clamp(28px, 3.2vw, 44px) clamp(24px, 3.4vw, 48px) 28px !important;
+  border: 1px solid var(--lane-border) !important;
+  border-radius: var(--lane-radius) !important;
+  background: linear-gradient(110deg, var(--lane-paper), rgba(255,255,255,.75)) !important;
+  box-shadow: var(--lane-shadow) !important;
+}
+
+#automation-order-flow .sdr-order-flow-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, .44fr) minmax(0, .56fr) !important;
+  align-items: start !important;
+  gap: clamp(32px, 5vw, 74px) !important;
+  margin: 0 0 32px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#automation-order-flow .sdr-order-flow-head h2 {
+  max-width: 19ch !important;
+  margin: 0 !important;
+  color: var(--lane-ink) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.035em !important;
+  overflow-wrap: anywhere !important;
+}
+
+#automation-order-flow .sdr-order-flow-head .ff-kicker {
+  color: var(--lane-accent-deep) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .07em !important;
+}
+
+#automation-order-flow .sdr-order-flow-head p {
+  max-width: 54ch !important;
+  margin: 8px 0 0 !important;
+  color: var(--lane-copy) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+#automation-order-flow .sdr-order-flow-states {
+  gap: 0 !important;
+  margin: 5px 0 0 !important;
+}
+
+#automation-order-flow .sdr-order-state {
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--lane-copy) !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  cursor: default !important;
+}
+
+#automation-order-flow .sdr-order-state + .sdr-order-state::before { content: "·" !important; margin: 0 5px !important; color: var(--lane-accent-mid) !important; }
+#automation-order-flow .sdr-order-state > span { display: none !important; }
+#automation-order-flow .sdr-order-state:hover,
+#automation-order-flow .sdr-order-state:focus-visible { outline: 2px solid var(--lane-accent) !important; outline-offset: 3px !important; box-shadow: none !important; transform: none !important; }
+
+#automation-order-flow .sdr-order-flow-track {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-rows: minmax(232px, auto) !important;
+  grid-template-areas: "mapped validation held synced" !important;
+  gap: clamp(14px, 2.2vw, 28px) !important;
+  min-height: 232px !important;
+  margin: 0 !important;
+  padding: 18px 0 !important;
+}
+
+#automation-order-flow .sdr-order-flow-track::before {
+  z-index: -2 !important;
+  top: 42px !important;
+  right: -20vw !important;
+  bottom: 42px !important;
+  left: -20vw !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, transparent 17%, rgba(255,255,255,.45) 18% 20%, transparent 21% 46%, var(--lane-glow) 47% 50%, transparent 51% 73%, rgba(255,255,255,.36) 74% 76%, transparent 77%),
+    linear-gradient(90deg, rgba(13,86,52,.18), var(--lane-track) 28%, var(--lane-track) 82%, rgba(13,86,52,.32)) !important;
+  box-shadow: inset 0 10px 25px rgba(255,255,255,.18), inset 0 -10px 25px rgba(0,55,31,.2) !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+#automation-order-flow .sdr-order-flow-track::after {
+  z-index: -1 !important;
+  top: 50% !important;
+  right: -20vw !important;
+  left: -20vw !important;
+  width: auto !important;
+  height: 1px !important;
+  background: repeating-linear-gradient(90deg, transparent 0 38px, rgba(255,255,255,.7) 38px 74px) !important;
+  transform: none !important;
+  animation: laneDashMove 3.8s linear infinite !important;
+}
+
+#automation-order-flow .sdr-order-flow-node {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 218px !important;
+  flex-direction: column !important;
+  margin: 0 !important;
+  padding: 20px 17px 18px !important;
+  border: 1px solid var(--lane-border) !important;
+  border-radius: var(--lane-card-radius) !important;
+  background: linear-gradient(150deg, rgba(255,255,255,.96), var(--lane-card)) !important;
+  box-shadow: var(--lane-shadow) !important;
+  animation: laneCardIn 520ms var(--lane-ease) both !important;
+  transition: transform 220ms var(--lane-ease), box-shadow 220ms ease, border-color 220ms ease !important;
+}
+
+#automation-order-flow .sdr-order-flow-node::before { display: none !important; }
+#automation-order-flow .sdr-order-flow-node-1 { grid-area: mapped !important; animation-delay: 80ms !important; }
+#automation-order-flow .sdr-order-flow-node-2 { grid-area: validation !important; animation-delay: 160ms !important; }
+#automation-order-flow .sdr-order-flow-node-3 { grid-area: held !important; border-color: var(--lane-border) !important; background: linear-gradient(150deg, rgba(255,255,255,.96), var(--lane-card)) !important; animation-delay: 240ms !important; }
+#automation-order-flow .sdr-order-flow-node-4 { grid-area: synced !important; animation-delay: 320ms !important; }
+
+#automation-order-flow .sdr-order-flow-index {
+  position: static !important;
+  display: grid !important;
+  width: 29px !important;
+  height: 29px !important;
+  place-items: center !important;
+  margin: 0 !important;
+  border: 1px solid var(--lane-border) !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.62) !important;
+  color: var(--lane-accent-deep) !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  transform: none !important;
+}
+
+#automation-order-flow .sdr-order-flow-node-3 .sdr-order-flow-index { border-color: var(--lane-border) !important; background: rgba(255,255,255,.62) !important; color: var(--lane-accent-deep) !important; }
+#automation-order-flow .sdr-order-flow-icon { display: grid !important; height: 68px !important; place-items: center !important; color: var(--lane-accent) !important; }
+#automation-order-flow .sdr-order-flow-icon svg { width: 42px !important; height: 42px !important; stroke-width: 1.55 !important; }
+#automation-order-flow .sdr-order-flow-node h3 { margin: 7px 0 6px !important; color: var(--lane-ink) !important; font-size: 16px !important; font-weight: 700 !important; line-height: 1.2 !important; }
+#automation-order-flow .sdr-order-flow-node p { margin: 0 !important; color: var(--lane-copy) !important; font-size: 12px !important; line-height: 1.42 !important; }
+#automation-order-flow .sdr-order-flow-node:hover { border-color: var(--lane-accent) !important; box-shadow: var(--lane-shadow-hover) !important; transform: translateY(-6px) !important; }
+
+#automation-order-flow .sdr-order-flow-particle { z-index: 1 !important; top: 50% !important; left: -12% !important; background: var(--lane-glow) !important; animation: laneParticle 6s linear infinite !important; }
+#automation-order-flow .sdr-order-flow-particle-b { animation-delay: -2s !important; }
+#automation-order-flow .sdr-order-flow-particle-c { animation-delay: -4s !important; }
+#automation-order-flow .sdr-order-branch-particle { display: none !important; }
+
+#automation-order-flow .sdr-order-flow-tail {
+  position: absolute !important;
+  z-index: -1 !important;
+  top: 40px !important;
+  right: calc(-20vw - 28px) !important;
+  width: 20vw !important;
+  height: 170px !important;
+  overflow: visible !important;
+  fill: none !important;
+  pointer-events: none !important;
+}
+#automation-order-flow .sdr-order-flow-tail path { stroke: var(--lane-accent-deep) !important; stroke-width: 2 !important; opacity: .46 !important; }
+#automation-order-flow .sdr-order-tail-parcels rect { fill: var(--lane-accent-pale) !important; stroke: var(--lane-accent-deep) !important; stroke-width: 2 !important; transform-box: fill-box !important; transform-origin: center !important; animation: laneParcelPulse 3s ease-in-out infinite !important; }
+#automation-order-flow .sdr-order-tail-parcels rect:nth-child(2) { animation-delay: -.75s !important; }
+#automation-order-flow .sdr-order-tail-parcels rect:nth-child(3) { animation-delay: -1.5s !important; }
+#automation-order-flow .sdr-order-tail-parcels rect:nth-child(4) { animation-delay: -2.25s !important; }
+
+@keyframes laneCardIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes laneDashMove { to { background-position: 74px 0; } }
+@keyframes laneParticle { from { left: -12%; } to { left: 112%; } }
+@keyframes laneParcelPulse { 50% { transform: translateX(6px); opacity: .65; } }
+
+@media (max-width: 900px) {
+  #automation-order-flow { overflow: hidden !important; }
+  #automation-order-flow .sdr-order-flow-track { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-template-rows: repeat(2, minmax(205px, auto)) !important; grid-template-areas: "mapped validation" "held synced" !important; }
+  #automation-order-flow .sdr-order-flow-track::before { top: 34px !important; bottom: 34px !important; }
+  #automation-order-flow .sdr-order-flow-tail { display: none !important; }
+}
+
+@media (max-width: 760px) {
+  #automation-order-flow .sdr-order-flow-head { grid-template-columns: minmax(0, 1fr) !important; gap: 18px !important; padding: 0 !important; }
+  #automation-order-flow .sdr-order-flow-track { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-template-rows: repeat(2, minmax(200px, auto)) !important; grid-template-areas: "mapped validation" "held synced" !important; gap: 16px !important; padding: 14px 0 !important; }
+  #automation-order-flow .sdr-order-flow-index { position: static !important; }
+  #automation-order-flow .sdr-order-flow-node { min-height: 200px !important; padding: 17px 15px !important; }
+}
+
+@media (max-width: 480px) {
+  #automation-order-flow { padding: 24px 18px !important; }
+  #automation-order-flow .sdr-order-flow-track { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: none !important; grid-template-areas: "mapped" "validation" "held" "synced" !important; }
+  #automation-order-flow .sdr-order-flow-track::before { top: -12px !important; right: -18px !important; bottom: -12px !important; left: -18px !important; }
+  #automation-order-flow .sdr-order-flow-track::after { right: -18px !important; left: -18px !important; }
+  #automation-order-flow .sdr-order-flow-node { min-height: 0 !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #automation-order-flow *, #automation-order-flow *::before, #automation-order-flow *::after { animation: none !important; transition: none !important; }
+}
+}
+
+/* Automatic-order case study: one clean route with a visible exception branch. */
+#automation-case-route.sdr-automation-case {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.42fr) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: 1px solid rgba(24, 128, 81, 0.16) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: 0 20px 52px rgba(20, 93, 65, 0.11) !important;
+}
+
+#automation-case-route .sdr-automation-case-story,
+#automation-case-route .sdr-automation-case-content { min-width: 0 !important; }
+
+#automation-case-route .sdr-automation-case-story {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: clamp(30px, 4vw, 58px) clamp(24px, 3.2vw, 48px) !important;
+  border-right: 1px solid rgba(24, 128, 81, 0.13) !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.7), rgba(235,248,241,.76)) !important;
+}
+
+#automation-case-route .sdr-automation-case-story .ff-kicker,
+#automation-case-route .sdr-automation-case-content > header strong {
+  color: #14794d !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+}
+
+#automation-case-route .sdr-automation-case-story h2 {
+  max-width: 410px !important;
+  margin: 14px 0 16px !important;
+  color: #000 !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+
+#automation-case-route .sdr-automation-case-story > p {
+  max-width: 390px !important;
+  margin: 0 !important;
+  color: #50675e !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+#automation-case-route .sdr-automation-route-map {
+  position: relative !important;
+  height: 154px !important;
+  margin-top: 28px !important;
+}
+
+#automation-case-route .sdr-automation-route-node {
+  position: absolute !important;
+  z-index: 2 !important;
+  display: grid !important;
+  width: 60px !important;
+  height: 60px !important;
+  place-items: center !important;
+  border: 1px solid rgba(20,121,77,.25) !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+  color: #14794d !important;
+  box-shadow: 0 8px 18px rgba(15,75,52,.12) !important;
+}
+
+#automation-case-route .sdr-automation-route-node svg { width: 24px !important; height: 24px !important; }
+#automation-case-route .sdr-automation-route-node small { position: absolute !important; top: 66px !important; white-space: nowrap !important; color: #36594b !important; font-size: 9px !important; font-weight: 700 !important; letter-spacing: .05em !important; }
+#automation-case-route .sdr-route-store { left: 0 !important; top: 40px !important; }
+#automation-case-route .sdr-route-record { left: 38% !important; top: 4px !important; }
+#automation-case-route .sdr-route-hold { left: 42% !important; top: 92px !important; border-color: rgba(190,89,65,.34) !important; color: #b6533e !important; }
+#automation-case-route .sdr-route-warehouse { right: 0 !important; top: 40px !important; }
+
+#automation-case-route .sdr-automation-route-line { position: absolute !important; z-index: 1 !important; display: block !important; }
+#automation-case-route .sdr-route-line-main { left: 45px !important; right: 46px !important; top: 69px !important; height: 3px !important; background: linear-gradient(90deg,#91d6b2,#188051 74%,#0c6740) !important; }
+#automation-case-route .sdr-route-line-main::after { content: "" !important; position: absolute !important; right: -2px !important; top: -5px !important; width: 11px !important; height: 11px !important; border-top: 3px solid #0c6740 !important; border-right: 3px solid #0c6740 !important; transform: rotate(45deg) !important; }
+#automation-case-route .sdr-route-line-branch { left: calc(42% + 30px) !important; top: 60px !important; width: 2px !important; height: 62px !important; background: linear-gradient(#6db98f,#cf7057) !important; }
+
+#automation-case-route .sdr-automation-case-content {
+  padding: clamp(30px, 4vw, 58px) clamp(24px, 3.4vw, 52px) !important;
+}
+
+#automation-case-route .sdr-automation-case-content > header p {
+  max-width: 760px !important;
+  margin: 16px 0 22px !important;
+  color: #263d34 !important;
+  font-size: 16px !important;
+  line-height: 1.58 !important;
+}
+
+#automation-case-route .sdr-automation-case-steps {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+#automation-case-route .sdr-automation-case-steps li {
+  position: relative !important;
+  min-height: 184px !important;
+  padding: 18px !important;
+  border: 1px solid rgba(24,128,81,.16) !important;
+  border-radius: 10px !important;
+  background: linear-gradient(155deg,#f7fcf9,#deefe6) !important;
+  transition: transform .25s ease, box-shadow .25s ease !important;
+}
+#automation-case-route .sdr-automation-case-steps li:hover { transform: translateY(-4px) !important; box-shadow: 0 12px 24px rgba(15,75,52,.12) !important; }
+#automation-case-route .sdr-automation-case-steps li small { position: absolute !important; top: 17px !important; left: 17px !important; display: grid !important; width: 28px !important; height: 28px !important; place-items: center !important; border-radius: 50% !important; background: #d7ebdf !important; color: #14794d !important; font-size: 10px !important; font-weight: 800 !important; }
+#automation-case-route .sdr-automation-case-icon { display: grid !important; width: 100% !important; height: 66px !important; place-items: center !important; color: #14794d !important; }
+#automation-case-route .sdr-automation-case-icon svg { width: 36px !important; height: 36px !important; }
+#automation-case-route .sdr-automation-case-steps h3 { margin: 12px 0 6px !important; color: #081b14 !important; font-size: 15px !important; line-height: 1.25 !important; }
+#automation-case-route .sdr-automation-case-steps p { margin: 0 !important; color: #51695f !important; font-size: 12px !important; line-height: 1.45 !important; }
+
+#automation-case-route .sdr-automation-case-content blockquote {
+  position: relative !important;
+  margin: 14px 0 0 !important;
+  padding: 16px 64px 16px 18px !important;
+  border: 1px solid rgba(24,128,81,.17) !important;
+  border-left: 4px solid #188051 !important;
+  border-radius: 9px !important;
+  background: linear-gradient(100deg,#e8f7ef,#d7eee2) !important;
+}
+#automation-case-route .sdr-automation-case-content blockquote strong { color: #071c14 !important; font-size: 13px !important; }
+#automation-case-route .sdr-automation-case-content blockquote p { margin: 4px 0 0 !important; color: #36594b !important; font-size: 13px !important; line-height: 1.45 !important; }
+#automation-case-route .sdr-automation-case-content blockquote svg { position: absolute !important; right: 20px !important; top: 50% !important; width: 28px !important; height: 28px !important; color: #188051 !important; transform: translateY(-50%) !important; }
+
+@media (max-width: 900px) {
+  #automation-case-route.sdr-automation-case { grid-template-columns: minmax(0, 1fr) !important; }
+  #automation-case-route .sdr-automation-case-story { border-right: 0 !important; border-bottom: 1px solid rgba(24,128,81,.13) !important; }
+  #automation-case-route .sdr-automation-route-map { max-width: 480px !important; width: 100% !important; }
+}
+
+@media (max-width: 560px) {
+  #automation-case-route .sdr-automation-case-steps { grid-template-columns: minmax(0, 1fr) !important; }
+  #automation-case-route .sdr-automation-case-steps li { min-height: 0 !important; }
+  #automation-case-route .sdr-automation-route-map { transform: scale(.88) !important; transform-origin: left center !important; width: 113.6% !important; }
+  #automation-case-route .sdr-automation-case-content blockquote { padding-right: 18px !important; }
+  #automation-case-route .sdr-automation-case-content blockquote svg { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #automation-case-route * { transition: none !important; }
+}
+
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5
+ * module: exception control · left narrative + four-stage resolution lane
+ */
+#automation-exception-lane {
+  --exception-ink: #000000;
+  --exception-body: #5e6d67;
+  --exception-green: #167449;
+  --exception-green-deep: #0e5f3a;
+  --exception-green-soft: #eaf8ef;
+  --exception-olive: #9b872f;
+  --exception-amber: #bd8b22;
+  --exception-paper: rgba(255, 255, 255, 0.82);
+  --exception-line: rgba(22, 116, 73, 0.2);
+  --exception-shadow: 0 16px 34px rgba(10, 55, 37, 0.12);
+  --exception-shadow-active: 0 23px 42px rgba(10, 55, 37, 0.18);
+  --exception-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 0.66fr) !important;
+  gap: clamp(28px, 4vw, 64px) !important;
+  align-items: center !important;
+  padding: clamp(34px, 4vw, 58px) clamp(26px, 3.8vw, 54px) !important;
+  border: 1px solid var(--exception-line) !important;
+  border-left: 7px solid var(--exception-green) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+  box-shadow: 0 18px 44px rgba(10, 55, 37, 0.08) !important;
+  overflow: hidden !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-planning > .container:has(#automation-exception-lane) {
+  display: block !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+#automation-exception-lane::before {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 50% !important;
+  right: 3% !important;
+  width: 64% !important;
+  height: 74% !important;
+  border: 3px solid rgba(22, 116, 73, 0.11) !important;
+  border-radius: 999px !important;
+  content: "" !important;
+  pointer-events: none !important;
+  transform: translateY(-50%) !important;
+}
+
+#automation-exception-lane .sdr-exception-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  min-width: 0 !important;
+}
+
+#automation-exception-lane .sdr-exception-copy h2 {
+  max-width: 14ch !important;
+  margin: 14px 0 0 !important;
+  color: var(--exception-ink) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  overflow-wrap: anywhere !important;
+}
+
+#automation-exception-lane .sdr-exception-copy > p {
+  max-width: 34ch !important;
+  margin: 22px 0 0 !important;
+  color: var(--exception-body) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+#automation-exception-lane .sdr-exception-track {
+  position: relative !important;
+  z-index: 1 !important;
+  display: grid !important;
+  min-width: 0 !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 18px 0 !important;
+  list-style: none !important;
+}
+
+#automation-exception-lane .sdr-exception-step {
+  --step-color: var(--exception-green);
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: 250px !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  margin-left: -10px !important;
+  padding: 42px 18px 20px 28px !important;
+  border: 1px solid rgba(22, 116, 73, 0.24) !important;
+  border-radius: 10px !important;
+  background: var(--exception-paper) !important;
+  box-shadow: var(--exception-shadow) !important;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 14px 50%) !important;
+  animation: exceptionStepIn 620ms var(--exception-ease) both !important;
+  transition: transform 220ms var(--exception-ease), box-shadow 220ms ease, filter 220ms ease !important;
+}
+
+#automation-exception-lane .sdr-exception-step:first-child {
+  margin-left: 0 !important;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%) !important;
+}
+
+#automation-exception-lane .sdr-exception-step:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 14px 50%) !important;
+}
+
+#automation-exception-lane .sdr-exception-step-1 { animation-delay: 120ms !important; }
+#automation-exception-lane .sdr-exception-step-2 { --step-color: var(--exception-olive); animation-delay: 240ms !important; }
+#automation-exception-lane .sdr-exception-step-3 { --step-color: var(--exception-amber); animation-delay: 360ms !important; }
+#automation-exception-lane .sdr-exception-step-4 { --step-color: var(--exception-green-deep); animation-delay: 480ms !important; }
+
+#automation-exception-lane .sdr-exception-step::after {
+  position: absolute !important;
+  top: 50% !important;
+  right: 3px !important;
+  color: var(--step-color) !important;
+  content: "›" !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  opacity: 0.45 !important;
+  transform: translateY(-50%) !important;
+}
+
+#automation-exception-lane .sdr-exception-step:last-child::after { display: none !important; }
+
+#automation-exception-lane .sdr-exception-number {
+  position: absolute !important;
+  z-index: 2 !important;
+  top: -17px !important;
+  left: 22px !important;
+  display: grid !important;
+  width: 42px !important;
+  height: 42px !important;
+  place-items: center !important;
+  border: 4px double var(--step-color) !important;
+  border-radius: 50% !important;
+  background: var(--exception-green-soft) !important;
+  color: var(--step-color) !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.72) !important;
+}
+
+#automation-exception-lane .sdr-exception-icon {
+  display: grid !important;
+  width: 100% !important;
+  min-height: 104px !important;
+  place-items: center !important;
+  color: var(--step-color) !important;
+}
+
+#automation-exception-lane .sdr-exception-icon svg {
+  width: clamp(52px, 4.3vw, 72px) !important;
+  height: clamp(52px, 4.3vw, 72px) !important;
+  stroke-width: 1.25 !important;
+  filter: drop-shadow(2px 3px 0 rgba(255, 255, 255, 0.82)) !important;
+}
+
+#automation-exception-lane .sdr-exception-step h3 {
+  margin: 0 0 7px !important;
+  color: var(--exception-ink) !important;
+  font-size: clamp(15px, 1.2vw, 18px) !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+#automation-exception-lane .sdr-exception-step p {
+  margin: 0 !important;
+  color: var(--exception-body) !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+#automation-exception-lane .sdr-exception-step:hover {
+  z-index: 4 !important;
+  box-shadow: var(--exception-shadow-active) !important;
+  filter: saturate(1.08) !important;
+  transform: translateY(-7px) !important;
+}
+
+@keyframes exceptionStepIn {
+  from { opacity: 0; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 1080px) {
+  #automation-exception-lane {
+    grid-template-columns: minmax(220px, 0.3fr) minmax(0, 0.7fr) !important;
+    gap: 24px !important;
+    padding-inline: 28px !important;
+  }
+
+  #automation-exception-lane .sdr-exception-step {
+    min-height: 230px !important;
+    padding-inline: 22px 15px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #automation-exception-lane {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 34px !important;
+  }
+
+  #automation-exception-lane::before { display: none !important; }
+  #automation-exception-lane .sdr-exception-copy h2,
+  #automation-exception-lane .sdr-exception-copy > p { max-width: 100% !important; }
+  #automation-exception-lane .sdr-exception-track { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 22px !important; }
+  #automation-exception-lane .sdr-exception-step,
+  #automation-exception-lane .sdr-exception-step:first-child,
+  #automation-exception-lane .sdr-exception-step:last-child {
+    min-height: 220px !important;
+    margin-left: 0 !important;
+    clip-path: none !important;
+  }
+  #automation-exception-lane .sdr-exception-step::after { display: none !important; }
+}
+
+@media (max-width: 560px) {
+  #automation-exception-lane { padding: 28px 20px !important; }
+  #automation-exception-lane .sdr-exception-copy h2 { font-size: clamp(30px, 2.05vw, 36px) !important; }
+  #automation-exception-lane .sdr-exception-track { grid-template-columns: minmax(0, 1fr) !important; gap: 20px !important; padding-left: 20px !important; }
+  #automation-exception-lane .sdr-exception-track::before {
+    position: absolute !important;
+    top: 20px !important;
+    bottom: 20px !important;
+    left: 3px !important;
+    width: 3px !important;
+    border-radius: 99px !important;
+    content: "" !important;
+    background: linear-gradient(180deg, var(--exception-green), var(--exception-amber), var(--exception-green-deep)) !important;
+  }
+  #automation-exception-lane .sdr-exception-step { min-height: 0 !important; padding: 28px 20px 22px !important; }
+  #automation-exception-lane .sdr-exception-number { top: 18px !important; left: -38px !important; width: 34px !important; height: 34px !important; border-width: 3px !important; }
+  #automation-exception-lane .sdr-exception-icon { min-height: 76px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #automation-exception-lane *,
+  #automation-exception-lane *::before,
+  #automation-exception-lane *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* The service stylesheet intentionally uses high-specificity legacy overrides.
+ * This route-only anchor makes the requested hero contract authoritative. */
+#automation-order-hero.sdr-hero .sdr-hero-grid {
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr) !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-hero-copy {
+  z-index: 3 !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: clamp(34px, 4vw, 64px) clamp(32px, 4.2vw, 68px) clamp(32px, 3.5vw, 56px) !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-hero-copy h1 {
+  width: auto !important;
+  max-width: 13ch !important;
+  margin: 28px 0 0 !important;
+  color: var(--auto-hero-black) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-hero-copy > p {
+  max-width: 51ch !important;
+  margin-top: 24px !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-actions {
+  display: flex !important;
+  gap: 14px !important;
+  margin-top: 30px !important;
+}
+
+body.jw-green-buttons #automation-order-hero.sdr-hero .sdr-actions .ff-btn {
+  min-height: 56px !important;
+  padding-inline: clamp(22px, 2vw, 32px) !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+}
+
+body.jw-green-buttons #automation-order-hero.sdr-hero .sdr-actions .ff-btn-ghost {
+  border-color: var(--auto-hero-green) !important;
+  background: transparent !important;
+  color: var(--auto-hero-green) !important;
+  box-shadow: none !important;
+}
+
+body.jw-green-buttons #automation-order-hero.sdr-hero .sdr-actions .ff-btn-primary:hover {
+  border-color: var(--auto-hero-green-deep) !important;
+  background: var(--auto-hero-green-deep) !important;
+  box-shadow: 0 12px 26px rgba(15, 96, 59, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.jw-green-buttons #automation-order-hero.sdr-hero .sdr-actions .ff-btn-ghost:hover {
+  background: var(--auto-hero-green-soft) !important;
+  color: var(--auto-hero-green) !important;
+  box-shadow: none !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop {
+  position: relative !important;
+  display: grid !important;
+  width: min(100%, 540px) !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 38px !important;
+  overflow: visible !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop::before {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 18px !important;
+  right: 16.666% !important;
+  left: 16.666% !important;
+  display: block !important;
+  height: 2px !important;
+  content: "" !important;
+  background: linear-gradient(90deg, var(--auto-hero-line-soft), var(--auto-hero-line-bright), var(--auto-hero-line-soft)) !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop::after {
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 14px !important;
+  left: 16.666% !important;
+  display: block !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  content: "" !important;
+  background: var(--auto-hero-green) !important;
+  box-shadow: 0 0 0 5px rgba(47, 174, 104, 0.13), 0 0 16px rgba(47, 174, 104, 0.5) !important;
+  animation: autoHeroFlow 6s linear infinite !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop li {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  min-height: 72px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--auto-hero-black) !important;
+  text-align: center !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop li::before {
+  position: relative !important;
+  z-index: 2 !important;
+  display: inline-flex !important;
+  width: 38px !important;
+  min-width: 38px !important;
+  height: 38px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 4px solid var(--auto-paper) !important;
+  border-radius: 50% !important;
+  background: var(--auto-hero-green) !important;
+  color: var(--auto-hero-white) !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-automation-loop li span {
+  color: var(--auto-hero-black) !important;
+  font-size: 13px !important;
+  font-weight: 750 !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-hero-image {
+  z-index: 1 !important;
+  min-height: clamp(460px, 40vw, 620px) !important;
+  margin-left: -34px !important;
+  border-radius: 14px !important;
+  box-shadow: var(--auto-hero-shadow) !important;
+}
+
+#automation-order-hero.sdr-hero .sdr-hero-image::before,
+#automation-order-hero.sdr-hero .sdr-hero-image::after {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  #automation-order-hero.sdr-hero .sdr-hero-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+  #automation-order-hero.sdr-hero .sdr-hero-copy { grid-row: 1 !important; }
+  #automation-order-hero.sdr-hero .sdr-hero-image { grid-row: 2 !important; margin-left: 0 !important; }
+}
+
+@media (max-width: 767px) {
+  #automation-order-hero.sdr-hero .sdr-hero-copy { padding: 28px 20px 24px !important; }
+  #automation-order-hero.sdr-hero .sdr-hero-copy h1 { font-size: clamp(30px, 2.05vw, 36px) !important; }
+  #automation-order-hero.sdr-hero .sdr-actions { display: grid !important; width: 100% !important; grid-template-columns: minmax(0, 1fr) !important; }
+  #automation-order-hero.sdr-hero .sdr-automation-loop { grid-template-columns: minmax(0, 1fr) !important; gap: 14px !important; }
+  #automation-order-hero.sdr-hero .sdr-automation-loop::before { top: 18px !important; right: auto !important; bottom: 18px !important; left: 18px !important; width: 2px !important; height: auto !important; background: linear-gradient(180deg, var(--auto-hero-line-soft), var(--auto-hero-line-bright), var(--auto-hero-line-soft)) !important; }
+  #automation-order-hero.sdr-hero .sdr-automation-loop::after { display: none !important; }
+  #automation-order-hero.sdr-hero .sdr-automation-loop li { min-height: 44px !important; flex-direction: row !important; justify-content: flex-start !important; gap: 14px !important; text-align: left !important; }
+}
+
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5
+ * module: fast-lane data track with early exception branch
+ */
+#automation-order-flow {
+  --flow-ink: #000000;
+  --flow-body: #5d6d66;
+  --flow-green: #167449;
+  --flow-green-deep: #0d603a;
+  --flow-green-soft: #e9f8ef;
+  --flow-orange: #d9962f;
+  --flow-orange-deep: #9a6212;
+  --flow-orange-soft: #fff5df;
+  --flow-paper: #ffffff;
+  --flow-line: rgba(22, 116, 73, 0.2);
+  --flow-shadow: 0 16px 36px rgba(10, 55, 37, 0.1);
+  --flow-shadow-active: 0 24px 46px rgba(10, 55, 37, 0.18);
+  --flow-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#automation-order-flow .sdr-order-flow-head {
+  grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr) !important;
+  align-items: center !important;
+  gap: clamp(34px, 5vw, 78px) !important;
+  margin-bottom: 46px !important;
+  padding: clamp(30px, 3.5vw, 48px) clamp(32px, 4vw, 58px) !important;
+  border: 1px solid var(--flow-line) !important;
+  border-left: 7px solid var(--flow-green) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, 0.68) !important;
+  animation: orderFlowHeadIn 620ms var(--flow-ease) both !important;
+}
+
+#automation-order-flow .sdr-order-flow-head h2 {
+  max-width: 13ch !important;
+  margin: 0 !important;
+  color: var(--flow-ink) !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  overflow-wrap: anywhere !important;
+}
+
+#automation-order-flow .sdr-order-flow-head p {
+  max-width: 47ch !important;
+  color: var(--flow-body) !important;
+}
+
+#automation-order-flow .sdr-order-flow-states {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+  margin-top: 20px !important;
+}
+
+#automation-order-flow .sdr-order-state {
+  display: inline-flex !important;
+  min-height: 34px !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 7px 12px !important;
+  border: 1px solid var(--flow-line) !important;
+  border-radius: 999px !important;
+  background: var(--flow-paper) !important;
+  color: var(--flow-green-deep) !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  cursor: default !important;
+  transition: transform 200ms var(--flow-ease), box-shadow 200ms ease, border-color 200ms ease !important;
+}
+
+#automation-order-flow .sdr-order-state > span {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: var(--flow-green) !important;
+}
+
+#automation-order-flow .sdr-order-state-held {
+  border-color: rgba(217, 150, 47, 0.32) !important;
+  background: var(--flow-orange-soft) !important;
+  color: var(--flow-orange-deep) !important;
+}
+
+#automation-order-flow .sdr-order-state-held > span { background: var(--flow-orange) !important; }
+#automation-order-flow .sdr-order-state-synced { background: var(--flow-green-soft) !important; }
+
+#automation-order-flow .sdr-order-state:hover,
+#automation-order-flow .sdr-order-state:focus-visible {
+  border-color: currentColor !important;
+  outline: 2px solid transparent !important;
+  box-shadow: 0 7px 18px rgba(10, 55, 37, 0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+#automation-order-flow .sdr-order-flow-track {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-rows: minmax(190px, auto) minmax(170px, auto) !important;
+  grid-template-areas:
+    "mapped validation synced"
+    ". held ." !important;
+  column-gap: clamp(26px, 4vw, 58px) !important;
+  row-gap: 86px !important;
+  min-height: 0 !important;
+  padding: 42px clamp(16px, 3vw, 44px) 10px !important;
+}
+
+#automation-order-flow .sdr-order-flow-track::before {
+  top: 72px !important;
+  right: 12% !important;
+  left: 12% !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #79bf94, var(--flow-green), var(--flow-green-deep)) !important;
+  transform-origin: left center !important;
+  animation: orderFlowDraw 900ms 220ms var(--flow-ease) both !important;
+}
+
+#automation-order-flow .sdr-order-flow-track::after {
+  top: 72px !important;
+  left: 50% !important;
+  width: 3px !important;
+  height: 236px !important;
+  background: linear-gradient(180deg, var(--flow-green) 0 34%, var(--flow-orange) 34% 100%) !important;
+  transform-origin: top center !important;
+  animation: orderBranchDraw 560ms 820ms var(--flow-ease) both !important;
+}
+
+#automation-order-flow .sdr-order-flow-node {
+  min-height: 184px !important;
+  margin: 0 !important;
+  padding: 58px 24px 24px !important;
+  border: 1px solid var(--flow-line) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  box-shadow: var(--flow-shadow) !important;
+  transition: transform 220ms var(--flow-ease), box-shadow 220ms ease, border-color 220ms ease !important;
+}
+
+#automation-order-flow .sdr-order-flow-node::before {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 76px !important;
+  height: 5px !important;
+  border-radius: 12px 0 8px 0 !important;
+  content: "" !important;
+  background: linear-gradient(90deg, var(--flow-green-deep), #74bd8d) !important;
+}
+
+#automation-order-flow .sdr-order-flow-node-1 { grid-area: mapped !important; animation-delay: 420ms !important; }
+#automation-order-flow .sdr-order-flow-node-2 { grid-area: validation !important; animation-delay: 560ms !important; }
+#automation-order-flow .sdr-order-flow-node-4 { grid-area: synced !important; animation-delay: 700ms !important; }
+#automation-order-flow .sdr-order-flow-node-3 {
+  grid-area: held !important;
+  border-color: rgba(217, 150, 47, 0.34) !important;
+  background: var(--flow-orange-soft) !important;
+  animation-delay: 1.05s !important;
+}
+
+#automation-order-flow .sdr-order-flow-node-3::before {
+  background: linear-gradient(90deg, var(--flow-orange-deep), #efbd67) !important;
+}
+
+#automation-order-flow .sdr-order-flow-index {
+  position: absolute !important;
+  top: -19px !important;
+  left: 50% !important;
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 !important;
+  border: 5px solid var(--auto-paper) !important;
+  background: var(--flow-green) !important;
+  color: var(--flow-paper) !important;
+  transform: translateX(-50%) !important;
+}
+
+#automation-order-flow .sdr-order-flow-node-3 .sdr-order-flow-index {
+  border-color: var(--flow-orange-soft) !important;
+  background: var(--flow-orange) !important;
+  color: var(--flow-paper) !important;
+}
+
+#automation-order-flow .sdr-order-flow-node h3 {
+  margin-bottom: 10px !important;
+  color: var(--flow-ink) !important;
+  font-weight: 800 !important;
+}
+
+#automation-order-flow .sdr-order-flow-node p { color: var(--flow-body) !important; }
+
+#automation-order-flow .sdr-order-flow-node:hover {
+  border-color: var(--flow-green) !important;
+  box-shadow: var(--flow-shadow-active) !important;
+  transform: translateY(-7px) !important;
+}
+
+#automation-order-flow .sdr-order-flow-node-3:hover { border-color: var(--flow-orange) !important; }
+
+#automation-order-flow .sdr-order-flow-particle {
+  top: 67px !important;
+  left: 12% !important;
+  animation: orderMainParticle 6.6s linear infinite !important;
+}
+
+#automation-order-flow .sdr-order-flow-particle-b { animation-delay: -2.2s !important; }
+#automation-order-flow .sdr-order-flow-particle-c { animation-delay: -4.4s !important; }
+
+#automation-order-flow .sdr-order-branch-particle {
+  position: absolute !important;
+  z-index: 3 !important;
+  top: 74px !important;
+  left: calc(50% - 5px) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: var(--flow-orange) !important;
+  box-shadow: 0 0 0 5px rgba(217, 150, 47, 0.15), 0 0 15px rgba(217, 150, 47, 0.45) !important;
+  animation: orderBranchParticle 2.8s ease-in-out 1.3s infinite !important;
+}
+
+#automation-order-flow:has(.sdr-order-state-mapped:is(:hover, :focus-visible)) [data-flow-state="mapped"],
+#automation-order-flow:has(.sdr-order-state-synced:is(:hover, :focus-visible)) [data-flow-state="synced"],
+#automation-order-flow:has(.sdr-order-state-held:is(:hover, :focus-visible)) [data-flow-state="held"] {
+  box-shadow: var(--flow-shadow-active) !important;
+  transform: translateY(-7px) !important;
+}
+
+#automation-order-flow:has([data-flow-state="mapped"]:hover) .sdr-order-state-mapped,
+#automation-order-flow:has([data-flow-state="synced"]:hover) .sdr-order-state-synced,
+#automation-order-flow:has([data-flow-state="held"]:hover) .sdr-order-state-held {
+  border-color: currentColor !important;
+  box-shadow: 0 7px 18px rgba(10, 55, 37, 0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+@keyframes orderFlowHeadIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes orderMainParticle {
+  from { left: 12%; }
+  to { left: calc(88% - 11px); }
+}
+
+@keyframes orderBranchParticle {
+  0%, 100% { transform: translateY(20px); opacity: 0.55; }
+  50% { transform: translateY(188px); opacity: 1; }
+}
+
+@media (max-width: 760px) {
+  #automation-order-flow .sdr-order-flow-head {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+    padding: 26px 22px !important;
+  }
+
+  #automation-order-flow .sdr-order-flow-track {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: none !important;
+    grid-template-areas: "mapped" "validation" "held" "synced" !important;
+    gap: 24px !important;
+    padding: 24px 0 0 34px !important;
+  }
+
+  #automation-order-flow .sdr-order-flow-track::before {
+    top: 24px !important;
+    right: auto !important;
+    bottom: 24px !important;
+    left: 14px !important;
+    width: 4px !important;
+    height: auto !important;
+    transform-origin: top center !important;
+  }
+
+  #automation-order-flow .sdr-order-flow-track::after,
+  #automation-order-flow .sdr-order-flow-particle,
+  #automation-order-flow .sdr-order-branch-particle { display: none !important; }
+
+  #automation-order-flow .sdr-order-flow-index {
+    top: 26px !important;
+    left: -34px !important;
+    transform: none !important;
+  }
+
+  #automation-order-flow .sdr-order-flow-node { min-height: 0 !important; padding: 24px 20px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #automation-order-flow *,
+  #automation-order-flow *::before,
+  #automation-order-flow *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,80 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · component: progressive evaluation flow · genre: modern-minimal · states: default · hover · focus · active · disabled · loading · error · success */
+.sdr-page-product-sourcing .sdr-planning {
+  --evaluation-paper: var(--sourcing-paper);
+  --evaluation-card: oklch(99% 0.007 155);
+  --evaluation-card-active: oklch(97% 0.025 155);
+  --evaluation-ink: oklch(31% 0.06 158);
+  --evaluation-muted: oklch(51% 0.025 158);
+  --evaluation-line: oklch(84% 0.045 155);
+  --evaluation-depth-1: oklch(67% 0.095 155);
+  --evaluation-depth-2: oklch(59% 0.115 155);
+  --evaluation-depth-3: oklch(51% 0.13 155);
+  --evaluation-depth-4: oklch(42% 0.13 155);
+  --evaluation-accent-ink: oklch(98% 0.006 155);
+  --evaluation-focus: oklch(39% 0.16 150);
+  --evaluation-error: oklch(56% 0.19 28);
+  --evaluation-shadow: oklch(31% 0.06 158 / 0.09);
+  --evaluation-shadow-hover: oklch(31% 0.06 158 / 0.16);
+  --evaluation-radius: 1rem;
+  --evaluation-radius-small: 0.5rem;
+  --evaluation-duration: 190ms;
+  --evaluation-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--evaluation-paper) !important;
+}
+
+.quote-evaluation { min-width: 0; }
+.quote-evaluation__head { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr); align-items: center; gap: 3rem; }
+.quote-evaluation__head > div { display: grid; min-width: 0; gap: 0.875rem; }
+.quote-evaluation__head .ff-kicker { color: var(--evaluation-depth-4) !important; }
+.quote-evaluation__head h2 { margin: 0; color: var(--evaluation-ink); font-size: clamp(2rem, 3.3vw, 3.15rem); font-weight: 820; line-height: 1.08; overflow-wrap: anywhere; }
+.quote-evaluation__head aside { display: grid; min-width: 0; grid-template-columns: 28px minmax(0, 1fr); align-items: start; gap: 0.875rem; padding: 1.25rem 1.5rem; border-inline-start: 3px solid var(--evaluation-depth-3); border-radius: var(--evaluation-radius-small); background: var(--evaluation-card-active); color: var(--evaluation-ink); }
+.quote-evaluation__head aside svg { margin-top: 0.15rem; color: var(--evaluation-depth-4); font-size: 1.1rem; }
+.quote-evaluation__head aside p { margin: 0; color: var(--evaluation-muted); font-size: 0.9rem; line-height: 1.65; }
+
+.quote-evaluation__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.quote-evaluation__grid > li { --dimension: var(--evaluation-depth-1); position: relative; min-width: 0; }
+.quote-evaluation__grid > li[data-depth="2"] { --dimension: var(--evaluation-depth-2); }
+.quote-evaluation__grid > li[data-depth="3"] { --dimension: var(--evaluation-depth-3); }
+.quote-evaluation__grid > li[data-depth="4"] { --dimension: var(--evaluation-depth-4); }
+.quote-evaluation__grid article { position: relative; z-index: 1; border-radius: var(--evaluation-radius); background: var(--evaluation-card); box-shadow: 0 14px 34px var(--evaluation-shadow); transition: transform var(--evaluation-duration) var(--evaluation-ease), box-shadow var(--evaluation-duration) var(--evaluation-ease); }
+.quote-evaluation__card { position: relative; display: grid; width: 100%; min-height: 260px; align-content: start; justify-items: start; gap: 0.75rem; padding: 1.5rem; border: 1px solid transparent; border-radius: var(--evaluation-radius); outline: 2px solid transparent; outline-offset: 2px; background: transparent; color: var(--evaluation-ink); text-align: start; cursor: pointer; }
+.quote-evaluation__badge { display: grid; width: 42px; height: 42px; place-items: center; border-radius: var(--evaluation-radius-small); background: var(--dimension); color: var(--evaluation-accent-ink); font-size: 0.72rem; font-weight: 900; }
+.quote-evaluation__icon { position: absolute; top: 1.65rem; right: 1.5rem; color: var(--dimension); font-size: 1.25rem; }
+.quote-evaluation__card strong { margin-top: 1.1rem; color: var(--evaluation-ink); font-size: 1.15rem; font-weight: 820; line-height: 1.25; }
+.quote-evaluation__description { color: var(--evaluation-muted); font-size: 0.84rem; line-height: 1.65; }
+.quote-evaluation__chevron { position: absolute; right: 1.25rem; bottom: 1.25rem; color: var(--dimension); transition: transform var(--evaluation-duration) var(--evaluation-ease); }
+.quote-evaluation__card[aria-expanded="true"] { border-color: var(--dimension); background: var(--evaluation-card-active); }
+.quote-evaluation__card[aria-expanded="true"] .quote-evaluation__chevron { transform: rotate(180deg); }
+.quote-evaluation__details { padding: 0 1.5rem 1.5rem; }
+.quote-evaluation__details[hidden] { display: none; }
+.quote-evaluation__details > span { color: var(--dimension); font-size: 0.65rem; font-weight: 900; letter-spacing: 0.08em; }
+.quote-evaluation__details ul { display: grid; gap: 0.5rem; margin: 0.75rem 0 0; padding: 0; list-style: none; }
+.quote-evaluation__details li { position: relative; padding-inline-start: 1rem; color: var(--evaluation-muted); font-size: 0.76rem; line-height: 1.45; }
+.quote-evaluation__details li::before { position: absolute; top: 0.55em; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--dimension); content: ""; }
+
+.quote-evaluation button:focus-visible { outline-color: var(--evaluation-focus); }
+.quote-evaluation button:active { transform: translateY(1px); }
+.quote-evaluation button:disabled { opacity: 0.5; cursor: not-allowed; }
+.quote-evaluation button[data-state="loading"] { cursor: progress; }
+.quote-evaluation button[data-state="error"] { outline-color: var(--evaluation-error); }
+.quote-evaluation button[data-state="success"] { outline-color: var(--evaluation-depth-2); }
+
+@media (hover: hover) and (pointer: fine) {
+  .quote-evaluation__grid > li:hover article { transform: translateY(-2px); box-shadow: 0 20px 42px var(--evaluation-shadow-hover); }
+}
+
+@media (max-width: 59.99rem) {
+  .quote-evaluation__head { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .quote-evaluation__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 39.99rem) {
+  .quote-evaluation__head aside { grid-template-columns: 24px minmax(0, 1fr); padding: 1rem; }
+  .quote-evaluation__grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .quote-evaluation__card { min-height: 220px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-evaluation *, .quote-evaluation *::before { transition-duration: 0.01ms !important; }
+  .quote-evaluation__grid > li:hover article, .quote-evaluation button:active { transform: none; }
+}

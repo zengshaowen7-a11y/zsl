@@ -1,0 +1,85 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · component: interactive case narrative · genre: modern-minimal · states: default · hover · focus · active · disabled · loading · error · success */
+.sdr-page-product-sourcing .sdr-case {
+  --case-paper: var(--sourcing-paper);
+  --case-intro: oklch(97.5% 0.018 82);
+  --case-card: oklch(98.7% 0.01 155);
+  --case-card-soft: oklch(95.5% 0.035 155);
+  --case-ink: oklch(30% 0.06 158);
+  --case-muted: oklch(51% 0.025 158);
+  --case-accent: oklch(44% 0.13 155);
+  --case-accent-mid: oklch(57% 0.115 155);
+  --case-accent-ink: oklch(98% 0.006 155);
+  --case-line: oklch(84% 0.04 155);
+  --case-focus: oklch(39% 0.16 150);
+  --case-error: oklch(56% 0.19 28);
+  --case-shadow: oklch(31% 0.06 158 / 0.1);
+  --case-shadow-strong: oklch(31% 0.06 158 / 0.16);
+  --case-radius: 1rem;
+  --case-radius-small: 0.5rem;
+  --case-duration: 190ms;
+  --case-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--case-paper) !important;
+}
+
+.sourcing-case-story { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); align-items: stretch; }
+.sourcing-case-story__intro { display: flex; min-width: 0; min-height: 570px; justify-content: center; flex-direction: column; padding: clamp(2rem, 4vw, 3.5rem); border-radius: var(--case-radius); background: var(--case-intro); color: var(--case-ink); box-shadow: 0 16px 38px var(--case-shadow); }
+.sourcing-case-story__intro .ff-kicker { width: fit-content; padding: 0.45rem 0.7rem; border: 1px solid var(--case-line); border-radius: var(--case-radius-small); color: var(--case-accent) !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 0.06em !important; }
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing section.sdr-case .sourcing-case-story__intro h2 { max-width: none !important; margin: 1.4rem 0 0; color: var(--case-ink); font-size: 32px !important; font-weight: 840; line-height: 1.06 !important; letter-spacing: -0.03em !important; white-space: nowrap !important; overflow-wrap: normal !important; text-wrap: nowrap !important; }
+.sourcing-case-story__title-text { display: inline-block; font-size: 30px; line-height: 1.06; letter-spacing: -0.03em; white-space: nowrap; }
+.sourcing-case-story__intro p { max-width: 32ch; margin: 1.35rem 0 0; color: var(--case-muted); font-size: 0.9rem; line-height: 1.65; }
+
+.sourcing-case-story__body { position: relative; z-index: 2; display: grid; min-width: 0; align-content: center; gap: 1.65rem; margin: 1.5rem 0 1.5rem -1.25rem; padding: clamp(2rem, 4vw, 3.5rem); border-radius: var(--case-radius); background: var(--case-card); color: var(--case-ink); box-shadow: 0 22px 52px var(--case-shadow-strong); }
+.sourcing-case-story__body header { display: grid; gap: 0.8rem; }
+.sourcing-case-story__body header > span { color: var(--case-accent); font-size: 0.68rem; font-weight: 900; letter-spacing: 0.08em; }
+.sourcing-case-story__body header p { max-width: 62ch; margin: 0; color: var(--case-muted); font-size: 1rem; line-height: 1.65; }
+
+.sourcing-case-story__timeline { display: grid; margin: 0; padding: 0; list-style: none; }
+.sourcing-case-story__timeline > li { position: relative; display: grid; min-width: 0; grid-template-columns: 48px minmax(0, 1fr); column-gap: 1rem; padding: 0.65rem 0; }
+.sourcing-case-story__timeline > li:not(:last-child)::before { position: absolute; top: 3.2rem; bottom: -0.65rem; left: 23px; width: 2px; content: ""; background: var(--case-line); transition: background-color var(--case-duration) var(--case-ease); }
+.sourcing-case-story__node { position: relative; z-index: 1; display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--case-accent); color: var(--case-accent-ink); font-size: 0.72rem; font-weight: 900; transition: transform var(--case-duration) var(--case-ease), background-color var(--case-duration) var(--case-ease); }
+.sourcing-case-story__timeline button { display: flex; width: 100%; min-height: 46px; align-items: center; justify-content: space-between; gap: 1rem; padding: 0; border: 0; outline: 2px solid transparent; outline-offset: 2px; background: transparent; color: var(--case-ink); text-align: start; cursor: pointer; }
+.sourcing-case-story__timeline button strong { font-size: 0.98rem; font-weight: 780; line-height: 1.4; }
+.sourcing-case-story__timeline button svg { flex: 0 0 auto; color: var(--case-accent); transition: transform var(--case-duration) var(--case-ease); }
+.sourcing-case-story__timeline button[aria-expanded="true"] svg { transform: rotate(180deg); }
+.sourcing-case-story__detail { grid-column: 2; padding: 0.25rem 0 0.7rem; }
+.sourcing-case-story__detail[hidden] { display: none; }
+.sourcing-case-story__detail span, .sourcing-case-story__detail strong { display: block; }
+.sourcing-case-story__detail span { color: var(--case-accent-mid); font-size: 0.62rem; font-weight: 900; letter-spacing: 0.08em; }
+.sourcing-case-story__detail strong { margin-top: 0.35rem; color: var(--case-muted); font-size: 0.78rem; line-height: 1.45; }
+.sourcing-case-story__body blockquote { margin: 0; padding: 1.25rem 1.4rem; border-inline-start: 4px solid var(--case-accent); border-radius: var(--case-radius-small); background: var(--case-card-soft); color: var(--case-ink); box-shadow: 0 12px 30px var(--case-shadow); font-size: 0.98rem; font-weight: 780; line-height: 1.55; }
+
+.sourcing-case-story button:focus-visible { outline-color: var(--case-focus); }
+.sourcing-case-story button:active { transform: translateY(1px); }
+.sourcing-case-story button:disabled { opacity: 0.5; cursor: not-allowed; }
+.sourcing-case-story button[data-state="loading"] { cursor: progress; }
+.sourcing-case-story button[data-state="error"] { outline-color: var(--case-error); }
+.sourcing-case-story button[data-state="success"] { outline-color: var(--case-accent-mid); }
+
+@media (hover: hover) and (pointer: fine) {
+  .sourcing-case-story__timeline > li:hover .sourcing-case-story__node { background: var(--case-accent-mid); transform: scale(1.08); }
+  .sourcing-case-story__timeline > li:hover::before { background: var(--case-accent-mid); }
+  .sourcing-case-story__timeline > li:hover button strong { font-weight: 860; }
+}
+
+@media (max-width: 59.99rem) {
+  .sourcing-case-story { grid-template-columns: minmax(0, 1fr); }
+  .sourcing-case-story__intro { min-height: 360px; }
+  .sourcing-case-story__body { margin: -1.5rem 1rem 0; }
+}
+
+@media (max-width: 39.99rem) {
+  .sourcing-case-story__intro { min-height: 320px; padding: 1.5rem; }
+  body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing section.sdr-case .sourcing-case-story__intro h2 { font-size: 30px !important; white-space: normal !important; text-wrap: balance !important; }
+  .sourcing-case-story__title-text { display: inline; font-size: inherit; white-space: normal; }
+  .sourcing-case-story__body { gap: 1.25rem; margin-inline: 0.5rem; padding: 1.25rem; }
+  .sourcing-case-story__timeline > li { grid-template-columns: 42px minmax(0, 1fr); column-gap: 0.75rem; }
+  .sourcing-case-story__node { width: 40px; height: 40px; }
+  .sourcing-case-story__timeline > li:not(:last-child)::before { top: 2.8rem; left: 19px; }
+  .sourcing-case-story__timeline button { min-height: 44px; }
+  .sourcing-case-story__detail { grid-column: 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sourcing-case-story *, .sourcing-case-story *::before { transition-duration: 0.01ms !important; }
+  .sourcing-case-story__timeline > li:hover .sourcing-case-story__node, .sourcing-case-story button:active { transform: none; }
+}

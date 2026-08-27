@@ -1,0 +1,111 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · component: interactive comparison table · genre: modern-minimal · states: default · hover · focus · active · disabled · loading · error · success */
+.sdr-page-product-sourcing .sdr-proof {
+  --offer-paper: var(--sourcing-paper);
+  --offer-card: oklch(99% 0.007 155);
+  --offer-card-alt: oklch(97.5% 0.018 155);
+  --offer-card-best: oklch(95% 0.045 153);
+  --offer-ink: oklch(31% 0.06 158);
+  --offer-muted: oklch(50% 0.025 158);
+  --offer-accent: oklch(43% 0.13 155);
+  --offer-accent-mid: oklch(56% 0.12 155);
+  --offer-accent-ink: oklch(98% 0.006 155);
+  --offer-line: oklch(87% 0.035 155);
+  --offer-focus: oklch(39% 0.16 150);
+  --offer-error: oklch(56% 0.19 28);
+  --offer-shadow: oklch(31% 0.06 158 / 0.1);
+  --offer-shadow-strong: oklch(31% 0.06 158 / 0.17);
+  --offer-radius: 1rem;
+  --offer-radius-small: 0.5rem;
+  --offer-duration: 180ms;
+  --offer-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--offer-paper) !important;
+}
+
+.sourcing-offers { display: grid; grid-template-columns: minmax(0, 42fr) minmax(0, 58fr); align-items: stretch; }
+.sdr-page-product-sourcing .sourcing-offers__media { position: relative !important; min-width: 0; min-height: 610px; margin: 0; border-inline-start: 5px solid var(--offer-accent); border-radius: var(--offer-radius); overflow: hidden; box-shadow: 0 18px 42px var(--offer-shadow); }
+.sourcing-offers__media img { object-fit: cover; }
+.sourcing-offers__panel { position: relative; z-index: 2; display: grid; min-width: 0; align-content: center; gap: 1.75rem; margin: 2rem 0 2rem -1.5rem; padding: clamp(1.5rem, 3vw, 2.75rem); border-radius: var(--offer-radius); background: var(--offer-card); color: var(--offer-ink); box-shadow: 0 22px 52px var(--offer-shadow-strong); }
+.sourcing-offers__panel header { display: grid; justify-items: center; gap: 0.875rem; min-width: 0; text-align: center; }
+.sourcing-offers__panel .ff-kicker { color: var(--offer-accent) !important; }
+.sourcing-offers__panel h2 { max-width: 18ch; margin: 0; color: var(--offer-ink); font-size: clamp(2rem, 3.25vw, 3rem); font-weight: 820; line-height: 1.08; overflow-wrap: anywhere; }
+
+.sourcing-offers__table { border-radius: var(--offer-radius-small); overflow: hidden; box-shadow: 0 8px 24px var(--offer-shadow); }
+.sourcing-offers__head, .sourcing-offers__row { display: grid; grid-template-columns: 46px minmax(135px, 1.45fr) minmax(105px, 0.9fr) minmax(72px, 0.65fr) minmax(95px, 0.85fr); align-items: center; }
+.sourcing-offers__head { min-height: 58px; background: var(--offer-accent); color: var(--offer-accent-ink); }
+.sourcing-offers__head > span, .sourcing-offers__head button { display: flex; min-width: 0; min-height: 58px; align-items: center; gap: 0.4rem; padding: 0.75rem; border: 0; background: transparent; color: inherit; font: inherit; font-size: 0.72rem; font-weight: 850; text-align: start; white-space: nowrap; }
+.sourcing-offers__head > span:first-child { justify-content: center; font-size: 0; }
+.sourcing-offers__head button { cursor: pointer; }
+.sourcing-offers__head button svg { flex: 0 0 auto; }
+.sourcing-offers__head button small { margin-inline-start: auto; color: inherit; font-size: 0.72rem; }
+.sourcing-offers__group { background: var(--offer-card); color: var(--offer-ink); transition: opacity var(--offer-duration) var(--offer-ease); }
+.sourcing-offers__group:nth-child(even) { background: var(--offer-card-alt); color: var(--offer-ink); }
+.sourcing-offers__group[data-best] { background: var(--offer-card-best); color: var(--offer-ink); }
+.sourcing-offers__group[data-selected] { box-shadow: inset 3px 0 0 var(--offer-accent); }
+.sourcing-offers__group[data-muted] { opacity: 0.42; }
+.sourcing-offers__row { min-height: 72px; border-bottom: 1px solid var(--offer-line); }
+.sourcing-offers__row > * { min-width: 0; padding: 0.75rem; color: var(--offer-muted); font-size: 0.84rem; }
+.sourcing-offers__select { display: grid; place-items: center; padding-inline: 0 !important; }
+.sourcing-offers__select input { width: 18px; height: 18px; accent-color: var(--offer-accent); cursor: pointer; }
+.sourcing-offers__supplier button { display: grid; width: 100%; min-height: 44px; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.35rem 0.5rem; padding: 0; border: 0; background: transparent; color: var(--offer-ink); text-align: start; cursor: pointer; }
+.sourcing-offers__supplier button > span { min-width: 0; font-weight: 800; white-space: nowrap; }
+.sourcing-offers__supplier button > small { display: inline-flex; width: fit-content; align-items: center; gap: 0.25rem; grid-column: 1 / -1; padding: 0.2rem 0.45rem; border-radius: 999px; background: var(--offer-accent); color: var(--offer-accent-ink); font-size: 0.58rem; font-weight: 850; white-space: nowrap; }
+.sourcing-offers__supplier button > svg { color: var(--offer-accent); transition: transform var(--offer-duration) var(--offer-ease); }
+.sourcing-offers__supplier button[aria-expanded="true"] > svg { transform: rotate(180deg); }
+.sourcing-offers__price { color: var(--offer-accent) !important; font-size: 1.02rem !important; font-weight: 900; }
+.sourcing-offers__details { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 1rem 1.25rem 1.25rem 3rem; border-bottom: 1px solid var(--offer-line); background: var(--offer-card-best); color: var(--offer-ink); }
+.sourcing-offers__details[hidden] { display: none; }
+.sourcing-offers__details span, .sourcing-offers__details strong { display: block; }
+.sourcing-offers__details span { color: var(--offer-muted); font-size: 0.66rem; font-weight: 750; text-transform: uppercase; }
+.sourcing-offers__details strong { margin-top: 0.3rem; color: var(--offer-ink); font-size: 0.75rem; line-height: 1.45; }
+.sourcing-offers__panel footer { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; }
+.sourcing-offers__panel footer p, .sourcing-offers__panel footer span { margin: 0; color: var(--offer-muted); font-size: 0.72rem; line-height: 1.55; }
+.sourcing-offers__panel footer p { max-width: 48ch; }
+.sourcing-offers__panel footer span { max-width: 28ch; color: var(--offer-accent); font-weight: 750; text-align: end; }
+
+.sourcing-offers button { outline: 2px solid transparent; outline-offset: 2px; }
+.sourcing-offers button:focus-visible, .sourcing-offers input:focus-visible { outline: 2px solid var(--offer-focus); outline-offset: 2px; }
+.sourcing-offers button:active { transform: translateY(1px); }
+.sourcing-offers button:disabled, .sourcing-offers input:disabled { opacity: 0.5; cursor: not-allowed; }
+.sourcing-offers button[data-state="loading"] { cursor: progress; }
+.sourcing-offers button[data-state="error"] { outline-color: var(--offer-error); }
+.sourcing-offers button[data-state="success"] { outline-color: var(--offer-accent-mid); }
+
+@media (hover: hover) and (pointer: fine) {
+  .sourcing-offers__head button:hover { background: var(--offer-accent-mid); color: var(--offer-accent-ink); }
+  .sourcing-offers__group:hover { opacity: 1; background: var(--offer-card-best); color: var(--offer-ink); }
+  .sourcing-offers__supplier button:hover { color: var(--offer-accent); }
+}
+
+@media (max-width: 59.99rem) {
+  .sourcing-offers { grid-template-columns: minmax(0, 1fr); }
+  .sdr-page-product-sourcing .sourcing-offers__media { min-height: 430px; }
+  .sourcing-offers__panel { margin: -2rem 1rem 0; }
+}
+
+@media (max-width: 39.99rem) {
+  .sdr-page-product-sourcing .sourcing-offers__media { min-height: 330px; }
+  .sourcing-offers__panel { gap: 1.25rem; margin-inline: 0.5rem; padding: 1.25rem; }
+  .sourcing-offers__table { box-shadow: none; overflow: visible; }
+  .sourcing-offers__head { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; min-height: 0; padding: 0.5rem; border-radius: var(--offer-radius-small); }
+  .sourcing-offers__head > span { display: none; }
+  .sourcing-offers__head button { justify-content: center; min-height: 44px; padding: 0.45rem; border-radius: 0.35rem; }
+  .sourcing-offers__head button small { margin-inline-start: 0; }
+  .sourcing-offers__head button span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .sourcing-offers__body { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+  .sourcing-offers__group { border-radius: var(--offer-radius-small); overflow: hidden; box-shadow: 0 8px 22px var(--offer-shadow); }
+  .sourcing-offers__row { grid-template-columns: 42px minmax(0, 1fr) repeat(3, minmax(0, 0.64fr)); min-height: 82px; border: 0; }
+  .sourcing-offers__row > * { padding: 0.5rem 0.3rem; font-size: 0.7rem; text-align: center; }
+  .sourcing-offers__supplier { text-align: start; }
+  .sourcing-offers__supplier button { display: flex; align-items: flex-start; flex-direction: column; justify-content: center; }
+  .sourcing-offers__supplier button > small { white-space: nowrap; }
+  .sourcing-offers__supplier button > svg { position: absolute; opacity: 0; }
+  .sourcing-offers__price { font-size: 0.84rem !important; }
+  .sourcing-offers__details { grid-template-columns: minmax(0, 1fr); padding: 1rem; }
+  .sourcing-offers__panel footer { flex-direction: column; gap: 0.5rem; }
+  .sourcing-offers__panel footer span { max-width: none; text-align: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sourcing-offers *, .sourcing-offers *::before { transition-duration: 0.01ms !important; }
+  .sourcing-offers button:active { transform: none; }
+}

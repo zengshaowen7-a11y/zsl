@@ -63,8 +63,92 @@ export default function ScrollReveal() {
         "reveal-right",
       ],
       [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-control .sdr-proof-row:not(.sdr-proof-head)",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-chain-head",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-chain-flow",
+        "reveal-line",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-chain-node:nth-child(even)",
+        "reveal-left",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-chain-node:nth-child(odd)",
+        "reveal-right",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-china-fit-intro",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-fit-timeline",
+        "reveal-line",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-fit-timeline article",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-hero .sdr-hero-copy > :is(.ff-kicker, h1, p, .sdr-actions, ul)",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-hero-image",
+        "reveal-right",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-case-story > *",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-case-challenge",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-case-timeline",
+        "reveal-line",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-case-timeline li",
+        "reveal-right",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-warehouse-case-outcome",
+        "reveal-right",
+      ],
+      [
         ":is(.sdr-page-product-sourcing, .sdr-page-automatic-order-fulfillment, .sdr-page-china-fulfillment-center, .sdr-page-quality-control-inspection) .sdr-faq details",
         "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-story > *",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-process-head",
+        "reveal-up",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-process-flow",
+        "reveal-line",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-process-flow article",
+        "reveal-right",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-timeline",
+        "reveal-line",
+      ],
+      [
+        ".sdr-page-china-fulfillment-center .sdr-zone-timeline article",
+        "reveal-right",
       ],
       [
         ".wjw-page :is(.wjw-compare-list > div, .wjw-principle-grid article, .wjw-fit-grid > div, .wjw-accordion details, .wjw-facts .wjw-container > div)",

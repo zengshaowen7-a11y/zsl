@@ -1,6 +1,10 @@
 import { servicePages } from "@config/service-page-content";
 import { getServiceConversion } from "@config/service-conversion-content";
 import ContactForm from "@layouts/ContactForm";
+import ProductSourcingDecisionFlow from "@layouts/ProductSourcingDecisionFlow";
+import ProductSourcingOfferComparison from "@layouts/ProductSourcingOfferComparison";
+import ProductSourcingQuoteEvaluation from "@layouts/ProductSourcingQuoteEvaluation";
+import ProductSourcingCaseStory from "@layouts/ProductSourcingCaseStory";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,6 +13,7 @@ import {
   FiClipboard,
   FiClock,
   FiGlobe,
+  FiInfo,
   FiLayers,
   FiPackage,
   FiSearch,
@@ -26,13 +31,17 @@ const capabilityIcons = [
   FiClock,
 ];
 const outcomeIcons = [FiUserCheck, FiLayers, FiPackage, FiTruck];
+const warehouseFlowIcons = [FiPackage, FiSearch, FiLayers, FiTruck];
+const warehouseZoneProcessIcons = [FiPackage, FiSearch];
+const warehouseProofIcons = [FiPackage, FiSearch, FiTruck];
+const exceptionLaneIcons = [FiClipboard, FiLayers, FiUserCheck, FiTruck];
 const serviceTitleClass = (title) =>
   title.length > 48 ? "sdr-title-long" : undefined;
 
 const proofContent = {
   "product-sourcing": {
     eyebrow: "EXAMPLE SUPPLIER COMPARISON",
-    title: "Compare supplier offers from one shared brief.",
+    title: "Compare supplier offers.",
     image: "/images/generated/product-sourcing-hero.webp",
     columns: ["Supplier", "Unit price", "MOQ", "Lead time"],
     rows: [
@@ -187,6 +196,7 @@ export default function ServiceDetailRedesign({ service }) {
     },
   };
   const processIntro = processIntroBySlug[service.slug] || null;
+  const dropshipProcessStageLabels = ["Audit", "Supplier", "Rules", "Test", "Live"];
   const fitIntroBySlug = {
     "china-fulfillment-center": {
       title: "Built for inbound stock and outbound export.",
@@ -329,12 +339,21 @@ export default function ServiceDetailRedesign({ service }) {
 
   return (
     <main className={`ff-site sdr-page sdr-page-${service.slug}`}>
-      <section className="sdr-hero">
-        <div className="sdr-hero-grid">
+      <section
+        id={service.slug === "automatic-order-fulfillment" ? "automation-order-hero" : undefined}
+        className={`sdr-hero${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero" : ""}`}
+      >
+        <div className={`sdr-hero-grid${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-grid" : ""}`}>
           <div className="sdr-hero-copy">
             <span className="ff-kicker">{service.eyebrow}</span>
             <h1 className={serviceTitleClass(service.title)}>
-              {service.title}
+              {service.slug === "product-sourcing" ? (
+                <>
+                  Compare <span>suppliers</span> first.
+                </>
+              ) : (
+                service.title
+              )}
             </h1>
             <p>{service.lead}</p>
             <div className="sdr-actions">
@@ -344,6 +363,7 @@ export default function ServiceDetailRedesign({ service }) {
               </a>
               <a className="ff-btn ff-btn-ghost" href="#service-process">
                 See How It Works
+                {service.slug === "product-sourcing" ? <FiArrowRight /> : null}
               </a>
             </div>
             {service.slug === "dropshipping-supplier" ? (
@@ -362,16 +382,16 @@ export default function ServiceDetailRedesign({ service }) {
                 ))}
               </div>
             ) : null}
-            <ul>
+            <ul className={service.slug === "automatic-order-fulfillment" ? "sdr-automation-loop" : undefined}>
               {service.heroPoints.map((point) => (
                 <li key={point}>
                   <FiCheck />
-                  {point}
+                  {service.slug === "automatic-order-fulfillment" ? <span>{point}</span> : point}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="sdr-hero-image">
+          <div className={`sdr-hero-image${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-image" : ""}`}>
             <Image
               src={service.image}
               alt={`${service.menuTitle} in operation`}
@@ -390,6 +410,12 @@ export default function ServiceDetailRedesign({ service }) {
                   <li><b>QC</b><span>before dispatch</span></li>
                   <li><b>Tracking</b><span>returned</span></li>
                 </ol>
+              </div>
+            ) : service.slug === "product-sourcing" ? (
+              <div className="sdr-sourcing-proof-card" aria-hidden="true">
+                <span>SHORTLIST BASIS</span>
+                <strong>4 supplier offers</strong>
+                <small>Compared by cost, MOQ, lead time and sample notes.</small>
               </div>
             ) : null}
           </div>
@@ -424,13 +450,21 @@ export default function ServiceDetailRedesign({ service }) {
             </div>
           ) : service.slug === "product-sourcing" ? (
             <div className="sdr-fit-intro sdr-product-fit-intro">
+              <div className="sdr-product-progress" aria-label="Four-step supplier decision process">
+                {[1, 2, 3, 4].map((step) => (
+                  <span key={step} aria-hidden="true" />
+                ))}
+              </div>
               <div className="sdr-product-fit-copy">
                 <span className="ff-kicker">DECISION FILTER</span>
                 <h2>{fitIntroBySlug["product-sourcing"].title}</h2>
                 <p>{fitIntroBySlug["product-sourcing"].lead}</p>
               </div>
               <aside>
-                <span>{fitIntroBySlug["product-sourcing"].noteTitle}</span>
+                <div className="sdr-product-note-title">
+                  <FiInfo aria-hidden="true" />
+                  <span>{fitIntroBySlug["product-sourcing"].noteTitle}</span>
+                </div>
                 <strong>{fitIntroBySlug["product-sourcing"].noteLead}</strong>
               </aside>
             </div>
@@ -463,7 +497,10 @@ export default function ServiceDetailRedesign({ service }) {
                 <p>{fitIntro.lead}</p>
               </div>
               <aside>
-                <span>{fitIntro.asideTitle}</span>
+                <div className="sdr-china-fit-note-title">
+                  {service.slug === "china-fulfillment-center" ? <FiInfo aria-hidden="true" /> : null}
+                  <span>{fitIntro.asideTitle}</span>
+                </div>
                 <strong>{fitIntro.asideLead}</strong>
               </aside>
             </div>
@@ -479,17 +516,22 @@ export default function ServiceDetailRedesign({ service }) {
               </h2>
             </div>
           )}
-          <div className="sdr-fit-grid">
+          <div className={service.slug === "china-fulfillment-center" ? "sdr-fit-timeline" : "sdr-fit-grid"}>
+            {service.slug === "china-fulfillment-center" ? <span className="sdr-fit-timeline-particle" aria-hidden="true" /> : null}
             {service.outcomes.map(([title, text], index) => {
               const Icon = outcomeIcons[index % outcomeIcons.length];
               return (
-              <article key={title}>
+              <article key={title} style={service.slug === "china-fulfillment-center" ? { "--fit-step-index": index } : undefined}>
                 <div className="sdr-fit-card-top">
                   <small>0{index + 1}</small>
-                  {["dropshipping-supplier", "3pl-fulfillment-services"].includes(service.slug) ? <Icon aria-hidden="true" /> : null}
+                  {service.slug === "china-fulfillment-center" ? (
+                    <span className="sdr-fit-step-icon" aria-hidden="true"><Icon /></span>
+                  ) : ["dropshipping-supplier", "3pl-fulfillment-services", "product-sourcing"].includes(service.slug) ? <Icon aria-hidden="true" /> : null}
                 </div>
-                <h3>{title}</h3>
-                <p>{text}</p>
+                <div className={service.slug === "china-fulfillment-center" ? "sdr-fit-step-copy" : undefined}>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
                 {service.slug === "dropshipping-supplier" ? (
                   <strong>{["Ownership", "Rules", "Branding", "Tracking"][index]}</strong>
                 ) : service.slug === "3pl-fulfillment-services" ? (
@@ -502,16 +544,21 @@ export default function ServiceDetailRedesign({ service }) {
         </div>
       </section>
 
-      <section className="sdr-scope">
+      <section id={service.slug === "automatic-order-fulfillment" ? "automation-capability-route" : undefined} className={`sdr-scope${service.slug === "china-fulfillment-center" ? " sdr-warehouse-chain" : ""}`}>
         <div className="container">
-          <div className="sdr-heading-split">
+          <div className={`sdr-heading-split${service.slug === "china-fulfillment-center" ? " sdr-warehouse-chain-head" : ""}`}>
             <div>
               <span className="ff-kicker">WHAT WE HANDLE</span>
               <h2 className={serviceTitleClass(service.capabilitiesTitle)}>
                 {service.capabilitiesTitle}
               </h2>
             </div>
-            <p>{service.capabilitiesLead}</p>
+            {service.slug === "china-fulfillment-center" ? (
+              <aside className="sdr-warehouse-chain-note">
+                <FiPackage aria-hidden="true" />
+                <p>{service.capabilitiesLead}</p>
+              </aside>
+            ) : <p>{service.capabilitiesLead}</p>}
           </div>
           {service.slug === "dropshipping-supplier" ? (
             <div className="sdr-scope-hub" aria-hidden="true">
@@ -519,7 +566,58 @@ export default function ServiceDetailRedesign({ service }) {
               <strong>Source, check, pack and ship with one accountable handoff.</strong>
             </div>
           ) : null}
-          <div className="sdr-scope-grid">
+          {service.slug === "automatic-order-fulfillment" ? (
+            <div className="sdr-order-route" aria-label="Order route capabilities">
+              <svg className="sdr-order-route-pipes" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
+                <path className="sdr-route-pipe-main" d="M0 155 H920 C980 155 980 155 1040 155 H1200" />
+                <path className="sdr-route-pipe-return" d="M0 400 H315 C360 400 365 365 365 330 V155" />
+                <path className="sdr-route-pipe-feedback" d="M0 470 H440 C495 470 510 430 510 380 V155" />
+                <path className="sdr-route-pipe-exception" d="M650 155 C700 155 710 188 710 230 V560" />
+              </svg>
+              <span className="sdr-order-route-dots sdr-order-route-dots-left" aria-hidden="true" />
+              <span className="sdr-order-route-dots sdr-order-route-dots-right" aria-hidden="true" />
+              {service.capabilities.map(([title, text], index) => {
+                const Icon = capabilityIcons[index];
+                return <article key={title} className={`sdr-order-route-node sdr-order-route-node-${index + 1}`}>
+                  <span className="sdr-order-route-icon"><Icon aria-hidden="true" /></span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <span className="sdr-order-route-visual" aria-hidden="true">
+                    <Icon /><Icon /><Icon />
+                  </span>
+                </article>;
+              })}
+              <span className="sdr-order-route-particle" aria-hidden="true" />
+              <span className="sdr-order-route-particle sdr-order-route-particle-two" aria-hidden="true" />
+              <span className="sdr-order-route-status sdr-route-status-secure" aria-hidden="true"><FiShield /></span>
+              <span className="sdr-order-route-status sdr-route-status-alert" aria-hidden="true"><FiInfo /></span>
+            </div>
+          ) : service.slug === "china-fulfillment-center" ? (
+            <div className="sdr-warehouse-chain-flow" aria-label="Warehouse zones A to F">
+              <span className="sdr-warehouse-chain-particle" aria-hidden="true" />
+              {service.capabilities.map(([title, text], index) => {
+                const Icon = capabilityIcons[index];
+                const zone = String.fromCharCode(65 + index);
+                return (
+                  <article
+                    key={title}
+                    className="sdr-warehouse-chain-node"
+                    style={{ "--warehouse-zone-index": index }}
+                  >
+                    <span className="sdr-warehouse-chain-anchor" aria-hidden="true">{zone}</span>
+                    <div className="sdr-warehouse-chain-card">
+                      <span className="sdr-warehouse-chain-icon" aria-hidden="true"><Icon /></span>
+                      <div>
+                        <h3>{title}</h3>
+                        <p>{text}</p>
+                      </div>
+                      <small>ZONE {zone}</small>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          ) : <div className="sdr-scope-grid">
             {service.capabilities.map(([title, text], index) => {
               const Icon = capabilityIcons[index];
               return (
@@ -534,13 +632,44 @@ export default function ServiceDetailRedesign({ service }) {
                 </article>
               );
             })}
-          </div>
+          </div>}
         </div>
       </section>
 
       <section className="sdr-proof">
-        <div className="container sdr-proof-grid">
-          <figure>
+        {service.slug === "automatic-order-fulfillment" ? (
+          <div className="container sdr-order-control">
+            <figure className="sdr-order-control-visual">
+              <Image src={proof.image} alt={proof.title} fill sizes="(max-width: 900px) 100vw, 45vw" unoptimized={proof.image.includes("/generated/")} />
+              <figcaption><span>{proof.eyebrow}</span><strong>Order control log</strong></figcaption>
+            </figure>
+            <div className="sdr-order-control-panel">
+              <span className="ff-kicker">{proof.eyebrow}</span>
+              <h2>{proof.title}</h2>
+              <div className="sdr-order-lanes">
+                {proof.summary.map(([title, text], index) => {
+                  const Icon = outcomeIcons[index];
+                  return <article className={`sdr-order-lane sdr-order-lane-${index + 1}`} key={title}>
+                    <span><Icon aria-hidden="true" /></span><div><h3>{title}</h3><p>{text}</p></div>
+                  </article>;
+                })}
+              </div>
+              <div className="sdr-order-control-table-wrap">
+                <table className="sdr-order-control-table">
+                  <thead><tr>{proof.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead>
+                  <tbody>{proof.rows.map((row, index) => <tr className={`sdr-order-status-row sdr-order-status-row-${index + 1}`} key={index}>{row.map((cell, cellIndex) => <td key={`${cell}-${cellIndex}`}>{cellIndex === 1 ? <span>{cell}</span> : cell}</td>)}</tr>)}</tbody>
+                </table>
+              </div>
+              <small className="sdr-order-control-note">{proof.note}</small>
+            </div>
+          </div>
+        ) : service.slug === "product-sourcing" ? (
+          <div className="container">
+            <ProductSourcingOfferComparison proof={proof} />
+          </div>
+        ) : (
+        <div className={`container sdr-proof-grid${service.slug === "china-fulfillment-center" ? " sdr-warehouse-control" : ""}`}>
+          <figure className={service.slug === "china-fulfillment-center" ? "sdr-warehouse-control-visual" : undefined}>
             <Image
               src={proof.image}
               alt={proof.title}
@@ -568,30 +697,149 @@ export default function ServiceDetailRedesign({ service }) {
                   <strong key={column}>{column}</strong>
                 ))}
               </div>
-              {proof.rows.map((row, index) => (
-                <div className="sdr-proof-row" key={index}>
+              {proof.rows.map((row, index) => {
+                const ZoneIcon = warehouseProofIcons[index] || FiPackage;
+                return (
+                <div className="sdr-proof-row" key={index} style={{ "--row-index": index }}>
                   {row.map((cell, cellIndex) => (
-                    <span key={`${cell}-${cellIndex}`}>{cell}</span>
+                    <span key={`${cell}-${cellIndex}`}>
+                      {service.slug === "china-fulfillment-center" && cellIndex === 0 ? (
+                        <span className="sdr-proof-zone-label">
+                          <ZoneIcon aria-hidden="true" />
+                          {cell}
+                        </span>
+                      ) : (
+                        cell
+                      )}
+                    </span>
                   ))}
                 </div>
-              ))}
+                );
+              })}
             </div>
             <small>{proof.note}</small>
           </div>
         </div>
+        )}
       </section>
 
+      {service.slug !== "china-fulfillment-center" ? (
       <section id="service-process" className="sdr-process">
         <div className="container">
-          {processIntro ? (
+          {service.slug === "automatic-order-fulfillment" ? (
+            <div id="automation-order-flow" className="sdr-order-flow" aria-label="Order data flow">
+              <header className="sdr-order-flow-head">
+                <div>
+                  <span className="ff-kicker">{service.processEyebrow}</span>
+                  <p>{service.processLead}</p>
+                </div>
+                <div>
+                  <h2>{service.processTitle}</h2>
+                  <div className="sdr-order-flow-states" aria-label="Order states">
+                    {[
+                      ["mapped", "Mapped"],
+                      ["held", "Held"],
+                      ["synced", "Synced"],
+                    ].map(([state, label]) => (
+                      <button key={state} type="button" className={`sdr-order-state sdr-order-state-${state}`}>
+                        <span aria-hidden="true" />
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </header>
+              <div className="sdr-order-flow-track">
+                {[0, 1, 2, 3].map((index) => {
+                  const [title, text] = service.outcomes[index];
+                  const state = index === 0 ? "mapped" : index === 2 ? "held" : index === 3 ? "synced" : "validation";
+                  const Icon = exceptionLaneIcons[index];
+                  return (
+                  <article key={title} data-flow-state={state} className={`sdr-order-flow-node sdr-order-flow-node-${index + 1}`}>
+                    <span className="sdr-order-flow-index">0{index + 1}</span>
+                    <span className="sdr-order-flow-icon" aria-hidden="true"><Icon /></span>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </article>
+                  );
+                })}
+                <span className="sdr-order-flow-particle sdr-order-flow-particle-a" aria-hidden="true" />
+                <span className="sdr-order-flow-particle sdr-order-flow-particle-b" aria-hidden="true" />
+                <span className="sdr-order-flow-particle sdr-order-flow-particle-c" aria-hidden="true" />
+                <span className="sdr-order-branch-particle" aria-hidden="true" />
+                <svg className="sdr-order-flow-tail" viewBox="0 0 300 190" aria-hidden="true">
+                  <path d="M0 82 C72 82 77 22 170 22 H296" />
+                  <path d="M0 92 H296" />
+                  <path d="M0 102 C72 102 77 166 170 166 H296" />
+                  <g className="sdr-order-tail-parcels">
+                    <rect x="72" y="69" width="26" height="20" rx="3" />
+                    <rect x="142" y="26" width="26" height="20" rx="3" />
+                    <rect x="174" y="111" width="26" height="20" rx="3" />
+                    <rect x="244" y="78" width="26" height="20" rx="3" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          ) : service.slug === "product-sourcing" ? (
+            <ProductSourcingDecisionFlow
+              eyebrow={service.processEyebrow}
+              title={service.processTitle}
+              lead={service.processLead}
+              steps={service.process}
+            />
+          ) : service.slug === "dropshipping-supplier" && processIntro ? (
+            <div className="sdr-dropship-launch" aria-label="Partnership launch process">
+              <aside className="sdr-dropship-launch-copy">
+                <div className="sdr-dropship-launch-icon" aria-hidden="true">
+                  <FiGlobe />
+                </div>
+                <span className="ff-kicker">{service.processEyebrow}</span>
+                <h2>
+                  Move from a product brief to a{" "}
+                  <span>daily order routine.</span>
+                </h2>
+                <p>{service.processLead}</p>
+                <ul className="sdr-dropship-launch-points" aria-label="Core alignment points">
+                  {processIntro.points.map(([title, text]) => (
+                    <li key={title}>
+                      <FiCheck aria-hidden="true" />
+                      <span>
+                        <strong>{title}</strong>
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+              <div className="sdr-dropship-launch-steps" aria-label="Launch stages">
+                {service.process.map(([number, title, text], index) => {
+                  const statusClass =
+                    index < 3 ? "is-complete" : index === 3 ? "is-active" : "is-pending";
+                  return (
+                    <article
+                      className={`sdr-dropship-launch-step ${statusClass}`}
+                      key={number}
+                    >
+                      <span className="sdr-dropship-step-badge">
+                        <b>{number}</b>
+                        <small aria-hidden="true">
+                          {index < 3 ? <FiCheck /> : null}
+                        </small>
+                      </span>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                      <em>{dropshipProcessStageLabels[index]}</em>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          ) : processIntro ? (
             <div className="sdr-process-intro sdr-auto-process-intro">
               <article className="sdr-auto-process-card" aria-label="Automation case">
                 <span className="ff-kicker">{processIntro.leftEyebrow}</span>
                 <h2>{processIntro.leftTitle}</h2>
                 <div className="sdr-auto-process-card-foot">
-                  <span className="sdr-auto-process-icon" aria-hidden="true">
-                    <FiGlobe />
-                  </span>
                   <p>{processIntro.leftLead}</p>
                 </div>
               </article>
@@ -615,6 +863,16 @@ export default function ServiceDetailRedesign({ service }) {
                 </div>
               </div>
             </div>
+          ) : service.slug === "china-fulfillment-center" ? (
+            <div className="sdr-zone-process-head">
+              <div>
+                <span className="ff-kicker">{service.processEyebrow}</span>
+                <p>{service.processLead}</p>
+              </div>
+              <h2 className={serviceTitleClass(service.processTitle)}>
+                {service.processTitle}
+              </h2>
+            </div>
           ) : (
             <div className="sdr-section-heading">
               <span className="ff-kicker">{service.processEyebrow}</span>
@@ -624,21 +882,74 @@ export default function ServiceDetailRedesign({ service }) {
               <p>{service.processLead}</p>
             </div>
           )}
-          <div className="sdr-process-grid">
-            {service.process.map(([number, title, text]) => (
-              <article key={number}>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
+          {!["product-sourcing", "dropshipping-supplier", "automatic-order-fulfillment"].includes(service.slug) ? (
+            service.slug === "china-fulfillment-center" ? (
+              <div className="sdr-process-grid sdr-zone-process-flow" aria-label="Warehouse zone flow">
+                {service.process.slice(0, 2).map(([number, title, text], index) => {
+                  const Icon = warehouseZoneProcessIcons[index] || FiPackage;
+                  return (
+                    <article key={number} style={{ "--zone-index": index }}>
+                      <span className="sdr-zone-process-node">{number.replace("ZONE ", "")}</span>
+                      <div className="sdr-zone-process-card">
+                        <span className="sdr-zone-process-icon" aria-hidden="true">
+                          <Icon />
+                        </span>
+                        <div>
+                          <h3>{title}</h3>
+                          <p>{text}</p>
+                        </div>
+                        <small>{number}</small>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="sdr-process-grid">
+                {service.process.map(([number, title, text]) => (
+                  <article key={number}>
+                    <span>{number}</span>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </article>
+                ))}
+              </div>
+            )
+          ) : null}
         </div>
       </section>
+      ) : null}
 
       <section className="sdr-planning">
         <div className="container">
-          <div className="sdr-heading-split">
+          {service.slug === "product-sourcing" ? (
+            <ProductSourcingQuoteEvaluation spotlight={service.spotlight} />
+          ) : service.slug === "automatic-order-fulfillment" ? (
+            <div id="automation-exception-lane" className="sdr-exception-lane">
+              <div className="sdr-exception-copy">
+                <span className="ff-kicker">{service.spotlight.eyebrow}</span>
+                <h2>{service.spotlight.title}</h2>
+                <p>{service.spotlight.lead}</p>
+              </div>
+              <ol className="sdr-exception-track" aria-label="Exception resolution lane">
+                {service.spotlight.items.map(([title, text], index) => {
+                  const Icon = exceptionLaneIcons[index];
+                  return (
+                    <li key={title} className={`sdr-exception-step sdr-exception-step-${index + 1}`}>
+                      <span className="sdr-exception-number">0{index + 1}</span>
+                      <span className="sdr-exception-icon" aria-hidden="true"><Icon /></span>
+                      <div>
+                        <h3>{title}</h3>
+                        <p>{text}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          ) : (
+          <>
+          <div className={service.slug === "china-fulfillment-center" ? "sdr-zone-story" : "sdr-heading-split"}>
             <div>
               <span className="ff-kicker">{service.spotlight.eyebrow}</span>
               <h2 className={serviceTitleClass(service.spotlight.title)}>
@@ -647,20 +958,106 @@ export default function ServiceDetailRedesign({ service }) {
             </div>
             <p>{service.spotlight.lead}</p>
           </div>
-          <div className="sdr-planning-grid">
+          <div className={service.slug === "china-fulfillment-center" ? "sdr-planning-grid sdr-zone-timeline" : "sdr-planning-grid"}>
             {service.spotlight.items.map(([title, text], index) => (
-              <article key={title}>
-                <small>0{index + 1}</small>
-                <h3>{title}</h3>
-                <p>{text}</p>
+              <article key={title} style={{ "--zone-index": index }}>
+                {service.slug === "china-fulfillment-center" ? (
+                  <>
+                    <small>0{index + 1}</small>
+                    <span className="sdr-zone-icon" aria-hidden="true">
+                      {(() => { const Icon = warehouseFlowIcons[index]; return <Icon />; })()}
+                    </span>
+                    <div><h3>{title}</h3><p>{text}</p></div>
+                  </>
+                ) : (
+                  <><small>0{index + 1}</small><h3>{title}</h3><p>{text}</p></>
+                )}
               </article>
             ))}
           </div>
+          </>
+          )}
         </div>
       </section>
 
       {service.slug !== "pod-fulfillment" ? (
-        <section className="sdr-case">
+        <section className={`sdr-case${service.slug === "china-fulfillment-center" ? " sdr-warehouse-case" : ""}`}>
+          {service.slug === "china-fulfillment-center" ? (
+            <div className="container sdr-warehouse-case-grid">
+              <aside className="sdr-warehouse-case-story">
+                <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
+                <h2>{conversion.caseStudy.title}</h2>
+                <p>{conversion.caseStudy.profile}</p>
+              </aside>
+              <div className="sdr-warehouse-case-content">
+                <header className="sdr-warehouse-case-challenge">
+                  <strong>THE OPERATING CHALLENGE</strong>
+                  <p>{conversion.caseStudy.challenge}</p>
+                </header>
+                <div className="sdr-warehouse-case-resolution">
+                  <ol className="sdr-warehouse-case-timeline">
+                    {conversion.caseStudy.plan.map((step, index) => (
+                      <li key={step} style={{ "--case-step-index": index }}>
+                        <span>0{index + 1}</span>
+                        <div>
+                          <h3>{step}</h3>
+                          <p>{conversion.caseStudy.evidence[index]}</p>
+                        </div>
+                      </li>
+                    ))}
+                    <span className="sdr-warehouse-case-particle" aria-hidden="true" />
+                  </ol>
+                  <blockquote className="sdr-warehouse-case-outcome">
+                    {conversion.caseStudy.outcome}
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          ) : service.slug === "product-sourcing" ? (
+            <div className="container">
+              <ProductSourcingCaseStory caseStudy={conversion.caseStudy} />
+            </div>
+          ) : service.slug === "automatic-order-fulfillment" ? (
+            <div id="automation-case-route" className="container sdr-automation-case">
+              <aside className="sdr-automation-case-story">
+                <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
+                <h2>{conversion.caseStudy.title}</h2>
+                <p>{conversion.caseStudy.profile}</p>
+                <div className="sdr-automation-route-map" aria-label="Store orders follow a clean route to the warehouse while exceptions branch for review">
+                  <span className="sdr-automation-route-node sdr-route-store"><FiGlobe aria-hidden="true" /><small>STORE</small></span>
+                  <span className="sdr-automation-route-node sdr-route-record"><FiClipboard aria-hidden="true" /><small>ORDER DATA</small></span>
+                  <span className="sdr-automation-route-node sdr-route-hold"><FiInfo aria-hidden="true" /><small>REVIEW</small></span>
+                  <span className="sdr-automation-route-node sdr-route-warehouse"><FiPackage aria-hidden="true" /><small>WAREHOUSE</small></span>
+                  <span className="sdr-automation-route-line sdr-route-line-main" aria-hidden="true" />
+                  <span className="sdr-automation-route-line sdr-route-line-branch" aria-hidden="true" />
+                </div>
+              </aside>
+              <div className="sdr-automation-case-content">
+                <header>
+                  <strong>THE OPERATING CHALLENGE</strong>
+                  <p>{conversion.caseStudy.challenge}</p>
+                </header>
+                <ol className="sdr-automation-case-steps">
+                  {conversion.caseStudy.plan.map((step, index) => {
+                    const Icon = [FiClipboard, FiLayers, FiTruck][index];
+                    return (
+                      <li key={step}>
+                        <span className="sdr-automation-case-icon"><Icon aria-hidden="true" /></span>
+                        <small>0{index + 1}</small>
+                        <h3>{step}</h3>
+                        <p>{conversion.caseStudy.evidence[index]}</p>
+                      </li>
+                    );
+                  })}
+                </ol>
+                <blockquote>
+                  <strong>THE EXCEPTION-SAFE ROUTE</strong>
+                  <p>{conversion.caseStudy.outcome}</p>
+                  <FiArrowRight aria-hidden="true" />
+                </blockquote>
+              </div>
+            </div>
+          ) : (
           <div className="container sdr-case-grid">
             <div>
               <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
@@ -685,6 +1082,7 @@ export default function ServiceDetailRedesign({ service }) {
               <blockquote>{conversion.caseStudy.outcome}</blockquote>
             </div>
           </div>
+          )}
         </section>
       ) : null}
 
@@ -694,12 +1092,14 @@ export default function ServiceDetailRedesign({ service }) {
             <span className="ff-kicker">
               {["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label", "automatic-order-fulfillment"].includes(service.slug)
                 ? "FREQUENTLY ASKED QUESTIONS"
+                : service.slug === "product-sourcing"
+                ? "PRODUCT SOURCING"
                 : "SERVICE FAQ"}
             </span>
             <h2
               className={serviceTitleClass(
                 service.slug === "product-sourcing"
-                  ? "Sourcing questions"
+                  ? "SERVICE FAQ"
                   :
                 service.slug === "automatic-order-fulfillment"
                   ? "Automation questions"
@@ -710,7 +1110,7 @@ export default function ServiceDetailRedesign({ service }) {
               )}
             >
               {service.slug === "product-sourcing" ? (
-                "Sourcing questions"
+                "SERVICE FAQ"
               ) : service.slug === "automatic-order-fulfillment" ? (
                 "Automation questions"
               ) : ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug) ? (
