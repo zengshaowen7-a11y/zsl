@@ -1,4 +1,5 @@
-/* Home v3.3: module-internal hierarchy and conversion polish. */
+/* Hallmark · macrostructure: Conversion Journey · tone: modern-minimal · anchor hue: green */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 */
 .fh-home {
   --home-brand: #167449;
   --home-canvas: #2fae68;
@@ -10,6 +11,12 @@
   --home-muted: #67746e;
   --home-line: #dde7e1;
   --home-warning: #c98a2b;
+  --home-bg-brand: oklch(95.2% 0.047 155);
+  --home-bg-brand-soft: oklch(97.4% 0.023 155);
+  --home-bg-paper: oklch(99.4% 0.004 155);
+  --home-section-rule: oklch(88.6% 0.018 155);
+  --home-form-shadow: oklch(32% 0.035 155 / 0.09);
+  --home-placeholder: oklch(54% 0.015 155 / 0.72);
 }
 
 /* Hero: stronger editorial hierarchy without adding floating UI. */
@@ -2067,6 +2074,29 @@
   }
 }
 
+/* Home hero title specification. */
+.fh-home .fh-hero-redesign .fh-hero-title,
+.fh-home .fh-hero-redesign .fh-hero-title span {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.fh-home .fh-hero-redesign .fh-hero-title {
+  max-width: 100% !important;
+  font-size: clamp(28px, 1.8vw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-hero-redesign .fh-hero-title span {
+  white-space: normal !important;
+}
+
+@media (min-width: 768px) {
+  .fh-home .fh-hero-redesign .fh-hero-title span {
+    white-space: nowrap !important;
+  }
+}
+
 /* Home v4.1: consistent vertical rhythm between page modules. */
 @media (min-width: 1200px) {
   .fh-home .fh-platform-data-strip {
@@ -2400,6 +2430,47 @@
 
   .fh-home .fh-platform-logo svg {
     font-size: 2rem !important;
+  }
+}
+
+/* Keep the three hero trust points on a consistent two-line rhythm. */
+.fh-home .fh-hero-redesign .ff-proof-list > span {
+  align-items: center !important;
+  white-space: normal !important;
+  text-align: center;
+}
+
+.fh-home .fh-hero-redesign .ff-proof-copy {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 720;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  white-space: pre !important;
+}
+
+@media (min-width: 1200px) {
+  .fh-home .fh-hero-redesign .ff-proof-list > span {
+    box-sizing: border-box;
+    gap: 10px !important;
+    overflow: hidden;
+    padding-inline: 12px !important;
+  }
+
+  .fh-home .fh-hero-redesign .ff-proof-list > span:first-child {
+    padding-left: 0 !important;
+  }
+
+  .fh-home .fh-hero-redesign .ff-proof-list > span:last-child {
+    padding-right: 0 !important;
+  }
+
+  .fh-home .fh-hero-redesign .ff-proof-list > span > svg {
+    width: 17px !important;
+    height: 17px !important;
   }
 }
 
@@ -3676,6 +3747,149 @@
   .fh-home .fh-qc-report dl > div {
     min-height: 64px !important;
     padding: 16px !important;
+  }
+}
+
+/* Home surface rhythm: alternate full-width sections to reduce green fatigue. */
+.fh-home .fh-hero-redesign,
+.fh-home .fh-platform-data-strip {
+  background: var(--home-bg-brand) !important;
+}
+
+.fh-home .fh-core-advantages,
+.fh-home .fh-core-services,
+.fh-home .fh-qc-proof,
+.fh-home .fh-home-faq {
+  background: var(--home-bg-paper) !important;
+}
+
+.fh-home .fh-process-section {
+  background: var(--home-bg-brand-soft) !important;
+}
+
+.fh-home .fh-fulfillment-compare {
+  background: var(--home-bg-brand) !important;
+}
+
+.fh-home .fh-home-testimonials {
+  background: var(--home-bg-brand-soft) !important;
+}
+
+.fh-home .fh-home-quote {
+  background: var(--home-bg-brand) !important;
+}
+
+.fh-home :is(
+  .fh-core-advantages,
+  .fh-process-section,
+  .fh-core-services,
+  .fh-fulfillment-compare,
+  .fh-qc-proof,
+  .fh-home-testimonials,
+  .fh-home-faq,
+  .fh-home-quote
+) {
+  border-top: 1px solid var(--home-section-rule) !important;
+}
+
+/* Quote form density: keep the content intact while restoring visual balance. */
+.fh-home .fh-home-quote-grid {
+  align-items: center !important;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr) !important;
+  gap: clamp(48px, 5vw, 76px) !important;
+}
+
+.fh-home .fh-home-quote-form {
+  padding: 30px !important;
+  border-color: var(--home-section-rule) !important;
+  border-radius: 12px !important;
+  background: var(--home-bg-paper) !important;
+  box-shadow: 0 16px 38px var(--home-form-shadow) !important;
+}
+
+.fh-home .fh-home-quote-fields {
+  gap: 16px !important;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]), select),
+.fh-home .fh-country-code-trigger {
+  min-height: 48px !important;
+}
+
+.fh-home .fh-home-quote-form textarea {
+  min-height: 136px !important;
+  padding: 14px 16px !important;
+}
+
+.fh-home .fh-home-quote-form :is(textarea, input)::placeholder {
+  color: var(--home-placeholder) !important;
+  font-size: 14px;
+  font-weight: 540;
+  line-height: 1.5;
+}
+
+.fh-home .fh-phone-split {
+  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr) !important;
+  gap: 12px !important;
+}
+
+.fh-home .fh-home-quote-form > button {
+  min-height: 52px !important;
+  margin-top: 18px !important;
+}
+
+.fh-home .fh-home-quote-promises {
+  gap: 18px !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-home-quote-grid,
+  .fh-home .fh-phone-split {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .fh-home .fh-home-quote-form {
+    padding: 22px !important;
+  }
+}
+
+/* Seller feedback: equal text-only cards without synthetic profile imagery. */
+@media (min-width: 768px) {
+  .fh-home .fh-home-testimonials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: none !important;
+  }
+}
+
+.fh-home .fh-home-testimonial,
+.fh-home .fh-home-testimonial.is-featured {
+  grid-row: auto !important;
+  min-height: 100% !important;
+  padding: 30px 28px 26px !important;
+}
+
+.fh-home .fh-home-testimonial blockquote,
+.fh-home .fh-home-testimonial.is-featured blockquote {
+  max-width: none;
+  margin-bottom: 30px;
+  font-size: 15px !important;
+  line-height: 1.68 !important;
+}
+
+.fh-home .fh-home-testimonial footer,
+.fh-home .fh-home-testimonial.is-featured footer {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 16px !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-home-testimonial footer,
+  .fh-home .fh-home-testimonial.is-featured footer {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .fh-home .fh-home-testimonial footer small {
+    grid-column: auto;
   }
 }
 
@@ -5032,5 +5246,85 @@
 
   .fh-home .fh-qc-report {
     max-width: none !important;
+  }
+}
+
+/* Final home surface rhythm and compact quote form overrides. */
+.fh-home .fh-hero-redesign,
+.fh-home .fh-platform-data-strip,
+.fh-home .fh-fulfillment-compare,
+.fh-home .fh-home-quote {
+  background: var(--home-bg-brand) !important;
+}
+
+.fh-home .fh-process-section,
+.fh-home .fh-home-testimonials {
+  background: var(--home-bg-brand-soft) !important;
+}
+
+.fh-home .fh-core-advantages,
+.fh-home .fh-core-services,
+.fh-home .fh-qc-proof,
+.fh-home .fh-home-faq {
+  background: var(--home-bg-paper) !important;
+}
+
+.fh-home .fh-home-quote-grid {
+  align-items: center !important;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr) !important;
+  gap: clamp(48px, 5vw, 76px) !important;
+}
+
+.fh-home .fh-home-quote-form {
+  padding: 30px !important;
+  border-color: var(--home-section-rule) !important;
+  border-radius: 12px !important;
+  background: var(--home-bg-paper) !important;
+  box-shadow: 0 16px 38px var(--home-form-shadow) !important;
+}
+
+.fh-home .fh-home-quote-fields {
+  gap: 16px !important;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]), select),
+.fh-home .fh-country-code-trigger {
+  min-height: 48px !important;
+}
+
+.fh-home .fh-home-quote-form textarea {
+  min-height: 136px !important;
+  padding: 14px 16px !important;
+}
+
+.fh-home .fh-home-quote-form :is(textarea, input)::placeholder {
+  color: var(--home-placeholder) !important;
+  font-size: 14px;
+  font-weight: 540;
+  line-height: 1.5;
+}
+
+.fh-home .fh-phone-split {
+  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr) !important;
+  gap: 12px !important;
+}
+
+.fh-home .fh-home-quote-form > button {
+  min-height: 52px !important;
+  margin-top: 18px !important;
+}
+
+.fh-home .fh-home-quote-promises {
+  gap: 18px !important;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-home-quote-grid,
+  .fh-home .fh-phone-split {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .fh-home .fh-home-quote-form {
+    padding: 22px !important;
   }
 }

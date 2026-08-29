@@ -101,7 +101,7 @@ const proofContent = {
   },
   "automatic-order-fulfillment": {
     eyebrow: "ORDER CONTROL LOG",
-    title: "See which orders can move.",
+    title: "Orders ready to move.",
     image: "/images/generated/automatic-fulfillment-hero.webp",
     columns: ["Signal", "Status", "Action", "Output"],
     rows: [
@@ -422,6 +422,7 @@ export default function ServiceDetailRedesign({ service }) {
         </div>
       </section>
 
+      {service.slug !== "automatic-order-fulfillment" ? (
       <section className="sdr-fit">
         <div className="container">
           {service.slug === "dropshipping-supplier" ? (
@@ -543,6 +544,7 @@ export default function ServiceDetailRedesign({ service }) {
           </div>
         </div>
       </section>
+      ) : null}
 
       <section id={service.slug === "automatic-order-fulfillment" ? "automation-capability-route" : undefined} className={`sdr-scope${service.slug === "china-fulfillment-center" ? " sdr-warehouse-chain" : ""}`}>
         <div className="container">
@@ -568,29 +570,25 @@ export default function ServiceDetailRedesign({ service }) {
           ) : null}
           {service.slug === "automatic-order-fulfillment" ? (
             <div className="sdr-order-route" aria-label="Order route capabilities">
-              <svg className="sdr-order-route-pipes" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true">
-                <path className="sdr-route-pipe-main" d="M0 155 H920 C980 155 980 155 1040 155 H1200" />
-                <path className="sdr-route-pipe-return" d="M0 400 H315 C360 400 365 365 365 330 V155" />
-                <path className="sdr-route-pipe-feedback" d="M0 470 H440 C495 470 510 430 510 380 V155" />
-                <path className="sdr-route-pipe-exception" d="M650 155 C700 155 710 188 710 230 V560" />
+              <svg className="sdr-order-route-pipes" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+                <path className="sdr-route-pipe-main" d="M70 122 H1130" />
+                <path className="sdr-route-pipe-exception" d="M700 122 V302 H785" />
+                <path className="sdr-route-pipe-return" d="M1080 122 V430 H160 V122" />
               </svg>
-              <span className="sdr-order-route-dots sdr-order-route-dots-left" aria-hidden="true" />
-              <span className="sdr-order-route-dots sdr-order-route-dots-right" aria-hidden="true" />
               {service.capabilities.map(([title, text], index) => {
                 const Icon = capabilityIcons[index];
-                return <article key={title} className={`sdr-order-route-node sdr-order-route-node-${index + 1}`}>
+                const step = ({ 0: "01", 1: "02", 2: "03", 4: "04" })[index];
+                const routeLabel = index === 3 ? "Manual review" : index === 5 ? "Return loop" : `Step ${step}`;
+                return <article key={title} data-route-role={index === 3 ? "exception" : index === 5 ? "return" : "primary"} className={`sdr-order-route-node sdr-order-route-node-${index + 1}`}>
+                  <span className="sdr-order-route-label">{routeLabel}</span>
                   <span className="sdr-order-route-icon"><Icon aria-hidden="true" /></span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                  <span className="sdr-order-route-visual" aria-hidden="true">
-                    <Icon /><Icon /><Icon />
-                  </span>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </div>
+                  {step ? <strong className="sdr-order-route-step" aria-hidden="true">{step}</strong> : null}
                 </article>;
               })}
-              <span className="sdr-order-route-particle" aria-hidden="true" />
-              <span className="sdr-order-route-particle sdr-order-route-particle-two" aria-hidden="true" />
-              <span className="sdr-order-route-status sdr-route-status-secure" aria-hidden="true"><FiShield /></span>
-              <span className="sdr-order-route-status sdr-route-status-alert" aria-hidden="true"><FiInfo /></span>
             </div>
           ) : service.slug === "china-fulfillment-center" ? (
             <div className="sdr-warehouse-chain-flow" aria-label="Warehouse zones A to F">
@@ -640,7 +638,22 @@ export default function ServiceDetailRedesign({ service }) {
         {service.slug === "automatic-order-fulfillment" ? (
           <div className="container sdr-order-control">
             <figure className="sdr-order-control-visual">
-              <Image src={proof.image} alt={proof.title} fill sizes="(max-width: 900px) 100vw, 45vw" unoptimized={proof.image.includes("/generated/")} />
+              <div className="sdr-order-control-photo sdr-order-control-photo-primary">
+                <Image
+                  src="/images/generated/jw-dispatch-scan-v3.png"
+                  alt="Warehouse operator scanning a parcel before dispatch"
+                  fill
+                  sizes="(max-width: 900px) 88vw, 34vw"
+                />
+              </div>
+              <div className="sdr-order-control-photo sdr-order-control-photo-secondary">
+                <Image
+                  src="/images/generated/jw-branded-packing-v3.png"
+                  alt="Warehouse team preparing a packed order"
+                  fill
+                  sizes="(max-width: 560px) 66vw, (max-width: 900px) 46vw, 22vw"
+                />
+              </div>
               <figcaption><span>{proof.eyebrow}</span><strong>Order control log</strong></figcaption>
             </figure>
             <div className="sdr-order-control-panel">
@@ -729,11 +742,8 @@ export default function ServiceDetailRedesign({ service }) {
           {service.slug === "automatic-order-fulfillment" ? (
             <div id="automation-order-flow" className="sdr-order-flow" aria-label="Order data flow">
               <header className="sdr-order-flow-head">
-                <div>
+                <div className="sdr-order-flow-title">
                   <span className="ff-kicker">{service.processEyebrow}</span>
-                  <p>{service.processLead}</p>
-                </div>
-                <div>
                   <h2>{service.processTitle}</h2>
                   <div className="sdr-order-flow-states" aria-label="Order states">
                     {[
@@ -741,13 +751,14 @@ export default function ServiceDetailRedesign({ service }) {
                       ["held", "Held"],
                       ["synced", "Synced"],
                     ].map(([state, label]) => (
-                      <button key={state} type="button" className={`sdr-order-state sdr-order-state-${state}`}>
+                      <span key={state} className={`sdr-order-state sdr-order-state-${state}`}>
                         <span aria-hidden="true" />
                         {label}
-                      </button>
+                      </span>
                     ))}
                   </div>
                 </div>
+                <p>{service.processLead}</p>
               </header>
               <div className="sdr-order-flow-track">
                 {[0, 1, 2, 3].map((index) => {

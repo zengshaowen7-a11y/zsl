@@ -51,8 +51,8 @@ body main[class][class][class] section h2 {
 }
 
 body main.fh-home[class][class] .fh-hero-title {
-  font-size: clamp(18px, 6.4cqw, 46px) !important;
-  line-height: 1.08 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
 }
 
 body main.fh-home[class][class] .fh-hero-title > span {
@@ -63,6 +63,78 @@ body main.fh-home[class][class] .fh-hero-title > span {
 body main.fh-home[class][class] section h2 {
   font-size: clamp(39px, 2.45vw, 46px) !important;
   line-height: 1.08 !important;
+}
+
+.fh-home .fh-core-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-core-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-process-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-process-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-services-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-services-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-fulfillment-compare-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-fulfillment-compare-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-qc-proof-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-qc-proof-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-home-testimonials-heading {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-home-testimonials-heading h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-home-quote-copy {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-home-quote-title {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.fh-home .fh-home-faq-intro {
+  container-type: inline-size;
+}
+
+body main.fh-home[class][class] .fh-home-faq-intro h2 {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

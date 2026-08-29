@@ -34,7 +34,6 @@ import {
   SiWix,
   SiWoocommerce,
 } from "react-icons/si";
-import { testimonials as sellerTestimonials } from "../content/testimonials";
 
 const platformLogos = [
   { name: "Shopify", Icon: SiShopify, color: "#75a943" },
@@ -52,31 +51,31 @@ const workflowSteps = [
   {
     number: "01",
     title: "Share your product",
-    text: "Send the product link, target market and your key requirements.",
+    text: "Send us product links, target-market info and your key requirements.",
     Icon: FiClipboard,
   },
   {
     number: "02",
     title: "Source and quote",
-    text: "We compare suitable suppliers, pricing, MOQ and lead times.",
+    text: "We source suppliers, then share pricing, MOQ and production lead-times.",
     Icon: FiSearch,
   },
   {
     number: "03",
     title: "Sample and inspect",
-    text: "Approve a sample and confirm the agreed quality checkpoints.",
+    text: "You approve samples, and we lock-in clear quality-control standards.",
     Icon: FiShield,
   },
   {
     number: "04",
     title: "Store and fulfill",
-    text: "Inventory is received, stored, picked and packed by one team.",
+    text: "Our warehouse team receives, stores, picks and packs your inventory.",
     Icon: FiPackage,
   },
   {
     number: "05",
     title: "Ship and sync tracking",
-    text: "Orders ship worldwide and tracking is returned to your store.",
+    text: "Orders ship globally, tracking numbers auto-synced back to your store.",
     Icon: FiGlobe,
   },
 ];
@@ -127,11 +126,11 @@ const homeServices = [
 ];
 
 const fulfillmentComparison = [
-  ["Multiple supplier conversations", "One dedicated contact"],
-  ["Product shipped without clear checks", "QC before dispatch"],
-  ["Generic packaging", "Branding and packaging options"],
-  ["Separate warehouse and shipping teams", "One operating workflow"],
-  ["Unclear tracking handoff", "Structured shipment updates"],
+  ["Multiple separate supplier conversations", "One single dedicated point-of-contact for everything"],
+  ["No guaranteed pre-shipment quality checks", "Full quality-control inspection before every dispatch"],
+  ["Limited, generic packaging only", "Custom branding & private-label packaging solutions"],
+  ["Warehouse and shipping handled by different teams", "End-to-end workflow managed entirely by our in-house team"],
+  ["Confusing tracking hand-offs & delayed updates", "Clear, structured shipment and tracking updates"],
 ];
 
 const qcCapabilities = [
@@ -143,22 +142,36 @@ const qcCapabilities = [
   "Final parcel check",
 ];
 
-const homeTestimonials = sellerTestimonials.slice(0, 3).map((review, index) => ({
-  name: review.name,
-  country: review.country,
-  flagSrc: review.flagSrc,
-  avatar: review.avatar,
-  tag: review.service,
-  quote: review.quote,
-  featured: index === 0,
-}));
+const homeTestimonials = [
+  {
+    name: "Oliver",
+    country: "UK",
+    flagSrc: "https://flagcdn.com/gb.svg",
+    tag: "ORDER HANDLING",
+    quote: "Yuri and the whole JW team are incredibly organised, reliable professionals. When you manage hundreds of orders every month, tracking and consistency are everything. Their clear workflow system keeps every shipment easy-to-follow, cuts down miscommunication and saves me hours of manual work each week. I no longer worry about messy order-handling from China.",
+  },
+  {
+    name: "Mia",
+    country: "CA",
+    flagSrc: "https://flagcdn.com/ca.svg",
+    tag: "DAILY SUPPORT",
+    quote: "JW’s support team has been reliable and responsive from day-one. They reply quickly, take time to clarify questions and communicate smoothly in English while we set up our fulfillment workflow.",
+  },
+  {
+    name: "Sophie",
+    country: "FR",
+    flagSrc: "https://flagcdn.com/fr.svg",
+    tag: "PRODUCT SOURCING",
+    quote: "JW is an excellent fulfillment partner. Their sourcing team listens closely to our requirements, offers practical solutions and keeps us updated throughout the whole process.",
+  },
+];
 
 const homeFaqs = [
-  ["How do I get started?", "Send us a product or store link, your target market and expected daily order volume. We will review the request and recommend a practical next step."],
-  ["Is there a minimum order quantity?", "It depends on the product, supplier and customization required. Standard fulfillment can often start small, while custom products and packaging may have supplier MOQs."],
-  ["Which eCommerce platforms do you support?", "We support workflows for Shopify, WooCommerce, TikTok Shop, Amazon, Etsy, eBay and custom stores through direct or structured order handoffs."],
-  ["Can you inspect products before shipping?", "Yes. The agreed QC scope can cover SKU, variant, quantity, appearance, size, weight, packaging, barcode and final parcel checks."],
-  ["How is fulfillment pricing calculated?", "Pricing is based on product handling, storage, packaging, order volume, destination markets and shipping method. We quote after reviewing your workflow."],
+  ["What fulfillment services do you offer?", "We provide end-to-end e-commerce fulfillment services, including product sourcing from verified Chinese manufacturers, comprehensive quality control, worldwide shipping to 150+ countries, print-on-demand fulfillment, private label, and US warehouse distribution through our Los Angeles facilities. From sourcing to delivery, we handle your complete supply chain."],
+  ["Do I need a minimum order volume to work with JW DROPSHIPPING?", "No. Unlike traditional fulfillment companies that require 100+ orders/day, JW DROPSHIPPING works with sellers at every stage - from your first 10 orders to 1,000+ per day. We process up to 30,000 orders daily across our Hangzhou and Dongguan warehouses, so we scale with you instead of locking you out at the start."],
+  ["What countries do you ship to?", "We provide international shipping to over 150 countries across six continents, including the United States, Canada, the United Kingdom, Australia, Germany, France, Spain, and markets throughout Europe, Asia, and South America. We handle customs documentation and end-to-end tracking for all international destinations through our trusted logistics partners."],
+  ["Can you help with private label and branded packaging?", "Yes. We offer comprehensive private label services, including custom packaging design, branded inserts, product labeling, and white-label manufacturing. Your products ship exclusively under your brand identity, allowing you to build direct customer relationships. We manage the entire private label process from concept through production and fulfillment."],
+  ["What e-commerce platforms do you integrate with?", "We integrate with all major e-commerce platforms, including Shopify, WooCommerce, Amazon, and other platforms through API integration. Orders sync automatically from your store to our fulfillment system for seamless processing. For custom platforms or unique requirements, our API enables direct integration with your existing infrastructure."],
 ];
 
 const countryCodeOptions = [
@@ -199,7 +212,7 @@ const THANK_YOU_PATH = "/thank-you";
 const coreAdvantages = [
   {
     title: "Source with clarity",
-    text: "Compare suppliers, samples, MOQ, pricing and production time.",
+    text: "Compare suppliers, samples, MOQs & lead times",
     Icon: FiSearch,
     images: [
       ["/images/services/product-sourcing.webp", "Product sourcing specialist comparing supplier options"],
@@ -209,7 +222,7 @@ const coreAdvantages = [
   },
   {
     title: "Check before shipping",
-    text: "Review product, variant, quantity and packaging before dispatch.",
+    text: "Full‑item quality inspection before dispatch",
     Icon: FiShield,
     images: [
       ["/images/services/quality-control-inspection.webp", "Quality inspector checking products before shipping"],
@@ -219,7 +232,7 @@ const coreAdvantages = [
   },
   {
     title: "Fulfill with one team",
-    text: "Store, pick, pack, ship and return tracking through one workflow.",
+    text: "Storage, packing, shipping & tracking under one workflow",
     Icon: FiPackage,
     images: [
       ["/images/services/3pl-fulfillment.webp", "China warehouse fulfillment operation"],
@@ -230,10 +243,10 @@ const coreAdvantages = [
 ];
 
 const platformStats = [
-  { value: "6+", number: 6, suffix: "+", label: "Years Experience", labelZh: "年行业经验" },
-  { value: "30+", number: 30, suffix: "+", label: "Markets", labelZh: "服务市场" },
-  { value: "3", number: 3, suffix: "", label: "QC Stages", labelZh: "道质检流程" },
-  { value: "One-on-One", label: "Expert Support", labelZh: "专属支持" },
+  { value: "7", number: 7, suffix: "", label: "Years Experience", labelZh: "年行业经验" },
+  { value: "30%", number: 30, suffix: "%", label: "Reduction on Cost", labelZh: "成本降低" },
+  { value: "100+", number: 100, suffix: "+", label: "Shipping Line", labelZh: "运输线路" },
+  { value: "1500+", number: 1500, suffix: "+", label: "DTC brand’s Choice", labelZh: "DTC品牌之选" },
 ];
 
 function AnimatedStat({ value, number, suffix = "" }) {
@@ -433,17 +446,15 @@ export default function FulfillmentHome({ lang = "en" }) {
                 </>
               ) : (
                 <>
-                  <span>Your China Dropshipping Agent</span>
-                  <span>
-                    for <em>Sourcing, QC & Fulfillment</em>
-                  </span>
+                  <span>China‑Based Sourcing, QC &amp; Fulfillment</span>
+                  <span>That Cut Your Logistics Costs</span>
                 </>
               )}
             </h1>
             <p>
               {isZh
                 ? "通过一个中国本地团队完成产品采购、质量检查、品牌包装和全球发货，让订单履约更清晰、更稳定。"
-                : "Source products, inspect quality, and ship directly to your customers with a single integrated workflow."}
+                : "We source products, inspect every order and ship directly to your buyers. No inventory, no warehouse hassle."}
             </p>
             <div className="ff-actions">
               <a className="ff-btn ff-btn-primary" href="#quote">{isZh ? c.primary : "Get a Free Quote"}<FiArrowRight /></a>
@@ -452,8 +463,17 @@ export default function FulfillmentHome({ lang = "en" }) {
             <div className="ff-proof-list" aria-label={isZh ? "核心服务承诺" : "Core service commitments"}>
               {(isZh
                 ? ["发货前质量检查", "专属客户经理", "全球可追踪配送"]
-                : ["Quality checks before dispatch", "Dedicated account support", "Tracked worldwide shipping"]
-              ).map((item) => <span key={item}><FiCheck />{item}</span>)}
+                : [
+                    "24/7 English-speaking\nSupport",
+                    "Multi-warehouse, Faster &\nLower-cost Shipping",
+                    "QC-guaranteed Sourcing +\nCustom Branding",
+                  ]
+              ).map((item) => (
+                <span key={item}>
+                  <FiCheck />
+                  <strong className="ff-proof-copy">{item}</strong>
+                </span>
+              ))}
             </div>
           </div>
             <div className="fh-hero-player-shell" aria-label="Warehouse packing and fulfillment workflow preview">
@@ -529,8 +549,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container">
           <div className="fh-core-heading">
             <span className="ff-kicker">Why choose JW Dropshipping?</span>
-            <h2>Every Order Is Supported by a Integrated China Team</h2>
-            <p>Source, inspect, pack and fulfill through one coordinated China-based team.</p>
+            <h2>End‑to‑End Control: No Third‑Party Middlemen</h2>
+            <p>Source, inspect, pack and ship, fully managed by our own China warehouse team</p>
           </div>
           <div className="fh-core-grid">
             {coreAdvantages.map(({ title, text, Icon, images }, galleryIndex) => (
@@ -578,8 +598,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container">
           <div className="fh-section-heading fh-process-heading">
             <span className="ff-kicker">HOW IT WORKS</span>
-            <h2>From product link to tracked delivery</h2>
-            <p>Five clear steps, managed by one China-based team.</p>
+            <h2>From Product Link to Tracked Final Delivery</h2>
+            <p>5 Simple Steps, Handled Fully By Our In-House China Team</p>
           </div>
           <div className="fh-fixed-process-grid">
             {workflowSteps.map(({ number, title, text, Icon }) => (
@@ -624,16 +644,16 @@ export default function FulfillmentHome({ lang = "en" }) {
       <section className="fh-fulfillment-compare">
         <div className="container fh-fulfillment-compare-heading">
           <span className="ff-kicker">THE JW DIFFERENCE</span>
-          <h2>A clearer way to manage fulfillment from China</h2>
-          <p>See how one dedicated workflow replaces fragmented supplier, inspection, warehouse and shipping handoffs.</p>
+          <h2>A simpler, unified way to manage fulfillment from China</h2>
+          <p>Skip fragmented hand-offs between separate suppliers, inspectors, warehouses and shipping teams. Work with one single, coordinated team.</p>
         </div>
         <div className="container fh-difference-layout">
           <div className="fh-fulfillment-compare-columns">
             <article className="fh-fulfillment-compare-side fh-fulfillment-compare-typical">
-              <div className="fh-fulfillment-compare-inner"><span className="fh-compare-label">Fragmented handoffs</span><h3>Typical sourcing agent</h3><ul>{fulfillmentComparison.map(([typical]) => <li key={typical}><FiX aria-hidden="true" /><span>{typical}</span></li>)}</ul></div>
+              <div className="fh-fulfillment-compare-inner"><span className="fh-compare-label">Fragmented Handoffs</span><h3>Typical Sourcing Agent</h3><ul>{fulfillmentComparison.map(([typical]) => <li key={typical}><FiX aria-hidden="true" /><span>{typical}</span></li>)}</ul></div>
             </article>
             <article className="fh-fulfillment-compare-side fh-fulfillment-compare-jw">
-              <div className="fh-fulfillment-compare-inner"><span className="fh-compare-label">One managed workflow</span><h3>JW Dropshipping</h3><ul>{fulfillmentComparison.map(([, jw]) => <li key={jw}><FiCheck aria-hidden="true" /><span>{jw}</span></li>)}</ul></div>
+              <div className="fh-fulfillment-compare-inner"><span className="fh-compare-label">One Managed Workflow</span><h3>JW Dropshipping</h3><ul>{fulfillmentComparison.map(([, jw]) => <li key={jw}><FiCheck aria-hidden="true" /><span>{jw}</span></li>)}</ul></div>
             </article>
           </div>
           <div className="fh-difference-media" aria-label="Quality control inspection photos">
@@ -684,20 +704,17 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container">
           <div className="fh-home-testimonials-heading">
             <span className="ff-kicker">SELLER FEEDBACK</span>
-            <h2 id="home-testimonials-title">What sellers say about working with JW</h2>
+            <h2 id="home-testimonials-title">What Sellers Say About Working With JW</h2>
             <p>Real feedback from sellers using JW for sourcing, fulfillment and branding support.</p>
           </div>
           <div className="fh-home-testimonials-grid">
-            {homeTestimonials.map(({ name, country, flagSrc, avatar, tag, quote, featured }) => (
-              <article className={`fh-home-testimonial${featured ? " is-featured" : ""}`} key={`${name}-${tag}`}>
+            {homeTestimonials.map(({ name, country, flagSrc, tag, quote }) => (
+              <article className="fh-home-testimonial" key={`${name}-${tag}`}>
                 <div className="fh-home-testimonial-stars" aria-label="Five star review">
                   {[0, 1, 2, 3, 4].map((star) => <FiStar key={star} aria-hidden="true" />)}
                 </div>
                 <blockquote>{quote}</blockquote>
                 <footer>
-                  <span className="fh-home-testimonial-avatar" aria-hidden="true">
-                    <Image src={avatar} alt="" width={56} height={56} />
-                  </span>
                   <div><strong>{name}</strong><span><img src={flagSrc} alt="" aria-hidden="true" />{country}</span></div>
                   <small>{tag}</small>
                 </footer>
@@ -735,12 +752,12 @@ export default function FulfillmentHome({ lang = "en" }) {
         <div className="container fh-home-quote-grid">
           <div className="fh-home-quote-copy">
             <span className="ff-kicker ff-kicker-light">GET A FREE QUOTE</span>
-            <h2 className="fh-home-quote-title">Start with your business details</h2>
-            <p>Tell us what you sell, how we can reach you and what kind of support you need. Our team will recommend the next step.</p>
+            <h2 className="fh-home-quote-title">Start With Your Business Details</h2>
+            <p>Tell us about your products, your store and your fulfillment goals. Our team will review your requirements and send you a clear, tailored next step plan.</p>
             <ul className="fh-home-quote-promises" aria-label="What happens next">
-              <li><FiCheck aria-hidden="true" /><span><strong>Share the basics</strong>One product or store link is enough to begin.</span></li>
-              <li><FiUsers aria-hidden="true" /><span><strong>Reviewed by a person</strong>Your request goes to a China-based fulfillment team.</span></li>
-              <li><FiArrowRight aria-hidden="true" /><span><strong>Get a clear next step</strong>We will respond with the information needed to proceed.</span></li>
+              <li><FiCheck aria-hidden="true" /><span><strong>Share the basics</strong>One product link or store URL is enough to get started.</span></li>
+              <li><FiUsers aria-hidden="true" /><span><strong>Reviewed by our in-house team</strong>Your enquiry will be handled directly by our China-based fulfillment specialists.</span></li>
+              <li><FiArrowRight aria-hidden="true" /><span><strong>Receive clear next steps</strong>We will reply with actionable information and pricing guidance to move your project forward.</span></li>
             </ul>
           </div>
           <form className="ff-form fh-home-quote-form" name="fulfillment-quote" method="POST" action={FORMSPREE_ENDPOINT} noValidate onSubmit={handleQuoteSubmit} onInvalid={(event) => event.preventDefault()}>
@@ -790,7 +807,7 @@ export default function FulfillmentHome({ lang = "en" }) {
                   {quoteErrors.phone ? <small className="fh-form-error fh-phone-error">{quoteErrors.phone}</small> : null}
                 </div>
               </div>
-              <label className="fh-home-quote-wide">Tell us about your business!<textarea name="business-details" placeholder="Tell us what you sell, your current fulfillment situation, target markets, and what you need help with." rows={5} />{quoteErrors.businessDetails ? <small className="fh-form-error">{quoteErrors.businessDetails}</small> : null}</label>
+              <label className="fh-home-quote-wide">Tell us about your business!<textarea name="business-details" placeholder="Briefly describe your products, current fulfillment setup, target markets and the services you are looking for." rows={5} />{quoteErrors.businessDetails ? <small className="fh-form-error">{quoteErrors.businessDetails}</small> : null}</label>
               <label className="fh-home-quote-wide">Daily Order Volume<select name="daily-order-volume" defaultValue=""><option value="" disabled>Select a range</option><option>0-10 orders/day</option><option>11-50 orders/day</option><option>51-200 orders/day</option><option>201-500 orders/day</option><option>500+ orders/day</option></select>{quoteErrors.dailyOrderVolume ? <small className="fh-form-error">{quoteErrors.dailyOrderVolume}</small> : null}</label>
             </div>
             <button className="ff-btn ff-btn-primary" type="submit" disabled={isSubmitting} aria-live="polite"><span>{isSubmitting ? "Sending..." : "Get a Free Quote"}</span><FiArrowRight /></button>

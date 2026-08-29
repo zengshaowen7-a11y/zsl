@@ -18237,7 +18237,7 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero {
   min-height: 0 !important;
-  padding: 92px 0 58px !important;
+  padding: 58px 0 46px !important;
   background: var(--auto-paper) !important;
 }
 
@@ -18245,8 +18245,8 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
   position: relative !important;
   display: grid !important;
   min-height: 0 !important;
-  grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr) !important;
-  gap: clamp(28px, 5vw, 74px) !important;
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr) !important;
+  gap: clamp(28px, 3vw, 44px) !important;
   align-items: center !important;
 }
 
@@ -18289,28 +18289,38 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
 }
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy h1 {
-  width: max-content !important;
-  max-width: none !important;
-  margin: 24px 0 0 !important;
+  width: auto !important;
+  max-width: 12ch !important;
+  margin: 22px 0 0 !important;
   color: var(--auto-ink) !important;
   text-align: left !important;
-  white-space: nowrap !important;
-  text-wrap: nowrap !important;
-  font-size: clamp(26px, 1.8vw, 34px) !important;
-  line-height: 1.06 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  line-height: 1.08 !important;
 }
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > p {
-  max-width: 52ch !important;
-  margin: 20px 0 0 !important;
+  max-width: 48ch !important;
+  margin: 18px 0 0 !important;
   color: var(--auto-body) !important;
-  font-size: 17px !important;
-  line-height: 1.66 !important;
+  font-size: 15px !important;
+  line-height: 1.62 !important;
 }
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-actions {
+  display: grid !important;
+  width: fit-content !important;
+  grid-template-columns: repeat(2, auto) !important;
+  gap: 12px !important;
   justify-content: flex-start !important;
-  margin-top: 26px !important;
+  margin-top: 24px !important;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .sdr-actions .ff-btn {
+  min-width: 178px !important;
+  min-height: 50px !important;
+  padding-inline: 24px !important;
 }
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero .ff-btn-primary {
@@ -18327,10 +18337,10 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > ul {
   display: grid !important;
-  width: min(100%, 520px) !important;
+  width: min(100%, 500px) !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 10px !important;
-  margin: 28px 0 0 !important;
+  margin: 26px 0 0 !important;
   padding: 0 !important;
   list-style: none !important;
   counter-reset: auto-lane !important;
@@ -18342,10 +18352,12 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
 
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-hero-copy > ul li {
   display: grid !important;
-  min-height: 92px !important;
-  align-content: space-between !important;
-  gap: 12px !important;
-  padding: 16px !important;
+  min-height: 72px !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  align-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 13px 14px !important;
   border: 1px solid var(--auto-line) !important;
   border-radius: 8px !important;
   background: var(--auto-card) !important;
@@ -18381,7 +18393,7 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
   position: relative !important;
   inset: auto !important;
   z-index: 1 !important;
-  min-height: clamp(420px, 38vw, 580px) !important;
+  min-height: clamp(440px, 36vw, 540px) !important;
   overflow: hidden !important;
   border: 1px solid var(--auto-line-strong) !important;
   border-radius: 8px !important;
@@ -18766,7 +18778,7 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
   min-height: 460px !important;
   padding: clamp(30px, 3.8vw, 44px) !important;
   border: 1px solid var(--auto-line) !important;
-  border-radius: 8px !important;
+  border-radius: 12px !important;
   background: linear-gradient(180deg, rgba(241, 250, 245, 0.92), rgba(234, 244, 238, 0.76)) !important;
   box-shadow: none !important;
   text-align: center !important;
@@ -23482,8 +23494,8 @@ body main.sdr-page.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-
 /* Dropshipping launch process lock: preserves the section shell while replacing the inner story flow. */
 /* Automatic order data-flow: normal orders stay on the fast lane while exceptions branch early. */
 body main.sdr-page.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-flow-head {
-  display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-  gap: clamp(28px, 5vw, 80px) !important; align-items: end !important; margin-bottom: 54px !important;
+  display: grid !important; grid-template-columns: minmax(0, 1fr) !important;
+  gap: 20px !important; align-items: start !important; margin-bottom: 0 !important;
 }
 body main.sdr-page.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-flow-head > div { min-width: 0 !important; }
 body main.sdr-page.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-flow-head .ff-kicker { color: #126b46 !important; }
@@ -23531,14 +23543,20 @@ body main.sdr-page.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order
 
 /* Order control proof panel: lanes and status rows share the same visual language. */
 body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-control { display: grid !important; grid-template-columns: minmax(0, .45fr) minmax(0, .55fr) !important; gap: clamp(28px, 4vw, 64px) !important; align-items: center !important; }
-.sdr-order-control-visual { position: relative; min-height: 520px; margin: 0; overflow: hidden; border-radius: 8px; background: #123d31; box-shadow: inset 0 0 45px rgba(0,0,0,.24), 0 22px 48px rgba(10,55,37,.14); animation: orderVisualIn 700ms cubic-bezier(.22,1,.36,1) both; }
-.sdr-order-control-visual img { object-fit: cover; }
-.sdr-order-control-visual::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(7,31,25,.44)); content: ''; pointer-events: none; }
-.sdr-order-control-visual figcaption { position: absolute; z-index: 1; right: 18px; bottom: 18px; left: 18px; display: grid; gap: 4px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.24); border-radius: 8px; background: rgba(20,107,72,.68); color: #fff; backdrop-filter: blur(10px); }
+.sdr-order-control-visual { position: relative; min-height: 540px; margin: 0; overflow: visible; border-radius: 0; background: transparent; box-shadow: none; isolation: isolate; animation: orderVisualIn 700ms cubic-bezier(.22,1,.36,1) both; }
+.sdr-order-control-visual::before { position: absolute; z-index: -1; top: 4%; right: 4%; bottom: 5%; left: 5%; border: 1px solid rgba(18,107,70,.14); border-radius: 14px; background: rgba(255,255,255,.38); content: ''; }
+.sdr-order-control-visual::after { position: absolute; z-index: -1; top: 0; left: 0; width: 44%; height: 3px; background: #157448; content: ''; }
+.sdr-order-control-photo { position: absolute; overflow: hidden; border: 1px solid rgba(18,107,70,.16); background: #123d31; box-shadow: 0 22px 48px rgba(10,55,37,.16); }
+.sdr-order-control-photo img { object-fit: cover; }
+.sdr-order-control-photo-primary { top: 8%; left: 0; width: 82%; height: 68%; border-radius: 12px; }
+.sdr-order-control-photo-primary img { object-position: 58% center; }
+.sdr-order-control-photo-secondary { z-index: 2; right: 0; bottom: 3%; width: 58%; height: 45%; border: 8px solid #f7fcf9; border-radius: 12px; }
+.sdr-order-control-photo-secondary img { object-position: 48% center; }
+.sdr-order-control-visual figcaption { position: absolute; z-index: 3; bottom: 8%; left: 4%; display: grid; width: min(230px, 44%); gap: 4px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.24); border-radius: 8px; background: rgba(20,107,72,.9); color: #fff; box-shadow: 0 12px 28px rgba(10,55,37,.2); }
 .sdr-order-control-visual figcaption span { font-size: 10px; font-weight: 850; letter-spacing: .08em; opacity: .78; } .sdr-order-control-visual figcaption strong { font-size: 18px; }
 .sdr-order-control-panel { min-width: 0; padding: clamp(30px, 3vw, 48px); border: 1px solid rgba(18,107,70,.12); border-radius: 8px; background: rgba(255,255,255,.78); box-shadow: 0 22px 50px rgba(10,55,37,.11); }
 .sdr-order-control-panel > .ff-kicker, .sdr-order-control-panel > h2, .sdr-order-lanes, .sdr-order-control-table-wrap { animation: orderControlRise 560ms cubic-bezier(.22,1,.36,1) both; }
-.sdr-order-control-panel > .ff-kicker { color: #157448 !important; animation-delay: 100ms; } .sdr-order-control-panel > h2 { margin: 18px 0 34px; color: #000 !important; font-size: clamp(30px, 2.05vw, 36px) !important; font-weight: 850; line-height: 1.08; animation-delay: 180ms; }
+.sdr-order-control-panel > .ff-kicker { color: #157448 !important; animation-delay: 100ms; } .sdr-order-control-panel > h2 { max-width: none !important; margin: 18px 0 34px; color: #000 !important; font-size: clamp(28px, 1.8vw, 34px) !important; font-weight: 850; line-height: 1.08; white-space: nowrap !important; animation-delay: 180ms; }
 .sdr-order-lanes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; animation-delay: 280ms; }
 .sdr-order-lane { position: relative; min-width: 0; min-height: 148px; padding: 18px 16px; overflow: hidden; border-left: 3px solid #21945b; border-radius: 8px; background: #effaf2; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
 .sdr-order-lane::after { position: absolute; top: 0; bottom: 0; left: -40%; width: 35%; background: rgba(255,255,255,.6); content: ''; transform: skewX(-18deg); animation: fastLaneShine 4.5s ease-in-out infinite; }
@@ -23553,8 +23571,8 @@ body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillm
 .sdr-order-control-table-wrap { margin-top: 34px; overflow: hidden; border: 1px solid rgba(18,107,70,.14); border-radius: 8px; animation-delay: 400ms; } .sdr-order-control-table { width: 100%; border-collapse: collapse; color: #3c6054; font-size: 13px; } .sdr-order-control-table th, .sdr-order-control-table td { padding: 13px 14px; border-bottom: 1px solid rgba(18,107,70,.1); text-align: left; } .sdr-order-control-table th { color: #31594b; font-size: 11px; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; background: rgba(232,248,239,.5); } .sdr-order-control-table tr:last-child td { border-bottom: 0; } .sdr-order-status-row { transition: background .18s ease, transform .18s ease; } .sdr-order-status-row:hover { background: rgba(215,243,225,.65); } .sdr-order-status-row-2:hover { background: rgba(255,239,204,.7); } .sdr-order-status-row-3:hover { background: rgba(218,247,246,.7); } .sdr-order-control-table td:nth-child(2) span { display: inline-flex; padding: 5px 8px; border-radius: 999px; background: #dff5e5; color: #147247; font-size: 11px; font-weight: 850; } .sdr-order-status-row-2 td:nth-child(2) span { background: #ffedc2; color: #a66c14; } .sdr-order-status-row-3 td:nth-child(2) span { background: #d9f4f2; color: #278d8b; }
 .sdr-order-control-note { display: block; margin-top: 20px; color: rgba(23,58,49,.55); font-size: 12px; line-height: 1.5; }
 @keyframes orderVisualIn { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } } @keyframes orderControlRise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } } @keyframes fastLaneShine { 0%, 35% { transform: translateX(0) skewX(-18deg); opacity: 0; } 55%, 100% { transform: translateX(440%) skewX(-18deg); opacity: .8; } } @keyframes holdPulse { 0%,100% { opacity: .35; transform: scale(.75); } 50% { opacity: 1; transform: scale(1.25); } } @keyframes syncSweep { from { transform: translateX(0) skewX(-18deg); } to { transform: translateX(260%) skewX(-18deg); } }
-@media (max-width: 900px) { body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-control { grid-template-columns: 1fr !important; } .sdr-order-control-visual { min-height: 360px; } }
-@media (max-width: 560px) { .sdr-order-control-panel { padding: 24px 18px; } .sdr-order-lanes { grid-template-columns: 1fr; } .sdr-order-lane { min-height: 0; } .sdr-order-control-table { font-size: 12px; } .sdr-order-control-table th, .sdr-order-control-table td { padding: 11px 8px; } }
+@media (max-width: 900px) { body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment .sdr-order-control { grid-template-columns: 1fr !important; } .sdr-order-control-visual { width: min(680px, 100%); min-height: 500px; margin-inline: auto; } }
+@media (max-width: 560px) { .sdr-order-control-visual { min-height: 420px; } .sdr-order-control-photo-primary { width: 88%; height: 64%; } .sdr-order-control-photo-secondary { width: 66%; height: 43%; border-width: 6px; } .sdr-order-control-visual figcaption { bottom: 7%; width: 48%; padding: 11px 12px; } .sdr-order-control-panel { padding: 24px 18px; } .sdr-order-control-panel > h2 { font-size: 28px !important; white-space: normal !important; } .sdr-order-lanes { grid-template-columns: 1fr; } .sdr-order-lane { min-height: 0; } .sdr-order-control-table { font-size: 12px; } .sdr-order-control-table th, .sdr-order-control-table td { padding: 11px 8px; } }
 @media (prefers-reduced-motion: reduce) { .sdr-order-control *, .sdr-order-control *::after { animation: none !important; transition: none !important; } }
 
 body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier {
@@ -24030,6 +24048,40 @@ body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
     width: auto !important;
     max-width: none !important;
     white-space: nowrap !important;
+  }
+}
+
+/* Automatic-order hero final layout lock. */
+#automation-order-hero.sdr-hero {
+  min-height: 0 !important;
+  padding: 58px 0 46px !important;
+}
+
+#automation-order-hero .sdr-hero-grid {
+  min-height: 0 !important;
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr) !important;
+  gap: clamp(28px, 3vw, 44px) !important;
+  align-items: center !important;
+}
+
+#automation-order-hero .sdr-hero-copy h1 {
+  width: auto !important;
+  max-width: 12ch !important;
+  font-size: clamp(30px, 2.05vw, 36px) !important;
+  line-height: 1.08 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+
+#automation-order-hero .sdr-hero-image {
+  min-height: clamp(440px, 36vw, 540px) !important;
+  margin-left: 0 !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 980px) {
+  #automation-order-hero .sdr-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 }
 
