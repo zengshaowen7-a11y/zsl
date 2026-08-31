@@ -2,27 +2,27 @@
   "ServicesOverview": {
     "startingPoints": [
       [
-        "QUELLE",
-        "Finden Sie Produkte & Lieferanten",
-        "Finden, vergleichen und validieren Sie Produkte, bevor Sie sich zum Inventar verpflichten.",
+        "SOURCING",
+        "Produkte & Lieferanten finden",
+        "Produkte finden, vergleichen und prüfen, bevor Sie in Lagerbestand investieren.",
         "/services/product-sourcing"
       ],
       [
-        "VOLLSTÄNDIG",
-        "Versandaufträge zuverlässig",
-        "Verbinden Sie Bestellabwicklung, Verpackung und globale Lieferung in einem Workflow.",
+        "FULFILLMENT",
+        "Bestellungen zuverlässig versenden",
+        "Bestellabwicklung, Verpackung und weltweiten Versand in einem Ablauf verbinden.",
         "/services/dropshipping-supplier"
       ],
       [
-        "KAPITEL",
-        "Skalieren Sie Ihr Inventar",
-        "Erhalten Sie Massengut, organisieren Sie SKUs und füllen Sie es von einem China-Lager aus.",
+        "LAGER & 3PL",
+        "Lagerbestand skalieren",
+        "Waren einlagern, SKUs organisieren und Bestellungen direkt aus China abwickeln.",
         "/services/3pl-fulfillment-services"
       ],
       [
-        "BRAND",
-        "Bauen Sie Ihre Marke",
-        "Koordinieren Sie Etiketten, Verpackungen, Beilagen und wiederholen Sie die Produktion.",
+        "PRIVATE LABEL",
+        "Ihre eigene Marke aufbauen",
+        "Etiketten, Verpackungen, Beilagen und Nachproduktionen gemeinsam koordinieren.",
         "/services/private-label"
       ]
     ],
@@ -53,7 +53,7 @@
       [
         "02",
         "Bestätigen Sie den Leistungsumfang",
-        "Wir definieren Beschaffungs-, Inspektions-, Inventar-, Verpackungs- und Lieferverantwortung."
+        "Wir legen fest, wer für Beschaffung, Qualitätsprüfung, Lagerbestand, Verpackung und Versand verantwortlich ist."
       ],
       [
         "03",
@@ -63,12 +63,12 @@
       [
         "04",
         "Tägliches Fulfillment",
-        "Bestellungen werden über den vereinbarten Workflow empfangen, abgeholt, geprüft, verpackt und versandt."
+        "Bestellungen werden im vereinbarten Ablauf empfangen, kommissioniert, geprüft, verpackt und versandt."
       ],
       [
         "05",
         "Verfolgen und verbessern",
-        "Das Tracking wird zurückgegeben und wiederkehrende Probleme werden überprüft, wenn Produkte und Volumen wachsen."
+        "Sie erhalten Tracking-Informationen. Wiederkehrende Probleme werden geprüft, während Sortiment und Bestellvolumen wachsen."
       ]
     ],
     "faqs": [
@@ -106,10 +106,10 @@
       "title": "Ein China-Team für Sourcing, QC und globales Fulfillment.",
       "lead": "Wählen Sie die Unterstützung, die Ihr Geschäft heute benötigt, und verbinden Sie dann Beschaffung, Inspektion, Verpackung, Lagerhaltung und weltweiten Versand, während Ihr Betrieb wächst.",
       "primary": "Kostenloses Angebot anfordern",
-      "secondary": "Erkundungsdienste",
+      "secondary": "Leistungen entdecken",
       "benefitsLabel": "Serviceleistungen",
       "benefits": [
-        "Unterstützung von Human Accounts",
+        "Persönliche Ansprechpartner",
         "Klarer Dienstleistungsumfang",
         "QC vor dem Versand"
       ],
