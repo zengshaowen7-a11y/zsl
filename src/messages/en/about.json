@@ -1,0 +1,35 @@
+{
+  "About": {
+    "departments": [
+      ["Account management","One named contact coordinates priorities, updates and exceptions across the complete order journey."],
+      ["Product sourcing","Supplier research, quotations, samples, MOQ, lead time and customization are compared before commitment."],
+      ["Quality control","Agreed checkpoints turn product requirements into receiving and pre-shipment inspection routines."],
+      ["Warehouse operations","Inventory, packaging materials, picking rules and order handoffs are organized around each SKU."],
+      ["Shipping coordination","Routes are selected by destination, product type, speed, tracking and the customer promise."]
+    ],
+    "principles": [
+      ["Make the work visible","Important decisions, checkpoints and exceptions should be understandable beyond a chat message."],
+      ["Define ownership","Every stage needs a named owner, an approval point and a clear next action."],
+      ["Protect the customer promise","Speed matters only when the correct product leaves in the condition and packaging expected."],
+      ["Improve with the brand","The operating routine should evolve as products, markets, packaging and order volume change."]
+    ],
+    "teamRoles": [["Account lead","Your daily point of contact and owner of cross-team follow-up."],["Sourcing specialist","Coordinates factories, quotations, samples and repeat production."],["QC & warehouse lead","Owns receiving standards, inspections, inventory and packing rules."],["Logistics specialist","Reviews routes, tracking performance and delivery exceptions."]],
+    "questions": [
+      ["Can we see the real team and warehouse before working together?","Yes. This page is designed to hold a real warehouse tour, team photography and external verification links. Those assets will be added after the company supplies and approves them."],
+      ["Who will be responsible for our account?","Each account should have one named contact who coordinates sourcing, quality, warehouse and shipping teams, so responsibility does not disappear between departments."],
+      ["How do you communicate quality issues?","The operating scope should define inspection points and evidence requirements before launch. When an exception appears, the update should include context, photos where relevant and practical options."],
+      ["Can the workflow change as our store grows?","Yes. A useful fulfillment workflow can begin with sourcing and direct shipping, then add inventory, branded packaging, automation or new delivery routes as demand becomes more predictable."],
+      ["What company details can we verify?","The final page will show the registered company name, office and warehouse addresses, independent review profile and official social or founder links after they are provided and verified."]
+    ],
+    "media": {"licensed":"LICENSED TEMPORARY FOOTAGE","needed":"COMPANY MATERIAL NEEDED"},
+    "hero": {"kicker":"THE PEOPLE AND PROCESS BEHIND EVERY PARCEL","title":"A fulfillment partner should be visible before it is trusted.","lead":"JW Dropshipping brings supplier coordination, quality checks, warehouse execution and global delivery into one accountable operating team for independent eCommerce brands.","primary":"Meet your fulfillment team","secondary":"See how we operate","points":["Human-led support","Documented checkpoints","Clear ownership"],"proofLabel":"Verified company facts to provide"},
+    "story": {"kicker":"WHY JW DROPSHIPPING EXISTS","title":"Independent brands need more than a tracking number.","paragraphs":["When factories, inspection, inventory and shipping are managed by different contacts, a small misunderstanding can quickly become a customer-facing problem. Our role is to connect those handoffs into one operating routine with a clear owner.","That means confirming what “ready to ship” actually means for your product, documenting the details that matter, and keeping decisions close to the people doing the physical work."],"link":"Explore our service scope","noteTitle":"Founder story needed","note":"Provide the real founding year, original problem, first warehouse milestone and current direction."},
+    "departmentsSection": {"kicker":"ONE JOURNEY · FIVE SPECIALISTS","title":"Each handoff belongs to someone who does it every day.","lead":"Clients communicate with one accountable lead, while specialist teams own the work behind sourcing, QC, inventory, packing and delivery."},
+    "facility": {"kicker":"INSIDE THE WORKFLOW","title":"See where orders are received, checked and dispatched.","lead":"Each stage has a clear owner and a visible handoff."},
+    "principlesSection": {"kicker":"HOW WE WANT THE PARTNERSHIP TO FEEL","title":"Clear enough to understand. Flexible enough to grow.","lead":"These principles shape how the team scopes work, communicates issues and improves recurring operations."},
+    "team": {"kicker":"ONE TEAM, CLEAR OWNERSHIP","title":"Know who owns each stage.","lead":"Your account lead connects the specialists responsible for sourcing, quality, warehouse work and delivery.","portrait":"PORTRAIT {number} NEEDED"},
+    "verification": {"kicker":"VERIFY THE BUSINESS","title":"Make it easy for a serious buyer to check who they are working with.","lead":"Do not publish guessed data. Add the following only after the company confirms the exact legal and operational details.","profile":"COMPANY PROFILE","details":"Official details to provide","link":"LINK {number}"},
+    "faq": {"kicker":"BEFORE WE WORK TOGETHER","title":"Questions a careful brand should ask.","lead":"Trust should come from visible people, defined work and verifiable company information.","button":"Ask our team"},
+    "final": {"kicker":"READY TO DISCUSS YOUR OPERATION?","title":"Meet the people who will be responsible for your orders.","button":"Start a conversation"}
+  }
+}

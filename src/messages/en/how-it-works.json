@@ -1,0 +1,47 @@
+{
+  "HowItWorks": {
+    "startingDetails": [
+      {"title": "Product or supplier link", "copy": "A product URL, supplier page or reference image is enough to start the first review."},
+      {"title": "Main destination markets", "copy": "Tell us where customers are located so shipping routes and limits can be checked early."},
+      {"title": "Expected order volume", "copy": "A rough daily range helps us recommend the right warehouse and fulfillment setup."},
+      {"title": "Branding/QC needs", "copy": "Send packaging, label and inspection notes before dispatch."}
+    ],
+    "stages": [
+      {"number":"01","title":"Share your product","kicker":"DISCOVERY","image":"/images/generated/jw-account-support-v3.png","intro":"Send one clear product reference so the first conversation stays focused on your actual store and customer promise.","provide":"Product link, target market, expected volume and the problem you want to solve.","handle":"Review product feasibility, service scope, destination requirements and missing information.","receive":"A focused product brief and a clear recommendation for the next step."},
+      {"number":"02","title":"Source and quote","kicker":"SUPPLIER REVIEW","image":"/images/services/product-sourcing.webp","intro":"Suitable supplier offers are compared on the same specification, not only on the lowest unit price.","provide":"Target cost, material or feature requirements, quantity and desired launch timing.","handle":"Compare suppliers, MOQ, lead time, customization, packaging and estimated fulfillment implications.","receive":"Comparable options with the trade-offs needed to make a supplier decision."},
+      {"number":"03","title":"Sample and approve","kicker":"QUALITY STANDARD","image":"/images/generated/jw-qc-inspection-v3.png","intro":"The physical product and its inspection scope are agreed before repeat purchasing or daily fulfillment begins.","provide":"Feedback on the sample, acceptable tolerances and any non-negotiable brand details.","handle":"Coordinate samples, review visible quality, confirm variants, packaging and QC checkpoints.","receive":"An approved reference and a documented basis for future product checks."},
+      {"number":"04","title":"Set up fulfillment","kicker":"OPERATION PREPARATION","image":"/images/generated/jw-branded-packing-v3.png","intro":"Inventory, SKUs, packaging materials and order rules are connected before live customer volume is released.","provide":"Store SKU data, packing instructions, branding files and order handoff preference.","handle":"Receive stock, map variants, prepare storage, document packing rules and run test orders.","receive":"A tested order workflow ready for repeat picking, checking and packing."},
+      {"number":"05","title":"Ship and sync tracking","kicker":"DAILY OPERATION","image":"/images/generated/jw-dispatch-scan-v3.png","intro":"Approved orders move through dispatch while shipment status and exceptions remain visible to your team.","provide":"Customer orders, addresses and the agreed shipping or service-level rules.","handle":"Pick, final-check, pack, label, dispatch and separate orders that require a decision.","receive":"Shipment confirmation, carrier details and tracking through the agreed handoff."}
+    ],
+    "checkpoints": [
+      ["Before purchasing", "Supplier terms, specification and sample plan confirmed."],
+      ["Before receiving stock", "SKU, quantity, packaging and inbound expectations documented."],
+      ["Before dispatch", "Product, variant, parcel and label checked against the order."]
+    ],
+    "faqs": [
+      ["How long does setup take?", "Timing depends on the product, sample work, packaging and stock readiness. After the first review, we identify the stages that apply and the dependencies that control launch timing."],
+      ["Can I start before my store has daily orders?", "Yes. Product sourcing, supplier comparison and samples can begin before launch. The fulfillment setup can then be prepared when products and expected order flow are clearer."],
+      ["Can JW work with my existing supplier?", "Yes. Your supplier can send inventory to the JW warehouse while we focus on receiving, quality checks, storage, packing and global dispatch."],
+      ["What happens when a quality issue is found?", "Affected goods or orders can be held, documented and shared for your decision. The exact inspection and approval process is agreed before operations begin."],
+      ["How do orders and tracking move between our teams?", "The handoff may use a supported store workflow, structured order file or another agreed method. SKU mapping and exception rules are confirmed during setup."]
+    ],
+    "hero": {
+      "kicker":"HOW IT WORKS","title":"From product link to tracked delivery","lead":"One China-based workflow for sourcing, approval, fulfillment and shipment updates.","primary":"Start with a Product Link","secondary":"See the Five Stages","proofs":["Clear approval points","One dedicated contact","Tracking returned"],
+      "liveLabel":"Live workflow","liveStatus":"Next update in progress","updates":["Product brief reviewed","Supplier terms connected","QC notes saved","Tracking update prepared"],"owner":"Owner: China account team","next":"Next: dispatch rules check","reviewStatus":"Ready for review","briefLabel":"Product brief","brief":"Supplier terms, QC notes and shipping rules stay connected before orders move.","board":["Product link","Quote","QC","Fulfill","Tracking"]
+    },
+    "start": {"kicker":"WHAT TO SEND FIRST","title":"Start before every detail is ready.","lead":"Send the basics first. JW can review the missing details during the next step."},
+    "journey": {"kicker":"THE COMPLETE ORDER JOURNEY","title":"Know each step before the order moves.","lead":"The workflow stays flexible while every owner, approval and handoff remains clear.","provide":"You provide","handle":"JW handles","receive":"You receive"},
+    "approval": {"kicker":"APPROVAL BEFORE VOLUME","title":"Three checkpoints protect each handoff.","lead":"Important questions are resolved before they become repeat production, inventory or service problems.","proofs":["approval gates","unclear handoffs","shared decision record"]},
+    "tracks": {
+      "kicker":"START AT YOUR CURRENT STAGE","title":"Use the workflow from where you are.","lead":"Start with a product idea, an existing supplier or inventory already ready to ship.",
+      "items":[
+        {"kicker":"TESTING A PRODUCT","title":"Begin with sourcing and samples.","copy":"Use stages 01–03 to compare suppliers and approve the product before deciding how much stock or fulfillment support you need.","link":"Explore Product Sourcing","href":"/services/product-sourcing"},
+        {"kicker":"EXISTING SUPPLIER","title":"Begin with receiving and QC.","copy":"Your current factory can send goods to JW for inspection, storage, branded packing and order-level fulfillment.","link":"Explore Quality Control","href":"/services/quality-control-inspection"},
+        {"kicker":"READY TO SCALE","title":"Connect daily orders and tracking.","copy":"Map SKUs, packing rules and exceptions so repeat orders can move through one structured warehouse workflow.","link":"Explore Order Automation","href":"/services/automatic-order-fulfillment"}
+      ]
+    },
+    "exceptions": {"imageAlt":"Product issue being checked before approval","statusLabel":"Exception review","status":"Waiting for decision","kicker":"WHEN SOMETHING DOES NOT MATCH","title":"Exceptions Pause with Context, Not Confusion.","lead":"Quality issues, missing stock, unmapped SKUs or unusual requests are separated before they create a fulfillment mistake.","steps":[["Identify","Affected goods or orders are separated from normal dispatch."],["Document","Photos, SKU details and the decision needed are shared clearly."],["Resume","Work continues after approval, correction or replacement."]],"queue":"Decision queue","queueStatus":"QC photos · stock · packing OK"},
+    "faq": {"kicker":"FREQUENTLY ASKED QUESTIONS","title":"What to know before you start","lead":"Quick answers about setup timing, quality checks, order handoff and tracking updates."},
+    "final": {"kicker":"YOUR FIRST STEP","title":"Start with one product link.","lead":"Tell us where you sell, expected volume and what needs to improve. We will recommend the next practical stage.","product":"Product link","quote":"Free quote","button":"Get a Free Quote"}
+  }
+}

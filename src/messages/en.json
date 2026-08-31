@@ -1,0 +1,55 @@
+{
+  "Metadata": {
+    "title": "JW Dropshipping | Sourcing & Global Fulfillment",
+    "description": "China product sourcing, quality inspection, warehousing, branded packing and worldwide dropshipping fulfillment for independent eCommerce brands.",
+    "openGraphTitle": "JW Dropshipping | From product sourcing to your customers' doors",
+    "openGraphDescription": "End-to-end sourcing, quality control and global fulfillment for independent eCommerce brands."
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "getQuote": "Get a Free Quote",
+    "primaryLabel": "Primary navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleServices": "Toggle services menu",
+    "howItWorks": "How It Works",
+    "whyUs": "Why JW Dropshipping",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "language": "Language",
+    "currentLanguage": "English",
+    "currentLanguageCode": "EN",
+    "selectLanguage": "Select language",
+    "comingSoon": "Coming soon"
+  },
+  "Common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "backToHome": "Back to home",
+    "getFreeQuote": "Get a Free Quote",
+    "serviceScope": "SERVICE SCOPE"
+  },
+  "Footer": {
+    "lead": "China sourcing, quality control and global fulfillment for independent eCommerce brands.",
+    "services": "Services",
+    "company": "Company",
+    "rights": "© 2026 JW Dropshipping. All rights reserved.",
+    "globalFulfillment": "Global fulfillment",
+    "operationsSupport": "Operations Team Support",
+    "contactUs": "Contact Us",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "email": "Email",
+    "locationLabel": "Our Location",
+    "location": "Room 1208, Building A, Future Supply Chain Center, Hangzhou, Zhejiang, China",
+    "serviceSummary": "Product sourcing · Quality control · Global fulfillment"
+  },
+  "ServiceDetail": {"getQuote":"Get a Free Quote","seeHow":"See How It Works","whatWeHandle":"WHAT WE HANDLE","relatedServices":"Related services","fitKicker":"IS THIS SERVICE RIGHT FOR YOU?","bestFit":"BEST FIT"},
+  "ThankYou": {
+    "title": "Thank you — we received your request.",
+    "text": "Our team will review your product and store details and contact you with the next step.",
+    "button": "Back to home"
+  }
+}

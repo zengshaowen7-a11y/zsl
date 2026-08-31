@@ -1,0 +1,180 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      [
+        "Meerdere gesprekken met leveranciers",
+        "Eén specifiek operationeel contact"
+      ],
+      [
+        "Een offerte zonder gedeelde specificatie",
+        "Leverancier opties vergeleken op dezelfde brief"
+      ],
+      [
+        "Producten verzonden zonder duidelijke controles",
+        "Akkoord QC voordat voorraad of bestellingen worden voortgezet"
+      ],
+      [
+        "Algemene verpakkingsbesluiten",
+        "Gedocumenteerde regels voor het merken en verpakken"
+      ],
+      [
+        "Afzonderlijke pakhuis- en scheepvaartteams",
+        "Een aangesloten order workflow"
+      ],
+      [
+        "Tracking gedeeld als laatste bericht",
+        "Gestructureerde verzending en uitzonderingsupdates"
+      ]
+    ],
+    "principles": [
+      [
+        "Eén verantwoordelijk team",
+        "Leverancier, magazijn, verpakking en verzending context blijft met één China-gebaseerde operationele team."
+      ],
+      [
+        "Controles vóór besluiten",
+        "Relevante product- en pakketgegevens worden gecontroleerd op overeengekomen goedkeuringspunten, niet na klachten van klanten."
+      ],
+      [
+        "Bewijsmateriaal met context",
+        "Problemen worden gedeeld met de getroffen hoeveelheid, zichtbaar bewijs en de beslissing die uw team nodig heeft."
+      ],
+      [
+        "Regels die schaal",
+        "Goedgekeurde SKUs, varianten, verpakkingen en uitzonderingen worden herhaalbare dagelijkse uitvoeringsinstructies."
+      ]
+    ],
+    "supportCards": [
+      [
+        "Eén duidelijk contact",
+        "Product, QC en verzending context blijft met één account lood."
+      ],
+      [
+        "Risico vroeg gecontroleerd",
+        "Monsters, voorraad- en verpakkingsdetails worden beoordeeld voordat het volume beweegt."
+      ],
+      [
+        "Gedeelde ordernotities",
+        "Goedkeuringen, uitzonderingen en eisen blijven gedocumenteerd voor herhaalde werkzaamheden."
+      ],
+      [
+        "Klaar om te vervullen",
+        "SKU regels, verpakking en tracking handoff zijn voorbereid voor de schaal."
+      ]
+    ],
+    "fitItems": [
+      "U wilt één contact over sourcing, QC en vervulling.",
+      "Product consistentie is belangrijker dan het vinden van de laagste zichtbare prijs.",
+      "U heeft branded verpakking of gedocumenteerde orderregels nodig.",
+      "Uw winkel test nu maar heeft een workflow nodig die kan groeien."
+    ],
+    "notFitItems": [
+      "U wilt alleen een anonieme product lijst zonder beoordeling.",
+      "U verwacht dat elk product en elke bestemming één vast verzendtarief zal gebruiken.",
+      "U wilt geen monsters, specificaties of beslissingen goedkeuren."
+    ],
+    "faqs": [
+      [
+        "Wat maakt JW anders dan een marktleverancier?",
+        "JW kan leveranciercoördinatie, ontvangst, kwaliteitscontroles, inventaris, verpakking en verzending verbinden via één operationele reikwijdte. De exacte verantwoordelijkheden worden bevestigd voordat het werk begint."
+      ],
+      [
+        "Zal ik één toegewijd contact hebben?",
+        "Een primaire account contact houdt product, magazijn en verzending context verbonden. Operationele specialisten kunnen het werk ondersteunen zonder dat u het gesprek bij elke overdracht opnieuw start."
+      ],
+      [
+        "Kies je altijd de goedkoopste leverancier?",
+        "Nee. Leverancier opties moeten worden vergeleken met dezelfde product eis, waaronder kwaliteit, MOQ, doorlooptijd, verpakking en vervulling implicaties."
+      ],
+      [
+        "Hoe worden kwaliteitskwesties gecommuniceerd?",
+        "Het overeengekomen inspectiebereik bepaalt wat gecontroleerd wordt. Wanneer een probleem wordt vastgesteld, kunnen de betrokken goederen worden gehouden en gedeeld met bewijsmateriaal en een gevraagde beslissing."
+      ],
+      [
+        "Kan de service scope groeien met mijn winkel?",
+        "Ja. Een project kan beginnen met sourcing of inspectie en later toevoegen inventaris, aangepaste verpakking, orderautomatisering en wereldwijde vervulling."
+      ]
+    ],
+    "hero": {
+      "kicker": "Waarom kiezen voor JW Dropshipping?",
+      "title": "Wij wijzen een toegewijd China team aan uw bestelling",
+      "lead": "JW verbindt sourcing, kwaliteitscontrole, inventaris, merkverpakking en levering zodat uw team minder handoffs beheert en beter geïnformeerde beslissingen neemt.",
+      "primary": "Praat met het team.",
+      "secondary": "Zie het verschil",
+      "proofs": [
+        "Live-accountondersteuning",
+        "Akkoord QC-controlepunten",
+        "Duidelijke order overdracht"
+      ],
+      "videoLabel": "JW China operations team coördineren product review, verpakking en pakket sorteren"
+    },
+    "compare": {
+      "kicker": "EEN DUIDELIJK BEDRIJFSMODEL",
+      "title": "Minder jagen. Meer zichtbaar eigendom.",
+      "lead": "Het verschil is niet langer een servicelijst. Het is hoe beslissingen en handoffs verbonden blijven rond hetzelfde product en bestelling.",
+      "typical": "Typisch zuurmiddel",
+      "jw": "JW Dropshipping"
+    },
+    "principlesSection": {
+      "kicker": "HOE MOET HET WERKEN MET JW VOELEN?",
+      "title": "Duidelijke, praktische ondersteuning die u elke dag kunt gebruiken.",
+      "lead": "Vier operationele principes vormen de dienst voordat het dagelijkse volume begint."
+    },
+    "evidence": {
+      "imageAltOne": "Resultaten van de JW-teamregistratie van productinspectie",
+      "imageAltTwo": "JW team controleren productkwaliteit voor verzending",
+      "kicker": "ZICHTBAAR BEWIJS VAN DE EXPLOITATIE",
+      "title": "QC-besluiten wissen.",
+      "lead": "In plaats van een vaag bericht van QC, kan de inspectie scope identificeren wat gecontroleerd is, wat niet overeenkomt en wat goedkeuring nodig heeft.",
+      "review": "QC EVALUATIE",
+      "checked": "Gecheckt",
+      "sampling": "Steekproef",
+      "passed": "geslaagd",
+      "issues": "Problemen",
+      "packaging": "Verpakking",
+      "barcode": "Barcode",
+      "status": "Status",
+      "verified": "Geverifieerd",
+      "matched": "Overeengekomen",
+      "approved": "Goedgekeurd voor verzending",
+      "checks": [
+        "Variant match",
+        "Aantal",
+        "Controle afronden",
+        "Kartonnen etiket"
+      ],
+      "passedCount": "50 geslaagd",
+      "issueCount": "0 kwesties",
+      "link": "Kwaliteitscontrole onderzoeken"
+    },
+    "support": {
+      "kicker": "LEVENDE REKENINGSSTEUN",
+      "title": "Eén overdracht per bestelling.",
+      "lead": "Uw primaire contactpersoon verbindt leveranciersvragen, magazijnacties en verzendupdates. Dat betekent minder herhaalde verklaringen en een duidelijker eigenaar wanneer iets een beslissing nodig heeft.",
+      "points": [
+        "Een primair communicatiepunt",
+        "Beslissingen en verpakkingsvoorschriften gedocumenteerd",
+        "Uitzonderingen gevolgd door resolutie"
+      ],
+      "imageAlt": "JW magazijn en account support team"
+    },
+    "fit": {
+      "kicker": "ZIT JW GOED?",
+      "title": "Een nuttig partnerschap begint met afgestemde verwachtingen.",
+      "lead": "Duidelijk zijn over fit is waardevoller dan hetzelfde servicemodel beloven aan elke winkel.",
+      "good": "JW kan goed passen wanneer",
+      "bad": "We zijn misschien niet de juiste pasvorm wanneer"
+    },
+    "faq": {
+      "kicker": "WAT U MOET WETEN VOORDAT U KIES",
+      "title": "Vragen over werken met JW.",
+      "lead": "Begin met uw product en huidige operationele probleem voor het meest relevante antwoord."
+    },
+    "final": {
+      "kicker": "BEGIN MET UW HUIDIGE FLESNECK",
+      "title": "Kijk of JW bij uw operatie past.",
+      "lead": "Deel een productlink, bestemmingsmarkten en wat vertraagt uw team. We zullen een praktische volgende stap aanbevelen.",
+      "button": "Vraag een gratis offerte aan"
+    }
+  }
+}

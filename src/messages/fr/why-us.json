@@ -1,0 +1,180 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      [
+        "Plusieurs conversations avec les fournisseurs",
+        "Un contact opérationnel dédié"
+      ],
+      [
+        "Un devis sans spécification partagée",
+        "Les options du fournisseur ont été comparées sur le même mémoire"
+      ],
+      [
+        "Produits expédiés sans vérification claire",
+        "Accordé QC avant que les stocks ou les commandes continuent"
+      ],
+      [
+        "Décisions générales d'emballage",
+        "Règles de marquage et d'emballage documentées"
+      ],
+      [
+        "Équipes d ' entreposage et d ' expédition séparées",
+        "Un workflow de commande connecté"
+      ],
+      [
+        "Suivi partagé comme message final",
+        "Envoi structuré et mises à jour des exceptions"
+      ]
+    ],
+    "principles": [
+      [
+        "Une équipe responsable",
+        "Fournisseur, entrepôt, emballage et l'expédition contexte reste avec une équipe d'exploitation basée en Chine."
+      ],
+      [
+        "Contrôles avant les décisions",
+        "Les détails du produit et du colis sont vérifiés aux points d'approbation convenus, et non après les plaintes des clients."
+      ],
+      [
+        "Preuves dans le contexte",
+        "Les questions sont partagées avec la quantité touchée, les preuves visibles et la décision nécessaire de votre équipe."
+      ],
+      [
+        "Règles du barème",
+        "SKUs approuvé, les variantes, l'emballage et les exceptions deviennent des instructions d'exécution quotidiennes répétables."
+      ]
+    ],
+    "supportCards": [
+      [
+        "Un contact clair",
+        "Produit, QC et le contexte d'expédition restent avec un seul compte."
+      ],
+      [
+        "Risque vérifié rapidement",
+        "Les échantillons, le stock et les détails d'emballage sont examinés avant le déplacement du volume."
+      ],
+      [
+        "Notes de commande partagées",
+        "Les approbations, exceptions et exigences demeurent documentées pour les travaux répétés."
+      ],
+      [
+        "Prêt à remplir",
+        "Les règles SKU, l'emballage et le suivi sont préparés avant l'échelle."
+      ]
+    ],
+    "fitItems": [
+      "Vous voulez un contact à travers le sourcing, QC et l'accomplissement.",
+      "La cohérence des produits est plus importante que de trouver le prix visible le plus bas.",
+      "Vous avez besoin d'emballage de marque ou de règles documentées de commande.",
+      "Votre magasin teste maintenant mais a besoin d'un flux de travail qui peut croître."
+    ],
+    "notFitItems": [
+      "Vous ne voulez qu'une liste anonyme de produits sans avis.",
+      "Vous attendez de chaque produit et destination à utiliser un taux d'expédition fixe.",
+      "Vous ne voulez pas approuver des échantillons, des spécifications ou des décisions."
+    ],
+    "faqs": [
+      [
+        "Qu'est-ce qui différencie JW d'un fournisseur de marché?",
+        "JW peut relier la coordination des fournisseurs, la réception, les contrôles de qualité, l'inventaire, l'emballage et l'expédition par un seul champ d'exploitation. Les responsabilités exactes sont confirmées avant le début du travail."
+      ],
+      [
+        "Vais-je avoir un contact dédié ?",
+        "Un contact de compte principal maintient le contexte produit, entrepôt et expédition connecté. Les spécialistes opérationnels peuvent soutenir le travail sans vous faire redémarrer la conversation à chaque sortie."
+      ],
+      [
+        "Vous choisissez toujours le fournisseur le moins cher?",
+        "C'est pas vrai. Les options du fournisseur devraient être comparées à la même exigence de produit, y compris la qualité, MOQ, le délai d'exécution, l'emballage et les implications de réalisation."
+      ],
+      [
+        "Comment les problèmes de qualité sont-ils communiqués?",
+        "Le champ d'inspection convenu détermine ce qui est vérifié. Lorsqu'une question est soulevée, les marchandises touchées peuvent être retenues et partagées avec des éléments de preuve et une décision demandée."
+      ],
+      [
+        "La portée du service peut-elle croître avec mon magasin?",
+        "Oui. Un projet peut commencer par l'approvisionnement ou l'inspection et ensuite ajouter l'inventaire, l'emballage personnalisé, l'automatisation des commandes et la réalisation globale."
+      ]
+    ],
+    "hero": {
+      "kicker": "Pourquoi choisir JW Dropshipping ?",
+      "title": "Nous attribuons une équipe dédiée à la Chine à votre commande, responsable de la qualité, des délais et de la communication à chaque étape.",
+      "lead": "JW relie l'approvisionnement, le contrôle de la qualité, l'inventaire, l'emballage et la livraison de marque afin que votre équipe gère moins de retraits et prenne des décisions mieux informées.",
+      "primary": "Parlez à l'équipe",
+      "secondary": "Voir la différence",
+      "proofs": [
+        "Support de compte en direct",
+        "Points de contrôle agréés QC",
+        "Remise de commande claire"
+      ],
+      "videoLabel": "JW Chine équipe d'opérations coordonner l'examen des produits, l'emballage et le tri des colis"
+    },
+    "compare": {
+      "kicker": "UN MODÈLE D'EXPLOITATION DE CLEARER",
+      "title": "Moins de poursuite. Plus de propriété visible.",
+      "lead": "La différence n'est pas une liste de services plus longue. C'est ainsi que les décisions et les retraits restent connectés autour du même produit et de la même commande.",
+      "typical": "Agent d'approvisionnement type",
+      "jw": "Autres"
+    },
+    "principlesSection": {
+      "kicker": "QU'EST-CE QUE LE TRAVAIL AVEC JW PEUT REVENIR",
+      "title": "Un support clair et pratique que vous pouvez utiliser tous les jours.",
+      "lead": "Quatre principes de fonctionnement façonnent le service avant que le volume quotidien ne commence."
+    },
+    "evidence": {
+      "imageAltOne": "L'équipe JW enregistre les résultats de l'inspection des produits",
+      "imageAltTwo": "JW équipe vérifier la qualité du produit avant l'expédition",
+      "kicker": "PREUVES VISIBLES DE FONCTIONNEMENT",
+      "title": "Effacer les décisions QC.",
+      "lead": "Au lieu d'un vague message passé de QC, la portée de l'inspection peut identifier ce qui a été vérifié, ce qui ne correspond pas et ce qui a besoin d'approbation.",
+      "review": "QC EXAMEN",
+      "checked": "Vérification",
+      "sampling": "Échantillonnage",
+      "passed": "Décédé",
+      "issues": "Problèmes",
+      "packaging": "Emballage",
+      "barcode": "Code barre",
+      "status": "État",
+      "verified": "Vérifié",
+      "matched": "Corrigé",
+      "approved": "Approuvé pour expédition",
+      "checks": [
+        "Variante",
+        "Nombre de quantités",
+        "Vérification de fin",
+        "Étiquette pour carton"
+      ],
+      "passedCount": "50 reçus",
+      "issueCount": "0 numéros",
+      "link": "Explorer le contrôle de la qualité"
+    },
+    "support": {
+      "kicker": "SOUTIEN AUX COMPTES VIVANTS",
+      "title": "Une remise par commande.",
+      "lead": "Votre contact principal relie les questions des fournisseurs, les actions d'entrepôt et les mises à jour d'expédition. Cela signifie moins d'explications répétées et un propriétaire plus clair quand quelque chose a besoin d'une décision.",
+      "points": [
+        "Un premier point de communication",
+        "Décisions et règles d'emballage documentées",
+        "Exceptions à la résolution"
+      ],
+      "imageAlt": "Équipe d ' appui à l ' entrepôt et au compte JW"
+    },
+    "fit": {
+      "kicker": "EST-CE QUE JW EST LE BON ?",
+      "title": "Un partenariat utile commence par des attentes alignées.",
+      "lead": "Être clair sur l'ajustement est plus précieux que de promettre le même modèle de service à chaque magasin.",
+      "good": "JW peut être un bon ajustement lorsque",
+      "bad": "Il se peut que nous ne soyons pas à la hauteur lorsque"
+    },
+    "faq": {
+      "kicker": "QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE CHOISIR",
+      "title": "Questions sur le travail avec JW.",
+      "lead": "Commencez avec votre produit et le problème opérationnel actuel pour la réponse la plus pertinente."
+    },
+    "final": {
+      "kicker": "COMMENCER AVEC VOTRE CULASSE ACTUELLE",
+      "title": "Voyez si JW correspond à votre opération.",
+      "lead": "Partagez un lien produit, les marchés de destination et ce qui ralentit votre équipe. Nous recommanderons une prochaine étape pratique.",
+      "button": "Obtenir un devis gratuit"
+    }
+  }
+}

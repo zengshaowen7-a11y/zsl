@@ -1,0 +1,228 @@
+/* China Fulfillment Center hero — Design → Garden → Taste pass.
+ * Keeps the existing page margins/background while making the warehouse route
+ * legible as a calm, evidence-led UI instead of a decorative photo block.
+ */
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center {
+  --warehouse-taste-ink: #000;
+  --warehouse-taste-deep: #155b3d;
+  --warehouse-taste-muted: #65736d;
+  --warehouse-taste-line: rgba(21, 91, 61, .16);
+  --warehouse-taste-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero-grid {
+  container-type: inline-size;
+  min-height: clamp(620px, 44vw, 720px) !important;
+  background: linear-gradient(180deg, #fff 0 72%, #0c392c 100%) !important;
+  border-color: var(--warehouse-taste-line) !important;
+  box-shadow: 0 26px 72px rgba(17, 76, 51, .14) !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-hero-copy h1 {
+  max-width: 18ch !important;
+  color: var(--warehouse-taste-ink) !important;
+  -webkit-text-fill-color: var(--warehouse-taste-ink) !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.035em !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-hero-copy > p {
+  max-width: 47ch !important;
+  margin-top: 22px !important;
+  color: var(--warehouse-taste-muted) !important;
+  line-height: 1.68 !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-actions .ff-btn {
+  min-height: 52px !important;
+  border-radius: 9px !important;
+  padding-inline: 22px !important;
+  transition: transform 220ms var(--warehouse-taste-ease), box-shadow 220ms var(--warehouse-taste-ease), background-color 220ms var(--warehouse-taste-ease) !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-actions .ff-btn:active {
+  transform: translateY(1px) scale(.985);
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-hero-copy > ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 22px !important;
+  margin-top: 30px !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-hero-copy > ul li {
+  min-width: 0;
+  align-items: flex-start !important;
+  line-height: 1.38 !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero .sdr-hero-copy > ul li:last-child {
+  grid-column: 1 / -1;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero-image {
+  isolation: isolate;
+  min-height: clamp(560px, 39vw, 650px) !important;
+  margin: 30px 0 30px -36px !important;
+  border-radius: 13px !important;
+  box-shadow: inset 0 0 30px rgba(8, 43, 32, .12), 0 24px 58px rgba(8, 43, 32, .15) !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero-image::before {
+  background: linear-gradient(180deg, rgba(4, 25, 18, .04) 26%, rgba(4, 39, 31, .84) 100%) !important;
+}
+
+.sdr-warehouse-hero-map {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  pointer-events: none;
+}
+
+.sdr-warehouse-hero-map-label {
+  display: inline-grid;
+  width: fit-content;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, .32);
+  border-radius: 8px;
+  background: rgba(4, 39, 31, .64);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(4, 39, 31, .16);
+  backdrop-filter: blur(12px);
+}
+
+.sdr-warehouse-hero-map-label span,
+.sdr-warehouse-hero-map-label strong {
+  display: block;
+}
+
+.sdr-warehouse-hero-map-label span {
+  color: #a4e7c3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.sdr-warehouse-hero-map-label strong {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.sdr-warehouse-hero-route {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 10px;
+  background: rgba(4, 39, 31, .72);
+  box-shadow: 0 14px 30px rgba(4, 39, 31, .2);
+  backdrop-filter: blur(12px);
+}
+
+.sdr-warehouse-hero-route::before {
+  position: absolute;
+  top: 24px;
+  right: 9%;
+  left: 9%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(164, 231, 195, .18), rgba(164, 231, 195, .8), rgba(164, 231, 195, .18));
+  content: "";
+}
+
+.sdr-warehouse-hero-route span {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.sdr-warehouse-hero-route i {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid rgba(164, 231, 195, .7);
+  border-radius: 50%;
+  background: #155b3d;
+  color: #e8fff0;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 800;
+  box-shadow: 0 0 0 4px rgba(164, 231, 195, .1);
+  animation: warehouse-route-pulse 3.8s ease-in-out infinite;
+  animation-delay: calc(var(--hero-route-index) * 180ms);
+}
+
+.sdr-warehouse-hero-route b {
+  overflow: hidden;
+  color: rgba(255, 255, 255, .9);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes warehouse-route-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(164, 231, 195, .1); transform: translateY(0); }
+  45% { box-shadow: 0 0 0 7px rgba(164, 231, 195, .2); transform: translateY(-2px); }
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-hero-grid { min-height: 0 !important; }
+
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-hero-image {
+    min-height: 440px !important;
+    margin: -22px 24px 24px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-hero .sdr-hero-copy > ul { grid-template-columns: minmax(0, 1fr) !important; }
+
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-hero .sdr-hero-copy > ul li:last-child { grid-column: auto; }
+
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-hero-image {
+    min-height: 340px !important;
+    margin: -14px 12px 12px !important;
+  }
+
+  .sdr-warehouse-hero-map { padding: 12px; }
+  .sdr-warehouse-hero-map-label { padding: 8px 10px; }
+  .sdr-warehouse-hero-map-label strong { font-size: 11px; }
+  .sdr-warehouse-hero-route { gap: 3px; padding: 11px 7px 9px; }
+  .sdr-warehouse-hero-route::before { top: 21px; right: 8%; left: 8%; }
+  .sdr-warehouse-hero-route i { width: 18px; height: 18px; font-size: 7px; }
+  .sdr-warehouse-hero-route b { font-size: 7px; letter-spacing: .04em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sdr-warehouse-hero-route i { animation: none; }
+}

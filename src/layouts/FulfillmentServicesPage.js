@@ -6,7 +6,7 @@ import {
 } from "@config/service-catalog";
 import { serviceComparison } from "@config/service-conversion-content";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   FiAlertCircle,
   FiArrowRight,

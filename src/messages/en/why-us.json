@@ -1,0 +1,41 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      ["Multiple supplier conversations", "One dedicated operating contact"],
+      ["A quote without a shared specification", "Supplier options compared on the same brief"],
+      ["Products shipped without clear checks", "Agreed QC before stock or orders continue"],
+      ["Generic packing decisions", "Documented branding and packing rules"],
+      ["Separate warehouse and shipping teams", "One connected order workflow"],
+      ["Tracking shared as a final message", "Structured shipment and exception updates"]
+    ],
+    "principles": [
+      ["One accountable team", "Supplier, warehouse, packing and shipping context stays with one China-based operating team."],
+      ["Checks before decisions", "Relevant product and parcel details are checked at agreed approval points, not after customer complaints."],
+      ["Evidence with context", "Issues are shared with the affected quantity, visible evidence and the decision needed from your team."],
+      ["Rules that scale", "Approved SKUs, variants, packaging and exceptions become repeatable daily fulfillment instructions."]
+    ],
+    "supportCards": [
+      ["One clear contact", "Product, QC and shipment context stays with one account lead."],
+      ["Risk checked early", "Samples, stock and packing details are reviewed before volume moves."],
+      ["Shared order notes", "Approvals, exceptions and requirements stay documented for repeat work."],
+      ["Ready to fulfill", "SKU rules, packaging and tracking handoff are prepared before scale."]
+    ],
+    "fitItems": ["You want one contact across sourcing, QC and fulfillment.","Product consistency matters more than finding the lowest visible price.","You need branded packing or documented order rules.","Your store is testing now but needs a workflow that can grow."],
+    "notFitItems": ["You only want an anonymous product listing with no review.","You expect every product and destination to use one fixed shipping rate.","You do not want to approve samples, specifications or issue decisions."],
+    "faqs": [
+      ["What makes JW different from a marketplace supplier?", "JW can connect supplier coordination, receiving, quality checks, inventory, packing and shipping through one operating scope. The exact responsibilities are confirmed before work begins."],
+      ["Will I have one dedicated contact?", "A primary account contact keeps product, warehouse and shipment context connected. Operational specialists may support the work without making you restart the conversation at every handoff."],
+      ["Do you always choose the cheapest supplier?", "No. Supplier options should be compared against the same product requirement, including quality, MOQ, lead time, packaging and fulfillment implications."],
+      ["How are quality issues communicated?", "The agreed inspection scope determines what is checked. When an issue is found, affected goods can be held and shared with evidence and a requested decision."],
+      ["Can the service scope grow with my store?", "Yes. A project may begin with sourcing or inspection and later add inventory, custom packaging, order automation and global fulfillment."]
+    ],
+    "hero": {"kicker":"Why choose JW Dropshipping?","title":"We assign one dedicated China team to your order — fully accountable for quality, timelines, and communication at every stage.","lead":"JW connects sourcing, quality control, inventory, branded packing and delivery so your team manages fewer handoffs and makes better-informed decisions.","primary":"Talk to the Team","secondary":"See the Difference","proofs":["Live Account Support","Agreed QC checkpoints","Clear order handoff"],"videoLabel":"JW China operations team coordinating product review, packing and parcel sorting"},
+    "compare": {"kicker":"A CLEARER OPERATING MODEL","title":"Less chasing. More visible ownership.","lead":"The difference is not a longer service list. It is how decisions and handoffs stay connected around the same product and order.","typical":"Typical sourcing agent","jw":"JW Dropshipping"},
+    "principlesSection": {"kicker":"WHAT WORKING WITH JW SHOULD FEEL LIKE","title":"Clear, practical support you can use every day.","lead":"Four operating principles shape the service before daily volume begins."},
+    "evidence": {"imageAltOne":"JW team recording product inspection results","imageAltTwo":"JW team checking product quality before dispatch","kicker":"VISIBLE OPERATING EVIDENCE","title":"Clear QC decisions.","lead":"Instead of a vague “QC passed” message, the inspection scope can identify what was checked, what did not match and what needs approval.","review":"QC REVIEW","checked":"Checked","sampling":"Sampling","passed":"Passed","issues":"Issues","packaging":"Packaging","barcode":"Barcode","status":"Status","verified":"Verified","matched":"Matched","approved":"Approved for dispatch","checks":["Variant match","Quantity count","Finish check","Carton label"],"passedCount":"50 passed","issueCount":"0 issues","link":"Explore Quality Control"},
+    "support": {"kicker":"LIVE ACCOUNT SUPPORT","title":"One handoff per order.","lead":"Your primary contact connects supplier questions, warehouse actions and shipping updates. That means fewer repeated explanations and a clearer owner when something needs a decision.","points":["One primary communication point","Decisions and packing rules documented","Exceptions followed through to resolution"],"imageAlt":"JW warehouse and account support team"},
+    "fit": {"kicker":"IS JW THE RIGHT FIT?","title":"A useful partnership starts with aligned expectations.","lead":"Being clear about fit is more valuable than promising the same service model to every store.","good":"JW may be a good fit when","bad":"We may not be the right fit when"},
+    "faq": {"kicker":"BEFORE YOU CHOOSE","title":"Questions about working with JW.","lead":"Start with your product and current operational problem for the most relevant answer."},
+    "final": {"kicker":"START WITH YOUR CURRENT BOTTLENECK","title":"See whether JW fits your operation.","lead":"Share a product link, destination markets and what is slowing your team down. We will recommend a practical next step.","button":"Get a Free Quote"}
+  }
+}

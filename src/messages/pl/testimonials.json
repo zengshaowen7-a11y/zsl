@@ -1,0 +1,104 @@
+{
+  "Testimonials": {
+    "faqs": [
+      [
+        "Co pokazują te historie?",
+        "Pokazują, jak sprzedawcy doświadczają codziennego wsparcia: odpowiedzi źródłowe, aktualizacje QC, szczegóły pakowania, obsługi zamówień i komunikacji wypełniania."
+      ],
+      [
+        "Czy mogę prosić o wsparcie podobne do przeglądu?",
+        "Tak. Podziel się typem produktu, rynkiem docelowym i aktualnym problemem, a zespół może zasugerować praktyczny przepływ pracy dla sklepu."
+      ],
+      [
+        "Chodzi tylko o spełnienie?",
+        "Nie. Informacje zwrotne obejmują pozyskiwanie, cytaty, markowe opakowania, kontrole jakości, koordynację inwentaryzacji i monitorowanie wysyłki."
+      ],
+      [
+        "Będę pracował z jednym oddanym kontaktem?",
+        "JW utrzymuje komunikację zorganizowaną poprzez obsługę konta, więc pytania i szczegóły zamówienia nie zgubić między przekazami."
+      ],
+      [
+        "Jak mam użyć tych referencji?",
+        "Użyj ich do porównania rodzaju wsparcia, którego potrzebujesz, a następnie zacząć od jednego produktu lub przepływu zamówienia, aby przetestować dopasowanie."
+      ]
+    ],
+    "fiveStars": "Five star review",
+    "hero": {
+      "kicker": "RYNEK SELLERA",
+      "title": "Opowieści sprzedającego, jasne.",
+      "lead": "Wyraźne wsparcie, stałe zarządzanie zamówieniami i szybkie monitorowanie ze strony sprzedawców zespołów może rzeczywiście korzystać.",
+      "proofs": [
+        "Wsparcie dla żywicy",
+        "Aktualizacje QC",
+        "Kontynuacja realizacji"
+      ],
+      "primary": "Uzyskaj bezpłatną wycenę",
+      "secondary": "Opowieści o sprzedającym",
+      "balanceLabel": "Co sprzedający najczęściej wymieniać",
+      "mentioned": "Najczęściej wymienione",
+      "balanceTitle": "Co trzyma przepływ pracy w spokoju.",
+      "items": [
+        [
+          "Czysta komunikacja",
+          "Odpowiedzi pozostają widoczne w całym zaopatrzeniu, QC i wysyłki."
+        ],
+        [
+          "Szybkie odpowiedzi",
+          "Pytania idą do przodu bez długiego cofania się."
+        ],
+        [
+          "Widoczność QC",
+          "Notatki i zdjęcia uziemiają decyzje recenzji."
+        ],
+        [
+          "Własność zamówienia",
+          "Jeden kontakt łączy każde przekazanie."
+        ]
+      ],
+      "featuredLabel": "Informacje zwrotne dotyczące sprzedawców",
+      "switchLabel": "Opowieści o sprzedającym",
+      "usefulFor": "Przydatne",
+      "firstWorkflow": "Pierwszy przepływ pracy"
+    },
+    "featured": {
+      "kicker": "WYPADEK",
+      "title": "Trzy części sprzedawców partnerskich pamiętać.",
+      "lead": "Wyraźna obsługa zamówień, przemyślane decyzje produktowe i osoba reagująca, która utrzymuje pracę w ruchu.",
+      "viewAll": "Zobacz wszystkie 13 opowieści"
+    },
+    "stories": {
+      "kicker": "WIĘCEJ DZIAŁAŃ SELLER",
+      "title": "Odwrócenie uwagi przez podróż po zamówieniu.",
+      "lead": "Każda historia zawiera temat usługi i kontekst wsparcia konta, dzięki czemu odwiedzający mogą znaleźć doświadczenia bliższe ich własnym potrzebom.",
+      "viewAll": "Zobacz wszystkie 12 historii"
+    },
+    "proof": {
+      "kicker": "TEAM BEHIND THE FEEDBACK",
+      "title": "Zobacz, gdzie odbywa się codzienna praca.",
+      "lead": "Najsilniejsze wsparcie dla historii sprzedającego jest widoczny magazyn, pakowania i wysyłki pracy.",
+      "videos": [
+        [
+          "OPERACJE ZAMKNIĘTE",
+          "Odbieranie, sprawdzanie i pakowanie",
+          "Zobacz środowisko fizyczne za inwentaryzacją i przygotowanie zamówienia klienta."
+        ],
+        [
+          "SORTING & DISPATCH",
+          "Zamówienia w kierunku dostawy",
+          "Zobacz, jak przygotowane paczki są sortowane i przekazywane do przepływu pracy wysyłki."
+        ]
+      ]
+    },
+    "faq": {
+      "kicker": "INFORMACJE WAŻNE PRZED ZASTOSOWANIEM LEKU DECIDE",
+      "title": "Pytania o historie sprzedawców.",
+      "lead": "Użyj tych odpowiedzi, aby zrozumieć, co oznacza sprzężenia zwrotnego dla własnego sklepu."
+    },
+    "final": {
+      "kicker": "PIERWSZY KROK",
+      "title": "Zacznij od jednego produktu.",
+      "lead": "Powiedz nam, co sprzedajesz, gdzie wysyłasz i co musi działać lepiej. Nasz zespół zaleci kolejny praktyczny krok.",
+      "button": "Porozmawiaj z naszym zespołem."
+    }
+  }
+}

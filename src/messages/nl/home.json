@@ -1,0 +1,389 @@
+{
+  "Home": {
+    "evidenceItems": [
+      [
+        "01",
+        "Goedgekeurde dienstomschrijving",
+        "Sourcing, inspectie, verpakking en verzending verantwoordelijkheden worden bevestigd voor de lancering."
+      ],
+      [
+        "02",
+        "Bewijs van kwaliteitscontrole",
+        "Akkoord controlepunten en afgifte foto's geven context voordat een getroffen bestelling wordt voortgezet."
+      ],
+      [
+        "03",
+        "Zichtbaarheid bestellen",
+        "SKU, verpakking en tracking informatie volgt de bestelling via de overeengekomen workflow."
+      ]
+    ],
+    "workflowSteps": [
+      {
+        "number": "01",
+        "title": "Deel uw product",
+        "text": "Stuur ons product links, doelmarkt info en uw belangrijkste eisen."
+      },
+      {
+        "number": "02",
+        "title": "Bron en quote",
+        "text": "Wij leveren leveranciers, dan delen prijzen, MOQ en productie loodtijden."
+      },
+      {
+        "number": "03",
+        "title": "Monster en inspectie",
+        "text": "Je keurt monsters goed, en we lock-in duidelijke kwaliteitsnormen."
+      },
+      {
+        "number": "04",
+        "title": "Bewaren en vervullen",
+        "text": "Ons pakhuis team ontvangt, slaat, haalt en pakt uw inventaris."
+      },
+      {
+        "number": "05",
+        "title": "Schip- en synchronisatievolgsysteem",
+        "text": "Orders wereldwijd, tracking nummers automatisch gesynchroniseerd terug naar uw winkel."
+      }
+    ],
+    "services": [
+      {
+        "title": "Product sourcing",
+        "audience": "Voor het opslaan van testproducten of het vervangen van leveranciers.",
+        "points": [
+          "Vergelijking leverancier",
+          "Monstercoördinatie",
+          "MOQ en beoordeling van de doorlooptijd"
+        ],
+        "slug": "product-sourcing",
+        "image": "/images/services/product-sourcing.webp"
+      },
+      {
+        "title": "Kwaliteitscontrole",
+        "audience": "Voor winkels die minder product en verpakking verrassingen nodig hebben.",
+        "points": [
+          "Product- en variantcontroles",
+          "Hoeveelheidsbevestiging",
+          "Verpakkingscontrole"
+        ],
+        "slug": "quality-control-inspection",
+        "image": "/images/services/quality-control-inspection.webp"
+      },
+      {
+        "title": "Privé-etiket en verpakking",
+        "audience": "Voor merken die een consistente klantervaring opbouwen.",
+        "points": [
+          "Coördinatie van logo en label",
+          "Aangepaste dozen en inserts",
+          "Goedkeuring van het verpakkingsmonster"
+        ],
+        "slug": "private-label",
+        "image": "/images/services/private-label.webp"
+      },
+      {
+        "title": "Dropshipping Fulfillment",
+        "audience": "Voor winkels verzenden individuele bestellingen zonder het houden van voorraad lokaal.",
+        "points": [
+          "Dagelijkse bestelafhandeling",
+          "Kies en pak in.",
+          "Wereldwijd traced shipping"
+        ],
+        "slug": "dropshipping-supplier",
+        "image": "/images/services/dropshipping-supplier.webp"
+      },
+      {
+        "title": "China 3PL Vervulling",
+        "audience": "Voor groeiende winkels die voorraadbeheer en meerdere SKUs.",
+        "points": [
+          "Inventaris ontvangen",
+          "Opslag van pakhuizen",
+          "Returns coördinatie"
+        ],
+        "slug": "3pl-fulfillment-services",
+        "image": "/images/services/3pl-fulfillment.webp"
+      },
+      {
+        "title": "Automatisch bestellen",
+        "audience": "Voor winkels klaar om repetitieve order overdracht te verminderen.",
+        "points": [
+          "Ordersynchronisatie opslaan",
+          "Fulfillment status updates",
+          "Tracking retour workflow"
+        ],
+        "slug": "automatic-order-fulfillment",
+        "image": "/images/services/order-automation.webp"
+      }
+    ],
+    "comparisonItems": [
+      [
+        "Meerdere afzonderlijke leveranciersgesprekken",
+        "Eén specifiek contactpunt voor alles"
+      ],
+      [
+        "Geen gegarandeerde kwaliteitscontroles vóór verzending",
+        "Volledige kwaliteitscontrole vóór elke verzending"
+      ],
+      [
+        "Beperkte, generieke verpakking",
+        "Aangepaste merk & private-label verpakkingsoplossingen"
+      ],
+      [
+        "Pakhuis en verzending door verschillende teams",
+        "End-to-end workflow volledig beheerd door ons eigen team"
+      ],
+      [
+        "Configureren van tracking hand-offs & vertraagde updates",
+        "Duidelijke, gestructureerde verzending en tracking updates"
+      ]
+    ],
+    "qcCapabilities": [
+      "SKU en variant",
+      "Hoeveelheid",
+      "Uiterlijk en afwerking",
+      "Grootte en gewicht",
+      "Verpakking en barcode",
+      "Laatste pakketcontrole"
+    ],
+    "advantages": [
+      {
+        "title": "Bron met helderheid",
+        "text": "Vergelijk leveranciers, monsters, MOQs & doorlooptijden",
+        "images": [
+          [
+            "/images/services/product-sourcing.webp",
+            "Product sourcing specialist vergelijken leverancier opties"
+          ],
+          [
+            "/images/services/dropshipping-supplier.webp",
+            "Leverancier producten bereid voor aankoop beoordeling"
+          ],
+          [
+            "/images/generated/product-sourcing-hero.webp",
+            "China sourcing team coördineren productmonsters"
+          ]
+        ]
+      },
+      {
+        "title": "Controleer vóór verzending",
+        "text": "Volledige kwaliteitskeuring vóór verzending",
+        "images": [
+          [
+            "/images/services/quality-control-inspection.webp",
+            "Kwaliteit inspecteur controleren producten voor verzending"
+          ],
+          [
+            "/images/quality-gallery/warehouse-package-check.jpg",
+            "Pakhuis team controleren product verpakking"
+          ],
+          [
+            "/images/generated/jw-quality-check-v2.png",
+            "JW kwaliteitscontrole specialist beoordelen van een item"
+          ]
+        ]
+      },
+      {
+        "title": "Voldoen aan één team",
+        "text": "Opslag, verpakking, verzending en tracking onder één workflow",
+        "images": [
+          [
+            "/images/services/3pl-fulfillment.webp",
+            "China magazijn uitvoering operatie"
+          ],
+          [
+            "/images/process/warehouse-picking-overhead.jpg",
+            "Pakhuispersoneel picking producten voor bestellingen"
+          ],
+          [
+            "/images/generated/jw-dispatch-v2.png",
+            "JW-team dat pakketten klaarmaakt voor verzending"
+          ]
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Oliver",
+        "country": "UK",
+        "flagSrc": "https://flagcdn.com/gb.svg",
+        "tag": "ORDENING",
+        "quote": "Yuri en het hele JW team zijn ongelooflijk georganiseerd, betrouwbare professionals. Als je elke maand honderden bestellingen beheert, zijn tracking en consistentie alles. Hun duidelijke workflow systeem houdt elke zending eenvoudig te volgen, vermindert miscommunicatie en bespaart me uren handmatig werk elke week. Ik maak me geen zorgen meer over de rotzooi in China."
+      },
+      {
+        "name": "Mia",
+        "country": "CA",
+        "flagSrc": "https://flagcdn.com/ca.svg",
+        "tag": "DAGELIJKSE STEUN",
+        "quote": "JW Ze beantwoorden snel, nemen de tijd om vragen te verduidelijken en communiceren soepel in het Engels terwijl we onze workflow voor vervulling opzetten."
+      },
+      {
+        "name": "Sophie",
+        "country": "FR",
+        "flagSrc": "https://flagcdn.com/fr.svg",
+        "tag": "PRODUKTIEZUUR",
+        "quote": "JW is een uitstekende vervullingpartner. Hun sourcing team luistert nauw naar onze eisen, biedt praktische oplossingen en houdt ons op de hoogte gedurende het hele proces."
+      }
+    ],
+    "faqs": [
+      [
+        "Welke vervullingdiensten biedt u aan?",
+        "Wij bieden end-to-end e-commerce vervullen diensten, waaronder product sourcing van geverifieerde Chinese fabrikanten, uitgebreide kwaliteitscontrole, wereldwijde verzending naar 150+ landen, print-on-demand voldoening, private label, en de VS magazijn distributie via onze Los Angeles faciliteiten. Van sourcing tot levering, wij behandelen uw volledige supply chain."
+      ],
+      [
+        "Heb ik een minimum bestelvolume nodig om te werken met JW DROPSHIPING?",
+        "Nee. In tegenstelling tot traditionele vervulling bedrijven die 100+ bestellingen/dag vereisen, werkt JW DROPSHIPING in elke fase - van uw eerste 10 bestellingen tot 1000+ per dag. We verwerken tot 30.000 bestellingen per dag over onze Hangzhou en Dongguan magazijnen, dus we schalen met u mee in plaats van u uit te sluiten bij het begin."
+      ],
+      [
+        "Naar welke landen gaat u?",
+        "Wij leveren internationale scheepvaart naar meer dan 150 landen over zes continenten, waaronder de Verenigde Staten, Canada, het Verenigd Koninkrijk, Australië, Duitsland, Frankrijk, Spanje, en markten in heel Europa, Azië en Zuid-Amerika. Wij behandelen douanedocumentatie en end-to-end tracking voor alle internationale bestemmingen via onze vertrouwde logistieke partners."
+      ],
+      [
+        "Kunt u helpen met private label en merkverpakking?",
+        "Ja. Wij bieden uitgebreide private label diensten, waaronder aangepaste verpakking ontwerp, merk inserts, product labeling, en white-label productie. Uw producten verzenden uitsluitend onder uw merknaam, zodat u directe klantrelaties kunt opbouwen. Wij beheren het hele private labelproces van concept tot productie en vervulling."
+      ],
+      [
+        "Met welke e-commerceplatforms integreer je?",
+        "We integreren met alle belangrijke e-commerce platforms, waaronder Shopify, WooCommerce, Amazon en andere platformen via API integratie. Bestellingen synchroniseren automatisch vanuit uw winkel naar ons voldoeningssysteem voor naadloze verwerking. Voor aangepaste platforms of unieke eisen maakt onze API directe integratie met uw bestaande infrastructuur mogelijk."
+      ]
+    ],
+    "stats": [
+      {
+        "value": "7",
+        "number": 7,
+        "suffix": "",
+        "label": "Jaren ervaring"
+      },
+      {
+        "value": "30%",
+        "number": 30,
+        "suffix": "%",
+        "label": "Kostenverlaging"
+      },
+      {
+        "value": "100+",
+        "number": 100,
+        "suffix": "+",
+        "label": "Verzendlijn"
+      },
+      {
+        "value": "1500+",
+        "number": 1500,
+        "suffix": "+",
+        "label": "DTC-merkkeuze"
+      }
+    ],
+    "sections": {
+      "heroKicker": "BETROUWBARE DROPSHIPPINGPARTNER IN CHINA",
+      "heroTitleLines": [
+        "Sourcing, kwaliteitscontrole en fulfillment vanuit China",
+        "Verlaag uw logistieke kosten"
+      ],
+      "heroLead": "Wij sourcen producten, controleren elke bestelling en verzenden rechtstreeks naar uw klanten. Zonder eigen voorraad of magazijnzorgen.",
+      "heroPrimary": "Vraag een gratis offerte aan",
+      "heroSecondary": "Zie hoe het werkt",
+      "heroProofLabel": "Kerndienstverplichtingen",
+      "workflowLabel": "JW WORKFLOW",
+      "watchVideo": "WATCH VIDEO",
+      "watchVideoLabel": "Bekijk de workflow video in een nieuw tabblad",
+      "videoLabel": "Magazijn verpakking workflow video",
+      "playLabel": "Magazijn verpakking workflow video afspelen",
+      "playTitle": "workflow video afspelen",
+      "operatingOverview": "Bedrijfsoverzicht",
+      "platforms": "Werkt met de platforms die je al verkoopt op",
+      "platformLabel": "Ondersteunde eCommerce-platforms",
+      "advantagesKicker": "Waarom kiezen voor JW Dropshipping?",
+      "advantagesTitle": "Eind-tot-eindcontrole: geen Midden- en kleinbedrijf",
+      "advantagesLead": "Bron, inspectie, pak en schip, volledig beheerd door ons eigen China magazijn team",
+      "whyLink": "Waarom JW Dropshipping",
+      "previousImage": "Vorige afbeelding",
+      "nextImage": "Volgende afbeelding",
+      "processKicker": "HOE HET WERKT",
+      "processTitle": "Van productlink naar gevolgde eindlevering",
+      "processLead": "5 eenvoudige stappen, volledig uitgevoerd door ons in-huis China team",
+      "processLink": "Hoe het werkt",
+      "servicesKicker": "KOREDIENSTEN",
+      "servicesTitle": "Wat wij doen voor uw winkel",
+      "servicesLead": "Begin met één dienst of verbind ze met één beheerde workflow.",
+      "bestFor": "Beste voor",
+      "exploreService": "Explore Service",
+      "compareServices": "Alle diensten vergelijken",
+      "differenceKicker": "DE JW-VERDELING",
+      "differenceTitle": "Een eenvoudigere, uniforme manier om vervulling vanuit China te beheren",
+      "differenceLead": "Skip gefragmenteerde hand-offs tussen afzonderlijke leveranciers, inspecteurs, magazijnen en scheepvaartteams. Werk met één enkel, gecoördineerd team.",
+      "fragmented": "Gefragmenteerde handoffs",
+      "typical": "Typisch Sourcing Agent",
+      "managed": "Eén beheerde workflow",
+      "jw": "JW Dropshipping",
+      "differenceMediaLabel": "Kwaliteitscontrolefoto's",
+      "differenceMedia": [
+        [
+          "Specialist Kwaliteitscontrole inspectie producten voor verzending",
+          "Productkeuring vóór verzending"
+        ],
+        [
+          "Inspecteur registratie product kwaliteit details",
+          "Inspectiegegevens"
+        ],
+        [
+          "Inspectie verpakking en verpakking",
+          "Verpakkingscontrole"
+        ]
+      ],
+      "qualityKicker": "KWALITEITSCONTROLE",
+      "qualityTitle": "Kwaliteitscontrole voordat producten China verlaten",
+      "qualityLead": "Inspecteer producten, varianten, verpakking en pakketgegevens voor verzending uit China.",
+      "qualityLink": "Kwaliteitscontrole onderzoeken",
+      "report": {
+        "label": "Voorbeeld kwaliteitscontrolerapport",
+        "eyebrow": "VOORBEELDRAPPORT",
+        "title": "Kwaliteitscontrole",
+        "summary": "Samenvatting van de inspectie vóór verzending",
+        "checked": "Gecheckt",
+        "sampling": "Steekproef",
+        "issues": "Problemen",
+        "passed": "geslaagd",
+        "photos": "Foto's",
+        "packaging": "Verpakking",
+        "barcode": "Barcode",
+        "status": "Status",
+        "verified": "Geverifieerd",
+        "matched": "Overeengekomen",
+        "approved": "Goedgekeurd voor verzending",
+        "checkpoints": "Controlepunten",
+        "items": [
+          "Variant match",
+          "Aantal",
+          "Controle afronden",
+          "Grootte & gewicht",
+          "Kartonnen etiket",
+          "Laatste pakket"
+        ],
+        "passedCount": "50 geslaagd",
+        "issueCount": "0 kwesties"
+      },
+      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackTitle": "Wat Sellers zeggen over werken met JW",
+      "feedbackLead": "Echte feedback van verkopers met behulp van JW voor sourcing, vervulling en branding ondersteuning.",
+      "fiveStars": "Vijf sterren overzicht",
+      "feedbackLink": "Lees meer Verhalen van de verkoper",
+      "faqKicker": "VRAAGSTUKKEN",
+      "faqTitle": "Wat te weten voordat u begint",
+      "faqLead": "Snelle antwoorden over sourcing, minimale hoeveelheden, kwaliteitscontroles en voldoening prijzen.",
+      "quoteKicker": "HAAL EEN GRATIS QUOTE",
+      "quoteTitle": "Begin met uw zakelijke gegevens",
+      "quoteLead": "Vertel ons over uw producten, uw winkel en uw vervulling doelen. Ons team zal uw wensen beoordelen en u een duidelijk, op maat gemaakt volgende stapplan sturen.",
+      "quoteLabel": "Wat gebeurt er nu?",
+      "quotePromises": [
+        [
+          "Basisgegevens delen",
+          "Een productlink of store URL is genoeg om te beginnen."
+        ],
+        [
+          "Beoordeeld door ons eigen team",
+          "Uw aanvraag zal rechtstreeks worden behandeld door onze China-gebaseerde vervulling specialisten."
+        ],
+        [
+          "Ontvang duidelijke volgende stappen",
+          "We zullen antwoorden met bruikbare informatie en prijsadvies om uw project vooruit te helpen."
+        ]
+      ]
+    }
+  }
+}

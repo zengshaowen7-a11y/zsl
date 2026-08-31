@@ -1,0 +1,152 @@
+{
+  "About": {
+    "departments": [
+      [
+        "Accountbeheer",
+        "Een benoemde contactpersoon coördineert prioriteiten, updates en uitzonderingen tijdens de volledige orderreis."
+      ],
+      [
+        "Aankopen van producten",
+        "Leverancier onderzoek, citaten, monsters, MOQ, doorlooptijd en aanpassing worden vergeleken voordat de verbintenis."
+      ],
+      [
+        "Kwaliteitscontrole",
+        "Overeengekomen controlepunten maken van producteisen een routine voor ontvangst en inspectie vóór verzending."
+      ],
+      [
+        "Opslag",
+        "Inventaris, verpakkingsmaterialen, picking regels en order handoffs worden georganiseerd rond elke SKU."
+      ],
+      [
+        "Coördinatie van de scheepvaart",
+        "Routes worden geselecteerd per bestemming, producttype, snelheid, tracking en de klantbelofte."
+      ]
+    ],
+    "principles": [
+      [
+        "Het werk zichtbaar maken",
+        "Belangrijke beslissingen, controlepunten en uitzonderingen moeten begrijpelijk zijn buiten een chatbericht."
+      ],
+      [
+        "Eigenschap definiëren",
+        "Elke fase heeft een benoemde eigenaar, een goedkeuringspunt en een duidelijke volgende actie nodig."
+      ],
+      [
+        "Bescherm de belofte van de klant",
+        "Snelheid is alleen van belang wanneer het juiste product in de verwachte conditie en verpakking vertrekt."
+      ],
+      [
+        "Verbeteren met het merk",
+        "De operationele routine moet evolueren naarmate producten, markten, verpakkingen en ordervolumes veranderen."
+      ]
+    ],
+    "teamRoles": [
+      [
+        "Accountleiding",
+        "Uw dagelijkse aanspreekpunt en eigenaar van cross-team follow-up."
+      ],
+      [
+        "Sourcing specialist",
+        "Coördineert fabrieken, citaten, monsters en herhaalde productie."
+      ],
+      [
+        "QC & magazijnlood",
+        "Eigenaar van de ontvangende normen, inspecties, inventaris en verpakkingsregels."
+      ],
+      [
+        "Logistieke specialist",
+        "Bekijk routes, tracking prestaties en levering uitzonderingen."
+      ]
+    ],
+    "questions": [
+      [
+        "Kunnen we het echte team en magazijn zien voordat we samenwerken?",
+        "Ja. Deze pagina is ontworpen om een echte magazijntour, teamfotografie en externe verificatie links te houden. Deze activa zullen na de levering van het bedrijf worden toegevoegd en worden goedgekeurd."
+      ],
+      [
+        "Wie is er verantwoordelijk voor onze rekening?",
+        "Elk account moet een benoemde contactpersoon hebben die de inkoop, kwaliteit, magazijn en verzendteams coördineert, zodat de verantwoordelijkheid niet verdwijnt tussen afdelingen."
+      ],
+      [
+        "Hoe communiceert u kwaliteitsproblemen?",
+        "In het operationele toepassingsgebied moeten inspectiepunten en bewijsvereisten worden vastgesteld vóór de lancering. Wanneer een uitzondering wordt gemaakt, moet de update context, foto's, indien relevant en praktische opties bevatten."
+      ],
+      [
+        "Kan de workflow veranderen naarmate onze winkel groeit?",
+        "Ja. Een nuttige vervulling workflow kan beginnen met sourcing en directe verzending, voeg dan inventaris, merkverpakking, automatisering of nieuwe levering routes als de vraag meer voorspelbaar wordt."
+      ],
+      [
+        "Welke bedrijfsgegevens kunnen we verifiëren?",
+        "De laatste pagina toont de geregistreerde bedrijfsnaam, kantoor- en magazijnadressen, onafhankelijk beoordelingsprofiel en officiële sociale of oprichter links nadat ze zijn verstrekt en geverifieerd."
+      ]
+    ],
+    "media": {
+      "licensed": "TIJDELIJKE LIJDEN",
+      "needed": "VENNOOTSCHAPSMATERIAAL NODIG"
+    },
+    "hero": {
+      "kicker": "DE MENS EN HET PROCES VOOR ELKE PARKEL",
+      "title": "Een vervullingpartner moet zichtbaar zijn voordat hij wordt vertrouwd.",
+      "lead": "JW Dropshipping brengt leveranciercoördinatie, kwaliteitscontroles, magazijnuitvoering en wereldwijde levering tot één verantwoord operationeel team voor onafhankelijke e-commercemerken.",
+      "primary": "Meet your fullment team",
+      "secondary": "Zien hoe we werken",
+      "points": [
+        "Ondersteuning onder menselijke leiding",
+        "Gedocumenteerde controlepunten",
+        "Wissen eigendom"
+      ],
+      "proofLabel": "Gecontroleerde bedrijfsgegevens te verstrekken"
+    },
+    "story": {
+      "kicker": "WAAROM JW DROPSHIPPING BESTAAT",
+      "title": "Onafhankelijke merken hebben meer nodig dan een trackingnummer.",
+      "paragraphs": [
+        "Wanneer fabrieken, inspectie, inventaris en verzending worden beheerd door verschillende contacten, kan een klein misverstand snel een klantgericht probleem worden. Onze rol is om die handoffs te verbinden met een operationele routine met een duidelijke eigenaar.",
+        "Dat betekent het bevestigen van wat \"klaar om te verzenden\" eigenlijk betekent voor uw product, het documenteren van de details die er toe doen, en het houden van beslissingen dicht bij de mensen die het fysieke werk doen."
+      ],
+      "link": "Verken onze service scope",
+      "noteTitle": "Oprichter verhaal nodig",
+      "note": "Zorg voor het echte oprichtingsjaar, origineel probleem, eerste magazijn mijlpaal en huidige richting."
+    },
+    "departmentsSection": {
+      "kicker": "ÉÉN TIJDSCHRIFT · VIJF SPECIALISTEN",
+      "title": "Elke overdracht is van iemand die het elke dag doet.",
+      "lead": "Klanten communiceren met één verantwoordelijk leider, terwijl gespecialiseerde teams het werk achter sourcing, QC, inventaris, verpakking en levering bezitten."
+    },
+    "facility": {
+      "kicker": "BINNEN DE WERKVLOER",
+      "title": "Zie waar bestellingen worden ontvangen, gecontroleerd en verzonden.",
+      "lead": "Elke etappe heeft een duidelijke eigenaar en een zichtbare handoff."
+    },
+    "principlesSection": {
+      "kicker": "HOE WE WILLEN DAT HET PARTNERSCHAP ZICH VOELT",
+      "title": "Duidelijk genoeg om het te begrijpen. Flexibel genoeg om te groeien.",
+      "lead": "Deze principes geven vorm aan hoe het team scopes werkt, communiceert problemen en verbetert terugkerende operaties."
+    },
+    "team": {
+      "kicker": "EEN TEAM, GOEDE EIGENDOM",
+      "title": "Weet wie de eigenaar is van elke fase.",
+      "lead": "Uw account lead verbindt de specialisten die verantwoordelijk zijn voor sourcing, kwaliteit, magazijnwerk en levering.",
+      "portrait": "PORTRAIT {number} NODIG"
+    },
+    "verification": {
+      "kicker": "VERIFY HET BEDRIJFSLEVEN",
+      "title": "Maak het gemakkelijk voor een serieuze koper om te controleren met wie ze werken.",
+      "lead": "Publiceer geraden gegevens niet. Voeg pas het volgende toe nadat het bedrijf de exacte juridische en operationele details heeft bevestigd.",
+      "profile": "VENNOOTSCHAPSPROFIEL",
+      "details": "Officiële gegevens te verstrekken",
+      "link": "LINK {number}"
+    },
+    "faq": {
+      "kicker": "VOORDAT WE SAMEN WERKEN",
+      "title": "Vragen die een zorgvuldig merk moet stellen.",
+      "lead": "Vertrouwen moet komen van zichtbare mensen, gedefinieerd werk en controleerbare bedrijfsinformatie.",
+      "button": "Vraag het ons team."
+    },
+    "final": {
+      "kicker": "KLAAR OM UW OPERATIE TE BESPREKEN?",
+      "title": "Ontmoet de mensen die verantwoordelijk zijn voor uw orders.",
+      "button": "Een gesprek starten"
+    }
+  }
+}

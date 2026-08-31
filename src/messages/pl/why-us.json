@@ -1,0 +1,180 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      [
+        "Wielokrotne rozmowy z dostawcami",
+        "Jeden dedykowany kontakt operacyjny"
+      ],
+      [
+        "Cytat bez wspólnej specyfikacji",
+        "Opcje dostawcy w porównaniu na tym samym skrócie"
+      ],
+      [
+        "Produkty wysyłane bez wyraźnych kontroli",
+        "Uzgodnione QC przed kontynuacją zapasów lub zamówień"
+      ],
+      [
+        "Decyzje dotyczące pakowania ogólnego",
+        "Dokumentowane zasady znakowania i pakowania"
+      ],
+      [
+        "Oddzielne zespoły magazynowe i żeglugowe",
+        "Jeden podłączony strumień zleceń"
+      ],
+      [
+        "Śledzenie udostępniane jako wiadomość końcowa",
+        "Uporządkowana wysyłka i aktualizacje wyjątków"
+      ]
+    ],
+    "principles": [
+      [
+        "Jeden zespół odpowiedzialny",
+        "Dostawca, magazyn, pakowanie i wysyłka kontekst pozostaje z jednym Chińskim zespołem operacyjnym."
+      ],
+      [
+        "Kontrole przed podjęciem decyzji",
+        "Odpowiednie dane dotyczące produktu i paczki są sprawdzane w uzgodnionych punktach zatwierdzania, a nie po skargach klientów."
+      ],
+      [
+        "Dowody z kontekstem",
+        "Problemy dzielą się z ilością, widocznymi dowodami i potrzebnymi decyzjami Twojego zespołu."
+      ],
+      [
+        "Zasady tej skali",
+        "Zatwierdzone SKUs, warianty, opakowania i wyjątki stają się powtarzalnymi instrukcjami codziennego wypełniania."
+      ]
+    ],
+    "supportCards": [
+      [
+        "Jeden wyraźny kontakt",
+        "Produkt, QC i kontekst wysyłki pozostaje z jednym kontem."
+      ],
+      [
+        "Wczesna kontrola ryzyka",
+        "Dane dotyczące próbek, zapasów i pakowania są przeglądane przed przemieszczeniem objętości."
+      ],
+      [
+        "Wspólne notatki o zamówieniach",
+        "Zatwierdzenia, wyjątki i wymagania pozostają udokumentowane do powtarzania pracy."
+      ],
+      [
+        "Gotowy do spełnienia",
+        "Reguły SKU, opakowania i przekaz śledzenia są przygotowywane przed skalą."
+      ]
+    ],
+    "fitItems": [
+      "Chcesz jeden kontakt w całym zaopatrzeniu, QC i spełnienie.",
+      "Spójność produktu ma więcej znaczenia niż znalezienie najniższej widocznej ceny.",
+      "Potrzebujesz markowego pakowania lub udokumentowanych zasad zamówienia.",
+      "Twój sklep testuje teraz, ale potrzebuje przepływu pracy, który może rosnąć."
+    ],
+    "notFitItems": [
+      "Chcesz tylko anonimowy wykaz produktów bez recenzji.",
+      "Oczekujesz, że każdy produkt i miejsce przeznaczenia użyje jednej stałej stawki wysyłki.",
+      "Nie chcesz zatwierdzać próbek, specyfikacji ani wydawać decyzji."
+    ],
+    "faqs": [
+      [
+        "Co sprawia, że JW różni się od dostawcy rynku?",
+        "JW może połączyć koordynację dostawców, odbiór, kontrole jakości, inwentaryzacja, pakowania i wysyłki poprzez jeden zakres działania. Dokładne obowiązki są potwierdzone przed rozpoczęciem pracy."
+      ],
+      [
+        "Czy będę miał jeden oddany kontakt?",
+        "Główny kontakt kont utrzymuje produkt, magazyn i kontekst wysyłki połączone. Operacyjni specjaliści mogą wspierać pracę bez konieczności ponownego rozpoczęcia rozmowy przy każdym przekazaniu."
+      ],
+      [
+        "Zawsze wybierasz najtańszego dostawcę?",
+        "Nie. Opcje dostawców należy porównywać z tym samym wymogiem produktu, w tym z jakością, MOQ, czasem wiodącym, pakowaniem i wypełnianiem."
+      ],
+      [
+        "W jaki sposób przekazywane są kwestie jakości?",
+        "Uzgodniony zakres inspekcji określa, co jest sprawdzane. W przypadku wykrycia problemu, towary, których dotyczy wniosek, mogą być przechowywane i udostępniane wraz z dowodami i decyzją, o którą wystąpiono."
+      ],
+      [
+        "Czy zakres usług może rosnąć wraz z moim sklepem?",
+        "Tak. Projekt może rozpocząć się od zaopatrywania lub inspekcji, a następnie dodać inwentaryzację, opakowania niestandardowe, automatyzacji zamówień i globalnego spełnienia."
+      ]
+    ],
+    "hero": {
+      "kicker": "Dlaczego warto wybrać JW Dropshipping?",
+      "title": "Przydzielamy jeden dedykowany zespół z Chin do waszego porządku - w pełni odpowiedzialny za jakość, terminy i komunikację na każdym etapie.",
+      "lead": "JW łączy pozyskiwanie, kontrolę jakości, inwentaryzację, markowe pakowanie i dostawy, dzięki czemu Twój zespół zarządza mniejszą ilością przekazów i podejmuje bardziej świadome decyzje.",
+      "primary": "Porozmawiaj z zespołem.",
+      "secondary": "Zobacz różnicę",
+      "proofs": [
+        "Wsparcie konta na żywo",
+        "Uzgodnione punkty kontrolne QC",
+        "Wyczyść przekazanie zamówienia"
+      ],
+      "videoLabel": "Zespół operacyjny JW China koordynujący przegląd produktu, pakowanie i sortowanie paczek"
+    },
+    "compare": {
+      "kicker": "WZÓR OPERACYJNY",
+      "title": "Mniej pościgu. Bardziej widoczna własność.",
+      "lead": "Różnica nie jest dłuższą listą usług. W ten sposób decyzje i przekazanie pozostają połączone wokół tego samego produktu i porządku.",
+      "typical": "Typowy środek źródłowy",
+      "jw": "JW Dropshipping"
+    },
+    "principlesSection": {
+      "kicker": "JAK POWINNA WYGLĄDAĆ PRACA Z JW",
+      "title": "Jasne, praktyczne wsparcie, które możesz używać każdego dnia.",
+      "lead": "Cztery zasady działania kształtują usługę przed rozpoczęciem codziennej objętości."
+    },
+    "evidence": {
+      "imageAltOne": "Zespół JW rejestrujący wyniki kontroli produktu",
+      "imageAltTwo": "Zespół JW sprawdza jakość produktu przed wysyłką",
+      "kicker": "ZEZWOLENIE OPERACYJNE NADZORCZE",
+      "title": "Wyczyść decyzje QC.",
+      "lead": "Zamiast niejasnego komunikatu \"QC przeszedł\", zakres inspekcji może określić, co zostało sprawdzone, co nie pasuje i co wymaga zatwierdzenia.",
+      "review": "PRZEGLĄD QC",
+      "checked": "Kontrola",
+      "sampling": "Kontrola wyrywkowa",
+      "passed": "Przeszedł",
+      "issues": "Kwestie",
+      "packaging": "Rodzaj opakowania",
+      "barcode": "Kod kreskowy",
+      "status": "Stan",
+      "verified": "Zweryfikowane",
+      "matched": "Pasujące",
+      "approved": "Zatwierdzone do wysyłki",
+      "checks": [
+        "Pasujący wariant",
+        "Ilość",
+        "Kontrola końcowa",
+        "Etykieta kartonowa"
+      ],
+      "passedCount": "Przeszedł 50",
+      "issueCount": "0 zagadnień",
+      "link": "Poznaj kontrolę jakości"
+    },
+    "support": {
+      "kicker": "LIWE WSPARCIE FINANSOWE",
+      "title": "Jedno przekazanie na zamówienie.",
+      "lead": "Twój główny kontakt łączy pytania dostawców, działań magazynowych i aktualizacji wysyłki. Oznacza to mniej powtarzających się wyjaśnień i jaśniejszego właściciela, gdy coś wymaga decyzji.",
+      "points": [
+        "Jeden główny punkt komunikacji",
+        "Udokumentowane decyzje i zasady pakowania",
+        "Wyjątki wynikające z restrukturyzacji i uporządkowanej likwidacji"
+      ],
+      "imageAlt": "JW magazyn i zespół wsparcia konta"
+    },
+    "fit": {
+      "kicker": "CZY JW JEST W PORZĄDKU?",
+      "title": "Przydatne partnerstwo zaczyna się od zbieżnych oczekiwań.",
+      "lead": "Wyrażenie się na temat dopasowania jest cenniejsze niż obietnica tego samego modelu usług dla każdego sklepu.",
+      "good": "JW może być dobry, gdy",
+      "bad": "Może nie pasować, gdy"
+    },
+    "faq": {
+      "kicker": "INFORMACJE WAŻNE PRZED ZASTOSOWANIEM LEKU CHOOSE",
+      "title": "Pytania o pracę z JW.",
+      "lead": "Zacznij od produktu i bieżącego problemu operacyjnego dla najodpowiedniejszej odpowiedzi."
+    },
+    "final": {
+      "kicker": "START WITH YOUR CURRENT BOTTLENEK",
+      "title": "Sprawdź, czy JW pasuje do twojej operacji.",
+      "lead": "Podziel się połączeniem produktów, rynkami docelowymi i tym, co spowalnia Twój zespół. Zalecimy kolejny praktyczny krok.",
+      "button": "Uzyskaj bezpłatną wycenę"
+    }
+  }
+}

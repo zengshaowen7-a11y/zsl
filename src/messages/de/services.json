@@ -1,0 +1,163 @@
+{
+  "ServicesOverview": {
+    "startingPoints": [
+      [
+        "QUELLE",
+        "Finden Sie Produkte & Lieferanten",
+        "Finden, vergleichen und validieren Sie Produkte, bevor Sie sich zum Inventar verpflichten.",
+        "/services/product-sourcing"
+      ],
+      [
+        "VOLLSTÄNDIG",
+        "Versandaufträge zuverlässig",
+        "Verbinden Sie Bestellabwicklung, Verpackung und globale Lieferung in einem Workflow.",
+        "/services/dropshipping-supplier"
+      ],
+      [
+        "KAPITEL",
+        "Skalieren Sie Ihr Inventar",
+        "Erhalten Sie Massengut, organisieren Sie SKUs und füllen Sie es von einem China-Lager aus.",
+        "/services/3pl-fulfillment-services"
+      ],
+      [
+        "BRAND",
+        "Bauen Sie Ihre Marke",
+        "Koordinieren Sie Etiketten, Verpackungen, Beilagen und wiederholen Sie die Produktion.",
+        "/services/private-label"
+      ]
+    ],
+    "proofItems": [
+      [
+        "Empfangsaufzeichnungen",
+        "Eingangsmengen und sichtbare Diskrepanzen werden aufgezeichnet, bevor der Bestand akzeptiert wird."
+      ],
+      [
+        "QC Checkpoints vereinbart",
+        "Produkte, Varianten, Etiketten und Verpackungen werden gegen den genehmigten Umfang geprüft."
+      ],
+      [
+        "Abwicklung auf Auftragsebene",
+        "Kommissionierung, Verpackung und Versand folgen einem dokumentierten Workflow für jedes Geschäft."
+      ],
+      [
+        "Verfolgtes Handoff",
+        "Versandstatus und Tracking werden über die vereinbarte Betriebsroutine zurückgegeben."
+      ]
+    ],
+    "workflowSteps": [
+      [
+        "01",
+        "Teilen Sie Ihre Anforderungen",
+        "Senden Sie Produktlinks, Zielmärkte, Bestellvolumen und Branding-Anforderungen."
+      ],
+      [
+        "02",
+        "Bestätigen Sie den Leistungsumfang",
+        "Wir definieren Beschaffungs-, Inspektions-, Inventar-, Verpackungs- und Lieferverantwortung."
+      ],
+      [
+        "03",
+        "Bereiten Sie Produkte und Systeme vor",
+        "Muster, Verpackung, SKUs und der Bestellvorgang werden überprüft."
+      ],
+      [
+        "04",
+        "Tägliches Fulfillment",
+        "Bestellungen werden über den vereinbarten Workflow empfangen, abgeholt, geprüft, verpackt und versandt."
+      ],
+      [
+        "05",
+        "Verfolgen und verbessern",
+        "Das Tracking wird zurückgegeben und wiederkehrende Probleme werden überprüft, wenn Produkte und Volumen wachsen."
+      ]
+    ],
+    "faqs": [
+      [
+        "Welche Fulfillment-Services kann ich kombinieren?",
+        "Sie können nur mit Sourcing oder Inspektion beginnen oder Sourcing, Warehousing, kundenspezifische Verpackung, Auftragserfüllung und verfolgte Lieferung in einem Betriebsbereich kombinieren."
+      ],
+      [
+        "Können Sie mit meinen bestehenden Lieferanten zusammenarbeiten?",
+        "Ja. Wir können Waren von einem bestehenden Lieferanten erhalten und uns auf Inspektion, Lagerung, Verpackung und Versand konzentrieren, vorbehaltlich eines klaren Übergabeprozesses."
+      ],
+      [
+        "Unterstützen Sie Low-Volume-Stores?",
+        "Die Eignung hängt vom Produkttyp, den Handhabungsanforderungen und den Zielmärkten ab. Teilen Sie Ihren aktuellen Volumen- und Wachstumsplan, damit wir ein praktisches Startmodell empfehlen können."
+      ],
+      [
+        "Wie wird die Produktqualität überprüft?",
+        "Der Inspektionsumfang wird vor Beginn des Betriebs vereinbart. Es kann Menge, Varianten, Aussehen, Grundfunktion, Verpackung und Endbestellgenauigkeitsprüfungen umfassen."
+      ],
+      [
+        "Können Sie Markenverpackungen anbieten?",
+        "Ja. Optionen können Etiketten, Karten, Taschen, Kisten und Beilagen umfassen, abhängig von Menge, Lieferantenfähigkeit und Produktionsvorlaufzeit."
+      ],
+      [
+        "In welche Länder können Sie versenden?",
+        "Wir unterstützen wichtige internationale Märkte durch verfolgte Schifffahrtsrouten. Die beste Option hängt von Ziel, Produkttyp, Paketgewicht und Lieferziel ab."
+      ],
+      [
+        "Wie bekomme ich ein Angebot?",
+        "Senden Sie Ihren Produktlink oder Ihre Spezifikation, Zielmärkte, erwartetes Bestellvolumen und Verpackungsanforderungen. Wir werden den Umfang überprüfen und den nächsten Schritt empfehlen."
+      ]
+    ],
+    "hero": {
+      "kicker": "CHINA SOURCING & FULFILLMENT SERVICES",
+      "title": "Ein China-Team für Sourcing, QC und globales Fulfillment.",
+      "lead": "Wählen Sie die Unterstützung, die Ihr Geschäft heute benötigt, und verbinden Sie dann Beschaffung, Inspektion, Verpackung, Lagerhaltung und weltweiten Versand, während Ihr Betrieb wächst.",
+      "primary": "Kostenloses Angebot anfordern",
+      "secondary": "Erkundungsdienste",
+      "benefitsLabel": "Serviceleistungen",
+      "benefits": [
+        "Unterstützung von Human Accounts",
+        "Klarer Dienstleistungsumfang",
+        "QC vor dem Versand"
+      ],
+      "imageAlt": "JW Fulfillment Team erhält Inventar in einem China-Lager",
+      "quickNavLabel": "Wählen Sie einen Service nach Geschäftsziel"
+    },
+    "catalog": {
+      "kicker": "DIENSTLEISTUNGEN, DIE ZUSAMMEN GEBAUT WERDEN",
+      "title": "Beginnen Sie mit dem Engpass in Ihrer Operation.",
+      "lead": "Nutzen Sie einen fokussierten Service oder kombinieren Sie ihn zu einem vernetzten China Fulfillment Workflow.",
+      "service": "SERVICE {number}",
+      "explore": "Erkundungsdienst"
+    },
+    "comparison": {
+      "kicker": "WÄHLEN SIE DEN RECHTSEN STARTPUNKT",
+      "title": "Vergleichen Sie den Leistungsumfang auf einen Blick.",
+      "lead": "Jeder Dienst löst einen anderen Betriebsbedarf. Ihr Zitat kann mehr als eins kombinieren.",
+      "headers": [
+        "Dienst",
+        "Am besten für",
+        "Bestandsaufnahme",
+        "Branding",
+        "Was ist vorzubereiten"
+      ]
+    },
+    "process": {
+      "kicker": "EIN BETRIEBSWERKFLOW",
+      "title": "Wie sich unsere Dienste verbinden.",
+      "lead": "Jedes Projekt beginnt mit einem definierten Umfang und durchläuft fünf sichtbare Phasen."
+    },
+    "proof": {
+      "imageAlt": "JW-Team prüft Produkte vor der Erfüllung",
+      "badge": "sichtbare Betriebskontrollpunkte",
+      "kicker": "VORVERSPRECHEN",
+      "title": "Betriebsprüfungen, die Sie in den Dienst einbauen können.",
+      "lead": "Ein zuverlässiger Workflow wird durch seine Checkpoints, Aufzeichnungen und Übergaben definiert, nicht durch dekorative Ansprüche.",
+      "link": "Entdecken Sie die Qualitätskontrolle"
+    },
+    "faq": {
+      "kicker": "HÄNFTIGE FRAGE",
+      "title": "Was Sie wissen sollten, bevor Sie anfangen",
+      "lead": "Schnelle Antworten zu Leistungsumfang, Lieferanten, Bestellvolumen, Qualitätskontrollen und Markenverpackungen."
+    },
+    "final": {
+      "kicker": "START MIT IHREM WÄHRENDIGEN BOTTLENECK",
+      "title": "Sehen Sie, ob JW zu Ihrer Operation passt.",
+      "lead": "Teilen Sie einen Produktlink, Zielmärkte und was Ihr Team verlangsamt. Wir werden einen praktischen nächsten Schritt empfehlen.",
+      "button": "Kostenloses Angebot anfordern"
+    }
+  }
+}

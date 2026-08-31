@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 
 const countries = [
   { iso: "af", name: "Afghanistan", code: "+93" },
@@ -108,11 +109,19 @@ const countries = [
 ];
 
 export default function PhoneCountryInput({ placeholder = "WhatsApp or phone number", initialIso = "af" }) {
-  const [selected, setSelected] = useState(() => countries.find((country) => country.iso === initialIso) || null);
+  const locale = useLocale();
+  const t = useTranslations("ContactForm");
+  const displayNames = new Intl.DisplayNames([locale], { type: "region" });
+  const localizedCountries = countries.map((country) => ({
+    ...country,
+    name: displayNames.of(country.iso.toUpperCase()) || country.name,
+  }));
+  const [selectedIso, setSelectedIso] = useState(initialIso);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const rootRef = useRef(null);
-  const filtered = countries.filter((country) => `${country.name} ${country.code}`.toLowerCase().includes(query.toLowerCase()));
+  const selected = localizedCountries.find((country) => country.iso === selectedIso) || null;
+  const filtered = localizedCountries.filter((country) => `${country.name} ${country.code}`.toLowerCase().includes(query.toLowerCase()));
 
   useEffect(() => {
     const onPointerDown = (event) => {
@@ -132,11 +141,11 @@ export default function PhoneCountryInput({ placeholder = "WhatsApp or phone num
             <img src={`https://flagcdn.com/w40/${selected.iso}.png`} alt="" loading="lazy" />
             <span>{selected.name}</span>
             <strong>{selected.code}</strong>
-          </> : <span>Select code</span>}
+          </> : <span>{t("selectCode")}</span>}
         </button>
         {open && (
           <div className="fh-phone-menu">
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search" aria-label="Search country" />
+            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t("search")} aria-label={t("searchCountry")} />
             <div>
               {filtered.map((country) => (
                 <button
@@ -144,7 +153,7 @@ export default function PhoneCountryInput({ placeholder = "WhatsApp or phone num
                   key={`${country.iso}-${country.code}`}
                   type="button"
                   onClick={() => {
-                    setSelected(country);
+                    setSelectedIso(country.iso);
                     setOpen(false);
                     setQuery("");
                   }}

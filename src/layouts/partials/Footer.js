@@ -1,11 +1,14 @@
-import { getFulfillmentCopy } from "@config/fulfillment-content";
-import { serviceCatalog } from "@config/service-catalog";
+import { getServiceCatalog } from "@config/service-catalog";
 import Logo from "@components/Logo";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { FiGlobe, FiMail, FiMapPin, FiMessageCircle, FiPhone } from "react-icons/fi";
 
 export default function Footer() {
-  const { footer, nav } = getFulfillmentCopy("en");
+  const locale = useLocale();
+  const t = useTranslations("Footer");
+  const navT = useTranslations("Navigation");
+  const serviceCatalog = getServiceCatalog(locale);
 
   return (
     <footer className="ff-footer">
@@ -13,40 +16,40 @@ export default function Footer() {
         <div className="ff-footer-main">
           <div className="ff-footer-brand">
             <Logo href="/" className="jw-footer-lockup" />
-            <p>{footer.lead}</p>
+            <p>{t("lead")}</p>
             <div>
-              <span><FiGlobe />Global fulfillment</span>
-              <span><FiMessageCircle />Operations Team Support</span>
+              <span><FiGlobe />{t("globalFulfillment")}</span>
+              <span><FiMessageCircle />{t("operationsSupport")}</span>
             </div>
           </div>
           <div>
-            <h3>{footer.services}</h3>
+            <h3>{t("services")}</h3>
             {serviceCatalog.slice(0, 8).map((service) => (
               <Link href={`/services/${service.slug}`} key={service.id}>{service.menuTitle}</Link>
             ))}
           </div>
           <div>
-            <h3>{footer.company}</h3>
-            <Link href="/">{nav.home}</Link>
-            <Link href="/services">{nav.services}</Link>
-            <Link href="/how-it-works">How It Works</Link>
-            <Link href="/why-us">Why JW Dropshipping</Link>
-            <Link href="/testimonials">Testimonials</Link>
-            <Link href="/contact">Contact</Link>
+            <h3>{t("company")}</h3>
+            <Link href="/">{navT("home")}</Link>
+            <Link href="/services">{navT("services")}</Link>
+            <Link href="/how-it-works">{navT("howItWorks")}</Link>
+            <Link href="/why-us">{navT("whyUs")}</Link>
+            <Link href="/testimonials">{navT("testimonials")}</Link>
+            <Link href="/contact">{navT("contact")}</Link>
           </div>
           <div className="ff-footer-contact">
-            <h3>Contact Us</h3>
+            <h3>{t("contactUs")}</h3>
             <div className="ff-footer-contact-list">
-              <p><FiMessageCircle aria-hidden="true" /><span><strong>WhatsApp</strong>+86 191 5771 1156</span></p>
-              <p><FiPhone aria-hidden="true" /><span><strong>WeChat</strong>JW-Dropshipping-001</span></p>
-              <p><FiMail aria-hidden="true" /><span><strong>Email</strong>hello@jwdropshipping.com</span></p>
-              <p><FiMapPin aria-hidden="true" /><span><strong>Our Location</strong>Room 1208, Building A, Future Supply Chain Center, Hangzhou, Zhejiang, China</span></p>
+              <p><FiMessageCircle aria-hidden="true" /><span><strong>{t("whatsapp")}</strong>+86 191 5771 1156</span></p>
+              <p><FiPhone aria-hidden="true" /><span><strong>{t("wechat")}</strong>JW-Dropshipping-001</span></p>
+              <p><FiMail aria-hidden="true" /><span><strong>{t("email")}</strong>hello@jwdropshipping.com</span></p>
+              <p><FiMapPin aria-hidden="true" /><span><strong>{t("locationLabel")}</strong>{t("location")}</span></p>
             </div>
           </div>
         </div>
         <div className="ff-footer-bottom">
-          <p>{footer.rights}</p>
-          <p>Product sourcing · Quality control · Global fulfillment</p>
+          <p>{t("rights")}</p>
+          <p>{t("serviceSummary")}</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,163 @@
+{
+  "ServicesOverview": {
+    "startingPoints": [
+      [
+        "SOURCE",
+        "Znajdź produkty i dostawców",
+        "Znajdź, porównaj i weryfikuj produkty przed zobowiązaniem się do inwentaryzacji.",
+        "/services/product-sourcing"
+      ],
+      [
+        "FULFILL",
+        "Zamówienia statków niezawodnie",
+        "Łączenie obsługi zamówień, pakowania i dostawy globalnej w jednym obiegu pracy.",
+        "/services/dropshipping-supplier"
+      ],
+      [
+        "SCALE",
+        "Przeskaluj spis",
+        "Otrzymuj hurtowe akcje, organizuj SKUs i wypełnij z chińskiego magazynu.",
+        "/services/3pl-fulfillment-services"
+      ],
+      [
+        "BRAND",
+        "Zbuduj swoją markę",
+        "Koordynować etykiety, opakowania, wkładki i powtórzyć produkcję.",
+        "/services/private-label"
+      ]
+    ],
+    "proofItems": [
+      [
+        "Rejestry odbioru",
+        "Ilości przychodzące i widoczne rozbieżności są rejestrowane przed przyjęciem zapasów."
+      ],
+      [
+        "Uzgodnione punkty kontrolne QC",
+        "Produkty, warianty, etykiety i opakowania są sprawdzane pod kątem zatwierdzonego zakresu."
+      ],
+      [
+        "Obsługa na poziomie zamówień",
+        "Zbieranie, pakowanie i wysyłanie następuje po jednym udokumentowanym przepływie pracy dla każdego sklepu."
+      ],
+      [
+        "Śledzone przekazanie",
+        "Status transportowy i namierzanie są zwracane przez uzgodnione procedury operacyjne."
+      ]
+    ],
+    "workflowSteps": [
+      [
+        "01",
+        "Podziel się swoimi wymaganiami",
+        "Wyślij linki produktów, rynki docelowe, wolumen zamówień i potrzeby marki."
+      ],
+      [
+        "02",
+        "Potwierdzenie zakresu usług",
+        "Określamy obowiązki w zakresie zaopatrzenia, inspekcji, inwentaryzacji, pakowania i dostawy."
+      ],
+      [
+        "03",
+        "Przygotowanie produktów i systemów",
+        "Próbki, opakowania, SKUs i proces przekazania zamówienia są poddawane przeglądowi."
+      ],
+      [
+        "04",
+        "Uruchom codzienne wypełnienie",
+        "Zamówienia są odbierane, wybierane, sprawdzane, pakowane i wysyłane przez uzgodniony przepływ pracy."
+      ],
+      [
+        "05",
+        "Ścieżka i poprawa",
+        "Tracking jest zwracany i powtarzające się problemy są przeglądane w miarę jak produkty i ilość rośnie."
+      ]
+    ],
+    "faqs": [
+      [
+        "Które usługi spełnienia mogę połączyć?",
+        "Można rozpocząć tylko od pozyskiwania lub kontroli, lub połączyć sourcing, magazynowanie, opakowania na zamówienie, realizacji zamówienia i śledzone dostawy w jednym zakresie operacyjnym."
+      ],
+      [
+        "Możesz pracować z moimi obecnymi dostawcami?",
+        "Tak. Możemy otrzymać towary od istniejącego dostawcy i skupić się na inspekcji, przechowywania, pakowania i wysyłki, pod warunkiem jasnego procesu przekazania."
+      ],
+      [
+        "Czy wspierasz małe sklepy?",
+        "Dostępność zależy od rodzaju produktu, wymagań dotyczących obsługi i rynków docelowych. Podziel się swoją obecną ilością i planem wzrostu, abyśmy mogli polecić praktyczny model startowy."
+      ],
+      [
+        "Jak sprawdzić jakość produktu?",
+        "Zakres inspekcji uzgodniono przed rozpoczęciem operacji. Może ona obejmować kontrole dokładności ilości, wariantów, wyglądu, funkcji podstawowej, pakowania i ostatecznego zamówienia."
+      ],
+      [
+        "Czy możesz zapewnić markowe opakowanie?",
+        "Tak. Opcje mogą obejmować etykiety, karty, torby, pudełka i wkładki, w zależności od ilości, możliwości dostawcy i czasu produkcji."
+      ],
+      [
+        "Do jakich krajów można wysłać?",
+        "Wspieramy główne rynki międzynarodowe poprzez trasy żeglugowe. Najlepsza opcja zależy od miejsca przeznaczenia, rodzaju produktu, wagi działki i celu dostawy."
+      ],
+      [
+        "Skąd mam wiedzieć?",
+        "Wyślij link lub specyfikację produktu, rynki przeznaczenia, oczekiwaną wielkość zamówienia i wymagania dotyczące pakowania. Dokonamy przeglądu zakresu i zalecimy kolejny krok."
+      ]
+    ],
+    "hero": {
+      "kicker": "USŁUGI W ZAKRESIE SOURCING I FULFILMENTU CHINY",
+      "title": "Jeden zespół China for sourcing, QC i globalnego spełnienia.",
+      "lead": "Wybierz wsparcie, którego potrzebuje Twój sklep dzisiaj, a następnie połączyć źródła zaopatrzenia, inspekcji, pakowania, magazynowania i światowej wysyłki, jak Twoja operacja rośnie.",
+      "primary": "Uzyskaj bezpłatną wycenę",
+      "secondary": "Usługi badawcze",
+      "benefitsLabel": "Świadczenia z tytułu usług",
+      "benefits": [
+        "Wsparcie dla kont ludzkich",
+        "Przejrzysty zakres usług",
+        "QC przed wysyłką"
+      ],
+      "imageAlt": "JW zespół spełnienia otrzymujący inwentaryzację w magazynie Chiny",
+      "quickNavLabel": "Wybierz usługę przez cel biznesowy"
+    },
+    "catalog": {
+      "kicker": "USŁUGI BUDYNKOWE NA RZECZ PRACY",
+      "title": "Zacznij od wąskiego gardła w operacji.",
+      "lead": "Korzystaj z jednej usługi skoncentrowanej lub połączyć je w podłączony przepływ pracy wypełnienie Chiny.",
+      "service": "SERVICE {number}",
+      "explore": "Zbadaj usługę"
+    },
+    "comparison": {
+      "kicker": "WYBÓR PRAWNEGO PUNKTU STARTOWEGO",
+      "title": "Porównaj zakres usług w skrócie.",
+      "lead": "Każda usługa rozwiązuje inne potrzeby operacyjne. Twój cytat może łączyć więcej niż jeden.",
+      "headers": [
+        "Usługa",
+        "Najlepsze dla",
+        "Spis",
+        "Znakowanie",
+        "Co przygotować"
+      ]
+    },
+    "process": {
+      "kicker": "JEDEN PRACOWNIK OPERACYJNY",
+      "title": "Jak nasze usługi się łączą.",
+      "lead": "Każdy projekt rozpoczyna się z określonym zakresem i przechodzi przez pięć widocznych etapów."
+    },
+    "proof": {
+      "imageAlt": "Zespół JW kontrolujący produkty przed wypełnieniem",
+      "badge": "widoczne punkty kontrolne operacyjne",
+      "kicker": "POSTĘPOWANIE PRZED POSTĘPOWANIEM",
+      "title": "Kontrole operacyjne można zbudować w służbie.",
+      "lead": "Niezawodny przepływ pracy jest określony przez jego punkty kontrolne, rekordy i przekazy, a nie roszczenia dekoracyjne.",
+      "link": "Poznaj kontrolę jakości"
+    },
+    "faq": {
+      "kicker": "PRZEKAZYWANE PYTANIA",
+      "title": "Co wiedzieć przed rozpoczęciem",
+      "lead": "Szybkie odpowiedzi na temat zakresu usług, dostawców, wolumenu zamówień, kontroli jakości i opakowań markowych."
+    },
+    "final": {
+      "kicker": "START WITH YOUR CURRENT BOTTLENEK",
+      "title": "Sprawdź, czy JW pasuje do twojej operacji.",
+      "lead": "Podziel się połączeniem produktów, rynkami docelowymi i tym, co spowalnia Twój zespół. Zalecimy kolejny praktyczny krok.",
+      "button": "Uzyskaj bezpłatną wycenę"
+    }
+  }
+}

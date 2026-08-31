@@ -1,6 +1,6 @@
 import config from "@config/config.json";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const Logo = ({ href, className = "", onClick }) => (
   <Link

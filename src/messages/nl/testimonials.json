@@ -1,0 +1,104 @@
+{
+  "Testimonials": {
+    "faqs": [
+      [
+        "Wat laten deze verhalen zien?",
+        "Ze laten zien hoe verkopers ervaren dagelijkse ondersteuning: sourcing antwoorden, QC updates, verpakking details, order handling en vervulling communicatie."
+      ],
+      [
+        "Kan ik om steun vragen die vergelijkbaar is met een herziening?",
+        "Ja. Deel het producttype, de doelgroep en het huidige probleem, en het team kan een praktische workflow voor uw winkel voorstellen."
+      ],
+      [
+        "Gaat dit alleen over vervulling?",
+        "Nee. De feedback heeft betrekking op sourcing, citaten, merkverpakking, kwaliteitscontroles, inventariscoördinatie en opvolging van verzending."
+      ],
+      [
+        "Werk ik met één toegewijd contact?",
+        "JW houdt communicatie georganiseerd door account support, zodat vragen en orderdetails niet verloren gaan tussen handoffs."
+      ],
+      [
+        "Hoe moet ik deze getuigenissen gebruiken?",
+        "Gebruik ze om het soort ondersteuning die je nodig hebt te vergelijken, dan beginnen met een product of ordestroom om de pasvorm te testen."
+      ]
+    ],
+    "fiveStars": "Vijf sterren overzicht",
+    "hero": {
+      "kicker": "SELLER STORIES",
+      "title": "Verhalen verkopen, duidelijk gemaakt.",
+      "lead": "Duidelijke ondersteuning, stabiele ordebehandeling en snelle follow-up van een team verkopers kunnen eigenlijk gebruiken.",
+      "proofs": [
+        "Ondersteuning zoeken",
+        "QC-updates",
+        "Fulfillment follow-up"
+      ],
+      "primary": "Vraag een gratis offerte aan",
+      "secondary": "Lees Verhalen van de Verkoper",
+      "balanceLabel": "Wat verkopers het vaakst vermelden",
+      "mentioned": "Meest genoemd",
+      "balanceTitle": "Wat de workflow kalm houdt.",
+      "items": [
+        [
+          "Duidelijke communicatie",
+          "Antwoorden blijven zichtbaar over sourcing, QC en verzending."
+        ],
+        [
+          "Snelle antwoorden",
+          "Vragen gaan vooruit zonder lange back-and-forth."
+        ],
+        [
+          "QC zichtbaarheid",
+          "Notes en foto's houden review beslissingen gegrond."
+        ],
+        [
+          "Order-eigendom",
+          "Eén contact houdt elke handoff verbonden."
+        ]
+      ],
+      "featuredLabel": "Aanbevolen feedback van de verkoper",
+      "switchLabel": "Verhalen wisselen van verkoper",
+      "usefulFor": "Handig voor",
+      "firstWorkflow": "Eerste workflow"
+    },
+    "featured": {
+      "kicker": "KENMERKEN VAN DE VOEDER",
+      "title": "Drie delen van de partner verkopers herinneren zich.",
+      "lead": "Duidelijke ordebehandeling, attente productbeslissingen en een responsieve persoon die het werk in beweging houdt.",
+      "viewAll": "Bekijk alle 13 verhalen"
+    },
+    "stories": {
+      "kicker": "MEER SELLERSVERHALEN",
+      "title": "Feedback over de hele orderreis.",
+      "lead": "Elk verhaal bevat het service thema en account ondersteuning context, zodat bezoekers ervaringen dichter bij hun eigen behoeften kunnen vinden.",
+      "viewAll": "Bekijk alle 12 verhalen"
+    },
+    "proof": {
+      "kicker": "HET TEAM ACHTER DE VOEDERBANK",
+      "title": "Kijk waar dagelijks vervullingwerk gebeurt.",
+      "lead": "De sterkste ondersteuning voor een verkoper verhaal is zichtbaar magazijn, verpakking en verzending werk.",
+      "videos": [
+        [
+          "WARKEHOUSE",
+          "Ontvangst, controle en verpakking",
+          "Zie de fysieke omgeving achter inventaris en klantordervoorbereiding."
+        ],
+        [
+          "SORTERING EN VERZENDING",
+          "Bestellingen in de richting van levering",
+          "Zie hoe voorbereide pakketten worden gesorteerd en ingeleverd in de scheepvaart workflow."
+        ]
+      ]
+    },
+    "faq": {
+      "kicker": "VOORDAT U BESLIST",
+      "title": "Vragen over verkoper verhalen.",
+      "lead": "Gebruik deze antwoorden om te begrijpen wat de feedback betekent voor uw eigen winkel."
+    },
+    "final": {
+      "kicker": "UW EERSTE STAP",
+      "title": "Begin met één product.",
+      "lead": "Vertel ons wat je verkoopt, waar je schip en wat beter moet werken. Ons team zal de volgende praktische stap aanbevelen.",
+      "button": "Praat met ons team"
+    }
+  }
+}

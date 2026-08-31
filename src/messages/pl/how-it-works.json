@@ -1,0 +1,230 @@
+{
+  "HowItWorks": {
+    "startingDetails": [
+      {
+        "title": "Związek produktów lub dostawców",
+        "copy": "URL produktu, strona dostawcy lub obraz odniesienia wystarczy, aby rozpocząć pierwszą recenzję."
+      },
+      {
+        "title": "Główne rynki docelowe",
+        "copy": "Powiedz nam, gdzie znajdują się klienci, więc trasy wysyłki i limity można sprawdzić wcześniej."
+      },
+      {
+        "title": "Oczekiwana wielkość zamówienia",
+        "copy": "Ciężki dobowy zakres pomaga nam polecić odpowiedni magazyn i spełnienie konfiguracji."
+      },
+      {
+        "title": "Zapotrzebowanie na marki / QC",
+        "copy": "Przed wysyłką należy przesłać opakowania, etykietę i dokumenty kontrolne."
+      }
+    ],
+    "stages": [
+      {
+        "number": "01",
+        "title": "Podziel się produktem",
+        "kicker": "OZNAKOWANIE",
+        "image": "/images/generated/jw-account-support-v3.png",
+        "intro": "Wyślij jedną wyraźną referencję produktu, aby pierwsza rozmowa skupiła się na rzeczywistym sklepie i obietnicy klienta.",
+        "provide": "Połączenie produktów, rynek docelowy, spodziewany wolumen i problem, który chcesz rozwiązać.",
+        "handle": "Przegląd wykonalności produktu, zakresu usług, wymogów dotyczących miejsca przeznaczenia i brakujących informacji.",
+        "receive": "Skupiony produkt krótki i jasne zalecenie dla następnego kroku."
+      },
+      {
+        "number": "02",
+        "title": "Źródło i cytat",
+        "kicker": "PRZEGLĄD WSPARCIA",
+        "image": "/images/services/product-sourcing.webp",
+        "intro": "Odpowiednie oferty dostawców są porównywane na tej samej specyfikacji, nie tylko na najniższej cenie jednostkowej.",
+        "provide": "Docelowe koszty, materiały lub funkcje, ilość i pożądany czas startu.",
+        "handle": "Porównaj dostawców, MOQ, czas wiodący, dostosowanie, opakowania i szacunkowe implikacje spełnienia.",
+        "receive": "Opcje porównywalne z rozwiązaniami handlowymi niezbędnymi do podjęcia decyzji o dostawcy."
+      },
+      {
+        "number": "03",
+        "title": "Próbka i zatwierdzenie",
+        "kicker": "STANDARD JAKOŚCI",
+        "image": "/images/generated/jw-qc-inspection-v3.png",
+        "intro": "Fizyczny produkt i jego zakres kontroli są uzgadniane przed ponownym zakupem lub codziennym wypełnieniem.",
+        "provide": "Informacje zwrotne na temat próbki, dopuszczalne tolerancje i wszelkie niezbywalne szczegóły marki.",
+        "handle": "Koordynacja próbek, przegląd widocznej jakości, potwierdzenie wariantów, opakowania i punktów kontrolnych QC.",
+        "receive": "Zatwierdzone odniesienie i udokumentowana podstawa przyszłych kontroli produktów."
+      },
+      {
+        "number": "04",
+        "title": "Ustaw spełnienie",
+        "kicker": "PRZYGOTOWANIE DZIAŁANIA",
+        "image": "/images/generated/jw-branded-packing-v3.png",
+        "intro": "Inventory, SKUs, materiały opakowaniowe i zasady zamówień są podłączone przed uwolnieniem głośności klienta na żywo.",
+        "provide": "Przechowuj dane SKU, instrukcje pakowania, pliki marki i preferencje przekazania zamówienia.",
+        "handle": "Otrzymywanie zapasów, warianty map, przygotowanie przechowywania, zasady pakowania dokumentów i wykonywanie zleceń testowych.",
+        "receive": "Przetestowany przepływ zamówień gotowy do wielokrotnego zbierania, sprawdzania i pakowania."
+      },
+      {
+        "number": "05",
+        "title": "Śledzenie statku i synchronizacji",
+        "kicker": "DAILY OPERACJA",
+        "image": "/images/generated/jw-dispatch-scan-v3.png",
+        "intro": "Zatwierdzone zamówienia przechodzą przez wysyłkę, podczas gdy status przesyłki i wyjątki pozostają widoczne dla zespołu.",
+        "provide": "Zamówienia, adresy klientów oraz uzgodnione zasady wysyłki lub świadczenia usług.",
+        "handle": "Pick, final- check, pack, label, wysyłki i oddzielne zamówienia, które wymagają decyzji.",
+        "receive": "Potwierdzenie wysyłki, dane przewoźnika i śledzenie przez uzgodnione przekazanie."
+      }
+    ],
+    "checkpoints": [
+      [
+        "Przed zakupem",
+        "Potwierdzono warunki dostawy, specyfikację i plan próby."
+      ],
+      [
+        "Przed otrzymaniem zapasów",
+        "SKU, ilość, opakowanie i oczekiwania przychodzące udokumentowane."
+      ],
+      [
+        "Przed wysyłką",
+        "Produkt, wariant, paczka i etykieta sprawdzone z zamówieniem."
+      ]
+    ],
+    "faqs": [
+      [
+        "Jak długo trwa ustawianie?",
+        "Czas zależy od produktu, próbki pracy, opakowania i gotowości zapasów. Po pierwszym przeglądzie, zidentyfikujemy etapy, które mają zastosowanie i zależności, które kontrolują czas startu."
+      ],
+      [
+        "Mogę zacząć, zanim mój sklep będzie miał codzienne zamówienia?",
+        "Tak. Dostawy produktów, porównanie dostawców i próbki mogą rozpocząć się przed startem. Ustawienie spełnienia można przygotować, gdy produkty i spodziewany przepływ zamówień są jaśniejsze."
+      ],
+      [
+        "Czy JW może pracować z moim istniejącym dostawcą?",
+        "Tak. Dostawca może wysłać inwentaryzację do magazynu JW, a my skupiamy się na odbieraniu, kontroli jakości, przechowywania, pakowania i globalnej wysyłki."
+      ],
+      [
+        "Co się dzieje, gdy pojawia się problem jakości?",
+        "Dotknięte towary lub zamówienia mogą być przechowywane, udokumentowane i udostępniane do decyzji. Dokładny proces kontroli i zatwierdzania jest uzgodniony przed rozpoczęciem operacji."
+      ],
+      [
+        "Jak rozkazy i śledzenie poruszają się między naszymi zespołami?",
+        "Przekazanie może posłużyć się wspieranym strumieniem pracy, uporządkowanym plikiem zamówień lub inną uzgodnioną metodą. Podczas konfiguracji potwierdza się zasady mapowania SKU i wyjątków."
+      ]
+    ],
+    "hero": {
+      "kicker": "JAK TO DZIAŁA",
+      "title": "Od łącza produktów do wyśledzonej dostawy",
+      "lead": "Jeden Chiński przepływ pracy do pozyskiwania, zatwierdzania, spełnienia i aktualizacji wysyłki.",
+      "primary": "Zacznij od odnośnika produktu",
+      "secondary": "Zobacz pięć etapów",
+      "proofs": [
+        "Przezroczyste punkty homologacji",
+        "Jeden dedykowany kontakt",
+        "Namierzanie zwrócone"
+      ],
+      "liveLabel": "Przepływ pracy na żywo",
+      "liveStatus": "Następna aktualizacja w toku",
+      "updates": [
+        "Przegląd produktu",
+        "Połączone terminy dostawcy",
+        "Zapisane notatki QC",
+        "Przygotowana aktualizacja śledzenia"
+      ],
+      "owner": "Właściciel: Chiński zespół rachunkowy",
+      "next": "Następny: Kontrola zasad wysyłki",
+      "reviewStatus": "Gotowy do przeglądu",
+      "briefLabel": "Brief produktu",
+      "brief": "Terminy dostawców, notatki QC i zasady wysyłki pozostają połączone przed przeniesieniem zamówień.",
+      "board": [
+        "Związek produktów",
+        "Cytat",
+        "QC",
+        "Wypełnij",
+        "Śledzenie"
+      ]
+    },
+    "start": {
+      "kicker": "CO WCZEŚNIEJ",
+      "title": "Zacznij zanim każdy szczegół będzie gotowy.",
+      "lead": "Najpierw wyślij podstawy. JW może przejrzeć brakujące szczegóły podczas następnego kroku."
+    },
+    "journey": {
+      "kicker": "KOMPLETNY PORZĄDEK",
+      "title": "Znać każdy krok, zanim porządek się poruszy.",
+      "lead": "Przepływ pracy pozostaje elastyczny, podczas gdy każdy właściciel, zatwierdzenie i przekazanie pozostaje jasne.",
+      "provide": "Zapewniasz",
+      "handle": "Rękojeści JW",
+      "receive": "Otrzymujesz"
+    },
+    "approval": {
+      "kicker": "HOMOLOGACJA PRZED OBJĘTOŚCIĄ",
+      "title": "Trzy punkty kontrolne chronią każde przekazanie.",
+      "lead": "Ważne pytania są rozwiązywane, zanim staną się one ponownie produkcji, inwentaryzacji lub usługi problemy.",
+      "proofs": [
+        "bramki do homologacji",
+        "niejasne przekazanie",
+        "Wspólny rejestr decyzji"
+      ]
+    },
+    "tracks": {
+      "kicker": "START AT YOU CUSENT STAGE",
+      "title": "Użyj przepływu pracy z miejsca, gdzie jesteś.",
+      "lead": "Zacznij od pomysłu produktu, istniejącego dostawcy lub inwentaryzacji już gotowy do wysyłki.",
+      "items": [
+        {
+          "kicker": "BADANIE PRODUKTU",
+          "title": "Zacznij od źródeł i próbek.",
+          "copy": "Użyj etapów 01- 03, aby porównać dostawców i zatwierdzić produkt przed podjęciem decyzji, ile zapasów lub wsparcia spełnienia trzeba.",
+          "link": "Odkryj produkt",
+          "href": "/services/product-sourcing"
+        },
+        {
+          "kicker": "ISTNIEJĄCE ZAPEWNIENIE",
+          "title": "Zacznij od odbioru i QC.",
+          "copy": "Twoja obecna fabryka może wysłać towary do JW do kontroli, przechowywania, markowe pakowania i realizacji na poziomie zamówienia.",
+          "link": "Poznaj kontrolę jakości",
+          "href": "/services/quality-control-inspection"
+        },
+        {
+          "kicker": "GODZINA NA SCALE",
+          "title": "Połącz codzienne zamówienia i śledzenie.",
+          "copy": "Mapa SKUs, zasady pakowania i wyjątki, dzięki czemu powtarzanie zamówień może poruszać się przez jeden structural workflow.",
+          "link": "Automatyzacja zamówienia",
+          "href": "/services/automatic-order-fulfillment"
+        }
+      ]
+    },
+    "exceptions": {
+      "imageAlt": "Kwestia produktu sprawdzana przed zatwierdzeniem",
+      "statusLabel": "Przegląd wyjątków",
+      "status": "Oczekiwanie na decyzję",
+      "kicker": "KIEDY COŚ NIE MA ZNACZENIA",
+      "title": "Wyjątki Pauza z kontekstem, nie splątanie.",
+      "lead": "Zagadnienia jakości, brakujące zasoby, niezmapowane SKUs lub nietypowe żądania są oddzielone przed stworzeniem błędu spełnienia.",
+      "steps": [
+        [
+          "Identyfikacja",
+          "Dotyczące towarów lub zamówień są oddzielone od normalnej wysyłki."
+        ],
+        [
+          "Dokument",
+          "Zdjęcia, szczegóły SKU i potrzebna decyzja są wyraźnie udostępniane."
+        ],
+        [
+          "Wznowienie",
+          "Prace trwają po zatwierdzeniu, korekcji lub wymianie."
+        ]
+      ],
+      "queue": "Kolejka decyzji",
+      "queueStatus": "QC zdjęcia · stock · pakowanie OK"
+    },
+    "faq": {
+      "kicker": "PRZEKAZYWANE PYTANIA",
+      "title": "Co wiedzieć przed rozpoczęciem",
+      "lead": "Szybkie odpowiedzi na temat ustawiania czasu, kontroli jakości, przekazania zamówienia i śledzenia aktualizacji."
+    },
+    "final": {
+      "kicker": "PIERWSZY KROK",
+      "title": "Zacznij od jednego łącza produktu.",
+      "lead": "Powiedz nam, gdzie sprzedajesz, czego oczekujesz i co trzeba poprawić. Polecimy kolejny etap praktyczny.",
+      "product": "Związek produktów",
+      "quote": "Bezpłatny cytat",
+      "button": "Uzyskaj bezpłatną wycenę"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "About": {
+    "departments": [
+      [
+        "Zarządzanie rachunkami",
+        "Jeden o nazwie współrzędne kontaktów priorytety, aktualizacje i wyjątki w całej całej podróży zamówienia."
+      ],
+      [
+        "Źródło produktów",
+        "Badania dostawców, notowania, próbki, MOQ, czas wiodący i dostosowanie są porównywane przed zobowiązaniem."
+      ],
+      [
+        "Kontrola jakości",
+        "Uzgodnione punkty kontrolne przekształcają wymagania dotyczące produktów w procedury kontroli odbioru i przed wysyłką."
+      ],
+      [
+        "Operacje magazynowe",
+        "W każdym SKU organizowane są inwentaryzacja, materiały opakowaniowe, zasady zbierania i przekazywanie zamówień."
+      ],
+      [
+        "Koordynacja żeglugi",
+        "Trasy są wybierane według miejsca przeznaczenia, rodzaju produktu, prędkości, śledzenia i obietnicy klienta."
+      ]
+    ],
+    "principles": [
+      [
+        "Uwidocznienie pracy",
+        "Ważne decyzje, punkty kontrolne i wyjątki powinny być zrozumiałe poza komunikatem na czacie."
+      ],
+      [
+        "Zdefiniuj własność",
+        "Każdy etap potrzebuje właściciela, punktu akceptacji i wyraźnego następnego działania."
+      ],
+      [
+        "Chroń obietnicę klienta",
+        "Prędkość ma znaczenie tylko wtedy, gdy właściwy produkt pozostawia w stanie i opakowaniu spodziewanym."
+      ],
+      [
+        "Poprawa marki",
+        "Rutyna operacyjna powinna ewoluować w miarę zmiany produktów, rynków, opakowań i wielkości zamówień."
+      ]
+    ],
+    "teamRoles": [
+      [
+        "Prowadzenie konta",
+        "Twój dzienny punkt kontaktowy i właściciel zespołu cross-team kontynuuj."
+      ],
+      [
+        "Specjalista od zakosztowania",
+        "Koordynacja fabryk, notowań, próbek i powtarzania produkcji."
+      ],
+      [
+        "QC & ołów magazynowy",
+        "Właściciel otrzymuje normy, inspekcje, inwentaryzację i zasady pakowania."
+      ],
+      [
+        "Specjalista ds. logistyki",
+        "Opinie trasy, śledzenie wydajności i wyjątków dostawy."
+      ]
+    ],
+    "questions": [
+      [
+        "Możemy zobaczyć prawdziwy zespół i magazyn przed współpracą?",
+        "Tak. Ta strona jest przeznaczona do posiadania prawdziwej trasy magazynowej, fotografii zespołowej i zewnętrznych linków weryfikacyjnych. Aktywa te zostaną dodane po dostarczeniu i zatwierdzeniu przez firmę."
+      ],
+      [
+        "Kto będzie odpowiedzialny za nasze konto?",
+        "Każde konto powinno mieć jeden o nazwie kontakt, który koordynuje pozyskiwanie, jakość, magazyn i wysyłki zespoły, więc odpowiedzialność nie znika między wydziałami."
+      ],
+      [
+        "Jak komunikujesz się z problemami jakości?",
+        "Zakres działania powinien określać punkty kontroli i wymogi dowodowe przed wprowadzeniem do eksploatacji. W przypadku pojawienia się wyjątku aktualizacja powinna obejmować kontekst, zdjęcia w stosownych przypadkach i opcje praktyczne."
+      ],
+      [
+        "Czy przepływ pracy może się zmieniać w miarę wzrostu naszego sklepu?",
+        "Tak. Użyteczny przepływ pracy może rozpocząć się od zaopatrzenia i bezpośredniej wysyłki, a następnie dodać inwentaryzację, markowe opakowania, automatyzacja lub nowe trasy dostaw, gdy popyt staje się bardziej przewidywalny."
+      ],
+      [
+        "Jakie szczegóły firmy możemy zweryfikować?",
+        "Strona końcowa pokaże zarejestrowaną firmę nazwę, adres biura i magazynu, niezależny profil przeglądu oraz oficjalne linki społeczne lub założycielskie po ich dostarczeniu i weryfikacji."
+      ]
+    ],
+    "media": {
+      "licensed": "PŁATNOŚĆ TYMCZASOWA LICENCJI",
+      "needed": "MATERIAŁ PRZEDSIĘBIORCZOŚCI"
+    },
+    "hero": {
+      "kicker": "LUDZIE I PROCESY PODLEGAJĄCE WSZYSTKIM PARCELU",
+      "title": "Partner spełnienia powinien być widoczny, zanim zostanie zaufany.",
+      "lead": "JW Dropshipping wprowadza koordynację dostawców, kontrolę jakości, wykonanie magazynu i globalną dostawę do jednego odpowiedzialnego zespołu operacyjnego dla niezależnych marek eCommerce.",
+      "primary": "Poznaj swój zespół spełnienia",
+      "secondary": "Zobacz jak działamy.",
+      "points": [
+        "Wsparcie humanitarne",
+        "Dokumentowane punkty kontrolne",
+        "Wyraźna własność"
+      ],
+      "proofLabel": "Zweryfikowane fakty przedsiębiorstwa do przedstawienia"
+    },
+    "story": {
+      "kicker": "DLACZEGO JW DROPSHIPPING ISTES",
+      "title": "Niezależne marki potrzebują czegoś więcej niż numeru śledzenia.",
+      "paragraphs": [
+        "Kiedy fabryki, inspekcje, inwentaryzacja i wysyłka są zarządzane przez różne kontakty, małe nieporozumienie może szybko stać się problemem dla klientów. Naszym zadaniem jest połączenie tych przekazów w jedną rutynę operacyjną z czystym właścicielem.",
+        "Oznacza to potwierdzenie, co \"gotowy do wysyłki\" oznacza właściwie dla produktu, dokumentowanie szczegółów, które mają znaczenie, i utrzymywanie decyzji blisko ludzi wykonujących pracę fizyczną."
+      ],
+      "link": "Poznaj zakres naszych usług",
+      "noteTitle": "Potrzebna jest historia założycieli",
+      "note": "Zapewnienie prawdziwego roku powstania, oryginalny problem, pierwszy kamień milowy magazynu i obecny kierunek."
+    },
+    "departmentsSection": {
+      "kicker": "JEDEN DZIEŃ · PIĘĆ SPECIALISTÓW",
+      "title": "Każde przekazanie należy do kogoś, kto robi to codziennie.",
+      "lead": "Klienci komunikują się z jednym odpowiedzialnym ołowiu, podczas gdy specjalistyczne zespoły posiadają pracę za pozyskiwaniem, QC, inwentaryzacja, pakowania i dostawy."
+    },
+    "facility": {
+      "kicker": "WSTRZYKIWACZ",
+      "title": "Zobacz, gdzie zamówienia są odbierane, sprawdzane i wysyłane.",
+      "lead": "Każdy etap ma jasnego właściciela i widoczne przekazanie."
+    },
+    "principlesSection": {
+      "kicker": "JAK CHCEMY, ABY PARTNERSTWO POCZUĆ",
+      "title": "Na tyle jasne, by zrozumieć. Wystarczająco elastyczny, by rosnąć.",
+      "lead": "Zasady te kształtują sposób pracy zespołu, komunikują problemy i poprawiają powtarzające się operacje."
+    },
+    "team": {
+      "kicker": "JEDEN TEAM, OWNERSHIP",
+      "title": "Wiesz, kto jest właścicielem każdego etapu.",
+      "lead": "Twoje konto prowadzi łączy specjalistów odpowiedzialnych za pozyskiwanie, jakość, prace magazynowe i dostawy.",
+      "portrait": "PORTRAIT {number} DOSTĄPIONY"
+    },
+    "verification": {
+      "kicker": "WERYFIKACJA PRZEDSIĘBIORSTWA",
+      "title": "Ułatwić poważnym kupcom sprawdzenie z kim pracują.",
+      "lead": "Nie publikuj odgadniętych danych. Dodać następujące informacje dopiero po potwierdzeniu przez firmę dokładnych szczegółów prawnych i operacyjnych.",
+      "profile": "PROFIL PRZEDSIĘBIORSTWA",
+      "details": "Szczegółowe informacje urzędowe",
+      "link": "LINK {number}"
+    },
+    "faq": {
+      "kicker": "ZANIM ZACZNIEMY RAZEM PRACOWAĆ.",
+      "title": "Pytania powinna zadać ostrożna marka.",
+      "lead": "Zaufanie powinno pochodzić od widocznych osób, określonej pracy i weryfikowalnych informacji firmy.",
+      "button": "Zapytaj nasz zespół."
+    },
+    "final": {
+      "kicker": "GOTOWY DO OMÓWIENIA TWOJEJ OPERACJI?",
+      "title": "Poznaj ludzi, którzy będą odpowiedzialni za twoje rozkazy.",
+      "button": "Zacznij rozmowę."
+    }
+  }
+}

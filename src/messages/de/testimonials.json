@@ -1,0 +1,104 @@
+{
+  "Testimonials": {
+    "faqs": [
+      [
+        "Was zeigen diese Verkäufergeschichten?",
+        "Sie zeigen, wie Verkäufer täglichen Support erleben: Sourcing-Antworten, QC-Updates, Packdetails, Bestellabwicklung und Fulfillment-Kommunikation."
+      ],
+      [
+        "Kann ich um Unterstützung ähnlich einer Überprüfung bitten?",
+        "Ja. Teilen Sie den Produkttyp, den Zielmarkt und das aktuelle Problem, und das Team kann einen praktischen Workflow für Ihren Shop vorschlagen."
+      ],
+      [
+        "Geht es nur um Erfüllung?",
+        "Nein. Das Feedback umfasst Sourcing, Angebote, Markenverpackung, Qualitätskontrollen, Inventarkoordination und Versandverfolgung."
+      ],
+      [
+        "Werde ich mit einem dedizierten Kontakt arbeiten?",
+        "JW organisiert die Kommunikation durch Account-Support, so dass Fragen und Bestelldetails zwischen den Übergaben nicht verloren gehen."
+      ],
+      [
+        "Wie sollte ich diese Testimonials verwenden?",
+        "Verwenden Sie sie, um die Art der Unterstützung zu vergleichen, die Sie benötigen, und beginnen Sie dann mit einem Produkt- oder Auftragsfluss, um die Passform zu testen."
+      ]
+    ],
+    "fiveStars": "Fünf-Sterne-Bewertung",
+    "hero": {
+      "kicker": "VERKÄUFERLAGEN",
+      "title": "Verkäufergeschichten, klar gemacht.",
+      "lead": "Klare Unterstützung, stetige Auftragsabwicklung und schnelles Follow-up von einem Team Verkäufer können tatsächlich verwenden.",
+      "proofs": [
+        "Beschaffungsunterstützung",
+        "QC Updates",
+        "Folgemaßnahmen zur Erfüllung"
+      ],
+      "primary": "Kostenloses Angebot anfordern",
+      "secondary": "Lesen Sie Verkäufergeschichten",
+      "balanceLabel": "Was Verkäufer am häufigsten erwähnen",
+      "mentioned": "Am meisten erwähnt",
+      "balanceTitle": "Was den Workflow ruhig hält.",
+      "items": [
+        [
+          "Klare Kommunikation",
+          "Antworten bleiben sichtbar über Sourcing, QC und Versand."
+        ],
+        [
+          "Schnelle Antworten",
+          "Fragen gehen ohne langes Hin und Her voran."
+        ],
+        [
+          "QC Sichtbarkeit",
+          "Notizen und Fotos halten Überprüfungsentscheidungen geerdet."
+        ],
+        [
+          "Auftragsbestand",
+          "Ein Kontakt hält jede Handoff verbunden."
+        ]
+      ],
+      "featuredLabel": "Featured Verkäufer-Feedback",
+      "switchLabel": "Switch-Seller-Geschichten",
+      "usefulFor": "Nützlich für",
+      "firstWorkflow": "Erster Workflow"
+    },
+    "featured": {
+      "kicker": "FEATURED FEEDBACK",
+      "title": "Drei Teile der Partnerschaft Verkäufer erinnern sich.",
+      "lead": "Klare Auftragsabwicklung, durchdachte Produktentscheidungen und eine reaktionsschnelle Person, die die Arbeit in Bewegung hält.",
+      "viewAll": "Alle 13 Geschichten ansehen"
+    },
+    "stories": {
+      "kicker": "MEHR SELLER STORIES",
+      "title": "Feedback über die gesamte Order Journey.",
+      "lead": "Jede Geschichte enthält das Service-Thema und den Account-Support-Kontext, sodass Besucher Erfahrungen finden können, die ihren eigenen Bedürfnissen näher kommen.",
+      "viewAll": "Alle 12 Geschichten ansehen"
+    },
+    "proof": {
+      "kicker": "DAS TEAM HINTER DER FEDERRÜCKSEITE",
+      "title": "Sehen Sie, wo die tägliche Erfüllungsarbeit stattfindet.",
+      "lead": "Die stärkste Unterstützung für eine Verkäufergeschichte sind sichtbare Lager-, Verpackungs- und Versandarbeiten.",
+      "videos": [
+        [
+          "WARENBETRIEB",
+          "Annahme, Prüfung und Verpackung",
+          "Sehen Sie die physische Umgebung hinter Inventar und Kundenauftrag Vorbereitung."
+        ],
+        [
+          "SORTING & DISPATCH",
+          "Bestellungen in Richtung Lieferung",
+          "Sehen Sie, wie vorbereitete Pakete sortiert und in den Versand-Workflow übergeben werden."
+        ]
+      ]
+    },
+    "faq": {
+      "kicker": "BEVOR SIE ENTSCHEIDEN",
+      "title": "Fragen zu Verkäufergeschichten.",
+      "lead": "Verwenden Sie diese Antworten, um zu verstehen, was das Feedback für Ihren eigenen Shop bedeutet."
+    },
+    "final": {
+      "kicker": "IHR ERSTER SCHRITT",
+      "title": "Beginnen Sie mit einem Produkt.",
+      "lead": "Sagen Sie uns, was Sie verkaufen, wo Sie versenden und was besser funktionieren muss. Unser Team wird den nächsten praktischen Schritt empfehlen.",
+      "button": "Sprechen Sie mit unserem Team"
+    }
+  }
+}

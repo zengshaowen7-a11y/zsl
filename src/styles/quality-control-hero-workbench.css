@@ -1,0 +1,4601 @@
+/* Hallmark · component: QC evidence hero · genre: modern-minimal · theme: project green
+ * states: default · hover · focus · active · selected · reduced-motion
+ * pre-emit critique: P5 H5 E5 S5 R5 V4 · contrast: pass · mobile: pass
+ */
+body main.sdr-page-quality-control-inspection[class][class] {
+  --qch-ink: oklch(0% 0 0);
+  --qch-body: oklch(44% 0.025 155);
+  --qch-muted: oklch(57% 0.02 155);
+  --qch-accent: oklch(48% 0.13 155);
+  --qch-accent-dark: oklch(36% 0.11 155);
+  --qch-accent-soft: oklch(95% 0.035 155);
+  --qch-paper: oklch(99% 0.005 155);
+  --qch-paper-soft: oklch(97% 0.012 155);
+  --qch-rule: oklch(89% 0.025 155);
+  --qch-on-accent: oklch(99% 0.004 155);
+  --qch-photo-ink: oklch(98% 0.005 155);
+  --qch-photo-overlay: oklch(18% 0.035 155 / 0.86);
+  --qch-shadow: oklch(25% 0.045 155 / 0.09);
+  --qch-focus: oklch(50% 0.15 155);
+  --qch-space-xs: 8px;
+  --qch-space-sm: 12px;
+  --qch-space-md: 16px;
+  --qch-space-lg: 24px;
+  --qch-space-xl: 32px;
+  --qch-radius-sm: 8px;
+  --qch-radius-md: 12px;
+  --qch-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --qch-dur-short: 220ms;
+  container-type: inline-size;
+}
+
+/* QC fit module — inspection decision rail */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-fit {
+  container-type: inline-size;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-fit > .container {
+  position: relative;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+  gap: clamp(28px, 4vw, 72px);
+  align-items: stretch;
+  padding: clamp(28px, 4vw, 54px) 0 clamp(34px, 4.5vw, 62px);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding-left: clamp(18px, 2.1vw, 30px);
+  border-left: 4px solid #15956a;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro h2 {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: #000;
+  font-size: clamp(28px, 4.45cqw, 32px);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #53635f;
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.62;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(150px, 1.1fr);
+  grid-template-rows: auto 1fr;
+  gap: 12px 24px;
+  min-height: 210px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(16, 85, 64, .14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .68);
+  box-shadow: 0 22px 50px rgba(18, 88, 65, .08);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside .sdr-china-fit-note-title {
+  grid-column: 1;
+  align-self: end;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside strong {
+  grid-column: 1;
+  align-self: start;
+  margin: 0;
+  color: #000;
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.38;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-proof {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 156px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #dcece6;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-proof img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.78) contrast(.96);
+  transition: transform 700ms cubic-bezier(.2, .75, .25, 1), filter 350ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside:hover .sdr-qc-fit-proof img {
+  transform: scale(1.045);
+  filter: saturate(.95) contrast(1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-proof > span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 999px;
+  background: rgba(9, 54, 42, .82);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(14, 83, 62, .14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .58);
+  box-shadow: 0 24px 58px rgba(19, 92, 69, .08);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 62px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(21,149,106,.15), rgba(21,149,106,.7), rgba(21,149,106,.15));
+  pointer-events: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 30px 26px 28px;
+  border: 0;
+  border-right: 1px solid rgba(14, 83, 62, .12);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:last-child {
+  border-right: 0;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:hover {
+  z-index: 4;
+  background: rgba(255, 255, 255, .82);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:active {
+  transform: translateY(-2px) scale(.99);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 36px;
+  margin: 0 0 36px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top small {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(21, 149, 106, .32);
+  border-radius: 50%;
+  background: #f7fffb;
+  color: #08714e;
+  font-size: 11px;
+  font-weight: 900;
+  opacity: 1;
+  transition: background-color 250ms ease, color 250ms ease, transform 250ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:hover .sdr-fit-card-top small {
+  background: #0b855d;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-check {
+  color: #0b855d;
+  font-size: 18px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-visual {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin: 0 0 22px;
+  place-items: center;
+  border-radius: 12px;
+  background: #c9f5dc;
+  transform: none;
+  transition: transform 300ms cubic-bezier(.2, .75, .25, 1), background-color 250ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:hover .sdr-qc-fit-visual {
+  transform: rotate(-4deg) scale(1.06);
+  background: #b9efd2;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual span {
+  position: static;
+  display: grid;
+  width: auto;
+  height: auto;
+  place-items: center;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #08714e;
+  box-shadow: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual i {
+  display: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+  max-width: none;
+  margin: auto 0 0;
+  text-align: left;
+  transform: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy h3 {
+  margin: 0;
+  color: #000;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy p {
+  max-width: 27ch;
+  margin: 12px 0 0;
+  color: #60706b;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+@media (max-width: 980px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro {
+    grid-template-columns: 1fr;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream::before {
+    display: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(2) {
+    border-right: 0;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(14, 83, 62, .12);
+  }
+}
+
+@media (max-width: 640px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro {
+    padding-top: 20px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-proof {
+    grid-column: 1;
+    grid-row: auto;
+    min-height: 170px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream {
+    grid-template-columns: 1fr;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article {
+    min-height: 230px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(14, 83, 62, .12);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Inspection decision path — compact five-gate control rail */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process .sdr-section-heading {
+  grid-template-columns: minmax(0, .62fr) minmax(300px, .38fr) !important;
+  gap: clamp(30px, 5vw, 78px) !important;
+  margin-bottom: 42px !important;
+  padding: clamp(30px, 4vw, 50px) !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-left: 4px solid var(--qcp-green) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .56) !important;
+  box-shadow: 0 18px 44px rgba(18, 88, 65, .07) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process .sdr-section-heading h2 {
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process .sdr-section-heading p {
+  padding: 0 0 0 24px !important;
+  border: 0 !important;
+  border-left: 1px solid rgba(17, 91, 68, .18) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-size: clamp(14px, 1.2vw, 16px) !important;
+  line-height: 1.6 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .5) !important;
+  box-shadow: 0 24px 58px rgba(18, 88, 65, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline::before {
+  display: block !important;
+  top: 51px !important;
+  right: 10% !important;
+  left: 10% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #269b75 0%, #269b75 80%, #08714e 100%) !important;
+  animation: qcp-trace 900ms cubic-bezier(.16, 1, .3, 1) 120ms forwards !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article:nth-child(even) {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  flex-direction: column !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 310px !important;
+  margin: 0 !important;
+  padding: 28px 24px 24px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(17, 91, 68, .12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  animation: qcp-rise 520ms cubic-bezier(.16, 1, .3, 1) both !important;
+  animation-delay: calc(var(--qcp-index) * 80ms + 160ms) !important;
+  transition: background-color 240ms ease, transform 240ms ease, box-shadow 240ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article:last-child {
+  border-right: 0 !important;
+  background: transparent !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article:hover {
+  z-index: 3 !important;
+  background: rgba(255, 255, 255, .88) !important;
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08) !important;
+  transform: translateY(-5px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article::before,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article::after {
+  display: none !important;
+  content: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > span:first-child {
+  display: flex !important;
+  width: 46px !important;
+  min-width: 46px !important;
+  height: 46px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(21, 149, 106, .32) !important;
+  border-radius: 50% !important;
+  background: #f8fffb !important;
+  color: #08714e !important;
+  box-shadow: 0 0 0 8px rgba(207, 247, 224, .9) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > span:first-child svg {
+  display: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > span:first-child b {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > small {
+  display: inline-flex !important;
+  width: fit-content !important;
+  margin: 38px 0 0 !important;
+  color: #16845f !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  line-height: 1.3 !important;
+  letter-spacing: .1em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline h3 {
+  min-height: 0 !important;
+  margin: 10px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(17px, 1.45vw, 20px) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.02em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline p {
+  margin: 14px 0 0 !important;
+  color: #60706b !important;
+  font-size: 12px !important;
+  line-height: 1.58 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-pipeline-output {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: 100% !important;
+  margin: auto 0 0 !important;
+  padding-top: 13px !important;
+  border-top: 1px solid rgba(17, 91, 68, .12) !important;
+  color: #173c31 !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  line-height: 1.35 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-pipeline-output svg {
+  flex: 0 0 auto !important;
+  color: #16845f !important;
+  font-size: 13px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-pipeline-arrow {
+  top: 45px !important;
+  right: -6px !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-color: #16845f !important;
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process .sdr-section-heading {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process .sdr-section-heading p {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    padding: 18px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(17, 91, 68, .18) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline {
+    grid-template-columns: repeat(5, minmax(220px, 1fr)) !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x proximity;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline {
+    grid-template-columns: 1fr !important;
+    overflow: hidden !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline::before {
+    top: 40px !important;
+    right: auto !important;
+    bottom: 40px !important;
+    left: 46px !important;
+    width: 2px !important;
+    height: auto !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article:nth-child(even) {
+    min-height: 220px !important;
+    padding: 24px 22px 22px 82px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(17, 91, 68, .12) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > span:first-child {
+    position: absolute !important;
+    top: 24px !important;
+    left: 22px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article > small {
+    margin-top: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline::before,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-process-grid.sdr-qc-pipeline > article {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* QC release record refinement: evidence image + decision ledger */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-studio {
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  gap: 28px;
+  padding: 22px;
+  border: 1px solid var(--qcr-line);
+  border-radius: 22px;
+  background: rgba(247, 253, 249, .7);
+  box-shadow: 0 28px 80px rgba(18, 91, 66, .1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-visual {
+  min-height: 620px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5,55,37,.04) 45%, rgba(5,55,37,.34) 100%);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-visual-meta {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.46);
+  border-radius: 10px;
+  background: rgba(246, 252, 248, .88);
+  box-shadow: 0 12px 30px rgba(7,54,38,.14);
+  backdrop-filter: blur(12px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-visual-meta > span {
+  display: grid;
+  gap: 3px;
+  padding: 10px 13px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-visual-meta > span + span {
+  border-left: 1px solid var(--qcr-line);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-visual-meta small {
+  color: var(--qcr-copy);
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-visual-meta strong {
+  color: var(--qcr-ink);
+  font-size: 11px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-visual figcaption {
+  z-index: 2;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  padding: 14px 16px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-panel {
+  display: flex;
+  min-height: 620px;
+  flex-direction: column;
+  padding: clamp(28px, 3vw, 42px);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-panel h2 {
+  max-width: 15ch;
+  color: #000;
+  font-size: clamp(28px, 4.45cqw, 32px);
+  line-height: 1.12;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary {
+  display: grid;
+  grid-template-columns: .7fr .7fr 1.15fr;
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid var(--qcr-line);
+  border-radius: 12px;
+  background: var(--qcr-paper-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary > span {
+  display: grid;
+  min-height: 64px;
+  align-content: center;
+  gap: 2px;
+  padding: 10px 14px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary > span + span {
+  border-left: 1px solid var(--qcr-line);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary strong {
+  color: var(--qcr-green-ink);
+  font-size: 20px;
+  line-height: 1;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary small {
+  color: var(--qcr-copy);
+  font-size: 9px;
+  font-weight: 750;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary .is-pending {
+  grid-template-columns: 28px minmax(0,1fr);
+  align-items: center;
+  background: var(--qcr-warn-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary .is-pending svg {
+  grid-row: 1;
+  width: 28px;
+  height: 28px;
+  padding: 7px;
+  border-radius: 50%;
+  color: var(--qcr-warn-ink);
+  background: rgba(255,255,255,.7);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary .is-pending small {
+  color: var(--qcr-warn-ink);
+  font-weight: 850;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-table {
+  margin-top: 16px;
+  border-radius: 12px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-head {
+  background: linear-gradient(90deg, #073c2a, #0d6043);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-decision-gate {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 24px;
+  border-color: rgba(194, 124, 18, .24);
+  background: linear-gradient(90deg, var(--qcr-warn-soft), #fffdf8);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-decision-gate::before {
+  content: "";
+  position: absolute;
+  inset: 12px auto 12px 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--qcr-warn);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-note {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--qcr-line);
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-studio {
+    grid-template-columns: minmax(0,1fr);
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-studio {
+    padding: 12px;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-release-summary .is-pending {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--qcr-line);
+    border-left: 0;
+  }
+}
+
+/* QC hero refinement: evidence trail + inspection dossier */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-shell {
+  grid-template-columns: minmax(0, 4.6fr) minmax(0, 7.4fr) !important;
+  gap: clamp(36px, 4.4vw, 64px) !important;
+  padding: clamp(36px, 4.2vw, 56px) !important;
+  background:
+    linear-gradient(90deg, rgba(236, 249, 242, .72) 0, rgba(255, 255, 255, 0) 44%),
+    var(--qch-paper) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-copy {
+  justify-content: flex-start !important;
+  padding-top: 14px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-copy h1 {
+  margin-top: 28px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs {
+  position: relative !important;
+  gap: 0 !important;
+  margin-top: 30px !important;
+  padding: 18px 0 0 18px !important;
+  border-top: 1px solid var(--qch-rule) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  bottom: 22px;
+  left: 33px;
+  width: 1px;
+  background: linear-gradient(var(--qch-accent), var(--qch-rule));
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button {
+  position: relative !important;
+  grid-template-columns: 28px 38px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  min-height: 64px !important;
+  padding: 9px 12px 9px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 76px;
+  height: 1px;
+  background: var(--qch-rule);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button:last-child::after {
+  display: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button > small {
+  position: relative !important;
+  z-index: 1 !important;
+  color: var(--qch-accent-dark) !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: .08em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button > span {
+  width: 38px !important;
+  height: 38px !important;
+  border: 1px solid var(--qch-rule) !important;
+  border-radius: 50% !important;
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button:hover > span,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button.is-active > span {
+  transform: scale(1.08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button > strong {
+  display: grid !important;
+  gap: 3px !important;
+  color: var(--qch-ink) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button > strong em {
+  color: var(--qch-muted) !important;
+  font-size: 8px !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border-radius: 16px !important;
+  background: rgba(246, 252, 248, .96) !important;
+  box-shadow: 0 28px 70px rgba(11, 74, 53, .14) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--qch-accent-dark), #68c99d);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench > header {
+  padding: 22px 24px 18px !important;
+  background: rgba(255,255,255,.58) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench-body {
+  grid-template-columns: minmax(0, 1.2fr) minmax(230px, .8fr) !important;
+  gap: 0 !important;
+  margin: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench figure {
+  min-height: 430px !important;
+  border-radius: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench figcaption {
+  right: 18px !important;
+  bottom: 18px !important;
+  left: 18px !important;
+  padding: 13px 15px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks {
+  position: relative !important;
+  gap: 0 !important;
+  padding: 28px 22px 22px !important;
+  border-left: 1px solid var(--qch-rule) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks::before {
+  content: "";
+  position: absolute;
+  top: 81px;
+  bottom: 118px;
+  left: 51px;
+  width: 1px;
+  background: var(--qch-rule);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks > div {
+  position: relative !important;
+  grid-template-columns: 20px 30px minmax(0, 1fr) !important;
+  gap: 8px !important;
+  min-height: 66px !important;
+  padding: 12px 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--qch-rule) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks > div > small {
+  color: var(--qch-muted) !important;
+  font-size: 8px !important;
+  font-weight: 850 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks > div > span {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: 4px solid #eff9f3 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks > div > em {
+  grid-column: 3 !important;
+  justify-self: start !important;
+  padding: 3px 7px !important;
+  border-radius: 4px !important;
+  background: var(--qch-accent-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks footer {
+  margin-top: auto !important;
+  border-color: rgba(0, 121, 78, .22) !important;
+  background: linear-gradient(135deg, #eefaf3, #fff) !important;
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-shell {
+    padding: 28px 20px !important;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-workbench-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-checks {
+    border-top: 1px solid var(--qch-rule) !important;
+    border-left: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .qch-tabs button > span {
+    transition: none !important;
+  }
+}
+
+/* Inspection brief — readiness panel */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-grid > .sdr-quote-copy {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  padding: clamp(34px, 4vw, 52px) clamp(32px, 4vw, 48px) !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 4% 8%, rgba(196, 241, 211, .38), transparent 30%),
+    transparent !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-copy::before {
+  position: absolute !important;
+  top: 34px !important;
+  right: 30px !important;
+  content: "BRIEF / 03" !important;
+  color: rgba(8, 113, 78, .14) !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+  pointer-events: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-copy h2.sdr-compact-quote-title {
+  max-width: 620px !important;
+  margin: 12px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-copy > p {
+  max-width: 52ch !important;
+  margin: 18px 0 0 !important;
+  color: #53635f !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  margin-top: 24px !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 91, 68, .13) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, .5) !important;
+  animation: qcb-status-in 520ms cubic-bezier(.16, 1, .3, 1) both;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status > span {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 9px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status b {
+  color: #08714e !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status small {
+  color: #53635f !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status strong {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 9px !important;
+  border-radius: 999px !important;
+  background: #d4f4e0 !important;
+  color: #08714e !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-copy > .sdr-quote-checklist {
+  position: relative !important;
+  display: grid !important;
+  gap: 0 !important;
+  margin-top: 18px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .58) !important;
+  box-shadow: 0 16px 36px rgba(18, 88, 65, .06) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 30px 34px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  align-items: center !important;
+  min-height: 66px !important;
+  padding: 14px 16px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(17, 91, 68, .1) !important;
+  background: transparent !important;
+  animation: qcb-step-in 480ms cubic-bezier(.16, 1, .3, 1) both;
+  transition: background-color 220ms ease, transform 220ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div:nth-child(2) { animation-delay: 70ms; }
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div:nth-child(3) { animation-delay: 140ms; }
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div:last-child {
+  border-bottom: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div:hover {
+  background: rgba(220, 250, 232, .62) !important;
+  transform: translateX(4px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div > small {
+  color: #16845f !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  letter-spacing: .06em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div > svg {
+  display: grid !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 7px !important;
+  border: 1px solid rgba(21, 149, 106, .25) !important;
+  border-radius: 50% !important;
+  background: #f8fffb !important;
+  color: #08714e !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div > span {
+  color: #173c31 !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  line-height: 1.45 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-copy > .sdr-quote-note {
+  display: grid !important;
+  grid-template-columns: 34px minmax(0, 1fr) !important;
+  gap: 2px 12px !important;
+  align-items: center !important;
+  margin-top: 18px !important;
+  padding: 16px !important;
+  border: 0 !important;
+  border-left: 3px solid #16845f !important;
+  border-radius: 4px 12px 12px 4px !important;
+  background: rgba(255, 255, 255, .48) !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-note > svg {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 6px !important;
+  border-radius: 9px !important;
+  background: #d4f4e0 !important;
+  color: #08714e !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-note > strong,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-note > p {
+  grid-column: 2 !important;
+  margin: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-note > strong {
+  color: #08714e !important;
+  font-size: 11px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-note > p {
+  margin-top: 4px !important;
+  color: #60706b !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+}
+
+@keyframes qcb-status-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes qcb-step-in {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-grid > .sdr-quote-copy {
+    padding: 28px 20px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-brief-status,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote-checklist > div {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Decision-path cover — compact summary header */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading {
+  position: relative !important;
+  grid-template-columns: minmax(0, .6fr) minmax(300px, .4fr) !important;
+  grid-template-rows: auto auto auto !important;
+  gap: 0 clamp(34px, 5vw, 82px) !important;
+  min-height: 0 !important;
+  margin-bottom: 42px !important;
+  padding: clamp(30px, 3.8vw, 46px) clamp(32px, 4.2vw, 54px) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-left: 4px solid #16845f !important;
+  border-radius: 18px !important;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(196, 241, 211, .34), transparent 32%),
+    rgba(255, 255, 255, .58) !important;
+  box-shadow: 0 22px 52px rgba(18, 88, 65, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading::before {
+  position: absolute !important;
+  top: 24px !important;
+  right: 30px !important;
+  width: 70px !important;
+  height: 70px !important;
+  content: "05" !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(22, 132, 95, .12) !important;
+  border-radius: 50% !important;
+  color: rgba(22, 132, 95, .08) !important;
+  background: transparent !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  pointer-events: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading .ff-kicker {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: fit-content !important;
+  margin: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading h2 {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  max-width: 620px !important;
+  margin: 12px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading > p {
+  grid-column: 2 !important;
+  grid-row: 1 / span 2 !important;
+  align-self: center !important;
+  max-width: 46ch !important;
+  margin: 0 !important;
+  padding: 20px 24px !important;
+  border: 1px solid rgba(17, 91, 68, .13) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .58) !important;
+  color: #53635f !important;
+  box-shadow: inset 3px 0 0 rgba(22, 132, 95, .42) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary {
+  grid-column: 1 / -1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: fit-content !important;
+  margin-top: 28px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid rgba(17, 91, 68, .13) !important;
+  animation: qch-summary-in 520ms cubic-bezier(.16, 1, .3, 1) 180ms both;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary > span {
+  display: grid !important;
+  grid-template-columns: auto auto !important;
+  gap: 8px !important;
+  align-items: baseline !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary b {
+  color: #08714e !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary small {
+  color: #53635f !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary > i {
+  display: grid !important;
+  width: 28px !important;
+  height: 28px !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  background: #d4f4e0 !important;
+  color: #08714e !important;
+  font-style: normal !important;
+}
+
+@keyframes qch-summary-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 760px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-process .sdr-section-heading > p {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    margin-top: 22px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary {
+    grid-column: 1 !important;
+    grid-row: 4 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-process-summary {
+    animation: none !important;
+  }
+}
+
+/* Inspection plan — full-width four-dimension configurator */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-planning > .container > .sdr-qc-plan-matrix {
+  grid-column: 1 / -1 !important;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .5) !important;
+  box-shadow: 0 24px 58px rgba(18, 88, 65, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-matrix > .sdr-qc-plan-anchor {
+  display: grid !important;
+  grid-template-columns: minmax(0, .62fr) minmax(300px, .38fr) !important;
+  grid-template-rows: auto auto !important;
+  gap: 0 clamp(30px, 5vw, 78px) !important;
+  align-items: center !important;
+  min-height: 0 !important;
+  padding: clamp(30px, 4vw, 50px) !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(17, 91, 68, .14) !important;
+  background: rgba(248, 246, 228, .66) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-anchor .ff-kicker {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-anchor h2 {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  max-width: 620px !important;
+  margin: 12px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-anchor p {
+  grid-column: 2 !important;
+  grid-row: 1 / span 2 !important;
+  max-width: 48ch !important;
+  margin: 0 !important;
+  padding: 0 0 0 24px !important;
+  border: 0 !important;
+  border-left: 2px solid #16845f !important;
+  color: #53635f !important;
+  font-size: clamp(14px, 1.2vw, 16px) !important;
+  line-height: 1.62 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-matrix > .sdr-qc-plan-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:nth-child(n) {
+  position: relative !important;
+  display: flex !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 300px !important;
+  padding: 28px 26px 24px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(17, 91, 68, .12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  animation: qcm-rise 520ms cubic-bezier(.16, 1, .3, 1) both !important;
+  animation-delay: calc(var(--qcm-index) * 80ms + 80ms) !important;
+  transition: background-color 240ms ease, transform 240ms ease, box-shadow 240ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:last-child {
+  border-right: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:hover {
+  z-index: 2 !important;
+  background: rgba(220, 250, 232, .64) !important;
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08) !important;
+  transform: translateY(-5px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article::before,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article::after {
+  display: none !important;
+  content: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid header > span {
+  display: grid !important;
+  width: 36px !important;
+  height: 36px !important;
+  place-items: center !important;
+  border: 1px solid rgba(21, 149, 106, .28) !important;
+  border-radius: 50% !important;
+  background: #f8fffb !important;
+  color: #08714e !important;
+  font-size: 10px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid header i {
+  display: grid !important;
+  width: 46px !important;
+  height: 46px !important;
+  place-items: center !important;
+  border-radius: 12px !important;
+  background: #c9f5dc !important;
+  color: #08714e !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid small {
+  margin: 40px 0 0 !important;
+  color: #16845f !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  letter-spacing: .1em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid h3 {
+  margin: 10px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(18px, 1.5vw, 21px) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.02em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid p {
+  margin: 13px 0 0 !important;
+  color: #60706b !important;
+  font-size: 12px !important;
+  line-height: 1.58 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-state {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: 100% !important;
+  margin: auto 0 0 !important;
+  padding-top: 13px !important;
+  border-top: 1px solid rgba(17, 91, 68, .12) !important;
+  color: #173c31 !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-state svg {
+  color: #16845f !important;
+  font-size: 13px !important;
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-matrix > .sdr-qc-plan-anchor {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-anchor p {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    margin-top: 20px !important;
+    padding: 18px 0 0 !important;
+    border-left: 0 !important;
+    border-top: 1px solid rgba(17, 91, 68, .16) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-matrix > .sdr-qc-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:nth-child(2) {
+    border-right: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(17, 91, 68, .12) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-matrix > .sdr-qc-plan-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article:nth-child(n) {
+    min-height: 250px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(17, 91, 68, .12) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-plan-grid > article {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Neutralize legacy 12-column spans from service-form-unification.css. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(1),
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(2),
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(3),
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(4) {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  min-height: 340px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(14, 83, 62, .12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(4) {
+  border-right: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article::before,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article::after {
+  display: none !important;
+  content: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:hover {
+  background: rgba(255, 255, 255, .82) !important;
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08) !important;
+  transform: translateY(-5px) !important;
+}
+
+@media (max-width: 980px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(n) {
+    min-height: 300px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:nth-child(n) {
+    min-height: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(14, 83, 62, .12) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-proof img {
+    transition: none;
+    transform: none;
+  }
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-hero {
+  min-height: 0 !important;
+  padding: 72px 0 48px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-shell {
+  display: grid !important;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) !important;
+  gap: clamp(32px, 4vw, 56px) !important;
+  width: var(--ops-rail, min(100% - 48px, 1180px)) !important;
+  max-width: 1180px !important;
+  min-height: 650px !important;
+  margin-inline: auto !important;
+  padding: clamp(32px, 4vw, 52px) !important;
+  border: 1px solid var(--qch-rule) !important;
+  border-top: 5px solid var(--qch-accent) !important;
+  border-radius: var(--qch-radius-sm) !important;
+  background: var(--qch-paper) !important;
+  box-shadow: 0 24px 64px var(--qch-shadow) !important;
+  box-sizing: border-box !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-copy {
+  display: flex !important;
+  min-width: 0 !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-kicker {
+  display: inline-flex !important;
+  width: fit-content !important;
+  gap: var(--qch-space-xs) !important;
+  align-items: center !important;
+  color: var(--qch-accent-dark) !important;
+  font-size: 12px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.1em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-kicker svg {
+  width: 20px !important;
+  height: 20px !important;
+  padding: 3px !important;
+  border: 1px solid var(--qch-accent) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-copy h1 {
+  max-width: 15ch !important;
+  min-width: 0 !important;
+  margin: var(--qch-space-lg) 0 0 !important;
+  color: var(--qch-ink) !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  font-weight: 850 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em !important;
+  overflow-wrap: anywhere !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-copy > p {
+  max-width: 46ch !important;
+  margin: var(--qch-space-lg) 0 0 !important;
+  color: var(--qch-body) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-actions {
+  display: flex !important;
+  gap: var(--qch-space-sm) !important;
+  align-items: center !important;
+  margin-top: var(--qch-space-lg) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-actions a {
+  display: inline-flex !important;
+  min-height: 48px !important;
+  gap: var(--qch-space-xs) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 20px !important;
+  border-radius: var(--qch-radius-sm) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: transform var(--qch-dur-short) var(--qch-ease-out), opacity var(--qch-dur-short) var(--qch-ease-out) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-primary {
+  color: var(--qch-on-accent) !important;
+  background: var(--qch-accent-dark) !important;
+  box-shadow: 0 12px 24px var(--qch-shadow) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-secondary {
+  border: 1px solid var(--qch-rule) !important;
+  color: var(--qch-accent-dark) !important;
+  background: var(--qch-accent-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-actions a:hover {
+  transform: translateY(-2px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-actions a:active {
+  transform: translateY(0) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-actions a:focus-visible,
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button:focus-visible {
+  outline: 3px solid var(--qch-focus) !important;
+  outline-offset: 3px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-secondary > span {
+  display: grid !important;
+  width: 24px !important;
+  height: 24px !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  background: var(--qch-paper) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs {
+  display: grid !important;
+  gap: var(--qch-space-xs) !important;
+  margin-top: var(--qch-space-lg) !important;
+  padding-top: var(--qch-space-md) !important;
+  border-top: 1px solid var(--qch-rule) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button {
+  display: grid !important;
+  grid-template-columns: 34px minmax(0, 1fr) !important;
+  gap: var(--qch-space-sm) !important;
+  align-items: center !important;
+  min-height: 48px !important;
+  padding: 7px 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--qch-radius-sm) !important;
+  color: var(--qch-body) !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  text-align: left !important;
+  transition: transform var(--qch-dur-short) var(--qch-ease-out), opacity var(--qch-dur-short) var(--qch-ease-out) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button:hover,
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button.is-active {
+  border-color: var(--qch-rule) !important;
+  color: var(--qch-ink) !important;
+  background: var(--qch-accent-soft) !important;
+  transform: translateX(3px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button > span {
+  display: grid !important;
+  width: 34px !important;
+  height: 34px !important;
+  place-items: center !important;
+  border-radius: var(--qch-radius-sm) !important;
+  color: var(--qch-accent-dark) !important;
+  background: var(--qch-paper) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button.is-active > span {
+  color: var(--qch-on-accent) !important;
+  background: var(--qch-accent-dark) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-tabs strong {
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench {
+  align-self: center !important;
+  min-width: 0 !important;
+  padding: clamp(20px, 2.4vw, 30px) !important;
+  border: 1px solid var(--qch-rule) !important;
+  border-radius: var(--qch-radius-md) !important;
+  background: var(--qch-paper-soft) !important;
+  box-shadow: 0 20px 46px var(--qch-shadow) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench > header {
+  display: flex !important;
+  gap: var(--qch-space-md) !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-bottom: var(--qch-space-md) !important;
+  border-bottom: 1px solid var(--qch-rule) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench > header > div {
+  display: flex !important;
+  gap: var(--qch-space-sm) !important;
+  align-items: center !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench header small,
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench header strong {
+  display: block !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench header small {
+  color: var(--qch-muted) !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench header strong {
+  margin-top: 3px !important;
+  color: var(--qch-ink) !important;
+  font-size: 13px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-status-dot {
+  width: 10px !important;
+  height: 10px !important;
+  flex: 0 0 10px !important;
+  border-radius: 50% !important;
+  background: var(--qch-accent) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-ready {
+  display: inline-flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  padding: 7px 10px !important;
+  border-radius: var(--qch-radius-sm) !important;
+  color: var(--qch-accent-dark) !important;
+  background: var(--qch-accent-soft) !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  white-space: nowrap !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench-body {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: var(--qch-space-md) !important;
+  margin-top: var(--qch-space-lg) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure {
+  position: relative !important;
+  min-height: 340px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border-radius: var(--qch-radius-sm) !important;
+  background: var(--qch-rule) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure img {
+  object-fit: cover !important;
+  opacity: 0 !important;
+  transform: scale(1.03) !important;
+  transition: opacity 380ms var(--qch-ease-out), transform 600ms var(--qch-ease-out) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure img.is-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure:hover img.is-active {
+  transform: scale(1.025) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figcaption {
+  position: absolute !important;
+  right: var(--qch-space-sm) !important;
+  bottom: var(--qch-space-sm) !important;
+  left: var(--qch-space-sm) !important;
+  display: flex !important;
+  gap: var(--qch-space-xs) !important;
+  align-items: center !important;
+  padding: 10px 12px !important;
+  border-radius: var(--qch-radius-sm) !important;
+  color: var(--qch-photo-ink) !important;
+  background: var(--qch-photo-overlay) !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks {
+  display: flex !important;
+  min-width: 0 !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks > small {
+  color: var(--qch-muted) !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.1em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks > div {
+  display: grid !important;
+  grid-template-columns: 26px minmax(0, 1fr) auto !important;
+  gap: 8px !important;
+  align-items: center !important;
+  min-height: 48px !important;
+  padding: 8px 10px !important;
+  border: 1px solid var(--qch-rule) !important;
+  border-radius: var(--qch-radius-sm) !important;
+  background: var(--qch-paper) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks > div > span {
+  display: grid !important;
+  width: 26px !important;
+  height: 26px !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  color: var(--qch-on-accent) !important;
+  background: var(--qch-accent) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks > div strong {
+  color: var(--qch-ink) !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks > div em {
+  color: var(--qch-accent-dark) !important;
+  font-size: 9px !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer {
+  display: flex !important;
+  gap: var(--qch-space-sm) !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: auto !important;
+  padding: var(--qch-space-sm) !important;
+  border: 1px solid var(--qch-rule) !important;
+  border-radius: var(--qch-radius-sm) !important;
+  background: var(--qch-paper) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer small,
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer strong {
+  display: block !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer small {
+  color: var(--qch-muted) !important;
+  font-size: 8px !important;
+  font-weight: 800 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer strong {
+  margin-top: 3px !important;
+  color: var(--qch-accent-dark) !important;
+  font-size: 11px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class] .qch-checks footer > span {
+  display: inline-flex !important;
+  gap: 5px !important;
+  align-items: center !important;
+  padding: 8px 10px !important;
+  border-radius: var(--qch-radius-sm) !important;
+  color: var(--qch-on-accent) !important;
+  background: var(--qch-accent-dark) !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-quality-control-inspection[class][class] .qch-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-copy h1,
+  body main.sdr-page-quality-control-inspection[class][class] .qch-copy > p {
+    max-width: 620px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  body main.sdr-page-quality-control-inspection[class][class] .qch-hero {
+    padding: 48px 0 36px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-shell {
+    width: calc(100% - 40px) !important;
+    gap: var(--qch-space-xl) !important;
+    padding: var(--qch-space-lg) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-actions {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-actions a {
+    width: 100% !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-tabs,
+  body main.sdr-page-quality-control-inspection[class][class] .qch-workbench-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-workbench {
+    padding: var(--qch-space-md) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-workbench > header {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure {
+    min-height: 280px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class] .qch-actions a,
+  body main.sdr-page-quality-control-inspection[class][class] .qch-tabs button,
+  body main.sdr-page-quality-control-inspection[class][class] .qch-workbench figure img {
+    transition-duration: 120ms !important;
+  }
+}
+
+/* Hallmark · macrostructure: strategic anchor + four-pillar matrix · tone: analytical · anchor hue: forest
+ * studied: yes · DNA-source: image (user reference) · pre-emit critique: P5 H5 E5 S5 R5 V5
+ */
+body main.sdr-page-quality-control-inspection {
+  --qcm-paper: oklch(99% 0.008 156);
+  --qcm-paper-warm: oklch(98% 0.02 95);
+  --qcm-paper-soft: oklch(96.8% 0.026 156);
+  --qcm-line: oklch(86% 0.034 156);
+  --qcm-ink: oklch(12% 0.018 160);
+  --qcm-copy: oklch(46% 0.03 165);
+  --qcm-green: oklch(45% 0.125 153);
+  --qcm-green-soft: oklch(92.5% 0.055 153);
+  --qcm-blue: oklch(57% 0.115 226);
+  --qcm-shadow: 0 22px 54px oklch(31% 0.07 158 / 0.1);
+  --qcm-shadow-focus: 0 28px 64px oklch(31% 0.07 158 / 0.15);
+  --qcm-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-planning {
+  background: var(--qcm-paper-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-matrix {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  overflow: clip;
+  border: 1px solid var(--qcm-line);
+  border-radius: 18px;
+  background: var(--qcm-paper);
+  box-shadow: var(--qcm-shadow);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-anchor {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(34px, 5vw, 64px);
+  border-right: 1px solid var(--qcm-line);
+  background: var(--qcm-paper-warm);
+  animation: qcm-rise 520ms var(--qcm-ease-out) both;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-anchor h2 {
+  max-width: 520px;
+  min-width: 0;
+  margin: 16px 0 0;
+  color: var(--qcm-ink);
+  font-size: clamp(28px, 4.45cqw, 32px);
+  font-style: normal;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-anchor p {
+  max-width: 58ch;
+  margin: clamp(28px, 4vw, 48px) 0 0;
+  padding: 20px 0 20px 22px;
+  border-left: 4px solid var(--qcm-green);
+  color: var(--qcm-copy);
+  font-size: clamp(0.9rem, 1.25vw, 1rem);
+  line-height: 1.65;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 264px;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 44px);
+  border-bottom: 1px solid var(--qcm-line);
+  border-left: 1px solid var(--qcm-line);
+  background: var(--qcm-paper);
+  animation: qcm-rise 520ms var(--qcm-ease-out) both;
+  animation-delay: calc(var(--qcm-index) * 80ms + 80ms);
+  transition: box-shadow 220ms var(--qcm-ease-out), background-color 220ms var(--qcm-ease-out);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article:nth-child(n + 3) {
+  border-bottom: 0;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article:hover {
+  z-index: 1;
+  background: var(--qcm-green-soft);
+  box-shadow: var(--qcm-shadow-focus);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--qcm-blue);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid header > span {
+  display: grid;
+  width: 34px;
+  height: 30px;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--qcm-paper-soft);
+  font-size: 0.68rem;
+  font-weight: 850;
+  transition: background-color 220ms var(--qcm-ease-out), color 220ms var(--qcm-ease-out);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid header i {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--qcm-green-soft);
+  color: var(--qcm-green);
+  font-style: normal;
+  transition: transform 220ms var(--qcm-ease-out);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article:hover header > span {
+  background: var(--qcm-green);
+  color: var(--qcm-paper);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article:hover header i {
+  transform: scale(1.08);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid small {
+  margin-top: auto;
+  color: var(--qcm-green);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid h3 {
+  margin: 10px 0 0;
+  color: var(--qcm-ink);
+  font-size: clamp(1.08rem, 1.55vw, 1.3rem);
+  line-height: 1.25;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid p {
+  max-width: 52ch;
+  margin: 10px 0 0;
+  color: var(--qcm-copy);
+  font-size: 0.8rem;
+  line-height: 1.62;
+}
+
+@keyframes qcm-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-matrix {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-anchor {
+    border-right: 0;
+    border-bottom: 1px solid var(--qcm-line);
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article {
+    min-height: 220px;
+    border-left: 0;
+    border-bottom: 1px solid var(--qcm-line) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-anchor,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid article {
+    animation: none;
+    transition: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-plan-grid header i {
+    transition: none;
+  }
+}
+
+/* Hallmark · macrostructure: continuous five-stage pipeline · tone: operational clarity · anchor hue: forest
+ * studied: yes · DNA-source: image (user reference) · pre-emit critique: P5 H5 E5 S5 R5 V5
+ */
+body main.sdr-page-quality-control-inspection {
+  --qcp-paper: oklch(99% 0.008 156);
+  --qcp-paper-soft: oklch(96.8% 0.026 156);
+  --qcp-line: oklch(84% 0.042 156);
+  --qcp-ink: oklch(12% 0.018 160);
+  --qcp-copy: oklch(46% 0.03 165);
+  --qcp-green: oklch(45% 0.125 153);
+  --qcp-green-soft: oklch(92.5% 0.055 153);
+  --qcp-blue: oklch(57% 0.115 226);
+  --qcp-shadow: 0 18px 42px oklch(31% 0.07 158 / 0.09);
+  --qcp-shadow-active: 0 24px 54px oklch(31% 0.07 158 / 0.14);
+  --qcp-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process {
+  overflow: clip;
+  background: var(--qcp-paper-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process .sdr-section-heading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.58fr) minmax(260px, 0.42fr) !important;
+  gap: clamp(28px, 5vw, 72px) !important;
+  align-items: center !important;
+  max-width: none !important;
+  margin: 0 0 32px !important;
+  padding: clamp(28px, 4vw, 48px) !important;
+  border: 1px solid var(--qcp-line) !important;
+  border-left: 5px solid var(--qcp-blue) !important;
+  border-radius: 16px !important;
+  background: var(--qcp-paper) !important;
+  box-shadow: var(--qcp-shadow) !important;
+  text-align: left !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process .sdr-section-heading h2 {
+  grid-column: 1;
+  max-width: 620px;
+  min-width: 0;
+  margin: 12px 0 0 !important;
+  color: var(--qcp-ink) !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  font-style: normal !important;
+  line-height: 1.12 !important;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process .sdr-section-heading p {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  max-width: 58ch !important;
+  margin: 0 !important;
+  padding: 20px 22px;
+  border: 1px solid var(--qcp-line);
+  border-radius: 12px;
+  background: var(--qcp-paper-soft);
+  color: var(--qcp-copy) !important;
+  font-size: clamp(0.9rem, 1.2vw, 1rem) !important;
+  line-height: 1.65 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  border: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline::before {
+  position: absolute !important;
+  z-index: 0;
+  top: 56px !important;
+  right: 5% !important;
+  left: 5% !important;
+  height: 3px !important;
+  content: "" !important;
+  background: var(--qcp-line) !important;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: qcp-trace 800ms var(--qcp-ease-out) 120ms forwards;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article:nth-child(even) {
+  position: relative;
+  z-index: 1 !important;
+  display: flex !important;
+  min-height: 270px !important;
+  flex-direction: column;
+  margin-top: 0 !important;
+  padding: 28px 22px 24px !important;
+  border: 1px solid var(--qcp-line) !important;
+  border-top: 4px solid var(--qcp-blue) !important;
+  border-radius: 16px !important;
+  background: var(--qcp-paper) !important;
+  box-shadow: var(--qcp-shadow) !important;
+  animation: qcp-rise 520ms var(--qcp-ease-out) both;
+  animation-delay: calc(var(--qcp-index) * 80ms + 160ms);
+  transition: box-shadow 220ms var(--qcp-ease-out) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article:last-child {
+  border-top-color: var(--qcp-green) !important;
+  background: var(--qcp-green-soft) !important;
+  box-shadow: var(--qcp-shadow-active) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article:hover {
+  box-shadow: var(--qcp-shadow-active) !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article > span {
+  position: relative;
+  z-index: 2;
+  display: inline-flex !important;
+  width: fit-content !important;
+  min-width: 0 !important;
+  height: 48px !important;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px !important;
+  border: 1px solid var(--qcp-line) !important;
+  border-radius: 10px !important;
+  background: var(--qcp-paper) !important;
+  box-shadow: 0 0 0 8px var(--qcp-green-soft) !important;
+  color: var(--qcp-green) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article > span svg {
+  width: 18px;
+  height: 18px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article > span b {
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline h3 {
+  min-height: 48px !important;
+  margin: 42px 0 12px !important;
+  color: var(--qcp-ink) !important;
+  font-size: clamp(1rem, 1.35vw, 1.13rem) !important;
+  line-height: 1.3 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline p {
+  margin: 0 !important;
+  color: var(--qcp-copy) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.62 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline-arrow {
+  position: absolute;
+  z-index: 3;
+  top: 45px;
+  right: -18px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--qcp-green);
+  border-right: 2px solid var(--qcp-green);
+  transform: rotate(45deg);
+}
+
+@keyframes qcp-trace {
+  to { transform: scaleX(1); }
+}
+
+@keyframes qcp-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process .sdr-section-heading {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-process .sdr-section-heading p {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline {
+    grid-template-columns: repeat(5, minmax(210px, 1fr)) !important;
+    overflow-x: auto;
+    padding: 4px 4px 18px;
+    scroll-snap-type: x proximity;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+    overflow: visible;
+    padding: 0;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline::before {
+    top: 30px !important;
+    right: auto !important;
+    bottom: 30px;
+    left: 46px !important;
+    width: 3px;
+    height: auto !important;
+    transform: scaleY(0);
+    transform-origin: center top;
+    animation-name: qcp-trace-mobile;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article:nth-child(even) {
+    min-height: 220px !important;
+    padding: 26px 22px 24px 82px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article > span {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 52px !important;
+    height: 52px !important;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article > span b {
+    display: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline h3 {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline-arrow {
+    top: auto;
+    right: auto;
+    bottom: -14px;
+    left: 42px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes qcp-trace-mobile {
+  to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline::before,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-pipeline article {
+    animation: none;
+    transform: none;
+    transition: none !important;
+  }
+}
+
+/* Hallmark · macrostructure: split decision studio · tone: operational SaaS · anchor hue: forest
+ * studied: yes · DNA-source: image (user reference) · pre-emit critique: P5 H5 E5 S5 R4 V5
+ * contrast: pass (40–41) · honest: pass (46) · chrome: pass (47) · tokens: pass (48)
+ */
+body main.sdr-page-quality-control-inspection {
+  --qcr-paper: oklch(99.2% 0.007 156);
+  --qcr-paper-soft: oklch(96.8% 0.026 156);
+  --qcr-line: oklch(87% 0.026 156);
+  --qcr-ink: #000;
+  --qcr-copy: oklch(46% 0.03 165);
+  --qcr-green: oklch(43% 0.12 153);
+  --qcr-green-soft: oklch(92.5% 0.055 153);
+  --qcr-green-ink: oklch(31% 0.095 153);
+  --qcr-warn: oklch(65% 0.13 74);
+  --qcr-warn-soft: oklch(95% 0.052 76);
+  --qcr-warn-ink: oklch(37% 0.09 62);
+  --qcr-dark: oklch(29% 0.075 158);
+  --qcr-light-ink: oklch(98% 0.008 156);
+  --qcr-glass-line: oklch(98% 0.008 156 / 0.18);
+  --qcr-glass-ring: oklch(98% 0.008 156 / 0.42);
+  --qcr-glass-surface: oklch(21% 0.05 158 / 0.9);
+  --qcr-pulse: oklch(65% 0.13 74 / 0.24);
+  --qcr-shadow: 0 24px 64px oklch(31% 0.07 158 / 0.12);
+  --qcr-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-proof {
+  padding-block: clamp(64px, 8vw, 108px) !important;
+  background: var(--qcf-paper-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-studio {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: stretch;
+  animation: qcr-enter 620ms var(--qcr-ease-out) both;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 610px;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--qcr-line);
+  border-radius: 18px;
+  background: var(--qcr-paper-soft);
+  box-shadow: var(--qcr-shadow);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual img {
+  object-fit: cover;
+  transition: transform 520ms var(--qcr-ease-out);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual:hover img {
+  transform: scale(1.025);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--qcr-glass-line);
+  border-radius: 12px;
+  background: var(--qcr-glass-surface);
+  color: var(--qcr-light-ink);
+  backdrop-filter: blur(12px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--qcr-glass-ring);
+  border-radius: 50%;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption small,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption strong {
+  display: block;
+  color: inherit;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption small {
+  font-size: 0.64rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual figcaption strong {
+  margin-top: 3px;
+  font-size: 0.86rem;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-panel {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 48px);
+  border: 1px solid var(--qcr-line);
+  border-radius: 18px;
+  background: var(--qcr-paper);
+  box-shadow: var(--qcr-shadow);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-panel h2 {
+  width: max-content;
+  max-width: none;
+  min-width: 0;
+  margin: 14px 0 0;
+  color: var(--qcr-ink);
+  font-size: clamp(28px, 4.45cqw, 32px);
+  font-style: normal;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+  white-space: nowrap;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-table {
+  margin-top: 30px;
+  overflow: clip;
+  border: 1px solid var(--qcr-line);
+  border-radius: 14px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.25fr 0.72fr 0.62fr 0.78fr;
+  background: var(--qcr-paper);
+  animation: qcr-row 440ms var(--qcr-ease-out) both;
+  animation-delay: calc(var(--qcr-row-index, 0) * 80ms + 180ms);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row + .sdr-qc-release-row {
+  border-top: 1px solid var(--qcr-line);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row:not(.sdr-qc-release-head):hover {
+  background: var(--qcr-green-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row.is-review::before {
+  position: absolute;
+  inset: 8px auto 8px 0;
+  width: 3px;
+  content: "";
+  border-radius: 0 4px 4px 0;
+  background: var(--qcr-warn);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row > * {
+  min-width: 0;
+  padding: 16px 14px;
+  border-right: 1px solid var(--qcr-line);
+  color: var(--qcr-copy);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row > *:last-child {
+  border-right: 0;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-head {
+  background: var(--qcr-dark);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-head strong {
+  color: var(--qcr-light-ink);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row:not(.sdr-qc-release-head) > span:first-child {
+  color: var(--qcr-green-ink);
+  font-weight: 800;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding-inline: 10px;
+  border-radius: 999px;
+  font-style: normal;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-status-passed {
+  background: var(--qcr-green-soft);
+  color: var(--qcr-green-ink);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-status-review {
+  background: var(--qcr-warn-soft);
+  color: var(--qcr-warn-ink);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-gate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--qcr-line);
+  border-radius: 12px;
+  background: var(--qcr-paper-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-gate > div > span {
+  display: block;
+  color: var(--qcr-green);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-gate strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--qcr-ink);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  color: var(--qcr-warn-ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-state i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--qcr-warn);
+  position: relative;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-state i::after {
+  position: absolute;
+  inset: -7px;
+  content: "";
+  border-radius: 50%;
+  background: var(--qcr-pulse);
+  animation: qcr-pulse 2.2s var(--qcr-ease-out) infinite;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-note {
+  display: block;
+  margin-top: 18px;
+  color: var(--qcr-copy);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+@keyframes qcr-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes qcr-row {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes qcr-pulse {
+  0%, 60%, 100% { opacity: 0; transform: scale(0.35); }
+  30% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-studio {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-panel h2 {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual {
+    min-height: 390px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-panel {
+    padding: 24px 18px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-table {
+    overflow-x: auto;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row {
+    min-width: 590px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-gate {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-studio,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-row,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-decision-state i::after {
+    animation: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-release-visual img {
+    transition: none;
+  }
+}
+
+/* Hallmark · macrostructure: integrated control board · tone: operational-minimal · anchor hue: mint
+ * studied: yes · DNA-source: image (user reference) · pre-emit critique: P5 H5 E4 S5 R5 V4
+ */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-fit {
+  padding-block: clamp(64px, 7vw, 92px) !important;
+  background: var(--qcf-paper-soft) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro {
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.46fr) !important;
+  margin-bottom: 28px !important;
+  padding: 0 0 28px !important;
+  overflow: visible;
+  border: 0 !important;
+  border-bottom: 1px solid var(--qcf-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside {
+  min-height: 0 !important;
+  padding: 20px 24px !important;
+  border: 0 !important;
+  border-left: 3px solid var(--qcf-blue) !important;
+  border-radius: 10px !important;
+  background: var(--qcf-paper) !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro aside strong {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream::before {
+  display: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+  display: grid !important;
+  grid-template-columns: 48px minmax(0, 1fr) !important;
+  grid-template-rows: auto 1fr !important;
+  gap: 16px 14px !important;
+  align-items: start !important;
+  min-height: 198px !important;
+  padding: 28px 24px !important;
+  border-radius: 16px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top {
+  inset: 16px 16px auto auto !important;
+  width: auto;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top small {
+  display: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-check {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-visual {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  min-height: 48px !important;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--qcf-green-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual span {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual svg {
+  width: 22px;
+  height: 22px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-visual i {
+  display: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+  display: contents;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy h3 {
+  grid-column: 2;
+  align-self: center;
+  padding-right: 16px;
+  font-size: clamp(1.05rem, 1.7vw, 1.28rem) !important;
+  line-height: 1.2 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-copy p {
+  grid-column: 1 / -1;
+  margin: 0 !important;
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:hover {
+  border-color: var(--qcf-line) !important;
+  box-shadow: var(--qcf-shadow-hover) !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-scope {
+  margin-top: clamp(34px, 5vw, 54px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  color: var(--qcf-green);
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-heading::after {
+  height: 1px;
+  flex: 1;
+  content: "";
+  background: var(--qcf-line);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid article {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 14px;
+  min-height: 136px;
+  padding: 24px 22px;
+  border: 1px solid var(--qcf-line);
+  border-radius: 14px;
+  background: var(--qcf-paper);
+  box-shadow: 0 12px 30px oklch(34% 0.07 158 / 0.07);
+  animation: qcf-rise 0.55s both;
+  animation-delay: calc(var(--qcf-card-index) * 80ms + 220ms);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid article:hover {
+  border-color: var(--qcf-line);
+  box-shadow: var(--qcf-shadow-hover);
+  transform: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid article > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--qcf-green-soft);
+  color: var(--qcf-green);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid h3 {
+  margin: 3px 0 0;
+  color: var(--qcf-ink);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  color: var(--qcf-copy);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1023px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-intro {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    min-height: 164px !important;
+    padding: 24px 20px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top {
+    inset: 14px 14px auto auto !important;
+  }
+}
+
+/* QC related services: image-led service preview gallery. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading {
+  align-items: end !important;
+  margin-bottom: 28px !important;
+  padding-bottom: 22px !important;
+  border-bottom: 1px solid rgba(17, 91, 68, .14) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading::before {
+  align-self: start;
+  margin-bottom: 7px;
+  content: "NEXT SERVICE PATH";
+  color: #168258;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .11em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading h2 {
+  grid-row: 2;
+  margin: 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading > a {
+  grid-row: 1 / 3;
+  align-self: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(17, 91, 68, .16);
+  border-radius: 8px;
+  background: rgba(255,255,255,.58);
+  transition: transform 220ms cubic-bezier(.16,1,.3,1), background 220ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading > a:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid {
+  display: grid !important;
+  grid-template-columns: 1.16fr 1fr 1fr !important;
+  gap: 16px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a {
+  display: grid !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 14px !important;
+  background: rgba(255,255,255,.78) !important;
+  box-shadow: 0 16px 34px rgba(18, 88, 65, .07) !important;
+  transition: transform 260ms cubic-bezier(.16,1,.3,1), box-shadow 260ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 24px 48px rgba(18, 88, 65, .13) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-media {
+  position: relative;
+  min-height: 178px;
+  margin: 0;
+  overflow: hidden;
+  background: #dcefe5;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a.is-featured .sdr-related-media {
+  min-height: 205px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-media img {
+  object-fit: cover;
+  transition: transform 520ms cubic-bezier(.16,1,.3,1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a:hover .sdr-related-media img {
+  transform: scale(1.045);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-related-copy {
+  display: flex;
+  min-height: 224px;
+  flex-direction: column;
+  padding: 22px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-related-copy > span {
+  color: #168258 !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  letter-spacing: .09em !important;
+  text-transform: uppercase;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-related-copy h3 {
+  margin: 13px 0 8px !important;
+  color: #000 !important;
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-related-copy p {
+  display: -webkit-box;
+  margin: 0 !important;
+  overflow: hidden;
+  color: #63766d !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-qc-related-copy strong {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: auto !important;
+  padding-top: 15px;
+  border-top: 1px solid rgba(17, 91, 68, .12);
+  color: #126b49 !important;
+  background: transparent !important;
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a.is-featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading > a {
+    grid-row: auto;
+    justify-self: start;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid {
+    grid-template-columns: 1fr !important;
+  }
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a.is-featured {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-media img {
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-capture-grid article {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Hallmark · component: inspection-fit stream · genre: operational editorial · theme: inherited JW green
+ * states: default · hover · focus-within · active · reduced-motion
+ * pre-emit critique: P4 H5 E4 S5 R4 V4
+ */
+body main.sdr-page-quality-control-inspection {
+  --qcf-paper: oklch(99.6% 0.004 160);
+  --qcf-paper-soft: oklch(97.8% 0.018 158);
+  --qcf-line: oklch(86.5% 0.03 158);
+  --qcf-ink: oklch(0% 0 0);
+  --qcf-copy: oklch(45% 0.028 166);
+  --qcf-green: oklch(49% 0.13 154);
+  --qcf-green-soft: oklch(93.5% 0.058 154);
+  --qcf-blue: oklch(62% 0.12 225);
+  --qcf-shadow: 0 20px 52px oklch(34% 0.07 158 / 0.1);
+  --qcf-shadow-hover: 0 28px 68px oklch(34% 0.07 158 / 0.16);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-fit {
+  overflow: clip;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr) !important;
+  gap: clamp(28px, 4vw, 64px) !important;
+  align-items: center !important;
+  margin-bottom: clamp(28px, 4vw, 48px) !important;
+  padding: clamp(28px, 4vw, 52px) !important;
+  overflow: hidden;
+  border: 1px solid var(--qcf-line) !important;
+  border-left: 5px solid var(--qcf-blue) !important;
+  border-radius: 18px !important;
+  background: var(--qcf-paper-soft) !important;
+  box-shadow: var(--qcf-shadow) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro h2 {
+  max-width: 690px !important;
+  margin: 12px 0 0 !important;
+  color: var(--qcf-ink) !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  font-style: normal !important;
+  line-height: 1.12 !important;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro p {
+  max-width: 700px !important;
+  margin-top: 18px !important;
+  color: var(--qcf-copy) !important;
+  font-size: clamp(0.9rem, 1.2vw, 1rem) !important;
+  line-height: 1.7 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro aside {
+  min-height: 150px !important;
+  padding: clamp(24px, 3vw, 34px) !important;
+  border: 1px solid var(--qcf-line) !important;
+  border-radius: 16px !important;
+  background: var(--qcf-paper) !important;
+  box-shadow: 0 12px 30px oklch(34% 0.07 158 / 0.07) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro aside strong {
+  display: block;
+  margin-top: 28px !important;
+  color: var(--qcf-ink) !important;
+  font-size: clamp(1rem, 1.4vw, 1.18rem) !important;
+  line-height: 1.55 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 22px !important;
+  border: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream::before {
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 50%;
+  width: 1px;
+  content: "";
+  background: var(--qcf-line);
+  transform: translateX(-50%);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(210px, 0.8fr) minmax(0, 1.2fr) !important;
+  gap: clamp(30px, 5vw, 72px) !important;
+  align-items: center !important;
+  min-height: 270px !important;
+  padding: clamp(28px, 4vw, 48px) !important;
+  overflow: hidden;
+  border: 1px solid var(--qcf-line) !important;
+  border-radius: 18px !important;
+  background: var(--qcf-paper) !important;
+  box-shadow: var(--qcf-shadow) !important;
+  animation: qcf-rise 0.65s both;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(2) { animation-delay: 80ms; }
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(3) { animation-delay: 160ms; }
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(4) { animation-delay: 240ms; }
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-visual {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:hover {
+  z-index: 1;
+  border-color: var(--qcf-green) !important;
+  box-shadow: var(--qcf-shadow-hover) !important;
+  transform: translateY(-3px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:active {
+  transform: translateY(-1px) scale(0.998) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article::before,
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article::after {
+  display: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top {
+  position: absolute;
+  inset: 20px 20px auto 20px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream small {
+  display: grid !important;
+  width: 40px !important;
+  height: 34px !important;
+  place-items: center;
+  border-radius: 8px !important;
+  background: var(--qcf-green-soft) !important;
+  color: var(--qcf-green) !important;
+  font-size: 0.72rem !important;
+  font-weight: 850 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-check {
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  border: 2px solid var(--qcf-green);
+  border-radius: 50%;
+  color: var(--qcf-green);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual {
+  position: relative;
+  display: grid;
+  min-height: 170px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--qcf-line);
+  border-radius: 14px;
+  background: var(--qcf-paper-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual span {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 84px;
+  height: 84px;
+  place-items: center;
+  border: 1px solid var(--qcf-line);
+  border-radius: 22px;
+  background: var(--qcf-paper);
+  color: var(--qcf-green);
+  box-shadow: 0 14px 30px oklch(34% 0.07 158 / 0.1);
+  transition: transform 260ms ease;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual svg {
+  width: 36px;
+  height: 36px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual i {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--qcf-blue);
+  opacity: 0.48;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual i:nth-of-type(1) { top: 28px; left: 24%; }
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual i:nth-of-type(2) { right: 21%; bottom: 35px; width: 14px; height: 14px; }
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual i:nth-of-type(3) { right: 30%; top: 25px; width: 5px; height: 5px; }
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:hover .sdr-qc-fit-visual span {
+  transform: translateY(-4px) rotate(-2deg);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-copy h3 {
+  margin: 0 !important;
+  color: var(--qcf-ink) !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  font-style: normal !important;
+  line-height: 1.12 !important;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-copy p {
+  max-width: 560px !important;
+  margin: 16px 0 0 !important;
+  color: var(--qcf-copy) !important;
+  font-size: clamp(0.92rem, 1.3vw, 1.05rem) !important;
+  line-height: 1.65 !important;
+}
+
+@keyframes qcf-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 24px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro aside {
+    min-height: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-intro aside strong {
+    margin-top: 14px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream::before {
+    display: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+    min-height: 0 !important;
+    padding: 72px 22px 26px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-visual,
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+    grid-row: 2;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual {
+    min-height: 145px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-stream article {
+    animation: none;
+    transition: none !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class] .sdr-qc-fit-visual span {
+    transition: none;
+  }
+}
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R4 V4 */
+
+/* QC case study · case context + standardized action stream */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] {
+  --qcc-ink: oklch(0% 0 0);
+  --qcc-text: oklch(39% 0.025 170);
+  --qcc-muted: oklch(52% 0.025 170);
+  --qcc-paper: oklch(98.8% 0.009 165);
+  --qcc-paper-soft: oklch(96.5% 0.022 165);
+  --qcc-mint: oklch(92.8% 0.052 158);
+  --qcc-green: oklch(50% 0.135 157);
+  --qcc-green-deep: oklch(34% 0.08 160);
+  --qcc-amber: oklch(96% 0.055 88);
+  --qcc-amber-line: oklch(70% 0.13 77);
+  --qcc-rule: oklch(85% 0.025 165);
+  --qcc-shadow: 0 24px 60px oklch(38% 0.07 160 / 0.10);
+  --qcc-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-case:has(.sdr-qc-case-bento) {
+  padding-block: clamp(72px, 8vw, 112px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-bento {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  padding: 0;
+  overflow: clip;
+  border: 1px solid var(--qcc-rule);
+  border-radius: 20px;
+  background: var(--qcc-paper);
+  box-shadow: var(--qcc-shadow);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-context {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 28px;
+  padding: clamp(32px, 4vw, 52px);
+  border-right: 1px solid var(--qcc-rule);
+  background: linear-gradient(150deg, var(--qcc-paper) 0%, var(--qcc-paper-soft) 100%);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-heading .ff-kicker,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-label,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-profile small,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-challenge strong,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome strong {
+  color: var(--qcc-green-deep);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-heading h2 {
+  max-width: 14ch;
+  margin: 16px 0 0;
+  color: var(--qcc-ink);
+  font-size: clamp(28px, 4.45cqw, 32px);
+  font-style: normal;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-profile,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-challenge {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-profile {
+  padding: 18px;
+  border: 1px solid var(--qcc-rule);
+  border-radius: 14px;
+  background: var(--qcc-paper);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-profile > span,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-challenge > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--qcc-green);
+  background: var(--qcc-mint);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-profile p,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-challenge p,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome p {
+  margin: 6px 0 0;
+  color: var(--qcc-text);
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-challenge {
+  margin-top: auto;
+  padding: 18px;
+  border-left: 3px solid var(--qcc-amber-line);
+  border-radius: 4px 14px 14px 4px;
+  background: var(--qcc-amber);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-action {
+  min-width: 0;
+  padding: clamp(32px, 4vw, 52px);
+  background: var(--qcc-paper-soft);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps::before {
+  position: absolute;
+  top: 32px;
+  bottom: 32px;
+  left: 27px;
+  width: 2px;
+  content: "";
+  background: var(--qcc-rule);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--qcc-rule);
+  border-radius: 16px;
+  background: var(--qcc-paper);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: qcc-step-in 560ms var(--qcc-ease-out) forwards;
+  animation-delay: calc(90ms + (var(--qc-case-index) * 90ms));
+  transition: transform 220ms var(--qcc-ease-out);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps li:hover {
+  transform: translateY(-4px);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border: 1px solid var(--qcc-rule);
+  border-radius: 14px;
+  color: var(--qcc-green);
+  background: var(--qcc-mint);
+  font-size: 21px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-copy {
+  min-width: 0;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-copy small {
+  color: var(--qcc-green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-copy h3 {
+  margin: 4px 0 0;
+  color: var(--qcc-ink);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-copy p {
+  margin: 5px 0 0;
+  color: var(--qcc-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border: 1px solid var(--qcc-rule);
+  border-radius: 999px;
+  color: var(--qcc-green-deep);
+  background: var(--qcc-mint);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 15px;
+  align-items: center;
+  margin: 18px 0 0;
+  padding: 20px;
+  border: 1px solid var(--qcc-green);
+  border-radius: 16px;
+  background: var(--qcc-mint);
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome > span {
+  position: relative;
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--qcc-paper);
+  background: var(--qcc-green);
+  font-size: 20px;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome > span::after {
+  position: absolute;
+  inset: -7px;
+  border: 1px solid var(--qcc-green);
+  border-radius: inherit;
+  content: "";
+  animation: qcc-outcome-pulse 2.8s var(--qcc-ease-out) infinite;
+}
+
+@keyframes qcc-step-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes qcc-outcome-pulse {
+  0%, 70%, 100% { opacity: 0; transform: scale(0.82); }
+  28% { opacity: 0.55; transform: scale(1); }
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-context {
+    border-right: 0;
+    border-bottom: 1px solid var(--qcc-rule);
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-heading h2 {
+    max-width: 22ch;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-context,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-action {
+    padding: 24px 18px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps li {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 13px;
+    padding: 15px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps::before {
+    left: 23px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-step-status {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-steps li {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class] .sdr-qc-case-outcome > span::after {
+    animation: none;
+  }
+}
+
+/* Final composition lock — Design → Garden → Taste */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr) !important;
+  gap: clamp(28px, 4vw, 72px) !important;
+  align-items: stretch !important;
+  margin-bottom: clamp(28px, 4vw, 46px) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro > div:first-child {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding-left: clamp(18px, 2.1vw, 30px) !important;
+  border-left: 4px solid var(--qcf-green) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro h2 {
+  max-width: 620px !important;
+  margin: 10px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro p {
+  max-width: 650px !important;
+  margin: 20px 0 0 !important;
+  color: #53635f !important;
+  font-size: clamp(15px, 1.25vw, 18px) !important;
+  line-height: 1.62 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro aside {
+  display: grid !important;
+  grid-template-columns: minmax(0, .9fr) minmax(150px, 1.1fr) !important;
+  grid-template-rows: auto 1fr !important;
+  gap: 12px 24px !important;
+  min-height: 210px !important;
+  padding: 26px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(16, 85, 64, .14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .68) !important;
+  box-shadow: 0 22px 50px rgba(18, 88, 65, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro aside .sdr-china-fit-note-title {
+  grid-column: 1 !important;
+  align-self: end !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro aside strong {
+  grid-column: 1 !important;
+  align-self: start !important;
+  margin: 0 !important;
+  color: #000 !important;
+  font-size: clamp(16px, 1.45vw, 20px) !important;
+  line-height: 1.38 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-proof {
+  position: relative !important;
+  grid-column: 2 !important;
+  grid-row: 1 / span 2 !important;
+  min-height: 156px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background: #dcece6 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-rows: 1fr !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(14, 83, 62, .14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .58) !important;
+  box-shadow: 0 24px 58px rgba(19, 92, 69, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream::before {
+  display: block !important;
+  top: 48px !important;
+  left: 12.5% !important;
+  right: 12.5% !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, rgba(21,149,106,.12), rgba(21,149,106,.72), rgba(21,149,106,.12)) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 340px !important;
+  height: auto !important;
+  padding: 30px 26px 28px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(14, 83, 62, .12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:last-child {
+  border-right: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:hover {
+  background: rgba(255, 255, 255, .82) !important;
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08) !important;
+  transform: translateY(-5px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top {
+  position: relative !important;
+  inset: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-height: 36px !important;
+  margin: 0 0 34px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream .sdr-fit-card-top small {
+  display: grid !important;
+  width: 36px !important;
+  height: 36px !important;
+  place-items: center !important;
+  border: 1px solid rgba(21, 149, 106, .32) !important;
+  border-radius: 50% !important;
+  background: #f7fffb !important;
+  color: #08714e !important;
+  font-size: 11px !important;
+  opacity: 1 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-visual,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-visual {
+  display: grid !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  margin: 0 0 22px !important;
+  place-items: center !important;
+  border-radius: 12px !important;
+  background: #c9f5dc !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-visual span {
+  display: grid !important;
+  width: auto !important;
+  height: auto !important;
+  place-items: center !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #08714e !important;
+  box-shadow: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-copy,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) .sdr-qc-fit-copy {
+  display: block !important;
+  max-width: none !important;
+  margin: 0 !important;
+  text-align: left !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-copy h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #000 !important;
+  font-size: clamp(18px, 1.6vw, 22px) !important;
+  line-height: 1.2 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-copy p {
+  max-width: 27ch !important;
+  margin: 12px 0 0 !important;
+  color: #60706b !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta {
+  display: grid !important;
+  gap: 0 !important;
+  width: 100% !important;
+  margin: auto 0 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid rgba(14, 83, 62, .14) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta > div {
+  display: grid !important;
+  grid-template-columns: 54px minmax(0, 1fr) !important;
+  gap: 10px !important;
+  align-items: baseline !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(14, 83, 62, .1) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta > div:last-child {
+  border-bottom: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta dt {
+  color: #16845f !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  letter-spacing: .09em !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta dd {
+  min-width: 0 !important;
+  margin: 0 !important;
+  color: #283a35 !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-fit-grid.sdr-qc-fit-stream > article:first-child .sdr-qc-fit-meta dd {
+  max-width: none !important;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+@media (max-width: 980px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+    min-height: 300px !important;
+    border-bottom: 1px solid rgba(14, 83, 62, .12) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article:nth-child(even) {
+    border-right: 0 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream::before {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-intro aside {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-proof {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 170px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-stream article {
+    min-height: 0 !important;
+    padding: 24px 20px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(14, 83, 62, .12) !important;
+  }
+
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class] .sdr-qc-fit-meta {
+    margin-top: 24px !important;
+  }
+}
+
+/* QC case — compact release-decision workbench */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-case > .sdr-qc-case-bento {
+  display: block !important;
+  width: min(1180px, calc(100% - 48px)) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .52) !important;
+  box-shadow: 0 24px 58px rgba(18, 88, 65, .08) !important;
+}
+
+body main.sdr-page-quality-control-inspection .sdr-qc-release-panel h2 {
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+@media (min-width: 901px) {
+  body main.sdr-page-quality-control-inspection .sdr-qc-release-panel h2 {
+    width: max-content !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Match the Dropshipping FAQ chevron: no circular control surface. */
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq summary > span {
+  display: grid !important;
+  width: 28px !important;
+  height: 28px !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #1f2937 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq summary > span::before {
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border: 0 !important;
+  border-right: 1.5px solid currentColor !important;
+  border-bottom: 1.5px solid currentColor !important;
+  content: "" !important;
+  transform: rotate(45deg) translate(-2px, -2px) !important;
+  transition: transform 180ms cubic-bezier(.16, 1, .3, 1) !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq details[open] summary > span::before {
+  color: #167449 !important;
+  transform: rotate(225deg) translate(-2px, -2px) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+    .sdr-faq summary > span::before {
+    transition: none !important;
+  }
+}
+
+/* Final QC FAQ control: use one glyph only, matching Dropshipping. */
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq summary > span::before {
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  content: "⌄" !important;
+  color: #1f2937 !important;
+  font-size: 22px !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq details[open] summary > span::before {
+  color: #167449 !important;
+  transform: rotate(180deg) !important;
+}
+
+/* Tighten the vertical rhythm between QC page modules. */
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case) {
+  padding-block: 52px !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .qch-hero {
+  padding-top: 56px !important;
+  padding-bottom: 40px !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-faq {
+  padding-block: 64px !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-related {
+  padding-block: 58px !important;
+}
+
+body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+  .sdr-quote {
+  padding-block: 64px !important;
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection.sdr-page-quality-control-inspection
+    :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
+    padding-block: 42px !important;
+  }
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-bento > .sdr-qc-case-context {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(210px, .68fr) minmax(250px, .9fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+  min-height: 0 !important;
+  padding: clamp(30px, 4vw, 48px) !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(17, 91, 68, .14) !important;
+  background: linear-gradient(150deg, rgba(255,255,255,.74), rgba(238,249,244,.64)) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-heading {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  padding-right: clamp(14px, 2.5vw, 34px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-heading h2 {
+  max-width: 620px !important;
+  margin: 12px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em !important;
+  text-wrap: balance;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-profile,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-challenge {
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  align-content: center !important;
+  align-items: start !important;
+  min-width: 0 !important;
+  min-height: 138px !important;
+  margin: 0 !important;
+  padding: 18px !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .68) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-challenge {
+  border-left: 3px solid #d69a28 !important;
+  background: rgba(255, 239, 186, .66) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-profile p,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-challenge p {
+  margin: 7px 0 0 !important;
+  color: #53635f !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-bento > .sdr-qc-case-action {
+  min-width: 0 !important;
+  padding: clamp(28px, 4vw, 46px) !important;
+  background: rgba(239, 249, 244, .68) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  margin: 18px 0 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, .55) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps::before {
+  top: 51px !important;
+  right: 16% !important;
+  bottom: auto !important;
+  left: 16% !important;
+  width: auto !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, rgba(22,132,95,.28), rgba(22,132,95,.8), rgba(22,132,95,.28)) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li,
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li:nth-child(n) {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  min-width: 0 !important;
+  min-height: 260px !important;
+  padding: 26px 24px 22px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(17, 91, 68, .12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  animation: qcc-step-in 560ms cubic-bezier(.16, 1, .3, 1) forwards !important;
+  animation-delay: calc(90ms + (var(--qc-case-index) * 90ms)) !important;
+  transition: background-color 240ms ease, transform 240ms ease, box-shadow 240ms ease !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li:last-child {
+  border-right: 0 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li:hover {
+  z-index: 3 !important;
+  background: rgba(220, 250, 232, .62) !important;
+  box-shadow: 0 18px 34px rgba(15, 85, 64, .08) !important;
+  transform: translateY(-5px) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-icon {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  width: 50px !important;
+  height: 50px !important;
+  place-items: center !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  border-radius: 13px !important;
+  background: #c9f5dc !important;
+  color: #08714e !important;
+  font-size: 19px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-copy {
+  margin-top: 34px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-copy h3 {
+  margin: 6px 0 0 !important;
+  color: #000 !important;
+  font-size: clamp(17px, 1.45vw, 20px) !important;
+  line-height: 1.24 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-copy p {
+  margin: 8px 0 0 !important;
+  color: #60706b !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-status {
+  margin: auto 0 0 !important;
+  padding: 7px 10px !important;
+  border: 1px solid rgba(17, 91, 68, .14) !important;
+  background: #d7f6e3 !important;
+  font-size: 9px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-outcome {
+  display: grid !important;
+  grid-template-columns: 48px minmax(0, 1fr) !important;
+  gap: 15px !important;
+  align-items: center !important;
+  margin: 16px 0 0 !important;
+  padding: 18px 20px !important;
+  border: 1px solid #16845f !important;
+  border-radius: 14px !important;
+  background: rgba(196, 241, 211, .66) !important;
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-bento > .sdr-qc-case-context {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-heading {
+    grid-column: 1 / -1 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps::before {
+    top: 30px !important;
+    right: auto !important;
+    bottom: 30px !important;
+    left: 49px !important;
+    width: 2px !important;
+    height: auto !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li:nth-child(n) {
+    min-height: 190px !important;
+    padding-left: 84px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(17, 91, 68, .12) !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-icon {
+    position: absolute !important;
+    top: 24px !important;
+    left: 24px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-step-copy {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-bento > .sdr-qc-case-context {
+    grid-template-columns: 1fr !important;
+    padding: 24px 18px !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-heading {
+    grid-column: 1 !important;
+  }
+
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-bento > .sdr-qc-case-action {
+    padding: 24px 18px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-steps > li,
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class] .sdr-qc-case-outcome > span::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Final QC section rhythm overrides. Keep these last. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class]
+  :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case) {
+  padding-block: 52px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .qch-hero {
+  padding-top: 56px !important;
+  padding-bottom: 40px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-faq {
+  padding-block: 64px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related {
+  padding-block: 58px !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-quote {
+  padding-block: 64px !important;
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class]
+    :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
+    padding-block: 42px !important;
+  }
+}

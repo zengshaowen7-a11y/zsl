@@ -1,0 +1,55 @@
+{
+  "Metadata": {
+    "title": "JW Dropshipping - Sourcing & Global Fulfillment",
+    "description": "China product sourcing, kwaliteitsinspectie, magazijn, merkverpakking en wereldwijde dropshipping voldoening voor onafhankelijke eCommerce merken.",
+    "openGraphTitle": "JW Dropshipping Van product sourcing naar de deuren van uw klanten",
+    "openGraphDescription": "End-to-end sourcing, kwaliteitscontrole en wereldwijde vervulling voor onafhankelijke eCommerce merken."
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Diensten",
+    "aboutUs": "Over ons",
+    "getQuote": "Vraag een gratis offerte aan",
+    "primaryLabel": "Primaire navigatie",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "toggleServices": "Dienstmenu aan/uit",
+    "howItWorks": "Hoe het werkt",
+    "whyUs": "Waarom JW Dropshipping",
+    "testimonials": "Klantverhalen",
+    "contact": "Contact",
+    "language": "Taal",
+    "currentLanguage": "Nederlands",
+    "currentLanguageCode": "NL",
+    "selectLanguage": "Taal selecteren",
+    "comingSoon": "Binnenkort beschikbaar"
+  },
+  "Common": {
+    "learnMore": "Meer informatie",
+    "readMore": "Lees meer",
+    "backToHome": "Terug naar home",
+    "getFreeQuote": "Vraag een gratis offerte aan",
+    "serviceScope": "TOEPASSINGSGEBIED VAN DE DIENSTEN"
+  },
+  "Footer": {
+    "lead": "China sourcing, kwaliteitscontrole en wereldwijde vervulling voor onafhankelijke eCommerce merken.",
+    "services": "Diensten",
+    "company": "Onderneming",
+    "rights": "© 2026 JW Dropshipping. Alle rechten voorbehouden.",
+    "globalFulfillment": "Globale vervulling",
+    "operationsSupport": "Ondersteuning van het operatieteam",
+    "contactUs": "Contacteer ons",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "email": "E-mail",
+    "locationLabel": "Onze locatie",
+    "location": "Kamer 1208, Building A, Future Supply Chain Center, Hangzhou, Zhejiang, China",
+    "serviceSummary": "Product sourcing · Kwaliteitscontrole · Globale vervulling"
+  },
+  "ServiceDetail": {"getQuote":"Vraag een gratis offerte aan","seeHow":"Bekijk hoe het werkt","whatWeHandle":"WAT WIJ VOOR U REGELEN","relatedServices":"Gerelateerde diensten","fitKicker":"PAST DEZE DIENST BIJ U?","bestFit":"BESTE MATCH"},
+  "ThankYou": {
+    "title": "Hartelijk dank, wij hebben uw verzoek ontvangen.",
+    "text": "Ons team zal uw product beoordelen en details opslaan en contact met u opnemen met de volgende stap.",
+    "button": "Terug naar home"
+  }
+}

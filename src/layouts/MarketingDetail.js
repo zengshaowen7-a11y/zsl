@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiCheck, FiMessageCircle } from "react-icons/fi";
 import { detailGuides } from "@config/detail-guides";
 

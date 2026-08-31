@@ -1,0 +1,389 @@
+{
+  "Home": {
+    "evidenceItems": [
+      [
+        "01",
+        "Genehmigter Leistungsumfang",
+        "Die Verantwortlichkeiten für Beschaffung, Inspektion, Verpackung und Versand werden vor dem Start bestätigt."
+      ],
+      [
+        "02",
+        "Nachweis der Qualitätskontrolle",
+        "Vereinbarte Checkpoints und Ausgabefotos liefern Kontext, bevor eine betroffene Bestellung fortgesetzt wird."
+      ],
+      [
+        "03",
+        "Sichtbarkeit des Auftrags",
+        "SKU, Pack- und Tracking-Informationen folgen der Bestellung durch den vereinbarten Workflow."
+      ]
+    ],
+    "workflowSteps": [
+      {
+        "number": "01",
+        "title": "Teilen Sie Ihr Produkt",
+        "text": "Senden Sie uns Produktlinks, Zielmarktinformationen und Ihre wichtigsten Anforderungen."
+      },
+      {
+        "number": "02",
+        "title": "Quelle und Zitat",
+        "text": "Wir beziehen Lieferanten, teilen dann Preise, MOQ und Produktionsvorlaufzeiten."
+      },
+      {
+        "number": "03",
+        "title": "Probe und Inspektion",
+        "text": "Sie genehmigen Proben und wir sichern klare Qualitätskontrollstandards."
+      },
+      {
+        "number": "04",
+        "title": "Speichern und erfüllen",
+        "text": "Unser Lagerteam empfängt, speichert, pflücket und verpackt Ihr Inventar."
+      },
+      {
+        "number": "05",
+        "title": "Schiff und Synchronisation",
+        "text": "Bestellungen versenden weltweit, Tracking-Nummern automatisch zurück zu Ihrem Shop synchronisiert."
+      }
+    ],
+    "services": [
+      {
+        "title": "Produktbeschaffung",
+        "audience": "Für Geschäfte, die Produkte testen oder Lieferanten ersetzen.",
+        "points": [
+          "Lieferantenvergleich",
+          "Koordinierung der Proben",
+          "MOQ und Vorlaufzeitüberprüfung"
+        ],
+        "slug": "product-sourcing",
+        "image": "/images/services/product-sourcing.webp"
+      },
+      {
+        "title": "Qualitätskontrolle",
+        "audience": "Für Geschäfte, die weniger Produkt- und Verpackungsüberraschungen benötigen.",
+        "points": [
+          "Produkt- und Variantenprüfungen",
+          "Bestätigung der Menge",
+          "Verpackungskontrolle"
+        ],
+        "slug": "quality-control-inspection",
+        "image": "/images/services/quality-control-inspection.webp"
+      },
+      {
+        "title": "Private Label & Verpackung",
+        "audience": "Für Marken, die eine konsistente Kundenerfahrung aufbauen.",
+        "points": [
+          "Logo- und Etikettenkoordinierung",
+          "Zollkästen und Beilagen",
+          "Genehmigung der Verpackungsmuster"
+        ],
+        "slug": "private-label",
+        "image": "/images/services/private-label.webp"
+      },
+      {
+        "title": "Dropshipping Fulfillment",
+        "audience": "Für Geschäfte, die individuelle Bestellungen versenden, ohne Lager vor Ort zu halten.",
+        "points": [
+          "Tägliche Auftragsabwicklung",
+          "Pickel und Packung",
+          "Weltweit verfolgter Versand"
+        ],
+        "slug": "dropshipping-supplier",
+        "image": "/images/services/dropshipping-supplier.webp"
+      },
+      {
+        "title": "China 3PL Erfüllung",
+        "audience": "Für wachsende Geschäfte, die Inventar und mehrere SKUs verwalten.",
+        "points": [
+          "Bestandsaufnahme",
+          "Lagerhaus",
+          "Koordinierung der Rückführungen"
+        ],
+        "slug": "3pl-fulfillment-services",
+        "image": "/images/services/3pl-fulfillment.webp"
+      },
+      {
+        "title": "Auftragsautomatisierung",
+        "audience": "Für Geschäfte, die bereit sind, sich wiederholende Bestellaufträge zu reduzieren.",
+        "points": [
+          "Shop Order Sync",
+          "Aktualisierung des Erfüllungsstatus",
+          "Rückgabe-Workflow"
+        ],
+        "slug": "automatic-order-fulfillment",
+        "image": "/images/services/order-automation.webp"
+      }
+    ],
+    "comparisonItems": [
+      [
+        "Mehrere separate Lieferantengespräche",
+        "Ein einziger dedizierter Ansprechpartner für alles"
+      ],
+      [
+        "Keine garantierten Qualitätskontrollen vor dem Versand",
+        "Vollständige Qualitätskontrolle vor jedem Versand"
+      ],
+      [
+        "Begrenzte, generische Verpackung",
+        "Custom Branding & Private Label Verpackungslösungen"
+      ],
+      [
+        "Lager und Versand durch verschiedene Teams",
+        "End-to-End-Workflow vollständig von unserem internen Team verwaltet"
+      ],
+      [
+        "Verwirrende Tracking-Übergaben und verzögerte Updates",
+        "Klare, strukturierte Versand- und Tracking-Updates"
+      ]
+    ],
+    "qcCapabilities": [
+      "SKU und Variante",
+      "Menge",
+      "Aussehen und Ende",
+      "Größe und Gewicht",
+      "Verpackung und Barcode",
+      "Endgültige Paketprüfung"
+    ],
+    "advantages": [
+      {
+        "title": "Quelle mit Klarheit",
+        "text": "Vergleichen Sie Lieferanten, Muster, MOQs & Vorlaufzeiten",
+        "images": [
+          [
+            "/images/services/product-sourcing.webp",
+            "Produkt-Sourcing-Spezialist vergleicht Lieferantenoptionen"
+          ],
+          [
+            "/images/services/dropshipping-supplier.webp",
+            "Lieferantenprodukte vorbereitet für Sourcing Review"
+          ],
+          [
+            "/images/generated/product-sourcing-hero.webp",
+            "China Sourcing Team koordiniert Produktproben"
+          ]
+        ]
+      },
+      {
+        "title": "Kontrolle vor dem Versand",
+        "text": "Vollständige Qualitätskontrolle vor dem Versand",
+        "images": [
+          [
+            "/images/services/quality-control-inspection.webp",
+            "Qualitätsprüfer überprüft Produkte vor dem Versand"
+          ],
+          [
+            "/images/quality-gallery/warehouse-package-check.jpg",
+            "Lagerteam überprüft Produktverpackung"
+          ],
+          [
+            "/images/generated/jw-quality-check-v2.png",
+            "JW Qualitätskontrolle Spezialist Überprüfung eines Artikels"
+          ]
+        ]
+      },
+      {
+        "title": "Fulfill mit einem Team",
+        "text": "Lagerung, Verpackung, Versand & Tracking unter einem Workflow",
+        "images": [
+          [
+            "/images/services/3pl-fulfillment.webp",
+            "China Warehouse Fulfillment Operation"
+          ],
+          [
+            "/images/process/warehouse-picking-overhead.jpg",
+            "Warehouse Personal Kommissionierung Produkte für Bestellungen"
+          ],
+          [
+            "/images/generated/jw-dispatch-v2.png",
+            "GW-Team bereitet Pakete für den Versand vor"
+          ]
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Oliver",
+        "country": "GROSSBRITANNIEN",
+        "flagSrc": "https://flagcdn.com/gb.svg",
+        "tag": "BESTELLUNGSBEHANDLUNG",
+        "quote": "Yuri und das gesamte JW-Team sind unglaublich organisierte, zuverlässige Profis. Wenn Sie jeden Monat Hunderte von Bestellungen verwalten, sind Tracking und Konsistenz alles. Ihr klares Workflow-System hält jede Sendung leicht zu befolgen, reduziert Fehlkommunikation und spart mir jede Woche Stunden manueller Arbeit. Ich mache mir keine Sorgen mehr über die unordentliche Auftragsabwicklung aus China."
+      },
+      {
+        "name": "Mia",
+        "country": "CA",
+        "flagSrc": "https://flagcdn.com/ca.svg",
+        "tag": "TÄGLICHE UNTERSTÜTZUNG",
+        "quote": "Das Support-Team von JW war vom ersten Tag an zuverlässig und reaktionsschnell. Sie antworten schnell, nehmen sich Zeit, um Fragen zu klären und kommunizieren reibungslos auf Englisch, während wir unseren Fulfillment-Workflow einrichten."
+      },
+      {
+        "name": "Sophie",
+        "country": "FR",
+        "flagSrc": "https://flagcdn.com/fr.svg",
+        "tag": "PRODUKTQUELLE",
+        "quote": "JW ist ein ausgezeichneter Fulfillment-Partner. Ihr Sourcing-Team hört genau auf unsere Anforderungen, bietet praktische Lösungen und hält uns während des gesamten Prozesses auf dem Laufenden."
+      }
+    ],
+    "faqs": [
+      [
+        "Welche Fulfillment-Services bieten Sie an?",
+        "Wir bieten End-to-End-E-Commerce-Fulfillment-Services, einschließlich Produktbeschaffung von verifizierten chinesischen Herstellern, umfassende Qualitätskontrolle, weltweiten Versand in über 150 Länder, Print-on-Demand-Fulfillment, Private Label und US-Lagerdistribution über unsere Standorte in Los Angeles. Von der Beschaffung bis zur Lieferung übernehmen wir Ihre gesamte Lieferkette."
+      ],
+      [
+        "Benötige ich ein Mindestbestellvolumen, um mit JW DROPSHIPPING zu arbeiten?",
+        "Nein. Im Gegensatz zu traditionellen Fulfillment-Unternehmen, die mehr als 100 Bestellungen / Tag benötigen, arbeitet JW DROPSHIPPING in jeder Phase mit Verkäufern zusammen - von Ihren ersten 10 Bestellungen bis zu 1.000 + pro Tag. Wir verarbeiten täglich bis zu 30.000 Bestellungen in unseren Lagerhallen in Hangzhou und Dongguan, also skalieren wir mit Ihnen, anstatt Sie am Anfang auszusperren."
+      ],
+      [
+        "In welche Länder versenden Sie?",
+        "Wir bieten internationalen Versand in über 150 Länder auf sechs Kontinenten an, darunter die Vereinigten Staaten, Kanada, Großbritannien, Australien, Deutschland, Frankreich, Spanien und Märkte in ganz Europa, Asien und Südamerika. Wir übernehmen Zolldokumentation und End-to-End-Tracking für alle internationalen Destinationen über unsere vertrauenswürdigen Logistikpartner."
+      ],
+      [
+        "Können Sie mit Private Label und Markenverpackungen helfen?",
+        "Ja. Wir bieten umfassende Private-Label-Services, einschließlich kundenspezifisches Verpackungsdesign, Markeneinsätze, Produktkennzeichnung und White-Label-Herstellung. Ihre Produkte werden ausschließlich unter Ihrer Markenidentität ausgeliefert, sodass Sie direkte Kundenbeziehungen aufbauen können. Wir verwalten den gesamten Private-Label-Prozess vom Konzept bis zur Produktion und Erfüllung."
+      ],
+      [
+        "Mit welchen E-Commerce-Plattformen integrieren Sie?",
+        "Wir integrieren uns mit allen wichtigen E-Commerce-Plattformen, einschließlich Shopify, WooCommerce, Amazon und anderen Plattformen durch API-Integration. Bestellungen synchronisieren sich automatisch von Ihrem Shop zu unserem Fulfillment-System für eine nahtlose Verarbeitung. Für benutzerdefinierte Plattformen oder einzigartige Anforderungen ermöglicht unser API die direkte Integration in Ihre bestehende Infrastruktur."
+      ]
+    ],
+    "stats": [
+      {
+        "value": "7",
+        "number": 7,
+        "suffix": "",
+        "label": "Jahre Erfahrung"
+      },
+      {
+        "value": "30%",
+        "number": 30,
+        "suffix": "%",
+        "label": "Kostensenkung"
+      },
+      {
+        "value": "100+",
+        "number": 100,
+        "suffix": "+",
+        "label": "Reederei"
+      },
+      {
+        "value": "1500+",
+        "number": 1500,
+        "suffix": "+",
+        "label": "DTC Brand’s Choice"
+      }
+    ],
+    "sections": {
+      "heroKicker": "ZUVERLÄSSIGER DROPSHIPPING-PARTNER IN CHINA",
+      "heroTitleLines": [
+        "Beschaffung, Qualitätskontrolle und Fulfillment aus China",
+        "Für niedrigere Logistikkosten"
+      ],
+      "heroLead": "Wir beschaffen Produkte, prüfen jede Bestellung und versenden direkt an Ihre Kunden. Ohne eigene Lagerbestände und ohne Lageraufwand.",
+      "heroPrimary": "Kostenloses Angebot anfordern",
+      "heroSecondary": "So funktioniert es",
+      "heroProofLabel": "Kerndienstverpflichtungen",
+      "workflowLabel": "JW WORKFLOW",
+      "watchVideo": "WATCHVIDEO",
+      "watchVideoLabel": "Sehen Sie sich das Packing-Workflow-Video in einem neuen Tab an",
+      "videoLabel": "Ware Packing Workflow Video",
+      "playLabel": "Play Warehouse Packing Workflow Video",
+      "playTitle": "Workflow-Video abspielen",
+      "operatingOverview": "Betriebsübersicht",
+      "platforms": "Funktioniert mit den Plattformen, auf denen Sie bereits verkaufen",
+      "platformLabel": "Unterstützte eCommerce-Plattformen",
+      "advantagesKicker": "Warum wählen Sie JW Dropshipping?",
+      "advantagesTitle": "End-to-End-Kontrolle: Keine Drittmittelsmänner",
+      "advantagesLead": "Quelle, Inspektion, Pack und Schiff, vollständig verwaltet von unserem eigenen Lagerteam in China",
+      "whyLink": "Warum JW Dropshipping",
+      "previousImage": "Vorheriges Bild",
+      "nextImage": "Nächstes Bild",
+      "processKicker": "WIE ES WIRKT",
+      "processTitle": "Vom Produktlink zur verfolgten Endlieferung",
+      "processLead": "5 einfache Schritte, die vollständig von unserem internen China-Team bearbeitet werden",
+      "processLink": "So funktioniert es",
+      "servicesKicker": "KERNDIENSTLEISTUNGEN",
+      "servicesTitle": "Was wir für Ihren Shop tun",
+      "servicesLead": "Beginnen Sie mit einem Dienst oder verbinden Sie ihn mit einem verwalteten Workflow.",
+      "bestFor": "Am besten für",
+      "exploreService": "Erkundungsdienst",
+      "compareServices": "Vergleichen Sie alle Services",
+      "differenceKicker": "DER JW-UNTERSCHICHT",
+      "differenceTitle": "Ein einfacherer, einheitlicher Weg, um die Erfüllung aus China zu verwalten",
+      "differenceLead": "Skip fragmentierte Übergaben zwischen separaten Lieferanten, Inspektoren, Lagern und Versandteams. Arbeiten Sie mit einem einzigen, koordinierten Team.",
+      "fragmented": "Fragmentierte Handoffs",
+      "typical": "Typischer Sourcing Agent",
+      "managed": "Ein Managed Workflow",
+      "jw": "JW Dropshipping",
+      "differenceMediaLabel": "Qualitätskontrolle Inspektion Fotos",
+      "differenceMedia": [
+        [
+          "Qualitätskontrollspezialist, der Produkte vor dem Versand kontrolliert",
+          "Produktkontrolle vor dem Versand"
+        ],
+        [
+          "Inspektor, der die Qualitätsangaben des Produkts aufzeichnet",
+          "Kontrollprotokoll"
+        ],
+        [
+          "Verpackungs- und Paketzustandskontrolle",
+          "Verpackungskontrolle"
+        ]
+      ],
+      "qualityKicker": "QUALITÄTSKONTROLLE",
+      "qualityTitle": "Qualitätskontrolle, bevor Produkte China verlassen",
+      "qualityLead": "Inspizieren Sie Produkte, Varianten, Verpackung und Paketdetails vor dem Versand aus China.",
+      "qualityLink": "Entdecken Sie die Qualitätskontrolle",
+      "report": {
+        "label": "Beispiel Qualitätskontrollbericht",
+        "eyebrow": "BEISPIELBERICHT",
+        "title": "Qualitätskontrolle",
+        "summary": "Zusammenfassung der Vorabinspektion",
+        "checked": "Geprüft",
+        "sampling": "Probenahme",
+        "issues": "Themen",
+        "passed": "Passiert",
+        "photos": "Fotos",
+        "packaging": "Verpackung",
+        "barcode": "Barcode",
+        "status": "Status",
+        "verified": "Geprüft",
+        "matched": "Matched",
+        "approved": "Zugelassen für den Versand",
+        "checkpoints": "Kontrollpunkte",
+        "items": [
+          "Variantenübereinstimmung",
+          "Anzahl der Mengen",
+          "Abschlussprüfung",
+          "Größe und Gewicht",
+          "Kartonetikett",
+          "Letztes Paket"
+        ],
+        "passedCount": "50 bestanden",
+        "issueCount": "0 Probleme"
+      },
+      "feedbackKicker": "VERKÄUFER-BACK",
+      "feedbackTitle": "Was Verkäufer über die Arbeit mit JW sagen",
+      "feedbackLead": "Echtes Feedback von Verkäufern, die JW für Sourcing, Fulfillment und Branding-Support verwenden.",
+      "fiveStars": "Fünf-Sterne-Bewertung",
+      "feedbackLink": "Lesen Sie mehr Seller Stories",
+      "faqKicker": "HÄNFTIGE FRAGE",
+      "faqTitle": "Was Sie wissen sollten, bevor Sie anfangen",
+      "faqLead": "Schnelle Antworten zu Beschaffung, Mindestmengen, Qualitätskontrollen und Fulfillment-Preisen.",
+      "quoteKicker": "HOLEN SIE SICH EIN KOSTENLOSES QUOTE",
+      "quoteTitle": "Beginnen Sie mit Ihren Geschäftsdetails",
+      "quoteLead": "Erzählen Sie uns von Ihren Produkten, Ihrem Shop und Ihren Erfüllungszielen. Unser Team wird Ihre Anforderungen überprüfen und Ihnen einen klaren, maßgeschneiderten nächsten Schrittplan zusenden.",
+      "quoteLabel": "Was als nächstes passiert",
+      "quotePromises": [
+        [
+          "Teilen Sie die Grundlagen",
+          "Ein Produktlink oder eine Store-URL reicht aus, um zu beginnen."
+        ],
+        [
+          "Bewertet von unserem internen Team",
+          "Ihre Anfrage wird direkt von unseren in China ansässigen Fulfillment-Spezialisten bearbeitet."
+        ],
+        [
+          "Erhalten Sie klare nächste Schritte",
+          "Wir werden mit umsetzbaren Informationen und Preisempfehlungen antworten, um Ihr Projekt voranzubringen."
+        ]
+      ]
+    }
+  }
+}

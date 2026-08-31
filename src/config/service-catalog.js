@@ -1,4 +1,4 @@
-import { servicePages } from "@config/service-page-content";
+import { getServicePages, servicePages } from "@config/service-page-content";
 
 const serviceIcons = {
   "dropshipping-supplier": "package",
@@ -23,7 +23,7 @@ const serviceOverviewImages = {
 };
 
 // The overview, header dropdown and detail routes all use the same service source.
-export const serviceCatalog = servicePages.map((service) => ({
+const createServiceCatalog = (pages) => pages.map((service) => ({
   id: service.slug,
   slug: service.slug,
   title: service.menuTitle,
@@ -33,6 +33,12 @@ export const serviceCatalog = servicePages.map((service) => ({
   summary: service.lead,
   points: service.heroPoints.slice(0, 2),
 }));
+
+export const serviceCatalog = createServiceCatalog(servicePages);
+
+export function getServiceCatalog(locale = "en") {
+  return createServiceCatalog(getServicePages(locale));
+}
 
 export const serviceWorkflow = [
   ["01", "Share your requirements", "Send product links, destination markets, order volume and branding needs."],

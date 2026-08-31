@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Cta from "./components/Cta";
 
 function Pricing({ data }) {

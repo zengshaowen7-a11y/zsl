@@ -1,0 +1,152 @@
+{
+  "About": {
+    "departments": [
+      [
+        "Kontoverwaltung",
+        "Ein benannter Kontakt koordiniert Prioritäten, Updates und Ausnahmen während der gesamten Bestellreise."
+      ],
+      [
+        "Produktbeschaffung",
+        "Lieferantenrecherchen, Angebote, Muster, MOQ, Vorlaufzeit und Anpassung werden vor der Verpflichtung verglichen."
+      ],
+      [
+        "Qualitätskontrolle",
+        "Vereinbarte Checkpoints verwandeln Produktanforderungen in Empfangs- und Vorversandinspektionsroutinen."
+      ],
+      [
+        "Lagerbetrieb",
+        "Inventar, Verpackungsmaterial, Kommissionierungsregeln und Bestellabschlüsse sind um jedes SKU herum organisiert."
+      ],
+      [
+        "Koordinierung der Schifffahrt",
+        "Die Routen werden nach Ziel, Produkttyp, Geschwindigkeit, Tracking und dem Kundenversprechen ausgewählt."
+      ]
+    ],
+    "principles": [
+      [
+        "Machen Sie die Arbeit sichtbar",
+        "Wichtige Entscheidungen, Checkpoints und Ausnahmen sollten über eine Chat-Nachricht hinaus verständlich sein."
+      ],
+      [
+        "Festlegung des Eigentums",
+        "Jede Stufe braucht einen benannten Besitzer, einen Genehmigungspunkt und eine klare nächste Aktion."
+      ],
+      [
+        "Schützen Sie das Kundenversprechen",
+        "Geschwindigkeit ist nur wichtig, wenn das richtige Produkt in dem erwarteten Zustand und der erwarteten Verpackung verbleibt."
+      ],
+      [
+        "Verbessern mit der Marke",
+        "Die Bedienungsroutine sollte sich als Produkte, Märkte, Verpackung und Auftragsvolumen ändern."
+      ]
+    ],
+    "teamRoles": [
+      [
+        "Kontoführer",
+        "Ihr täglicher Ansprechpartner und Besitzer von Cross-Team-Follow-up."
+      ],
+      [
+        "Sourcing-Spezialist",
+        "Koordiniert Fabriken, Zitate, Proben und Wiederholungsproduktion."
+      ],
+      [
+        "QC & Lagerleitung",
+        "Besitzer erhalten Standards, Inspektionen, Inventar- und Verpackungsregeln."
+      ],
+      [
+        "Logistikspezialist",
+        "Überprüfen Sie Routen, Tracking-Leistung und Lieferausnahmen."
+      ]
+    ],
+    "questions": [
+      [
+        "Können wir das echte Team und das Lager sehen, bevor wir zusammenarbeiten?",
+        "Ja. Diese Seite wurde entwickelt, um eine echte Lagerführung, Teamfotografie und externe Verifizierungslinks zu halten. Diese Vermögenswerte werden hinzugefügt, nachdem das Unternehmen sie geliefert und genehmigt hat."
+      ],
+      [
+        "Wer wird für unser Konto verantwortlich sein?",
+        "Jedes Konto sollte einen benannten Ansprechpartner haben, der die Beschaffungs-, Qualitäts-, Lager- und Versandteams koordiniert, damit die Verantwortung zwischen den Abteilungen nicht verschwindet."
+      ],
+      [
+        "Wie kommunizieren Sie Qualitätsprobleme?",
+        "Der Einsatzbereich sollte vor dem Start Inspektionspunkte und Nachweisanforderungen festlegen. Wenn eine Ausnahme angezeigt wird, sollte das Update den Kontext, gegebenenfalls Fotos und praktische Optionen enthalten."
+      ],
+      [
+        "Kann sich der Workflow ändern, wenn unser Shop wächst?",
+        "Ja. Ein nützlicher Fulfillment-Workflow kann mit der Beschaffung und dem direkten Versand beginnen und dann Inventar, Markenverpackung, Automatisierung oder neue Lieferwege hinzufügen, wenn die Nachfrage vorhersehbarer wird."
+      ],
+      [
+        "Welche Unternehmensdetails können wir überprüfen?",
+        "Die letzte Seite zeigt den registrierten Firmennamen, die Büro- und Lageradressen, das unabhängige Bewertungsprofil und die offiziellen Social- oder Gründerlinks, nachdem sie bereitgestellt und verifiziert wurden."
+      ]
+    ],
+    "media": {
+      "licensed": "LIZENZIERTE VORSCHRIFTEN",
+      "needed": "UNTERNEHMENDES UNTERNEHMEN"
+    },
+    "hero": {
+      "kicker": "DAS MENSCHEN UND DAS VERFAHREN JEDES PARCELS",
+      "title": "Ein Fulfillment-Partner sollte sichtbar sein, bevor er vertrauenswürdig ist.",
+      "lead": "JW Dropshipping bringt Lieferantenkoordination, Qualitätskontrollen, Lagerausführung und globale Lieferung in ein verantwortliches Betriebsteam für unabhängige E-Commerce-Marken.",
+      "primary": "Treffen Sie Ihr Fulfillment-Team",
+      "secondary": "Sehen Sie, wie wir arbeiten",
+      "points": [
+        "Menschengeführte Unterstützung",
+        "Dokumentierte Kontrollpunkte",
+        "Klarer Besitz"
+      ],
+      "proofLabel": "Überprüfte Unternehmensfakten zur Verfügung zu stellen"
+    },
+    "story": {
+      "kicker": "WARUM JW DROPSHIPPING GIBT",
+      "title": "Unabhängige Marken benötigen mehr als eine Tracking-Nummer.",
+      "paragraphs": [
+        "Wenn Fabriken, Inspektion, Inventar und Versand von verschiedenen Kontakten verwaltet werden, kann ein kleines Missverständnis schnell zu einem Kundenproblem werden. Unsere Aufgabe ist es, diese Übergaben in einer Routine mit einem klaren Eigentümer zu verbinden.",
+        "Das bedeutet, zu bestätigen, was \"ready to ship\" tatsächlich für Ihr Produkt bedeutet, die Details zu dokumentieren, die wichtig sind, und Entscheidungen in der Nähe der Menschen zu halten, die die körperliche Arbeit machen."
+      ],
+      "link": "Entdecken Sie unseren Serviceumfang",
+      "noteTitle": "Gründergeschichte nötig",
+      "note": "Geben Sie das eigentliche Gründungsjahr, das ursprüngliche Problem, den ersten Meilenstein im Lager und die aktuelle Richtung an."
+    },
+    "departmentsSection": {
+      "kicker": "EINE REISE · FÜNF SPEZIALISTEN",
+      "title": "Jede Handoff gehört jemandem, der es jeden Tag tut.",
+      "lead": "Kunden kommunizieren mit einem verantwortlichen Lead, während spezialisierte Teams die Arbeit hinter Sourcing, QC, Inventar, Verpackung und Lieferung besitzen."
+    },
+    "facility": {
+      "kicker": "INNERHALB DES ARBEITSFLUSSES",
+      "title": "Sehen Sie, wo Bestellungen empfangen, geprüft und versandt werden.",
+      "lead": "Jede Stufe hat einen klaren Besitzer und eine sichtbare Handoff."
+    },
+    "principlesSection": {
+      "kicker": "WIE WIR DIE PARTNERSCHAFT FÜHLEN WOLLEN",
+      "title": "Klar genug, um zu verstehen. Flexibel genug, um zu wachsen.",
+      "lead": "Diese Prinzipien formen, wie die Teambereiche funktionieren, Probleme kommunizieren und wiederkehrende Operationen verbessern."
+    },
+    "team": {
+      "kicker": "ONE TEAM, CLEAR EIGENTUM",
+      "title": "Wissen, wer jede Stufe besitzt.",
+      "lead": "Ihr Account Lead verbindet die Spezialisten, die für Beschaffung, Qualität, Lagerarbeiten und Lieferung verantwortlich sind.",
+      "portrait": "PORTRAIT {number} ERFORDERLICH"
+    },
+    "verification": {
+      "kicker": "ÜBERPRÜFUNG DER UNTERNEHMEN",
+      "title": "Machen Sie es einem ernsthaften Käufer leicht zu überprüfen, mit wem er arbeitet.",
+      "lead": "Veröffentlichen Sie keine vermuteten Daten. Fügen Sie das Folgende erst hinzu, nachdem das Unternehmen die genauen rechtlichen und operativen Details bestätigt hat.",
+      "profile": "GESELLSCHAFTSPROFIL",
+      "details": "Amtliche Angaben",
+      "link": "{number}"
+    },
+    "faq": {
+      "kicker": "BEVOR WIR ZUSAMMEN ARBEITEN",
+      "title": "Fragen, die eine sorgfältige Marke stellen sollte.",
+      "lead": "Vertrauen sollte von sichtbaren Personen, definierter Arbeit und überprüfbaren Unternehmensinformationen kommen.",
+      "button": "Fragen Sie unser Team"
+    },
+    "final": {
+      "kicker": "BEREIT ZUR VERWEISUNG IHRER OPERATION?",
+      "title": "Treffen Sie die Leute, die für Ihre Bestellungen verantwortlich sind.",
+      "button": "Starten Sie ein Gespräch"
+    }
+  }
+}

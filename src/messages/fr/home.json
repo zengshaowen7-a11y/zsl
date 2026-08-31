@@ -1,0 +1,389 @@
+{
+  "Home": {
+    "evidenceItems": [
+      [
+        "01",
+        "Portée des services approuvés",
+        "Les responsabilités en matière d'approvisionnement, d'inspection, d'emballage et d'expédition sont confirmées avant le lancement."
+      ],
+      [
+        "02",
+        "Preuves de vérification de la qualité",
+        "Les points de contrôle convenus et les photos publiées fournissent un contexte avant qu'un ordre affecté ne se poursuive."
+      ],
+      [
+        "03",
+        "Visibilité de la commande",
+        "SKU, les informations d'emballage et de suivi suivent la commande à travers le workflow convenu."
+      ]
+    ],
+    "workflowSteps": [
+      {
+        "number": "01",
+        "title": "Partagez votre produit",
+        "text": "Envoyez-nous des liens de produit, des informations sur le marché cible et vos exigences clés."
+      },
+      {
+        "number": "02",
+        "title": "Source et devis",
+        "text": "Nous fournissons des fournisseurs, puis nous partageons les prix, MOQ et les délais de production."
+      },
+      {
+        "number": "03",
+        "title": "Échantillonner et inspecter",
+        "text": "Vous approuvez les échantillons, et nous enfermons des normes claires de contrôle de qualité."
+      },
+      {
+        "number": "04",
+        "title": "Entreposer et remplir",
+        "text": "Notre équipe d'entrepôt reçoit, stocke, choisit et emballez votre inventaire."
+      },
+      {
+        "number": "05",
+        "title": "Suivi du navire et de la synchronisation",
+        "text": "Commandes expédiées à l'échelle mondiale, numéro de suivi automatiquement synchronisé à votre magasin."
+      }
+    ],
+    "services": [
+      {
+        "title": "Produit d'approvisionnement",
+        "audience": "Pour les magasins testant des produits ou remplaçant des fournisseurs.",
+        "points": [
+          "Comparaison des fournisseurs",
+          "Coordination des échantillons",
+          "MOQ et examen des délais"
+        ],
+        "slug": "product-sourcing",
+        "image": "/images/services/product-sourcing.webp"
+      },
+      {
+        "title": "Contrôle qualité",
+        "audience": "Pour les magasins qui ont besoin de moins de produits et d'emballage surprises.",
+        "points": [
+          "Contrôles des produits et des variantes",
+          "Quantité confirmée",
+          "Inspection des emballages"
+        ],
+        "slug": "quality-control-inspection",
+        "image": "/images/services/quality-control-inspection.webp"
+      },
+      {
+        "title": "Étiquette et emballage privés",
+        "audience": "Pour les marques construisant une expérience client cohérente.",
+        "points": [
+          "Logo et coordination des étiquettes",
+          "Boîtes et inserts personnalisés",
+          "Homologation de l'échantillon d'emballage"
+        ],
+        "slug": "private-label",
+        "image": "/images/services/private-label.webp"
+      },
+      {
+        "title": "Accomplissement",
+        "audience": "Pour les magasins expédiant des commandes individuelles sans détenir de stock localement.",
+        "points": [
+          "Traitement quotidien des commandes",
+          "Choisir et emballer",
+          "Transport suivi dans le monde entier"
+        ],
+        "slug": "dropshipping-supplier",
+        "image": "/images/services/dropshipping-supplier.webp"
+      },
+      {
+        "title": "Chine 3PL Exécution",
+        "audience": "Pour les magasins en croissance gérant l'inventaire et plusieurs SKUs.",
+        "points": [
+          "Réception des stocks",
+          "Stockage des entrepôts",
+          "Coordination des retours"
+        ],
+        "slug": "3pl-fulfillment-services",
+        "image": "/images/services/3pl-fulfillment.webp"
+      },
+      {
+        "title": "Automatisation des commandes",
+        "audience": "Pour les magasins prêts à réduire les commandes répétitives.",
+        "points": [
+          "Conservez la synchronisation des commandes",
+          "Mises à jour de l'état de réalisation",
+          "Suivi du flux de retour"
+        ],
+        "slug": "automatic-order-fulfillment",
+        "image": "/images/services/order-automation.webp"
+      }
+    ],
+    "comparisonItems": [
+      [
+        "Plusieurs conversations avec des fournisseurs distincts",
+        "Un seul point de contact dédié pour tout"
+      ],
+      [
+        "Aucun contrôle de qualité garanti avant expédition",
+        "Contrôle complet de la qualité avant chaque expédition"
+      ],
+      [
+        "Emballage générique limité seulement",
+        "Solutions d'emballage sur mesure et de marque privée"
+      ],
+      [
+        "Entrepôt et expédition gérés par différentes équipes",
+        "Workflow de bout en bout géré entièrement par notre équipe interne"
+      ],
+      [
+        "Confier le suivi des retraits et des mises à jour différées",
+        "Mises à jour claires et structurées de l'expédition et du suivi"
+      ]
+    ],
+    "qcCapabilities": [
+      "SKU et variante",
+      "Quantité",
+      "Apparence et finition",
+      "Taille et poids",
+      "Emballage et code à barres",
+      "Vérification finale du colis"
+    ],
+    "advantages": [
+      {
+        "title": "Source avec clarté",
+        "text": "Comparer les fournisseurs, les échantillons, les MOQ et les délais",
+        "images": [
+          [
+            "/images/services/product-sourcing.webp",
+            "Spécialiste de l'approvisionnement en produits comparant les options du fournisseur"
+          ],
+          [
+            "/images/services/dropshipping-supplier.webp",
+            "Produits des fournisseurs préparés pour l'examen de l'approvisionnement"
+          ],
+          [
+            "/images/generated/product-sourcing-hero.webp",
+            "Équipe chinoise d'approvisionnement coordonnant les échantillons de produits"
+          ]
+        ]
+      },
+      {
+        "title": "Vérifier avant l'expédition",
+        "text": "Inspection de qualité complète avant expédition",
+        "images": [
+          [
+            "/images/services/quality-control-inspection.webp",
+            "Contrôle de la qualité des produits avant l'expédition"
+          ],
+          [
+            "/images/quality-gallery/warehouse-package-check.jpg",
+            "L'équipe d'entrepôt vérifie l'emballage des produits"
+          ],
+          [
+            "/images/generated/jw-quality-check-v2.png",
+            "JW spécialiste du contrôle qualité examinant un article"
+          ]
+        ]
+      },
+      {
+        "title": "Remplir avec une équipe",
+        "text": "Stockage, emballage, expédition et suivi sous un seul flux de travail",
+        "images": [
+          [
+            "/images/services/3pl-fulfillment.webp",
+            "Exploitation de l ' entrepôt chinois"
+          ],
+          [
+            "/images/process/warehouse-picking-overhead.jpg",
+            "Le personnel de l'entrepôt choisit des produits pour les commandes"
+          ],
+          [
+            "/images/generated/jw-dispatch-v2.png",
+            "Équipe JW préparant les colis pour l'expédition"
+          ]
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Oliver",
+        "country": "ROYAUME-UNI",
+        "flagSrc": "https://flagcdn.com/gb.svg",
+        "tag": "COMMANDE",
+        "quote": "Yuri et toute l'équipe JW sont des professionnels incroyablement organisés et fiables. Lorsque vous gérez des centaines de commandes chaque mois, le suivi et la cohérence sont tout. Leur système de flux de travail clair permet de suivre facilement chaque expédition, de réduire les erreurs de communication et d'économiser des heures de travail manuel chaque semaine. Je ne m'inquiète plus pour le traitement des commandes en provenance de Chine."
+      },
+      {
+        "name": "Mia",
+        "country": "PAYS",
+        "flagSrc": "https://flagcdn.com/ca.svg",
+        "tag": "SOUTIEN QUOTIDIEN",
+        "quote": "L'équipe de soutien des JWS a été fiable et réactive depuis le premier jour. Ils répondent rapidement, prennent le temps de clarifier les questions et de communiquer en anglais en douceur pendant que nous mettons en place notre workflow d'exécution."
+      },
+      {
+        "name": "Sophie",
+        "country": "BELGIQUE",
+        "flagSrc": "https://flagcdn.com/fr.svg",
+        "tag": "SOURCE DES PRODUITS",
+        "quote": "JW est un excellent partenaire d'accomplissement. Leur équipe d'approvisionnement écoute attentivement nos exigences, propose des solutions pratiques et nous tient à jour tout au long du processus."
+      }
+    ],
+    "faqs": [
+      [
+        "Quels services d'accomplissement offrez - vous?",
+        "Nous fournissons des services d'exécution du commerce électronique de bout en bout, y compris l'approvisionnement en produits de fabricants chinois vérifiés, le contrôle complet de la qualité, l'expédition dans plus de 150 pays, l'exécution de l'impression à la demande, l'étiquette privée et la distribution des entrepôts américains par nos installations de Los Angeles. Du sourcing à la livraison, nous gérons votre chaîne d'approvisionnement complète."
+      ],
+      [
+        "Ai-je besoin d'un volume de commande minimum pour travailler avec JW DROPSHIPPING?",
+        "C'est pas vrai. Contrairement aux entreprises d'exécution traditionnelles qui exigent plus de 100 commandes par jour, JW DROPSHIPING travaille avec les vendeurs à chaque étape - de vos 10 premières commandes à 1000+ par jour. Nous traitons jusqu'à 30 000 commandes par jour à travers nos entrepôts Hangzhou et Dongguan, donc nous épargnons avec vous au lieu de vous verrouiller au début."
+      ],
+      [
+        "Quels pays expédiez-vous ?",
+        "Nous fournissons des expéditions internationales à plus de 150 pays sur six continents, y compris les États-Unis, le Canada, le Royaume-Uni, l'Australie, l'Allemagne, la France, l'Espagne, et des marchés partout en Europe, en Asie et en Amérique du Sud. Nous traitons la documentation douanière et le suivi de bout en bout pour toutes les destinations internationales à travers nos partenaires logistiques de confiance."
+      ],
+      [
+        "Pouvez-vous aider avec l'étiquette privée et l'emballage de marque?",
+        "Oui. Nous offrons des services complets d'étiquettes privées, y compris la conception d'emballages personnalisés, des inserts de marque, l'étiquetage des produits et la fabrication d'étiquettes blanches. Vos produits sont livrés exclusivement sous votre identité de marque, vous permettant d'établir des relations client directes. Nous gérons l'ensemble du processus de label privé depuis le concept jusqu'à la production et à la réalisation."
+      ],
+      [
+        "Avec quelles plateformes de commerce électronique vous intégrez-vous ?",
+        "Nous intégrons toutes les grandes plateformes de commerce électronique, y compris Shopify, WooCommerce, Amazon et d'autres plateformes grâce à l'intégration API. Les commandes se synchronisent automatiquement de votre magasin à notre système d'exécution pour un traitement sans faille. Pour des plateformes personnalisées ou des exigences uniques, notre API permet une intégration directe avec votre infrastructure existante."
+      ]
+    ],
+    "stats": [
+      {
+        "value": "7",
+        "number": 7,
+        "suffix": "",
+        "label": "Années"
+      },
+      {
+        "value": "30%",
+        "number": 30,
+        "suffix": "%",
+        "label": "Réduction des coûts"
+      },
+      {
+        "value": "100+",
+        "number": 100,
+        "suffix": "+",
+        "label": "Ligne d'expédition"
+      },
+      {
+        "value": "1500+",
+        "number": 1500,
+        "suffix": "+",
+        "label": "Marque DTC"
+      }
+    ],
+    "sections": {
+      "heroKicker": "PARTENAIRE DROPSHIPPING DE CONFIANCE EN CHINE",
+      "heroTitleLines": [
+        "Sourcing, contrôle qualité et fulfillment depuis la Chine",
+        "Pour réduire vos coûts logistiques"
+      ],
+      "heroLead": "Nous recherchons vos produits, contrôlons chaque commande et expédions directement à vos clients. Sans stock à gérer ni contraintes d’entrepôt.",
+      "heroPrimary": "Obtenir un devis gratuit",
+      "heroSecondary": "Découvrir notre fonctionnement",
+      "heroProofLabel": "Engagements au titre des services de base",
+      "workflowLabel": "FLUX DE TRAVAIL JW",
+      "watchVideo": "VOIR LA VIDEO",
+      "watchVideoLabel": "Regardez la vidéo d'emballage de workflow dans un nouvel onglet",
+      "videoLabel": "Entrepôt emballage vidéo de flux de travail",
+      "playLabel": "Jouer la vidéo d'emballage d'entrepôt",
+      "playTitle": "Lire la vidéo du workflow",
+      "operatingOverview": "Aperçu du fonctionnement",
+      "platforms": "Fonctionne avec les plateformes que vous vendez déjà sur",
+      "platformLabel": "Plates-formes eCommerce supportées",
+      "advantagesKicker": "Pourquoi choisir JW Dropshipping ?",
+      "advantagesTitle": "Contrôle de bout en bout: aucun intermédiaire tiers",
+      "advantagesLead": "Source, inspection, emballage et bateau, entièrement géré par notre propre équipe d'entrepôt de Chine",
+      "whyLink": "Pourquoi JW Dropshipping",
+      "previousImage": "Image précédente",
+      "nextImage": "Image suivante",
+      "processKicker": "COMMENT ÇA MARCHE",
+      "processTitle": "Du lien produit à la livraison finale suivie",
+      "processLead": "5 étapes simples, entièrement manipulées par notre équipe en Chine",
+      "processLink": "Comment ça marche",
+      "servicesKicker": "SERVICES DE BASE",
+      "servicesTitle": "Ce qu'on gère pour votre magasin",
+      "servicesLead": "Commencez par un seul service ou connectez-les à un seul workflow géré.",
+      "bestFor": "Meilleur pour",
+      "exploreService": "Explorer le service",
+      "compareServices": "Comparer tous les services",
+      "differenceKicker": "LA DIFFÉRENCE DU JW",
+      "differenceTitle": "Une façon plus simple et unifiée de gérer l'accomplissement de la Chine",
+      "differenceLead": "Passer les transferts fragmentés entre les fournisseurs, les inspecteurs, les entrepôts et les équipes d'expédition. Travailler avec une seule équipe coordonnée.",
+      "fragmented": "Attaques fragmentées",
+      "typical": "Agent d'approvisionnement typique",
+      "managed": "Un flux de travail géré",
+      "jw": "Autres",
+      "differenceMediaLabel": "Photos de contrôle de la qualité",
+      "differenceMedia": [
+        [
+          "Spécialiste du contrôle de la qualité inspectant les produits avant expédition",
+          "Inspection des produits avant expédition"
+        ],
+        [
+          "Inspecteur enregistrement des détails de la qualité du produit",
+          "Dossier d'inspection"
+        ],
+        [
+          "Inspection de l'état de l'emballage et du colis",
+          "Contrôle de l'emballage"
+        ]
+      ],
+      "qualityKicker": "CONTRÔLE DE LA QUALITÉ",
+      "qualityTitle": "Contrôle de la qualité avant que les produits quittent la Chine",
+      "qualityLead": "Vérifier les produits, les variantes, l'emballage et les détails du colis avant l'expédition de la Chine.",
+      "qualityLink": "Explorer le contrôle de la qualité",
+      "report": {
+        "label": "Exemple de rapport de contrôle de la qualité",
+        "eyebrow": "RAPPORT EXEMPLE",
+        "title": "Contrôle qualité",
+        "summary": "Résumé de l'inspection préalable à l'expédition",
+        "checked": "Vérification",
+        "sampling": "Échantillonnage",
+        "issues": "Problèmes",
+        "passed": "Décédé",
+        "photos": "Photos",
+        "packaging": "Emballage",
+        "barcode": "Code barre",
+        "status": "État",
+        "verified": "Vérifié",
+        "matched": "Corrigé",
+        "approved": "Approuvé pour expédition",
+        "checkpoints": "Points de contrôle",
+        "items": [
+          "Variante",
+          "Nombre de quantités",
+          "Vérification de fin",
+          "Taille et poids",
+          "Étiquette pour carton",
+          "Lot final"
+        ],
+        "passedCount": "50 reçus",
+        "issueCount": "0 numéros"
+      },
+      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackTitle": "Ce que disent les vendeurs sur le travail avec JW",
+      "feedbackLead": "Rétroaction réelle des vendeurs utilisant JW pour l'approvisionnement, l'accomplissement et le support de marque.",
+      "fiveStars": "Revue cinq étoiles",
+      "feedbackLink": "Lire plus Histoires de vendeurs",
+      "faqKicker": "QUESTIONS FRÉQUENTES",
+      "faqTitle": "Que savoir avant de commencer",
+      "faqLead": "Réponses rapides sur l'approvisionnement, les quantités minimales, les contrôles de qualité et les prix d'exécution.",
+      "quoteKicker": "OBTENEZ UNE CITATION GRATUITE",
+      "quoteTitle": "Commencez par les détails de votre entreprise",
+      "quoteLead": "Parlez-nous de vos produits, de votre magasin et de vos objectifs d'accomplissement. Notre équipe examinera vos besoins et vous enverra un plan de prochaine étape clair et personnalisé.",
+      "quoteLabel": "Ce qui se passe ensuite",
+      "quotePromises": [
+        [
+          "Partager les bases",
+          "Un lien produit ou URL de magasin suffit pour commencer."
+        ],
+        [
+          "Révisé par notre équipe interne",
+          "Votre demande sera traitée directement par nos spécialistes de l'exécution basés en Chine."
+        ],
+        [
+          "Recevez les prochaines étapes claires",
+          "Nous répondrons avec des informations actionnables et des conseils de tarification pour faire avancer votre projet."
+        ]
+      ]
+    }
+  }
+}

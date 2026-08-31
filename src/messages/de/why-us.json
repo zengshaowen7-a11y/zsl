@@ -1,0 +1,180 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      [
+        "Mehrere Lieferantengespräche",
+        "Ein dedizierter Bedienkontakt"
+      ],
+      [
+        "Ein Zitat ohne gemeinsame Spezifikation",
+        "Lieferantenoptionen im gleichen Brief verglichen"
+      ],
+      [
+        "Produkte, die ohne klare Kontrollen versandt werden",
+        "Vereinbarte QC, bevor Lager oder Aufträge fortgesetzt werden"
+      ],
+      [
+        "Allgemeine Verpackungsentscheidungen",
+        "Dokumentierte Branding- und Verpackungsregeln"
+      ],
+      [
+        "Separate Lager- und Versandteams",
+        "Ein Connected Order Workflow"
+      ],
+      [
+        "Tracking geteilt als finale Nachricht",
+        "Strukturierte Sendung und Ausnahme-Updates"
+      ]
+    ],
+    "principles": [
+      [
+        "Ein verantwortliches Team",
+        "Lieferanten-, Lager-, Verpackungs- und Versandkontext bleiben bei einem in China ansässigen Betriebsteam."
+      ],
+      [
+        "Kontrollen vor Entscheidungen",
+        "Relevante Produkt- und Paketdetails werden an vereinbarten Genehmigungsstellen überprüft, nicht nach Kundenbeschwerden."
+      ],
+      [
+        "Evidenz mit Kontext",
+        "Probleme werden mit der betroffenen Menge, sichtbaren Beweisen und der von Ihrem Team benötigten Entscheidung geteilt."
+      ],
+      [
+        "Regeln, die skalieren",
+        "Zugelassene SKUs, Varianten, Verpackungen und Ausnahmen werden zu wiederholbaren täglichen Erfüllungsanweisungen."
+      ]
+    ],
+    "supportCards": [
+      [
+        "Ein klarer Kontakt",
+        "Produkt, QC und Versandkontext bleiben bei einem Account Lead."
+      ],
+      [
+        "Risiko frühzeitig geprüft",
+        "Proben, Lager- und Verpackungsdetails werden überprüft, bevor sich das Volumen bewegt."
+      ],
+      [
+        "Gemeinsame Auftragsanweisungen",
+        "Genehmigungen, Ausnahmen und Anforderungen bleiben für Wiederholungsarbeiten dokumentiert."
+      ],
+      [
+        "Bereit zur Erfüllung",
+        "SKU Regeln, Verpackung und Tracking Handoff werden vor der Skalierung vorbereitet."
+      ]
+    ],
+    "fitItems": [
+      "Sie wollen einen Kontakt über Sourcing, QC und Fulfillment.",
+      "Produktkonsistenz ist wichtiger als den niedrigsten sichtbaren Preis zu finden.",
+      "Sie benötigen Markenverpackungen oder dokumentierte Bestellregeln.",
+      "Ihr Shop testet jetzt, benötigt aber einen Workflow, der wachsen kann."
+    ],
+    "notFitItems": [
+      "Sie möchten nur eine anonyme Produktliste ohne Überprüfung.",
+      "Sie erwarten, dass jedes Produkt und Ziel eine feste Versandrate verwendet.",
+      "Sie möchten keine Muster, Spezifikationen oder Entscheidungen genehmigen."
+    ],
+    "faqs": [
+      [
+        "Was unterscheidet JW von einem Marktplatzanbieter?",
+        "JW kann Lieferantenkoordination, Empfang, Qualitätskontrollen, Inventar, Verpackung und Versand über einen Betriebsbereich verbinden. Die genauen Verantwortlichkeiten werden vor Beginn der Arbeit bestätigt."
+      ],
+      [
+        "Werde ich einen dedizierten Kontakt haben?",
+        "Ein primärer Kontokontakt hält den Produkt-, Lager- und Versandkontext in Verbindung. Betriebsspezialisten können die Arbeit unterstützen, ohne dass Sie das Gespräch bei jeder Übergabe neu starten müssen."
+      ],
+      [
+        "Wählen Sie immer den günstigsten Anbieter?",
+        "Nein. Lieferantenoptionen sollten mit den gleichen Produktanforderungen verglichen werden, einschließlich Qualität, MOQ, Vorlaufzeit, Verpackung und Erfüllung."
+      ],
+      [
+        "Wie werden Qualitätsthemen kommuniziert?",
+        "Der vereinbarte Inspektionsumfang bestimmt, was überprüft wird. Wenn ein Problem gefunden wird, können betroffene Waren aufbewahrt und mit Beweisen und einer beantragten Entscheidung geteilt werden."
+      ],
+      [
+        "Kann der Leistungsumfang mit meinem Shop wachsen?",
+        "Ja. Ein Projekt kann mit der Beschaffung oder Inspektion beginnen und später Inventar, kundenspezifische Verpackung, Auftragsautomatisierung und globale Erfüllung hinzufügen."
+      ]
+    ],
+    "hero": {
+      "kicker": "Warum wählen Sie JW Dropshipping?",
+      "title": "Wir weisen Ihrem Auftrag ein engagiertes China-Team zu - voll verantwortlich für Qualität, Zeitpläne und Kommunikation in jeder Phase.",
+      "lead": "JW verbindet Beschaffung, Qualitätskontrolle, Inventar, Markenverpackung und -lieferung, so dass Ihr Team weniger Übergaben verwaltet und fundiertere Entscheidungen trifft.",
+      "primary": "Sprich mit dem Team",
+      "secondary": "Sehen Sie den Unterschied",
+      "proofs": [
+        "Live Account Support",
+        "QC Checkpoints vereinbart",
+        "Klare Auftragsübergabe"
+      ],
+      "videoLabel": "JW China Operations Team koordiniert Produktprüfung, Verpackung und Paketsortierung"
+    },
+    "compare": {
+      "kicker": "BETRIEBSMUSTER FÜR KLÄRER",
+      "title": "Weniger Jagen. Mehr sichtbares Eigentum.",
+      "lead": "Der Unterschied ist keine längere Serviceliste. So bleiben Entscheidungen und Übergaben rund um dasselbe Produkt und dieselbe Bestellung verbunden.",
+      "typical": "Typischer Sourcing Agent",
+      "jw": "JW Dropshipping"
+    },
+    "principlesSection": {
+      "kicker": "WAS ARBEITEN MIT JWH SOLLTE FÜHLEN",
+      "title": "Klare, praktische Unterstützung, die Sie jeden Tag nutzen können.",
+      "lead": "Vier Betriebsprinzipien formen den Service, bevor das tägliche Volumen beginnt."
+    },
+    "evidence": {
+      "imageAltOne": "JW-Team zeichnet Produktinspektionsergebnisse auf",
+      "imageAltTwo": "JW-Team überprüft Produktqualität vor dem Versand",
+      "kicker": "SICHTBARE BETRIEBSBEWEISE",
+      "title": "Klare QC Entscheidungen.",
+      "lead": "Anstelle einer vagen Meldung \"QC bestanden\" kann der Inspektionsumfang identifizieren, was überprüft wurde, was nicht übereinstimmte und was genehmigt werden muss.",
+      "review": "QC ÜBERPRÜFUNG",
+      "checked": "Geprüft",
+      "sampling": "Probenahme",
+      "passed": "Passiert",
+      "issues": "Themen",
+      "packaging": "Verpackung",
+      "barcode": "Barcode",
+      "status": "Status",
+      "verified": "Geprüft",
+      "matched": "Matched",
+      "approved": "Zugelassen für den Versand",
+      "checks": [
+        "Variantenübereinstimmung",
+        "Anzahl der Mengen",
+        "Abschlussprüfung",
+        "Kartonetikett"
+      ],
+      "passedCount": "50 bestanden",
+      "issueCount": "0 Probleme",
+      "link": "Entdecken Sie die Qualitätskontrolle"
+    },
+    "support": {
+      "kicker": "LEBENDRECHNUNGSSTÜTZUNG",
+      "title": "Eine Handoff pro Bestellung.",
+      "lead": "Ihr Hauptkontakt verbindet Lieferantenfragen, Lageraktionen und Versandupdates. Das bedeutet weniger wiederholte Erklärungen und einen klareren Eigentümer, wenn etwas eine Entscheidung braucht.",
+      "points": [
+        "Ein primärer Kommunikationspunkt",
+        "Entscheidungen und Verpackungsregeln dokumentiert",
+        "Ausnahmen bis zur Auflösung"
+      ],
+      "imageAlt": "JW Lager und Account Support Team"
+    },
+    "fit": {
+      "kicker": "IST JW DIE RICHTIGE FIT?",
+      "title": "Eine nützliche Partnerschaft beginnt mit abgestimmten Erwartungen.",
+      "lead": "Sich über die Passform im Klaren zu sein, ist wertvoller, als jedem Geschäft das gleiche Servicemodell zu versprechen.",
+      "good": "JW kann gut passen, wenn",
+      "bad": "Wir sind vielleicht nicht richtig, wenn"
+    },
+    "faq": {
+      "kicker": "BEVOR SIE SICH ENTSCHEIDEN",
+      "title": "Fragen zur Arbeit mit JW.",
+      "lead": "Beginnen Sie mit Ihrem Produkt und aktuellen Betriebsproblem für die relevanteste Antwort."
+    },
+    "final": {
+      "kicker": "START MIT IHREM WÄHRENDIGEN BOTTLENECK",
+      "title": "Sehen Sie, ob JW zu Ihrer Operation passt.",
+      "lead": "Teilen Sie einen Produktlink, Zielmärkte und was Ihr Team verlangsamt. Wir werden einen praktischen nächsten Schritt empfehlen.",
+      "button": "Kostenloses Angebot anfordern"
+    }
+  }
+}

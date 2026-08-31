@@ -1,0 +1,55 @@
+{
+  "Metadata": {
+    "title": "JW Dropshipping--Approvisionnement et réalisation mondiale",
+    "description": "Chine approvisionnement de produits, inspection de la qualité, entreposage, emballage de marque et réalisation de dropshipping dans le monde entier pour les marques indépendantes eCommerce.",
+    "openGraphTitle": "JW Dropshipping-Sourcing produit aux portes de vos clients",
+    "openGraphDescription": "Sourcing de bout en bout, contrôle de la qualité et réalisation mondiale pour les marques eCommerce indépendantes."
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "aboutUs": "À propos",
+    "getQuote": "Obtenir un devis gratuit",
+    "primaryLabel": "Navigation primaire",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "toggleServices": "Basculer le menu des services",
+    "howItWorks": "Comment ça marche",
+    "whyUs": "Pourquoi JW Dropshipping",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "language": "Langue",
+    "currentLanguage": "Français",
+    "currentLanguageCode": "FR",
+    "selectLanguage": "Sélectionner la langue",
+    "comingSoon": "Bientôt disponible"
+  },
+  "Common": {
+    "learnMore": "En savoir plus",
+    "readMore": "Lire plus",
+    "backToHome": "Retour à l’accueil",
+    "getFreeQuote": "Obtenir un devis gratuit",
+    "serviceScope": "PORTÉE DES SERVICES"
+  },
+  "Footer": {
+    "lead": "Chine sourcing, contrôle de qualité et réalisation mondiale pour les marques indépendantes eCommerce.",
+    "services": "Services",
+    "company": "Société",
+    "rights": "© 2026 JW Dropshipping. Tous droits réservés.",
+    "globalFulfillment": "Réalisation mondiale",
+    "operationsSupport": "Appui aux équipes opérationnelles",
+    "contactUs": "Contactez-nous",
+    "whatsapp": "Autres",
+    "wechat": "Autres",
+    "email": "Courriel",
+    "locationLabel": "Notre emplacement",
+    "location": "Salle 1208, Bâtiment A, Centre de la future chaîne d'approvisionnement, Hangzhou, Zhejiang, Chine",
+    "serviceSummary": "Approvisionnement en produits · Contrôle de la qualité · Réalisation mondiale"
+  },
+  "ServiceDetail": {"getQuote":"Obtenir un devis gratuit","seeHow":"Découvrez comment ça marche","whatWeHandle":"CE QUE NOUS PRENONS EN CHARGE","relatedServices":"Services associés","fitKicker":"CE SERVICE VOUS CONVIENT-IL ?","bestFit":"PROFIL IDÉAL"},
+  "ThankYou": {
+    "title": "Merci — nous avons reçu votre demande.",
+    "text": "Notre équipe examinera les détails de votre produit et de votre magasin et vous contactera à la prochaine étape.",
+    "button": "Retour à l’accueil"
+  }
+}

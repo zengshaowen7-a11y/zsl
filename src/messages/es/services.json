@@ -1,0 +1,163 @@
+{
+  "ServicesOverview": {
+    "startingPoints": [
+      [
+        "SOURCE",
+        "Buscar productos y proveedores",
+        "Buscar, comparar y validar productos antes de comprometerse con el inventario.",
+        "/services/product-sourcing"
+      ],
+      [
+        "FULFILL",
+        "Envíos fiables",
+        "Conectar el manejo de pedidos, embalaje y entrega global en un flujo de trabajo.",
+        "/services/dropshipping-supplier"
+      ],
+      [
+        "SCALE",
+        "Escala tu inventario",
+        "Recibir acciones a granel, organizar SKUs y cumplir desde un almacén de China.",
+        "/services/3pl-fulfillment-services"
+      ],
+      [
+        "BRAND",
+        "Construya su marca",
+        "Coordinar etiquetas, embalaje, inserción y repetición de producción.",
+        "/services/private-label"
+      ]
+    ],
+    "proofItems": [
+      [
+        "Registros de recepción",
+        "Las cantidades inbound y las discrepancias visibles se registran antes de que se acepte el stock."
+      ],
+      [
+        "Puestos de control QC convenidos",
+        "Los productos, las variantes, las etiquetas y los embalajes se revisan contra el alcance aprobado."
+      ],
+      [
+        "Manejo a nivel de orden",
+        "Escoger, empacar y enviar sigue un flujo de trabajo documentado para cada tienda."
+      ],
+      [
+        "Paso seguido",
+        "El estado del envío y el seguimiento se devuelven a través de la rutina de operación acordada."
+      ]
+    ],
+    "workflowSteps": [
+      [
+        "01",
+        "Comparte tus requisitos",
+        "Enviar enlaces de productos, mercados de destino, volumen de pedidos y necesidades de marca."
+      ],
+      [
+        "02",
+        "Confirme el alcance del servicio",
+        "Definimos responsabilidades de contratación, inspección, inventario, embalaje y entrega."
+      ],
+      [
+        "03",
+        "Preparar productos y sistemas",
+        "Se revisan muestras, embalaje, SKUs y el proceso de entrega de pedidos."
+      ],
+      [
+        "04",
+        "Ejecutar el cumplimiento diario",
+        "Las órdenes son recibidas, escogidas, comprobadas, empaquetadas y enviadas a través del flujo de trabajo acordado."
+      ],
+      [
+        "05",
+        "Seguimiento y mejora",
+        "El seguimiento es devuelto y se examinan cuestiones recurrentes a medida que crecen los productos y el volumen."
+      ]
+    ],
+    "faqs": [
+      [
+        "¿Qué servicios de cumplimiento puedo combinar?",
+        "Usted puede comenzar con la contratación o la inspección solamente, o combinar la fuente, almacenamiento, embalaje personalizado, cumplimiento de pedidos y la entrega rastreada en un ámbito operativo."
+      ],
+      [
+        "¿Puedes trabajar con mis proveedores existentes?",
+        "Sí. Podemos recibir mercancías de un proveedor existente y enfocarnos en la inspección, almacenamiento, embalaje y envío, sujeto a un proceso de entrega claro."
+      ],
+      [
+        "¿Apoyas tiendas de bajo volumen?",
+        "La idoneidad depende del tipo de producto, los requisitos de manejo y los mercados de destino. Comparta su volumen actual y plan de crecimiento para que podamos recomendar un modelo de inicio práctico."
+      ],
+      [
+        "¿Cómo se verifica la calidad del producto?",
+        "El alcance de la inspección está acordado antes de que comiencen las operaciones. Puede incluir cantidad, variantes, apariencia, función básica, empaquetado y cheques de precisión de orden final."
+      ],
+      [
+        "¿Puede proporcionar embalaje de marca?",
+        "Sí. Las opciones pueden incluir etiquetas, tarjetas, bolsas, cajas e insertos, dependiendo de la cantidad, la capacidad del proveedor y el tiempo de producción."
+      ],
+      [
+        "¿A qué países puedes enviar?",
+        "Apoyamos los principales mercados internacionales mediante rutas de navegación rastreadas. La mejor opción depende de destino, tipo de producto, peso de paquete y destino de entrega."
+      ],
+      [
+        "¿Cómo obtengo una cita?",
+        "Envíe su enlace de producto o especificación, mercados de destino, volumen de pedido esperado y requisitos de embalaje. Revisaremos el alcance y recomendaremos el siguiente paso."
+      ]
+    ],
+    "hero": {
+      "kicker": "CHINA SOURCING &AMP; FULFILLMENT SERVICES",
+      "title": "Un equipo de China para el abastecimiento, QC y el cumplimiento global.",
+      "lead": "Elija el soporte que su tienda necesita hoy, luego conecte el suministro, inspección, embalaje, almacenamiento y envío mundial a medida que su operación crece.",
+      "primary": "Solicita un presupuesto gratuito",
+      "secondary": "Explorar los servicios",
+      "benefitsLabel": "Prestaciones de servicios",
+      "benefits": [
+        "Apoyo a la cuenta humana",
+        "Ámbito de servicio claro",
+        "QC antes del envío"
+      ],
+      "imageAlt": "Equipo de cumplimiento JW que recibe inventario en un almacén de China",
+      "quickNavLabel": "Elija un servicio por objetivo de negocio"
+    },
+    "catalog": {
+      "kicker": "SERVICIOS BUILT TO WORK TOGETHER",
+      "title": "Empieza con el cuello de botella en tu operación.",
+      "lead": "Utilice un servicio enfocado o combinarlos en un flujo de trabajo de cumplimiento de China conectado.",
+      "service": "SERVICE {number}",
+      "explore": "Explore el servicio"
+    },
+    "comparison": {
+      "kicker": "ESCOJA EL PUNTO DE PARTIDA CORRECTO",
+      "title": "Compare el alcance del servicio de un vistazo.",
+      "lead": "Cada servicio resuelve una necesidad operativa diferente. Su cita puede combinar más de una.",
+      "headers": [
+        "Servicio",
+        "Mejor",
+        "Inventario",
+        "Marcas",
+        "Qué preparar"
+      ]
+    },
+    "process": {
+      "kicker": "UN TRABAJO OPERATIVO",
+      "title": "Cómo se conectan nuestros servicios.",
+      "lead": "Cada proyecto comienza con un alcance definido y pasa por cinco etapas visibles."
+    },
+    "proof": {
+      "imageAlt": "Equipo JW inspeccionando productos antes del cumplimiento",
+      "badge": "puestos de control operacionales visibles",
+      "kicker": "PROYECTOS ANTES",
+      "title": "Comprobaciones operacionales que se pueden construir en el servicio.",
+      "lead": "Un flujo de trabajo confiable se define por sus puntos de control, registros y desvíos, no reclamaciones decorativas.",
+      "link": "Explore Control de Calidad"
+    },
+    "faq": {
+      "kicker": "CUESTIONES PRESUPUESTARIAS",
+      "title": "Qué saber antes de empezar",
+      "lead": "Respuestas rápidas sobre alcance de servicio, proveedores, volumen de pedidos, cheques de calidad y embalajes de marca."
+    },
+    "final": {
+      "kicker": "PÓNGASE EN CONTACTO CON SU HIJO",
+      "title": "Vea si JW encaja en su operación.",
+      "lead": "Compartir un enlace de producto, mercados de destino y lo que está disminuyendo su equipo. Recomendaremos un próximo paso práctico.",
+      "button": "Solicita un presupuesto gratuito"
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "ServicesOverview": {
+    "startingPoints": [
+      [
+        "BRON",
+        "Zoek producten en leveranciers",
+        "Producten vinden, vergelijken en valideren voordat u zich verbindt tot inventaris.",
+        "/services/product-sourcing"
+      ],
+      [
+        "FULLFILL",
+        "Bestellingen van schepen betrouwbaar",
+        "Sluit orderverwerking, verpakking en wereldwijde levering in één workflow aan.",
+        "/services/dropshipping-supplier"
+      ],
+      [
+        "SCHAAL",
+        "Schaal uw inventaris",
+        "Ontvang bulk voorraad, organiseren SKUs en vervullen uit een China magazijn.",
+        "/services/3pl-fulfillment-services"
+      ],
+      [
+        "BRAND",
+        "Bouw je merk",
+        "Coördineer etiketten, verpakkingen, inserts en herhaalproductie.",
+        "/services/private-label"
+      ]
+    ],
+    "proofItems": [
+      [
+        "Ontvangen records",
+        "Inkomende hoeveelheden en zichtbare verschillen worden geregistreerd voordat de voorraad wordt geaccepteerd."
+      ],
+      [
+        "Akkoord QC-controlepunten",
+        "Producten, varianten, etiketten en verpakkingen worden getoetst aan het goedgekeurde toepassingsgebied."
+      ],
+      [
+        "Orderniveauafhandeling",
+        "Het kiezen, verpakken en verzenden volgt een gedocumenteerde workflow voor elke winkel."
+      ],
+      [
+        "Getraceerde overdracht",
+        "Zendstatus en tracking worden teruggegeven via de overeengekomen werkwijze."
+      ]
+    ],
+    "workflowSteps": [
+      [
+        "01",
+        "Deel uw wensen",
+        "Stuur productlinks, bestemmingsmarkten, bestelvolume en branding behoeften."
+      ],
+      [
+        "02",
+        "Bevestig het toepassingsgebied van de dienst",
+        "Wij definiëren sourcing, inspectie, inventaris, verpakking en levering verantwoordelijkheden."
+      ],
+      [
+        "03",
+        "Bereiden van producten en systemen",
+        "Monsters, verpakking, SKUs en het bestelproces worden herzien."
+      ],
+      [
+        "04",
+        "Dagelijkse vervulling uitvoeren",
+        "Bestellingen worden ontvangen, geplukt, gecontroleerd, verpakt en verzonden via de overeengekomen workflow."
+      ],
+      [
+        "05",
+        "Volgen en verbeteren",
+        "Tracking wordt teruggegeven en terugkerende problemen worden beoordeeld als producten en volume groeien."
+      ]
+    ],
+    "faqs": [
+      [
+        "Welke vervullingdiensten kan ik combineren?",
+        "U kunt beginnen met sourcing of inspectie alleen, of combineren sourcing, magazijn, aangepaste verpakking, bestelling voldoening en traced levering in één werkingsgebied."
+      ],
+      [
+        "Kun je met mijn bestaande leveranciers werken?",
+        "Ja. We kunnen goederen van een bestaande leverancier ontvangen en ons richten op inspectie, opslag, verpakking en verzending, onder voorbehoud van een duidelijk overdrachtsproces."
+      ],
+      [
+        "Steunt u goedkope winkels?",
+        "Geschiktheid hangt af van het producttype, de eisen inzake behandeling en de bestemmingsmarkten. Deel uw huidige volume- en groeiplan zodat we een praktisch startmodel kunnen aanbevelen."
+      ],
+      [
+        "Hoe wordt de productkwaliteit gecontroleerd?",
+        "Het inspectiebereik is overeengekomen voordat de werkzaamheden beginnen. Het kan betrekking hebben op hoeveelheden, varianten, uiterlijk, basisfunctie, verpakking en definitieve controle van de nauwkeurigheid van de bestelling."
+      ],
+      [
+        "Kunt u merkverpakkingen leveren?",
+        "Ja. Opties kunnen labels, kaarten, zakken, dozen en inzetstukken omvatten, afhankelijk van de hoeveelheid, de capaciteit van de leverancier en de productieduur."
+      ],
+      [
+        "Naar welke landen kunt u verzenden?",
+        "Wij ondersteunen belangrijke internationale markten via traced scheepvaartroutes. De beste optie is afhankelijk van bestemming, producttype, pakketgewicht en leveringsdoel."
+      ],
+      [
+        "Hoe krijg ik een citaat?",
+        "Stuur uw productlink of specificatie, bestemmingsmarkten, verwachte ordervolume en verpakkingseisen. We zullen het toepassingsgebied bekijken en de volgende stap aanbevelen."
+      ]
+    ],
+    "hero": {
+      "kicker": "CHINA SOURCING EN VOLLEDIGE DIENSTEN",
+      "title": "Een China team voor sourcing, QC en wereldwijde vervulling.",
+      "lead": "Kies de ondersteuning die uw winkel vandaag nodig heeft, dan aansluiten sourcing, inspectie, verpakking, opslag en wereldwijde verzending als uw bedrijf groeit.",
+      "primary": "Vraag een gratis offerte aan",
+      "secondary": "Explore Services",
+      "benefitsLabel": "Diensten",
+      "benefits": [
+        "Ondersteuning van menselijke rekeningen",
+        "Duidelijke reikwijdte van de dienst",
+        "QC vóór verzending"
+      ],
+      "imageAlt": "JW uitvoering team ontvangt inventaris in een China magazijn",
+      "quickNavLabel": "Kies een service per zakelijke doelstelling"
+    },
+    "catalog": {
+      "kicker": "DIENSTEN DIE AAN HET WERK ZIJN GEBOUWD",
+      "title": "Begin met de bottleneck in uw operatie.",
+      "lead": "Gebruik één gerichte dienst of combineer ze tot een verbonden China vervulling workflow.",
+      "service": "SERVICE {number}",
+      "explore": "Explore service"
+    },
+    "comparison": {
+      "kicker": "KIES HET JUISTE BEGINPUNT",
+      "title": "Vergelijk service scope in een oogopslag.",
+      "lead": "Elke dienst lost een andere operationele behoefte op. Uw citaat kan meerdere combineren.",
+      "headers": [
+        "Dienst",
+        "Beste voor",
+        "Inventaris",
+        "Merken",
+        "Wat te bereiden"
+      ]
+    },
+    "process": {
+      "kicker": "EEN WERKFLOW",
+      "title": "Hoe onze diensten verbinden.",
+      "lead": "Elk project begint met een gedefinieerde scope en beweegt zich door vijf zichtbare stadia."
+    },
+    "proof": {
+      "imageAlt": "JW team inspecteren producten voor vervulling",
+      "badge": "zichtbare operationele controlepunten",
+      "kicker": "BEWIJS VOOR DE BEDRAG",
+      "title": "Operationele controles kunt u inbouwen in de dienst.",
+      "lead": "Een betrouwbare workflow wordt gedefinieerd door zijn controlepunten, records en handoffs, niet decoratieve claims.",
+      "link": "Kwaliteitscontrole onderzoeken"
+    },
+    "faq": {
+      "kicker": "VRAAGSTUKKEN",
+      "title": "Wat te weten voordat u begint",
+      "lead": "Snelle antwoorden over service scope, leveranciers, bestelvolume, kwaliteitscontroles en merkverpakkingen."
+    },
+    "final": {
+      "kicker": "BEGIN MET UW HUIDIGE FLESNECK",
+      "title": "Kijk of JW bij uw operatie past.",
+      "lead": "Deel een productlink, bestemmingsmarkten en wat vertraagt uw team. We zullen een praktische volgende stap aanbevelen.",
+      "button": "Vraag een gratis offerte aan"
+    }
+  }
+}

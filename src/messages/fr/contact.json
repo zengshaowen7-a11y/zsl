@@ -1,0 +1,127 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Sourcing des produits, contrôle de la qualité et réalisation mondiale"
+    },
+    "about": {
+      "title": "L'équipe derrière votre accomplissement",
+      "description": "Rencontrez les personnes, les principes d'exploitation et le flux de travail de réalisation derrière l'approvisionnement, le contrôle de la qualité, l'entrepôt et les services de livraison mondiaux de JW Dropshipping."
+    },
+    "contact": {
+      "title": "Obtenir un devis gratuit",
+      "description": "Partagez vos exigences de produit, de marché et de commande avec JW Dropshipping pour un examen d'approvisionnement et d'exécution ciblé."
+    },
+    "services": {
+      "title": "Chine Sourcing, QC et services d'exécution"
+    },
+    "howItWorks": {
+      "title": "Comment JW Dropshipping Travaux"
+    },
+    "whyUs": {
+      "title": "Pourquoi choisir JW Dropshipping"
+    },
+    "testimonials": {
+      "title": "Histoires des vendeurs",
+      "description": "Avis des vendeurs sur JW Dropshipping sourcing, contrôle de qualité, support de compte, emballage de marque et réalisation mondiale."
+    },
+    "help": {
+      "title": "Centre d'aide à l'approvisionnement et à l'exécution"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "OBTENIR UN EXAMEN GRATUIT DU FINANCEMENT",
+    "heroTitle": "Commencez par un lien produit.",
+    "heroLead": "Dites-nous ce que vous vendez, où vous expédiez et ce qui ralentit votre opération. Nous recommanderons la prochaine étape pratique.",
+    "heroProofs": [
+      "Examen spécifique au produit",
+      "Aucune obligation",
+      "Un contact dédié"
+    ],
+    "responseTarget": "Objectif de réponse",
+    "responseTime": "Un jour ouvrable après avoir examiné votre demande.",
+    "heroImageAlt": "L'équipe de JW examine une demande d'approvisionnement et de réalisation",
+    "afterSubmitKicker": "APRÈS VOUS SOUMETTRE",
+    "afterSubmitTitle": "Une étape suivante visible, pas un appel de vente générique.",
+    "afterSubmitLead": "Vos réponses nous aident à nous concentrer sur la décision opérationnelle qui compte d'abord.",
+    "steps": [
+      {
+        "title": "Examen du contexte",
+        "copy": "Nous examinons votre produit, votre marché, votre volume et votre déficit opérationnel actuel."
+      },
+      {
+        "title": "Précisions sur la portée",
+        "copy": "Nous confirmons les services pertinents, les points de contrôle de qualité et les informations manquantes."
+      },
+      {
+        "title": "Recommandation pratique",
+        "copy": "Vous recevez une prochaine étape ciblée pour la cotation, les échantillons ou la configuration du workflow."
+      }
+    ],
+    "faqKicker": "QUESTIONS FRÉQUENTES",
+    "faqTitle": "Que savoir avant de commencer.",
+    "faqLead": "Réponses rapides sur l'approvisionnement, les quantités minimales, les contrôles de qualité et les prix d'exécution.",
+    "exploreServices": "Explorer tous les services",
+    "faqs": [
+      [
+        "Quelles informations dois-je préparer?",
+        "Une URL de produit ou de magasin, des marchés de destination, un volume de commande quotidien approximatif et votre principal défi d'approvisionnement ou de réalisation sont suffisants pour un examen initial."
+      ],
+      [
+        "Ai-je besoin d'un volume minimum de commande quotidienne?",
+        "Chaque service ne commence pas au même volume. L'approvisionnement, les échantillons et les contrôles de qualité peuvent commencer avant l'exécution quotidienne, tandis que la portée de l'entrepôt dépend du débit de commande prévu."
+      ],
+      [
+        "JW peut-elle travailler avec mon fournisseur actuel?",
+        "Oui. Nous pouvons recevoir des marchandises d'un fournisseur existant et nous concentrer sur l'inspection, l'inventaire, l'emballage et la livraison, sous réserve d'un processus de remise clair."
+      ],
+      [
+        "Pouvez-vous soutenir l'emballage de marque?",
+        "Les étiquettes, inserts, envois postaux, boîtes et autres options d'emballage peuvent être examinés en fonction de la taille du produit, des quantités minimales et du délai de production."
+      ],
+      [
+        "Que se passe-t-il après que je me sois soumis ?",
+        "Notre équipe examine le contexte, identifie les informations manquantes et vous contacte avec une recommandation ciblée pour les devis, les échantillons ou la configuration du workflow."
+      ]
+    ],
+    "firstStepKicker": "VOTRE PREMIÈRE ÉTAPE",
+    "firstStepTitle": "Commencez par un produit.",
+    "firstStepLead": "Dites-nous ce que vous vendez, où vous expédiez et ce qui doit fonctionner mieux. Notre équipe recommandera la prochaine étape pratique.",
+    "talkToTeam": "Parlez à notre équipe"
+  },
+  "ContactForm": {
+    "honeypot": "Laisser ce champ vide",
+    "name": "Name",
+    "namePlaceholder": "Votre nom",
+    "email": "Courriel",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Code pays et numéro de téléphone",
+    "countryCode": "Code pays",
+    "selectCode": "Sélectionner le code",
+    "search": "Recherche",
+    "searchCountry": "Pays de recherche",
+    "phoneNumber": "Numéro de téléphone",
+    "businessDetails": "Parlez-nous de vos affaires !",
+    "businessPlaceholder": "Dites-nous ce que vous vendez, votre situation actuelle de réalisation, les marchés cibles et ce que vous avez besoin d'aide.",
+    "dailyOrderVolume": "Volume d'ordre quotidien",
+    "selectRange": "Sélectionner une plage",
+    "volumeOptions": [
+      "0-10 commandes/jour",
+      "11-50 commandes/jour",
+      "51-200 commandes/jour",
+      "201-500 commandes/jour",
+      "500+ commandes/jour"
+    ],
+    "sending": "Envoyer...",
+    "submit": "Obtenir un devis gratuit",
+    "privacy": "Vos coordonnées ne sont utilisées que pour répondre à cette demande.",
+    "errors": {
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "Un courriel est nécessaire",
+      "emailInvalid": "Saisissez une adresse email valide",
+      "countryCodeRequired": "Code pays requis",
+      "phoneRequired": "Le numéro de téléphone est requis",
+      "businessRequired": "Des détails commerciaux sont requis",
+      "volumeRequired": "Volume de commande quotidien nécessaire"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Produkt Sourcing, Kontrola Jakości i Globalne wypełnienie"
+    },
+    "about": {
+      "title": "O JW Dropshipping 124; Zespół za Twoim wypełnieniem",
+      "description": "Poznaj ludzi, zasady działania i spełnienie przepływu pracy za dostawcy JW Dropshipping, kontroli jakości, magazynu i globalnych usług dostawy."
+    },
+    "contact": {
+      "title": "Pobierz bezpłatny cytat 124; JW Dropshipping",
+      "description": "Podziel się swoim produktem, rynku i zamówienia z JW Dropshipping do ukierunkowanego zaopatrzenia i przeglądu spełnienia."
+    },
+    "services": {
+      "title": "China Sourcing, QC & Usługi wypełniania"
+    },
+    "howItWorks": {
+      "title": "Jak JW Dropshipping Roboty"
+    },
+    "whyUs": {
+      "title": "Dlaczego warto wybrać JW Dropshipping"
+    },
+    "testimonials": {
+      "title": "Opowieści o sprzedającym: XQ0QXZ",
+      "description": "Sprzedawca informacji zwrotnych o źródłach JW Dropshipping, kontroli jakości, wsparcia konta, markowe pakowania i globalnego spełnienia."
+    },
+    "help": {
+      "title": "Centrum pomocy dla zakosztujących i wypełniających"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "UZYSKANIE PRZEGLĄDU SWOBODNEGO WYPEŁNIANIA",
+    "heroTitle": "Zacznij od jednego łącza produktu.",
+    "heroLead": "Powiedz nam, co sprzedajesz, gdzie wysyłasz i co spowalnia twoją operację. Polecimy kolejny praktyczny krok.",
+    "heroProofs": [
+      "Przegląd specyficzny produkcji",
+      "Brak obowiązku",
+      "Jeden dedykowany kontakt"
+    ],
+    "responseTarget": "Cel odpowiedzi",
+    "responseTime": "W ciągu jednego dnia roboczego po przejrzeniu śledztwa.",
+    "heroImageAlt": "Zespół JW przegląda dochodzenie w sprawie zaopatrzenia i spełnienia",
+    "afterSubmitKicker": "PO PODPISANIU",
+    "afterSubmitTitle": "Widoczny następny krok, a nie ogólne wezwanie sprzedaży.",
+    "afterSubmitLead": "Twoje odpowiedzi pomagają nam skupić się na decyzji operacyjnej, która jest najważniejsza.",
+    "steps": [
+      {
+        "title": "Przegląd kontekstu",
+        "copy": "Przeglądamy Państwa produkt, rynek, wielkość i obecną lukę operacyjną."
+      },
+      {
+        "title": "Wyjaśnienie zakresu",
+        "copy": "Potwierdzamy odpowiednie usługi, punkty kontroli jakości i brakujące informacje."
+      },
+      {
+        "title": "Zalecenie praktyczne",
+        "copy": "Otrzymujesz ukierunkowany następny krok do cytowania, próbek lub konfiguracji przepływu pracy."
+      }
+    ],
+    "faqKicker": "PRZEKAZYWANE PYTANIA",
+    "faqTitle": "Co wiedzieć, zanim zaczniesz.",
+    "faqLead": "Szybkie odpowiedzi na temat zaopatrzenia, minimalnych ilości, kontroli jakości i cen spełnienia.",
+    "exploreServices": "Poznaj wszystkie usługi",
+    "faqs": [
+      [
+        "Jakie informacje należy przygotować?",
+        "Produkt lub sklep URL, rynki docelowe, przybliżony dzienny wolumen zamówień i główne wyzwanie zaopatrzenia lub spełnienia są wystarczające do wstępnego przeglądu."
+      ],
+      [
+        "Czy potrzebuję minimalnej dziennej ilości zamówień?",
+        "Nie każda usługa zaczyna się od tej samej objętości. Odżywienie, próbki i kontrole jakości mogą rozpocząć się przed codziennym wypełnieniem, podczas gdy zakres magazynu zależy od oczekiwanego przepływu zamówień."
+      ],
+      [
+        "Czy JW może pracować z moim istniejącym dostawcą?",
+        "Tak. Możemy otrzymywać towary od istniejącego dostawcy i skupić się na inspekcji, inwentaryzacji, pakowania i dostawy, pod warunkiem jasnego procesu przekazania."
+      ],
+      [
+        "Czy możesz wspierać markowe opakowania?",
+        "Etykiety, wkładki, pocztówki, pudełka i inne opcje pakowania mogą być poddane przeglądowi w zależności od wielkości produktu, minimalnych ilości i czasu produkcji."
+      ],
+      [
+        "Co się stanie, gdy się poddam?",
+        "Nasz zespół przegląda kontekst, identyfikuje brakujące informacje i kontaktuje się z Tobą z ukierunkowaną rekomendacją dla cytowania, próbek lub konfiguracji przepływu pracy."
+      ]
+    ],
+    "firstStepKicker": "PIERWSZY KROK",
+    "firstStepTitle": "Zacznij od jednego produktu.",
+    "firstStepLead": "Powiedz nam, co sprzedajesz, gdzie wysyłasz i co musi działać lepiej. Nasz zespół zaleci kolejny praktyczny krok.",
+    "talkToTeam": "Porozmawiaj z naszym zespołem."
+  },
+  "ContactForm": {
+    "honeypot": "Zostaw to pole puste",
+    "name": "Name",
+    "namePlaceholder": "Twoje imię",
+    "email": "E-mail",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Kod kraju i numer telefonu",
+    "countryCode": "Kod kraju",
+    "selectCode": "Wybierz kod",
+    "search": "Szukaj",
+    "searchCountry": "Kraj wyszukiwania",
+    "phoneNumber": "Numer telefonu",
+    "businessDetails": "Opowiedz nam o swoich sprawach!",
+    "businessPlaceholder": "Powiedz nam, co sprzedajesz, swoją obecną sytuację, rynki docelowe i co potrzebujesz pomocy.",
+    "dailyOrderVolume": "Dzienny wolumen zamówień",
+    "selectRange": "Wybierz zakres",
+    "volumeOptions": [
+      "0- 10 zamówień / dzień",
+      "11- 50 zamówień / dzień",
+      "51- 200 zamówień / dzień",
+      "201- 500 zamówień / dzień",
+      "500 + zamówienia / dzień"
+    ],
+    "sending": "Wysyłam...",
+    "submit": "Uzyskaj bezpłatną wycenę",
+    "privacy": "Twoje dane są używane tylko do odpowiedzi na to pytanie.",
+    "errors": {
+      "nameRequired": "Nazwa jest wymagana",
+      "emailRequired": "Email jest wymagany",
+      "emailInvalid": "Podaj poprawny adres e-mail",
+      "countryCodeRequired": "Kod kraju jest wymagany",
+      "phoneRequired": "Numer telefonu jest wymagany",
+      "businessRequired": "Wymagane są szczegóły biznesowe",
+      "volumeRequired": "Dzienna ilość zamówienia jest wymagana"
+    }
+  }
+}

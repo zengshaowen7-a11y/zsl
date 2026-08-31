@@ -1,3 +1,9 @@
+import { servicePages as frServicePages } from "@/content/fr/service-pages";
+import { servicePages as deServicePages } from "@/content/de/service-pages";
+import { servicePages as nlServicePages } from "@/content/nl/service-pages";
+import { servicePages as plServicePages } from "@/content/pl/service-pages";
+import { servicePages as esServicePages } from "@/content/es/service-pages";
+
 const commonPlatforms = ["Shopify", "WooCommerce", "TikTok Shop", "Amazon", "Etsy", "Custom Stores"];
 
 export const servicePages = [
@@ -267,6 +273,19 @@ export const servicePages = [
   },
 ];
 
-export function getServicePage(slug) {
-  return servicePages.find((service) => service.slug === slug);
+const localizedServicePages = {
+  en: servicePages,
+  fr: frServicePages,
+  de: deServicePages,
+  nl: nlServicePages,
+  pl: plServicePages,
+  es: esServicePages,
+};
+
+export function getServicePages(locale = "en") {
+  return localizedServicePages[locale] || servicePages;
+}
+
+export function getServicePage(slug, locale = "en") {
+  return getServicePages(locale).find((service) => service.slug === slug);
 }

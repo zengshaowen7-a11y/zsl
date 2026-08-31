@@ -1,0 +1,127 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Aprovisionamiento de productos, control de calidad y fulfillment global"
+    },
+    "about": {
+      "title": "Acerca de JW Dropshipping",
+      "description": "Conoce a la gente, principios operativos y flujo de trabajo de cumplimiento detrás de la fuente de JW Dropshipping, control de calidad, almacén y servicios globales de entrega."
+    },
+    "contact": {
+      "title": "Consiga un presupuesto gratuito ← JW Dropshipping",
+      "description": "Comparta sus requisitos de producto, mercado y pedido con JW Dropshipping para una revisión centrada de la contratación y el cumplimiento."
+    },
+    "services": {
+      "title": "Servicios de sourcing, control de calidad y fulfillment en China"
+    },
+    "howItWorks": {
+      "title": "Cómo JW Dropshipping Obras"
+    },
+    "whyUs": {
+      "title": "¿Por qué elegir JW Dropshipping"
+    },
+    "testimonials": {
+      "title": "Historias del vendedor Silencio JW Dropshipping",
+      "description": "Comentarios del vendedor sobre JW Dropshipping sourcing, control de calidad, soporte de cuenta, embalaje de marca y cumplimiento global."
+    },
+    "help": {
+      "title": "Centro de ayuda para el mantenimiento y el relleno"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "OBTENGA UNA VISIÓN DE FONDO GRATUITA",
+    "heroTitle": "Comience con un enlace de producto.",
+    "heroLead": "Cuéntanos lo que vendes, dónde envías y lo que está retrasando tu operación. Recomendaremos el siguiente paso práctico.",
+    "heroProofs": [
+      "Examen específico del producto",
+      "Ninguna obligación",
+      "Un contacto dedicado"
+    ],
+    "responseTarget": "Objetivo de respuesta",
+    "responseTime": "Dentro de un día hábil después de revisar su solicitud.",
+    "heroImageAlt": "Equipo JW revisando una solicitud de contratación y cumplimiento",
+    "afterSubmitKicker": "DESPUÉS DE QUE TE SUMINISTRES",
+    "afterSubmitTitle": "Un siguiente paso visible, no una llamada de ventas genérica.",
+    "afterSubmitLead": "Sus respuestas nos ayudan a centrarnos en la decisión operacional que importa primero.",
+    "steps": [
+      {
+        "title": "Examen de contexto",
+        "copy": "Revisamos su producto, mercado, volumen y brecha operativa actual."
+      },
+      {
+        "title": "Ámbito de aclaración",
+        "copy": "Confirmamos los servicios pertinentes, los puestos de control de calidad y la información que falta."
+      },
+      {
+        "title": "Recomendación práctica",
+        "copy": "Recibirá un próximo paso enfocado para citas, muestras o configuración de flujo de trabajo."
+      }
+    ],
+    "faqKicker": "CUESTIONES PRESUPUESTARIAS",
+    "faqTitle": "Qué saber antes de empezar.",
+    "faqLead": "Respuestas rápidas sobre abastecimiento, cantidades mínimas, cheques de calidad y precios de cumplimiento.",
+    "exploreServices": "Explorar todos los servicios",
+    "faqs": [
+      [
+        "¿Qué información debo preparar?",
+        "Un producto o tienda URL, mercados de destino, volumen de pedido diario aproximado y su principal desafío de contratación o cumplimiento son suficientes para una revisión inicial."
+      ],
+      [
+        "¿Necesito un volumen mínimo de pedido diario?",
+        "No todos los servicios comienzan en el mismo volumen. El mantenimiento, muestras y cheques de calidad pueden comenzar antes del cumplimiento diario, mientras que el alcance del almacén depende del flujo de pedido esperado."
+      ],
+      [
+        "¿Puede JW trabajar con mi proveedor existente?",
+        "Sí. Podemos recibir mercancías de un proveedor existente y centrarnos en la inspección, inventario, embalaje y entrega, con sujeción a un proceso de entrega claro."
+      ],
+      [
+        "¿Puede apoyar el embalaje de marca?",
+        "Las etiquetas, los insertos, los correos, las cajas y otras opciones de embalaje se pueden revisar según el tamaño del producto, las cantidades mínimas y el tiempo de producción."
+      ],
+      [
+        "¿Qué pasa después de presentarme?",
+        "Nuestro equipo revisa el contexto, identifica información perdida y contacta con una recomendación enfocada para citas, muestras o configuración de flujo de trabajo."
+      ]
+    ],
+    "firstStepKicker": "TU PRIMER PASO",
+    "firstStepTitle": "Empieza con un producto.",
+    "firstStepLead": "Cuéntanos lo que vendes, donde envías y lo que necesita trabajar mejor. Nuestro equipo recomendará el siguiente paso práctico.",
+    "talkToTeam": "Habla con nuestro equipo"
+  },
+  "ContactForm": {
+    "honeypot": "Deja este campo vacío",
+    "name": "Name",
+    "namePlaceholder": "Tu nombre",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Código de país y número de teléfono",
+    "countryCode": "Código del país",
+    "selectCode": "Seleccione código",
+    "search": "Búsqueda",
+    "searchCountry": "País de búsqueda",
+    "phoneNumber": "Número de teléfono",
+    "businessDetails": "¡Cuéntanos sobre tu negocio!",
+    "businessPlaceholder": "Cuéntanos lo que vendes, tu situación actual de cumplimiento, mercados de destino y con lo que necesitas ayuda.",
+    "dailyOrderVolume": "Volumen diario del pedido",
+    "selectRange": "Seleccione un rango",
+    "volumeOptions": [
+      "0-10 órdenes/día",
+      "11-50 órdenes/día",
+      "51 a 200 órdenes/día",
+      "201-500 órdenes/día",
+      "500+ pedidos/día"
+    ],
+    "sending": "Enviando...",
+    "submit": "Solicita un presupuesto gratuito",
+    "privacy": "Sus datos solo se utilizan para responder a esta pregunta.",
+    "errors": {
+      "nameRequired": "El nombre es necesario",
+      "emailRequired": "Se requiere correo electrónico",
+      "emailInvalid": "Introduzca una dirección de correo electrónico válida",
+      "countryCodeRequired": "Se requiere código de país",
+      "phoneRequired": "Número de teléfono requerido",
+      "businessRequired": "Se requieren detalles de negocios",
+      "volumeRequired": "El volumen del pedido diario es necesario"
+    }
+  }
+}

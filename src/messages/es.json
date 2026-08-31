@@ -1,0 +1,55 @@
+{
+  "Metadata": {
+    "title": "JW Dropshipping | Aprovisionamiento y fulfillment global",
+    "description": "China producto fuente, inspección de calidad, almacenamiento, embalaje de marca y cumplimiento de dropshipping en todo el mundo para marcas independientes de comercio electrónico.",
+    "openGraphTitle": "JW Dropshipping Silencio De la fuente de productos a las puertas de sus clientes",
+    "openGraphDescription": "Fin a extremo, control de calidad y cumplimiento global para marcas independientes de comercio electrónico."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "aboutUs": "Sobre nosotros",
+    "getQuote": "Solicita un presupuesto gratuito",
+    "primaryLabel": "Navegación primaria",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "toggleServices": "Menú de servicios de Toggle",
+    "howItWorks": "Cómo funciona",
+    "whyUs": "¿Por qué JW Dropshipping",
+    "testimonials": "Testimonios",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "currentLanguage": "Español",
+    "currentLanguageCode": "ES",
+    "selectLanguage": "Seleccionar idioma",
+    "comingSoon": "Próximamente"
+  },
+  "Common": {
+    "learnMore": "Aprender más",
+    "readMore": "Leer más",
+    "backToHome": "Volver al inicio",
+    "getFreeQuote": "Solicita un presupuesto gratuito",
+    "serviceScope": "SERVICE SCOPE"
+  },
+  "Footer": {
+    "lead": "China fuente, control de calidad y cumplimiento global para marcas independientes de comercio electrónico.",
+    "services": "Servicios",
+    "company": "Company",
+    "rights": "© 2026 JW Dropshipping. Todos los derechos reservados.",
+    "globalFulfillment": "Cumplimiento global",
+    "operationsSupport": "Equipo de Operaciones",
+    "contactUs": "Contáctenos",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "email": "Email",
+    "locationLabel": "Nuestra ubicación",
+    "location": "Room 1208, Building A, Future Supply Chain Center, Hangzhou, Zhejiang, China",
+    "serviceSummary": "· Control de calidad · Complejo global"
+  },
+  "ServiceDetail": {"getQuote":"Solicita un presupuesto gratuito","seeHow":"Descubre cómo funciona","whatWeHandle":"DE QUÉ NOS ENCARGAMOS","relatedServices":"Servicios relacionados","fitKicker":"¿ESTE SERVICIO ES ADECUADO PARA TI?","bestFit":"PERFIL IDEAL"},
+  "ThankYou": {
+    "title": "Gracias — recibimos su solicitud.",
+    "text": "Nuestro equipo revisará su producto y almacenará detalles y se pondrá en contacto con usted con el siguiente paso.",
+    "button": "Volver al inicio"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Productie, kwaliteitscontrole en wereldwijde vervulling"
+    },
+    "about": {
+      "title": "Over JW Dropshipping Het team achter je vervulling",
+      "description": "Ontmoet de mensen, operationele principes en vervulling workflow achter JW Dropshipping's sourcing, kwaliteitscontrole, magazijn en wereldwijde leveringsdiensten."
+    },
+    "contact": {
+      "title": "Krijg een gratis offerte JW Dropshipping",
+      "description": "Share your product, market and order requirements with JW Dropshipping for a focused sourcing and fillment review."
+    },
+    "services": {
+      "title": "China Sourcing, QC & Fulfillment Services"
+    },
+    "howItWorks": {
+      "title": "Hoe JW Dropshipping Werken"
+    },
+    "whyUs": {
+      "title": "Waarom JW Dropshipping kiezen"
+    },
+    "testimonials": {
+      "title": "Verhalen van de verkoper",
+      "description": "Verkoper feedback over JW Dropshipping sourcing, kwaliteitscontrole, account support, merk verpakking en wereldwijde vervulling."
+    },
+    "help": {
+      "title": "Hulpcentrum voor sourcing en vervulling"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "HAAL EEN GRATIS HERZIENING VAN DE AANVULLING",
+    "heroTitle": "Begin met één productlink.",
+    "heroLead": "Vertel ons wat je verkoopt, waar je schip en wat je operatie vertraagt. Wij zullen de volgende praktische stap aanbevelen.",
+    "heroProofs": [
+      "Productspecifiek onderzoek",
+      "Geen verplichting",
+      "Eén specifiek contact"
+    ],
+    "responseTarget": "Responsdoelstelling",
+    "responseTime": "Binnen één werkdag na de herziening van uw aanvraag.",
+    "heroImageAlt": "JW team beoordelen een sourcing en vervulling onderzoek",
+    "afterSubmitKicker": "NADAT JE HEBT INGEHUURD",
+    "afterSubmitTitle": "Een zichtbare volgende stap, geen algemene verkoopoproep.",
+    "afterSubmitLead": "Uw antwoorden helpen ons ons te concentreren op de operationele beslissing die eerst belangrijk is.",
+    "steps": [
+      {
+        "title": "Contextoverzicht",
+        "copy": "Wij bekijken uw product, markt, volume en huidige bedrijfskloof."
+      },
+      {
+        "title": "Toepassingsgebied",
+        "copy": "Wij bevestigen relevante diensten, kwaliteitscontrolepunten en ontbrekende informatie."
+      },
+      {
+        "title": "Praktische aanbeveling",
+        "copy": "U ontvangt een gerichte volgende stap voor offerte, samples of workflow setup."
+      }
+    ],
+    "faqKicker": "VRAAGSTUKKEN",
+    "faqTitle": "Wat te weten voordat je begint.",
+    "faqLead": "Snelle antwoorden over sourcing, minimale hoeveelheden, kwaliteitscontroles en voldoening prijzen.",
+    "exploreServices": "Alle diensten verkennen",
+    "faqs": [
+      [
+        "Welke informatie moet ik voorbereiden?",
+        "Een product of winkel URL, bestemming markten, bij benadering dagelijks bestelvolume en uw belangrijkste sourcing of vervulling uitdaging zijn genoeg voor een eerste beoordeling."
+      ],
+      [
+        "Heb ik een minimaal dagelijks bestelvolume nodig?",
+        "Niet elke dienst begint op hetzelfde volume. Sourcing, monsters en kwaliteitscontroles kunnen voor dagelijkse vervulling beginnen, terwijl magazijnomvang afhankelijk is van de verwachte orderstroom."
+      ],
+      [
+        "Kan JW met mijn bestaande leverancier werken?",
+        "Ja. We kunnen goederen van een bestaande leverancier ontvangen en ons richten op inspectie, inventaris, verpakking en levering, onder voorbehoud van een duidelijk overdrachtsproces."
+      ],
+      [
+        "Kunt u branded verpakkingen ondersteunen?",
+        "Labels, inserts, mailers, dozen en andere verpakkingsopties kunnen worden beoordeeld op basis van productgrootte, minimale hoeveelheden en productieduur."
+      ],
+      [
+        "Wat gebeurt er als ik me onderwerp?",
+        "Ons team bekijkt de context, identificeert ontbrekende informatie en contacteert u met een gerichte aanbeveling voor offerte, samples of workflow setup."
+      ]
+    ],
+    "firstStepKicker": "UW EERSTE STAP",
+    "firstStepTitle": "Begin met één product.",
+    "firstStepLead": "Vertel ons wat je verkoopt, waar je schip en wat beter moet werken. Ons team zal de volgende praktische stap aanbevelen.",
+    "talkToTeam": "Praat met ons team"
+  },
+  "ContactForm": {
+    "honeypot": "Dit veld leeg laten",
+    "name": "Name",
+    "namePlaceholder": "Uw naam",
+    "email": "E-mail",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Landcode en telefoonnummer",
+    "countryCode": "Landcode",
+    "selectCode": "Selecteer code",
+    "search": "Zoeken",
+    "searchCountry": "Zoekland",
+    "phoneNumber": "Telefoonnummer",
+    "businessDetails": "Vertel ons over je zaken!",
+    "businessPlaceholder": "Vertel ons wat je verkoopt, je huidige vervulling situatie, doelmarkten, en waar je hulp bij nodig hebt.",
+    "dailyOrderVolume": "Dagelijks bestelvolume",
+    "selectRange": "Een bereik selecteren",
+    "volumeOptions": [
+      "0-10 bestellingen/dag",
+      "11-50 bestellingen/dag",
+      "51-200 bestellingen/dag",
+      "201-500 bestellingen/dag",
+      "500+ bestellingen/dag"
+    ],
+    "sending": "Verzenden...",
+    "submit": "Vraag een gratis offerte aan",
+    "privacy": "Uw gegevens worden alleen gebruikt om op dit verzoek te reageren.",
+    "errors": {
+      "nameRequired": "Naam is vereist",
+      "emailRequired": "E-mail is vereist",
+      "emailInvalid": "Een geldig e-mailadres invoeren",
+      "countryCodeRequired": "Landcode is vereist",
+      "phoneRequired": "Telefoonnummer is vereist",
+      "businessRequired": "Bedrijfsgegevens zijn vereist",
+      "volumeRequired": "Dagelijks bestelvolume is vereist"
+    }
+  }
+}

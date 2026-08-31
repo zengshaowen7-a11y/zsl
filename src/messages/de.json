@@ -1,0 +1,55 @@
+{
+  "Metadata": {
+    "title": "JW Dropshipping | Beschaffung & globale Erfüllung",
+    "description": "China Produktbeschaffung, Qualitätskontrolle, Lagerhaltung, Markenverpackung und weltweite Dropshipping-Fulfillment für unabhängige E-Commerce-Marken.",
+    "openGraphTitle": "JW Dropshipping | Von der Produktbeschaffung bis zu den Türen Ihrer Kunden",
+    "openGraphDescription": "End-to-End Sourcing, Qualitätskontrolle und globales Fulfillment für unabhängige E-Commerce-Marken."
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "aboutUs": "Über uns",
+    "getQuote": "Kostenloses Angebot anfordern",
+    "primaryLabel": "Primärnavigation",
+    "openMenu": "Offenes Menü",
+    "closeMenu": "Schließen des Menüs",
+    "toggleServices": "Menü für Umschaltdienste",
+    "howItWorks": "So funktioniert es",
+    "whyUs": "Warum JW Dropshipping",
+    "testimonials": "Kundenstimmen",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "currentLanguage": "Deutsch",
+    "currentLanguageCode": "DE",
+    "selectLanguage": "Auswählen der Sprache",
+    "comingSoon": "Demnächst verfügbar"
+  },
+  "Common": {
+    "learnMore": "Erfahren Sie mehr",
+    "readMore": "Lesen Sie mehr",
+    "backToHome": "Zurück zur Startseite",
+    "getFreeQuote": "Kostenloses Angebot anfordern",
+    "serviceScope": "ANWENDUNGSBEREICH"
+  },
+  "Footer": {
+    "lead": "China Sourcing, Qualitätskontrolle und globale Fulfillment für unabhängige E-Commerce-Marken.",
+    "services": "Leistungen",
+    "company": "Unternehmen",
+    "rights": "© 2026 JW Dropshipping. Alle Rechte vorbehalten.",
+    "globalFulfillment": "Globale Erfüllung",
+    "operationsSupport": "Unterstützung des Einsatzteams",
+    "contactUs": "Kontaktieren Sie uns",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "email": "E-Mail",
+    "locationLabel": "Unser Standort",
+    "location": "Raum 1208, Gebäude A, Future Supply Chain Center, Hangzhou, Zhejiang, China",
+    "serviceSummary": "Produktbeschaffung · Qualitätskontrolle · Globales Fulfillment"
+  },
+  "ServiceDetail": {"getQuote":"Kostenloses Angebot anfordern","seeHow":"So funktioniert es","whatWeHandle":"WAS WIR ÜBERNEHMEN","relatedServices":"Verwandte Leistungen","fitKicker":"IST DIESER SERVICE DAS RICHTIGE FÜR SIE?","bestFit":"AM BESTEN GEEIGNET"},
+  "ThankYou": {
+    "title": "Vielen Dank – wir haben Ihre Anfrage erhalten.",
+    "text": "Unser Team wird Ihre Produkt- und Speicherdetails überprüfen und Sie mit dem nächsten Schritt kontaktieren.",
+    "button": "Zurück zur Startseite"
+  }
+}

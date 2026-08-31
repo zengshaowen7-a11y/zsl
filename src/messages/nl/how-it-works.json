@@ -1,0 +1,230 @@
+{
+  "HowItWorks": {
+    "startingDetails": [
+      {
+        "title": "Product- of leverancierkoppeling",
+        "copy": "Een product URL, leverancier pagina of referentie afbeelding is genoeg om de eerste beoordeling te starten."
+      },
+      {
+        "title": "Belangrijkste bestemmingsmarkten",
+        "copy": "Vertel ons waar klanten zijn gevestigd, zodat verzending routes en limieten kunnen vroeg worden gecontroleerd."
+      },
+      {
+        "title": "Verwacht ordervolume",
+        "copy": "Een ruw dagelijks assortiment helpt ons bij het aanbevelen van de juiste magazijn en uitvoering setup."
+      },
+      {
+        "title": "Branding/QC behoeften",
+        "copy": "Stuur verpakking, etiket en inspectienota's voor verzending."
+      }
+    ],
+    "stages": [
+      {
+        "number": "01",
+        "title": "Deel uw product",
+        "kicker": "ONDERZOEK",
+        "image": "/images/generated/jw-account-support-v3.png",
+        "intro": "Stuur één duidelijke productreferentie zodat het eerste gesprek blijft gericht op uw werkelijke winkel en klantbelofte.",
+        "provide": "Productlink, doelmarkt, verwacht volume en het probleem dat u wilt oplossen.",
+        "handle": "De haalbaarheid van het product, de reikwijdte van de dienst, de bestemmingseisen en ontbrekende informatie beoordelen.",
+        "receive": "Een gerichte productbeschrijving en een duidelijke aanbeveling voor de volgende stap."
+      },
+      {
+        "number": "02",
+        "title": "Bron en quote",
+        "kicker": "ONDERZOEK",
+        "image": "/images/services/product-sourcing.webp",
+        "intro": "Geschikte leveranciersaanbiedingen worden op dezelfde specificatie vergeleken, niet alleen op de laagste eenheidsprijs.",
+        "provide": "Target kosten, materiaal of functie eisen, hoeveelheid en gewenste lancering timing.",
+        "handle": "Vergelijk leveranciers, MOQ, levertijd, maatwerk, verpakking en geschatte vervulling implicaties.",
+        "receive": "Vergelijkbare opties met de afwegingen die nodig zijn om een leverancierbeslissing te nemen."
+      },
+      {
+        "number": "03",
+        "title": "Monsters en goedkeuring",
+        "kicker": "KWALITEITSSTANDAARD",
+        "image": "/images/generated/jw-qc-inspection-v3.png",
+        "intro": "Het fysieke product en het inspectiebereik zijn overeengekomen voordat herhaalde aankoop of dagelijkse vervulling begint.",
+        "provide": "Feedback op het monster, aanvaardbare toleranties en eventuele niet-onderhandelbare merkgegevens.",
+        "handle": "Coördineer monsters, bekijk zichtbare kwaliteit, bevestig varianten, verpakking en QC controlepunten.",
+        "receive": "Een goedgekeurde referentie en een gedocumenteerde basis voor toekomstige productcontroles."
+      },
+      {
+        "number": "04",
+        "title": "Voldoening instellen",
+        "kicker": "VOORBEREIDING VAN DE WERKING",
+        "image": "/images/generated/jw-branded-packing-v3.png",
+        "intro": "Inventaris, SKUs, verpakkingsmaterialen en orderregels zijn verbonden voordat het live klantenvolume wordt vrijgegeven.",
+        "provide": "Bewaar SKU gegevens, verpakkingsinstructies, branding bestanden en bestel handoff voorkeur.",
+        "handle": "Ontvang voorraad, kaart varianten, voorbereiding opslag, document verpakking regels en voer test orders.",
+        "receive": "Een geteste order workflow klaar voor repeat picking, controle en verpakking."
+      },
+      {
+        "number": "05",
+        "title": "Schip- en synchronisatievolgsysteem",
+        "kicker": "DAGELIJKSE WERKING",
+        "image": "/images/generated/jw-dispatch-scan-v3.png",
+        "intro": "Goedgekeurde bestellingen gaan door verzending terwijl de status van verzending en uitzonderingen zichtbaar blijven voor uw team.",
+        "provide": "Klantenorders, adressen en de overeengekomen verzend- of serviceregels.",
+        "handle": "Kies, controleer, pak, label, verzending en aparte bestellingen die een beslissing vereisen.",
+        "receive": "Verzendingsbevestiging, transportgegevens en tracking via de overeengekomen overdracht."
+      }
+    ],
+    "checkpoints": [
+      [
+        "Vóór aankoop",
+        "Voorwaarden van de leverancier, specificatie en steekproefplan bevestigd."
+      ],
+      [
+        "Vóór ontvangst van het bestand",
+        "SKU, hoeveelheid, verpakking en inkomende verwachtingen gedocumenteerd."
+      ],
+      [
+        "Vóór verzending",
+        "Product, variant, pakket en etiket gecontroleerd tegen de bestelling."
+      ]
+    ],
+    "faqs": [
+      [
+        "Hoe lang duurt de installatie?",
+        "De timing hangt af van het product, het monsterwerk, de verpakking en de voorraadbereidheid. Na de eerste evaluatie, identificeren we de stadia die van toepassing zijn en de afhankelijkheden die de lancering timing controleren."
+      ],
+      [
+        "Kan ik beginnen voordat mijn winkel dagelijkse bestellingen heeft?",
+        "Ja. Product sourcing, leverancier vergelijking en monsters kunnen beginnen voor lancering. De uitvoering kan dan worden voorbereid wanneer producten en verwachte orderstroom duidelijker zijn."
+      ],
+      [
+        "Kan JW met mijn bestaande leverancier werken?",
+        "Ja. Uw leverancier kan inventaris naar het JW magazijn sturen terwijl wij ons richten op ontvangst, kwaliteitscontroles, opslag, verpakking en wereldwijde verzending."
+      ],
+      [
+        "Wat gebeurt er als een kwaliteitsprobleem wordt gevonden?",
+        "Getroffen goederen of bestellingen kunnen worden bewaard, gedocumenteerd en gedeeld voor uw beslissing. Het exacte inspectie- en goedkeuringsproces wordt overeengekomen voordat de werkzaamheden beginnen."
+      ],
+      [
+        "Hoe doen orders en tracking beweging tussen onze teams?",
+        "De overdracht kan gebruik maken van een ondersteunde store workflow, gestructureerd orderbestand of een andere overeengekomen methode. SKU mapping en uitzonderingsregels worden tijdens het instellen bevestigd."
+      ]
+    ],
+    "hero": {
+      "kicker": "HOE HET WERKT",
+      "title": "Van productlink naar traced delivery",
+      "lead": "Een China-gebaseerde workflow voor sourcing, goedkeuring, vervulling en verzending updates.",
+      "primary": "Beginnen met een productlink",
+      "secondary": "Zie de Vijf Stages",
+      "proofs": [
+        "Duidelijke goedkeuringspunten",
+        "Eén specifiek contact",
+        "Tracking teruggestuurd"
+      ],
+      "liveLabel": "Live workflow",
+      "liveStatus": "Volgende update in uitvoering",
+      "updates": [
+        "Productoverzicht herzien",
+        "Leverancier termen verbonden",
+        "QC notities opgeslagen",
+        "Tracking-update voorbereid"
+      ],
+      "owner": "Eigenaar: China-accountteam",
+      "next": "Volgende: verzending regels controleren",
+      "reviewStatus": "Klaar voor beoordeling",
+      "briefLabel": "Productbeschrijving",
+      "brief": "Voorwaarden van de leverancier, QC notities en verzendregels blijven verbonden voordat bestellingen bewegen.",
+      "board": [
+        "Productkoppeling",
+        "Citaat",
+        "QC",
+        "Fulfill",
+        "Tracking"
+      ]
+    },
+    "start": {
+      "kicker": "WAT MOET U EERSTE VERZENDEN",
+      "title": "Begin voordat elk detail klaar is.",
+      "lead": "Stuur eerst de basis. JW kan de ontbrekende details bekijken tijdens de volgende stap."
+    },
+    "journey": {
+      "kicker": "DE VOLLEDIGE BESTELTIJD",
+      "title": "Weet elke stap voordat de bestelling beweegt.",
+      "lead": "De workflow blijft flexibel terwijl elke eigenaar, goedkeuring en overdracht duidelijk blijft.",
+      "provide": "U zorgt voor",
+      "handle": "JW handvatten",
+      "receive": "U ontvangt"
+    },
+    "approval": {
+      "kicker": "GOEDKEURING VOOR DE VOLUME",
+      "title": "Drie controleposten beschermen elke overdracht.",
+      "lead": "Belangrijke vragen worden opgelost voordat ze worden herhaald productie, inventaris of service problemen.",
+      "proofs": [
+        "goedkeuringspoorten",
+        "onduidelijke overdracht",
+        "gedeelde beslissingsnotitie"
+      ]
+    },
+    "tracks": {
+      "kicker": "BEGIN MET JE HUIDIGE STAND.",
+      "title": "Gebruik de workflow van waar je bent.",
+      "lead": "Begin met een productidee, een bestaande leverancier of inventaris die al klaar is voor verzending.",
+      "items": [
+        {
+          "kicker": "TESTEN VAN EEN PRODUCT",
+          "title": "Begin met sourcing en monsters.",
+          "copy": "Gebruik fasen 01",
+          "link": "Verken product sourcing",
+          "href": "/services/product-sourcing"
+        },
+        {
+          "kicker": "BESTAANDE SUPPLIER",
+          "title": "Begin met ontvangen en QC.",
+          "copy": "Uw huidige fabriek kan goederen verzenden naar JW voor inspectie, opslag, merk verpakking en order-niveau vervulling.",
+          "link": "Kwaliteitscontrole onderzoeken",
+          "href": "/services/quality-control-inspection"
+        },
+        {
+          "kicker": "KLAAR OM TE SCHALEN",
+          "title": "Sluit dagelijkse bestellingen en tracking.",
+          "copy": "Kaart SKUs, verpakkingsregels en uitzonderingen zodat herhaalde bestellingen door één gestructureerde magazijn workflow kunnen gaan.",
+          "link": "Orderautomatisering onderzoeken",
+          "href": "/services/automatic-order-fulfillment"
+        }
+      ]
+    },
+    "exceptions": {
+      "imageAlt": "Productdossier dat vóór de goedkeuring wordt gecontroleerd",
+      "statusLabel": "Uitzonderingsbeoordeling",
+      "status": "Wachten op besluit",
+      "kicker": "ALS ER IETS NIET KLOPT",
+      "title": "Uitzonderingen Pauzeer met Context, Niet Verwarring.",
+      "lead": "Kwaliteitsproblemen, ontbrekende voorraad, unmapped SKUs of ongebruikelijke verzoeken worden gescheiden voordat ze een vervulling fout maken.",
+      "steps": [
+        [
+          "Identificeer",
+          "Betrokken goederen of bestellingen worden gescheiden van normale verzending."
+        ],
+        [
+          "Document",
+          "Foto's, SKU details en de benodigde beslissing worden duidelijk gedeeld."
+        ],
+        [
+          "Hervatten",
+          "De werkzaamheden worden voortgezet na goedkeuring, correctie of vervanging."
+        ]
+      ],
+      "queue": "Beslissingswachtrij",
+      "queueStatus": "QC foto's · stock · verpakking OK"
+    },
+    "faq": {
+      "kicker": "VRAAGSTUKKEN",
+      "title": "Wat te weten voordat u begint",
+      "lead": "Snelle antwoorden over installatie timing, kwaliteitscontroles, bestelling handoff en tracking updates."
+    },
+    "final": {
+      "kicker": "UW EERSTE STAP",
+      "title": "Begin met één productlink.",
+      "lead": "Vertel ons waar u verkoopt, verwacht volume en wat moet verbeteren. Wij zullen de volgende praktische fase aanbevelen.",
+      "product": "Productkoppeling",
+      "quote": "Gratis offerte",
+      "button": "Vraag een gratis offerte aan"
+    }
+  }
+}

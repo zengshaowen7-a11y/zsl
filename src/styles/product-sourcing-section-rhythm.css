@@ -48,3 +48,13 @@ body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-s
   white-space: normal !important;
   text-wrap: balance !important;
 }
+
+/* Product sourcing: unify the page H1 and all section-level H2 titles. */
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing {
+  container-type: inline-size;
+}
+
+body main.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing.sdr-page-product-sourcing :is(h1, h2) {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}

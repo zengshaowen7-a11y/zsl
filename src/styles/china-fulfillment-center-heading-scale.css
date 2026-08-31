@@ -1,0 +1,405 @@
+/* Hallmark · component: warehouse control zones · genre: modern-minimal · theme: project green
+ * states: default · hover · focus · active · selected · reduced-motion
+ * pre-emit critique: P5 H5 E5 S5 R5 V4 · contrast: pass · mobile: pass
+ */
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center {
+  --wz-color-ink: oklch(0% 0 0);
+  --wz-color-muted: oklch(48% 0.025 155);
+  --wz-color-accent: oklch(48% 0.135 155);
+  --wz-color-accent-soft: oklch(94% 0.035 155);
+  --wz-color-paper: oklch(99% 0.005 155);
+  --wz-color-rule: oklch(89% 0.025 155);
+  --wz-color-overlay: oklch(16% 0.035 155 / 0.88);
+  --wz-color-overlay-ink: oklch(98% 0.005 155);
+  --wz-color-shadow: oklch(30% 0.04 155 / 0.06);
+  --wz-space-xs: 8px;
+  --wz-space-sm: 12px;
+  --wz-space-md: 16px;
+  --wz-space-lg: 24px;
+  --wz-space-xl: 32px;
+  --wz-space-2xl: 48px;
+  --wz-radius-sm: 8px;
+  --wz-radius-md: 12px;
+  --wz-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --wz-dur-short: 240ms;
+  --wz-dur-flow: 4200ms;
+  container-type: inline-size;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center :is(h1, h2) {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones {
+  display: grid !important;
+  gap: 28px !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: var(--wz-space-md) !important;
+  align-items: end !important;
+  justify-items: center !important;
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head > div {
+  min-width: 0 !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head h2 {
+  max-width: none !important;
+  margin: var(--wz-space-sm) auto 0 !important;
+  color: var(--wz-color-ink) !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  overflow-wrap: anywhere !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head > p {
+  max-width: 64ch !important;
+  margin: 0 auto !important;
+  color: var(--wz-color-muted) !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  text-align: center !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-body {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.49fr) minmax(0, 0.51fr) !important;
+  gap: clamp(24px, 2.5vw, 36px) !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual {
+  position: relative !important;
+  min-height: 516px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border-radius: var(--wz-radius-sm) !important;
+  background: var(--wz-color-paper) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-media {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual img {
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 0 !important;
+  transform: scale(1.035) !important;
+  transition: opacity 420ms var(--wz-ease-out), transform 700ms var(--wz-ease-out) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual img.is-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual:hover img.is-active {
+  transform: scale(1.025) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual figcaption {
+  position: absolute !important;
+  right: auto !important;
+  bottom: var(--wz-space-md) !important;
+  left: var(--wz-space-md) !important;
+  width: min(72%, 500px) !important;
+  display: flex !important;
+  gap: var(--wz-space-sm) !important;
+  align-items: center !important;
+  padding: var(--wz-space-md) !important;
+  border-radius: var(--wz-radius-sm) !important;
+  color: var(--wz-color-overlay-ink) !important;
+  background: var(--wz-color-overlay) !important;
+  backdrop-filter: blur(10px) !important;
+  animation: sdrWarehouseCaptionIn var(--wz-dur-short) var(--wz-ease-out) both !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual figcaption > span {
+  display: grid !important;
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+  place-items: center !important;
+  border: 1px solid currentColor !important;
+  border-radius: 50% !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual figcaption small,
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual figcaption strong {
+  display: block !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual figcaption small {
+  margin-bottom: 2px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-flow {
+  position: relative !important;
+  display: grid !important;
+  gap: 18px !important;
+  align-content: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-line {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 68px !important;
+  width: 6px !important;
+  overflow: hidden !important;
+  background: var(--wz-color-rule) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-line::after {
+  position: absolute !important;
+  inset: 0 !important;
+  content: "" !important;
+  background: linear-gradient(to bottom, transparent, var(--wz-color-accent), transparent) !important;
+  transform: translateY(-100%) !important;
+  animation: sdrWarehouseFlow var(--wz-dur-flow) linear infinite !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone {
+  position: relative !important;
+  z-index: 1 !important;
+  display: grid !important;
+  grid-template-columns: 96px minmax(160px, 0.8fr) minmax(0, 1.2fr) !important;
+  gap: 18px !important;
+  align-items: center !important;
+  min-height: 160px !important;
+  padding: 20px 24px 20px 18px !important;
+  border: 1px solid var(--wz-color-rule) !important;
+  border-radius: var(--wz-radius-md) !important;
+  background: var(--wz-color-paper) !important;
+  box-shadow: 0 12px 28px var(--wz-color-shadow) !important;
+  color: var(--wz-color-ink) !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  text-align: left !important;
+  opacity: 0.92 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  transition: transform var(--wz-dur-short) var(--wz-ease-out), border-color var(--wz-dur-short) var(--wz-ease-out), opacity var(--wz-dur-short) var(--wz-ease-out) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone:hover,
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone.is-active {
+  border-color: var(--wz-color-accent) !important;
+  opacity: 1 !important;
+  transform: translateY(-2px) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone:focus-visible {
+  outline: 3px solid var(--wz-color-accent) !important;
+  outline-offset: 3px !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-index {
+  display: grid !important;
+  z-index: 2 !important;
+  width: 96px !important;
+  height: 96px !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: var(--wz-radius-sm) !important;
+  color: var(--wz-color-accent) !important;
+  background: var(--wz-color-accent-soft) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-index svg {
+  width: 34px !important;
+  height: 34px !important;
+  stroke-width: 1.8 !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone.is-active .sdr-warehouse-zone-index {
+  color: var(--wz-color-accent) !important;
+  background: var(--wz-color-accent-soft) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-number {
+  position: absolute !important;
+  top: var(--wz-space-sm) !important;
+  right: var(--wz-space-sm) !important;
+  color: var(--wz-color-muted) !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-copy small,
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data small {
+  color: var(--wz-color-muted) !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-copy strong {
+  display: block !important;
+  margin: 5px 0 0 !important;
+  color: var(--wz-color-ink) !important;
+  font-size: clamp(19px, 1.5vw, 22px) !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-copy > span {
+  display: block !important;
+  margin-top: 14px !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-copy > span > span {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--wz-color-ink) !important;
+  font-size: 14px !important;
+  font-weight: 550 !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data > span {
+  min-width: 0 !important;
+  padding-inline: 14px !important;
+  border-left: 1px solid var(--wz-color-rule) !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data strong {
+  display: block !important;
+  margin: 5px 0 0 !important;
+  color: var(--wz-color-ink) !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.35 !important;
+  overflow-wrap: normal !important;
+  white-space: normal !important;
+}
+
+body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-output strong {
+  color: var(--wz-color-accent) !important;
+}
+
+@keyframes sdrWarehouseFlow {
+  to { transform: translateY(100%) !important; }
+}
+
+@keyframes sdrWarehouseCaptionIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head,
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head {
+    gap: var(--wz-space-md) !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-head h2 {
+    white-space: normal !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual {
+    min-height: 420px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1600px) {
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone {
+    grid-template-columns: 76px minmax(140px, 0.72fr) minmax(0, 1.28fr) !important;
+    gap: 14px !important;
+    padding-inline: 14px !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-index {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-copy strong {
+    font-size: 18px !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data > span {
+    padding-inline: 10px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones {
+    gap: var(--wz-space-lg) !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual {
+    min-height: 340px !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone {
+    grid-template-columns: 64px minmax(0, 1fr) !important;
+    gap: var(--wz-space-sm) !important;
+    min-height: 0 !important;
+    padding: var(--wz-space-md) !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-index {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone-data {
+    grid-column: 2 !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding-top: var(--wz-space-xs) !important;
+    border-top: 1px solid var(--wz-color-rule) !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-line {
+    left: 29px !important;
+    width: 6px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-line::after {
+    animation: none !important;
+  }
+
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zones-visual img,
+  body main.sdr-page-china-fulfillment-center[class][class] .sdr-warehouse-zone {
+    transition-duration: 120ms !important;
+  }
+}

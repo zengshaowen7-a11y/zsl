@@ -1,0 +1,127 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Produktbeschaffung, Qualitätskontrolle & Global Fulfillment"
+    },
+    "about": {
+      "title": "Über JW Dropshipping | Das Team hinter Ihrer Erfüllung",
+      "description": "Treffen Sie die Mitarbeiter, Betriebsprinzipien und den Fulfillment-Workflow hinter den Sourcing-, Qualitätskontroll-, Lager- und globalen Lieferdiensten von JW Dropshipping."
+    },
+    "contact": {
+      "title": "Holen Sie sich ein kostenloses Angebot | JW Dropshipping",
+      "description": "Teilen Sie Ihre Produkt-, Markt- und Auftragsanforderungen mit JW Dropshipping für eine fokussierte Sourcing- und Fulfillment-Überprüfung."
+    },
+    "services": {
+      "title": "China Sourcing, QC & Fulfillment Services"
+    },
+    "howItWorks": {
+      "title": "Wie JW Dropshipping Arbeiten"
+    },
+    "whyUs": {
+      "title": "Warum wählen Sie JW Dropshipping"
+    },
+    "testimonials": {
+      "title": "Verkäufergeschichten | JW Dropshipping",
+      "description": "Feedback des Verkäufers zu JW Dropshipping Sourcing, Qualitätskontrolle, Account-Support, Markenverpackung und globaler Fulfillment."
+    },
+    "help": {
+      "title": "Sourcing und Fulfillment Help Center"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "GET A FREE FULFILLMENT REVIEW",
+    "heroTitle": "Beginnen Sie mit einem Produktlink.",
+    "heroLead": "Sagen Sie uns, was Sie verkaufen, wo Sie versenden und was Ihren Betrieb verlangsamt. Wir werden den nächsten praktischen Schritt empfehlen.",
+    "heroProofs": [
+      "Produktspezifische Überprüfung",
+      "Keine Verpflichtung",
+      "Ein dedizierter Kontakt"
+    ],
+    "responseTarget": "Reaktionsziel",
+    "responseTime": "Innerhalb eines Werktages nach Überprüfung Ihrer Anfrage.",
+    "heroImageAlt": "JW-Team überprüft eine Sourcing- und Fulfillment-Anfrage",
+    "afterSubmitKicker": "NACH IHREM SUBMIT",
+    "afterSubmitTitle": "Ein sichtbarer nächster Schritt, kein generisches Verkaufsgespräch.",
+    "afterSubmitLead": "Ihre Antworten helfen uns, uns auf die operative Entscheidung zu konzentrieren, die zuerst zählt.",
+    "steps": [
+      {
+        "title": "Kontextüberprüfung",
+        "copy": "Wir überprüfen Ihr Produkt, Ihren Markt, Ihr Volumen und Ihre aktuelle Betriebslücke."
+      },
+      {
+        "title": "Klärung des Geltungsbereichs",
+        "copy": "Wir bestätigen relevante Dienstleistungen, Qualitätskontrollpunkte und fehlende Informationen."
+      },
+      {
+        "title": "Praktische Empfehlung",
+        "copy": "Sie erhalten einen fokussierten nächsten Schritt für Zitate, Samples oder Workflow-Setup."
+      }
+    ],
+    "faqKicker": "HÄNFTIGE FRAGE",
+    "faqTitle": "Was Sie wissen sollten, bevor Sie anfangen.",
+    "faqLead": "Schnelle Antworten zu Beschaffung, Mindestmengen, Qualitätskontrollen und Fulfillment-Preisen.",
+    "exploreServices": "Entdecken Sie alle Services",
+    "faqs": [
+      [
+        "Welche Informationen sollte ich vorbereiten?",
+        "Eine Produkt- oder Shop-URL, Zielmärkte, das ungefähre tägliche Bestellvolumen und Ihre Hauptherausforderung für die Beschaffung oder Erfüllung reichen für eine erste Überprüfung aus."
+      ],
+      [
+        "Benötige ich ein tägliches Mindestbestellvolumen?",
+        "Nicht jeder Dienst beginnt mit dem gleichen Volumen. Sourcing, Proben und Qualitätsprüfungen können vor der täglichen Erfüllung beginnen, während der Lagerumfang vom erwarteten Auftragsfluss abhängt."
+      ],
+      [
+        "Kann JW mit meinem bestehenden Lieferanten zusammenarbeiten?",
+        "Ja. Wir können Waren von einem bestehenden Lieferanten erhalten und uns auf Inspektion, Inventar, Verpackung und Lieferung konzentrieren, vorbehaltlich eines klaren Übergabeprozesses."
+      ],
+      [
+        "Können Sie Markenverpackungen unterstützen?",
+        "Etiketten, Beilagen, Mailer, Boxen und andere Verpackungsoptionen können nach Produktgröße, Mindestmengen und Produktionsvorlaufzeit überprüft werden."
+      ],
+      [
+        "Was passiert, nachdem ich eingereicht habe?",
+        "Unser Team überprüft den Kontext, identifiziert fehlende Informationen und kontaktiert Sie mit einer fokussierten Empfehlung für Zitate, Muster oder Workflow-Einstellungen."
+      ]
+    ],
+    "firstStepKicker": "IHR ERSTER SCHRITT",
+    "firstStepTitle": "Beginnen Sie mit einem Produkt.",
+    "firstStepLead": "Sagen Sie uns, was Sie verkaufen, wo Sie versenden und was besser funktionieren muss. Unser Team wird den nächsten praktischen Schritt empfehlen.",
+    "talkToTeam": "Sprechen Sie mit unserem Team"
+  },
+  "ContactForm": {
+    "honeypot": "Lassen Sie dieses Feld leer",
+    "name": "Name",
+    "namePlaceholder": "Dein Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Ländercode und Telefonnummer",
+    "countryCode": "Ländercode",
+    "selectCode": "Auswahlcode",
+    "search": "Suche",
+    "searchCountry": "Suchland",
+    "phoneNumber": "Telefonnummer",
+    "businessDetails": "Erzählen Sie uns von Ihrem Geschäft!",
+    "businessPlaceholder": "Sagen Sie uns, was Sie verkaufen, Ihre aktuelle Erfüllungssituation, Zielmärkte und womit Sie Hilfe benötigen.",
+    "dailyOrderVolume": "Tägliches Bestellvolumen",
+    "selectRange": "Wählen Sie einen Bereich",
+    "volumeOptions": [
+      "0-10 Bestellungen/Tag",
+      "11-50 Bestellungen/Tag",
+      "51-200 Bestellungen/Tag",
+      "201-500 Bestellungen/Tag",
+      "500+ Bestellungen/Tag"
+    ],
+    "sending": "Senden...",
+    "submit": "Kostenloses Angebot anfordern",
+    "privacy": "Ihre Daten werden nur verwendet, um auf diese Anfrage zu antworten.",
+    "errors": {
+      "nameRequired": "Name ist erforderlich",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein",
+      "countryCodeRequired": "Ländercode erforderlich",
+      "phoneRequired": "Telefonnummer erforderlich",
+      "businessRequired": "Geschäftsdaten sind erforderlich",
+      "volumeRequired": "Tägliches Bestellvolumen erforderlich"
+    }
+  }
+}

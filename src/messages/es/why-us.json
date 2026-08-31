@@ -1,0 +1,180 @@
+{
+  "WhyUs": {
+    "comparisons": [
+      [
+        "Múltiples conversaciones de proveedores",
+        "Un contacto operativo dedicado"
+      ],
+      [
+        "Una cita sin una especificación compartida",
+        "Opciones de proveedor en comparación con el mismo breve"
+      ],
+      [
+        "Productos enviados sin cheques claros",
+        "Agreed QC antes de que las acciones o pedidos continúen"
+      ],
+      [
+        "Decisiones genéricas de embalaje",
+        "Marcas documentadas y reglas de embalaje"
+      ],
+      [
+        "Equipos de almacenamiento y envío separados",
+        "Un flujo de trabajo de pedido conectado"
+      ],
+      [
+        "Seguimiento compartido como mensaje final",
+        "Actualizaciones estructuradas de envío y excepción"
+      ]
+    ],
+    "principles": [
+      [
+        "Un equipo responsable",
+        "Proveedor, almacén, embalaje y contexto de envío se mantiene con un equipo operativo basado en China."
+      ],
+      [
+        "Controles antes de las decisiones",
+        "Los detalles pertinentes del producto y el paquete se revisan en puntos de aprobación acordados, no después de quejas del cliente."
+      ],
+      [
+        "Evidencias con contexto",
+        "Los problemas se comparten con la cantidad afectada, evidencia visible y la decisión necesaria de su equipo."
+      ],
+      [
+        "Reglas de esa escala",
+        "SKUs aprobado, variantes, embalaje y excepciones se vuelven repetibles instrucciones de cumplimiento diario."
+      ]
+    ],
+    "supportCards": [
+      [
+        "Un contacto claro",
+        "El producto, QC y el contexto del envío se mantiene con una cuenta de plomo."
+      ],
+      [
+        "Riesgo comprobado",
+        "Se revisan muestras, acciones y detalles de embalaje antes de mover volumen."
+      ],
+      [
+        "Notas de orden compartido",
+        "Las aprobaciones, excepciones y requisitos permanecen documentados para trabajos repetidos."
+      ],
+      [
+        "Listo para cumplir",
+        "Las reglas SKU, embalaje y seguimiento se preparan antes de la escala."
+      ]
+    ],
+    "fitItems": [
+      "Usted quiere un contacto a través de la fuente, QC y cumplimiento.",
+      "La consistencia del producto importa más que encontrar el precio visible más bajo.",
+      "Necesita empaquetar o documentar reglas de orden.",
+      "Su tienda está probando ahora pero necesita un flujo de trabajo que pueda crecer."
+    ],
+    "notFitItems": [
+      "Sólo quieres un listado de productos anónimos sin revisión.",
+      "Usted espera que cada producto y destino use una tasa de envío fija.",
+      "Usted no quiere aprobar muestras, especificaciones o decisiones de emisión."
+    ],
+    "faqs": [
+      [
+        "¿Qué diferencia JW de un proveedor de mercado?",
+        "JW puede conectar la coordinación de proveedores, recepción, verificación de calidad, inventario, embalaje y envío a través de un ámbito operativo. Las responsabilidades exactas se confirman antes de que comience el trabajo."
+      ],
+      [
+        "¿Tendré un contacto dedicado?",
+        "Un contacto de cuenta primaria mantiene conectado el contexto de producto, almacén y envío. Los especialistas en operaciones pueden apoyar el trabajo sin hacer que reinicie la conversación a cada paso."
+      ],
+      [
+        "¿Siempre eliges el proveedor más barato?",
+        "No. Las opciones de proveedores deben compararse con el mismo requisito del producto, incluyendo la calidad, MOQ, el tiempo de entrega, las implicaciones de embalaje y cumplimiento."
+      ],
+      [
+        "¿Cómo se comunican los problemas de calidad?",
+        "El alcance de inspección acordado determina lo que se verifica. Cuando se encuentra un problema, los bienes afectados pueden ser mantenidos y compartidos con pruebas y una decisión solicitada."
+      ],
+      [
+        "¿Puede el alcance del servicio crecer con mi tienda?",
+        "Sí. Un proyecto puede comenzar con la contratación o inspección y después añadir inventario, embalaje personalizado, automatización de pedidos y cumplimiento global."
+      ]
+    ],
+    "hero": {
+      "kicker": "¿Por qué elegir JW Dropshipping?",
+      "title": "Asignamos a un equipo dedicado de China a su orden, plenamente responsable de calidad, plazos y comunicación en cada etapa.",
+      "lead": "JW conecta el suministro, el control de calidad, el inventario, el embalaje y la entrega de marca para que su equipo administre menos beneficios y tome decisiones mejor informadas.",
+      "primary": "Habla con el equipo",
+      "secondary": "Ver la Diferencia",
+      "proofs": [
+        "Live Account Support",
+        "Puestos de control QC convenidos",
+        "Despacho de orden claro"
+      ],
+      "videoLabel": "Equipo de operaciones de JW China que coordina la revisión del producto, el embalaje y la clasificación de paquetes"
+    },
+    "compare": {
+      "kicker": "UN MODELO OPERATIVO DE CLEAR",
+      "title": "Menos persiguiendo. Más propiedad visible.",
+      "lead": "La diferencia no es una lista de servicios más larga. Es cómo las decisiones y los desvíos permanecen conectados alrededor del mismo producto y orden.",
+      "typical": "Típico agente de abastecimiento",
+      "jw": "JW Dropshipping"
+    },
+    "principlesSection": {
+      "kicker": "LO QUE FUNCIONA CON JW DEBE SENTIRSE COMO",
+      "title": "Soporte claro y práctico que puedes usar todos los días.",
+      "lead": "Cuatro principios operativos conforman el servicio antes de comenzar el volumen diario."
+    },
+    "evidence": {
+      "imageAltOne": "Resultados de inspección de productos del equipo JW",
+      "imageAltTwo": "Equipo JW comprobar la calidad del producto antes del envío",
+      "kicker": "VISIBLE OPERATING EVIDENCE",
+      "title": "Borrar las decisiones QC.",
+      "lead": "En lugar de un vago mensaje “QC pasado”, el alcance de la inspección puede identificar lo que fue comprobado, lo que no coincidió y lo que necesita aprobación.",
+      "review": "EXAMEN DE QC",
+      "checked": "Revisado",
+      "sampling": "Sampling",
+      "passed": "Pasado",
+      "issues": "Cuestiones",
+      "packaging": "Embalaje",
+      "barcode": "Código de barras",
+      "status": "Situación",
+      "verified": "Verificado",
+      "matched": "Partido",
+      "approved": "Aprobado para el envío",
+      "checks": [
+        "Combinación variable",
+        "Cantidad",
+        "Comprobación final",
+        "Etiquetas de cartón"
+      ],
+      "passedCount": "50 años",
+      "issueCount": "0 cuestiones",
+      "link": "Explore Control de Calidad"
+    },
+    "support": {
+      "kicker": "APOYO DE CUENTA",
+      "title": "Una entrega por orden.",
+      "lead": "Su contacto primario conecta preguntas de proveedores, acciones de almacén y actualizaciones de envío. Eso significa menos explicaciones repetidas y un propietario más claro cuando algo necesita una decisión.",
+      "points": [
+        "Un punto de comunicación primario",
+        "Decisiones y reglas de embalaje documentadas",
+        "Excepciones seguidas a la resolución"
+      ],
+      "imageAlt": "JW warehouse and account support team"
+    },
+    "fit": {
+      "kicker": "¿ES EL MOMENTO CORRECTO?",
+      "title": "Una alianza útil comienza con expectativas alineadas.",
+      "lead": "Ser claro sobre el ajuste es más valioso que prometer el mismo modelo de servicio a cada tienda.",
+      "good": "JW puede ser un buen ajuste cuando",
+      "bad": "Podemos no ser el adecuado cuando"
+    },
+    "faq": {
+      "kicker": "ANTES DE QUE TE ESCOJAS",
+      "title": "Preguntas sobre trabajar con JW.",
+      "lead": "Comience con su producto y el problema operativo actual para la respuesta más relevante."
+    },
+    "final": {
+      "kicker": "PÓNGASE EN CONTACTO CON SU HIJO",
+      "title": "Vea si JW encaja en su operación.",
+      "lead": "Compartir un enlace de producto, mercados de destino y lo que está disminuyendo su equipo. Recomendaremos un próximo paso práctico.",
+      "button": "Solicita un presupuesto gratuito"
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "HowItWorks": {
+    "startingDetails": [
+      {
+        "title": "Produkt- oder Lieferantenlink",
+        "copy": "Eine Produkt-URL, Lieferantenseite oder ein Referenzbild reicht aus, um die erste Überprüfung zu starten."
+      },
+      {
+        "title": "Hauptbestimmungsmärkte",
+        "copy": "Sagen Sie uns, wo sich Kunden befinden, damit Versandrouten und -limits frühzeitig überprüft werden können."
+      },
+      {
+        "title": "Erwartetes Auftragsvolumen",
+        "copy": "Eine grobe tägliche Reichweite hilft uns, das richtige Lager und Fulfillment-Setup zu empfehlen."
+      },
+      {
+        "title": "Branding / QC Bedürfnisse",
+        "copy": "Senden Sie Verpackung, Etikett und Inspektionshinweise vor dem Versand."
+      }
+    ],
+    "stages": [
+      {
+        "number": "01",
+        "title": "Teilen Sie Ihr Produkt",
+        "kicker": "ÜBERWACHUNG",
+        "image": "/images/generated/jw-account-support-v3.png",
+        "intro": "Senden Sie eine klare Produktreferenz, damit sich das erste Gespräch auf Ihr tatsächliches Geschäft und Kundenversprechen konzentriert.",
+        "provide": "Produktverbindung, Zielmarkt, erwartetes Volumen und das Problem, das Sie lösen möchten.",
+        "handle": "Überprüfen Sie die Machbarkeit des Produkts, den Leistungsumfang, die Zielanforderungen und fehlende Informationen.",
+        "receive": "Ein fokussierter Produktbrief und eine klare Empfehlung für den nächsten Schritt."
+      },
+      {
+        "number": "02",
+        "title": "Quelle und Zitat",
+        "kicker": "ÜBERPRÜFUNG DES LIEFERANTEN",
+        "image": "/images/services/product-sourcing.webp",
+        "intro": "Geeignete Lieferantenangebote werden auf der gleichen Spezifikation verglichen, nicht nur auf dem niedrigsten Stückpreis.",
+        "provide": "Zielkosten, Material- oder Merkmalsanforderungen, Menge und gewünschter Startzeitpunkt.",
+        "handle": "Vergleichen Sie Lieferanten, MOQ, Vorlaufzeit, Anpassung, Verpackung und geschätzte Erfüllungsimplikationen.",
+        "receive": "Vergleichbare Optionen mit den Trade-offs, die erforderlich sind, um eine Lieferantenentscheidung zu treffen."
+      },
+      {
+        "number": "03",
+        "title": "Probe und Genehmigung",
+        "kicker": "QUALITÄTSNORM",
+        "image": "/images/generated/jw-qc-inspection-v3.png",
+        "intro": "Das physische Produkt und sein Inspektionsumfang werden vereinbart, bevor der wiederholte Kauf oder die tägliche Erfüllung beginnt.",
+        "provide": "Feedback zur Stichprobe, akzeptable Toleranzen und nicht verhandelbare Markendetails.",
+        "handle": "Koordinieren Sie Proben, überprüfen Sie die sichtbare Qualität, bestätigen Sie Varianten, Verpackungen und QC-Checkpoints.",
+        "receive": "Eine anerkannte Referenz und eine dokumentierte Grundlage für zukünftige Produktprüfungen."
+      },
+      {
+        "number": "04",
+        "title": "Fulfillment einrichten",
+        "kicker": "BETRIEBSVORBEREITUNG",
+        "image": "/images/generated/jw-branded-packing-v3.png",
+        "intro": "Inventar, SKUs, Verpackungsmaterialien und Bestellregeln werden verbunden, bevor das Live-Kundenvolumen freigegeben wird.",
+        "provide": "Speichern Sie SKU-Daten, Packanweisungen, Branding-Dateien und Bestellabgabepräferenzen.",
+        "handle": "Lager erhalten, Varianten abbilden, Lagerung vorbereiten, Verpackungsregeln dokumentieren und Testaufträge ausführen.",
+        "receive": "Ein getesteter Auftragsworkflow bereit für wiederholtes Kommissionieren, Überprüfen und Verpacken."
+      },
+      {
+        "number": "05",
+        "title": "Schiff und Synchronisation",
+        "kicker": "TÄGLICHE BETRIEB",
+        "image": "/images/generated/jw-dispatch-scan-v3.png",
+        "intro": "Genehmigte Bestellungen gehen durch den Versand, während der Versandstatus und die Ausnahmen für Ihr Team sichtbar bleiben.",
+        "provide": "Kundenaufträge, Adressen und die vereinbarten Versand- oder Service-Level-Regeln.",
+        "handle": "Pick, final-check, packen, Label, Versand und separate Bestellungen, die eine Entscheidung erfordern.",
+        "receive": "Versandbestätigung, Spediteurdetails und Tracking durch die vereinbarte Übergabe."
+      }
+    ],
+    "checkpoints": [
+      [
+        "Vor dem Kauf",
+        "Lieferantenbedingungen, Spezifikation und Musterplan bestätigt."
+      ],
+      [
+        "Vor dem Erhalt der Bestände",
+        "SKU, Menge, Verpackung und eingehende Erwartungen dokumentiert."
+      ],
+      [
+        "Vor dem Versand",
+        "Produkt, Variante, Paket und Etikett gegen die Bestellung geprüft."
+      ]
+    ],
+    "faqs": [
+      [
+        "Wie lange dauert das Setup?",
+        "Der Zeitpunkt hängt vom Produkt, der Probenarbeit, der Verpackung und der Lagerbereitschaft ab. Nach der ersten Überprüfung identifizieren wir die anzuwendenden Phasen und die Abhängigkeiten, die den Startzeitpunkt steuern."
+      ],
+      [
+        "Kann ich anfangen, bevor mein Shop tägliche Bestellungen hat?",
+        "Ja. Produktbeschaffung, Lieferantenvergleich und Proben können vor dem Start beginnen. Das Fulfillment-Setup kann dann vorbereitet werden, wenn Produkte und erwarteter Auftragsfluss klarer sind."
+      ],
+      [
+        "Kann JW mit meinem bestehenden Lieferanten zusammenarbeiten?",
+        "Ja. Ihr Lieferant kann Inventar an das JW-Lager senden, während wir uns auf Empfang, Qualitätskontrollen, Lagerung, Verpackung und globalen Versand konzentrieren."
+      ],
+      [
+        "Was passiert, wenn ein Qualitätsproblem gefunden wird?",
+        "Betroffene Waren oder Bestellungen können für Ihre Entscheidung aufbewahrt, dokumentiert und geteilt werden. Der genaue Inspektions- und Genehmigungsprozess wird vor Beginn des Betriebs vereinbart."
+      ],
+      [
+        "Wie bewegen sich Bestellungen und Tracking zwischen unseren Teams?",
+        "Die Übergabe kann einen unterstützten Store-Workflow, eine strukturierte Auftragsdatei oder eine andere vereinbarte Methode verwenden. SKU-Mapping und Ausnahmeregeln werden während der Einrichtung bestätigt."
+      ]
+    ],
+    "hero": {
+      "kicker": "WIE ES WIRKT",
+      "title": "Vom Produktlink zur Tracked Delivery",
+      "lead": "Ein Workflow in China für Beschaffung, Genehmigung, Fulfillment und Versandupdates.",
+      "primary": "Beginnen Sie mit einem Produktlink",
+      "secondary": "Siehe die fünf Stufen",
+      "proofs": [
+        "Klare Genehmigungsstellen",
+        "Ein dedizierter Kontakt",
+        "Tracking zurückgegeben"
+      ],
+      "liveLabel": "Live-Workflow",
+      "liveStatus": "Nächstes Update in Arbeit",
+      "updates": [
+        "Produkt-Brief Review",
+        "Lieferantenbegriffe verbunden",
+        "QC-Notizen gespeichert",
+        "Tracking Update vorbereitet"
+      ],
+      "owner": "Eigentümer: China Account Team",
+      "next": "Weiter: Überprüfung der Versandregeln",
+      "reviewStatus": "Bereit zur Überprüfung",
+      "briefLabel": "Produktbeschreibung",
+      "brief": "Lieferantenbedingungen, QC-Notizen und Versandregeln bleiben verbunden, bevor Bestellungen umziehen.",
+      "board": [
+        "Produktlink",
+        "Zitat",
+        "QC",
+        "Füllung",
+        "Verfolgung"
+      ]
+    },
+    "start": {
+      "kicker": "WAS ERSTENS SENDET",
+      "title": "Beginnen Sie, bevor jedes Detail fertig ist.",
+      "lead": "Senden Sie zuerst die Basics. JW kann die fehlenden Details im nächsten Schritt überprüfen."
+    },
+    "journey": {
+      "kicker": "DIE VOLLSTÄNDIGE BEHÖRDE",
+      "title": "Kennen Sie jeden Schritt, bevor sich die Bestellung bewegt.",
+      "lead": "Der Workflow bleibt flexibel, während jeder Eigentümer, Genehmigung und Übergabe klar bleibt.",
+      "provide": "Sie bieten",
+      "handle": "Griffe von Zeugen",
+      "receive": "Sie erhalten"
+    },
+    "approval": {
+      "kicker": "GENEHMIGUNG VOR VOLUMEN",
+      "title": "Drei Checkpoints schützen jede Übergabe.",
+      "lead": "Wichtige Fragen werden gelöst, bevor sie zu wiederholten Produktions-, Lager- oder Serviceproblemen werden.",
+      "proofs": [
+        "Genehmigungsklappen",
+        "Unklare Übergaben",
+        "Gemeinsame Entscheidungsaufzeichnung"
+      ]
+    },
+    "tracks": {
+      "kicker": "STARTEN SIE IN IHRER AKTUELLEN PHASE",
+      "title": "Verwenden Sie den Workflow von wo Sie sind.",
+      "lead": "Beginnen Sie mit einer Produktidee, einem vorhandenen Lieferanten oder Inventar, das bereits versandfertig ist.",
+      "items": [
+        {
+          "kicker": "PRÜFUNG EINES PRODUKTS",
+          "title": "Beginnen Sie mit Sourcing und Samples.",
+          "copy": "Verwenden Sie die Stufen 01-03, um Lieferanten zu vergleichen und das Produkt zu genehmigen, bevor Sie entscheiden, wie viel Lager- oder Fulfillment-Unterstützung Sie benötigen.",
+          "link": "Entdecken Sie Product Sourcing",
+          "href": "/services/product-sourcing"
+        },
+        {
+          "kicker": "VORHANDENER LIEFERANT",
+          "title": "Beginnen Sie mit Empfang und QC.",
+          "copy": "Ihre aktuelle Fabrik kann Waren zur Inspektion, Lagerung, Markenverpackung und Auftragserfüllung an JW senden.",
+          "link": "Entdecken Sie die Qualitätskontrolle",
+          "href": "/services/quality-control-inspection"
+        },
+        {
+          "kicker": "BEREIT ZUR SCALE",
+          "title": "Verbinden Sie tägliche Bestellungen und Tracking.",
+          "copy": "Map SKUs, Packing-Regeln und Ausnahmen, so dass Wiederholungsaufträge durch einen strukturierten Lagerworkflow gehen können.",
+          "link": "Entdecken Sie die Order Automation",
+          "href": "/services/automatic-order-fulfillment"
+        }
+      ]
+    },
+    "exceptions": {
+      "imageAlt": "Produktproblem wird vor der Genehmigung geprüft",
+      "statusLabel": "Überprüfung der Ausnahme",
+      "status": "Warten auf Entscheidung",
+      "kicker": "WENN ETWAS NICHT PASST",
+      "title": "Ausnahmen Pause mit Kontext, nicht Verwirrung.",
+      "lead": "Qualitätsprobleme, fehlender Bestand, nicht zugeordnetes SKUs oder ungewöhnliche Anfragen werden getrennt, bevor sie einen Erfüllungsfehler verursachen.",
+      "steps": [
+        [
+          "Kennnummer",
+          "Betroffene Waren oder Bestellungen sind vom normalen Versand getrennt."
+        ],
+        [
+          "Dokument",
+          "Fotos, SKU Details und die erforderliche Entscheidung werden klar geteilt."
+        ],
+        [
+          "Lebenslauf",
+          "Die Arbeiten werden nach Genehmigung, Korrektur oder Ersatz fortgesetzt."
+        ]
+      ],
+      "queue": "Entscheidungswarteschlange",
+      "queueStatus": "QC Fotos · Lager · Verpackung OK"
+    },
+    "faq": {
+      "kicker": "HÄNFTIGE FRAGE",
+      "title": "Was Sie wissen sollten, bevor Sie anfangen",
+      "lead": "Schnelle Antworten zu Setup-Timing, Qualitätsprüfungen, Auftragserteilung und Tracking-Updates."
+    },
+    "final": {
+      "kicker": "IHR ERSTER SCHRITT",
+      "title": "Beginnen Sie mit einem Produktlink.",
+      "lead": "Sagen Sie uns, wo Sie verkaufen, erwartetes Volumen und was verbessert werden muss. Wir werden die nächste praktische Phase empfehlen.",
+      "product": "Produktlink",
+      "quote": "Freies Angebot",
+      "button": "Kostenloses Angebot anfordern"
+    }
+  }
+}

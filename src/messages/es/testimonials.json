@@ -1,0 +1,104 @@
+{
+  "Testimonials": {
+    "faqs": [
+      [
+        "¿Qué muestran estas historias de vendedores?",
+        "Muestran cómo los vendedores experimentan soporte diario: sourcing de respuestas, actualizaciones QC, detalles de embalaje, manejo de pedidos y comunicación de cumplimiento."
+      ],
+      [
+        "¿Puedo pedir apoyo similar a una revisión?",
+        "Sí. Compartir el tipo de producto, mercado objetivo y problema actual, y el equipo puede sugerir un flujo de trabajo práctico para su tienda."
+      ],
+      [
+        "¿Estos son sólo sobre el cumplimiento?",
+        "No. Los comentarios cubren la contratación, cotizaciones, embalaje de marca, cheques de calidad, coordinación de inventarios y seguimiento del envío."
+      ],
+      [
+        "¿Trabajaré con un contacto dedicado?",
+        "JW mantiene la comunicación organizada a través del soporte de cuenta, por lo que las preguntas y los detalles del orden no se pierden entre las entregas."
+      ],
+      [
+        "¿Cómo debo usar estos testimonios?",
+        "Uselos para comparar el tipo de soporte que necesita, luego comience con un producto o flujo de pedido para probar el ajuste."
+      ]
+    ],
+    "fiveStars": "Examen de cinco estrellas",
+    "hero": {
+      "kicker": "SELLER STORIES",
+      "title": "Historias de venta, claras.",
+      "lead": "Soporte claro, manejo constante de pedidos y seguimiento rápido de un vendedor de equipo puede realmente utilizar.",
+      "proofs": [
+        "Apoyo a la explotación",
+        "Actualizaciones QC",
+        "Seguimiento del Fulfillment"
+      ],
+      "primary": "Solicita un presupuesto gratuito",
+      "secondary": "Lea las historias del vendedor",
+      "balanceLabel": "Lo que los vendedores más a menudo mencionan",
+      "mentioned": "Más mencionado",
+      "balanceTitle": "Lo que mantiene el flujo de trabajo tranquilo.",
+      "items": [
+        [
+          "Comunicación clara",
+          "Los representantes se mantienen visibles a través de la contratación, QC y el envío."
+        ],
+        [
+          "Respuestas rápidas",
+          "Las preguntas avanzan sin mucho tiempo atrás."
+        ],
+        [
+          "QC visibilidad",
+          "Notas y fotos mantienen las decisiones de revisión fundamentadas."
+        ],
+        [
+          "Propiedad de la orden",
+          "Un contacto mantiene cada paso conectado."
+        ]
+      ],
+      "featuredLabel": "Reacción del vendedor destacado",
+      "switchLabel": "Historias del vendedor",
+      "usefulFor": "Útil para",
+      "firstWorkflow": "Primer flujo de trabajo"
+    },
+    "featured": {
+      "kicker": "CARACTERÍSTICAS",
+      "title": "Tres partes de los vendedores de asociaciones recuerdan.",
+      "lead": "Manejo de orden claro, decisiones de producto reflexivas y una persona sensible que mantiene el trabajo en movimiento.",
+      "viewAll": "Ver todas las 13 historias"
+    },
+    "stories": {
+      "kicker": "MÁS HISTORIAS",
+      "title": "Retroalimentación a través del viaje de pedidos.",
+      "lead": "Cada historia incluye el tema de servicio y el contexto de soporte de cuenta, por lo que los visitantes pueden encontrar experiencias más cercanas a sus propias necesidades.",
+      "viewAll": "Ver todas las 12 historias"
+    },
+    "proof": {
+      "kicker": "EL TELÉFONO DE LA FEEDBACK",
+      "title": "Vea dónde sucede el trabajo de cumplimiento diario.",
+      "lead": "El soporte más fuerte para una historia de vendedor es el almacén visible, el embalaje y el trabajo de despacho.",
+      "videos": [
+        [
+          "WAREHOUSE OPERATIONS",
+          "Recepción, comprobación y embalaje",
+          "Vea el entorno físico detrás del inventario y la preparación del pedido del cliente."
+        ],
+        [
+          "SORTING &AMP; DISPATCH",
+          "Ordenes que se mueven hacia la entrega",
+          "Vea cómo se clasifican los paquetes preparados y se entregan en el flujo de trabajo de envío."
+        ]
+      ]
+    },
+    "faq": {
+      "kicker": "ANTES DE QUE TE DESMAYES",
+      "title": "Preguntas sobre historias de vendedores.",
+      "lead": "Utilice estas respuestas para entender lo que significa la retroalimentación para su propia tienda."
+    },
+    "final": {
+      "kicker": "TU PRIMER PASO",
+      "title": "Empieza con un producto.",
+      "lead": "Cuéntanos lo que vendes, donde envías y lo que necesita trabajar mejor. Nuestro equipo recomendará el siguiente paso práctico.",
+      "button": "Habla con nuestro equipo"
+    }
+  }
+}

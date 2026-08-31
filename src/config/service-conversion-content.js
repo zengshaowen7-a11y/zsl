@@ -1,3 +1,9 @@
+import { serviceConversionContent as frContent, serviceComparison as frComparison } from "@/content/fr/service-conversion";
+import { serviceConversionContent as deContent, serviceComparison as deComparison } from "@/content/de/service-conversion";
+import { serviceConversionContent as nlContent, serviceComparison as nlComparison } from "@/content/nl/service-conversion";
+import { serviceConversionContent as plContent, serviceComparison as plComparison } from "@/content/pl/service-conversion";
+import { serviceConversionContent as esContent, serviceComparison as esComparison } from "@/content/es/service-conversion";
+
 const select = (name, label, options, required = true) => ({
   name,
   label,
@@ -27,7 +33,7 @@ export const serviceConversionContent = {
   "dropshipping-supplier": {
     form: {
       eyebrow: "DROPSHIPPING PROJECT REVIEW",
-      title: "Plan your dropshipping workflow",
+      title: "Plan your dropship flow",
       lead: "Share the products, markets and current order routine so we can identify the right sourcing, packing and delivery scope.",
       fields: [
         input("product_link", "Product or supplier link", "Paste a product or supplier URL", "url"),
@@ -49,7 +55,7 @@ export const serviceConversionContent = {
   "3pl-fulfillment-services": {
     form: {
       eyebrow: "WAREHOUSE SCOPE REVIEW",
-      title: "Estimate your 3PL scope",
+      title: "Estimate your 3PL",
       lead: "Share SKU counts, stored units and daily order flow so the warehouse receiving, storage and dispatch scope can be planned accurately.",
       fields: [
         select("sku_count", "Number of active SKUs", ["1–10 SKUs", "11–50 SKUs", "51–200 SKUs", "200+ SKUs"]),
@@ -71,7 +77,7 @@ export const serviceConversionContent = {
   "pod-fulfillment": {
     form: {
       eyebrow: "POD PRODUCT REVIEW",
-      title: "Review Your Custom Product Order",
+      title: "Review your POD order",
       lead: "Share the base product, artwork readiness and expected order pattern so we can assess sampling, production and fulfillment feasibility.",
       fields: [
         select("pod_product", "Product type", ["Apparel", "Accessories", "Home and lifestyle", "Paper goods", "Other product"]),
@@ -159,7 +165,7 @@ export const serviceConversionContent = {
   "china-fulfillment-center": {
     form: {
       eyebrow: "CHINA WAREHOUSE REVIEW",
-      title: "Plan your China warehouse flow",
+      title: "Plan your warehouse flow",
       lead: "Share your supplier, SKU and export profile so receiving, QC, storage and dispatch can be mapped before the first inbound delivery.",
       fields: [
         select("supplier_count", "Active suppliers", ["1 supplier", "2–5 suppliers", "6–15 suppliers", "15+ suppliers"]),
@@ -170,7 +176,7 @@ export const serviceConversionContent = {
     },
     caseStudy: {
       eyebrow: "REPRESENTATIVE WAREHOUSE CASE",
-      title: "Move factory batches into export-ready orders.",
+      title: "Factory stock, ready to ship.",
       profile: "Brand consolidating products, inserts and packaging in one China warehouse",
       challenge: "Factory goods, brand materials and customer orders arrived on different schedules and still had to leave through one clean dispatch route.",
       plan: ["Map every inbound delivery", "Separate QC, storage and packing lanes", "Release finished parcels by route"],
@@ -213,6 +219,14 @@ export const serviceComparison = [
   ["quality-control-inspection", "Quality Control", "Teams needing evidence before approving or releasing products", "Batch or order level", "Checked against scope", "Specification + risks"],
 ];
 
-export function getServiceConversion(slug) {
-  return serviceConversionContent[slug] ?? serviceConversionContent["dropshipping-supplier"];
+const localizedConversionContent = { en: serviceConversionContent, fr: frContent, de: deContent, nl: nlContent, pl: plContent, es: esContent };
+const localizedServiceComparison = { en: serviceComparison, fr: frComparison, de: deComparison, nl: nlComparison, pl: plComparison, es: esComparison };
+
+export function getServiceConversion(slug, locale = "en") {
+  const content = localizedConversionContent[locale] || serviceConversionContent;
+  return content[slug] ?? content["dropshipping-supplier"];
+}
+
+export function getServiceComparison(locale = "en") {
+  return localizedServiceComparison[locale] || serviceComparison;
 }

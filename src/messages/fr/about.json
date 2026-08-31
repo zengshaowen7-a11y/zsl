@@ -1,0 +1,152 @@
+{
+  "About": {
+    "departments": [
+      [
+        "Gestion des comptes",
+        "Un contact nommé coordonne les priorités, les mises à jour et les exceptions dans tout le parcours de commande."
+      ],
+      [
+        "Approvisionnement en produits",
+        "Recherche des fournisseurs, devis, échantillons, MOQ, délais et personnalisation sont comparés avant l'engagement."
+      ],
+      [
+        "Contrôle qualité",
+        "Les points de contrôle convenus transforment les exigences des produits en routines d'inspection de réception et d'inspection avant expédition."
+      ],
+      [
+        "Exploitation des entrepôts",
+        "Les stocks, les matériaux d'emballage, les règles de cueillette et les commandes sont organisés autour de chaque SKU."
+      ],
+      [
+        "Coordination des transports maritimes",
+        "Les itinéraires sont sélectionnés par destination, type de produit, vitesse, suivi et la promesse du client."
+      ]
+    ],
+    "principles": [
+      [
+        "Rendre le travail visible",
+        "Les décisions importantes, les points de contrôle et les exceptions devraient être compréhensibles au-delà d'un message de chat."
+      ],
+      [
+        "Définir la propriété",
+        "Chaque étape a besoin d'un propriétaire nommé, d'un point d'approbation et d'une prochaine action claire."
+      ],
+      [
+        "Protéger la promesse du client",
+        "La vitesse n'a d'importance que lorsque le bon produit reste dans l'état et l'emballage prévu."
+      ],
+      [
+        "Améliorer avec la marque",
+        "La routine d'exploitation devrait évoluer à mesure que les produits, les marchés, l'emballage et le volume des commandes changent."
+      ]
+    ],
+    "teamRoles": [
+      [
+        "Responsable de compte",
+        "Votre point de contact quotidien et propriétaire du suivi cross-team."
+      ],
+      [
+        "Spécialiste de l'approvisionnement",
+        "Coordonne les usines, les devis, les échantillons et la production répétée."
+      ],
+      [
+        "QC et tête d'entrepôt",
+        "Posséder des normes de réception, des inspections, des règles d'inventaire et d'emballage."
+      ],
+      [
+        "Spécialiste de la logistique",
+        "Examine les itinéraires, le suivi du rendement et les exceptions à la livraison."
+      ]
+    ],
+    "questions": [
+      [
+        "Peut-on voir la vraie équipe et l'entrepôt avant de travailler ensemble ?",
+        "Oui. Cette page est conçue pour tenir une véritable visite d'entrepôt, la photographie d'équipe et des liens de vérification externe. Ces actifs seront ajoutés après la fourniture de l'entreprise et les approuveront."
+      ],
+      [
+        "Qui sera responsable de notre compte ?",
+        "Chaque compte devrait avoir un contact nommé qui coordonne l'approvisionnement, la qualité, l'entrepôt et les équipes d'expédition, de sorte que la responsabilité ne disparaît pas entre les ministères."
+      ],
+      [
+        "Comment communiquez-vous les questions de qualité?",
+        "Le champ d'application devrait définir les points d'inspection et les exigences en matière de preuves avant le lancement. Lorsqu'une exception apparaît, la mise à jour devrait inclure le contexte, des photos, le cas échéant, et des options pratiques."
+      ],
+      [
+        "Le flux de travail peut-il changer à mesure que notre magasin grandit?",
+        "Oui. Un workflow de réalisation utile peut commencer par l'approvisionnement et l'expédition directe, puis ajouter l'inventaire, l'emballage de marque, l'automatisation ou de nouveaux itinéraires de livraison lorsque la demande devient plus prévisible."
+      ],
+      [
+        "Quels détails de l'entreprise pouvons-nous vérifier?",
+        "La dernière page affichera le nom de la société enregistrée, les adresses de bureau et d'entrepôt, le profil d'examen indépendant et les liens sociaux ou fondateurs officiels après qu'ils ont été fournis et vérifiés."
+      ]
+    ],
+    "media": {
+      "licensed": "FOOTAGE TEMPORAIRE LICENSÉ",
+      "needed": "MATÉRIEL DE LA SOCIÉTÉ NÉCESSAIRE"
+    },
+    "hero": {
+      "kicker": "LES PEUPLES ET LES PROCESSUS DONT TOUS LES PARCELLES",
+      "title": "Un partenaire d'accomplissement devrait être visible avant qu'on lui fasse confiance.",
+      "lead": "JW Dropshipping apporte la coordination des fournisseurs, les contrôles de qualité, l'exécution des entrepôts et la livraison mondiale en une seule équipe opérationnelle responsable pour les marques eCommerce indépendantes.",
+      "primary": "Rencontrez votre équipe d'accomplissement",
+      "secondary": "Voyez comment on fonctionne.",
+      "points": [
+        "Appui humain",
+        "Points de contrôle documentés",
+        "Propriété claire"
+      ],
+      "proofLabel": "Les faits vérifiés de l'entreprise à fournir"
+    },
+    "story": {
+      "kicker": "POURQUOI JW DROPSHIPING EXISTES",
+      "title": "Les marques indépendantes ont besoin de plus qu'un numéro de suivi.",
+      "paragraphs": [
+        "Lorsque les usines, l'inspection, l'inventaire et l'expédition sont gérés par différents contacts, un petit malentendu peut rapidement devenir un problème pour les clients. Notre rôle est de relier ces remises en une seule routine d'exploitation avec un propriétaire clair.",
+        "Cela signifie confirmer ce que signifie réellement \"prêt à expédier\" pour votre produit, documenter les détails qui comptent, et garder les décisions proches des personnes qui font le travail physique."
+      ],
+      "link": "Explorer notre gamme de services",
+      "noteTitle": "Histoire de Fondateur nécessaire",
+      "note": "Fournir la véritable année de fondation, le problème original, le premier jalon de l'entrepôt et l'orientation actuelle."
+    },
+    "departmentsSection": {
+      "kicker": "UN JOUR · CINQ SPÉCIALISTES",
+      "title": "Chaque remise appartient à quelqu'un qui le fait tous les jours.",
+      "lead": "Les clients communiquent avec un responsable responsable, tandis que les équipes spécialisées possèdent le travail derrière l'approvisionnement, QC, l'inventaire, l'emballage et la livraison."
+    },
+    "facility": {
+      "kicker": "INSIDER LE FLUX DE TRAVAIL",
+      "title": "Voir où les commandes sont reçues, vérifiées et expédiées.",
+      "lead": "Chaque étape a un propriétaire clair et une remise visible."
+    },
+    "principlesSection": {
+      "kicker": "COMMENT NOUS VOULONS QUE LE PARTENARIAT SE SENTE",
+      "title": "Assez clair pour comprendre. Assez flexible pour grandir.",
+      "lead": "Ces principes façonnent le fonctionnement de l'équipe, communiquent les problèmes et améliorent les opérations récurrentes."
+    },
+    "team": {
+      "kicker": "UNE ÉQUIPE, UNE PROPRIÉTÉ CLÉ",
+      "title": "Savoir qui possède chaque étape.",
+      "lead": "Votre responsable de compte relie les spécialistes responsables de l'approvisionnement, de la qualité, du travail d'entrepôt et de la livraison.",
+      "portrait": "PORTRAIT {number} BESOIN"
+    },
+    "verification": {
+      "kicker": "VÉRIFIER LES ENTREPRISES",
+      "title": "Rendre facile pour un acheteur sérieux de vérifier avec qui il travaille.",
+      "lead": "Ne publiez pas les données devinées. Ajouter ce qui suit seulement après que l'entreprise ait confirmé les détails juridiques et opérationnels exacts.",
+      "profile": "PROFIL DE L'ENTREPRISE",
+      "details": "Informations officielles à fournir",
+      "link": "LIENS {number}"
+    },
+    "faq": {
+      "kicker": "QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE TRAVAILLER",
+      "title": "Questions une marque prudente devrait demander.",
+      "lead": "La confiance devrait provenir de personnes visibles, d'un travail défini et d'informations vérifiables de l'entreprise.",
+      "button": "Demandez à notre équipe"
+    },
+    "final": {
+      "kicker": "PRÊT À DISCUTER DE VOTRE OPÉRATION ?",
+      "title": "Rencontrez les gens qui seront responsables de vos ordres.",
+      "button": "Démarrer une conversation"
+    }
+  }
+}

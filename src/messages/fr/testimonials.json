@@ -1,0 +1,104 @@
+{
+  "Testimonials": {
+    "faqs": [
+      [
+        "Que montrent ces histoires de vendeurs ?",
+        "Ils montrent comment les vendeurs éprouvent le support quotidien: réponses de sourcing, mises à jour QC, détails d'emballage, traitement de commande et communication d'exécution."
+      ],
+      [
+        "Puis-je demander un soutien semblable à un examen?",
+        "Oui. Partagez le type de produit, le marché cible et le problème actuel, et l'équipe peut suggérer un workflow pratique pour votre magasin."
+      ],
+      [
+        "Est - ce seulement une question de réalisation?",
+        "C'est pas vrai. La rétroaction porte sur l'approvisionnement, les devis, l'emballage de marque, les contrôles de qualité, la coordination des stocks et le suivi de l'expédition."
+      ],
+      [
+        "Est-ce que je travaillerai avec un contact dédié ?",
+        "JW maintient la communication organisée par le support de compte, de sorte que les questions et les détails de la commande ne se perdent pas entre les mains."
+      ],
+      [
+        "Comment dois-je utiliser ces témoignages?",
+        "Utilisez-les pour comparer le type de support dont vous avez besoin, puis commencez par un produit ou un flux de commande pour tester l'ajustement."
+      ]
+    ],
+    "fiveStars": "Revue cinq étoiles",
+    "hero": {
+      "kicker": "SELLERS",
+      "title": "C'est clair.",
+      "lead": "Un support clair, un traitement régulier des commandes et un suivi rapide d'une équipe de vendeurs peuvent effectivement utiliser.",
+      "proofs": [
+        "Aide alimentaire",
+        "Mises à jour de QC",
+        "Suivi de l ' exécution"
+      ],
+      "primary": "Obtenir un devis gratuit",
+      "secondary": "Lire les histoires des vendeurs",
+      "balanceLabel": "Ce que les vendeurs mentionnent le plus souvent",
+      "mentioned": "Les plus mentionnés",
+      "balanceTitle": "Ce qui maintient le flux de travail calme.",
+      "items": [
+        [
+          "Communication claire",
+          "Les réponses restent visibles à travers l'approvisionnement, QC et l'expédition."
+        ],
+        [
+          "Réponses rapides",
+          "Les questions avancent sans attendre."
+        ],
+        [
+          "Visibilité QC",
+          "Notes et photos maintiennent les décisions de révision fondées."
+        ],
+        [
+          "Propriété des commandes",
+          "Un seul contact maintient chaque mainmise connectée."
+        ]
+      ],
+      "featuredLabel": "Commentaires du vendeur",
+      "switchLabel": "Changer d'histoires de vendeurs",
+      "usefulFor": "Utile pour",
+      "firstWorkflow": "Premier flux de travail"
+    },
+    "featured": {
+      "kicker": "CARACTÉRISTIQUES",
+      "title": "Trois parties des vendeurs de la société de personnes se souviennent.",
+      "lead": "Manipulation claire de la commande, décisions de produit réfléchi et une personne réceptive qui maintient le travail en mouvement.",
+      "viewAll": "Voir toutes les 13 histoires"
+    },
+    "stories": {
+      "kicker": "PLUS DE SELLERS",
+      "title": "Rétroaction sur le voyage de commande.",
+      "lead": "Chaque histoire comprend le thème de service et le contexte de soutien de compte, afin que les visiteurs puissent trouver des expériences plus proches de leurs propres besoins.",
+      "viewAll": "Voir toutes les 12 histoires"
+    },
+    "proof": {
+      "kicker": "L'ÉQUIPE DOIT FAIRE L'OBJET",
+      "title": "Voyez où se produit le travail d'accomplissement quotidien.",
+      "lead": "Le support le plus fort pour une histoire de vendeur est l'entrepôt visible, l'emballage et le travail d'expédition.",
+      "videos": [
+        [
+          "OPÉRATIONS DE GUERRE",
+          "Réception, contrôle et emballage",
+          "Voir l'environnement physique derrière l'inventaire et la préparation de la commande du client."
+        ],
+        [
+          "DÉPÔT ET DISPATOIRE",
+          "Commandes allant vers la livraison",
+          "Voyez comment les colis préparés sont triés et remis dans le flux de travail d'expédition."
+        ]
+      ]
+    },
+    "faq": {
+      "kicker": "QUELLES SONT LES INFORMATIONS A CONNAITRE AVANT DE DECIDE",
+      "title": "Questions sur les histoires de vendeurs.",
+      "lead": "Utilisez ces réponses pour comprendre ce que signifie la rétroaction pour votre propre magasin."
+    },
+    "final": {
+      "kicker": "VOTRE PREMIÈRE ÉTAPE",
+      "title": "Commencez par un produit.",
+      "lead": "Dites-nous ce que vous vendez, où vous expédiez et ce qui doit fonctionner mieux. Notre équipe recommandera la prochaine étape pratique.",
+      "button": "Parlez à notre équipe"
+    }
+  }
+}

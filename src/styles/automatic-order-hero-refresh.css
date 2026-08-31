@@ -2019,3 +2019,12 @@ body main.sdr-page.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order
   }
   #automation-order-flow .sdr-order-flow-node { min-height: 0 !important; }
 }
+/* Automatic order fulfillment: keep the page H1 and section H2 titles on one scale. */
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment {
+  container-type: inline-size;
+}
+
+body main.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment.sdr-page-automatic-order-fulfillment :is(h1, h2) {
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+}

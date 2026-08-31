@@ -1,0 +1,152 @@
+{
+  "About": {
+    "departments": [
+      [
+        "Gestión de cuentas",
+        "Un nombre de contacto coordina prioridades, actualizaciones y excepciones en todo el viaje de orden completo."
+      ],
+      [
+        "Product sourcing",
+        "Investigación de proveedores, citas, muestras, MOQ, tiempo de liderazgo y personalización se comparan antes del compromiso."
+      ],
+      [
+        "Control de calidad",
+        "Los puestos de control convenidos convierten los requisitos del producto en rutinas de inspección de recepción y previas al envío."
+      ],
+      [
+        "Operaciones de almacén",
+        "Inventario, materiales de embalaje, reglas de selección y entregas de pedidos se organizan alrededor de cada SKU."
+      ],
+      [
+        "Coordinación del envío",
+        "Las rutas son seleccionadas por destino, tipo de producto, velocidad, seguimiento y la promesa del cliente."
+      ]
+    ],
+    "principles": [
+      [
+        "Hacer visible el trabajo",
+        "Las decisiones importantes, los puestos de control y las excepciones deben ser comprensibles más allá de un mensaje de chat."
+      ],
+      [
+        "Definir la propiedad",
+        "Cada etapa necesita un nombre de propietario, un punto de aprobación y una próxima acción clara."
+      ],
+      [
+        "Protege la promesa del cliente",
+        "La velocidad sólo importa cuando el producto correcto deja en la condición y embalaje esperado."
+      ],
+      [
+        "Mejorar con la marca",
+        "La rutina operativa debe evolucionar como productos, mercados, embalaje y cambio de volumen de pedidos."
+      ]
+    ],
+    "teamRoles": [
+      [
+        "Directo de la cuenta",
+        "Su punto de contacto diario y propietario de seguimiento de equipo cruzado."
+      ],
+      [
+        "Sourcing specialist",
+        "Coordina fábricas, comillas, muestras y producción de repetición."
+      ],
+      [
+        "QC",
+        "Posee normas de recepción, inspecciones, inventario y reglas de embalaje."
+      ],
+      [
+        "Especialista en logística",
+        "Reseña rutas, seguimiento de rendimiento y excepciones de entrega."
+      ]
+    ],
+    "questions": [
+      [
+        "¿Podemos ver el verdadero equipo y almacén antes de trabajar juntos?",
+        "Sí. Esta página está diseñada para realizar un recorrido de almacén real, fotografía de equipo y enlaces de verificación externos. Esos activos se añadirán después de que la empresa les proporcione y los apruebe."
+      ],
+      [
+        "¿Quién será responsable de nuestra cuenta?",
+        "Cada cuenta debe tener un contacto nombrado que coordina equipos de abastecimiento, calidad, almacén y envío, por lo que la responsabilidad no desaparece entre departamentos."
+      ],
+      [
+        "¿Cómo comunicas problemas de calidad?",
+        "El alcance operativo debería definir los puntos de inspección y los requisitos de prueba antes del lanzamiento. Cuando aparece una excepción, la actualización debe incluir contexto, fotos donde las opciones pertinentes y prácticas."
+      ],
+      [
+        "¿Puede el flujo de trabajo cambiar a medida que crece nuestra tienda?",
+        "Sí. Un flujo de trabajo útil de cumplimiento puede comenzar con la contratación y el envío directo, luego añadir inventario, embalaje de marca, automatización o nuevas rutas de entrega, ya que la demanda se vuelve más predecible."
+      ],
+      [
+        "¿Qué datos de la empresa podemos verificar?",
+        "La página final mostrará el nombre de la empresa registrada, las direcciones de oficina y almacén, el perfil de revisión independiente y los enlaces oficiales sociales o fundadores después de ser proporcionados y verificados."
+      ]
+    ],
+    "media": {
+      "licensed": "LICENSED TEMPORARY FOOTAGE",
+      "needed": "NECESIDADES MÁTERIALES"
+    },
+    "hero": {
+      "kicker": "EL PUEBLO Y EL PROCESO DE TODOS LOS PAÍSES",
+      "title": "Un socio de cumplimiento debe ser visible antes de que sea confiado.",
+      "lead": "JW Dropshipping aporta coordinación de proveedores, controles de calidad, ejecución de almacén y entrega global en un equipo operativo responsable para marcas independientes de comercio electrónico.",
+      "primary": "Conoce a tu equipo de cumplimiento",
+      "secondary": "Vea cómo operamos",
+      "points": [
+        "Apoyo dirigido por humanos",
+        "Puestos de control documentados",
+        "Propiedad clara"
+      ],
+      "proofLabel": "Datos de la compañía verificada para proporcionar"
+    },
+    "story": {
+      "kicker": "POR QUÉ JW DROPSHIPPING EXISTS",
+      "title": "Las marcas independientes necesitan más que un número de seguimiento.",
+      "paragraphs": [
+        "Cuando las fábricas, la inspección, el inventario y el envío son gestionados por diferentes contactos, un pequeño malentendido puede convertirse rápidamente en un problema orientado al cliente. Nuestro papel es conectar esas entregas a una rutina de operación con un propietario claro.",
+        "Eso significa confirmar lo que “listo para enviar” significa realmente para su producto, documentando los detalles que importan, y manteniendo decisiones cercanas a la gente que hace el trabajo físico."
+      ],
+      "link": "Explore nuestro alcance de servicio",
+      "noteTitle": "Historia del fundador necesaria",
+      "note": "Proporcionar el año de fundación real, problema original, primer hito de almacén y dirección actual."
+    },
+    "departmentsSection": {
+      "kicker": "UN JOURNEY · FIVE SPECIALISTS",
+      "title": "Cada entrega pertenece a alguien que lo hace todos los días.",
+      "lead": "Los clientes se comunican con un líder responsable, mientras que los equipos especializados poseen el trabajo detrás de la contratación, QC, inventario, embalaje y entrega."
+    },
+    "facility": {
+      "kicker": "INSIDE THE WORKFLOW",
+      "title": "Vea dónde se reciben, revisan y envían órdenes.",
+      "lead": "Cada etapa tiene un propietario claro y una entrega visible."
+    },
+    "principlesSection": {
+      "kicker": "CÓMO QUEREMOS QUE LA FIESTA SE SIENTA",
+      "title": "Lo suficientemente claro para entender. Lo suficientemente flexible para crecer.",
+      "lead": "Estos principios dan forma a cómo funciona el equipo, comunica cuestiones y mejora las operaciones recurrentes."
+    },
+    "team": {
+      "kicker": "UN TEAM, CLEAR OWNERSHIP",
+      "title": "Conoce quién es el dueño de cada etapa.",
+      "lead": "Su cuenta líder conecta a los especialistas responsables de la contratación, calidad, trabajo de almacén y entrega.",
+      "portrait": "PORTRAIT {number} NEEDED"
+    },
+    "verification": {
+      "kicker": "VERDAD LA BUSINIDAD",
+      "title": "Haga que sea fácil para un comprador serio comprobar con quién están trabajando.",
+      "lead": "No publique datos adivinados. Agregue lo siguiente sólo después de que la empresa confirme los detalles legales y operativos exactos.",
+      "profile": "COMPANY PROFILE",
+      "details": "Detalles oficiales para proporcionar",
+      "link": "LINK {number}"
+    },
+    "faq": {
+      "kicker": "ANTES DE TRABAJAR JUNTOS",
+      "title": "Preguntas que una marca cuidadosa debe hacer.",
+      "lead": "La confianza debe provenir de personas visibles, trabajo definido e información de empresa verificable.",
+      "button": "Pregunte a nuestro equipo"
+    },
+    "final": {
+      "kicker": "¿LISTO PARA DESACTIVAR TU OPERACIÓN?",
+      "title": "Conoce a la gente que será responsable de tus órdenes.",
+      "button": "Iniciar una conversación"
+    }
+  }
+}

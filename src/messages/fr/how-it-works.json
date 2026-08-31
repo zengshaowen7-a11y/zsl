@@ -1,0 +1,230 @@
+{
+  "HowItWorks": {
+    "startingDetails": [
+      {
+        "title": "Lien entre le produit ou le fournisseur",
+        "copy": "Une URL du produit, une page du fournisseur ou une image de référence suffit pour commencer le premier examen."
+      },
+      {
+        "title": "Principaux marchés de destination",
+        "copy": "Dites-nous où se trouvent les clients afin que les itinéraires d'expédition et les limites puissent être vérifiés tôt."
+      },
+      {
+        "title": "Volume prévu des commandes",
+        "copy": "Une gamme quotidienne rugueuse nous aide à recommander le bon entrepôt et la bonne configuration de réalisation."
+      },
+      {
+        "title": "Besoins de marque/QC",
+        "copy": "Envoyer les emballages, les étiquettes et les notes d'inspection avant l'expédition."
+      }
+    ],
+    "stages": [
+      {
+        "number": "01",
+        "title": "Partagez votre produit",
+        "kicker": "DÉCOUVREMENT",
+        "image": "/images/generated/jw-account-support-v3.png",
+        "intro": "Envoyez une référence de produit claire afin que la première conversation reste concentrée sur votre magasin réel et la promesse du client.",
+        "provide": "Lien produit, marché cible, volume attendu et le problème que vous voulez résoudre.",
+        "handle": "Examiner la faisabilité du produit, la portée du service, les exigences de destination et les renseignements manquants.",
+        "receive": "Un bref produit ciblé et une recommandation claire pour la prochaine étape."
+      },
+      {
+        "number": "02",
+        "title": "Source et devis",
+        "kicker": "EXAMEN SUPPLÉMENTAIRE",
+        "image": "/images/services/product-sourcing.webp",
+        "intro": "Les offres de fournisseurs appropriées sont comparées sur la même spécification, pas seulement sur le prix unitaire le plus bas.",
+        "provide": "Coût cible, matériel ou caractéristiques requis, quantité et calendrier de lancement souhaité.",
+        "handle": "Comparer les fournisseurs, MOQ, les délais, la personnalisation, l'emballage et les implications de réalisation estimées.",
+        "receive": "Options comparables avec les compromis nécessaires pour prendre une décision du fournisseur."
+      },
+      {
+        "number": "03",
+        "title": "Échantillonner et approuver",
+        "kicker": "NORME DE QUALITÉ",
+        "image": "/images/generated/jw-qc-inspection-v3.png",
+        "intro": "Le produit physique et sa portée d'inspection sont convenus avant de reprendre l'achat ou la réalisation quotidienne.",
+        "provide": "Rétroaction sur l'échantillon, les tolérances acceptables et tout détail de marque non négociable.",
+        "handle": "Coordonner les échantillons, examiner la qualité visible, confirmer les variantes, l'emballage et les points de contrôle QC.",
+        "receive": "Une référence approuvée et une base documentée pour les futures vérifications des produits."
+      },
+      {
+        "number": "04",
+        "title": "Configurer l'accomplissement",
+        "kicker": "PRÉPARATION DU FONCTIONNEMENT",
+        "image": "/images/generated/jw-branded-packing-v3.png",
+        "intro": "Inventaire, SKUs, matériaux d'emballage et règles de commande sont connectés avant que le volume du client en direct soit libéré.",
+        "provide": "Conservez les données SKU, les instructions d'emballage, les fichiers de marque et les préférences de commande.",
+        "handle": "Recevoir le stock, les variantes de carte, préparer le stockage, documenter les règles d'emballage et exécuter les ordres d'essai.",
+        "receive": "Un workflow de commande testé prêt pour la reprise, la vérification et l'emballage."
+      },
+      {
+        "number": "05",
+        "title": "Suivi du navire et de la synchronisation",
+        "kicker": "FONCTIONNEMENT DÉRIVÉ",
+        "image": "/images/generated/jw-dispatch-scan-v3.png",
+        "intro": "Les commandes approuvées passent par l'expédition alors que l'état de l'expédition et les exceptions restent visibles pour votre équipe.",
+        "provide": "Commandes, adresses et les règles d'expédition ou de service convenues.",
+        "handle": "Pick, final-check, pack, label, expédition et commandes séparées qui nécessitent une décision.",
+        "receive": "Confirmation de l'expédition, détails du transporteur et suivi par le biais du transfert convenu."
+      }
+    ],
+    "checkpoints": [
+      [
+        "Avant l'achat",
+        "Conditions du fournisseur, spécifications et plan d'échantillonnage confirmé."
+      ],
+      [
+        "Avant de recevoir le stock",
+        "SKU, quantité, emballage et attentes entrantes documentées."
+      ],
+      [
+        "Avant expédition",
+        "Produit, variante, colis et étiquette vérifiés par rapport à la commande."
+      ]
+    ],
+    "faqs": [
+      [
+        "Combien de temps ça prend ?",
+        "Le calendrier dépend du produit, du travail d'échantillon, de l'emballage et de la préparation du stock. Après le premier examen, nous identifions les étapes qui s'appliquent et les dépendances qui contrôlent le calendrier de lancement."
+      ],
+      [
+        "Puis-je commencer avant que mon magasin ait des commandes quotidiennes?",
+        "Oui. L'approvisionnement en produits, la comparaison des fournisseurs et les échantillons peuvent commencer avant le lancement. La configuration de réalisation peut alors être préparée lorsque les produits et le flux d'ordre attendu sont plus clairs."
+      ],
+      [
+        "JW peut-elle travailler avec mon fournisseur actuel?",
+        "Oui. Votre fournisseur peut envoyer l'inventaire à l'entrepôt JW pendant que nous nous concentrons sur la réception, les contrôles de qualité, l'entreposage, l'emballage et l'expédition mondiale."
+      ],
+      [
+        "Que se passe-t-il lorsqu'on trouve un problème de qualité?",
+        "Les marchandises ou les commandes touchées peuvent être détenues, documentées et partagées pour votre décision. Le processus exact d'inspection et d'approbation est convenu avant le début des opérations."
+      ],
+      [
+        "Comment les ordres et le suivi se déplacent-ils entre nos équipes ?",
+        "Le retrait peut utiliser un workflow de stockage supporté, un fichier d'ordre structuré ou une autre méthode convenue. Les règles de cartographie et d'exception SKU sont confirmées lors de la configuration."
+      ]
+    ],
+    "hero": {
+      "kicker": "COMMENT ÇA MARCHE",
+      "title": "Du lien produit à la livraison suivie",
+      "lead": "Un flux de travail basé sur la Chine pour l'approvisionnement, l'approbation, l'exécution et les mises à jour d'expédition.",
+      "primary": "Commencez par un lien produit",
+      "secondary": "Voir les cinq étapes",
+      "proofs": [
+        "Points d'approbation clairs",
+        "Un contact dédié",
+        "Suivi retourné"
+      ],
+      "liveLabel": "Flux de travail réel",
+      "liveStatus": "Prochaine mise à jour en cours",
+      "updates": [
+        "Résumé du produit examiné",
+        "Conditions du fournisseur connecté",
+        "Notes QC enregistrées",
+        "Mise à jour de suivi préparée"
+      ],
+      "owner": "Propriétaire: Équipe de compte Chine",
+      "next": "Suivant: contrôle des règles d'expédition",
+      "reviewStatus": "Prêt à être examiné",
+      "briefLabel": "Résumé du produit",
+      "brief": "Les termes du fournisseur, les notes QC et les règles d'expédition restent connectés avant le déménagement des commandes.",
+      "board": [
+        "Lien de produit",
+        "Citation",
+        "AUTRES",
+        "Réalisation",
+        "Suivi"
+      ]
+    },
+    "start": {
+      "kicker": "QUE FAIRE ENVIR",
+      "title": "Commencez avant que chaque détail soit prêt.",
+      "lead": "Envoyez les bases d'abord. JW peut examiner les détails manquants lors de la prochaine étape."
+    },
+    "journey": {
+      "kicker": "LE JOURNAL D'ORDRE COMPLET",
+      "title": "Connaître chaque étape avant que l'ordre ne bouge.",
+      "lead": "Le workflow reste flexible tandis que chaque propriétaire, approbation et transfert reste clair.",
+      "provide": "Vous fournissez",
+      "handle": "Poignées JW",
+      "receive": "Vous recevez"
+    },
+    "approval": {
+      "kicker": "HOMOLOGATION AVANT VOLUME",
+      "title": "Trois points de contrôle protègent chaque transfert.",
+      "lead": "Les questions importantes sont résolues avant qu'elles ne se répètent.",
+      "proofs": [
+        "Portails d ' homologation",
+        "Passages non clairs",
+        "dossier de décision partagé"
+      ]
+    },
+    "tracks": {
+      "kicker": "COMMENCE PAR TON EMPLACEMENT ACTUEL",
+      "title": "Utilisez le flux de travail d'où vous êtes.",
+      "lead": "Commencez par une idée de produit, un fournisseur existant ou un stock déjà prêt à expédier.",
+      "items": [
+        {
+          "kicker": "ESSAI D'UN PRODUIT",
+          "title": "Commencez par l'approvisionnement et les échantillons.",
+          "copy": "Utilisez les étapes 01–03 pour comparer les fournisseurs et approuver le produit avant de décider de la quantité de support de stock ou de réalisation dont vous avez besoin.",
+          "link": "Explorer l'approvisionnement en produits",
+          "href": "/services/product-sourcing"
+        },
+        {
+          "kicker": "COMPLÉMENTAIRE EXISTANT",
+          "title": "Commencez par recevoir et QC.",
+          "copy": "Votre usine actuelle peut envoyer des marchandises à JW pour inspection, stockage, emballage de marque et réalisation de niveau de commande.",
+          "link": "Explorer le contrôle de la qualité",
+          "href": "/services/quality-control-inspection"
+        },
+        {
+          "kicker": "PRÊT À L'ÉCHELLE",
+          "title": "Connectez les commandes quotidiennes et le suivi.",
+          "copy": "Carte SKUs, règles d'emballage et exceptions de sorte que les commandes répétées peuvent passer par un workflow d'entrepôt structuré.",
+          "link": "Explorer l'automatisation des commandes",
+          "href": "/services/automatic-order-fulfillment"
+        }
+      ]
+    },
+    "exceptions": {
+      "imageAlt": "Numéro du produit vérifié avant l'approbation",
+      "statusLabel": "Examen des exceptions",
+      "status": "En attente de décision",
+      "kicker": "QUAND QUELQUE CHOSE NE VA PAS",
+      "title": "Exceptions Pause avec contexte, pas confusion.",
+      "lead": "Les problèmes de qualité, les stocks manquants, les demandes SKUs ou inhabituelles sont séparés avant de créer une erreur de réalisation.",
+      "steps": [
+        [
+          "Identifier",
+          "Les marchandises ou les commandes concernées sont séparées de l'expédition normale."
+        ],
+        [
+          "Numéro",
+          "Les photos, les détails de SKU et la décision nécessaire sont clairement partagés."
+        ],
+        [
+          "Résumé",
+          "Les travaux se poursuivent après approbation, correction ou remplacement."
+        ]
+      ],
+      "queue": "En attente de décision",
+      "queueStatus": "QC photos · stock · emballage OK"
+    },
+    "faq": {
+      "kicker": "QUESTIONS FRÉQUENTES",
+      "title": "Que savoir avant de commencer",
+      "lead": "Réponses rapides au sujet du timing de la configuration, des contrôles de qualité, de la commande et des mises à jour de suivi."
+    },
+    "final": {
+      "kicker": "VOTRE PREMIÈRE ÉTAPE",
+      "title": "Commencez par un lien produit.",
+      "lead": "Dites-nous où vous vendez, le volume attendu et ce qui doit s'améliorer. Nous recommanderons la prochaine étape pratique.",
+      "product": "Lien de produit",
+      "quote": "Devis gratuit",
+      "button": "Obtenir un devis gratuit"
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "ServicesOverview": {
+    "startingPoints": [
+      [
+        "SOURCE",
+        "Trouver des produits et des fournisseurs",
+        "Trouver, comparer et valider les produits avant de s'engager à l'inventaire.",
+        "/services/product-sourcing"
+      ],
+      [
+        "FULFILL",
+        "Commandes de navires fiables",
+        "Connectez le traitement des commandes, l'emballage et la livraison globale en un seul workflow.",
+        "/services/dropshipping-supplier"
+      ],
+      [
+        "ÉCHELLE",
+        "Échellez votre inventaire",
+        "Recevoir des stocks en vrac, organiser SKUs et remplir d'un entrepôt en Chine.",
+        "/services/3pl-fulfillment-services"
+      ],
+      [
+        "GRANDE",
+        "Construire votre marque",
+        "Coordonner les étiquettes, les emballages, les inserts et la production répétée.",
+        "/services/private-label"
+      ]
+    ],
+    "proofItems": [
+      [
+        "Réception des dossiers",
+        "Les quantités entrantes et les écarts visibles sont enregistrés avant l'acceptation du stock."
+      ],
+      [
+        "Points de contrôle agréés QC",
+        "Les produits, les variantes, les étiquettes et les emballages sont contrôlés par rapport au champ d'application approuvé."
+      ],
+      [
+        "Traitement des commandes",
+        "Le choix, l'emballage et l'expédition suivent un flux de travail documenté pour chaque magasin."
+      ],
+      [
+        "Passage suivi",
+        "L'état de l'expédition et le suivi sont retournés dans le cadre de la routine d'exploitation convenue."
+      ]
+    ],
+    "workflowSteps": [
+      [
+        "01",
+        "Partagez vos besoins",
+        "Envoyer des liens vers les produits, les marchés de destination, le volume des commandes et les besoins de marque."
+      ],
+      [
+        "02",
+        "Confirmer la portée du service",
+        "Nous définissons les responsabilités en matière d'approvisionnement, d'inspection, d'inventaire, d'emballage et de livraison."
+      ],
+      [
+        "03",
+        "Préparer des produits et des systèmes",
+        "Les échantillons, l'emballage, SKUs et le processus de passation de commande sont examinés."
+      ],
+      [
+        "04",
+        "Exécution quotidienne",
+        "Les commandes sont reçues, sélectionnées, vérifiées, emballées et expédiées à travers le flux de travail convenu."
+      ],
+      [
+        "05",
+        "Suivre et améliorer",
+        "Le suivi est retourné et les problèmes récurrents sont examinés à mesure que les produits et le volume augmentent."
+      ]
+    ],
+    "faqs": [
+      [
+        "Quels services d'accomplissement puis-je combiner?",
+        "Vous pouvez commencer par l'approvisionnement ou l'inspection seulement, ou combiner l'approvisionnement, l'entreposage, l'emballage personnalisé, l'exécution de la commande et la livraison suivie dans un seul champ d'exploitation."
+      ],
+      [
+        "Pouvez-vous travailler avec mes fournisseurs existants ?",
+        "Oui. Nous pouvons recevoir des marchandises d'un fournisseur existant et nous concentrer sur l'inspection, l'entreposage, l'emballage et l'expédition, sous réserve d'un processus de remise clair."
+      ],
+      [
+        "Supportez-vous les magasins à faible volume?",
+        "La qualité dépend du type de produit, des exigences de manutention et des marchés de destination. Partagez votre plan de volume et de croissance actuel afin que nous puissions vous recommander un modèle de départ pratique."
+      ],
+      [
+        "Comment la qualité du produit est-elle vérifiée?",
+        "La portée de l'inspection est convenue avant le début des opérations. Il peut inclure la quantité, les variantes, l'apparence, la fonction de base, l'emballage et les contrôles de précision de commande finale."
+      ],
+      [
+        "Pouvez-vous fournir des emballages de marque?",
+        "Oui. Les options peuvent comprendre des étiquettes, des cartes, des sacs, des boîtes et des inserts, selon la quantité, la capacité du fournisseur et le délai de production."
+      ],
+      [
+        "Dans quels pays pouvez-vous expédier ?",
+        "Nous soutenons les grands marchés internationaux par le biais d'itinéraires maritimes suivis. La meilleure option dépend de la destination, du type de produit, du poids du colis et de la cible de livraison."
+      ],
+      [
+        "Comment puis-je obtenir une citation ?",
+        "Envoyez votre lien de produit ou spécification, les marchés de destination, le volume de commande prévu et les exigences d'emballage. Nous examinerons la portée et recommanderons la prochaine étape."
+      ]
+    ],
+    "hero": {
+      "kicker": "SERVICES DE SOURCE ET DE FINANCEMENT DE LA CHINE",
+      "title": "Une équipe chinoise pour l'approvisionnement, QC et la réalisation mondiale.",
+      "lead": "Choisissez le support dont votre magasin a besoin aujourd'hui, puis connectez l'approvisionnement, l'inspection, l'emballage, l'entreposage et l'expédition mondiale à mesure que votre opération augmente.",
+      "primary": "Obtenir un devis gratuit",
+      "secondary": "Explorer les services",
+      "benefitsLabel": "Prestations de services",
+      "benefits": [
+        "Appui au compte humain",
+        "Portée claire des services",
+        "QC avant expédition"
+      ],
+      "imageAlt": "Équipe d'exécution JW recevant l'inventaire dans un entrepôt chinois",
+      "quickNavLabel": "Choisir un service par objectif d'entreprise"
+    },
+    "catalog": {
+      "kicker": "SERVICES CONSTALLÉS AU TRAVAIL",
+      "title": "Commencez par le goulot d'étranglement dans votre opération.",
+      "lead": "Utilisez un service ciblé ou combinez-les dans un workflow d'exécution connecté en Chine.",
+      "service": "SERVICE {number}",
+      "explore": "Explorer le service"
+    },
+    "comparison": {
+      "kicker": "CHOISIR LE BON POINT DE DÉPART",
+      "title": "Comparer la portée du service en un coup d'oeil.",
+      "lead": "Chaque service résout un besoin opérationnel différent. Votre citation peut combiner plusieurs.",
+      "headers": [
+        "Services",
+        "Meilleur pour",
+        "Inventaire",
+        "Marque",
+        "Quoi préparer"
+      ]
+    },
+    "process": {
+      "kicker": "UN TRAVAIL OPERATOIRE",
+      "title": "Comment nos services se connectent.",
+      "lead": "Chaque projet commence par une portée définie et passe par cinq étapes visibles."
+    },
+    "proof": {
+      "imageAlt": "L'équipe JW inspecte les produits avant leur exécution",
+      "badge": "points de contrôle opérationnels visibles",
+      "kicker": "PROFESSIONNELLES AVANT LES PROMESSIONS",
+      "title": "Vérifications opérationnelles que vous pouvez intégrer au service.",
+      "lead": "Un flux de travail fiable est défini par ses points de contrôle, registres et remises, et non par ses revendications décoratives.",
+      "link": "Explorer le contrôle de la qualité"
+    },
+    "faq": {
+      "kicker": "QUESTIONS FRÉQUENTES",
+      "title": "Que savoir avant de commencer",
+      "lead": "Des réponses rapides sur la portée du service, les fournisseurs, le volume des commandes, les contrôles de qualité et l'emballage de marque."
+    },
+    "final": {
+      "kicker": "COMMENCER AVEC VOTRE CULASSE ACTUELLE",
+      "title": "Voyez si JW correspond à votre opération.",
+      "lead": "Partagez un lien produit, les marchés de destination et ce qui ralentit votre équipe. Nous recommanderons une prochaine étape pratique.",
+      "button": "Obtenir un devis gratuit"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "PageMetadata": {
+    "home": {
+      "title": "Product Sourcing, Quality Control & Global Fulfillment"
+    },
+    "about": {
+      "title": "About JW Dropshipping | The Team Behind Your Fulfillment",
+      "description": "Meet the people, operating principles and fulfillment workflow behind JW Dropshipping's sourcing, quality control, warehouse and global delivery services."
+    },
+    "contact": {
+      "title": "Get a Free Quote | JW Dropshipping",
+      "description": "Share your product, market and order requirements with JW Dropshipping for a focused sourcing and fulfillment review."
+    },
+    "services": {
+      "title": "China Sourcing, QC & Fulfillment Services"
+    },
+    "howItWorks": {
+      "title": "How JW Dropshipping Works"
+    },
+    "whyUs": {
+      "title": "Why Choose JW Dropshipping"
+    },
+    "testimonials": {
+      "title": "Seller Stories | JW Dropshipping",
+      "description": "Seller feedback about JW Dropshipping sourcing, quality control, account support, branded packing and global fulfillment."
+    },
+    "help": {
+      "title": "Sourcing and Fulfillment Help Centre"
+    }
+  },
+  "ContactPage": {
+    "heroKicker": "GET A FREE FULFILLMENT REVIEW",
+    "heroTitle": "Start with one product link.",
+    "heroLead": "Tell us what you sell, where you ship and what is slowing your operation down. We will recommend the next practical step.",
+    "heroProofs": ["Product-specific review", "No obligation", "One dedicated contact"],
+    "responseTarget": "Response target",
+    "responseTime": "Within one business day after reviewing your enquiry.",
+    "heroImageAlt": "JW team reviewing a sourcing and fulfillment enquiry",
+    "afterSubmitKicker": "AFTER YOU SUBMIT",
+    "afterSubmitTitle": "A visible next step, not a generic sales call.",
+    "afterSubmitLead": "Your answers help us focus on the operational decision that matters first.",
+    "steps": [
+      {"title": "Context review", "copy": "We review your product, market, volume and current operating gap."},
+      {"title": "Scope clarification", "copy": "We confirm relevant services, quality checkpoints and missing information."},
+      {"title": "Practical recommendation", "copy": "You receive a focused next step for quotation, samples or workflow setup."}
+    ],
+    "faqKicker": "FREQUENTLY ASKED QUESTIONS",
+    "faqTitle": "What to know before you start.",
+    "faqLead": "Quick answers about sourcing, minimum quantities, quality checks and fulfillment pricing.",
+    "exploreServices": "Explore All Services",
+    "faqs": [
+      ["What information should I prepare?", "A product or store URL, destination markets, approximate daily order volume and your main sourcing or fulfillment challenge are enough for an initial review."],
+      ["Do I need a minimum daily order volume?", "Not every service starts at the same volume. Sourcing, samples and quality checks can begin before daily fulfillment, while warehouse scope depends on the expected order flow."],
+      ["Can JW work with my existing supplier?", "Yes. We can receive goods from an existing supplier and focus on inspection, inventory, packing and delivery, subject to a clear handoff process."],
+      ["Can you support branded packaging?", "Labels, inserts, mailers, boxes and other packaging options can be reviewed according to product size, minimum quantities and production lead time."],
+      ["What happens after I submit?", "Our team reviews the context, identifies missing information and contacts you with a focused recommendation for quotation, samples or workflow setup."]
+    ],
+    "firstStepKicker": "YOUR FIRST STEP",
+    "firstStepTitle": "Start with one product.",
+    "firstStepLead": "Tell us what you sell, where you ship and what needs to work better. Our team will recommend the next practical step.",
+    "talkToTeam": "Talk to Our Team"
+  },
+  "ContactForm": {
+    "honeypot": "Leave this field empty",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "countryAndPhone": "Country Code & Phone Number",
+    "countryCode": "Country Code",
+    "selectCode": "Select code",
+    "search": "Search",
+    "searchCountry": "Search country",
+    "phoneNumber": "Phone Number",
+    "businessDetails": "Tell us about your business!",
+    "businessPlaceholder": "Tell us what you sell, your current fulfillment situation, target markets, and what you need help with.",
+    "dailyOrderVolume": "Daily Order Volume",
+    "selectRange": "Select a range",
+    "volumeOptions": ["0-10 orders/day", "11-50 orders/day", "51-200 orders/day", "201-500 orders/day", "500+ orders/day"],
+    "sending": "Sending...",
+    "submit": "Get a Free Quote",
+    "privacy": "Your details are only used to respond to this enquiry.",
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Enter a valid email address",
+      "countryCodeRequired": "Country code is required",
+      "phoneRequired": "Phone number is required",
+      "businessRequired": "Business details are required",
+      "volumeRequired": "Daily order volume is required"
+    }
+  }
+}

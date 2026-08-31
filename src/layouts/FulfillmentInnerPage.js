@@ -1,6 +1,6 @@
 import { getFulfillmentCopy } from "@config/fulfillment-content";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FiArrowRight, FiCheck, FiImage, FiPlay, FiShield, FiUsers } from "react-icons/fi";
 
 function InnerHero({ copy, lang }) {

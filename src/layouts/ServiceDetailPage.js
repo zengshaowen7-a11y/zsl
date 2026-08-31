@@ -2,7 +2,7 @@ import { servicePages } from "@config/service-page-content";
 import { getServiceConversion } from "@config/service-conversion-content";
 import { getServiceStory } from "@config/service-story-content";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import PhoneCountryInput from "./components/PhoneCountryInput";
 import {
   FiArrowRight,
