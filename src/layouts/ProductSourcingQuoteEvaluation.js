@@ -11,14 +11,7 @@ import {
 } from "react-icons/fi";
 
 const icons = [FiPackage, FiDollarSign, FiAlertTriangle, FiTruck];
-const checks = [
-  ["Material and finish", "Dimensions and variants", "Function requirements"],
-  ["Unit price and MOQ", "Sample and tooling cost", "Payment conditions"],
-  ["Lead time", "Available capacity", "Customization constraints"],
-  ["Packaging and QC", "Parcel profile", "Shipping requirements"],
-];
-
-export default function ProductSourcingQuoteEvaluation({ spotlight }) {
+export default function ProductSourcingQuoteEvaluation({ spotlight, ui }) {
   const [expanded, setExpanded] = useState(null);
 
   return (
@@ -34,7 +27,7 @@ export default function ProductSourcingQuoteEvaluation({ spotlight }) {
         </aside>
       </header>
 
-      <ol className="quote-evaluation__grid" aria-label="Four quote evaluation dimensions">
+      <ol className="quote-evaluation__grid" aria-label={ui.aria}>
         {spotlight.items.map(([title, description], index) => {
           const Icon = icons[index];
           const isExpanded = expanded === index;
@@ -59,9 +52,9 @@ export default function ProductSourcingQuoteEvaluation({ spotlight }) {
                   className="quote-evaluation__details"
                   hidden={!isExpanded}
                 >
-                  <span>CHECKLIST</span>
+                  <span>{ui.checklist}</span>
                   <ul>
-                    {checks[index].map((item) => <li key={item}>{item}</li>)}
+                    {ui.checks[index].map((item) => <li key={item}>{item}</li>)}
                   </ul>
                 </div>
               </article>

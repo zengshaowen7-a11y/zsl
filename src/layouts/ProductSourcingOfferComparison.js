@@ -11,9 +11,9 @@ import {
 } from "react-icons/fi";
 
 const columnMeta = {
-  price: { label: "Unit price", icon: FiDollarSign },
-  moq: { label: "MOQ", icon: FiHash },
-  leadTime: { label: "Lead time", icon: FiClock },
+  price: { labelKey: "price", icon: FiDollarSign },
+  moq: { labelKey: "moq", icon: FiHash },
+  leadTime: { labelKey: "lead", icon: FiClock },
 };
 
 const suppliers = [
@@ -22,13 +22,7 @@ const suppliers = [
   { id: "c", name: "Supplier C", price: 9.1, moq: 100, leadTime: 14 },
 ];
 
-const detailFields = [
-  ["Factory location", "To confirm"],
-  ["Sample status", "Not recorded in this illustrative comparison"],
-  ["Production capacity", "To confirm"],
-];
-
-export default function ProductSourcingOfferComparison({ proof }) {
+export default function ProductSourcingOfferComparison({ proof, ui }) {
   const [sort, setSort] = useState({ key: null, direction: "asc" });
   const [selected, setSelected] = useState([]);
   const [expanded, setExpanded] = useState(null);
@@ -76,10 +70,10 @@ export default function ProductSourcingOfferComparison({ proof }) {
           <h2>{proof.title}</h2>
         </header>
 
-        <div className="sourcing-offers__table" role="table" aria-label="Example supplier offer comparison">
+        <div className="sourcing-offers__table" role="table" aria-label={ui.aria}>
           <div className="sourcing-offers__head" role="row">
-            <span role="columnheader">Compare</span>
-            <span role="columnheader">Supplier</span>
+            <span role="columnheader">{ui.compare}</span>
+            <span role="columnheader">{ui.supplier}</span>
             {Object.entries(columnMeta).map(([key, meta]) => {
               const Icon = meta.icon;
               const active = sort.key === key;
@@ -92,7 +86,7 @@ export default function ProductSourcingOfferComparison({ proof }) {
                   onClick={() => sortBy(key)}
                 >
                   <Icon aria-hidden="true" />
-                  <span>{meta.label}</span>
+                  <span>{ui[meta.labelKey]}</span>
                   <small aria-hidden="true">{active ? (sort.direction === "asc" ? "↑" : "↓") : "↕"}</small>
                 </button>
               );
@@ -116,7 +110,7 @@ export default function ProductSourcingOfferComparison({ proof }) {
                     <span role="cell" className="sourcing-offers__select">
                       <input
                         type="checkbox"
-                        aria-label={`Compare ${supplier.name}`}
+                        aria-label={`${ui.compareSupplier} ${ui.supplier} ${supplier.id.toUpperCase()}`}
                         checked={checked}
                         disabled={!checked && selected.length >= 3}
                         onChange={() => toggleSelected(supplier.id)}
@@ -129,21 +123,21 @@ export default function ProductSourcingOfferComparison({ proof }) {
                         aria-controls={`supplier-details-${supplier.id}`}
                         onClick={() => setExpanded(isOpen ? null : supplier.id)}
                       >
-                        <span>{supplier.name}</span>
-                        {supplier.best ? <small><FiCheck aria-hidden="true" /> Best Match</small> : null}
+                        <span>{ui.supplier} {supplier.id.toUpperCase()}</span>
+                        {supplier.best ? <small><FiCheck aria-hidden="true" /> {ui.best}</small> : null}
                         <FiChevronDown aria-hidden="true" />
                       </button>
                     </span>
                     <strong role="cell" className="sourcing-offers__price">${supplier.price.toFixed(2)}</strong>
                     <span role="cell">{supplier.moq}</span>
-                    <span role="cell">{supplier.leadTime} days</span>
+                    <span role="cell">{supplier.leadTime} {ui.days}</span>
                   </div>
                   <div
                     id={`supplier-details-${supplier.id}`}
                     className="sourcing-offers__details"
                     hidden={!isOpen}
                   >
-                    {detailFields.map(([label, value]) => (
+                    {ui.fields.map(([label, value]) => (
                       <div key={label}><span>{label}</span><strong>{value}</strong></div>
                     ))}
                   </div>
@@ -155,7 +149,7 @@ export default function ProductSourcingOfferComparison({ proof }) {
 
         <footer>
           <p>{proof.note}</p>
-          <span>{selected.length >= 2 ? `${selected.length} suppliers selected for focused comparison` : "Select 2–3 suppliers to focus the comparison"}</span>
+          <span>{selected.length >= 2 ? `${selected.length} ${ui.selected}` : ui.select}</span>
         </footer>
       </div>
     </div>

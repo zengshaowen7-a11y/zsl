@@ -114,24 +114,24 @@
     ],
     "comparisonItems": [
       [
-        "Meerdere afzonderlijke leveranciersgesprekken",
-        "Eén specifiek contactpunt voor alles"
+        "Meerdere losse gesprekken met leveranciers",
+        "Eén vast aanspreekpunt voor het hele project"
       ],
       [
-        "Geen gegarandeerde kwaliteitscontroles vóór verzending",
-        "Volledige kwaliteitscontrole vóór elke verzending"
+        "Geen vaste kwaliteitscontrole vóór verzending",
+        "Volledige kwaliteitscontrole vóór elke zending"
       ],
       [
-        "Beperkte, generieke verpakking",
-        "Aangepaste merk & private-label verpakkingsoplossingen"
+        "Beperkte standaardverpakkingen",
+        "Merkverpakkingen en private-label oplossingen op maat"
       ],
       [
-        "Pakhuis en verzending door verschillende teams",
-        "End-to-end workflow volledig beheerd door ons eigen team"
+        "Opslag en verzending door verschillende teams",
+        "Volledige workflow beheerd door ons eigen team"
       ],
       [
-        "Configureren van tracking hand-offs & vertraagde updates",
-        "Duidelijke, gestructureerde verzending en tracking updates"
+        "Onduidelijke trackingoverdrachten en late updates",
+        "Duidelijke, gestructureerde verzend- en trackingupdates"
       ]
     ],
     "qcCapabilities": [
@@ -289,8 +289,8 @@
       "platforms": "Werkt met de platforms die je al verkoopt op",
       "platformLabel": "Ondersteunde eCommerce-platforms",
       "advantagesKicker": "Waarom kiezen voor JW Dropshipping?",
-      "advantagesTitle": "Eind-tot-eindcontrole: geen Midden- en kleinbedrijf",
-      "advantagesLead": "Bron, inspectie, pak en schip, volledig beheerd door ons eigen China magazijn team",
+      "advantagesTitle": "Volledige controle van begin tot eind, zonder tussenpersonen",
+      "advantagesLead": "Inkoop, kwaliteitscontrole, verpakking en verzending worden volledig verzorgd door ons eigen logistieke team in China.",
       "whyLink": "Waarom JW Dropshipping",
       "previousImage": "Vorige afbeelding",
       "nextImage": "Volgende afbeelding",
@@ -302,14 +302,14 @@
       "servicesTitle": "Wat wij doen voor uw winkel",
       "servicesLead": "Begin met één dienst of verbind ze met één beheerde workflow.",
       "bestFor": "Beste voor",
-      "exploreService": "Explore Service",
+      "exploreService": "Bekijk de dienst",
       "compareServices": "Alle diensten vergelijken",
-      "differenceKicker": "DE JW-VERDELING",
-      "differenceTitle": "Een eenvoudigere, uniforme manier om vervulling vanuit China te beheren",
-      "differenceLead": "Skip gefragmenteerde hand-offs tussen afzonderlijke leveranciers, inspecteurs, magazijnen en scheepvaartteams. Werk met één enkel, gecoördineerd team.",
-      "fragmented": "Gefragmenteerde handoffs",
-      "typical": "Typisch Sourcing Agent",
-      "managed": "Eén beheerde workflow",
+      "differenceKicker": "HET JW-VERSCHIL",
+      "differenceTitle": "Fulfillment vanuit China eenvoudiger en centraal beheren",
+      "differenceLead": "Voorkom losse overdrachten tussen leveranciers, inspecteurs, magazijnen en verzendteams. Werk met één gecoördineerd team.",
+      "fragmented": "LOSSE OVERDRACHTEN",
+      "typical": "Traditionele sourcingagent",
+      "managed": "ÉÉN CENTRALE WORKFLOW",
       "jw": "JW Dropshipping",
       "differenceMediaLabel": "Kwaliteitscontrolefoto's",
       "differenceMedia": [
@@ -358,7 +358,7 @@
         "passedCount": "50 geslaagd",
         "issueCount": "0 kwesties"
       },
-      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackKicker": "ERVARINGEN VAN VERKOPERS",
       "feedbackTitle": "Wat Sellers zeggen over werken met JW",
       "feedbackLead": "Echte feedback van verkopers met behulp van JW voor sourcing, vervulling en branding ondersteuning.",
       "fiveStars": "Vijf sterren overzicht",

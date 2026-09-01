@@ -7,6 +7,10 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    ".next-stale-*/**",
+    ".chrome-*/**",
+    ".edge-*/**",
+    "_shots/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

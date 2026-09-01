@@ -1,7 +1,6 @@
 "use client";
 
 import Logo from "@components/Logo";
-import { getServicePages } from "@config/service-page-content";
 import { Link, usePathname } from "@/i18n/navigation";
 import { plannedLocales, routing } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
@@ -24,11 +23,10 @@ const languageNames = {
   es: "Español",
 };
 
-export default function Header() {
+export default function Header({ servicePages }) {
   const locale = useLocale();
   const t = useTranslations("Navigation");
   const pathname = usePathname();
-  const servicePages = getServicePages(locale);
   const [navOpen, setNavOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -115,7 +113,7 @@ export default function Header() {
 
         <button
           id="show-button"
-          className="header-menu-toggle order-2 flex cursor-pointer items-center md:order-1 md:hidden"
+          className="header-menu-toggle order-2 flex cursor-pointer items-center xl:order-1 xl:hidden"
           aria-expanded={navOpen}
           aria-label={navOpen ? t("closeMenu") : t("openMenu")}
           onClick={() => setNavOpen((open) => !open)}
@@ -125,9 +123,9 @@ export default function Header() {
 
         <div
           id="nav-menu"
-          className={`order-3 md:order-1 ${navOpen ? "max-h-250 md:max-h-auto" : "hidden md:block"}`}
+          className={`order-3 xl:order-1 ${navOpen ? "max-h-250 xl:max-h-auto" : "hidden xl:block"}`}
         >
-          <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
+          <ul className="navbar-nav block w-full xl:flex xl:w-auto">
             <li
               className="nav-item nav-dropdown relative"
               ref={servicesRef}
@@ -206,7 +204,7 @@ export default function Header() {
                 {t("contact")}
               </Link>
             </li>
-            <li className="nav-item md:hidden">
+            <li className="nav-item xl:hidden">
               <Link className="ff-btn ff-btn-primary" href={quoteHref} onClick={handleNavLinkClick(quoteHref)}>
                 {t("getQuote")}
               </Link>
@@ -214,7 +212,7 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className="language-dropdown order-1 md:order-2" ref={languageRef}>
+        <div className="language-dropdown order-1 xl:order-2" ref={languageRef}>
           <button
             type="button"
             className="language-trigger"
@@ -251,7 +249,7 @@ export default function Header() {
           ) : null}
         </div>
 
-        <div className="order-1 ml-auto hidden items-center justify-end md:order-2 md:ml-0 md:flex">
+        <div className="header-cta-wrap order-1 ml-auto hidden items-center justify-end xl:order-2 xl:ml-0 xl:flex">
           <Link className="ff-btn ff-btn-primary ff-nav-cta" href={quoteHref} onClick={handleNavLinkClick(quoteHref)}>
             {t("getQuote")}
           </Link>

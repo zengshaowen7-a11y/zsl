@@ -1,0 +1,24 @@
+/* Content is visible by default, including SSR and no-JavaScript rendering. */
+@media (prefers-reduced-motion: no-preference) {
+  .fh-home[data-jw-motion="playing"] [data-jw-entrance="waiting"] {
+    opacity: 0;
+  }
+  .fh-home [data-jw-entrance="waiting"]:focus-within {
+    opacity: 1;
+  }
+}
+
+.fh-home[data-jw-motion="paused"] [data-jw-entrance] {
+  opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-home [data-jw-entrance] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media print {
+  .fh-home [data-jw-entrance] { opacity: 1 !important; transform: none !important; }
+}

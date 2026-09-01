@@ -3,30 +3,7 @@
 import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-const detailByStage = {
-  SCAN: {
-    rule: "Use the same product brief across every supplier channel.",
-    validation: "Source, contact path and initial product match are recorded.",
-  },
-  SCREEN: {
-    rule: "Check specification, MOQ and timing before requesting full terms.",
-    validation: "Capability answers are confirmed against the shared brief.",
-  },
-  QUOTE: {
-    rule: "Compare quotations only after assumptions and included work are aligned.",
-    validation: "Price, tooling, MOQ and lead time use the same comparison basis.",
-  },
-  SAMPLE: {
-    rule: "Review the physical result against the documented requirement.",
-    validation: "Differences, revisions and approval notes stay attached to the sample.",
-  },
-  LOCK: {
-    rule: "Release production only after the final specification and handoff are clear.",
-    validation: "Inspection scope, packaging and receiving requirements are confirmed.",
-  },
-};
-
-export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, steps }) {
+export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, steps, ui }) {
   const [activeStep, setActiveStep] = useState(0);
   const [hoveredStep, setHoveredStep] = useState(null);
   const [expanded, setExpanded] = useState(false);
@@ -41,7 +18,6 @@ export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, step
   };
 
   const active = steps[activeStep];
-  const detail = detailByStage[active[0]];
 
   return (
     <div className="sourcing-flow" data-active-step={activeStep + 1}>
@@ -51,14 +27,14 @@ export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, step
           <h2>{title}</h2>
           <p>{lead}</p>
         </div>
-        <nav className="sourcing-flow__overview" aria-label="Supplier filtering progress">
+        <nav className="sourcing-flow__overview" aria-label={ui.progress}>
           <div className="sourcing-flow__overview-line" aria-hidden="true" />
           {steps.map(([stage], index) => (
             <button
               type="button"
               key={stage}
               className={index === activeStep ? "is-current" : index < activeStep ? "is-complete" : ""}
-              aria-label={`Step ${index + 1}: ${stage}`}
+              aria-label={`${ui.step} ${index + 1}: ${stage}`}
               aria-current={index === activeStep ? "step" : undefined}
               onClick={() => chooseStep(index)}
             >
@@ -69,7 +45,7 @@ export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, step
         </nav>
       </header>
 
-      <ol className="sourcing-flow__steps" aria-label="Supplier filtering steps">
+      <ol className="sourcing-flow__steps" aria-label={ui.steps}>
         {steps.map(([stage, stepTitle, text], index) => {
           const phase = index < 2 ? "initial" : index < 4 ? "evaluation" : "confirmation";
           const linked = hoveredStep !== null && Math.abs(hoveredStep - index) <= 1;
@@ -106,13 +82,13 @@ export default function ProductSourcingDecisionFlow({ eyebrow, title, lead, step
         aria-live="polite"
       >
         <div>
-          <span>ACTIVE FILTER</span>
+          <span>{ui.active}</span>
           <strong>{active[0]} · {active[1]}</strong>
         </div>
         <dl>
-          <div><dt>Screening rule</dt><dd>{detail.rule}</dd></div>
-          <div><dt>Validation standard</dt><dd>{detail.validation}</dd></div>
-          <div><dt>Eliminations</dt><dd>Recorded from the actual sourcing run; no estimate is shown.</dd></div>
+          <div><dt>{ui.rule}</dt><dd>{active[2]}</dd></div>
+          <div><dt>{ui.validation}</dt><dd>{ui.validationText}</dd></div>
+          <div><dt>{ui.eliminations}</dt><dd>{ui.eliminationText}</dd></div>
         </dl>
       </div>
     </div>

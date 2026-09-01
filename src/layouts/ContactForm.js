@@ -157,7 +157,7 @@ function HomeStyleQuoteForm({ id, className = "", source = "contact-page", servi
               tabIndex={-1}
               aria-hidden="true"
             />
-            <button type="button" className="fh-country-code-trigger" aria-haspopup="listbox" aria-expanded={isCountryCodeOpen} aria-required="true" onClick={() => setIsCountryCodeOpen((open) => !open)}>
+            <button type="button" className="fh-country-code-trigger" aria-haspopup="listbox" aria-expanded={isCountryCodeOpen} onClick={() => setIsCountryCodeOpen((open) => !open)}>
               {selectedCountryCode ? (
                 <>
                   <img src={selectedCountryCode.flagSrc} alt="" aria-hidden="true" />

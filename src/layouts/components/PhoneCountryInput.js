@@ -136,7 +136,7 @@ export default function PhoneCountryInput({ placeholder = "WhatsApp or phone num
       <input type="hidden" name="phone-country" value={selected?.code || ""} />
       <input type="hidden" name="phone-country-name" value={selected?.name || ""} />
       <div className="fh-phone-country">
-        <button type="button" aria-expanded={open} aria-required="true" onClick={() => setOpen((value) => !value)}>
+        <button type="button" aria-expanded={open} onClick={() => setOpen((value) => !value)}>
           {selected ? <>
             <img src={`https://flagcdn.com/w40/${selected.iso}.png`} alt="" loading="lazy" />
             <span>{selected.name}</span>

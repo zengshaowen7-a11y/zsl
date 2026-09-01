@@ -1,0 +1,54 @@
+/* Preserve the section and panel backgrounds, frame, container and inline padding. */
+body main.hiw-page.hiw-page[class][class] .hiw-approval-grid.hiw-gates-layout {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 32px !important;
+  container-type: inline-size;
+}
+.hiw-gates-heading { position: relative; min-width: 0; }
+body main.hiw-page.hiw-page[class][class] section.hiw-approval.hiw-approval.hiw-gates:not(.hiw-hero) h2 {
+  max-width: 850px !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  color: #000 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+.hiw-gates .hiw-gates-lead { max-width: 72ch; margin: 18px 0 0; font-size: 16px; font-weight: 400; line-height: 1.7; color: #526a5f; }
+body main.hiw-page .hiw-gates .hiw-gates-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding: 0; margin: 0; list-style: none; }
+.hiw-gates .hiw-gates-list::before { content: none; }
+body main.hiw-page.hiw-page[class][class] .hiw-gates .hiw-gates-list > li {
+  display: flex; flex-direction: column; align-items: stretch; gap: 20px;
+  padding: 0 !important; min-height: 0 !important; min-width: 0;
+  border: 0 !important; border-radius: 0; background: transparent; box-shadow: none;
+}
+.hiw-gates .hiw-gates-list > li::before { content: none; }
+.hiw-gates .hiw-gates-list > li:hover { transform: none; box-shadow: none; }
+.hiw-gate-rail { display: flex; align-items: center; gap: 16px; }
+.hiw-gate-rail > span { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 auto; border: 1px solid #8fbaa2; border-radius: 50%; background: #f5fbf7; color: #167449; font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.hiw-gate-rail > i { height: 1px; flex: 1; background: #8fbaa2; transform-origin: left; }
+.hiw-gates-list > li:last-child .hiw-gate-rail > i { display: none; }
+body main.hiw-page.hiw-page[class][class] .hiw-gates .hiw-gate-copy h3 { margin: 0 0 12px; color: #163e2d; font-size: 20px !important; font-weight: 750; line-height: 1.3; overflow-wrap: anywhere; }
+body main.hiw-page.hiw-page[class][class] .hiw-gates .hiw-gate-copy p { margin: 0; color: #526a5f; font-size: 15px !important; font-weight: 400; line-height: 1.7; }
+.hiw-gates-note { display: flex; align-items: center; gap: 10px; margin: 0; padding-top: 22px; border-top: 1px solid rgb(22 116 73 / 16%); color: #35634a; font-size: 13px; font-weight: 650; line-height: 1.5; }
+.hiw-gates-note > svg { width: 18px; height: 18px; flex: 0 0 auto; }
+@media (prefers-reduced-motion: no-preference) {
+  .hiw-gates [data-gate-visible="true"] { animation: approval-enter 700ms cubic-bezier(.16,1,.3,1) var(--gate-delay, 0ms) both; }
+  .hiw-gates [data-gate-visible="true"] .hiw-gate-rail > i { animation: approval-connect 850ms ease calc(var(--gate-delay, 0ms) + 200ms) both; }
+  @keyframes approval-enter { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes approval-connect { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+}
+@media (max-width: 767px) {
+  body main.hiw-page .hiw-gates .hiw-gates-list { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  body main.hiw-page.hiw-page[class][class] .hiw-gates .hiw-gates-list > li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; }
+  .hiw-gate-rail { flex-direction: column; gap: 12px; }
+  .hiw-gate-rail > span { width: 40px; height: 40px; }
+  .hiw-gate-rail > i { width: 1px; min-height: 24px; transform-origin: top; }
+  body main.hiw-page.hiw-page[class][class] .hiw-gates .hiw-gate-copy h3 { font-size: 18px !important; hyphens: auto; }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .hiw-gates [data-gate-visible="true"] .hiw-gate-rail > i { animation-name: approval-connect-vertical; }
+  @keyframes approval-connect-vertical { from { opacity: 0; transform: scaleY(0); } to { opacity: 1; transform: scaleY(1); } }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .hiw-gates [data-gate-reveal], .hiw-gates .hiw-gate-rail > i { animation: none !important; transform: none !important; }
+}

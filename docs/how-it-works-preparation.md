@@ -1,0 +1,6 @@
+# What to send first
+
+- Design: bounded redesign of the How It Works preparation section. Retain Manrope, original container width/inline padding, green background and pastel card washes. Variance 5, motion 5, density 4. Replace four narrow columns with two wider columns; mobile becomes one column. Titles become semantic h3 headings; remove numbers because these are topics, not sequential steps.
+- Garden: imagery is optional in the brief. Existing pastel materials and established icons are sufficient for this practical checklist. No image generated or stock photography added.
+- Taste: preserve every localized title and paragraph. H2 uses clamp(28px, 4.45cqw, 32px), 1.12 line-height and black. Body weight returns to 400 for readable explanations. Each visible group enters once using transform/opacity; stagger 100ms, duration 700ms. No scroll listeners, looping effects or playback controls. Server markup is visible; reduced-motion and absent-observer fallbacks are static. Observer disconnects on cleanup.
+- Verification: targeted ESLint and check-preparation.mjs; browser inspection at desktop and mobile. Full production build and Lighthouse not run. Other sections and form behavior unchanged.

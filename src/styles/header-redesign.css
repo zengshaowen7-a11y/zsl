@@ -217,7 +217,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1279px) {
   .header,
   .header-transparent,
   .header-solid {
@@ -234,7 +234,7 @@
   }
 
   .header .jw-brand-wordmark {
-    width: 116px;
+    width: clamp(116px, 16vw, 148px);
     height: 32px;
   }
 

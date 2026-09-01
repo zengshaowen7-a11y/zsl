@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import PreparationEntrance from "./components/PreparationEntrance";
+import ApprovalEntrance from "./components/ApprovalEntrance";
 import {
   FiArrowRight,
   FiCheck,
@@ -86,11 +88,24 @@ export default function HowItWorksRedesign() {
         </div>
       </section>
 
-      <section className="hiw-start">
-        <div className="hiw-container hiw-start-grid">
-          <div><p className="hiw-kicker">{start.kicker}</p><h2>{start.title}</h2><p>{start.lead}</p></div>
-          <ul>{startingDetails.map(({ title, copy }, index) => { const Icon = startingIcons[index]; return <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><Icon /><strong>{title}</strong><p>{copy}</p></li>; })}</ul>
-        </div>
+      <section className="hiw-start hiw-brief" id="what-to-send" aria-labelledby="preparation-title">
+        <PreparationEntrance>
+          <header className="hiw-brief-heading" data-preparation-reveal>
+            <p className="hiw-kicker">{start.kicker}</p>
+            <h2 id="preparation-title">{start.title}</h2>
+            <p className="hiw-brief-lead">{start.lead}</p>
+          </header>
+          <ul className="hiw-brief-list">
+            {startingDetails.map(({ title, copy }, index) => {
+              const Icon = startingIcons[index];
+              return <li key={title} data-preparation-reveal style={{ "--preparation-delay": `${index * 100}ms` }}>
+                <Icon aria-hidden="true" />
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </li>;
+            })}
+          </ul>
+        </PreparationEntrance>
       </section>
 
       <section className="hiw-stages" id="five-stages">
@@ -113,11 +128,23 @@ export default function HowItWorksRedesign() {
         </div>
       </section>
 
-      <section className="hiw-approval">
-        <div className="hiw-container hiw-approval-grid">
-          <div><p className="hiw-kicker">{approval.kicker}</p><h2>{approval.title}</h2><p>{approval.lead}</p><div className="hiw-approval-proof" aria-hidden="true"><span><strong>3</strong> {approval.proofs[0]}</span><span><strong>0</strong> {approval.proofs[1]}</span><span><strong>1</strong> {approval.proofs[2]}</span></div></div>
-          <ol>{checkpoints.map(([title, copy], index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{copy}</p></div><FiCheckCircle /></li>)}</ol>
-        </div>
+      <section className="hiw-approval hiw-gates" id="approval-checkpoints" aria-labelledby="approval-checkpoints-title">
+        <ApprovalEntrance>
+          <header className="hiw-gates-heading" data-gate-reveal>
+            <p className="hiw-kicker">{approval.kicker}</p>
+            <h2 id="approval-checkpoints-title">{approval.title}</h2>
+            <p className="hiw-gates-lead">{approval.lead}</p>
+          </header>
+          <ol className="hiw-gates-list">
+            {checkpoints.map(([title, copy], index) => (
+              <li key={title} data-gate-reveal style={{ "--gate-delay": `${index * 140}ms` }}>
+                <div className="hiw-gate-rail" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span><i /></div>
+                <div className="hiw-gate-copy"><h3>{title}</h3><p>{copy}</p></div>
+              </li>
+            ))}
+          </ol>
+          <p className="hiw-gates-note"><FiClipboard aria-hidden="true" />{approval.proofs[2]}</p>
+        </ApprovalEntrance>
       </section>
 
       <section className="hiw-tracks">

@@ -81,7 +81,7 @@
       ]
     ],
     "media": {
-      "licensed": "LICENSED TEMPORARY FOOTAGE",
+      "licensed": "MATERIAL TEMPORAL CON LICENCIA",
       "needed": "NECESIDADES MÁTERIALES"
     },
     "hero": {
@@ -127,7 +127,7 @@
       "kicker": "UN TEAM, CLEAR OWNERSHIP",
       "title": "Conoce quién es el dueño de cada etapa.",
       "lead": "Su cuenta líder conecta a los especialistas responsables de la contratación, calidad, trabajo de almacén y entrega.",
-      "portrait": "PORTRAIT {number} NEEDED"
+      "portrait": "RETRATO {number} PENDIENTE"
     },
     "verification": {
       "kicker": "VERDAD LA BUSINIDAD",

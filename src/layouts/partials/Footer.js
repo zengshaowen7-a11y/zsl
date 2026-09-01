@@ -1,5 +1,6 @@
 import { getServiceCatalog } from "@config/service-catalog";
 import Logo from "@components/Logo";
+import BrandBackdrop from "@layouts/components/BrandBackdrop";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { FiGlobe, FiMail, FiMapPin, FiMessageCircle, FiPhone } from "react-icons/fi";
@@ -11,7 +12,8 @@ export default function Footer() {
   const serviceCatalog = getServiceCatalog(locale);
 
   return (
-    <footer className="ff-footer">
+    <footer className="ff-footer jw-scene jw-footer-atmosphere" data-jw-motion="playing">
+      <BrandBackdrop variant="network" globe={false} watermark motifs={["plane", "parcel"]} />
       <div className="container">
         <div className="ff-footer-main">
           <div className="ff-footer-brand">

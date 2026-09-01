@@ -4,29 +4,20 @@ import Image from "next/image";
 import { useState } from "react";
 import { FiBox, FiSearch, FiTruck } from "react-icons/fi";
 
-const zoneMedia = [
-  {
-    image: "/images/generated/jw-receiving-team-v3.png",
-    alt: "Warehouse team receiving and registering inbound goods",
-    label: "Inbound verification and sorting flow",
-    Icon: FiBox,
-  },
-  {
-    image: "/images/quality-gallery/warehouse-package-check.jpg",
-    alt: "Warehouse quality-control check before stock release",
-    label: "Quality control point and release check",
-    Icon: FiSearch,
-  },
-  {
-    image: "/images/generated/jw-dispatch-scan-v3.png",
-    alt: "Warehouse operator completing the final dispatch scan",
-    label: "Outbound dispatch and tracking handoff",
-    Icon: FiTruck,
-  },
+const zoneAssets = [
+  ["/images/generated/jw-receiving-team-v3.png", FiBox],
+  ["/images/quality-gallery/warehouse-package-check.jpg", FiSearch],
+  ["/images/generated/jw-dispatch-scan-v3.png", FiTruck],
 ];
 
-export default function WarehouseControlZones({ proof }) {
+export default function WarehouseControlZones({ proof, ui }) {
   const [activeZone, setActiveZone] = useState(1);
+  const zoneMedia = ui.media.map(([alt, label], index) => ({
+    alt,
+    label,
+    image: zoneAssets[index][0],
+    Icon: zoneAssets[index][1],
+  }));
   const activeMedia = zoneMedia[activeZone];
   const ActiveIcon = activeMedia.Icon;
 
@@ -57,7 +48,7 @@ export default function WarehouseControlZones({ proof }) {
           </div>
           <figcaption key={activeMedia.label}>
             <span aria-hidden="true"><ActiveIcon /></span>
-            <div><small>CONTROL POINT</small><strong>{activeMedia.label}</strong></div>
+            <div><small>{ui.controlPoint}</small><strong>{activeMedia.label}</strong></div>
           </figcaption>
         </figure>
 
@@ -80,7 +71,7 @@ export default function WarehouseControlZones({ proof }) {
                 <span className="sdr-warehouse-zone-index"><ZoneIcon aria-hidden="true" /></span>
                 <span className="sdr-warehouse-zone-copy">
                   <strong>{row[0]}</strong>
-                  <em className="sdr-warehouse-zone-state" aria-hidden="true">{isActive ? "ACTIVE" : "VIEW ZONE"}</em>
+                  <em className="sdr-warehouse-zone-state" aria-hidden="true">{isActive ? ui.active : ui.viewZone}</em>
                   <span><small>{proof.columns[0]}</small><span>{row[0]}</span></span>
                 </span>
                 <span className="sdr-warehouse-zone-data">

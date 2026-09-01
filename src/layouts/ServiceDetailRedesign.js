@@ -1,4 +1,5 @@
 import { getServiceDetailContent } from "@/content/service-detail";
+import { getServiceUi } from "@/content/service-ui";
 import { getServicePages } from "@config/service-page-content";
 import { getServiceConversion } from "@config/service-conversion-content";
 import ContactForm from "@layouts/ContactForm";
@@ -45,6 +46,7 @@ const serviceTitleClass = (title) =>
 
 export default function ServiceDetailRedesign({ service, locale = "en" }) {
   const t = useTranslations("ServiceDetail");
+  const ui = getServiceUi(locale);
   const {
     qcOutcomeDetails,
     qcProcessOutputs,
@@ -71,7 +73,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
   return (
     <main className={`ff-site sdr-page sdr-page-${service.slug}`}>
       {service.slug === "quality-control-inspection" ? (
-        <QualityControlHero service={service} />
+        <QualityControlHero service={service} ui={ui.qualityHero} />
       ) : (
       <section
         id={service.slug === "automatic-order-fulfillment" ? "automation-order-hero" : undefined}
@@ -80,36 +82,26 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
         <div className={`sdr-hero-grid${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-grid" : ""}`}>
           <div className="sdr-hero-copy">
             <span className="ff-kicker">{service.eyebrow}</span>
-            <h1 className={serviceTitleClass(service.title)}>
-              {service.slug === "product-sourcing" ? (
-                <>
-                  Compare <span>suppliers</span> first.
-                </>
-              ) : (
-                service.title
-              )}
-            </h1>
+            <h1 className={serviceTitleClass(service.title)}>{service.title}</h1>
             <p>{service.lead}</p>
             <div className="sdr-actions">
               <a className="ff-btn ff-btn-primary" href="#service-quote">
                 {t("getQuote")}
                 <FiArrowRight />
               </a>
-              <a className="ff-btn ff-btn-ghost" href="#service-process">
+              <a
+                className="ff-btn ff-btn-ghost"
+                href={service.slug === "china-fulfillment-center" ? "#service-planning" : "#service-process"}
+              >
                 {t("seeHow")}
                 {service.slug === "product-sourcing" ? <FiArrowRight /> : null}
               </a>
             </div>
             {service.slug === "dropshipping-supplier" ? (
-              <div className="sdr-dropship-flow" aria-label="Dropshipping order workflow">
-                {[
-                  ["01", "Source", "supplier + product"],
-                  ["02", "Check", "QC before dispatch"],
-                  ["03", "Pack", "rules by SKU"],
-                  ["04", "Ship", "tracking returned"],
-                ].map(([number, title, text]) => (
+              <div className="sdr-dropship-flow" aria-label={ui.hero.dropshipAria}>
+                {ui.hero.dropshipStages.map(([title, text], index) => (
                   <span key={title}>
-                    <b>{number}</b>
+                    <b>{String(index + 1).padStart(2, "0")}</b>
                     <strong>{title}</strong>
                     <small>{text}</small>
                   </span>
@@ -136,11 +128,11 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             {service.slug === "china-fulfillment-center" ? (
               <div className="sdr-warehouse-hero-map" aria-hidden="true">
                 <div className="sdr-warehouse-hero-map-label">
-                  <span>WAREHOUSE FLOW</span>
-                  <strong>One visible route</strong>
+                  <span>{ui.hero.warehouseFlow}</span>
+                  <strong>{ui.hero.visibleRoute}</strong>
                 </div>
                 <div className="sdr-warehouse-hero-route">
-                  {["RECEIVE", "CHECK", "STORE", "BUILD", "SHIP"].map((stage, index) => (
+                  {ui.hero.warehouseStages.map((stage, index) => (
                     <span key={stage} style={{ "--hero-route-index": index }}>
                       <i>{String(index + 1).padStart(2, "0")}</i>
                       <b>{stage}</b>
@@ -152,20 +144,18 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             {service.slug === "dropshipping-supplier" ? (
               <div className="sdr-dropship-record" aria-hidden="true">
                 <div>
-                  <span>ORDER FLOW</span>
-                  <strong>Product link received</strong>
+                  <span>{ui.hero.orderFlow}</span>
+                  <strong>{ui.hero.productReceived}</strong>
                 </div>
                 <ol>
-                  <li><b>Supplier</b><span>confirmed</span></li>
-                  <li><b>QC</b><span>before dispatch</span></li>
-                  <li><b>Tracking</b><span>returned</span></li>
+                  {ui.hero.orderStates.map(([label, value]) => <li key={label}><b>{label}</b><span>{value}</span></li>)}
                 </ol>
               </div>
             ) : service.slug === "product-sourcing" ? (
               <div className="sdr-sourcing-proof-card" aria-hidden="true">
-                <span>SHORTLIST BASIS</span>
-                <strong>4 supplier offers</strong>
-                <small>Compared by cost, MOQ, lead time and sample notes.</small>
+                <span>{ui.hero.shortlist}</span>
+                <strong>{ui.hero.offers}</strong>
+                <small>{ui.hero.offerBasis}</small>
               </div>
             ) : null}
           </div>
@@ -180,35 +170,35 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             <div className="sdr-fit-intro">
               <div>
                 <span className="ff-kicker">{t("fitKicker")}</span>
-                <h2>Built around the operating result you need.</h2>
+                <h2>{ui.fit.dropshipTitle}</h2>
               </div>
               <aside>
-                <span>BEST STARTING POINT</span>
-                <strong>When supplier, QC, packing and shipping need one owner.</strong>
-                <p>Use this service when your store needs a practical operating partner behind daily direct-to-customer orders.</p>
+                <span>{ui.fit.bestStart}</span>
+                <strong>{ui.fit.dropshipBest}</strong>
+                <p>{ui.fit.dropshipLead}</p>
               </aside>
             </div>
           ) : service.slug === "3pl-fulfillment-services" ? (
             <div className="sdr-fit-intro sdr-3pl-fit-intro">
               <div>
                 <span className="ff-kicker">{t("fitKicker")}</span>
-                <h2>Built for daily stock movement.</h2>
-                <p>Use this service when received inventory, packing rules and dispatch updates need one organized warehouse routine.</p>
+                <h2>{ui.fit.threePlTitle}</h2>
+                <p>{ui.fit.threePlLead}</p>
               </div>
               <aside>
                 <span>{t("bestFit")}</span>
-                <strong>Inventory held in China, orders shipped one by one.</strong>
+                <strong>{ui.fit.threePlBest}</strong>
               </aside>
             </div>
           ) : service.slug === "product-sourcing" ? (
             <div className="sdr-fit-intro sdr-product-fit-intro">
-              <div className="sdr-product-progress" aria-label="Four-step supplier decision process">
+              <div className="sdr-product-progress" aria-label={ui.decisionFlow.progress}>
                 {[1, 2, 3, 4].map((step) => (
                   <span key={step} aria-hidden="true" />
                 ))}
               </div>
               <div className="sdr-product-fit-copy">
-                <span className="ff-kicker">DECISION FILTER</span>
+                <span className="ff-kicker">{ui.fit.decisionFilter}</span>
                 <h2>{fitIntroBySlug["product-sourcing"].title}</h2>
                 <p>{fitIntroBySlug["product-sourcing"].lead}</p>
               </div>
@@ -223,7 +213,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
           ) : service.slug === "automatic-order-fulfillment" ? (
             <div className="sdr-fit-intro sdr-auto-fit-intro">
               <div className="sdr-auto-fit-copy">
-                <span className="ff-kicker">ORDER DATA FLOW</span>
+                <span className="ff-kicker">{ui.fit.orderDataFlow}</span>
                 <p>{fitIntroBySlug["automatic-order-fulfillment"].lead}</p>
               </div>
               <div className="sdr-auto-fit-panel">
@@ -306,27 +296,27 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 </div>
                 {service.slug === "china-fulfillment-center" ? (
                   <div className="sdr-fit-step-aside" aria-hidden="true">
-                    <span>ZONE 0{index + 1}</span>
+                    <span>0{index + 1}</span>
                     <i />
-                    <strong>{["RECEIVE", "CHECK", "STORE", "SHIP"][index] || "FLOW"}</strong>
+                    <strong>{ui.hero.warehouseStages[index] || ui.hero.warehouseFlow}</strong>
                   </div>
                 ) : null}
                 {service.slug === "quality-control-inspection" ? (
                   <dl className="sdr-qc-fit-meta">
                     <div>
-                      <dt>CHECKS</dt>
+                      <dt>{ui.fit.checks}</dt>
                       <dd>{qcOutcomeDetails[index].checks}</dd>
                     </div>
                     <div>
-                      <dt>OUTPUT</dt>
+                      <dt>{ui.fit.output}</dt>
                       <dd>{qcOutcomeDetails[index].output}</dd>
                     </div>
                   </dl>
                 ) : null}
                 {service.slug === "dropshipping-supplier" ? (
-                  <strong>{["Ownership", "Rules", "Branding", "Tracking"][index]}</strong>
+                  <strong>{ui.fit.dropshipTags[index]}</strong>
                 ) : service.slug === "3pl-fulfillment-services" ? (
-                  <strong>{["Inbound", "Stock", "Packing", "Dispatch"][index]}</strong>
+                  <strong>{ui.fit.threePlTags[index]}</strong>
                 ) : null}
               </article>
               );
@@ -347,13 +337,13 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </h2>
               {service.slug === "china-fulfillment-center" ? (
                 <div className="sdr-warehouse-zone-visual" aria-hidden="true">
-                  <div className="sdr-warehouse-zone-visual-head"><span>ZONE MAP</span><b>ACTIVE FLOW</b></div>
+                  <div className="sdr-warehouse-zone-visual-head"><span>{ui.detail.zoneMap}</span><b>{ui.detail.activeFlow}</b></div>
                   <div className="sdr-warehouse-zone-visual-grid">
-                    {["INBOUND", "QC", "STORAGE", "DISPATCH"].map((label, index) => (
+                    {ui.detail.zoneNames.map((label, index) => (
                       <span key={label} style={{ "--zone-visual-index": index }}><i>{String(index + 1).padStart(2, "0")}</i>{label}</span>
                     ))}
                   </div>
-                  <div className="sdr-warehouse-zone-visual-foot"><span>One accountable route</span><strong>04 zones connected</strong></div>
+                  <div className="sdr-warehouse-zone-visual-foot"><span>{ui.detail.accountableRoute}</span><strong>{ui.detail.zonesConnected}</strong></div>
                 </div>
               ) : null}
             </div>
@@ -362,21 +352,21 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <FiPackage aria-hidden="true" />
                 <p>{service.capabilitiesLead}</p>
                 <div className="sdr-warehouse-chain-note-stats" aria-hidden="true">
-                  <span><b>04</b><small>zones</small></span>
-                  <span><b>01</b><small>route</small></span>
-                  <span><b>100%</b><small>traceable</small></span>
+                  <span><b>04</b><small>{ui.detail.zones}</small></span>
+                  <span><b>01</b><small>{ui.detail.route}</small></span>
+                  <span><b>100%</b><small>{ui.detail.traceable}</small></span>
                 </div>
               </aside>
             ) : <p>{service.capabilitiesLead}</p>}
           </div>
           {service.slug === "dropshipping-supplier" ? (
             <div className="sdr-scope-hub" aria-hidden="true">
-              <span>ONE OPERATING WORKFLOW</span>
-              <strong>Source, check, pack and ship with one accountable handoff.</strong>
+              <span>{ui.detail.oneWorkflow}</span>
+              <strong>{ui.detail.oneWorkflowText}</strong>
             </div>
           ) : null}
           {service.slug === "automatic-order-fulfillment" ? (
-            <div className="sdr-order-route" aria-label="Order route capabilities">
+            <div className="sdr-order-route" aria-label={service.capabilitiesTitle}>
               <svg className="sdr-order-route-pipes" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
                 <path className="sdr-route-pipe-main" d="M70 122 H1130" />
                 <path className="sdr-route-pipe-exception" d="M700 122 V302 H785" />
@@ -385,7 +375,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               {service.capabilities.map(([title, text], index) => {
                 const Icon = capabilityIcons[index];
                 const step = ({ 0: "01", 1: "02", 2: "03", 4: "04" })[index];
-                const routeLabel = index === 3 ? "Manual review" : index === 5 ? "Return loop" : `Step ${step}`;
+                const routeLabel = step || title;
                 return <article key={title} data-route-role={index === 3 ? "exception" : index === 5 ? "return" : "primary"} className={`sdr-order-route-node sdr-order-route-node-${index + 1}`}>
                   <span className="sdr-order-route-label">{routeLabel}</span>
                   <span className="sdr-order-route-icon"><Icon aria-hidden="true" /></span>
@@ -398,7 +388,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               })}
             </div>
           ) : service.slug === "china-fulfillment-center" ? (
-            <div className="sdr-warehouse-chain-flow" aria-label="Warehouse zones A to F">
+            <div className="sdr-warehouse-chain-flow" aria-label={service.capabilitiesTitle}>
               <span className="sdr-warehouse-chain-particle" aria-hidden="true" />
               {service.capabilities.map(([title, text], index) => {
                 const Icon = capabilityIcons[index];
@@ -417,8 +407,8 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                           <p>{text}</p>
                         </div>
                         <div className="sdr-warehouse-chain-meta" aria-hidden="true">
-                          <span><small>OWNER</small><b>{["Inbound", "QC", "Inventory", "Dispatch"][index]}</b></span>
-                          <span><small>OUTPUT</small><b>{["Receipt", "Release", "Stock", "Tracking"][index]}</b></span>
+                          <span><small>{ui.detail.owner}</small><b>{ui.detail.owners[index]}</b></span>
+                          <span><small>{ui.detail.output}</small><b>{ui.detail.outputs[index]}</b></span>
                         </div>
                         <small>ZONE {zone}</small>
                     </div>
@@ -453,7 +443,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <div className="sdr-order-control-photo sdr-order-control-photo-primary">
                 <Image
                   src="/images/generated/jw-dispatch-scan-v3.png"
-                  alt="Warehouse operator scanning a parcel before dispatch"
+                  alt={proof.title}
                   fill
                   sizes="(max-width: 900px) 88vw, 34vw"
                 />
@@ -461,12 +451,12 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <div className="sdr-order-control-photo sdr-order-control-photo-secondary">
                 <Image
                   src="/images/generated/jw-branded-packing-v3.png"
-                  alt="Warehouse team preparing a packed order"
+                  alt={proof.title}
                   fill
                   sizes="(max-width: 560px) 66vw, (max-width: 900px) 46vw, 22vw"
                 />
               </div>
-              <figcaption><span>{proof.eyebrow}</span><strong>Order control log</strong></figcaption>
+              <figcaption><span>{proof.eyebrow}</span><strong>{ui.detail.orderControlLog}</strong></figcaption>
             </figure>
             <div className="sdr-order-control-panel">
               <span className="ff-kicker">{proof.eyebrow}</span>
@@ -490,38 +480,38 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
           </div>
         ) : service.slug === "product-sourcing" ? (
           <div className="container">
-            <ProductSourcingOfferComparison proof={proof} />
+            <ProductSourcingOfferComparison proof={proof} ui={ui.offers} />
           </div>
         ) : service.slug === "china-fulfillment-center" ? (
-          <WarehouseControlZones proof={proof} />
+          <WarehouseControlZones proof={proof} ui={ui.warehouseZones} />
         ) : service.slug === "quality-control-inspection" ? (
           <div className="container sdr-qc-release-studio">
             <figure className="sdr-qc-release-visual">
               <Image
                 src={proof.image}
-                alt="Quality inspection in the warehouse"
+                alt={proof.title}
                 fill
                 sizes="(max-width: 900px) 100vw, 46vw"
                 unoptimized={proof.image.includes("/generated/")}
               />
-              <div className="sdr-qc-visual-meta" aria-label="Inspection batch summary">
-                <span><small>BATCH</small><strong>QC-2408-A</strong></span>
-                <span><small>SAMPLE</small><strong>50 units</strong></span>
+              <div className="sdr-qc-visual-meta" aria-label={proof.title}>
+                <span><small>{ui.detail.batch}</small><strong>QC-2408-A</strong></span>
+                <span><small>{ui.detail.sample}</small><strong>50 {ui.detail.units}</strong></span>
               </div>
               <figcaption>
                 <span aria-hidden="true"><FiSearch /></span>
-                <div><small>QC STATION</small><strong>Inspection active</strong></div>
+                <div><small>{ui.detail.qcStation}</small><strong>{ui.detail.inspectionActive}</strong></div>
               </figcaption>
             </figure>
             <div className="sdr-qc-release-panel">
               <span className="ff-kicker">{proof.eyebrow}</span>
               <h2>{proof.title}</h2>
-              <div className="sdr-qc-release-summary" aria-label="Release record summary">
-                <span><strong>50</strong><small>Units checked</small></span>
-                <span><strong>02</strong><small>Findings open</small></span>
-                <span className="is-pending"><FiClock aria-hidden="true" /><small>Decision pending</small></span>
+              <div className="sdr-qc-release-summary" aria-label={proof.title}>
+                <span><strong>50</strong><small>{ui.detail.unitsChecked}</small></span>
+                <span><strong>02</strong><small>{ui.detail.findingsOpen}</small></span>
+                <span className="is-pending"><FiClock aria-hidden="true" /><small>{ui.detail.decisionPending}</small></span>
               </div>
-              <div className="sdr-qc-release-table" role="table" aria-label="Example quality control release record">
+              <div className="sdr-qc-release-table" role="table" aria-label={proof.title}>
                 <div className="sdr-qc-release-row sdr-qc-release-head" role="row">
                   {proof.columns.map((column) => <strong role="columnheader" key={column}>{column}</strong>)}
                 </div>
@@ -537,10 +527,10 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </div>
               <div className="sdr-qc-decision-gate">
                 <div>
-                  <span>RELEASE DECISION</span>
-                  <strong>Review required before approval</strong>
+                  <span>{ui.detail.releaseDecision}</span>
+                  <strong>{ui.detail.reviewRequired}</strong>
                 </div>
-                <span className="sdr-qc-decision-state"><i aria-hidden="true" />Findings open</span>
+                <span className="sdr-qc-decision-state"><i aria-hidden="true" />{ui.detail.findingsOpen}</span>
               </div>
               <small className="sdr-qc-release-note">{proof.note}</small>
             </div>
@@ -605,12 +595,12 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
       <section id="service-process" className="sdr-process">
         <div className="container">
           {service.slug === "automatic-order-fulfillment" ? (
-            <div id="automation-order-flow" className="sdr-order-flow" aria-label="Order data flow">
+            <div id="automation-order-flow" className="sdr-order-flow" aria-label={service.processTitle}>
               <header className="sdr-order-flow-head">
                 <div className="sdr-order-flow-title">
                   <span className="ff-kicker">{service.processEyebrow}</span>
                   <h2>{service.processTitle}</h2>
-                  <div className="sdr-order-flow-states" aria-label="Order states">
+                  <div className="sdr-order-flow-states" aria-label={ui.fit.orderDataFlow}>
                     {[
                       ["mapped", "Mapped"],
                       ["held", "Held"],
@@ -658,24 +648,22 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             </div>
           ) : service.slug === "product-sourcing" ? (
             <ProductSourcingDecisionFlow
+              ui={ui.decisionFlow}
               eyebrow={service.processEyebrow}
               title={service.processTitle}
               lead={service.processLead}
               steps={service.process}
             />
           ) : service.slug === "dropshipping-supplier" && processIntro ? (
-            <div className="sdr-dropship-launch" aria-label="Partnership launch process">
+            <div className="sdr-dropship-launch" aria-label={service.processTitle}>
               <aside className="sdr-dropship-launch-copy">
                 <div className="sdr-dropship-launch-icon" aria-hidden="true">
                   <FiGlobe />
                 </div>
                 <span className="ff-kicker">{service.processEyebrow}</span>
-                <h2>
-                  Move from a product brief to a{" "}
-                  <span>daily order routine.</span>
-                </h2>
+                <h2>{service.processTitle}</h2>
                 <p>{service.processLead}</p>
-                <ul className="sdr-dropship-launch-points" aria-label="Core alignment points">
+                <ul className="sdr-dropship-launch-points" aria-label={processIntro.leftTitle}>
                   {processIntro.points.map(([title, text]) => (
                     <li key={title}>
                       <FiCheck aria-hidden="true" />
@@ -687,7 +675,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                   ))}
                 </ul>
               </aside>
-              <div className="sdr-dropship-launch-steps" aria-label="Launch stages">
+              <div className="sdr-dropship-launch-steps" aria-label={service.processTitle}>
                 {service.process.map(([number, title, text], index) => {
                   const statusClass =
                     index < 3 ? "is-complete" : index === 3 ? "is-active" : "is-pending";
@@ -712,7 +700,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             </div>
           ) : processIntro ? (
             <div className="sdr-process-intro sdr-auto-process-intro">
-              <article className="sdr-auto-process-card" aria-label="Automation case">
+              <article className="sdr-auto-process-card" aria-label={processIntro.leftTitle}>
                 <span className="ff-kicker">{processIntro.leftEyebrow}</span>
                 <h2>{processIntro.leftTitle}</h2>
                 <div className="sdr-auto-process-card-foot">
@@ -725,7 +713,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                   {processIntro.title}
                 </h2>
                 <p>{processIntro.lead}</p>
-                <ol className="sdr-auto-process-list" aria-label="Order lane steps">
+                <ol className="sdr-auto-process-list" aria-label={processIntro.title}>
                   {processIntro.points.map(([number, text]) => (
                     <li key={number}>
                       <span>{number}</span>
@@ -757,17 +745,17 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </h2>
               <p>{service.processLead}</p>
               {service.slug === "quality-control-inspection" ? (
-                <div className="sdr-qc-process-summary" aria-label="Inspection decision path summary">
-                  <span><b>05</b><small>Decision gates</small></span>
+                <div className="sdr-qc-process-summary" aria-label={service.processTitle}>
+                  <span><b>05</b><small>{ui.detail.decisionGates}</small></span>
                   <i aria-hidden="true"><FiArrowRight /></i>
-                  <span><b>01</b><small>Release call</small></span>
+                  <span><b>01</b><small>{ui.detail.releaseCall}</small></span>
                 </div>
               ) : null}
             </div>
           )}
           {!["product-sourcing", "dropshipping-supplier", "automatic-order-fulfillment"].includes(service.slug) ? (
             service.slug === "china-fulfillment-center" ? (
-              <div className="sdr-process-grid sdr-zone-process-flow" aria-label="Warehouse zone flow">
+              <div className="sdr-process-grid sdr-zone-process-flow" aria-label={service.processTitle}>
                 {service.process.slice(0, 2).map(([number, title, text], index) => {
                   const Icon = warehouseZoneProcessIcons[index] || FiPackage;
                   return (
@@ -814,10 +802,10 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
       </section>
       ) : null}
 
-      <section className="sdr-planning">
+      <section id="service-planning" className="sdr-planning">
         <div className="container">
           {service.slug === "product-sourcing" ? (
-            <ProductSourcingQuoteEvaluation spotlight={service.spotlight} />
+              <ProductSourcingQuoteEvaluation spotlight={service.spotlight} ui={ui.quote} />
           ) : service.slug === "automatic-order-fulfillment" ? (
             <div id="automation-exception-lane" className="sdr-exception-lane">
               <div className="sdr-exception-copy">
@@ -825,7 +813,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <h2>{service.spotlight.title}</h2>
                 <p>{service.spotlight.lead}</p>
               </div>
-              <ol className="sdr-exception-track" aria-label="Exception resolution lane">
+              <ol className="sdr-exception-track" aria-label={service.spotlight.title}>
                 {service.spotlight.items.map(([title, text], index) => {
                   const Icon = exceptionLaneIcons[index];
                   return (
@@ -848,7 +836,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <h2>{service.spotlight.title}</h2>
                 <p>{service.spotlight.lead}</p>
               </aside>
-              <div className="sdr-qc-plan-grid" aria-label="Four inspection dimensions">
+              <div className="sdr-qc-plan-grid" aria-label={service.spotlight.title}>
                 {service.spotlight.items.map(([title, text], index) => {
                   const MatrixIcon = [FiSearch, FiShield, FiClock, FiPackage][index];
                   return (
@@ -857,12 +845,12 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                         <span>0{index + 1}</span>
                         <i aria-hidden="true"><MatrixIcon /></i>
                       </header>
-                      <small>{["PRODUCT ID", "VISIBLE QUALITY", "BASIC FUNCTION", "PACKAGING"][index]}</small>
+                      <small>{ui.detail.dimensions[index]}</small>
                       <h3>{title}</h3>
                       <p>{text}</p>
                       <strong className="sdr-qc-plan-state">
                         <FiCheck aria-hidden="true" />
-                        <span>Included in plan</span>
+                        <span>{ui.detail.included}</span>
                       </strong>
                     </article>
                   );
@@ -914,7 +902,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                       <b>0{index + 1}</b><small>{label}</small>
                     </span>
                   ))}
-                  <em>LIVE ROUTE</em>
+                  <em>{ui.detail.liveRoute}</em>
                 </div>
                 <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
                 <h2>{conversion.caseStudy.title}</h2>
@@ -922,7 +910,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </aside>
               <div className="sdr-warehouse-case-content">
                 <header className="sdr-warehouse-case-challenge">
-                  <strong>THE OPERATING CHALLENGE</strong>
+                  <strong>{ui.detail.challenge}</strong>
                   <p>{conversion.caseStudy.challenge}</p>
                 </header>
                 <div className="sdr-warehouse-case-resolution">
@@ -946,7 +934,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             </div>
           ) : service.slug === "product-sourcing" ? (
             <div className="container">
-              <ProductSourcingCaseStory caseStudy={conversion.caseStudy} />
+              <ProductSourcingCaseStory caseStudy={conversion.caseStudy} ui={ui.caseStory} />
             </div>
           ) : service.slug === "automatic-order-fulfillment" ? (
             <div id="automation-case-route" className="container sdr-automation-case">
@@ -954,18 +942,18 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
                 <h2>{conversion.caseStudy.title}</h2>
                 <p>{conversion.caseStudy.profile}</p>
-                <div className="sdr-automation-route-map" aria-label="Store orders follow a clean route to the warehouse while exceptions branch for review">
-                  <span className="sdr-automation-route-node sdr-route-store"><FiGlobe aria-hidden="true" /><small>STORE</small></span>
-                  <span className="sdr-automation-route-node sdr-route-record"><FiClipboard aria-hidden="true" /><small>ORDER DATA</small></span>
-                  <span className="sdr-automation-route-node sdr-route-hold"><FiInfo aria-hidden="true" /><small>REVIEW</small></span>
-                  <span className="sdr-automation-route-node sdr-route-warehouse"><FiPackage aria-hidden="true" /><small>WAREHOUSE</small></span>
+                <div className="sdr-automation-route-map" aria-label={conversion.caseStudy.title}>
+                  <span className="sdr-automation-route-node sdr-route-store"><FiGlobe aria-hidden="true" /><small>{ui.detail.store}</small></span>
+                  <span className="sdr-automation-route-node sdr-route-record"><FiClipboard aria-hidden="true" /><small>{ui.detail.orderData}</small></span>
+                  <span className="sdr-automation-route-node sdr-route-hold"><FiInfo aria-hidden="true" /><small>{ui.detail.review}</small></span>
+                  <span className="sdr-automation-route-node sdr-route-warehouse"><FiPackage aria-hidden="true" /><small>{ui.detail.warehouse}</small></span>
                   <span className="sdr-automation-route-line sdr-route-line-main" aria-hidden="true" />
                   <span className="sdr-automation-route-line sdr-route-line-branch" aria-hidden="true" />
                 </div>
               </aside>
               <div className="sdr-automation-case-content">
                 <header>
-                  <strong>THE OPERATING CHALLENGE</strong>
+                  <strong>{ui.detail.challenge}</strong>
                   <p>{conversion.caseStudy.challenge}</p>
                 </header>
                 <ol className="sdr-automation-case-steps">
@@ -982,7 +970,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                   })}
                 </ol>
                 <blockquote>
-                  <strong>THE EXCEPTION-SAFE ROUTE</strong>
+                  <strong>{ui.detail.exceptionSafe}</strong>
                   <p>{conversion.caseStudy.outcome}</p>
                   <FiArrowRight aria-hidden="true" />
                 </blockquote>
@@ -998,20 +986,20 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <div className="sdr-qc-case-profile">
                   <span aria-hidden="true"><FiPackage /></span>
                   <div>
-                    <small>BATCH CONTEXT</small>
+                    <small>{ui.detail.batchContext}</small>
                     <p>{conversion.caseStudy.profile}</p>
                   </div>
                 </div>
                 <div className="sdr-qc-case-challenge">
                   <span aria-hidden="true"><FiInfo /></span>
                   <div>
-                    <strong>THE OPERATING CHALLENGE</strong>
+                    <strong>{ui.detail.challenge}</strong>
                     <p>{conversion.caseStudy.challenge}</p>
                   </div>
                 </div>
               </aside>
               <div className="sdr-qc-case-action">
-                <strong className="sdr-qc-case-label">STANDARDIZED ACTION STREAM</strong>
+                <strong className="sdr-qc-case-label">{ui.detail.actionStream}</strong>
                 <ol className="sdr-qc-case-steps">
                   {conversion.caseStudy.plan.map((step, index) => {
                     const Icon = [FiClipboard, FiSearch, FiLayers][index];
@@ -1023,7 +1011,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                           <h3>{step}</h3>
                           <p>{conversion.caseStudy.evidence[index]}</p>
                         </div>
-                        <span className="sdr-qc-case-step-status"><FiCheck aria-hidden="true" /> READY</span>
+                        <span className="sdr-qc-case-step-status"><FiCheck aria-hidden="true" /> {ui.detail.readyState}</span>
                       </li>
                     );
                   })}
@@ -1031,7 +1019,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 <blockquote className="sdr-qc-case-outcome">
                   <span aria-hidden="true"><FiCheck /></span>
                   <div>
-                    <strong>OUTCOME</strong>
+                    <strong>{ui.detail.outcome}</strong>
                     <p>{conversion.caseStudy.outcome}</p>
                   </div>
                 </blockquote>
@@ -1049,7 +1037,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </p>
             </div>
             <div className="sdr-case-board">
-              <strong>THE OPERATING CHALLENGE</strong>
+              <strong>{ui.detail.challenge}</strong>
               <p>{conversion.caseStudy.challenge}</p>
               <ol>
                 {conversion.caseStudy.plan.map((step, index) => (
@@ -1069,45 +1057,11 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
       <section className="sdr-faq">
         <div className="container sdr-faq-grid">
           <div>
-            <span className="ff-kicker">
-              {["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label", "automatic-order-fulfillment"].includes(service.slug)
-                ? "FREQUENTLY ASKED QUESTIONS"
-                : service.slug === "product-sourcing"
-                ? "PRODUCT SOURCING"
-                : "SERVICE FAQ"}
-            </span>
-            <h2
-              className={serviceTitleClass(
-                service.slug === "product-sourcing"
-                  ? "SERVICE FAQ"
-                  :
-                service.slug === "automatic-order-fulfillment"
-                  ? "Automation questions"
-                  :
-                ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug)
-                  ? "What to know before you start"
-                  : `Questions about ${service.menuTitle}?`,
-              )}
-            >
-              {service.slug === "product-sourcing" ? (
-                "SERVICE FAQ"
-              ) : service.slug === "automatic-order-fulfillment" ? (
-                "Automation questions"
-              ) : ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug) ? (
-                "What to know before you start"
-              ) : (
-                <>Questions about {service.menuTitle}?</>
-              )}
+            <span className="ff-kicker">{ui.detail.faq}</span>
+            <h2 className={serviceTitleClass(`${ui.detail.questionsAbout} ${service.menuTitle}?`)}>
+              {ui.detail.questionsAbout} {service.menuTitle}?
             </h2>
-            <p>
-              {service.slug === "product-sourcing"
-                ? "The scope depends on product detail, supplier depth and sample decisions."
-                : service.slug === "automatic-order-fulfillment"
-                ? "The setup depends on platform access, SKU records and exception rules."
-                : ["dropshipping-supplier", "3pl-fulfillment-services", "pod-fulfillment", "private-label"].includes(service.slug)
-                ? "Quick answers about service scope, suppliers, order volume, quality checks and branded packaging."
-                : "The exact scope depends on your product, markets, volume and customer promise."}
-            </p>
+            <p>{ui.detail.faqLead}</p>
           </div>
           <div>
             {service.faqs.slice(0, 5).map(([question, answer], index) => (
@@ -1175,15 +1129,15 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             </h2>
             <p>{conversion.form.lead}</p>
             {service.slug === "quality-control-inspection" || service.slug === "china-fulfillment-center" || service.slug === "automatic-order-fulfillment" || service.slug === "product-sourcing" || service.slug === "private-label" || service.slug === "pod-fulfillment" || service.slug === "3pl-fulfillment-services" || service.slug === "dropshipping-supplier" ? (
-              <div className="sdr-qc-brief-status" aria-label="Inspection brief readiness">
-                <span><b>{String(quoteChecklist.length).padStart(2, "0")}</b><small>Required inputs</small></span>
-                <strong><FiCheck aria-hidden="true" /> Ready to scope</strong>
+              <div className="sdr-qc-brief-status" aria-label={ui.detail.ready}>
+                <span><b>{String(quoteChecklist.length).padStart(2, "0")}</b><small>{ui.detail.required}</small></span>
+                <strong><FiCheck aria-hidden="true" /> {ui.detail.ready}</strong>
               </div>
             ) : null}
             {quoteChecklist.length > 0 && (
               <div
                 className="sdr-quote-checklist"
-                aria-label="What to include in your request"
+                aria-label={ui.detail.required}
               >
                 {quoteChecklist.map((item, index) => (
                   <div key={item}>

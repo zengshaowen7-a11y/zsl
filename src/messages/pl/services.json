@@ -126,7 +126,7 @@
     "comparison": {
       "kicker": "WYBÓR PRAWNEGO PUNKTU STARTOWEGO",
       "title": "Porównaj zakres usług w skrócie.",
-      "lead": "Każda usługa rozwiązuje inne potrzeby operacyjne. Twój cytat może łączyć więcej niż jeden.",
+      "lead": "Każda usługa odpowiada na inną potrzebę operacyjną. Jedna wycena może łączyć kilka usług.",
       "headers": [
         "Usługa",
         "Najlepsze dla",

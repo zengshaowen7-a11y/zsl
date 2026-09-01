@@ -1,0 +1,90 @@
+/* Shared footer: a quiet global route network, with readable foreground links.
+ * Uses the existing 0 artwork / 1 content layer system. Only artwork is clipped.
+ */
+.ff-footer.jw-footer-atmosphere {
+  --jw-atmosphere-disc-alpha: .055;
+  --jw-atmosphere-line-alpha: .13;
+  --jw-atmosphere-cycle-duration: 12s;
+  background: linear-gradient(125deg, #edf8f1 0%, #f8fcf9 46%, #e5f4ec 100%) !important;
+  border-top: 1px solid #cde5d6;
+}
+
+.jw-footer-atmosphere .jw-backdrop__disc {
+  width: 580px;
+  top: -350px;
+  right: auto;
+  left: -180px;
+}
+
+.jw-footer-atmosphere .jw-backdrop__arc {
+  width: 650px;
+  left: -360px;
+  bottom: -490px;
+}
+
+.jw-footer-atmosphere .jw-backdrop__watermark {
+  top: 28px;
+  right: -60px;
+  width: clamp(320px, 29vw, 460px);
+  opacity: .1;
+}
+
+.jw-footer-atmosphere .jw-backdrop__orbit {
+  top: 35px;
+  right: -245px;
+  width: 700px;
+  height: 290px;
+  border-color: rgb(22 116 73 / .16);
+}
+
+.jw-footer-atmosphere .jw-backdrop__flow {
+  top: auto;
+  bottom: -10px;
+  height: 170px;
+  transform: rotate(-3deg);
+}
+
+.jw-footer-atmosphere .jw-backdrop__flow i { background: rgb(22 116 73 / .09); }
+.jw-footer-atmosphere .jw-backdrop__flow i::after { width: 16%; }
+
+.jw-footer-atmosphere .jw-backdrop__motif {
+  width: 56px;
+  color: rgb(22 116 73 / .28);
+  border: 0;
+  background: transparent;
+}
+.jw-footer-atmosphere .jw-backdrop__motif svg { width: 72%; height: 72%; stroke-width: 1; }
+.jw-footer-atmosphere .jw-backdrop__motif--1 { top: auto; bottom: 85px; left: 44%; }
+.jw-footer-atmosphere .jw-backdrop__motif--2 { bottom: 115px; left: 5%; right: auto; width: 44px; }
+
+/* Slightly deeper text balances the new mint surface; content is never faded. */
+.ff-footer.jw-footer-atmosphere :is(.ff-footer-brand > p, .ff-footer-brand > div span, .ff-footer-main > div:not(:first-child) > a, .ff-footer-contact-list p, .ff-footer-contact-list span, .ff-footer-bottom p) {
+  color: #52685e !important;
+}
+.ff-footer.jw-footer-atmosphere :is(h3, .ff-footer-contact-list strong) { color: #193d30 !important; }
+.ff-footer.jw-footer-atmosphere .ff-footer-main a:hover { color: #167449 !important; }
+.ff-footer.jw-footer-atmosphere a:focus-visible { outline: 2px solid #167449; outline-offset: 5px; }
+.ff-footer.jw-footer-atmosphere .ff-footer-bottom { border-color: rgb(22 116 73 / .17); }
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .jw-footer-atmosphere .jw-backdrop__motif--1 { animation: jw-footer-flight 8s ease-in-out infinite alternate; }
+  .jw-footer-atmosphere .jw-backdrop__flow i::after { animation-duration: 10s; }
+}
+
+@keyframes jw-footer-flight {
+  from { transform: translate3d(-30px, 12px, 0) rotate(-8deg); }
+  to { transform: translate3d(80px, -18px, 0) rotate(5deg); }
+}
+
+@media (max-width: 767px) {
+  .jw-footer-atmosphere .jw-backdrop__watermark { top: 40px; width: 240px; right: -105px; opacity: .055; }
+  .jw-footer-atmosphere .jw-backdrop__disc { width: 440px; left: -260px; }
+  .jw-footer-atmosphere .jw-backdrop__arc { left: -490px; }
+  .jw-footer-atmosphere .jw-backdrop__motif--1 { left: auto; right: 12px; bottom: 145px; opacity: .6; }
+  .jw-footer-atmosphere .jw-backdrop__motif--2 { display: none; }
+  .jw-footer-atmosphere .jw-backdrop__flow { bottom: 10px; height: 110px; }
+}
+
+@media print {
+  .ff-footer.jw-footer-atmosphere { background: none !important; }
+}

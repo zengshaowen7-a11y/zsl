@@ -114,23 +114,23 @@
     ],
     "comparisonItems": [
       [
-        "Mehrere separate Lieferantengespräche",
-        "Ein einziger dedizierter Ansprechpartner für alles"
+        "Mehrere getrennte Gespräche mit Lieferanten",
+        "Ein fester Ansprechpartner für das gesamte Projekt"
       ],
       [
-        "Keine garantierten Qualitätskontrollen vor dem Versand",
-        "Vollständige Qualitätskontrolle vor jedem Versand"
+        "Keine systematische Qualitätskontrolle vor dem Versand",
+        "Vollständige Qualitätskontrolle vor jeder Sendung"
       ],
       [
-        "Begrenzte, generische Verpackung",
-        "Custom Branding & Private Label Verpackungslösungen"
+        "Begrenzte Standardverpackungen",
+        "Individuelle Marken- und Private-Label-Verpackungen"
       ],
       [
-        "Lager und Versand durch verschiedene Teams",
-        "End-to-End-Workflow vollständig von unserem internen Team verwaltet"
+        "Lagerung und Versand durch verschiedene Teams",
+        "Durchgängiger Ablauf durch unser internes Team"
       ],
       [
-        "Verwirrende Tracking-Übergaben und verzögerte Updates",
+        "Unklare Tracking-Übergaben und verspätete Updates",
         "Klare, strukturierte Versand- und Tracking-Updates"
       ]
     ],
@@ -201,7 +201,7 @@
     "testimonials": [
       {
         "name": "Oliver",
-        "country": "GROSSBRITANNIEN",
+        "country": "UK",
         "flagSrc": "https://flagcdn.com/gb.svg",
         "tag": "BESTELLUNGSBEHANDLUNG",
         "quote": "Yuri und das gesamte JW-Team sind unglaublich organisierte, zuverlässige Profis. Wenn Sie jeden Monat Hunderte von Bestellungen verwalten, sind Tracking und Konsistenz alles. Ihr klares Workflow-System hält jede Sendung leicht zu befolgen, reduziert Fehlkommunikation und spart mir jede Woche Stunden manueller Arbeit. Ich mache mir keine Sorgen mehr über die unordentliche Auftragsabwicklung aus China."
@@ -289,8 +289,8 @@
       "platforms": "Funktioniert mit den Plattformen, auf denen Sie bereits verkaufen",
       "platformLabel": "Unterstützte eCommerce-Plattformen",
       "advantagesKicker": "Warum wählen Sie JW Dropshipping?",
-      "advantagesTitle": "End-to-End-Kontrolle: Keine Drittmittelsmänner",
-      "advantagesLead": "Quelle, Inspektion, Pack und Schiff, vollständig verwaltet von unserem eigenen Lagerteam in China",
+      "advantagesTitle": "Durchgängige Kontrolle – ohne Zwischenhändler",
+      "advantagesLead": "Beschaffung, Qualitätsprüfung, Verpackung und Versand – alles betreut von unserem eigenen Logistikteam in China.",
       "whyLink": "Warum JW Dropshipping",
       "previousImage": "Vorheriges Bild",
       "nextImage": "Nächstes Bild",
@@ -304,12 +304,12 @@
       "bestFor": "Am besten für",
       "exploreService": "Erkundungsdienst",
       "compareServices": "Vergleichen Sie alle Services",
-      "differenceKicker": "DER JW-UNTERSCHICHT",
-      "differenceTitle": "Ein einfacherer, einheitlicher Weg, um die Erfüllung aus China zu verwalten",
-      "differenceLead": "Skip fragmentierte Übergaben zwischen separaten Lieferanten, Inspektoren, Lagern und Versandteams. Arbeiten Sie mit einem einzigen, koordinierten Team.",
-      "fragmented": "Fragmentierte Handoffs",
-      "typical": "Typischer Sourcing Agent",
-      "managed": "Ein Managed Workflow",
+      "differenceKicker": "DER JW-UNTERSCHIED",
+      "differenceTitle": "Fulfillment aus China einfacher und zentral verwalten",
+      "differenceLead": "Vermeiden Sie getrennte Übergaben zwischen Lieferanten, Prüfern, Lagern und Versandteams. Arbeiten Sie mit einem einzigen koordinierten Team.",
+      "fragmented": "GETRENNTE ÜBERGABEN",
+      "typical": "Klassischer Sourcing-Agent",
+      "managed": "EIN ZENTRALER ABLAUF",
       "jw": "JW Dropshipping",
       "differenceMediaLabel": "Qualitätskontrolle Inspektion Fotos",
       "differenceMedia": [

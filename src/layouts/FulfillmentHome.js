@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { homeMaterialPlan } from "@config/home-materials";
 import ContactForm from "@layouts/ContactForm";
+import BrandBackdrop from "@layouts/components/BrandBackdrop";
+import HomeEntranceMotion from "@layouts/components/HomeEntranceMotion";
+import "@/styles/home-entrance.css";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -55,8 +58,8 @@ function AnimatedStat({ value, number, suffix = "" }) {
   useEffect(() => {
     if (number === undefined || !statRef.current) return undefined;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setDisplayValue(`${number}${suffix}`);
-      return undefined;
+      const frame = requestAnimationFrame(() => setDisplayValue(`${number}${suffix}`));
+      return () => cancelAnimationFrame(frame);
     }
     const target = statRef.current;
     const observer = new IntersectionObserver(([entry]) => {
@@ -132,6 +135,7 @@ export default function FulfillmentHome({ lang = "en" }) {
   const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(false);
   const [advantageSlideIndexes, setAdvantageSlideIndexes] = useState([0, 0, 0]);
   const heroVideoRef = useRef(null);
+  const homeRef = useRef(null);
   const advantageGalleryRefs = useRef([]);
 
   const showAdvantageSlide = (galleryIndex, slideIndex) => {
@@ -151,8 +155,10 @@ export default function FulfillmentHome({ lang = "en" }) {
   };
 
   return (
-    <main className="ff-site fh-home">
-      <section className="ff-hero fh-hero-redesign">
+    <main ref={homeRef} className="ff-site fh-home" data-jw-motion="playing">
+      <HomeEntranceMotion rootRef={homeRef} locale={lang} paused={false} />
+      <section className="ff-hero fh-hero-redesign jw-scene">
+        <BrandBackdrop variant="orbit" watermark eager motifs={["plane"]} />
         <div className="ff-hero-grid">
           <div className="ff-hero-copy-wrap">
             <span className="ff-kicker ff-kicker-light">
@@ -232,7 +238,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="platforms" className="ff-platforms fh-platform-data-strip">
+      <section id="platforms" className="ff-platforms fh-platform-data-strip jw-scene">
+        <BrandBackdrop variant="flow" tint="teal" />
         <div className="container">
           <div className="fh-platform-stats" aria-label={section.operatingOverview}>
             {platformStatsCopy.map(({ value, number, suffix, label }) => (
@@ -264,7 +271,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="ff-section fh-core-advantages">
+      <section className="ff-section fh-core-advantages jw-scene">
+        <BrandBackdrop variant="tiles" align="left" motifs={["parcel", "globe"]} tint="sand" />
         <div className="container">
           <div className="fh-core-heading">
             <span className="ff-kicker">{section.advantagesKicker}</span>
@@ -313,7 +321,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="process" className="ff-section ff-process fh-process-section fh-fixed-process">
+      <section id="process" className="ff-section ff-process fh-process-section fh-fixed-process jw-scene">
+        <BrandBackdrop motifs={["parcel", "plane"]} />
         <div className="container">
           <div className="fh-section-heading fh-process-heading">
             <span className="ff-kicker">{section.processKicker}</span>
@@ -334,7 +343,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="services" className="ff-section ff-services fh-core-services">
+      <section id="services" className="ff-section ff-services fh-core-services jw-scene">
+        <BrandBackdrop variant="tiles" motifs={["layers", "parcel"]} tint="teal" />
         <div className="container">
           <div className="fh-section-heading fh-services-heading">
             <span className="ff-kicker">{section.servicesKicker}</span>
@@ -360,7 +370,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="fh-fulfillment-compare">
+      <section className="fh-fulfillment-compare jw-scene">
+        <BrandBackdrop variant="orbit" motifs={["globe"]} />
         <div className="container fh-fulfillment-compare-heading">
           <span className="ff-kicker">{section.differenceKicker}</span>
           <h2>{section.differenceTitle}</h2>
@@ -383,7 +394,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="fh-qc-proof">
+      <section className="fh-qc-proof jw-scene">
+        <BrandBackdrop variant="scan" motifs={["shield", "parcel"]} tint="blue" />
         <div className="container fh-qc-proof-heading">
           <span className="ff-kicker">{section.qualityKicker}</span>
           <h2>{section.qualityTitle}</h2>
@@ -419,7 +431,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section className="fh-home-testimonials" aria-labelledby="home-testimonials-title">
+      <section className="fh-home-testimonials jw-scene" aria-labelledby="home-testimonials-title">
+        <BrandBackdrop variant="ripple" align="left" motifs={["message"]} tint="teal" />
         <div className="container">
           <div className="fh-home-testimonials-heading">
             <span className="ff-kicker">{section.feedbackKicker}</span>
@@ -444,7 +457,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="faq" className="fh-home-faq">
+      <section id="faq" className="fh-home-faq jw-scene">
+        <BrandBackdrop variant="ripple" motifs={["message", "plane"]} tint="blue" />
         <div className="container fh-home-faq-grid">
           <div className="fh-home-faq-intro">
             <span className="ff-kicker">{section.faqKicker}</span>
@@ -456,7 +470,7 @@ export default function FulfillmentHome({ lang = "en" }) {
               const isOpen = openFaq === index;
               return (
                 <article className={isOpen ? "is-open" : ""} key={question}>
-                  <button type="button" aria-expanded={isOpen} aria-controls={`home-faq-answer-${index}`} onClick={() => setOpenFaq(index)}>
+                  <button type="button" aria-expanded={isOpen} aria-controls={`home-faq-answer-${index}`} onClick={() => setOpenFaq((current) => current === index ? null : index)}>
                     <span>{question}</span><i aria-hidden="true">+</i>
                   </button>
                   <div id={`home-faq-answer-${index}`} hidden={!isOpen}><p>{answer}</p></div>
@@ -467,7 +481,8 @@ export default function FulfillmentHome({ lang = "en" }) {
         </div>
       </section>
 
-      <section id="quote" className="fh-home-quote">
+      <section id="quote" className="fh-home-quote jw-scene">
+        <BrandBackdrop align="left" globe motifs={["plane"]} />
         <div className="container fh-home-quote-grid">
           <div className="fh-home-quote-copy">
             <span className="ff-kicker ff-kicker-light">{section.quoteKicker}</span>

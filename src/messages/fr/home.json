@@ -25,7 +25,7 @@
       },
       {
         "number": "02",
-        "title": "Source et devis",
+        "title": "Sourcing et devis",
         "text": "Nous fournissons des fournisseurs, puis nous partageons les prix, MOQ et les délais de production."
       },
       {
@@ -79,33 +79,33 @@
         "image": "/images/services/private-label.webp"
       },
       {
-        "title": "Accomplissement",
+        "title": "Préparation des commandes",
         "audience": "Pour les magasins expédiant des commandes individuelles sans détenir de stock localement.",
         "points": [
           "Traitement quotidien des commandes",
-          "Choisir et emballer",
-          "Transport suivi dans le monde entier"
+          "Prélèvement et emballage",
+          "Expédition suivie dans le monde entier"
         ],
         "slug": "dropshipping-supplier",
         "image": "/images/services/dropshipping-supplier.webp"
       },
       {
-        "title": "Chine 3PL Exécution",
+        "title": "Fulfillment 3PL en Chine",
         "audience": "Pour les magasins en croissance gérant l'inventaire et plusieurs SKUs.",
         "points": [
           "Réception des stocks",
-          "Stockage des entrepôts",
+          "Stockage en entrepôt",
           "Coordination des retours"
         ],
         "slug": "3pl-fulfillment-services",
         "image": "/images/services/3pl-fulfillment.webp"
       },
       {
-        "title": "Automatisation des commandes",
+        "title": "Commandes automatisées",
         "audience": "Pour les magasins prêts à réduire les commandes répétitives.",
         "points": [
-          "Conservez la synchronisation des commandes",
-          "Mises à jour de l'état de réalisation",
+          "Synchronisation automatique des commandes",
+          "Mise à jour automatique des statuts",
           "Suivi du flux de retour"
         ],
         "slug": "automatic-order-fulfillment",
@@ -114,24 +114,24 @@
     ],
     "comparisonItems": [
       [
-        "Plusieurs conversations avec des fournisseurs distincts",
-        "Un seul point de contact dédié pour tout"
+        "Plusieurs échanges séparés avec les fournisseurs",
+        "Un interlocuteur dédié pour l’ensemble du projet"
       ],
       [
-        "Aucun contrôle de qualité garanti avant expédition",
-        "Contrôle complet de la qualité avant chaque expédition"
+        "Aucun contrôle qualité systématique avant l’expédition",
+        "Contrôle qualité complet avant chaque expédition"
       ],
       [
-        "Emballage générique limité seulement",
-        "Solutions d'emballage sur mesure et de marque privée"
+        "Options d’emballage génériques et limitées",
+        "Emballage personnalisé et solutions de marque privée"
       ],
       [
-        "Entrepôt et expédition gérés par différentes équipes",
-        "Workflow de bout en bout géré entièrement par notre équipe interne"
+        "Entrepôt et expédition gérés par des équipes différentes",
+        "Flux de bout en bout géré par notre équipe interne"
       ],
       [
-        "Confier le suivi des retraits et des mises à jour différées",
-        "Mises à jour claires et structurées de l'expédition et du suivi"
+        "Suivi dispersé et mises à jour tardives",
+        "Mises à jour claires et structurées sur l’expédition et le suivi"
       ]
     ],
     "qcCapabilities": [
@@ -144,7 +144,7 @@
     ],
     "advantages": [
       {
-        "title": "Source avec clarté",
+        "title": "Sourcez en toute clarté",
         "text": "Comparer les fournisseurs, les échantillons, les MOQ et les délais",
         "images": [
           [
@@ -201,21 +201,21 @@
     "testimonials": [
       {
         "name": "Oliver",
-        "country": "ROYAUME-UNI",
+        "country": "UK",
         "flagSrc": "https://flagcdn.com/gb.svg",
         "tag": "COMMANDE",
         "quote": "Yuri et toute l'équipe JW sont des professionnels incroyablement organisés et fiables. Lorsque vous gérez des centaines de commandes chaque mois, le suivi et la cohérence sont tout. Leur système de flux de travail clair permet de suivre facilement chaque expédition, de réduire les erreurs de communication et d'économiser des heures de travail manuel chaque semaine. Je ne m'inquiète plus pour le traitement des commandes en provenance de Chine."
       },
       {
         "name": "Mia",
-        "country": "PAYS",
+        "country": "CA",
         "flagSrc": "https://flagcdn.com/ca.svg",
         "tag": "SOUTIEN QUOTIDIEN",
         "quote": "L'équipe de soutien des JWS a été fiable et réactive depuis le premier jour. Ils répondent rapidement, prennent le temps de clarifier les questions et de communiquer en anglais en douceur pendant que nous mettons en place notre workflow d'exécution."
       },
       {
         "name": "Sophie",
-        "country": "BELGIQUE",
+        "country": "FR",
         "flagSrc": "https://flagcdn.com/fr.svg",
         "tag": "SOURCE DES PRODUITS",
         "quote": "JW est un excellent partenaire d'accomplissement. Leur équipe d'approvisionnement écoute attentivement nos exigences, propose des solutions pratiques et nous tient à jour tout au long du processus."
@@ -289,8 +289,8 @@
       "platforms": "Fonctionne avec les plateformes que vous vendez déjà sur",
       "platformLabel": "Plates-formes eCommerce supportées",
       "advantagesKicker": "Pourquoi choisir JW Dropshipping ?",
-      "advantagesTitle": "Contrôle de bout en bout: aucun intermédiaire tiers",
-      "advantagesLead": "Source, inspection, emballage et bateau, entièrement géré par notre propre équipe d'entrepôt de Chine",
+      "advantagesTitle": "Contrôle de bout en bout, sans intermédiaires",
+      "advantagesLead": "Sourcing, contrôle qualité, emballage et expédition : tout est géré par notre propre équipe logistique en Chine.",
       "whyLink": "Pourquoi JW Dropshipping",
       "previousImage": "Image précédente",
       "nextImage": "Image suivante",
@@ -304,13 +304,13 @@
       "bestFor": "Meilleur pour",
       "exploreService": "Explorer le service",
       "compareServices": "Comparer tous les services",
-      "differenceKicker": "LA DIFFÉRENCE DU JW",
-      "differenceTitle": "Une façon plus simple et unifiée de gérer l'accomplissement de la Chine",
-      "differenceLead": "Passer les transferts fragmentés entre les fournisseurs, les inspecteurs, les entrepôts et les équipes d'expédition. Travailler avec une seule équipe coordonnée.",
-      "fragmented": "Attaques fragmentées",
-      "typical": "Agent d'approvisionnement typique",
-      "managed": "Un flux de travail géré",
-      "jw": "Autres",
+      "differenceKicker": "LA DIFFÉRENCE JW",
+      "differenceTitle": "Une façon plus simple de gérer votre logistique e-commerce depuis la Chine",
+      "differenceLead": "Évitez les relais dispersés entre fournisseurs, inspecteurs, entrepôts et équipes d’expédition. Travaillez avec une seule équipe coordonnée.",
+      "fragmented": "RELAIS FRAGMENTÉS",
+      "typical": "Agent de sourcing classique",
+      "managed": "UN FLUX CENTRALISÉ",
+      "jw": "JW Dropshipping",
       "differenceMediaLabel": "Photos de contrôle de la qualité",
       "differenceMedia": [
         [
@@ -358,7 +358,7 @@
         "passedCount": "50 reçus",
         "issueCount": "0 numéros"
       },
-      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackKicker": "AVIS DES VENDEURS",
       "feedbackTitle": "Ce que disent les vendeurs sur le travail avec JW",
       "feedbackLead": "Rétroaction réelle des vendeurs utilisant JW pour l'approvisionnement, l'accomplissement et le support de marque.",
       "fiveStars": "Revue cinq étoiles",

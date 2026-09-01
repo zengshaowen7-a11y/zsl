@@ -79,7 +79,7 @@
         "image": "/images/services/private-label.webp"
       },
       {
-        "title": "Fulfillmentación de dropshipping",
+        "title": "Logística dropshipping",
         "audience": "Para las tiendas enviar pedidos individuales sin tener stock localmente.",
         "points": [
           "Manejo diario de pedidos",
@@ -114,24 +114,24 @@
     ],
     "comparisonItems": [
       [
-        "Múltiples conversaciones de proveedores separados",
-        "Un único punto de contacto dedicado para todo"
+        "Varias conversaciones separadas con proveedores",
+        "Un único contacto para todo el proyecto"
       ],
       [
-        "No se garantizan comprobaciones de calidad previas al envío",
-        "Inspección de control de calidad completa antes de cada envío"
+        "Sin un control de calidad fijo antes del envío",
+        "Control de calidad completo antes de cada envío"
       ],
       [
-        "Embalaje limitado y genérico únicamente",
-        "Soluciones de embalaje de marca personalizadas y marca privada"
+        "Opciones de embalaje genéricas y limitadas",
+        "Embalaje personalizado y soluciones de marca privada"
       ],
       [
-        "Almacén y envío gestionado por diferentes equipos",
-        "Flujo de trabajo final a extremo gestionado por nuestro equipo interno"
+        "Almacenamiento y envío gestionados por equipos distintos",
+        "Proceso integral gestionado por nuestro equipo interno"
       ],
       [
-        "Actualizaciones retrasadas de seguimiento confundidas",
-        "Actualizaciones claras, estructuradas de envío y seguimiento"
+        "Traspasos de seguimiento confusos y actualizaciones tardías",
+        "Actualizaciones claras y estructuradas de envío y seguimiento"
       ]
     ],
     "qcCapabilities": [
@@ -162,7 +162,7 @@
         ]
       },
       {
-        "title": "Check before shipping",
+        "title": "Control antes del envío",
         "text": "Inspección de calidad de punto completo antes del envío",
         "images": [
           [
@@ -289,8 +289,8 @@
       "platforms": "Funciona con las plataformas que ya vendes",
       "platformLabel": "Plataformas de comercio electrónico compatibles",
       "advantagesKicker": "¿Por qué elegir JW Dropshipping?",
-      "advantagesTitle": "End‐to‐End Control: No Third‐Party Middlemen",
-      "advantagesLead": "Fuente, inspección, paquete y barco, gestionado por nuestro propio equipo de almacén de China",
+      "advantagesTitle": "Control de principio a fin, sin intermediarios",
+      "advantagesLead": "Sourcing, control de calidad, embalaje y envío: todo gestionado por nuestro propio equipo logístico en China.",
       "whyLink": "¿Por qué JW Dropshipping",
       "previousImage": "Imagen anterior",
       "nextImage": "Siguiente imagen",
@@ -304,12 +304,12 @@
       "bestFor": "Mejor",
       "exploreService": "Explore el servicio",
       "compareServices": "Comparar todos los servicios",
-      "differenceKicker": "LA DIFERENCIA JW",
-      "differenceTitle": "Una manera más simple y unificada de gestionar el cumplimiento de China",
-      "differenceLead": "Saltar las entregas fragmentadas entre proveedores separados, inspectores, almacenes y equipos de envío. Trabaja con un solo equipo coordinado.",
-      "fragmented": "Handoffs fragmentados",
-      "typical": "Típico agente de sourcing",
-      "managed": "Un flujo de trabajo gestionado",
+      "differenceKicker": "LA DIFERENCIA DE JW",
+      "differenceTitle": "Una forma más sencilla y centralizada de gestionar el fulfillment desde China",
+      "differenceLead": "Evite traspasos dispersos entre proveedores, inspectores, almacenes y equipos de envío. Trabaje con un único equipo coordinado.",
+      "fragmented": "TRASPASOS DISPERSOS",
+      "typical": "Agente de sourcing tradicional",
+      "managed": "UN PROCESO CENTRALIZADO",
       "jw": "JW Dropshipping",
       "differenceMediaLabel": "Fotos de inspección de control de calidad",
       "differenceMedia": [
@@ -358,7 +358,7 @@
         "passedCount": "50 años",
         "issueCount": "0 cuestiones"
       },
-      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackKicker": "OPINIONES DE VENDEDORES",
       "feedbackTitle": "Lo que los vendedores dicen sobre trabajar con JW",
       "feedbackLead": "Real retroalimentación de vendedores usando JW para obtener, cumplir y marcar soporte.",
       "fiveStars": "Examen de cinco estrellas",

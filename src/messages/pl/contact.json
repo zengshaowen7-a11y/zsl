@@ -1,46 +1,46 @@
 {
   "PageMetadata": {
     "home": {
-      "title": "Produkt Sourcing, Kontrola Jakości i Globalne wypełnienie"
+      "title": "Pozyskiwanie produktów, kontrola jakości i globalna realizacja zamówień"
     },
     "about": {
-      "title": "O JW Dropshipping 124; Zespół za Twoim wypełnieniem",
-      "description": "Poznaj ludzi, zasady działania i spełnienie przepływu pracy za dostawcy JW Dropshipping, kontroli jakości, magazynu i globalnych usług dostawy."
+      "title": "O JW Dropshipping | Zespół wspierający Twoją realizację zamówień",
+      "description": "Poznaj zespół, zasady działania i procesy stojące za pozyskiwaniem produktów, kontrolą jakości, magazynowaniem i globalną dostawą JW Dropshipping."
     },
     "contact": {
-      "title": "Pobierz bezpłatny cytat 124; JW Dropshipping",
-      "description": "Podziel się swoim produktem, rynku i zamówienia z JW Dropshipping do ukierunkowanego zaopatrzenia i przeglądu spełnienia."
+      "title": "Uzyskaj bezpłatną wycenę | JW Dropshipping",
+      "description": "Przekaż informacje o produkcie, rynku i zamówieniach, aby otrzymać dopasowaną analizę pozyskiwania i realizacji zamówień."
     },
     "services": {
-      "title": "China Sourcing, QC & Usługi wypełniania"
+      "title": "Pozyskiwanie w Chinach, QC i realizacja zamówień"
     },
     "howItWorks": {
-      "title": "Jak JW Dropshipping Roboty"
+      "title": "Jak działa JW Dropshipping"
     },
     "whyUs": {
       "title": "Dlaczego warto wybrać JW Dropshipping"
     },
     "testimonials": {
-      "title": "Opowieści o sprzedającym: XQ0QXZ",
+      "title": "Historie sprzedawców | JW Dropshipping",
       "description": "Sprzedawca informacji zwrotnych o źródłach JW Dropshipping, kontroli jakości, wsparcia konta, markowe pakowania i globalnego spełnienia."
     },
     "help": {
-      "title": "Centrum pomocy dla zakosztujących i wypełniających"
+      "title": "Centrum pomocy w pozyskiwaniu i realizacji zamówień"
     }
   },
   "ContactPage": {
-    "heroKicker": "UZYSKANIE PRZEGLĄDU SWOBODNEGO WYPEŁNIANIA",
-    "heroTitle": "Zacznij od jednego łącza produktu.",
-    "heroLead": "Powiedz nam, co sprzedajesz, gdzie wysyłasz i co spowalnia twoją operację. Polecimy kolejny praktyczny krok.",
+    "heroKicker": "BEZPŁATNA ANALIZA REALIZACJI ZAMÓWIEŃ",
+    "heroTitle": "Zacznij od jednego linku do produktu.",
+    "heroLead": "Powiedz nam, co sprzedajesz, dokąd wysyłasz i co spowalnia Twoją działalność. Zaproponujemy praktyczny kolejny krok.",
     "heroProofs": [
-      "Przegląd specyficzny produkcji",
+      "Analiza konkretnego produktu",
       "Brak obowiązku",
       "Jeden dedykowany kontakt"
     ],
     "responseTarget": "Cel odpowiedzi",
-    "responseTime": "W ciągu jednego dnia roboczego po przejrzeniu śledztwa.",
-    "heroImageAlt": "Zespół JW przegląda dochodzenie w sprawie zaopatrzenia i spełnienia",
-    "afterSubmitKicker": "PO PODPISANIU",
+    "responseTime": "W ciągu jednego dnia roboczego od przejrzenia zapytania.",
+    "heroImageAlt": "Zespół JW analizujący zapytanie dotyczące pozyskiwania i realizacji zamówień",
+    "afterSubmitKicker": "PO WYSŁANIU",
     "afterSubmitTitle": "Widoczny następny krok, a nie ogólne wezwanie sprzedaży.",
     "afterSubmitLead": "Twoje odpowiedzi pomagają nam skupić się na decyzji operacyjnej, która jest najważniejsza.",
     "steps": [
@@ -54,10 +54,10 @@
       },
       {
         "title": "Zalecenie praktyczne",
-        "copy": "Otrzymujesz ukierunkowany następny krok do cytowania, próbek lub konfiguracji przepływu pracy."
+        "copy": "Otrzymasz konkretną rekomendację dotyczącą wyceny, próbek lub konfiguracji procesu."
       }
     ],
-    "faqKicker": "PRZEKAZYWANE PYTANIA",
+    "faqKicker": "CZĘSTE PYTANIA",
     "faqTitle": "Co wiedzieć, zanim zaczniesz.",
     "faqLead": "Szybkie odpowiedzi na temat zaopatrzenia, minimalnych ilości, kontroli jakości i cen spełnienia.",
     "exploreServices": "Poznaj wszystkie usługi",
@@ -90,7 +90,7 @@
   },
   "ContactForm": {
     "honeypot": "Zostaw to pole puste",
-    "name": "Name",
+    "name": "Imię i nazwisko",
     "namePlaceholder": "Twoje imię",
     "email": "E-mail",
     "emailPlaceholder": "you@example.com",

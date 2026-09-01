@@ -8,6 +8,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getServicePages } from "@config/service-page-content";
 import "../../styles/style.css";
 import "../../styles/services-heading-scale.css";
 import "../../styles/service-detail-polish.css";
@@ -36,6 +37,8 @@ import "../../styles/service-detail-redesign.css";
 import "../../styles/service-detail-final.css";
 import "../../styles/services-overview-redesign.css";
 import "../../styles/how-it-works-redesign.css";
+import "../../styles/how-it-works-preparation.css";
+import "../../styles/how-it-works-approval.css";
 import "../../styles/why-jw-redesign.css";
 import "../../styles/testimonials-redesign.css";
 import "../../styles/contact-redesign.css";
@@ -55,6 +58,8 @@ import "../../styles/remaining-service-heroes.css";
 import "../../styles/services-overview-hero.css";
 import "../../styles/services-overview-launch.css";
 import "../../styles/services-workflow.css";
+import "../../styles/services-proof-scene.css";
+import "../../styles/services-final-invitation.css";
 import "../../styles/testimonials-hero.css";
 import "../../styles/service-detail-module-enhancements.css";
 import "../../styles/service-detail-branding-module-enhancements.css";
@@ -83,6 +88,11 @@ import "../../styles/china-fulfillment-fit-taste.css";
 import "../../styles/china-fulfillment-scope-taste.css";
 import "../../styles/china-fulfillment-hero-copy-taste.css";
 import "../../styles/china-fulfillment-zones-taste.css";
+import "../../styles/home-quote-garden-taste.css";
+import "../../styles/localization-layout-fixes.css";
+import "../../styles/brand-atmosphere.css";
+import "../../styles/home-atmosphere.css";
+import "../../styles/footer-atmosphere.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -117,6 +127,10 @@ export default async function RootLayout({ children, params }) {
 
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
+  const serviceMenu = getServicePages(locale).map(({ slug, menuTitle }) => ({
+    slug,
+    menuTitle,
+  }));
 
   return (
     <html suppressHydrationWarning lang={locale}>
@@ -152,7 +166,7 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body className="jw-green-buttons" suppressHydrationWarning>
         <NextIntlClientProvider>
-          <Header />
+          <Header servicePages={serviceMenu} />
           <ScrollReveal />
           <Providers>{children}</Providers>
           <Footer />

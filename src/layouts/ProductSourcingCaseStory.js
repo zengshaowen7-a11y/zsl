@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-export default function ProductSourcingCaseStory({ caseStudy }) {
+export default function ProductSourcingCaseStory({ caseStudy, ui }) {
   const [expanded, setExpanded] = useState(null);
 
   return (
@@ -16,7 +16,7 @@ export default function ProductSourcingCaseStory({ caseStudy }) {
 
       <div className="sourcing-case-story__body">
         <header>
-          <span>THE OPERATING CHALLENGE</span>
+          <span>{ui.challenge}</span>
           <p>{caseStudy.challenge}</p>
         </header>
 
@@ -40,7 +40,7 @@ export default function ProductSourcingCaseStory({ caseStudy }) {
                   className="sourcing-case-story__detail"
                   hidden={!isOpen}
                 >
-                  <span>WORKING EVIDENCE</span>
+                  <span>{ui.evidence}</span>
                   <strong>{caseStudy.evidence[index]}</strong>
                 </div>
               </li>

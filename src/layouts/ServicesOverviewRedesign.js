@@ -5,6 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import ServicesHeroEntrance from "./components/ServicesHeroEntrance";
 import ServicesWorkflow from "./components/ServicesWorkflow";
+import ServicesFinalCTA from "./components/ServicesFinalCTA";
+import ServicesProofScene from "./components/ServicesProofScene";
 import {
   FiArrowRight,
   FiCheck,
@@ -17,7 +19,6 @@ import {
 } from "react-icons/fi";
 
 const serviceIcons = [FiPackage, FiTruck, FiClipboard, FiPackage, FiSearch, FiArrowRight, FiTruck, FiShield];
-const proofIcons = [FiClipboard, FiShield, FiPackage, FiTruck];
 
 export default function ServicesOverviewRedesign() {
   const locale = useLocale();
@@ -214,25 +215,8 @@ export default function ServicesOverviewRedesign() {
         </div>
       </section>
 
-      <section className="sov-section sov-proof">
-        <div className="sov-container sov-proof-grid">
-          <div className="sov-proof-media">
-            <Image src="/images/generated/jw-qc-inspection-v3.png" alt={proof.imageAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
-            <div className="sov-proof-badge"><strong>04</strong><span>{proof.badge}</span></div>
-          </div>
-          <div className="sov-proof-copy">
-            <p className="sov-kicker">{proof.kicker}</p>
-            <h2>{proof.title}</h2>
-            <p className="sov-proof-lead">{proof.lead}</p>
-            <div className="sov-proof-list">
-              {proofItems.map(([title, copy], index) => {
-                const Icon = proofIcons[index];
-                return <div key={title}><div className="sov-proof-item-top"><span>{String(index + 1).padStart(2, "0")}</span><Icon aria-hidden="true" /></div><div><h3>{title}</h3><p>{copy}</p></div></div>;
-              })}
-            </div>
-            <Link className="sov-text-link" href="/services/quality-control-inspection">{proof.link} <FiArrowRight aria-hidden="true" /></Link>
-          </div>
-        </div>
+      <section id="service-proof" className="sov-section sov-proof sov-proof-scene-section" aria-labelledby="services-proof-title">
+        <ServicesProofScene key={locale} content={proof} items={proofItems} />
       </section>
 
       <section className="sov-section sov-faq">
@@ -248,11 +232,8 @@ export default function ServicesOverviewRedesign() {
         </div>
       </section>
 
-      <section className="sov-final">
-        <div className="sov-container sov-final-inner">
-          <div><p className="sov-kicker">{final.kicker}</p><h2>{final.title}</h2><p>{final.lead}</p></div>
-          <Link className="sov-button sov-button-light" href="/contact">{final.button} <FiArrowRight aria-hidden="true" /></Link>
-        </div>
+      <section className="sov-final" id="services-invitation" aria-labelledby="services-invitation-title">
+        <ServicesFinalCTA key={locale} content={final} locale={locale} />
       </section>
     </main>
   );

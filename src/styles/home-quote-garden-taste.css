@@ -1,0 +1,377 @@
+/* Home quote module: Design -> Garden -> Taste refinement. */
+.fh-home .fh-home-quote {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden !important;
+  padding: clamp(82px, 7vw, 116px) 0 !important;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.72), transparent 30%),
+    radial-gradient(circle at 86% 78%, rgba(77, 184, 126, 0.11), transparent 28%),
+    #d9f6e7 !important;
+}
+
+.fh-home .fh-home-quote::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(22, 116, 73, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 116, 73, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(90deg, #000, transparent 42%, transparent 58%, #000);
+  content: "";
+  pointer-events: none;
+}
+
+.fh-home .fh-home-quote > .container {
+  width: min(calc(100% - 48px), 1440px) !important;
+  max-width: 1440px !important;
+}
+
+.fh-home .fh-home-quote-grid {
+  grid-template-columns: minmax(0, 0.82fr) minmax(560px, 1.18fr) !important;
+  gap: clamp(58px, 6vw, 96px) !important;
+  align-items: center !important;
+}
+
+.fh-home .fh-home-quote-copy {
+  position: relative;
+  padding: 18px 0 18px 30px;
+}
+
+.fh-home .fh-home-quote-copy::before {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(#167449 0 31%, rgba(22, 116, 73, 0.13) 31% 100%);
+  content: "";
+}
+
+.fh-home .fh-home-quote-copy .ff-kicker {
+  margin-bottom: 18px !important;
+  color: #167449 !important;
+  font-size: 12px !important;
+  font-weight: 820 !important;
+  letter-spacing: 0.09em !important;
+}
+
+.fh-home .fh-home-quote-copy .fh-home-quote-title {
+  margin-bottom: 20px !important;
+  color: #15271f !important;
+  -webkit-text-fill-color: #15271f !important;
+  font-weight: 790 !important;
+  letter-spacing: -0.025em;
+}
+
+.fh-home .fh-home-quote-copy > p {
+  max-width: 590px !important;
+  color: #536860 !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.fh-home .fh-home-quote-promises {
+  position: relative;
+  display: grid;
+  gap: 0 !important;
+  max-width: 620px;
+  margin: 34px 0 0 !important;
+  padding: 14px 0 0 !important;
+  border-top: 1px solid rgba(22, 116, 73, 0.18);
+}
+
+.fh-home .fh-home-quote-promises::before {
+  position: absolute;
+  top: 43px;
+  bottom: 43px;
+  left: 20px;
+  width: 1px;
+  background: rgba(22, 116, 73, 0.2);
+  content: "";
+}
+
+.fh-home .fh-home-quote-promises li {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 16px !important;
+  align-items: start !important;
+  padding: 14px 0 !important;
+  color: #43574f !important;
+}
+
+.fh-home .fh-home-quote-promises svg {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 !important;
+  padding: 11px;
+  border: 1px solid rgba(22, 116, 73, 0.2);
+  border-radius: 50%;
+  background: #eaf9f1;
+  color: #167449 !important;
+}
+
+.fh-home .fh-home-quote-promises strong {
+  display: block;
+  margin: 1px 0 3px;
+  color: #19342a !important;
+  font-size: 15px !important;
+  line-height: 1.35;
+}
+
+.fh-home .fh-home-quote-promises li span {
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.fh-home .fh-home-quote-form {
+  position: relative;
+  overflow: visible;
+  padding: 40px !important;
+  border: 1px solid rgba(22, 116, 73, 0.2) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  box-shadow:
+    0 28px 70px rgba(19, 75, 52, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.fh-home .fh-home-quote-form::before {
+  position: absolute;
+  top: -1px;
+  right: 22px;
+  left: 22px;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #167449, #42b978 58%, #9ee2bd);
+  content: "";
+}
+
+.fh-home .fh-home-quote-fields {
+  gap: 20px 18px !important;
+}
+
+.fh-home .fh-home-quote-form label,
+.fh-home .fh-home-quote-label,
+.fh-home .fh-country-code-field {
+  color: #20362d !important;
+  font-size: 13px !important;
+  font-weight: 780 !important;
+  letter-spacing: 0.005em;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]):not(.fh-country-code-required-proxy), select, textarea),
+.fh-home .fh-country-code-trigger {
+  border: 1px solid #cedbd4 !important;
+  border-radius: 8px !important;
+  background-color: #fbfdfc !important;
+  color: #1f332b !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]):not(.fh-country-code-required-proxy), select),
+.fh-home .fh-country-code-trigger {
+  min-height: 54px !important;
+}
+
+.fh-home .fh-home-quote-form textarea {
+  min-height: 142px !important;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]):not(.fh-country-code-required-proxy), select, textarea):hover,
+.fh-home .fh-country-code-trigger:hover {
+  border-color: #9dbdad !important;
+  background-color: #ffffff !important;
+}
+
+.fh-home .fh-home-quote-form :is(input:not([type="hidden"]):not(.fh-country-code-required-proxy), select, textarea):focus,
+.fh-home .fh-country-code-trigger:focus-visible {
+  border-color: #167449 !important;
+  outline: none;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(22, 116, 73, 0.11) !important;
+}
+
+.fh-home .fh-phone-split {
+  grid-template-columns: minmax(190px, 0.82fr) minmax(0, 1.18fr) !important;
+  gap: 12px !important;
+}
+
+/* The homepage uses the legacy phone control: render two clean sibling fields. */
+.fh-home .fh-home-quote-form .fh-phone-control {
+  grid-template-columns: minmax(190px, 0.82fr) minmax(0, 1.18fr) !important;
+  gap: 12px;
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-control:focus-within {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-country > button,
+.fh-home .fh-home-quote-form .fh-phone-control > input[name="phone"] {
+  box-sizing: border-box;
+  min-height: 54px !important;
+  margin: 0 !important;
+  border: 1px solid #cedbd4 !important;
+  border-radius: 8px !important;
+  background: #fbfdfc !important;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-country > button {
+  padding-inline: 16px;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-control > input[name="phone"] {
+  padding-inline: 16px !important;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-country > button:hover,
+.fh-home .fh-home-quote-form .fh-phone-control > input[name="phone"]:hover {
+  border-color: #9dbdad !important;
+  background: #ffffff !important;
+}
+
+.fh-home .fh-home-quote-form .fh-phone-country > button:focus-visible,
+.fh-home .fh-home-quote-form .fh-phone-control > input[name="phone"]:focus {
+  border-color: #167449 !important;
+  outline: none;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(22, 116, 73, 0.11) !important;
+}
+
+.fh-home .fh-country-code-required-proxy {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+.fh-home .fh-home-quote-form > button {
+  position: relative;
+  min-height: 56px !important;
+  margin-top: 22px !important;
+  overflow: hidden;
+  border-radius: 8px !important;
+  background: #167449 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(22, 116, 73, 0.2) !important;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.fh-home .fh-home-quote-form > button:hover:not(:disabled) {
+  background: #105e3b !important;
+  box-shadow: 0 16px 32px rgba(22, 116, 73, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.fh-home .fh-home-quote-form > button:focus-visible {
+  outline: 3px solid rgba(22, 116, 73, 0.25);
+  outline-offset: 3px;
+}
+
+.fh-home .fh-home-quote-form .contact-privacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: #71837b;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.fh-home .fh-home-quote-form .contact-privacy svg {
+  flex: none;
+  color: #688078;
+}
+
+@media (max-width: 1023px) {
+  .fh-home .fh-home-quote-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 44px !important;
+  }
+
+  .fh-home .fh-home-quote-copy {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-home-quote {
+    padding: 68px 0 !important;
+  }
+
+  .fh-home .fh-home-quote > .container {
+    width: min(calc(100% - 32px), 1440px) !important;
+  }
+
+  .fh-home .fh-home-quote-copy {
+    padding: 0;
+  }
+
+  .fh-home .fh-home-quote-copy::before,
+  .fh-home .fh-home-quote-promises::before {
+    display: none;
+  }
+
+  .fh-home .fh-home-quote-copy .fh-home-quote-title {
+    font-size: clamp(30px, 9vw, 38px) !important;
+  }
+
+  .fh-home .fh-home-quote-promises li {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 13px !important;
+  }
+
+  .fh-home .fh-home-quote-promises svg {
+    width: 38px !important;
+    height: 38px !important;
+    padding: 10px;
+  }
+
+  .fh-home .fh-home-quote-form {
+    padding: 26px 20px !important;
+    border-radius: 12px !important;
+  }
+
+  .fh-home .fh-home-quote-fields,
+  .fh-home .fh-phone-split,
+  .fh-home .fh-home-quote-form .fh-phone-control {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-home .fh-home-quote-form :is(input, select, textarea),
+  .fh-home .fh-country-code-trigger,
+  .fh-home .fh-home-quote-form > button {
+    transition: none !important;
+  }
+
+  .fh-home .fh-home-quote-form > button:hover:not(:disabled) {
+    transform: none;
+  }
+}

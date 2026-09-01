@@ -1,0 +1,65 @@
+/* Only recompose content. Original section/panel backgrounds, circle, border,
+   container width and responsive inline padding remain owned by existing CSS. */
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-invitation {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 30px !important;
+  container-type: inline-size;
+}
+.sov-invitation-heading { position: relative; z-index: 1; min-width: 0; }
+.sov-invitation-kicker { margin: 0 0 16px; color: #167449; font-size: 12px; line-height: 1.5; font-weight: 800; }
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-invitation h2 {
+  max-width: 850px !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  color: #000 !important;
+  text-wrap: balance;
+}
+.sov-invitation-lead { max-width: 760px; margin: 18px 0 0; color: #526a5f; font-size: 16px; line-height: 1.7; text-wrap: pretty; }
+body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-invitation > .sov-invitation-handoff {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  max-width: none !important;
+  min-width: 0;
+  padding-top: 26px;
+  border-top: 1px solid rgb(22 116 73 / 18%);
+}
+.sov-invitation-preparation { display: flex; flex-wrap: wrap; gap: 18px 28px; min-width: 0; margin: 0; padding: 0; list-style: none; }
+.sov-invitation-preparation li { display: flex; align-items: center; gap: 10px; min-width: 0; color: #355c48; font-size: 13px; line-height: 1.5; font-weight: 650; }
+.sov-invitation-preparation svg { flex: 0 0 auto; width: 18px; height: 18px; color: #167449; }
+.sov-invitation-action { flex: 0 0 auto; max-width: 100%; }
+.sov-invitation-button {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 24px;
+  min-height: 60px; max-width: 100%; padding: 10px 12px 10px 22px;
+  border: 1px solid #167449; border-radius: 8px; background: #167449;
+  color: #fff; font-size: 15px; line-height: 1.4; font-weight: 800;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 0 10px 24px rgb(11 41 32 / 12%);
+}
+.sov-invitation-arrow { display: grid; place-items: center; flex: 0 0 auto; width: 36px; height: 36px; border-left: 1px solid rgb(255 255 255 / 28%); }
+.sov-invitation-arrow svg { width: 20px; height: 20px; }
+.sov-invitation-button:hover { background: #105c39; border-color: #105c39; color: #fff; }
+.sov-invitation-button:focus-visible { outline: 3px solid #105c39; outline-offset: 5px; }
+.sov-final-invitation[data-focused="true"] [data-invitation-reveal] { animation: none !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .sov-final-invitation[data-entered="true"] [data-invitation-reveal] { animation: invitation-enter 720ms cubic-bezier(.16,1,.3,1) var(--invitation-delay, 0ms) both; }
+  .sov-invitation-button, .sov-invitation-arrow svg { transition: transform 220ms cubic-bezier(.16,1,.3,1); }
+  .sov-invitation-button:hover { transform: translateY(-2px); }
+  .sov-invitation-button:hover .sov-invitation-arrow svg { transform: translateX(4px); }
+  .sov-invitation-button:active { transform: translateY(0) scale(.98); }
+  @keyframes invitation-enter { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (max-width: 1100px) {
+  body main.sov-page.sov-page[class][class] section.sov-final.sov-final .sov-final-invitation > .sov-invitation-handoff { align-items: flex-start; flex-direction: column; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .sov-invitation-preparation { flex-direction: column; gap: 16px; }
+  .sov-invitation-action, .sov-invitation-button { width: 100%; }
+  .sov-invitation-button { white-space: normal; padding-left: 16px; gap: 12px; font-size: 14px; }
+  .sov-invitation-lead { font-size: 15px; }
+}
+@media print {
+  .sov-final-invitation [data-invitation-reveal] { animation: none !important; }
+}

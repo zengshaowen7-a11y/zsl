@@ -25,7 +25,7 @@
       },
       {
         "number": "02",
-        "title": "Źródło i cytat",
+        "title": "Pozyskanie i wycena",
         "text": "Sprowadzamy dostawców, następnie dzielimy ceny, MOQ i produkcji lead- time."
       },
       {
@@ -105,7 +105,7 @@
         "audience": "Do sklepów gotowych do zmniejszenia powtarzających się przekazów zamówień.",
         "points": [
           "Synchronizacja zamówień",
-          "Aktualizacja statusu wypełnienia",
+          "Aktualizacje statusu realizacji zamówień",
           "Śledzenie przepływu zwrotnego"
         ],
         "slug": "automatic-order-fulfillment",
@@ -114,24 +114,24 @@
     ],
     "comparisonItems": [
       [
-        "Wielokrotne rozmowy z dostawcami",
-        "Jeden dedykowany punkt kontaktowy dla wszystkiego"
+        "Wiele oddzielnych rozmów z dostawcami",
+        "Jeden stały opiekun całego projektu"
       ],
       [
-        "Brak gwarantowanej kontroli jakości przed wysyłką",
+        "Brak stałej kontroli jakości przed wysyłką",
         "Pełna kontrola jakości przed każdą wysyłką"
       ],
       [
-        "Ograniczone, tylko opakowania ogólne",
-        "Niestandardowe rozwiązania do pakowania marki i etykiet prywatnych"
+        "Ograniczone, standardowe opakowania",
+        "Niestandardowe opakowania markowe i private label"
       ],
       [
         "Magazyn i wysyłka obsługiwane przez różne zespoły",
-        "End- to- end workflow zarządzany w całości przez nasz zespół in- house"
+        "Cały proces zarządzany przez nasz wewnętrzny zespół"
       ],
       [
-        "Mylenie śledzenia rękopisy i opóźnione aktualizacje",
-        "Wyraźne, ustrukturyzowane aktualizacje wysyłki i śledzenia"
+        "Niejasne przekazanie trackingu i opóźnione aktualizacje",
+        "Jasne, uporządkowane aktualizacje wysyłki i trackingu"
       ]
     ],
     "qcCapabilities": [
@@ -201,7 +201,7 @@
     "testimonials": [
       {
         "name": "Oliver",
-        "country": "WIELKA BRYTANIA",
+        "country": "UK",
         "flagSrc": "https://flagcdn.com/gb.svg",
         "tag": "ZAMÓWIENIE",
         "quote": "Jurij i cała drużyna JW są niesamowicie zorganizowani, niezawodni. Kiedy zarządzasz setkami zamówień co miesiąc, śledzenie i spójność są wszystkim. Ich czysty system przepływu pracy utrzymuje każdą dostawę easy-to-follow, zmniejsza błąd komunikacji i oszczędza mi godzin ręcznej pracy co tydzień. Już nie martwię się o brudną obsługę z Chin."
@@ -289,8 +289,8 @@
       "platforms": "Współpracuje z platformami, które już sprzedajesz",
       "platformLabel": "Obsługiwane platformy eCommerce",
       "advantagesKicker": "Dlaczego warto wybrać JW Dropshipping?",
-      "advantagesTitle": "Kontrola od końca do końca: brak Middlemen z trzeciej strony",
-      "advantagesLead": "Źródło, kontrola, paczka i statek, w pełni zarządzane przez nasz własny zespół magazyn Chiny",
+      "advantagesTitle": "Pełna kontrola od początku do końca — bez pośredników",
+      "advantagesLead": "Pozyskiwanie produktów, kontrola jakości, pakowanie i wysyłka — wszystkim zajmuje się nasz własny zespół logistyczny w Chinach.",
       "whyLink": "Dlaczego JW Dropshipping",
       "previousImage": "Poprzedni obrazek",
       "nextImage": "Następny obrazek",
@@ -304,12 +304,12 @@
       "bestFor": "Najlepsze dla",
       "exploreService": "Usługa wyszukiwania",
       "compareServices": "Porównaj wszystkie usługi",
-      "differenceKicker": "RÓŻNOŚĆ JW",
-      "differenceTitle": "Prostszy, jednolity sposób zarządzania wypełnieniem z Chin",
-      "differenceLead": "Pomiń fragmentaryczne rozdrobnienia pomiędzy oddzielnymi dostawcami, inspektorami, magazynami i zespołami żeglugowymi. Praca z jednym, skoordynowanym zespołem.",
-      "fragmented": "Pęknięte handofy",
-      "typical": "Typowy agent zakwaszający",
-      "managed": "Jeden zarządzany przepływ pracy",
+      "differenceKicker": "RÓŻNICA JW",
+      "differenceTitle": "Prostsze, scentralizowane zarządzanie fulfillmentem z Chin",
+      "differenceLead": "Unikaj rozproszonych przekazań między dostawcami, kontrolerami, magazynami i zespołami wysyłkowymi. Pracuj z jednym skoordynowanym zespołem.",
+      "fragmented": "ROZPROSZONE PRZEKAZANIA",
+      "typical": "Tradycyjny agent sourcingowy",
+      "managed": "JEDEN CENTRALNY PROCES",
       "jw": "JW Dropshipping",
       "differenceMediaLabel": "Zdjęcia kontroli jakości",
       "differenceMedia": [
@@ -358,10 +358,10 @@
         "passedCount": "Przeszedł 50",
         "issueCount": "0 zagadnień"
       },
-      "feedbackKicker": "SELLER FEEDBACK",
+      "feedbackKicker": "OPINIE SPRZEDAWCÓW",
       "feedbackTitle": "Co sprzedawcy mówią o pracy z JW",
       "feedbackLead": "Prawdziwe opinie od sprzedawców za pomocą JW do pozyskiwania, spełnienia i markowe wsparcie.",
-      "fiveStars": "Five star review",
+      "fiveStars": "Ocena pięciogwiazdkowa",
       "feedbackLink": "Czytaj więcej Opowieści Sprzedawcy",
       "faqKicker": "PRZEKAZYWANE PYTANIA",
       "faqTitle": "Co wiedzieć przed rozpoczęciem",

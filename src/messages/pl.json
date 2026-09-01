@@ -1,9 +1,9 @@
 {
   "Metadata": {
     "title": "JW Dropshipping",
-    "description": "China product sourcing, jakość kontroli, magazynowanie, markowe opakowania i światowej realizacji spedycji dla niezależnych marek eCommerce.",
-    "openGraphTitle": "JW Dropshipping Xi124; Od pozyskiwania produktów do drzwi klientów",
-    "openGraphDescription": "End- to- end sourcing, kontrola jakości i globalne spełnienie dla niezależnych marek eCommerce."
+    "description": "Pozyskiwanie produktów w Chinach, kontrola jakości, magazynowanie, markowe opakowania i globalna realizacja zamówień dla niezależnych marek eCommerce.",
+    "openGraphTitle": "JW Dropshipping | Od pozyskania produktu do dostawy klientowi",
+    "openGraphDescription": "Kompleksowe pozyskiwanie produktów, kontrola jakości i globalna realizacja zamówień dla niezależnych marek eCommerce."
   },
   "Navigation": {
     "home": "Strona główna",
@@ -32,11 +32,11 @@
     "serviceScope": "ZAKRES USŁUGI"
   },
   "Footer": {
-    "lead": "Chiny zaopatrzenia, kontroli jakości i globalnego spełnienia dla niezależnych marek eCommerce.",
+    "lead": "Pozyskiwanie produktów w Chinach, kontrola jakości i globalna realizacja zamówień dla niezależnych marek eCommerce.",
     "services": "Usługi",
     "company": "Przedsiębiorstwo",
     "rights": "© 2026 JW Dropshipping. Wszelkie prawa zastrzeżone.",
-    "globalFulfillment": "Globalne spełnienie",
+    "globalFulfillment": "Globalna realizacja zamówień",
     "operationsSupport": "Wsparcie zespołu operacyjnego",
     "contactUs": "Skontaktuj się z nami",
     "whatsapp": "WhatsApp",
@@ -44,12 +44,12 @@
     "email": "E-mail",
     "locationLabel": "Nasza lokalizacja",
     "location": "Pokój 1208, Budynek A, Future Supply Chain Center, Hangzhou, Zhejiang, Chiny",
-    "serviceSummary": "Dostawcy produktów · Kontrola jakości · Globalne spełnienie"
+    "serviceSummary": "Pozyskiwanie produktów · Kontrola jakości · Globalna realizacja zamówień"
   },
   "ServiceDetail": {"getQuote":"Uzyskaj bezpłatną wycenę","seeHow":"Zobacz, jak to działa","whatWeHandle":"CZYM SIĘ ZAJMUJEMY","relatedServices":"Powiązane usługi","fitKicker":"CZY TA USŁUGA JEST DLA CIEBIE?","bestFit":"NAJLEPSZE DOPASOWANIE"},
   "ThankYou": {
     "title": "Dziękuję - otrzymaliśmy Państwa prośbę.",
-    "text": "Nasz zespół dokona przeglądu produktu i przechowa dane i skontaktuje się z Tobą następnym krokiem.",
+    "text": "Nasz zespół przeanalizuje informacje o produkcie i sklepie, a następnie skontaktuje się z Tobą w sprawie kolejnego kroku.",
     "button": "Wróć na stronę główną"
   }
 }

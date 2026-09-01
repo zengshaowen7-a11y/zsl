@@ -102,7 +102,7 @@
       "primary": "Habla con el equipo",
       "secondary": "Ver la Diferencia",
       "proofs": [
-        "Live Account Support",
+        "Atención personalizada en tiempo real",
         "Puestos de control QC convenidos",
         "Despacho de orden claro"
       ],
@@ -123,7 +123,7 @@
     "evidence": {
       "imageAltOne": "Resultados de inspección de productos del equipo JW",
       "imageAltTwo": "Equipo JW comprobar la calidad del producto antes del envío",
-      "kicker": "VISIBLE OPERATING EVIDENCE",
+      "kicker": "EVIDENCIAS OPERATIVAS VISIBLES",
       "title": "Borrar las decisiones QC.",
       "lead": "En lugar de un vago mensaje “QC pasado”, el alcance de la inspección puede identificar lo que fue comprobado, lo que no coincidió y lo que necesita aprobación.",
       "review": "EXAMEN DE QC",

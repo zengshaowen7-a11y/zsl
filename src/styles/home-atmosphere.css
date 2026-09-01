@@ -1,0 +1,54 @@
+/* Every home module has motion; paper sections use lighter, varied motifs. */
+.fh-home .fh-platform-data-strip .jw-backdrop__flow { top: auto; bottom: 10px; height: 130px; }
+.fh-home .fh-core-advantages .jw-backdrop__motif--1 { top: 46px; }
+.fh-home .fh-core-services .jw-backdrop__tiles { top: 38%; }
+.fh-home .fh-qc-proof .jw-backdrop__motif--1 { top: 62px; }
+.fh-home .fh-home-faq .jw-backdrop__motif--1 { top: auto; bottom: 64px; }
+.fh-home .fh-home-quote .jw-backdrop__motif--1 { left: auto; right: 20px; top: 32px; }
+.fh-home .fh-hero-redesign .jw-backdrop__motif--1 { top: 92px; left: 52%; }
+
+.fh-home .fh-hero-redesign.jw-scene {
+  --jw-atmosphere-disc-alpha: .105;
+  --jw-atmosphere-watermark-alpha: .14;
+}
+
+.fh-home .fh-hero-redesign.jw-scene .ff-hero-copy-wrap {
+  background: transparent !important;
+}
+
+.fh-home .fh-hero-redesign.jw-scene > .jw-backdrop {
+  /* Existing hero styles use broad descendant selectors; pin this layer. */
+  display: block;
+}
+
+.fh-home .fh-hero-redesign .jw-backdrop__disc { top: -320px; right: -100px; }
+.fh-home .fh-hero-redesign .jw-backdrop__arc { bottom: -490px; left: -300px; }
+.fh-home .fh-hero-redesign .jw-backdrop__watermark { top: 80px; right: 30px; width: 310px; }
+
+.fh-home .fh-fixed-process.jw-scene::before,
+.fh-home .fh-fixed-process.jw-scene::after,
+.fh-home .fh-home-quote.jw-scene::after {
+  /* Retire the older competing grid/pseudo-element decoration. */
+  display: none !important;
+}
+
+.fh-home .fh-fixed-process .jw-backdrop__disc { top: -360px; }
+.fh-home .fh-fulfillment-compare .jw-backdrop__orbit { top: 26%; right: -360px; }
+.fh-home .fh-home-testimonials .jw-backdrop__disc { top: -350px; }
+.fh-home .fh-home-quote .jw-backdrop__disc { top: -240px; left: -300px; }
+.fh-home .fh-home-quote .jw-backdrop__globe {
+  top: auto;
+  right: auto;
+  bottom: -130px;
+  left: max(24px, calc((100vw - 1440px) / 2));
+  width: 450px;
+}
+
+@media (max-width: 767px) {
+  .fh-home .fh-hero-redesign .jw-backdrop__motif--1 { display: none; }
+  .fh-home .fh-hero-redesign .jw-backdrop__disc { top: -220px; right: -260px; }
+  .fh-home .fh-hero-redesign .jw-backdrop__watermark { display: none; }
+  .fh-home .fh-fixed-process .jw-backdrop__disc { top: -290px; }
+  .fh-home .fh-home-testimonials .jw-backdrop__disc { top: -300px; }
+  .fh-home .fh-home-quote .jw-backdrop__globe { width: 280px; left: -95px; bottom: -100px; }
+}

@@ -31,7 +31,7 @@
       },
       {
         "number": "02",
-        "title": "Źródło i cytat",
+        "title": "Pozyskanie i wycena",
         "kicker": "PRZEGLĄD WSPARCIA",
         "image": "/images/services/product-sourcing.webp",
         "intro": "Odpowiednie oferty dostawców są porównywane na tej samej specyfikacji, nie tylko na najniższej cenie jednostkowej.",
@@ -223,7 +223,7 @@
       "title": "Zacznij od jednego łącza produktu.",
       "lead": "Powiedz nam, gdzie sprzedajesz, czego oczekujesz i co trzeba poprawić. Polecimy kolejny etap praktyczny.",
       "product": "Związek produktów",
-      "quote": "Bezpłatny cytat",
+      "quote": "Bezpłatna wycena",
       "button": "Uzyskaj bezpłatną wycenę"
     }
   }

@@ -1,0 +1,377 @@
+/* Shared, opt-in background language. No route-wide or body-level recoloring.
+ * Layer order within jw-scene: section fill, backdrop (0), content (1).
+ * The backdrop alone clips artwork; menus, focus rings and cards are not clipped.
+ */
+:root {
+  --jw-atmosphere-ink: 22 116 73;
+  --jw-atmosphere-disc-alpha: .09;
+  --jw-atmosphere-line-alpha: .22;
+  --jw-atmosphere-watermark-alpha: .12;
+  --jw-atmosphere-cycle-duration: 8s;
+}
+
+.jw-scene {
+  position: relative;
+  isolation: isolate;
+}
+
+.jw-scene > :not(.jw-backdrop) {
+  position: relative;
+  z-index: 1;
+}
+
+.jw-scene > .jw-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.jw-backdrop__disc,
+.jw-backdrop__arc,
+.jw-backdrop__orbit,
+.jw-backdrop__watermark {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+/* Pastel accents remain local to decorative elements, not text or controls. */
+.jw-backdrop--teal { --jw-atmosphere-ink: 48 139 135; }
+.jw-backdrop--blue { --jw-atmosphere-ink: 81 133 166; }
+.jw-backdrop--sand { --jw-atmosphere-ink: 155 132 85; }
+
+.jw-backdrop__globe {
+  position: absolute;
+  width: clamp(420px, 33vw, 580px);
+  aspect-ratio: 1;
+  right: -160px;
+  top: -100px;
+  color: rgb(var(--jw-atmosphere-ink) / .085);
+  transform: rotate(-14deg);
+}
+.jw-backdrop__globe svg { width: 100%; height: 100%; stroke-width: .55; }
+
+.jw-backdrop__motif {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(54px, 5.2vw, 82px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(var(--jw-atmosphere-ink) / .15);
+  border-radius: 22%;
+  background: rgb(var(--jw-atmosphere-ink) / .055);
+  color: rgb(var(--jw-atmosphere-ink) / .36);
+}
+
+.jw-backdrop__motif svg { width: 48%; height: 48%; stroke-width: 1.25; }
+.jw-backdrop__motif--1 { top: 56px; left: clamp(16px, 3vw, 64px); transform: rotate(-12deg); }
+.jw-backdrop__motif--2 { right: clamp(20px, 4vw, 80px); bottom: 50px; transform: rotate(12deg); }
+
+.jw-backdrop__flow {
+  position: absolute;
+  inset: 20px -10% auto;
+  height: 160px;
+  transform: rotate(-5deg);
+}
+
+.jw-backdrop__flow i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  height: 1px;
+  background: rgb(var(--jw-atmosphere-ink) / .12);
+}
+.jw-backdrop__flow i:nth-child(2) { top: 50%; }
+.jw-backdrop__flow i:nth-child(3) { top: 80%; }
+.jw-backdrop__flow i::after {
+  content: "";
+  position: absolute;
+  width: 18%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(var(--jw-atmosphere-ink) / .55), transparent);
+}
+
+.jw-backdrop__tiles {
+  position: absolute;
+  top: 15%;
+  right: -110px;
+  width: 330px;
+  height: 460px;
+}
+.jw-backdrop--left .jw-backdrop__tiles { right: auto; left: -160px; top: 20%; }
+.jw-backdrop__tiles i {
+  position: absolute;
+  inset: 0 30px 160px 0;
+  border: 1px solid rgb(var(--jw-atmosphere-ink) / .18);
+  border-radius: 22px;
+  background: rgb(var(--jw-atmosphere-ink) / .035);
+  transform: rotate(23deg);
+}
+.jw-backdrop__tiles i:nth-child(2) { inset: 110px 70px 70px -70px; }
+.jw-backdrop__tiles i:nth-child(3) { inset: 235px 140px 0 -30px; background: rgb(153 193 174 / .065); }
+
+.jw-backdrop__scan {
+  position: absolute;
+  top: 60px;
+  right: -70px;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgb(var(--jw-atmosphere-ink) / .16);
+  border-radius: 40px;
+  transform: rotate(-9deg);
+  overflow: hidden;
+  background: rgb(var(--jw-atmosphere-ink) / .025);
+}
+.jw-backdrop__scan i { position: absolute; inset: 40px; border: 1px solid rgb(var(--jw-atmosphere-ink) / .1); border-radius: 28px; }
+.jw-backdrop__scan i:nth-child(2) { inset: 90px; border-radius: 14px; }
+.jw-backdrop__scan b { position: absolute; top: 30px; left: 0; right: 0; height: 38px; border-bottom: 2px solid rgb(var(--jw-atmosphere-ink) / .3); background: linear-gradient(transparent, rgb(var(--jw-atmosphere-ink) / .09)); }
+
+.jw-backdrop__ripple {
+  position: absolute;
+  right: -240px;
+  top: -140px;
+  width: 640px;
+  aspect-ratio: 1;
+}
+.jw-backdrop--left .jw-backdrop__ripple { right: auto; left: -260px; top: -190px; }
+.jw-backdrop__ripple i { position: absolute; inset: 0; border: 1px solid rgb(var(--jw-atmosphere-ink) / .2); border-radius: 50%; }
+.jw-backdrop__ripple i:nth-child(2) { inset: 65px; background: rgb(var(--jw-atmosphere-ink) / .025); }
+.jw-backdrop__ripple i:nth-child(3) { inset: 130px; }
+
+.jw-backdrop__disc {
+  top: -270px;
+  right: -130px;
+  width: clamp(440px, 43vw, 700px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(var(--jw-atmosphere-ink) / var(--jw-atmosphere-disc-alpha));
+}
+
+.jw-backdrop__arc {
+  bottom: -380px;
+  left: -230px;
+  width: 620px;
+  aspect-ratio: 1;
+  border: 2px solid rgb(var(--jw-atmosphere-ink) / var(--jw-atmosphere-line-alpha));
+  border-radius: 50%;
+  box-shadow: 0 0 0 56px rgb(var(--jw-atmosphere-ink) / .03),
+    0 0 0 112px rgb(var(--jw-atmosphere-ink) / .02);
+}
+
+.jw-backdrop--left .jw-backdrop__disc {
+  right: auto;
+  left: -190px;
+}
+
+.jw-backdrop--left .jw-backdrop__arc {
+  right: -230px;
+  left: auto;
+}
+
+.jw-backdrop__orbit {
+  top: 10%;
+  right: -200px;
+  width: clamp(620px, 62vw, 1020px);
+  height: 390px;
+  border: 2px solid rgb(var(--jw-atmosphere-ink) / .24);
+  border-radius: 50%;
+  transform: rotate(-23deg);
+}
+
+.jw-backdrop__orbit > span {
+  position: absolute;
+  inset: 30px -24px;
+  border: 1px solid rgb(var(--jw-atmosphere-ink) / .07);
+  border-radius: inherit;
+}
+
+/* Display a cropped window onto the original poster, without redrawing its mark.
+ * White drops out against the green section through multiply blending.
+ */
+.jw-backdrop__watermark {
+  right: max(30px, calc((100vw - 1320px) / 2));
+  top: 96px;
+  width: clamp(260px, 28vw, 460px);
+  aspect-ratio: 1.76;
+  overflow: hidden;
+  opacity: var(--jw-atmosphere-watermark-alpha);
+  mix-blend-mode: multiply;
+}
+
+.jw-backdrop__watermark img {
+  position: absolute;
+  top: -27%;
+  left: -7%;
+  width: 112%;
+  max-width: none;
+  height: auto;
+}
+
+.jw-backdrop--left .jw-backdrop__watermark {
+  top: auto;
+  right: auto;
+  bottom: 30px;
+  left: max(24px, calc((100vw - 1440px) / 2));
+}
+
+/* Reusable explicit dark-section variant; never switches the site's theme. */
+.jw-scene[data-jw-atmosphere="dark"] {
+  --jw-atmosphere-ink: 184 238 205;
+  --jw-atmosphere-watermark-alpha: .07;
+}
+
+.jw-scene[data-jw-atmosphere="dark"] .jw-backdrop__watermark {
+  mix-blend-mode: screen;
+  filter: invert(1) grayscale(1);
+}
+
+/* Continuous ambient movement, paused offscreen and by the page control.
+ * Animation declarations stay mounted so pausing never resets the position.
+ * Reduced-motion and mobile stay static.
+ */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .jw-backdrop .jw-backdrop__globe {
+    animation: jw-atmosphere-globe 12s ease-in-out infinite alternate;
+  }
+  .jw-backdrop .jw-backdrop__disc {
+    animation: jw-atmosphere-drift var(--jw-atmosphere-cycle-duration) ease-in-out infinite alternate;
+  }
+
+  .jw-backdrop .jw-backdrop__arc {
+    animation: jw-atmosphere-arc 10s ease-in-out infinite alternate;
+  }
+
+  .jw-backdrop .jw-backdrop__orbit {
+    animation: jw-atmosphere-route 9s ease-in-out infinite alternate;
+  }
+
+  .jw-backdrop .jw-backdrop__watermark {
+    animation: jw-atmosphere-watermark 8s ease-in-out infinite alternate;
+  }
+
+  .jw-backdrop__motif { animation: jw-atmosphere-float 6s ease-in-out infinite alternate; }
+  .jw-backdrop__motif--2 { animation-direction: alternate-reverse; animation-duration: 7s; }
+  .jw-backdrop__tiles i { animation: jw-atmosphere-tiles 9s ease-in-out infinite alternate; }
+  .jw-backdrop__tiles i:nth-child(2) { animation-direction: alternate-reverse; }
+  .jw-backdrop__tiles i:nth-child(3) { animation-delay: -4s; }
+  .jw-backdrop__ripple i { animation: jw-atmosphere-ripple 7s ease-in-out infinite alternate; }
+  .jw-backdrop__ripple i:nth-child(2) { animation-delay: -2s; }
+  .jw-backdrop__ripple i:nth-child(3) { animation-delay: -4s; }
+  .jw-backdrop__scan b { animation: jw-atmosphere-scan 5s ease-in-out infinite alternate; }
+  .jw-backdrop__flow i::after { animation: jw-atmosphere-flow 7s ease-in-out infinite alternate; }
+  .jw-backdrop__flow i:nth-child(2)::after { animation-direction: alternate-reverse; animation-delay: -3s; }
+  .jw-backdrop__flow i:nth-child(3)::after { animation-delay: -5s; }
+
+  .jw-backdrop[data-visible="false"] *,
+  .jw-backdrop[data-visible="false"] *::after,
+  [data-jw-motion="paused"] .jw-backdrop *,
+  [data-jw-motion="paused"] .jw-backdrop *::after {
+    animation-play-state: paused !important;
+  }
+}
+
+@keyframes jw-atmosphere-float {
+  from { transform: translate3d(0, 0, 0) rotate(-12deg); }
+  to { transform: translate3d(26px, 34px, 0) rotate(9deg); }
+}
+@keyframes jw-atmosphere-globe {
+  from { transform: translate3d(0, 0, 0) rotate(-14deg); }
+  to { transform: translate3d(-20px, 24px, 0) rotate(-4deg); }
+}
+@keyframes jw-atmosphere-tiles {
+  from { transform: translate3d(0, -12px, 0) rotate(15deg); }
+  to { transform: translate3d(-26px, 35px, 0) rotate(32deg); }
+}
+@keyframes jw-atmosphere-ripple {
+  from { transform: scale(.87); opacity: .6; }
+  to { transform: scale(1.08); opacity: 1; }
+}
+@keyframes jw-atmosphere-scan {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 245px, 0); }
+}
+@keyframes jw-atmosphere-flow {
+  from { transform: translate3d(-20%, 0, 0); }
+  to { transform: translate3d(530%, 0, 0); }
+}
+
+@keyframes jw-atmosphere-drift {
+  from { transform: translate3d(18px, -20px, 0) scale(.98); }
+  to { transform: translate3d(-65px, 75px, 0) scale(1.08); }
+}
+
+@keyframes jw-atmosphere-arc {
+  from { transform: translate3d(-20px, 30px, 0) scale(.96); }
+  to { transform: translate3d(75px, -60px, 0) scale(1.1); }
+}
+
+@keyframes jw-atmosphere-route {
+  from { transform: translate3d(35px, -20px, 0) rotate(-34deg); }
+  to { transform: translate3d(-65px, 45px, 0) rotate(-10deg); }
+}
+
+@keyframes jw-atmosphere-watermark {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-18px, 22px, 0); }
+}
+
+.jw-scene > .jw-motion-toggle {
+  position: absolute;
+  top: 96px;
+  right: 24px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(22 116 73 / .25);
+  border-radius: 50%;
+  background: rgb(255 255 255 / .8);
+  color: #167449;
+  cursor: pointer;
+}
+
+.jw-motion-toggle:hover { background: #fff; border-color: #167449; }
+.jw-motion-toggle:active { transform: scale(.96); }
+.jw-motion-toggle:focus-visible { outline: 2px solid #167449; outline-offset: 4px; }
+.jw-motion-toggle svg { width: 17px; height: 17px; }
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce), print {
+  .jw-scene > .jw-motion-toggle { display: none; }
+}
+
+@media (max-width: 767px) {
+  .jw-backdrop__disc {
+    top: -205px;
+    right: -210px;
+    width: 420px;
+  }
+
+  .jw-backdrop--left .jw-backdrop__disc { left: -260px; }
+  .jw-backdrop__arc { left: -340px; bottom: -460px; }
+  .jw-backdrop--left .jw-backdrop__arc { right: -360px; }
+  .jw-backdrop__orbit { display: none; }
+  .jw-backdrop__watermark { top: 64px; right: -45px; width: 240px; opacity: .045; }
+  .jw-backdrop--left .jw-backdrop__watermark { left: -35px; bottom: 20px; }
+  .jw-backdrop__motif { width: 42px; opacity: .5; }
+  .jw-backdrop__motif--1 { top: 20px; left: -10px; }
+  .jw-backdrop__motif--2 { right: -12px; bottom: 20px; }
+  .jw-backdrop__tiles { right: -230px; opacity: .5; }
+  .jw-backdrop--left .jw-backdrop__tiles { left: -270px; }
+  .jw-backdrop__scan { width: 220px; height: 220px; right: -160px; opacity: .5; }
+  .jw-backdrop__ripple { right: -460px; opacity: .5; }
+  .jw-backdrop--left .jw-backdrop__ripple { left: -460px; }
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .jw-backdrop *, .jw-backdrop *::before, .jw-backdrop *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print { .jw-backdrop { display: none; } }
