@@ -4095,3 +4095,20 @@ body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero {
     padding-top: 112px !important;
   }
 }
+
+/* Keep the three hero proof labels on a single, even baseline on desktop. */
+@media (min-width: 768px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero .hiw-hero-copy > ul li {
+    min-width: 0 !important;
+    gap: 7px !important;
+    padding-inline: 12px !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    white-space: nowrap !important;
+  }
+
+  body main.hiw-page.hiw-page[class][class] section.hiw-hero.hiw-hero .hiw-hero-copy > ul li svg {
+    flex: 0 0 auto !important;
+  }
+}

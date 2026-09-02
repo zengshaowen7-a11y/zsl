@@ -86,6 +86,7 @@
     "firstStepKicker": "UW EERSTE STAP",
     "firstStepTitle": "Begin met één product.",
     "firstStepLead": "Vertel ons wat je verkoopt, waar je schip en wat beter moet werken. Ons team zal de volgende praktische stap aanbevelen.",
+    "firstStepItems": ["Productlink", "Bestemmingsmarkten", "Huidig knelpunt"],
     "talkToTeam": "Praat met ons team"
   },
   "ContactForm": {

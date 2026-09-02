@@ -4,6 +4,7 @@ import ScrollReveal from "@layouts/ScrollReveal";
 import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
+import GlobalPageAtmosphere from "@layouts/components/GlobalPageAtmosphere";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -38,7 +39,9 @@ import "../../styles/service-detail-final.css";
 import "../../styles/services-overview-redesign.css";
 import "../../styles/how-it-works-redesign.css";
 import "../../styles/how-it-works-preparation.css";
+import "../../styles/how-it-works-final-launcher.css";
 import "../../styles/how-it-works-approval.css";
+import "../../styles/how-it-works-track-selector.css";
 import "../../styles/why-jw-redesign.css";
 import "../../styles/testimonials-redesign.css";
 import "../../styles/contact-redesign.css";
@@ -93,7 +96,17 @@ import "../../styles/localization-layout-fixes.css";
 import "../../styles/brand-atmosphere.css";
 import "../../styles/home-atmosphere.css";
 import "../../styles/footer-atmosphere.css";
+import "../../styles/global-page-atmosphere.css";
+import "../../styles/how-it-works-exception-scene.css";
+import "../../styles/why-jw-compare-board.css";
+import "../../styles/why-jw-qc-workbench.css";
+import "../../styles/why-jw-account-scene.css";
+import "../../styles/why-jw-final-diagnostic.css";
+import "../../styles/testimonials-final-cta.css";
 import "../../styles/why-jw-facts-rail-v2.css";
+import "../../styles/why-jw-compare-board-v2.css";
+import "../../styles/testimonials-hero-v2.css";
+import "../../styles/why-jw-facts-rail-v3.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -169,6 +182,7 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider>
           <Header servicePages={serviceMenu} />
           <ScrollReveal />
+          <GlobalPageAtmosphere />
           <Providers>{children}</Providers>
           <Footer />
         </NextIntlClientProvider>

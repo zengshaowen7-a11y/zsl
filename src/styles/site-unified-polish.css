@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
   background: #fff;
   color: var(--jw-text);
-  font-family: Manrope, Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6,
 .detail-page h1, .detail-page h2, .detail-page h3,
 .contact-page h1, .contact-page h2, .contact-page h3 {
   color: var(--jw-ink);
-  font-family: Manrope, Arial, sans-serif;
-  font-weight: 800;
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 700;
   letter-spacing: 0 !important;
   text-wrap: balance;
 }

@@ -86,6 +86,7 @@
     "firstStepKicker": "TU PRIMER PASO",
     "firstStepTitle": "Empieza con un producto.",
     "firstStepLead": "Cuéntanos lo que vendes, donde envías y lo que necesita trabajar mejor. Nuestro equipo recomendará el siguiente paso práctico.",
+    "firstStepItems": ["Enlace del producto", "Mercados de destino", "Obstáculo actual"],
     "talkToTeam": "Habla con nuestro equipo"
   },
   "ContactForm": {

@@ -25,12 +25,12 @@
     "fiveStars": "Fünf-Sterne-Bewertung",
     "hero": {
       "kicker": "VERKÄUFERLAGEN",
-      "title": "Verkäufergeschichten, klar gemacht.",
-      "lead": "Klare Unterstützung, stetige Auftragsabwicklung und schnelles Follow-up von einem Team Verkäufer können tatsächlich verwenden.",
+      "title": "Klare Händlerstimmen.",
+      "lead": "Klare Betreuung, verlässliche Auftragsabwicklung und schnelle Antworten für Händler.",
       "proofs": [
-        "Beschaffungsunterstützung",
-        "QC Updates",
-        "Folgemaßnahmen zur Erfüllung"
+        ["Beschaffungsunterstützung", "Produktfragen, Lieferantenoptionen und Angebote bleiben von der ersten Anfrage an verbunden."],
+        ["QC-Updates", "Prüfnotizen, Fotos und Freigabepunkte bleiben sichtbar, bevor die Ware weitergeht."],
+        ["Fulfillment-Begleitung", "Verpackung, Versand und Ausnahmen werden von einem verantwortlichen Team bis zum Abschluss begleitet."]
       ],
       "primary": "Kostenloses Angebot anfordern",
       "secondary": "Lesen Sie Verkäufergeschichten",

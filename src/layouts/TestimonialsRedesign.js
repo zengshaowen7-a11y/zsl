@@ -1,50 +1,31 @@
 "use client";
 
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FiArrowRight, FiCheck, FiChevronDown, FiMessageCircle, FiStar } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronDown, FiClock, FiMessageCircle, FiPackage, FiShield, FiStar, FiTruck } from "react-icons/fi";
 import { featuredTestimonials, storyTestimonials } from "../content/testimonials";
 
 const heroCarouselReviews = featuredTestimonials.slice(0, 4);
 
-function getInitials(name) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
+function getCountryCode(flagSrc, country) {
+  const code = flagSrc?.match(/\/([a-z]{2})\.svg$/i)?.[1]?.toUpperCase();
+  if (code === "GB") return "UK";
+  return code || country;
 }
 
-function AvatarBadge({ name, src, eager = false }) {
-  return (
-    <span className="tst-avatar" aria-hidden="true">
-      <span className="tst-avatar-fallback">{getInitials(name)}</span>
-      <Image
-        className="tst-avatar-image"
-        src={src}
-        alt=""
-        width={56}
-        height={56}
-        priority={eager}
-        loading={eager ? "eager" : "lazy"}
-      />
-    </span>
-  );
+function getManagerName(manager) {
+  return manager.replace(/^Working with\s+/i, "");
 }
 
 function Review({ review, featured = false, index }) {
   const t = useTranslations("Testimonials");
-  const { name, country, flagSrc, avatar, service, manager, quote } = review;
+  const { name, country, flagSrc, service, manager, quote } = review;
   return <article className={`tst-review${featured ? " is-featured" : ""}`}>
     <div className="tst-review-top"><span className="tst-stars" aria-label={t("fiveStars")}>{[1,2,3,4,5].map(star => <FiStar key={star} />)}</span></div>
     <blockquote>{quote}</blockquote>
     <footer>
-      <AvatarBadge name={name} src={avatar} eager={featured || index < 4} />
-      <div><strong>{name}</strong><span><img src={flagSrc} alt="" aria-hidden="true" />{country} · {manager}</span></div>
+      <div><strong>{name}</strong><span><img src={flagSrc} alt="" aria-hidden="true" />{getCountryCode(flagSrc, country)} · {getManagerName(manager)}</span></div>
       <small>{service}</small>
     </footer>
   </article>;
@@ -60,66 +41,70 @@ export default function TestimonialsRedesign() {
   const faq = t.raw("faq");
   const final = t.raw("final");
   const [activeHeroReview, setActiveHeroReview] = useState(0);
+  const heroThemeIcons = [FiMessageCircle, FiClock, FiShield, FiPackage];
 
   return <main className="tst-page">
     <section className="tst-hero">
-      <div className="tst-hero-copy">
-        <p className="tst-kicker">{hero.kicker}</p>
-        <h1>{hero.title}</h1>
-        <p>{hero.lead}</p>
-        <div className="tst-hero-proofline">
-          {hero.proofs.map((item) => <span key={item}><FiCheck /> {item}</span>)}
-        </div>
-        <div className="tst-actions"><Link href="/contact" className="tst-button tst-button-primary">{hero.primary} <FiArrowRight /></Link><a href="#seller-stories" className="tst-button tst-button-ghost">{hero.secondary}</a></div>
-        <div className="tst-hero-balance" aria-label={hero.balanceLabel}>
-          <div className="tst-hero-balance-copy">
-            <span>{hero.mentioned}</span>
-            <strong>{hero.balanceTitle}</strong>
+      <div className="tst-hero-shell">
+        <div className="tst-hero-main">
+          <div className="tst-hero-copy">
+            <p className="tst-kicker">{hero.kicker}</p>
+            <h1>{hero.title}</h1>
+            <p>{hero.lead}</p>
+            <div className="tst-actions"><Link href="/contact" className="tst-button tst-button-primary">{hero.primary} <FiArrowRight /></Link><a href="#seller-stories" className="tst-button tst-button-ghost">{hero.secondary}</a></div>
+            <div className="tst-hero-proof-note">
+              <strong>{hero.balanceTitle}</strong>
+              <ul>
+                {hero.proofs.map((proof) => {
+                  const [title, copy] = Array.isArray(proof) ? proof : [proof, ""];
+                  return <li key={title}>
+                    <FiCheck aria-hidden="true" />
+                    <span><strong>{title}</strong>{copy && <small>{copy}</small>}</span>
+                  </li>;
+                })}
+              </ul>
+            </div>
           </div>
-          <div className="tst-hero-balance-grid">
-            {hero.items.map(([title, copy]) => <article key={title}><strong>{title}</strong><p>{copy}</p></article>)}
+          <div className="tst-hero-side">
+            <div className="tst-hero-carousel" aria-label={hero.featuredLabel}>
+              <div
+                className="tst-hero-carousel-track"
+                style={{ transform: `translateX(-${activeHeroReview * 100}%)` }}
+              >
+                {heroCarouselReviews.map((review) => (
+                  <article className="tst-hero-slide" key={review.name}>
+                    <div className="tst-hero-stars" aria-label={t("fiveStars")}>{[1,2,3,4,5].map(star => <FiStar key={star} />)}</div>
+                    <blockquote>{review.quote}</blockquote>
+                    <footer>
+                      <div>
+                        <strong>{review.name}</strong>
+                        <span><img src={review.flagSrc} alt="" aria-hidden="true" />{getCountryCode(review.flagSrc, review.country)} · {getManagerName(review.manager)}</span>
+                      </div>
+                      <small>{review.service}</small>
+                    </footer>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="tst-hero-side">
-        <div className="tst-hero-board">
-          <div className="tst-hero-carousel" aria-label={hero.featuredLabel}>
-            <div
-              className="tst-hero-carousel-track"
-              style={{ transform: `translateX(-${activeHeroReview * 100}%)` }}
+        <div className="tst-hero-theme-rail" role="tablist" aria-label={hero.balanceLabel}>
+          {hero.items.map(([title, copy], index) => {
+            const ThemeIcon = heroThemeIcons[index];
+            const isActive = index === activeHeroReview;
+            return <button
+              key={title}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              className={isActive ? "is-active" : ""}
+              onClick={() => setActiveHeroReview(index)}
             >
-              {heroCarouselReviews.map((review) => (
-                <article className="tst-hero-slide" key={review.name}>
-                  <div className="tst-hero-stars" aria-label={t("fiveStars")}>{[1,2,3,4,5].map(star => <FiStar key={star} />)}</div>
-                  <blockquote>{review.quote}</blockquote>
-                  <footer>
-                    <AvatarBadge name={review.name} src={review.avatar} eager />
-                    <div>
-                      <strong>{review.name}</strong>
-                      <span><img src={review.flagSrc} alt="" aria-hidden="true" />{review.country} · {review.manager}</span>
-                    </div>
-                    <small>{review.service}</small>
-                  </footer>
-                </article>
-              ))}
-            </div>
-            <div className="tst-hero-carousel-dots" role="tablist" aria-label={hero.switchLabel}>
-              {heroCarouselReviews.map((review, index) => (
-                <button
-                  key={review.name}
-                  type="button"
-                  className={index === activeHeroReview ? "is-active" : ""}
-                  aria-label={`Show story ${index + 1} from ${review.name}`}
-                  aria-pressed={index === activeHeroReview}
-                  onClick={() => setActiveHeroReview(index)}
-                />
-              ))}
-            </div>
-          </div>
-        <div className="tst-hero-board-row">
-          <article><small>{hero.mentioned}</small><strong>{hero.items[0][0]}</strong></article>
-          <article><small>{hero.usefulFor}</small><strong>{hero.firstWorkflow}</strong></article>
-        </div>
+              <span className="tst-hero-theme-icon"><ThemeIcon /></span>
+              <span className="tst-hero-theme-copy"><strong>{title}</strong><small>{copy}</small></span>
+              <span className="tst-hero-theme-index">0{index + 1}</span>
+            </button>;
+          })}
         </div>
       </div>
     </section>
@@ -187,6 +172,20 @@ export default function TestimonialsRedesign() {
       </div>
     </section>
 
-    <section className="tst-final"><div className="tst-container"><div><p className="tst-kicker">{final.kicker}</p><h2>{final.title}</h2><p>{final.lead}</p></div><Link href="/contact" className="tst-button tst-button-light">{final.button} <FiMessageCircle /></Link></div></section>
+    <section className="tst-final">
+      <div className="tst-container tst-final-card">
+        <div className="tst-final-main">
+          <div className="tst-final-copy"><p className="tst-kicker">{final.kicker}</p><h2>{final.title}</h2><p>{final.lead}</p></div>
+          <Link href="/contact" className="tst-button tst-button-light">{final.button} <FiMessageCircle /></Link>
+        </div>
+        <div className="tst-final-scope" aria-label={hero.balanceLabel}>
+          {hero.proofs.map((item, index) => {
+            const Icon = [FiPackage, FiShield, FiTruck][index];
+            const title = Array.isArray(item) ? item[0] : item;
+            return <div key={title}><Icon aria-hidden="true" /><span>{title}</span><FiArrowRight aria-hidden="true" /></div>;
+          })}
+        </div>
+      </div>
+    </section>
   </main>;
 }

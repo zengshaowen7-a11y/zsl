@@ -25,12 +25,12 @@
     "fiveStars": "Ocena pięciogwiazdkowa",
     "hero": {
       "kicker": "RYNEK SELLERA",
-      "title": "Opowieści sprzedającego, jasne.",
-      "lead": "Wyraźne wsparcie, stałe zarządzanie zamówieniami i szybkie monitorowanie ze strony sprzedawców zespołów może rzeczywiście korzystać.",
+      "title": "Historie sprzedawców.",
+      "lead": "Jasne wsparcie, sprawna obsługa zamówień i szybkie odpowiedzi dla każdego sprzedawcy.",
       "proofs": [
-        "Wsparcie dla żywicy",
-        "Aktualizacje QC",
-        "Kontynuacja realizacji"
+        ["Wsparcie sourcingowe", "Pytania o produkt, opcje dostawców i wyceny pozostają połączone od pierwszego zapytania."],
+        ["Aktualizacje QC", "Notatki z kontroli, zdjęcia i punkty akceptacji pozostają widoczne przed dalszym ruchem towaru."],
+        ["Wsparcie fulfillment", "Pakowanie, wysyłka i wyjątki są prowadzone do końca przez jeden odpowiedzialny zespół."]
       ],
       "primary": "Uzyskaj bezpłatną wycenę",
       "secondary": "Opowieści o sprzedającym",

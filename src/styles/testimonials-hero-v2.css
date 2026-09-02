@@ -1,0 +1,580 @@
+/* Testimonials hero v2: one story, one review, one interactive evidence rail. */
+body main.tst-page.tst-page[class][class] section.tst-hero {
+  display: block !important;
+  min-height: 0 !important;
+  padding: clamp(64px, 7vw, 104px) 0 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-shell {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin: 0 auto !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-main {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) !important;
+  gap: clamp(40px, 5vw, 76px) !important;
+  align-items: center !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-copy {
+  display: block !important;
+  width: auto !important;
+  max-width: 500px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  animation: tstHeroV2Enter 680ms 80ms cubic-bezier(.22, 1, .36, 1) both !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-copy .tst-kicker {
+  margin: 0 0 18px !important;
+  color: #167449 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: .1em !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-copy h1 {
+  max-width: 10.5ch !important;
+  margin: 0 !important;
+  color: #102f27 !important;
+  font-size: clamp(38px, 3.35vw, 50px) !important;
+  font-weight: 820 !important;
+  line-height: .98 !important;
+  letter-spacing: -.045em !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-copy > p:not(.tst-kicker) {
+  max-width: 42ch !important;
+  margin: 24px 0 0 !important;
+  color: #53645d !important;
+  font-size: clamp(17px, 1.25vw, 19px) !important;
+  line-height: 1.62 !important;
+}
+
+@media (min-width: 1001px) {
+  body main.tst-page.tst-page[class][class] .tst-hero-copy h1 {
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-copy > p:not(.tst-kicker) {
+    width: 42ch !important;
+  }
+}
+
+body main.tst-page.tst-page[class][class] section.tst-hero .tst-actions {
+  display: flex !important;
+  gap: 12px !important;
+  margin: 30px 0 0 !important;
+}
+
+body main.tst-page.tst-page[class][class] section.tst-hero .tst-button {
+  min-height: 52px !important;
+  padding: 0 21px !important;
+  border-radius: 8px !important;
+  white-space: nowrap !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note {
+  max-width: 480px !important;
+  margin-top: 38px !important;
+  padding-top: 22px !important;
+  border-top: 1px solid rgba(22, 116, 73, .18) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note > strong {
+  display: block !important;
+  margin-bottom: 15px !important;
+  color: #284a3d !important;
+  font-size: 14px !important;
+  font-weight: 820 !important;
+  line-height: 1.35 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 11px 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  color: #5b6f66 !important;
+  font-size: 13px !important;
+  font-weight: 720 !important;
+  line-height: 1.4 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li svg {
+  flex: 0 0 auto !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: #167449 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-side {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  align-self: center !important;
+  animation: tstHeroV2Enter 680ms 180ms cubic-bezier(.22, 1, .36, 1) both !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-carousel {
+  position: relative !important;
+  min-height: 396px !important;
+  border: 1px solid rgba(22, 116, 73, .18) !important;
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, .88) !important;
+  box-shadow: 0 28px 70px rgba(11, 41, 32, .12) !important;
+  overflow: hidden !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-carousel::before {
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  z-index: 2 !important;
+  width: 5px !important;
+  content: "" !important;
+  background: #167449 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-carousel-track {
+  display: flex !important;
+  min-height: 396px !important;
+  transition: transform 520ms cubic-bezier(.22, 1, .36, 1) !important;
+  will-change: transform !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide {
+  display: flex !important;
+  flex: 0 0 100% !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  min-width: 100% !important;
+  min-height: 396px !important;
+  padding: clamp(34px, 4vw, 54px) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-stars {
+  display: flex !important;
+  gap: 5px !important;
+  color: #f2b84b !important;
+  font-size: 20px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide blockquote {
+  max-width: 28ch !important;
+  margin: 30px 0 34px !important;
+  color: #173a31 !important;
+  font-size: clamp(19px, 1.65vw, 24px) !important;
+  font-weight: 520 !important;
+  line-height: 1.45 !important;
+  letter-spacing: -.018em !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  gap: 14px !important;
+  align-items: center !important;
+  padding-top: 22px !important;
+  border-top: 1px solid rgba(22, 116, 73, .14) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer > div {
+  display: grid !important;
+  gap: 4px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer span {
+  color: #6c7c75 !important;
+  font-size: 13px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer img {
+  display: inline-block !important;
+  width: 20px !important;
+  margin-right: 7px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer small {
+  padding: 7px 11px !important;
+  border: 1px solid rgba(22, 116, 73, .18) !important;
+  border-radius: 999px !important;
+  color: #167449 !important;
+  background: #e8f7ee !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  margin-top: 22px !important;
+  border: 1px solid rgba(22, 116, 73, .16) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .72) !important;
+  box-shadow: 0 18px 44px rgba(11, 41, 32, .08) !important;
+  overflow: hidden !important;
+  animation: tstHeroV2Enter 680ms 280ms cubic-bezier(.22, 1, .36, 1) both !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) !important;
+  gap: 13px !important;
+  align-items: start !important;
+  min-height: 126px !important;
+  padding: 22px 18px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(22, 116, 73, .12) !important;
+  color: #173a31 !important;
+  background: transparent !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition: color 220ms ease, background-color 220ms ease !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:last-child {
+  border-right: 0 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button::after {
+  position: absolute !important;
+  right: 18px !important;
+  bottom: 0 !important;
+  left: 18px !important;
+  height: 3px !important;
+  content: "" !important;
+  border-radius: 999px 999px 0 0 !important;
+  background: #167449 !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+  transition: transform 260ms ease !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:hover,
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button.is-active {
+  background: rgba(217, 246, 231, .72) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button.is-active::after {
+  transform: scaleX(1) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:focus-visible {
+  z-index: 2 !important;
+  outline: 3px solid rgba(22, 116, 73, .32) !important;
+  outline-offset: -3px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-icon {
+  display: grid !important;
+  width: 38px !important;
+  height: 38px !important;
+  place-items: center !important;
+  border: 1px solid rgba(22, 116, 73, .16) !important;
+  border-radius: 10px !important;
+  color: #167449 !important;
+  background: rgba(255, 255, 255, .78) !important;
+  font-size: 18px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-copy {
+  display: grid !important;
+  gap: 7px !important;
+  padding-right: 14px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-copy strong {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-copy small {
+  color: #62746c !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-theme-index {
+  position: absolute !important;
+  top: 10px !important;
+  right: 12px !important;
+  color: rgba(22, 116, 73, .58) !important;
+  font-size: 9px !important;
+  font-weight: 900 !important;
+  letter-spacing: .08em !important;
+}
+
+@keyframes tstHeroV2Enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1000px) {
+  body main.tst-page.tst-page[class][class] .tst-hero-main {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-copy {
+    max-width: 660px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-copy h1 {
+    max-width: 14ch !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:nth-child(2) {
+    border-right: 0 !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(22, 116, 73, .12) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body main.tst-page.tst-page[class][class] section.tst-hero {
+    padding: 54px 0 !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-shell {
+    width: min(100% - 32px, 1180px) !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-copy h1 {
+    font-size: clamp(34px, 10vw, 42px) !important;
+  }
+
+  body main.tst-page.tst-page[class][class] section.tst-hero .tst-actions {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  body main.tst-page.tst-page[class][class] section.tst-hero .tst-button {
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-proof-note ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-carousel,
+  body main.tst-page.tst-page[class][class] .tst-hero-carousel-track,
+  body main.tst-page.tst-page[class][class] .tst-hero-slide {
+    min-height: 430px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-slide {
+    padding: 30px 25px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
+    grid-template-columns: auto minmax(0, 1fr) !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-slide footer small {
+    grid-column: 2 !important;
+    justify-self: start !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button,
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:nth-child(2) {
+    min-height: 106px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(22, 116, 73, .12) !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button:last-child {
+    border-bottom: 0 !important;
+  }
+}
+
+/* Compact author metadata across every testimonial card. */
+body main.tst-page.tst-page[class][class] .tst-review footer,
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 14px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-review footer > div,
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer > div {
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  justify-self: start !important;
+  align-self: center !important;
+  text-align: left !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-review footer span,
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer span:not(.tst-avatar) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  white-space: nowrap !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-review footer span img,
+body main.tst-page.tst-page[class][class] .tst-hero-slide footer span img {
+  width: 19px !important;
+  height: 13px !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 600px) {
+  body main.tst-page.tst-page[class][class] .tst-review footer,
+  body main.tst-page.tst-page[class][class] .tst-hero-slide footer {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-review footer small,
+  body main.tst-page.tst-page[class][class] .tst-hero-slide footer small {
+    grid-column: 1 !important;
+    justify-self: start !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body main.tst-page.tst-page[class][class] .tst-hero-copy,
+  body main.tst-page.tst-page[class][class] .tst-hero-side,
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail {
+    animation: none !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-carousel-track,
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button,
+  body main.tst-page.tst-page[class][class] .tst-hero-theme-rail button::after {
+    transition: none !important;
+  }
+}
+
+/* Compact service-assurance panel beneath the hero actions. */
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note {
+  position: relative !important;
+  max-width: 500px !important;
+  margin-top: 34px !important;
+  padding: 20px 20px 18px 24px !important;
+  border: 1px solid rgba(22, 116, 73, .15) !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .68), rgba(232, 246, 238, .72)) !important;
+  box-shadow: 0 16px 38px rgba(18, 78, 55, .06) !important;
+  overflow: hidden !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note::before {
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  width: 4px !important;
+  background: linear-gradient(180deg, #167449, #56bb87) !important;
+  content: "" !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note > strong {
+  margin-bottom: 14px !important;
+  color: #173f32 !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+  letter-spacing: .01em !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note ul {
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li {
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding: 13px 15px !important;
+  border: 1px solid rgba(22, 116, 73, .12) !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, .74) !important;
+  color: #415c51 !important;
+  font-size: 12px !important;
+  font-weight: 760 !important;
+  line-height: 1.42 !important;
+  box-shadow: 0 5px 14px rgba(11, 41, 32, .035) !important;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li:hover {
+  border-color: rgba(22, 116, 73, .28) !important;
+  box-shadow: 0 9px 20px rgba(11, 41, 32, .07) !important;
+  transform: translateY(-2px) !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li svg {
+  width: 19px !important;
+  height: 19px !important;
+  padding: 4px !important;
+  border-radius: 50% !important;
+  background: #dff3e8 !important;
+  color: #167449 !important;
+  stroke-width: 3 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li > span {
+  display: block !important;
+  min-width: 0 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li strong,
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li small {
+  display: block !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li strong {
+  color: #244d3d !important;
+  font-size: 13px !important;
+  font-weight: 820 !important;
+  line-height: 1.3 !important;
+}
+
+body main.tst-page.tst-page[class][class] .tst-hero-proof-note li small {
+  margin-top: 4px !important;
+  color: #687b73 !important;
+  font-size: 11px !important;
+  font-weight: 570 !important;
+  line-height: 1.45 !important;
+}
+
+@media (max-width: 600px) {
+  body main.tst-page.tst-page[class][class] .tst-hero-proof-note {
+    max-width: none !important;
+    padding: 18px !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-proof-note ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main.tst-page.tst-page[class][class] .tst-hero-proof-note li {
+    min-height: 0 !important;
+  }
+}

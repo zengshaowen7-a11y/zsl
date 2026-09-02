@@ -58,6 +58,7 @@
     "firstStepKicker": "YOUR FIRST STEP",
     "firstStepTitle": "Start with one product.",
     "firstStepLead": "Tell us what you sell, where you ship and what needs to work better. Our team will recommend the next practical step.",
+    "firstStepItems": ["Product link", "Destination markets", "Current bottleneck"],
     "talkToTeam": "Talk to Our Team"
   },
   "ContactForm": {

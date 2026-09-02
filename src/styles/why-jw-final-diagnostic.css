@@ -1,0 +1,118 @@
+/* Design / Garden / Taste: an interactive closing decision instead of a static CTA strip. */
+body main.wjw-page.wjw-page[class][class] section.wjw-final.wjw-final {
+  padding-block:clamp(64px,7vw,104px) !important;
+  border-top:1px solid rgba(22,116,73,.14) !important;
+}
+
+body main.wjw-page.wjw-page[class][class] .wjw-final-diagnostic {
+  container-type:inline-size;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.18fr) minmax(350px,.82fr);
+  gap:0 !important;
+  overflow:hidden;
+  padding:0 !important;
+  border:1px solid rgba(22,116,73,.16) !important;
+  border-left:0 !important;
+  border-radius:16px !important;
+  background:rgba(248,253,250,.78) !important;
+  box-shadow:0 28px 70px rgba(11,41,32,.1) !important;
+}
+
+.wjw-final-intro { padding:clamp(30px,4cqw,52px) clamp(28px,4.7cqw,64px) 26px; }
+.wjw-final-intro .wjw-kicker { margin-bottom:16px !important; }
+body main.wjw-page.wjw-page[class][class] section.wjw-final.wjw-final .wjw-final-intro h2 {
+  max-width:660px;
+  margin:0 !important;
+  color:#152e24 !important;
+  font-size:clamp(30px,3.25cqw,44px) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.025em !important;
+}
+.wjw-final-intro > p:last-child { max-width:690px !important; margin:20px 0 0 !important; color:#536b60 !important; font-size:16px !important; line-height:1.65 !important; }
+
+.wjw-final-options {
+  grid-column:1;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1px;
+  margin:0 clamp(28px,4.7cqw,64px) clamp(30px,4cqw,52px);
+  overflow:hidden;
+  border:1px solid rgba(22,116,73,.16);
+  border-radius:12px;
+  background:rgba(22,116,73,.12);
+}
+.wjw-final-options button {
+  min-width:0;
+  min-height:70px;
+  display:grid;
+  grid-template-columns:36px minmax(0,1fr);
+  align-items:center;
+  gap:11px;
+  padding:13px 16px;
+  border:0;
+  background:rgba(255,255,255,.9);
+  color:#315346;
+  text-align:left;
+  cursor:pointer;
+  transition:background-color 220ms ease,color 220ms ease,transform 220ms cubic-bezier(.16,1,.3,1);
+}
+.wjw-final-options button:hover { background:#f0faf4; }
+.wjw-final-options button:active { transform:scale(.985); }
+.wjw-final-options button:focus-visible { position:relative; z-index:1; outline:3px solid rgba(22,116,73,.28); outline-offset:-3px; }
+.wjw-final-options button.is-active { background:#dff5e8; color:#0e6840; }
+.wjw-final-options button svg { width:19px; height:19px; }
+.wjw-final-options button span { overflow:hidden; font-size:13px; font-weight:800; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+
+.wjw-final-answer {
+  grid-column:2;
+  grid-row:1 / span 2;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:clamp(28px,3.7cqw,48px);
+  border-left:1px solid rgba(22,116,73,.16);
+  background:linear-gradient(145deg,#fbfdfc,#f0f6f3);
+  color:#17392c;
+}
+.wjw-final-answer-copy { display:grid; grid-template-columns:48px minmax(0,1fr); gap:18px; align-items:start; }
+.wjw-final-answer-copy > span { width:48px; height:48px; display:grid; place-items:center; border:1px solid rgba(22,116,73,.16); border-radius:12px; background:#e7f4ed; color:#167449; }
+.wjw-final-answer-copy svg { width:21px; height:21px; }
+.wjw-final-answer-copy strong { display:block; color:#17392c; font-size:clamp(20px,2cqw,28px); line-height:1.16; text-wrap:balance; }
+.wjw-final-answer-copy p { margin:14px 0 0; color:#5a7167; font-size:14px; line-height:1.65; }
+body main.wjw-page.wjw-page[class][class] .wjw-final-answer .wjw-button {
+  width:100% !important;
+  margin:40px 0 0 !important;
+  border-color:#167449 !important;
+  background:#167449 !important;
+  color:#fff !important;
+  white-space:nowrap;
+}
+.wjw-final-answer .wjw-button:hover { border-color:#0f5d39 !important; background:#0f5d39 !important; color:#fff !important; }
+.wjw-final-answer .wjw-button:active { transform:translateY(1px) scale(.99); }
+
+@media (prefers-reduced-motion:no-preference) {
+  .wjw-final-answer-copy { animation:wjw-final-answer-in 420ms cubic-bezier(.16,1,.3,1) both; }
+  @keyframes wjw-final-answer-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+}
+
+@media (max-width:900px) {
+  body main.wjw-page.wjw-page[class][class] .wjw-final-diagnostic { grid-template-columns:1fr; }
+  .wjw-final-options { grid-column:1; }
+  .wjw-final-answer { grid-column:1; grid-row:auto; border-top:1px solid rgba(22,116,73,.16); border-left:0; }
+}
+
+@media (max-width:540px) {
+  body main.wjw-page.wjw-page[class][class] section.wjw-final.wjw-final { padding-block:56px !important; }
+  body main.wjw-page.wjw-page[class][class] .wjw-final-diagnostic { border-radius:12px !important; }
+  .wjw-final-intro { padding:26px 20px 22px; }
+  .wjw-final-options { grid-template-columns:1fr; margin:0 20px 26px; }
+  .wjw-final-answer { padding:28px 20px; }
+  .wjw-final-options button span { white-space:normal; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .wjw-final-diagnostic *,
+  .wjw-final-diagnostic *::before,
+  .wjw-final-diagnostic *::after { animation:none !important; transition:none !important; }
+}

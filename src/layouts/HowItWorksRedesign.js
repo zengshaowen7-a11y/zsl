@@ -2,11 +2,14 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import PreparationEntrance from "./components/PreparationEntrance";
+import PreparationChecklist from "./components/PreparationChecklist";
+import ExceptionDecisionScene from "./components/ExceptionDecisionScene";
+import FinalQuoteLauncher from "./components/FinalQuoteLauncher";
 import ApprovalEntrance from "./components/ApprovalEntrance";
+import HowItWorksTrackSelector from "./components/HowItWorksTrackSelector";
 import {
   FiArrowRight,
   FiCheck,
-  FiCheckCircle,
   FiClipboard,
   FiPackage,
   FiSearch,
@@ -17,10 +20,7 @@ import {
 
 export default function HowItWorksRedesign() {
   const t = useTranslations("HowItWorks");
-  const startingIcons = [FiSearch, FiSend, FiClipboard, FiShield];
   const stageIcons = [FiSend, FiSearch, FiShield, FiPackage, FiTruck];
-  const trackIcons = [FiSearch, FiClipboard, FiTruck];
-  const exceptionIcons = [FiShield, FiClipboard, FiCheckCircle];
   const startingDetails = t.raw("startingDetails");
   const stages = t.raw("stages");
   const checkpoints = t.raw("checkpoints");
@@ -94,17 +94,9 @@ export default function HowItWorksRedesign() {
             <p className="hiw-kicker">{start.kicker}</p>
             <h2 id="preparation-title">{start.title}</h2>
             <p className="hiw-brief-lead">{start.lead}</p>
+            <div className="hiw-brief-progress" aria-hidden="true"><span>01 / 04</span><i /></div>
           </header>
-          <ul className="hiw-brief-list">
-            {startingDetails.map(({ title, copy }, index) => {
-              const Icon = startingIcons[index];
-              return <li key={title} data-preparation-reveal style={{ "--preparation-delay": `${index * 100}ms` }}>
-                <Icon aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </li>;
-            })}
-          </ul>
+          <PreparationChecklist items={startingDetails} />
         </PreparationEntrance>
       </section>
 
@@ -147,37 +139,12 @@ export default function HowItWorksRedesign() {
         </ApprovalEntrance>
       </section>
 
-      <section className="hiw-tracks">
-        <div className="hiw-container">
-          <header className="hiw-heading"><div><p className="hiw-kicker">{tracks.kicker}</p><h2>{tracks.title}</h2></div><p>{tracks.lead}</p></header>
-          <div className="hiw-track-grid">
-            {tracks.items.map((item, index) => { const Icon = trackIcons[index]; return <article key={item.title}><Icon /><p className="hiw-kicker">{item.kicker}</p><h3>{item.title}</h3><p>{item.copy}</p><Link href={item.href}>{item.link} <FiArrowRight /></Link></article>; })}
-          </div>
-        </div>
+      <section className="hiw-tracks" id="current-stage" aria-labelledby="current-stage-title">
+        <HowItWorksTrackSelector content={tracks} />
       </section>
 
       <section className="hiw-exceptions">
-        <div className="hiw-container hiw-exception-grid">
-          <div className="hiw-exception-media">
-            <Image src="/images/generated/jw-qc-inspection-v3.png" alt={exceptions.imageAlt} fill sizes="(max-width: 850px) 100vw, 48vw" />
-            <div className="hiw-exception-status" aria-hidden="true">
-              <span>{exceptions.statusLabel}</span>
-              <strong>{exceptions.status}</strong>
-            </div>
-          </div>
-          <div className="hiw-exception-copy">
-            <p className="hiw-kicker">{exceptions.kicker}</p>
-            <h2>{exceptions.title}</h2>
-            <p>{exceptions.lead}</p>
-            <div className="hiw-exception-flow">
-              {exceptions.steps.map(([title, copy], index) => { const Icon = exceptionIcons[index]; return <article key={title}><Icon /><span>{String(index + 1).padStart(2, "0")}</span><strong>{title}</strong><p>{copy}</p></article>; })}
-            </div>
-            <div className="hiw-exception-note">
-              <span>{exceptions.queue}</span>
-              <strong>{exceptions.queueStatus}</strong>
-            </div>
-          </div>
-        </div>
+        <ExceptionDecisionScene content={exceptions} />
       </section>
 
       <section className="hiw-faq">
@@ -188,19 +155,7 @@ export default function HowItWorksRedesign() {
       </section>
 
       <section className="hiw-final">
-        <div className="hiw-container">
-          <div className="hiw-final-copy">
-            <p className="hiw-kicker">{final.kicker}</p>
-            <h2>{final.title}</h2>
-            <p>{final.lead}</p>
-          </div>
-          <div className="hiw-final-guide" aria-hidden="true">
-            <span>{final.product}</span>
-            <i />
-            <span>{final.quote}</span>
-          </div>
-          <Link href="/contact" className="hiw-button hiw-button-light">{final.button} <FiArrowRight /></Link>
-        </div>
+        <FinalQuoteLauncher content={final} />
       </section>
     </main>
   );

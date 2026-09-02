@@ -25,12 +25,12 @@
     "fiveStars": "Vijf sterren overzicht",
     "hero": {
       "kicker": "SELLER STORIES",
-      "title": "Verhalen verkopen, duidelijk gemaakt.",
-      "lead": "Duidelijke ondersteuning, stabiele ordebehandeling en snelle follow-up van een team verkopers kunnen eigenlijk gebruiken.",
+      "title": "Verkopers vertellen.",
+      "lead": "Heldere support, betrouwbare orderverwerking en snelle antwoorden voor iedere verkoper.",
       "proofs": [
-        "Ondersteuning zoeken",
-        "QC-updates",
-        "Fulfillment follow-up"
+        ["Sourcingondersteuning", "Productvragen, leveranciersopties en offertes blijven vanaf de eerste aanvraag met elkaar verbonden."],
+        ["QC-updates", "Inspectienotities, foto's en goedkeuringsmomenten blijven zichtbaar voordat goederen verdergaan."],
+        ["Fulfillmentbegeleiding", "Verpakking, verzending en uitzonderingen worden tot afronding gevolgd door één verantwoordelijk team."]
       ],
       "primary": "Vraag een gratis offerte aan",
       "secondary": "Lees Verhalen van de Verkoper",

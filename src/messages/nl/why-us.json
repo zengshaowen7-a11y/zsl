@@ -47,19 +47,23 @@
     "supportCards": [
       [
         "Eén duidelijk contact",
-        "Product, QC en verzending context blijft met één account lood."
+        "Eén contactpersoon volgt de order van de eerste productvraag tot leverancier, QC, verpakking en verzending.",
+        [["Eigenaarschap", "Eén vast aanspreekpunt"], ["Context", "Van product tot pakket"], ["Resultaat", "Minder herhaling"]]
       ],
       [
         "Risico vroeg gecontroleerd",
-        "Monsters, voorraad- en verpakkingsdetails worden beoordeeld voordat het volume beweegt."
+        "Monsters, voorraad, varianten en verpakking worden gecontroleerd voordat grotere volumes bewegen.",
+        [["Controle", "Monsters en varianten"], ["Moment", "Voor grotere volumes"], ["Resultaat", "Eerdere beslissingen"]]
       ],
       [
         "Gedeelde ordernotities",
-        "Goedkeuringen, uitzonderingen en eisen blijven gedocumenteerd voor herhaalde werkzaamheden."
+        "Goedkeuringen, uitzonderingen en verpakkingseisen blijven aan de order gekoppeld.",
+        [["Dossier", "Goedkeuringen en uitzonderingen"], ["Toegang", "Gedeeld met het team"], ["Resultaat", "Herhaalbare uitvoering"]]
       ],
       [
         "Klaar om te vervullen",
-        "SKU regels, verpakking en tracking handoff zijn voorbereid voor de schaal."
+        "Goedgekeurde SKU-regels, verpakkingsinstructies en tracking vormen een schaalbare magazijnworkflow.",
+        [["Regels", "SKU en verpakking"], ["Overdracht", "Magazijn naar tracking"], ["Resultaat", "Klaar om te schalen"]]
       ]
     ],
     "fitItems": [
@@ -111,9 +115,17 @@
     "compare": {
       "kicker": "EEN DUIDELIJK BEDRIJFSMODEL",
       "title": "Minder jagen. Meer zichtbaar eigendom.",
-      "lead": "Het verschil is niet langer een servicelijst. Het is hoe beslissingen en handoffs verbonden blijven rond hetzelfde product en bestelling.",
+      "lead": "Beslissingen en overdrachten blijven gekoppeld aan hetzelfde product en dezelfde bestelling.",
       "typical": "Typisch zuurmiddel",
-      "jw": "JW Dropshipping"
+      "jw": "JW Dropshipping",
+      "details": [
+        ["Updates van leveranciers staan verspreid over losse chats, waardoor uw team de context opnieuw moet samenstellen.", "Eén verantwoordelijke contactpersoon houdt product-, kwaliteits- en verzendbeslissingen verbonden."],
+        ["Prijzen komen zonder dezelfde productbrief binnen, waardoor opties moeilijk eerlijk te vergelijken zijn.", "Elke optie wordt getoetst aan dezelfde specificaties, aantallen en verpakkingseisen."],
+        ["Goederen kunnen doorgaan voordat afgesproken controles klaar zijn, waardoor vermijdbare fouten klantklachten worden.", "QC-controlepunten bevestigen het benodigde bewijs voordat voorraad of orders verdergaan."],
+        ["Verpakkingskeuzes worden per order gemaakt en zorgen voor een wisselende klantervaring.", "Goedgekeurde merk- en verpakkingsregels worden herhaalbare magazijninstructies."],
+        ["Magazijn- en verzendupdates komen van aparte teams zonder gedeeld operationeel overzicht.", "Eén verbonden workflow bewaart de ordercontext van ontvangst tot definitieve verzending."],
+        ["Tracking verschijnt pas aan het einde, nadat uw team meerdere keren om de status heeft gevraagd.", "Gestructureerde verzend- en uitzonderingsupdates houden elke order voor en na verzending zichtbaar."]
+      ]
     },
     "principlesSection": {
       "kicker": "HOE MOET HET WERKEN MET JW VOELEN?",
@@ -150,7 +162,7 @@
     "support": {
       "kicker": "LEVENDE REKENINGSSTEUN",
       "title": "Eén overdracht per bestelling.",
-      "lead": "Uw primaire contactpersoon verbindt leveranciersvragen, magazijnacties en verzendupdates. Dat betekent minder herhaalde verklaringen en een duidelijker eigenaar wanneer iets een beslissing nodig heeft.",
+      "lead": "Eén contact verbindt beslissingen over leveranciers, magazijn en verzending.",
       "points": [
         "Een primair communicatiepunt",
         "Beslissingen en verpakkingsvoorschriften gedocumenteerd",

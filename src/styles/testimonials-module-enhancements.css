@@ -677,7 +677,7 @@ body main.tst-page.tst-page[class][class] .tst-faq-heading .tst-kicker {
 body main.tst-page.tst-page[class][class] .tst-faq-heading h2 {
   margin: 0 !important;
   color: #1f2937 !important;
-  font-size: 36px !important;
+  font-size: 32px !important;
   font-weight: 760 !important;
   line-height: 38.88px !important;
   letter-spacing: 0 !important;
@@ -837,7 +837,7 @@ body main.tst-page.tst-page[class][class] .tst-final > .tst-container {
   }
 
   body main.tst-page.tst-page[class][class] .tst-faq-heading h2 {
-    font-size: 34px !important;
+    font-size: 30px !important;
     line-height: 36.72px !important;
   }
 
@@ -1337,7 +1337,7 @@ body main.tst-page.tst-page[class][class] :is(
   section.tst-stories.tst-stories .tst-heading h2,
   section.tst-proof.tst-proof .tst-heading h2
 ) {
-  font-size: clamp(30px, 2.05vw, 36px) !important;
+  font-size: clamp(28px, 1.85vw, 32px) !important;
   line-height: 1.08 !important;
   font-weight: 760 !important;
 }
@@ -1348,7 +1348,7 @@ body main.tst-page.tst-page[class][class] :is(
     section.tst-stories.tst-stories .tst-heading h2,
     section.tst-proof.tst-proof .tst-heading h2
   ) {
-    font-size: 30px !important;
+    font-size: 28px !important;
   }
 }
 

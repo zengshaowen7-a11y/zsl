@@ -158,7 +158,7 @@ export default function FulfillmentHome({ lang = "en" }) {
     <main ref={homeRef} className="ff-site fh-home" data-jw-motion="playing">
       <HomeEntranceMotion rootRef={homeRef} locale={lang} paused={false} />
       <section className="ff-hero fh-hero-redesign jw-scene">
-        <BrandBackdrop variant="orbit" watermark eager motifs={["plane"]} />
+        <BrandBackdrop variant="orbit" />
         <div className="ff-hero-grid">
           <div className="ff-hero-copy-wrap">
             <span className="ff-kicker ff-kicker-light">
@@ -272,7 +272,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section className="ff-section fh-core-advantages jw-scene">
-        <BrandBackdrop variant="tiles" align="left" motifs={["parcel", "globe"]} tint="sand" />
+        <BrandBackdrop variant="tiles" align="left" tint="sand" />
         <div className="container">
           <div className="fh-core-heading">
             <span className="ff-kicker">{section.advantagesKicker}</span>
@@ -322,7 +322,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section id="process" className="ff-section ff-process fh-process-section fh-fixed-process jw-scene">
-        <BrandBackdrop motifs={["parcel", "plane"]} />
+        <BrandBackdrop />
         <div className="container">
           <div className="fh-section-heading fh-process-heading">
             <span className="ff-kicker">{section.processKicker}</span>
@@ -344,7 +344,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section id="services" className="ff-section ff-services fh-core-services jw-scene">
-        <BrandBackdrop variant="tiles" motifs={["layers", "parcel"]} tint="teal" />
+        <BrandBackdrop variant="tiles" tint="teal" />
         <div className="container">
           <div className="fh-section-heading fh-services-heading">
             <span className="ff-kicker">{section.servicesKicker}</span>
@@ -371,7 +371,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section className="fh-fulfillment-compare jw-scene">
-        <BrandBackdrop variant="orbit" motifs={["globe"]} />
+        <BrandBackdrop variant="orbit" />
         <div className="container fh-fulfillment-compare-heading">
           <span className="ff-kicker">{section.differenceKicker}</span>
           <h2>{section.differenceTitle}</h2>
@@ -395,7 +395,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section className="fh-qc-proof jw-scene">
-        <BrandBackdrop variant="scan" motifs={["shield", "parcel"]} tint="blue" />
+        <BrandBackdrop variant="scan" tint="blue" />
         <div className="container fh-qc-proof-heading">
           <span className="ff-kicker">{section.qualityKicker}</span>
           <h2>{section.qualityTitle}</h2>
@@ -432,7 +432,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section className="fh-home-testimonials jw-scene" aria-labelledby="home-testimonials-title">
-        <BrandBackdrop variant="ripple" align="left" motifs={["message"]} tint="teal" />
+        <BrandBackdrop variant="ripple" align="left" tint="teal" />
         <div className="container">
           <div className="fh-home-testimonials-heading">
             <span className="ff-kicker">{section.feedbackKicker}</span>
@@ -458,7 +458,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section id="faq" className="fh-home-faq jw-scene">
-        <BrandBackdrop variant="ripple" motifs={["message", "plane"]} tint="blue" />
+        <BrandBackdrop variant="ripple" tint="blue" />
         <div className="container fh-home-faq-grid">
           <div className="fh-home-faq-intro">
             <span className="ff-kicker">{section.faqKicker}</span>
@@ -482,7 +482,7 @@ export default function FulfillmentHome({ lang = "en" }) {
       </section>
 
       <section id="quote" className="fh-home-quote jw-scene">
-        <BrandBackdrop align="left" globe motifs={["plane"]} />
+        <BrandBackdrop align="left" globe />
         <div className="container fh-home-quote-grid">
           <div className="fh-home-quote-copy">
             <span className="ff-kicker ff-kicker-light">{section.quoteKicker}</span>

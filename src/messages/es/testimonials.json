@@ -25,12 +25,12 @@
     "fiveStars": "Examen de cinco estrellas",
     "hero": {
       "kicker": "SELLER STORIES",
-      "title": "Historias de venta, claras.",
-      "lead": "Soporte claro, manejo constante de pedidos y seguimiento rápido de un vendedor de equipo puede realmente utilizar.",
+      "title": "Historias claras.",
+      "lead": "Soporte claro, pedidos bien gestionados y respuestas rápidas para cada vendedor.",
       "proofs": [
-        "Apoyo a la explotación",
-        "Actualizaciones QC",
-        "Seguimiento del Fulfillment"
+        ["Apoyo de sourcing", "Las consultas de producto, opciones de proveedores y cotizaciones permanecen conectadas desde la primera solicitud."],
+        ["Actualizaciones de QC", "Las notas de inspección, fotos y puntos de aprobación siguen visibles antes de mover la mercancía."],
+        ["Seguimiento de fulfillment", "El embalaje, el despacho y las excepciones de envío se acompañan hasta el final por un equipo responsable."]
       ],
       "primary": "Solicita un presupuesto gratuito",
       "secondary": "Lea las historias del vendedor",

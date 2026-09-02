@@ -47,19 +47,23 @@
     "supportCards": [
       [
         "Un contact clair",
-        "Produit, QC et le contexte d'expédition restent avec un seul compte."
+        "Un interlocuteur suit la commande de la première question produit jusqu'au fournisseur, au QC, à l'emballage et à l'expédition.",
+        [["Responsabilité", "Un interlocuteur dédié"], ["Contexte", "Du produit au colis"], ["Résultat", "Moins de répétitions"]]
       ],
       [
         "Risque vérifié rapidement",
-        "Les échantillons, le stock et les détails d'emballage sont examinés avant le déplacement du volume."
+        "Les échantillons, le stock, les variantes et l'emballage sont vérifiés avant le passage au volume.",
+        [["Contrôle", "Échantillons et variantes"], ["Étape", "Avant le volume"], ["Résultat", "Décisions plus tôt"]]
       ],
       [
         "Notes de commande partagées",
-        "Les approbations, exceptions et exigences demeurent documentées pour les travaux répétés."
+        "Les validations, exceptions et exigences d'emballage restent liées à la commande.",
+        [["Suivi", "Validations et exceptions"], ["Accès", "Partagé avec l'équipe"], ["Résultat", "Exécution répétable"]]
       ],
       [
         "Prêt à remplir",
-        "Les règles SKU, l'emballage et le suivi sont préparés avant l'échelle."
+        "Les règles SKU, les instructions d'emballage et le suivi deviennent un processus prêt à évoluer.",
+        [["Règles", "SKU et emballage"], ["Relais", "Entrepôt au suivi"], ["Résultat", "Prêt à évoluer"]]
       ]
     ],
     "fitItems": [
@@ -111,9 +115,17 @@
     "compare": {
       "kicker": "UN MODÈLE D'EXPLOITATION DE CLEARER",
       "title": "Moins de poursuite. Plus de propriété visible.",
-      "lead": "La différence n'est pas une liste de services plus longue. C'est ainsi que les décisions et les retraits restent connectés autour du même produit et de la même commande.",
+      "lead": "Les décisions et les relais restent liés au même produit et à la même commande.",
       "typical": "Agent d'approvisionnement type",
-      "jw": "Autres"
+      "jw": "JW Dropshipping",
+      "details": [
+        ["Les informations fournisseur sont dispersées dans plusieurs conversations et votre équipe doit reconstituer le contexte.", "Un interlocuteur responsable relie les décisions produit, qualité et expédition."],
+        ["Les prix arrivent sans cahier des charges commun, ce qui rend les offres difficiles à comparer équitablement.", "Chaque option est évaluée selon les mêmes spécifications, quantités et exigences d'emballage."],
+        ["Les marchandises peuvent avancer avant la fin des contrôles convenus et transformer des écarts évitables en réclamations.", "Les étapes de QC confirment les preuves requises avant de poursuivre le stock ou les commandes."],
+        ["L'emballage est décidé commande par commande, ce qui crée une expérience client irrégulière.", "Les règles de marque et d'emballage validées deviennent des instructions d'entrepôt répétables."],
+        ["Les mises à jour d'entrepôt et d'expédition viennent d'équipes séparées sans vue opérationnelle commune.", "Un processus connecté conserve le contexte de la commande de la réception à l'expédition finale."],
+        ["Le suivi n'apparaît qu'à la fin, après de nombreuses relances de votre équipe.", "Des mises à jour structurées sur l'expédition et les exceptions rendent chaque commande visible avant et après l'envoi."]
+      ]
     },
     "principlesSection": {
       "kicker": "QU'EST-CE QUE LE TRAVAIL AVEC JW PEUT REVENIR",
@@ -150,7 +162,7 @@
     "support": {
       "kicker": "SOUTIEN AUX COMPTES VIVANTS",
       "title": "Une remise par commande.",
-      "lead": "Votre contact principal relie les questions des fournisseurs, les actions d'entrepôt et les mises à jour d'expédition. Cela signifie moins d'explications répétées et un propriétaire plus clair quand quelque chose a besoin d'une décision.",
+      "lead": "Un seul contact relie les décisions fournisseur, entrepôt et expédition.",
       "points": [
         "Un premier point de communication",
         "Décisions et règles d'emballage documentées",

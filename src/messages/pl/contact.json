@@ -86,6 +86,7 @@
     "firstStepKicker": "PIERWSZY KROK",
     "firstStepTitle": "Zacznij od jednego produktu.",
     "firstStepLead": "Powiedz nam, co sprzedajesz, gdzie wysyłasz i co musi działać lepiej. Nasz zespół zaleci kolejny praktyczny krok.",
+    "firstStepItems": ["Link do produktu", "Rynki docelowe", "Obecne ograniczenie"],
     "talkToTeam": "Porozmawiaj z naszym zespołem."
   },
   "ContactForm": {

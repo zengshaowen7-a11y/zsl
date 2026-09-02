@@ -47,19 +47,23 @@
     "supportCards": [
       [
         "Jeden wyraźny kontakt",
-        "Produkt, QC i kontekst wysyłki pozostaje z jednym kontem."
+        "Jedna osoba prowadzi zamówienie od pierwszego pytania przez dostawcę, QC i pakowanie aż po wysyłkę.",
+        [["Odpowiedzialność", "Jedna osoba kontaktowa"], ["Kontekst", "Od produktu do paczki"], ["Rezultat", "Mniej powtórzeń"]]
       ],
       [
         "Wczesna kontrola ryzyka",
-        "Dane dotyczące próbek, zapasów i pakowania są przeglądane przed przemieszczeniem objętości."
+        "Próbki, zapasy, warianty i opakowania są sprawdzane przed zwiększeniem wolumenu.",
+        [["Kontrola", "Próbki i warianty"], ["Moment", "Przed większym wolumenem"], ["Rezultat", "Wcześniejsze decyzje"]]
       ],
       [
         "Wspólne notatki o zamówieniach",
-        "Zatwierdzenia, wyjątki i wymagania pozostają udokumentowane do powtarzania pracy."
+        "Zatwierdzenia, wyjątki i wymagania dotyczące pakowania pozostają przypisane do zamówienia.",
+        [["Rejestr", "Zatwierdzenia i wyjątki"], ["Dostęp", "Wspólny dla zespołu"], ["Rezultat", "Powtarzalna realizacja"]]
       ],
       [
         "Gotowy do spełnienia",
-        "Reguły SKU, opakowania i przekaz śledzenia są przygotowywane przed skalą."
+        "Zatwierdzone reguły SKU, instrukcje pakowania i tracking tworzą proces gotowy do skalowania.",
+        [["Reguły", "SKU i opakowanie"], ["Przekazanie", "Magazyn do trackingu"], ["Rezultat", "Gotowe do skalowania"]]
       ]
     ],
     "fitItems": [
@@ -111,9 +115,17 @@
     "compare": {
       "kicker": "WZÓR OPERACYJNY",
       "title": "Mniej pościgu. Bardziej widoczna własność.",
-      "lead": "Różnica nie jest dłuższą listą usług. W ten sposób decyzje i przekazanie pozostają połączone wokół tego samego produktu i porządku.",
+      "lead": "Decyzje i przekazania pozostają powiązane z tym samym produktem i zamówieniem.",
       "typical": "Typowy środek źródłowy",
-      "jw": "JW Dropshipping"
+      "jw": "JW Dropshipping",
+      "details": [
+        ["Aktualizacje od dostawców są rozproszone w osobnych rozmowach, więc zespół musi sam odtwarzać kontekst.", "Jedna odpowiedzialna osoba łączy decyzje dotyczące produktu, jakości i wysyłki."],
+        ["Ceny przychodzą bez wspólnej specyfikacji produktu, przez co trudno rzetelnie porównać oferty.", "Każda opcja jest oceniana według tych samych specyfikacji, ilości i wymagań opakowaniowych."],
+        ["Towar może ruszyć dalej przed zakończeniem uzgodnionych kontroli, a możliwe do uniknięcia błędy stają się reklamacjami.", "Punkty kontroli QC potwierdzają wymagane dowody przed dalszą obsługą zapasu lub zamówień."],
+        ["Sposób pakowania jest ustalany osobno dla każdego zamówienia, co prowadzi do niespójnego doświadczenia klienta.", "Zatwierdzone zasady marki i pakowania stają się powtarzalnymi instrukcjami magazynowymi."],
+        ["Aktualizacje z magazynu i wysyłki pochodzą od oddzielnych zespołów bez wspólnego obrazu operacji.", "Jeden połączony proces zachowuje kontekst zamówienia od przyjęcia do końcowej wysyłki."],
+        ["Tracking pojawia się dopiero na końcu, po wielu pytaniach zespołu o status.", "Uporządkowane aktualizacje wysyłki i wyjątków zapewniają widoczność zamówienia przed wysyłką i po niej."]
+      ]
     },
     "principlesSection": {
       "kicker": "JAK POWINNA WYGLĄDAĆ PRACA Z JW",
@@ -150,7 +162,7 @@
     "support": {
       "kicker": "LIWE WSPARCIE FINANSOWE",
       "title": "Jedno przekazanie na zamówienie.",
-      "lead": "Twój główny kontakt łączy pytania dostawców, działań magazynowych i aktualizacji wysyłki. Oznacza to mniej powtarzających się wyjaśnień i jaśniejszego właściciela, gdy coś wymaga decyzji.",
+      "lead": "Jedna osoba łączy decyzje dostawców, magazynu i wysyłki.",
       "points": [
         "Jeden główny punkt komunikacji",
         "Udokumentowane decyzje i zasady pakowania",

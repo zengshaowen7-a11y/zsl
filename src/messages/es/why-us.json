@@ -47,19 +47,23 @@
     "supportCards": [
       [
         "Un contacto claro",
-        "El producto, QC y el contexto del envío se mantiene con una cuenta de plomo."
+        "Una persona acompaña el pedido desde la primera consulta hasta proveedores, QC, embalaje y envío.",
+        [["Responsable", "Un contacto principal"], ["Contexto", "Del producto al paquete"], ["Resultado", "Menos explicaciones repetidas"]]
       ],
       [
         "Riesgo comprobado",
-        "Se revisan muestras, acciones y detalles de embalaje antes de mover volumen."
+        "Las muestras, el stock, las variantes y el embalaje se revisan antes de mover grandes volúmenes.",
+        [["Revisión", "Muestras y variantes"], ["Momento", "Antes del volumen"], ["Resultado", "Decisiones más tempranas"]]
       ],
       [
         "Notas de orden compartido",
-        "Las aprobaciones, excepciones y requisitos permanecen documentados para trabajos repetidos."
+        "Las aprobaciones, excepciones y requisitos de embalaje permanecen vinculados al pedido.",
+        [["Registro", "Aprobaciones y excepciones"], ["Acceso", "Compartido con el equipo"], ["Resultado", "Ejecución repetible"]]
       ],
       [
         "Listo para cumplir",
-        "Las reglas SKU, embalaje y seguimiento se preparan antes de la escala."
+        "Las reglas de SKU, las instrucciones de embalaje y el seguimiento forman un flujo preparado para crecer.",
+        [["Reglas", "SKU y embalaje"], ["Traspaso", "Almacén a seguimiento"], ["Resultado", "Listo para escalar"]]
       ]
     ],
     "fitItems": [
@@ -111,9 +115,17 @@
     "compare": {
       "kicker": "UN MODELO OPERATIVO DE CLEAR",
       "title": "Menos persiguiendo. Más propiedad visible.",
-      "lead": "La diferencia no es una lista de servicios más larga. Es cómo las decisiones y los desvíos permanecen conectados alrededor del mismo producto y orden.",
+      "lead": "Las decisiones y los traspasos permanecen conectados al mismo producto y pedido.",
       "typical": "Típico agente de abastecimiento",
-      "jw": "JW Dropshipping"
+      "jw": "JW Dropshipping",
+      "details": [
+        ["Las novedades del proveedor quedan dispersas en distintos chats y el equipo debe reconstruir el contexto.", "Un contacto responsable mantiene conectadas las decisiones de producto, calidad y envío."],
+        ["Los precios llegan sin una ficha de producto común, lo que dificulta comparar las opciones con justicia.", "Cada opción se revisa con las mismas especificaciones, cantidades y requisitos de embalaje."],
+        ["La mercancía puede avanzar antes de completar los controles acordados y convertir errores evitables en reclamaciones.", "Los puntos de control de QC confirman las pruebas necesarias antes de continuar con el stock o los pedidos."],
+        ["El embalaje se decide pedido a pedido, creando una experiencia de cliente inconsistente.", "Las reglas aprobadas de marca y embalaje se convierten en instrucciones repetibles para el almacén."],
+        ["Las actualizaciones de almacén y envío llegan de equipos separados sin una visión operativa compartida.", "Un flujo conectado conserva el contexto del pedido desde la recepción hasta el despacho final."],
+        ["El seguimiento aparece solo al final, después de que el equipo haya tenido que perseguir actualizaciones.", "Las actualizaciones estructuradas de envíos y excepciones mantienen visible cada pedido antes y después del despacho."]
+      ]
     },
     "principlesSection": {
       "kicker": "LO QUE FUNCIONA CON JW DEBE SENTIRSE COMO",
@@ -150,7 +162,7 @@
     "support": {
       "kicker": "APOYO DE CUENTA",
       "title": "Una entrega por orden.",
-      "lead": "Su contacto primario conecta preguntas de proveedores, acciones de almacén y actualizaciones de envío. Eso significa menos explicaciones repetidas y un propietario más claro cuando algo necesita una decisión.",
+      "lead": "Un contacto conecta las decisiones de proveedores, almacén y envíos.",
       "points": [
         "Un punto de comunicación primario",
         "Decisiones y reglas de embalaje documentadas",

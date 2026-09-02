@@ -1,0 +1,122 @@
+/* Design / Garden / Taste: interactive two-step quote launcher.
+   Section atmosphere and global inline gutters remain unchanged. */
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final {
+  padding-block:clamp(46px,5vw,76px) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher {
+  container-type:inline-size;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr) !important;
+  grid-template-areas:"copy route" "copy action";
+  align-items:center !important;
+  gap:18px clamp(42px,6cqw,92px) !important;
+  min-height:310px;
+  padding:clamp(32px,4.4cqw,58px) !important;
+  overflow:hidden;
+  border:1px solid rgba(22,116,73,.14);
+  border-radius:18px;
+  background:linear-gradient(115deg,rgba(255,253,244,.76),rgba(255,255,255,.68) 46%,rgba(235,248,255,.7));
+  box-shadow:0 28px 74px rgba(11,41,32,.1);
+  backdrop-filter:blur(18px);
+}
+
+.hiw-final-launcher .hiw-final-copy { grid-area:copy; min-width:0; }
+.hiw-final-launcher .hiw-final-copy .hiw-kicker { margin-bottom:14px !important; }
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-copy h2 { max-width:none !important; margin:0 !important; color:#000 !important; font-size:clamp(28px,4.45cqw,32px) !important; line-height:1.12 !important; white-space:nowrap; }
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-copy > p:last-child { max-width:58ch !important; margin:18px 0 0 !important; color:#526a5f !important; font-size:15px !important; line-height:1.65 !important; }
+
+.hiw-final-route {
+  grid-area:route;
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(138px,1fr) minmax(56px,.44fr) minmax(138px,1fr);
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border:1px solid rgba(22,116,73,.13);
+  border-radius:14px;
+  background:rgba(255,255,255,.58);
+}
+
+.hiw-final-route button,
+.hiw-final-route-end {
+  min-width:0;
+  min-height:70px;
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr);
+  align-items:center;
+  gap:11px;
+  padding:10px 12px;
+  border:0;
+  border-radius:10px;
+  background:transparent;
+  color:#163e2d;
+  text-align:left;
+}
+
+.hiw-final-route button { cursor:pointer; transition:background-color 220ms ease,transform 220ms ease; }
+.hiw-final-route button:hover { background:rgba(229,249,237,.72); transform:translateY(-2px); }
+.hiw-final-route button:focus-visible { outline:3px solid rgba(22,116,73,.24); }
+.hiw-final-node-icon { width:38px; height:38px; display:grid; place-items:center; border:1px solid rgba(22,116,73,.14); border-radius:10px; background:#fff; color:#167449; transition:background-color 260ms ease,color 260ms ease,transform 260ms ease; }
+.hiw-final-node-icon svg { width:17px; height:17px; }
+.hiw-final-route small { display:block; margin-bottom:5px; color:#63917d; font-size:9px; font-weight:850; letter-spacing:.08em; }
+.hiw-final-route strong { display:block; overflow:hidden; color:#163e2d; font-size:13px; font-weight:820; line-height:1.25; text-overflow:ellipsis; white-space:nowrap; }
+
+.hiw-final-route-line { position:relative; height:2px; overflow:hidden; background:rgba(22,116,73,.18); }
+.hiw-final-route-line::before { position:absolute; top:50%; right:0; width:8px; height:8px; border-top:2px solid #167449; border-right:2px solid #167449; content:""; transform:translateY(-50%) rotate(45deg); }
+.hiw-final-route-line i { position:absolute; inset:0; width:45%; background:linear-gradient(90deg,transparent,#42b978,transparent); transform:translateX(-130%); }
+
+.hiw-final-launcher.is-ready .hiw-final-route button { background:rgba(220,246,231,.82); }
+.hiw-final-launcher.is-ready .hiw-final-route button .hiw-final-node-icon { background:#167449; color:#fff; transform:scale(1.05); }
+.hiw-final-launcher.is-ready .hiw-final-route-end .hiw-final-node-icon { background:#e2f7eb; transform:translateX(3px); }
+
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher > .hiw-button {
+  grid-area:action;
+  justify-self:end;
+  min-width:220px;
+  min-height:54px;
+  margin:0 !important;
+  border:0 !important;
+  border-radius:9px !important;
+  background:#167449 !important;
+  color:#fff !important;
+  box-shadow:0 16px 34px rgba(22,116,73,.18) !important;
+  transition:transform 220ms ease,box-shadow 220ms ease,background-color 220ms ease !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher > .hiw-button:hover { background:#0f5f3b !important; transform:translateY(-3px); box-shadow:0 20px 40px rgba(22,116,73,.25) !important; }
+body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher > .hiw-button:active { transform:translateY(-1px) scale(.985); }
+
+@media (prefers-reduced-motion:no-preference) {
+  .hiw-final-launcher[data-visible="true"] .hiw-final-copy { animation:final-copy-in 680ms cubic-bezier(.16,1,.3,1) both; }
+  .hiw-final-launcher[data-visible="true"] .hiw-final-route { animation:final-route-in 760ms cubic-bezier(.16,1,.3,1) 100ms both; }
+  .hiw-final-launcher[data-visible="true"] > .hiw-button { animation:final-action-in 620ms cubic-bezier(.16,1,.3,1) 280ms both; }
+  .hiw-final-launcher[data-visible="true"] .hiw-final-route-line i { animation:final-flow 2.6s ease-in-out 800ms infinite; }
+  .hiw-final-launcher.is-ready .hiw-final-route-line i { animation-duration:1.45s; }
+  @keyframes final-copy-in { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes final-route-in { from { opacity:0; transform:translateX(38px); } to { opacity:1; transform:translateX(0); } }
+  @keyframes final-action-in { from { opacity:0; transform:translateY(18px) scale(.97); } to { opacity:1; transform:translateY(0) scale(1); } }
+  @keyframes final-flow { 0% { transform:translateX(-130%); } 65%,100% { transform:translateX(330%); } }
+}
+
+@media (max-width:900px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher { grid-template-columns:minmax(0,1fr) !important; grid-template-areas:"copy" "route" "action"; gap:26px !important; }
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher > .hiw-button { justify-self:start; }
+}
+
+@media (max-width:560px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher { padding:28px 18px !important; border-radius:12px; }
+  .hiw-final-route { grid-template-columns:minmax(0,1fr); gap:8px; }
+  .hiw-final-route-line { width:2px; height:30px; justify-self:center; }
+  .hiw-final-route-line::before { top:auto; right:50%; bottom:0; transform:translateX(50%) rotate(135deg); }
+  .hiw-final-route button,.hiw-final-route-end { width:100%; }
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-launcher > .hiw-button { width:100%; min-width:0; justify-self:stretch; }
+  body main.hiw-page.hiw-page[class][class] section.hiw-final.hiw-final .hiw-final-copy h2 { white-space:normal; text-wrap:balance; }
+}
+
+@media (prefers-reduced-motion:reduce),print {
+  .hiw-final-launcher *,
+  .hiw-final-launcher *::before,
+  .hiw-final-launcher *::after { animation:none !important; transform:none !important; transition:none !important; }
+}

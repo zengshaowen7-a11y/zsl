@@ -11,6 +11,10 @@ import {
   FiX,
 } from "react-icons/fi";
 import WhyJWFactsRail from "./components/WhyJWFactsRail";
+import WhyJWCompareBoard from "./components/WhyJWCompareBoard";
+import QCEvidenceWorkbench from "./components/QCEvidenceWorkbench";
+import AccountSupportScene from "./components/AccountSupportScene";
+import FinalBottleneckCTA from "./components/FinalBottleneckCTA";
 
 export default function WhyJWRedesign() {
   const t = useTranslations("WhyUs");
@@ -61,8 +65,7 @@ export default function WhyJWRedesign() {
       <section className="wjw-compare" id="jw-difference">
         <div className="wjw-container">
           <header className="wjw-heading"><div><p className="wjw-kicker">{compare.kicker}</p><h2>{compare.title}</h2></div><p>{compare.lead}</p></header>
-          <div className="wjw-compare-head"><span>{compare.typical}</span><span>{compare.jw}</span></div>
-          <div className="wjw-compare-list">{comparisons.map(([typical, jw]) => <div key={typical}><p><FiX />{typical}</p><p><FiCheck />{jw}</p></div>)}</div>
+          <WhyJWCompareBoard comparisons={comparisons} details={compare.details} typicalLabel={compare.typical} jwLabel={compare.jw} />
         </div>
       </section>
 
@@ -74,43 +77,11 @@ export default function WhyJWRedesign() {
       </section>
 
       <section className="wjw-evidence">
-        <div className="wjw-container wjw-evidence-grid">
-          <div className="wjw-evidence-media">
-            <div className="wjw-evidence-shot">
-              <Image src="/images/generated/jw-qc-inspection-v3.png" alt={evidence.imageAltOne} fill sizes="(max-width: 850px) 100vw, 50vw" />
-            </div>
-            <div className="wjw-evidence-shot">
-              <Image src="/images/generated/jw-quality-check-v2.png" alt={evidence.imageAltTwo} fill sizes="(max-width: 850px) 100vw, 50vw" />
-            </div>
-          </div>
-          <div className="wjw-evidence-copy"><p className="wjw-kicker">{evidence.kicker}</p><h2>{evidence.title}</h2><p>{evidence.lead}</p>
-            <div className="wjw-report">
-              <div><span>{evidence.review}</span><strong>SKU: JW-1024</strong></div>
-              <dl>
-                <div><dt>{evidence.checked}</dt><dd>50 units</dd></div>
-                <div><dt>{evidence.sampling}</dt><dd>100%</dd></div>
-                <div><dt>{evidence.passed}</dt><dd>50</dd></div>
-                <div><dt>{evidence.issues}</dt><dd>0</dd></div>
-                <div><dt>{evidence.packaging}</dt><dd>{evidence.verified}</dd></div>
-                <div><dt>{evidence.barcode}</dt><dd>{evidence.matched}</dd></div>
-                <div className="wjw-report-status"><dt>{evidence.status}</dt><dd>{evidence.approved}</dd></div>
-              </dl>
-              <ul className="wjw-report-checks">
-                {evidence.checks.map((item) => <li key={item}><FiCheck /> {item}</li>)}
-              </ul>
-              <div className="wjw-report-progress"><span></span></div>
-              <p><strong>{evidence.passedCount}</strong><span>{evidence.issueCount}</span></p>
-            </div>
-            <Link href="/services/quality-control-inspection" className="wjw-text-link">{evidence.link} <FiArrowRight /></Link>
-          </div>
-        </div>
+        <QCEvidenceWorkbench content={evidence} />
       </section>
 
       <section className="wjw-support">
-        <div className="wjw-container wjw-support-grid">
-          <div><p className="wjw-kicker">{support.kicker}</p><h2>{support.title}</h2><p>{support.lead}</p><ul><li><FiMessageCircle /> {support.points[0]}</li><li><FiClipboard /> {support.points[1]}</li><li><FiCheckCircle /> {support.points[2]}</li></ul></div>
-          <div className="wjw-support-media"><Image src="/images/generated/jw-warehouse-team-v2.png" alt={support.imageAlt} fill sizes="(max-width: 850px) 100vw, 48vw" /></div>
-        </div>
+        <AccountSupportScene content={support} cards={heroSupportCards} />
       </section>
 
       <section className="wjw-fit">
@@ -122,7 +93,7 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-faq"><div className="wjw-container wjw-faq-grid"><div><p className="wjw-kicker">{faq.kicker}</p><h2>{faq.title}</h2><p>{faq.lead}</p></div><div className="wjw-accordion">{faqs.map(([q,a],index)=><details name="wjw-faq" key={q} open={index===0}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
 
-      <section className="wjw-final"><div className="wjw-container"><div><p className="wjw-kicker">{final.kicker}</p><h2>{final.title}</h2><p>{final.lead}</p></div><Link href="/contact" className="wjw-button wjw-button-light">{final.button} <FiArrowRight /></Link></div></section>
+      <section className="wjw-final"><FinalBottleneckCTA content={final} options={heroSupportCards} /></section>
     </main>
   );
 }

@@ -52,6 +52,7 @@ body main[class][class][class] section h2 {
 
 body main.fh-home[class][class] .fh-hero-title {
   font-size: clamp(28px, 4.45cqw, 32px) !important;
+  font-weight: 700 !important;
   line-height: 1.12 !important;
 }
 
@@ -65,74 +66,27 @@ body main.fh-home[class][class] section h2 {
   line-height: 1.08 !important;
 }
 
-.fh-home .fh-core-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-core-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-process-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-process-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-services-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-services-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-fulfillment-compare-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-fulfillment-compare-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-qc-proof-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-qc-proof-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-home-testimonials-heading {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-home-testimonials-heading h2 {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
-.fh-home .fh-home-quote-copy {
-  container-type: inline-size;
-}
-
-body main.fh-home[class][class] .fh-home-quote-title {
-  font-size: clamp(28px, 4.45cqw, 32px) !important;
-  line-height: 1.12 !important;
-}
-
+.fh-home .fh-core-heading,
+.fh-home .fh-process-heading,
+.fh-home .fh-services-heading,
+.fh-home .fh-fulfillment-compare-heading,
+.fh-home .fh-qc-proof-heading,
+.fh-home .fh-home-testimonials-heading,
+.fh-home .fh-home-quote-copy,
 .fh-home .fh-home-faq-intro {
   container-type: inline-size;
 }
 
-body main.fh-home[class][class] .fh-home-faq-intro h2 {
+body main.fh-home[class][class] :is(
+  .fh-core-heading h2,
+  .fh-process-heading h2,
+  .fh-services-heading h2,
+  .fh-fulfillment-compare-heading h2,
+  .fh-qc-proof-heading h2,
+  .fh-home-testimonials-heading h2,
+  .fh-home-quote-title,
+  .fh-home-faq-intro h2
+) {
   font-size: clamp(28px, 4.45cqw, 32px) !important;
   line-height: 1.12 !important;
 }

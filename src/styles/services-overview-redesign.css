@@ -2,6 +2,30 @@
 @media(max-width:1100px){.sov-card-grid{grid-template-columns:repeat(2,1fr)}.sov-proof-grid{gap:44px}.sov-process-grid{grid-template-columns:repeat(5,minmax(180px,1fr));overflow-x:auto}.sov-process-grid li{min-height:240px}.sov-quick-grid{grid-template-columns:repeat(2,1fr)}.sov-quick-grid a:nth-child(n){border-bottom:1px solid #e2e9e5}.sov-quick-grid a:nth-child(odd){border-left:1px solid #e2e9e5}}
 @media(max-width:767px){.sov-container{width:min(100% - 32px,1180px)}.sov-hero{min-height:0;grid-template-columns:1fr}.sov-hero-copy{padding:76px 20px 52px}.sov-hero h1{font-size:40px;line-height:1.08}.sov-hero-lead{font-size:16px}.sov-actions{display:grid}.sov-button{width:100%}.sov-hero-points{display:grid;gap:12px}.sov-hero-media{min-height:430px}.sov-quick-grid{grid-template-columns:1fr}.sov-quick-grid a:nth-child(n){border-right:1px solid #e2e9e5;border-left:1px solid #e2e9e5}.sov-section{padding:78px 0}.sov-heading{display:block;margin-bottom:34px}.sov-heading h2,.sov-proof-copy h2,.sov-faq h2,.sov-final h2{font-size:36px}.sov-heading>p{margin-top:18px}.sov-card-grid{grid-template-columns:1fr}.sov-card-body h3,.sov-card-body>p,.sov-card-body ul{min-height:0}.sov-process-grid{display:block;overflow:visible;border:0}.sov-process-grid li{min-height:0;padding:24px 0 24px 58px;border:0;border-left:1px solid #b8c9c0}.sov-process-grid li:first-child{border-left:1px solid #b8c9c0}.sov-step-top{position:absolute;left:-16px;top:22px;width:32px;height:32px;display:grid;place-items:center;margin:0;border:1px solid #a9bdb3;background:#fff}.sov-step-top svg{display:none}.sov-proof-grid{grid-template-columns:1fr;gap:46px}.sov-proof-media{min-height:430px}.sov-platform-row{grid-template-columns:1fr;gap:28px}.sov-platform-row ul{justify-content:flex-start}.sov-faq-grid{grid-template-columns:1fr;gap:40px}.sov-faq-grid>div:first-child{position:static}.sov-final-inner{display:block}.sov-final .sov-button{margin-top:30px}.sov-table-wrap{margin-right:-16px}.sov-final{padding:68px 0}}
 
+/* Keep service names compact and aligned across the four-column catalog. */
+body main.sov-page.sov-page[class][class] .sov-catalog .sov-card-body {
+  padding-inline: 16px;
+}
+
+body main.sov-page.sov-page[class][class] .sov-catalog .sov-card-body h3 {
+  min-width: 0;
+  min-height: 26px;
+  overflow: hidden;
+  font-size: clamp(15px, .82vw, 16px);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  body main.sov-page.sov-page[class][class] .sov-catalog .sov-card-body h3 {
+    min-height: 0;
+    font-size: 18px;
+    letter-spacing: 0;
+    white-space: normal;
+  }
+}
+
 /* Home-aligned services visual system */
 .sov-page{--page-bg:#d9f6e7;--ink:#1f2937;--line:rgba(22,116,73,.16);background:var(--page-bg);color:var(--ink)}
 .sov-hero{min-height:680px;gap:48px;padding:54px max(24px,calc((100vw - 1180px)/2));background:var(--page-bg)}

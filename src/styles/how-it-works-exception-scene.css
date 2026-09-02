@@ -1,0 +1,266 @@
+/* Design / Garden / Taste: an interactive exception decision scene.
+   The section atmosphere and global inline gutters remain inherited. */
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage {
+  container-type:inline-size;
+  display:grid !important;
+  grid-template-columns:minmax(360px,.92fr) minmax(0,1.08fr) !important;
+  align-items:stretch !important;
+  gap:0 !important;
+  overflow:hidden;
+  border:1px solid rgba(22,116,73,.14);
+  border-radius:18px;
+  background:rgba(255,255,255,.54);
+  box-shadow:0 28px 76px rgba(11,41,32,.1);
+  backdrop-filter:blur(16px);
+}
+
+@media (min-width:1100px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage {
+    width:min(1480px,calc(100% - 64px)) !important;
+  }
+
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-media {
+  position:relative;
+  min-height:650px !important;
+  overflow:hidden;
+  margin:0;
+  border-radius:0 !important;
+  background:#dcece3;
+}
+
+.hiw-exception-stage .hiw-exception-media img {
+  object-fit:cover;
+  transition:filter 500ms ease,transform 800ms cubic-bezier(.16,1,.3,1);
+}
+
+.hiw-exception-stage[data-active="1"] .hiw-exception-media img { filter:saturate(.86) contrast(1.02); transform:scale(1.02); }
+.hiw-exception-stage[data-active="2"] .hiw-exception-media img { filter:saturate(.72) contrast(1.08) brightness(.94); transform:scale(1.045) translateX(-1%); }
+.hiw-exception-stage[data-active="3"] .hiw-exception-media img { filter:saturate(1.04) contrast(1.03) brightness(1.03); transform:scale(1.025) translateY(-.5%); }
+
+.hiw-exception-scan {
+  position:absolute;
+  z-index:1;
+  inset:0;
+  overflow:hidden;
+  background:linear-gradient(180deg,transparent 0 55%,rgba(10,95,63,.13) 55.2%,transparent 55.8%);
+  background-size:100% 180%;
+  mix-blend-mode:multiply;
+  pointer-events:none;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-status {
+  position:absolute !important;
+  z-index:2;
+  right:24px !important;
+  bottom:24px !important;
+  left:24px !important;
+  display:grid !important;
+  grid-template-columns:auto minmax(0,1fr) !important;
+  align-items:center !important;
+  gap:22px !important;
+  min-height:68px;
+  padding:15px 18px !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  border-radius:12px !important;
+  background:rgba(9,48,36,.88) !important;
+  color:#fff !important;
+  backdrop-filter:blur(15px);
+}
+
+.hiw-exception-stage .hiw-exception-status span { color:#9ad9b5 !important; font-size:10px !important; font-weight:850 !important; letter-spacing:.09em !important; text-transform:uppercase; }
+.hiw-exception-stage .hiw-exception-status strong { min-width:0; color:#fff !important; font-size:15px !important; line-height:1.25 !important; text-align:right; text-wrap:pretty; }
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-copy {
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:clamp(34px,4.2cqw,58px) !important;
+  background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(241,250,246,.54));
+}
+
+.hiw-exception-heading { max-width:650px; }
+.hiw-exception-heading .hiw-kicker { margin-bottom:14px !important; }
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions:not(.hiw-hero) .hiw-exception-heading h2 { max-width:15ch !important; margin:0 !important; color:#000 !important; font-size:clamp(28px,4.45cqw,32px) !important; line-height:1.12 !important; text-wrap:balance !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-exception-heading > p:not(.hiw-kicker) { max-width:54ch !important; margin:17px 0 0 !important; color:#526a5f !important; font-size:15px !important; line-height:1.65 !important; }
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-flow {
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  gap:10px !important;
+  width:100% !important;
+  margin-top:28px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-flow article {
+  min-height:0 !important;
+  overflow:hidden;
+  padding:0 !important;
+  border:1px solid rgba(22,116,73,.13) !important;
+  border-radius:12px !important;
+  background:rgba(255,255,255,.66) !important;
+  box-shadow:none !important;
+  transition:background-color 220ms ease,border-color 220ms ease,transform 220ms ease !important;
+}
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-flow article.is-active { border-color:rgba(22,116,73,.3) !important; background:rgba(231,249,238,.86) !important; }
+
+.hiw-exception-flow button {
+  width:100%;
+  min-height:66px;
+  display:grid;
+  grid-template-columns:28px 38px minmax(0,1fr) 20px;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+  border:0;
+  background:transparent;
+  color:#163e2d;
+  text-align:left;
+  cursor:pointer;
+}
+
+.hiw-exception-flow button:focus-visible { outline:3px solid rgba(22,116,73,.24); outline-offset:-3px; }
+.hiw-exception-step { position:static !important; color:#167449 !important; font-size:10px !important; font-weight:850 !important; letter-spacing:.06em; }
+.hiw-exception-step-icon { width:36px; height:36px; display:grid; place-items:center; border-radius:9px; background:rgba(255,255,255,.76); color:#168254; }
+.hiw-exception-step-icon svg { width:18px !important; height:18px !important; padding:0 !important; }
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-flow button strong { margin:0 !important; color:#163e2d !important; font-size:17px !important; line-height:1.25 !important; }
+.hiw-exception-chevron { width:17px !important; height:17px !important; padding:0 !important; color:#167449; transition:transform 260ms cubic-bezier(.16,1,.3,1); }
+.hiw-exception-flow article.is-active .hiw-exception-chevron { transform:rotate(180deg); }
+
+.hiw-exception-panel { display:grid; grid-template-rows:0fr; opacity:0; transition:grid-template-rows 300ms cubic-bezier(.16,1,.3,1),opacity 220ms ease; }
+.hiw-exception-panel[data-open="true"] { grid-template-rows:1fr; opacity:1; }
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-panel p { min-height:0; grid-column:auto !important; grid-row:auto !important; overflow:hidden; margin:0 !important; padding:0 48px 0 94px !important; color:#526a5f !important; font-size:13px !important; line-height:1.6 !important; transition:padding-bottom 300ms cubic-bezier(.16,1,.3,1); }
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-panel[data-open="true"] p { padding-bottom:16px !important; }
+
+body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-note { display:flex !important; align-items:center !important; justify-content:space-between !important; gap:20px !important; min-height:58px; margin-top:16px !important; padding:14px 16px !important; border:1px solid rgba(22,116,73,.18) !important; border-radius:11px !important; background:#123f31 !important; color:#fff !important; }
+.hiw-exception-stage .hiw-exception-note span { color:#9ad9b5 !important; font-size:10px !important; font-weight:850 !important; letter-spacing:.08em !important; text-transform:uppercase; }
+.hiw-exception-stage .hiw-exception-note strong { color:#fff !important; font-size:13px !important; text-align:right; }
+
+@media (prefers-reduced-motion:no-preference) {
+  .hiw-exception-stage[data-visible="true"] .hiw-exception-media { animation:exception-media-in 850ms cubic-bezier(.16,1,.3,1) both; }
+  .hiw-exception-stage[data-visible="true"] .hiw-exception-heading { animation:exception-copy-in 650ms cubic-bezier(.16,1,.3,1) 90ms both; }
+  .hiw-exception-stage[data-visible="true"] .hiw-exception-flow article { animation:exception-item-in 620ms cubic-bezier(.16,1,.3,1) var(--exception-delay) both; }
+  .hiw-exception-stage[data-visible="true"] .hiw-exception-note { animation:exception-copy-in 600ms cubic-bezier(.16,1,.3,1) 380ms both; }
+  .hiw-exception-stage[data-visible="true"] .hiw-exception-scan { animation:exception-scan 3.8s ease-in-out infinite; }
+  .hiw-exception-flow article:hover { transform:translateX(4px); }
+  @keyframes exception-media-in { from { opacity:0; transform:translateX(-42px) scale(1.03); } to { opacity:1; transform:translateX(0) scale(1); } }
+  @keyframes exception-copy-in { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes exception-item-in { from { opacity:0; transform:translateX(34px); } to { opacity:1; transform:translateX(0); } }
+  @keyframes exception-scan { 0%,100% { background-position:0 -40%; opacity:.35; } 50% { background-position:0 140%; opacity:.8; } }
+}
+
+@media (max-width:900px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage { grid-template-columns:minmax(0,1fr) !important; }
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-media { min-height:460px !important; }
+}
+
+@media (max-width:520px) {
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage { border-radius:12px; }
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-copy { padding:28px 18px !important; }
+  .hiw-exception-flow button { grid-template-columns:22px 34px minmax(0,1fr) 18px; gap:9px; padding-inline:12px; }
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-panel p { padding-right:38px !important; padding-left:77px !important; }
+  body main.hiw-page.hiw-page[class][class] .hiw-exception-stage .hiw-exception-status { right:14px !important; bottom:14px !important; left:14px !important; }
+}
+
+@media (prefers-reduced-motion:reduce),print {
+  .hiw-exception-stage *,
+  .hiw-exception-stage *::before,
+  .hiw-exception-stage *::after { animation:none !important; transform:none !important; transition:none !important; }
+}
+
+/* Isolation pass: neutralize legacy card selectors after all global page styles. */
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow article {
+  display:block !important;
+  grid-template-columns:none !important;
+  gap:0 !important;
+  align-items:stretch !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow article:nth-child(n) {
+  background:rgba(255,255,255,.66) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow article.is-active {
+  background:rgba(231,249,238,.86) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button {
+  width:100% !important;
+  display:grid !important;
+  grid-template-columns:28px 38px minmax(0,1fr) 20px !important;
+  grid-template-rows:auto !important;
+  align-items:center !important;
+  gap:12px !important;
+  padding:12px 16px !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button > span {
+  position:static !important;
+  inset:auto !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+  justify-self:stretch !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button > .hiw-exception-step {
+  font-size:10px !important;
+  line-height:1 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button > .hiw-exception-step-icon {
+  width:36px !important;
+  height:36px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:9px !important;
+  background:rgba(255,255,255,.76) !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button svg {
+  position:static !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+  width:18px !important;
+  height:18px !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button > .hiw-exception-chevron {
+  width:17px !important;
+  height:17px !important;
+  justify-self:end !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button strong {
+  grid-column:auto !important;
+  grid-row:auto !important;
+  margin:0 !important;
+  font-size:17px !important;
+  line-height:1.25 !important;
+}
+
+body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions:not(.hiw-hero) .hiw-exception-heading h2 {
+  max-width:21ch !important;
+}
+
+@media (max-width:520px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions .hiw-exception-stage .hiw-exception-flow button {
+    grid-template-columns:22px 34px minmax(0,1fr) 18px !important;
+    gap:9px !important;
+    padding-inline:12px !important;
+  }
+}
+
+@media (min-width:1100px) {
+  body main.hiw-page.hiw-page[class][class] section.hiw-exceptions.hiw-exceptions:not(.hiw-hero) .hiw-exception-heading h2 {
+    max-width:none !important;
+    font-size:clamp(20px,1.9cqw,32px) !important;
+    white-space:nowrap !important;
+    text-wrap:nowrap !important;
+  }
+}

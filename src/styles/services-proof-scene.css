@@ -1,17 +1,17 @@
 /* Services proof only. Keep the original green section background and the
    existing sov-container width/inline gutter. */
 .sov-proof-stage { container-type: inline-size; }
-.sov-proof-stage-heading { max-width: 820px; margin-bottom: 34px; }
-.sov-proof-stage-heading .sov-kicker { margin-bottom: 16px; }
+.sov-proof-stage-heading { max-width: 900px; margin: 0 auto 34px; text-align: center; }
+.sov-proof-stage-heading .sov-kicker { margin-bottom: 16px; text-align: center; }
 body main.sov-page.sov-page[class][class] section.sov-proof-scene-section h2 {
   max-width: 820px !important;
-  margin: 0;
+  margin: 0 auto;
   font-size: clamp(28px, 4.45cqw, 32px) !important;
   line-height: 1.12 !important;
   color: #000 !important;
   text-wrap: balance;
 }
-.sov-proof-stage-heading > p:last-child { max-width: 72ch; margin: 18px 0 0; color: #526a5f; font-size: 16px; line-height: 1.7; text-wrap: pretty; }
+.sov-proof-stage-heading > p:last-child { max-width: 72ch; margin: 18px auto 0; color: #526a5f; font-size: 16px; line-height: 1.7; text-align: center; text-wrap: pretty; }
 .sov-proof-scene { display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); align-items: stretch; gap: clamp(32px, 4vw, 58px); }
 .sov-proof-scene-media { position: relative; min-width: 0; min-height: 520px; overflow: hidden; margin: 0; border-radius: 14px; background: #dfeee6; box-shadow: 0 22px 52px rgb(11 41 32 / 13%); }
 .sov-proof-scene-media::after { content: ""; position: absolute; inset: 54% 0 0; background: linear-gradient(180deg, transparent, rgb(8 38 28 / 52%)); pointer-events: none; }

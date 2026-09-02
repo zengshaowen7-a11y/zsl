@@ -1,0 +1,102 @@
+/* Four-scene global rhythm for every non-home page. Home and footer retain their bespoke backdrops. */
+.jw-global-scene { position: relative; isolation: isolate; container-type: inline-size; }
+.jw-global-scene > :not(.jw-global-backdrop) { position: relative; z-index: 1; }
+.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene :is(h1, h2) {
+  max-width: 100%;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene[data-jw-atmosphere-surface="mint"] { background-color: #dff2e7 !important; }
+.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene[data-jw-atmosphere-surface="white"] { background-color: #fff !important; }
+.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene[data-jw-atmosphere-surface="whisper"] { background-color: #f4fbf7 !important; }
+.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene.jw-global-scene[data-jw-atmosphere-surface="soft"] { background-color: #eaf7f0 !important; }
+.jw-global-backdrop { --jw-global-ink: 22 116 73; position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; user-select: none; }
+.jw-global-backdrop--teal { --jw-global-ink: 48 139 135; }
+.jw-global-backdrop--sand { --jw-global-ink: 155 132 85; }
+.jw-global-backdrop--blue { --jw-global-ink: 81 133 166; }
+.jw-global-backdrop--dark { --jw-global-ink: 184 238 205; }
+.jw-global-backdrop > span { position: absolute; display: none; pointer-events: none; }
+
+/* 01 — orbital disc and route, with the dominant mass on alternating sides. */
+.jw-global-backdrop--orbit .jw-global-backdrop__disc { display: block; top: -250px; right: -150px; width: clamp(420px, 40vw, 680px); aspect-ratio: 1; border-radius: 50%; background: rgb(var(--jw-global-ink) / .055); }
+.jw-global-backdrop--orbit .jw-global-backdrop__arc { display: block; bottom: -410px; left: -260px; width: 630px; aspect-ratio: 1; border: 2px solid rgb(var(--jw-global-ink) / .13); border-radius: 50%; box-shadow: 0 0 0 58px rgb(var(--jw-global-ink) / .022), 0 0 0 116px rgb(var(--jw-global-ink) / .014); }
+.jw-global-backdrop--orbit .jw-global-backdrop__orbit { display: block; top: 18%; right: -300px; width: min(900px, 70vw); height: 330px; border: 1px solid rgb(var(--jw-global-ink) / .16); border-radius: 50%; transform: rotate(-19deg); }
+.jw-global-backdrop__orbit-inner { position: absolute; inset: 30px -28px; border: 1px solid rgb(var(--jw-global-ink) / .055); border-radius: inherit; }
+.jw-global-backdrop--left.jw-global-backdrop--orbit .jw-global-backdrop__disc { right: auto; left: -180px; }
+.jw-global-backdrop--left.jw-global-backdrop--orbit .jw-global-backdrop__arc { right: -260px; left: auto; }
+.jw-global-backdrop--left.jw-global-backdrop--orbit .jw-global-backdrop__orbit { right: auto; left: -300px; transform: rotate(19deg); }
+
+/* 02 — three logistics lanes with a restrained moving signal. */
+.jw-global-backdrop--flow .jw-global-backdrop__flow { display: block; inset: 14% -9% auto; height: 180px; transform: rotate(-4deg); }
+.jw-global-backdrop--left.jw-global-backdrop--flow .jw-global-backdrop__flow { transform: rotate(4deg); }
+.jw-global-backdrop__flow i { position: absolute; right: 0; left: 0; height: 1px; background: rgb(var(--jw-global-ink) / .095); }
+.jw-global-backdrop__flow i:nth-child(1) { top: 18%; }
+.jw-global-backdrop__flow i:nth-child(2) { top: 50%; }
+.jw-global-backdrop__flow i:nth-child(3) { top: 82%; }
+.jw-global-backdrop__flow i::after { content: ""; position: absolute; width: 16%; height: 2px; background: linear-gradient(90deg, transparent, rgb(var(--jw-global-ink) / .38), transparent); }
+
+/* 03 — stacked operational records. */
+.jw-global-backdrop--tiles .jw-global-backdrop__tiles { display: block; top: 8%; right: -105px; width: 340px; height: 470px; }
+.jw-global-backdrop--left.jw-global-backdrop--tiles .jw-global-backdrop__tiles { right: auto; left: -155px; }
+.jw-global-backdrop__tiles i { position: absolute; inset: 0 35px 165px 0; border: 1px solid rgb(var(--jw-global-ink) / .13); border-radius: 22px; background: rgb(var(--jw-global-ink) / .018); transform: rotate(22deg); }
+.jw-global-backdrop__tiles i:nth-child(2) { inset: 110px 75px 70px -65px; }
+.jw-global-backdrop__tiles i:nth-child(3) { inset: 235px 145px 0 -25px; background: rgb(var(--jw-global-ink) / .026); }
+
+/* 04 — expanding handoff ripples. */
+.jw-global-backdrop--ripple .jw-global-backdrop__ripple { display: block; top: -190px; right: -260px; width: 660px; aspect-ratio: 1; }
+.jw-global-backdrop--left.jw-global-backdrop--ripple .jw-global-backdrop__ripple { right: auto; left: -280px; }
+.jw-global-backdrop__ripple i { position: absolute; inset: 0; border: 1px solid rgb(var(--jw-global-ink) / .13); border-radius: 50%; }
+.jw-global-backdrop__ripple i:nth-child(2) { inset: 68px; background: rgb(var(--jw-global-ink) / .018); }
+.jw-global-backdrop__ripple i:nth-child(3) { inset: 136px; }
+
+/* Watermark is restricted to key modules selected by the orchestrator. */
+.jw-global-backdrop__watermark { display: block !important; right: max(22px, calc((100vw - 1320px) / 2)); bottom: 24px; width: clamp(210px, 24vw, 360px); aspect-ratio: 1.76; opacity: .052; background: url("/images/brand/jw-link-fulfill-scale-source.jpg") 45% 24% / 112% auto no-repeat; mix-blend-mode: multiply; }
+.jw-global-backdrop--left .jw-global-backdrop__watermark { right: auto; left: max(22px, calc((100vw - 1320px) / 2)); }
+.jw-global-backdrop--dark .jw-global-backdrop__watermark { opacity: .038; filter: invert(1) grayscale(1); mix-blend-mode: screen; }
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .jw-global-backdrop--orbit .jw-global-backdrop__disc { animation: jw-global-drift 10s ease-in-out infinite alternate; }
+  .jw-global-backdrop--orbit .jw-global-backdrop__arc { animation: jw-global-arc 12s ease-in-out infinite alternate; }
+  .jw-global-backdrop--orbit .jw-global-backdrop__orbit { animation: jw-global-route 11s ease-in-out infinite alternate; }
+  .jw-global-backdrop--left.jw-global-backdrop--orbit .jw-global-backdrop__orbit { animation-name: jw-global-route-left; }
+  .jw-global-backdrop__flow i::after { animation: jw-global-flow 8s ease-in-out infinite alternate; }
+  .jw-global-backdrop__flow i:nth-child(2)::after { animation-direction: alternate-reverse; animation-delay: -3s; }
+  .jw-global-backdrop__flow i:nth-child(3)::after { animation-delay: -5s; }
+  .jw-global-backdrop__tiles i { animation: jw-global-tiles 10s ease-in-out infinite alternate; }
+  .jw-global-backdrop__tiles i:nth-child(2) { animation-direction: alternate-reverse; }
+  .jw-global-backdrop__tiles i:nth-child(3) { animation-delay: -4s; }
+  .jw-global-backdrop__ripple i { animation: jw-global-ripple 9s ease-in-out infinite alternate; }
+  .jw-global-backdrop__ripple i:nth-child(2) { animation-delay: -3s; }
+  .jw-global-backdrop__ripple i:nth-child(3) { animation-delay: -6s; }
+  .jw-global-backdrop__watermark { animation: jw-global-watermark 10s ease-in-out infinite alternate; }
+  .jw-global-backdrop[data-visible="false"] *, .jw-global-backdrop[data-visible="false"] *::after { animation-play-state: paused !important; }
+}
+@keyframes jw-global-drift { from { transform: translate3d(16px,-18px,0) scale(.98); } to { transform: translate3d(-42px,52px,0) scale(1.06); } }
+@keyframes jw-global-arc { from { transform: translate3d(-18px,24px,0) scale(.97); } to { transform: translate3d(48px,-42px,0) scale(1.07); } }
+@keyframes jw-global-route { from { transform: translate3d(24px,-12px,0) rotate(-24deg); } to { transform: translate3d(-42px,36px,0) rotate(-10deg); } }
+@keyframes jw-global-route-left { from { transform: translate3d(-24px,-12px,0) rotate(24deg); } to { transform: translate3d(42px,36px,0) rotate(10deg); } }
+@keyframes jw-global-flow { from { transform: translate3d(-20%,0,0); } to { transform: translate3d(620%,0,0); } }
+@keyframes jw-global-tiles { from { transform: translate3d(0,-10px,0) rotate(16deg); } to { transform: translate3d(-22px,28px,0) rotate(28deg); } }
+@keyframes jw-global-ripple { from { transform: scale(.9); opacity: .55; } to { transform: scale(1.06); opacity: 1; } }
+@keyframes jw-global-watermark { from { transform: translate3d(0,0,0); } to { transform: translate3d(-14px,18px,0); } }
+
+@media (max-width: 767px) {
+  .jw-global-backdrop { opacity: .62; }
+  .jw-global-backdrop--orbit .jw-global-backdrop__disc { top: -205px; right: -250px; width: 430px; }
+  .jw-global-backdrop--orbit .jw-global-backdrop__arc { bottom: -470px; left: -390px; }
+  .jw-global-backdrop--orbit .jw-global-backdrop__orbit { display: none; }
+  .jw-global-backdrop--flow .jw-global-backdrop__flow { inset-inline: -35%; }
+  .jw-global-backdrop--tiles .jw-global-backdrop__tiles { right: -245px; opacity: .65; }
+  .jw-global-backdrop--left.jw-global-backdrop--tiles .jw-global-backdrop__tiles { left: -265px; }
+  .jw-global-backdrop--ripple .jw-global-backdrop__ripple { right: -500px; opacity: .62; }
+  .jw-global-backdrop--left.jw-global-backdrop--ripple .jw-global-backdrop__ripple { left: -500px; }
+  .jw-global-backdrop__watermark { width: 220px; right: -42px; bottom: 16px; opacity: .035; }
+  .jw-global-backdrop--left .jw-global-backdrop__watermark { left: -42px; }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .jw-global-backdrop *, .jw-global-backdrop *::before, .jw-global-backdrop *::after { animation: none !important; transition: none !important; }
+}
+@media print { .jw-global-backdrop { display: none; } }

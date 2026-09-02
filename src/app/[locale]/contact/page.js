@@ -2,7 +2,7 @@ import ContactForm from "@layouts/ContactForm";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { FiArrowRight, FiCheck, FiChevronDown, FiClipboard, FiClock, FiMessageCircle, FiPackage, FiShield } from "react-icons/fi";
+import { FiActivity, FiArrowRight, FiCheck, FiChevronDown, FiClipboard, FiClock, FiLink, FiMapPin, FiMessageCircle, FiPackage, FiShield } from "react-icons/fi";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -24,7 +24,9 @@ export default async function ContactPage({ params }) {
   const heroProofs = t.raw("heroProofs");
   const steps = t.raw("steps");
   const faqs = t.raw("faqs");
+  const firstStepItems = t.raw("firstStepItems");
   const stepIcons = [FiClipboard, FiShield, FiPackage];
+  const firstStepIcons = [FiLink, FiMapPin, FiActivity];
 
   return <main className="ctw-page" id="top">
     <section className="ctw-hero">
@@ -36,6 +38,18 @@ export default async function ContactPage({ params }) {
 
     <section className="ctw-faq"><div className="ctw-container ctw-faq-grid"><div><p className="ctw-kicker">{t("faqKicker")}</p><h2>{t("faqTitle")}</h2><p>{t("faqLead")}</p><Link href="/services">{t("exploreServices")} <FiArrowRight /></Link></div><div className="ctw-accordion">{faqs.map(([q,a],index)=><details name="contact-faq" key={q} open={index===0}><summary>{q}<span aria-hidden="true"><FiChevronDown /></span></summary><p>{a}</p></details>)}</div></div></section>
 
-    <section className="ctw-direct"><div className="ctw-container"><FiMessageCircle /><div><p className="ctw-kicker">{t("firstStepKicker")}</p><h2>{t("firstStepTitle")}</h2><p>{t("firstStepLead")}</p></div><a href="#top">{t("talkToTeam")} <FiMessageCircle /></a></div></section>
+    <section className="ctw-direct"><div className="ctw-container">
+      <div className="ctw-direct-main">
+        <div className="ctw-direct-copy"><p className="ctw-kicker">{t("firstStepKicker")}</p><h2>{t("firstStepTitle")}</h2><p>{t("firstStepLead")}</p></div>
+        <div className="ctw-direct-brief">
+          {firstStepItems.map((item, index) => { const Icon = firstStepIcons[index]; return <span key={item}><Icon aria-hidden="true" />{item}</span>; })}
+        </div>
+      </div>
+      <div className="ctw-direct-action">
+        <FiClock aria-hidden="true" />
+        <div><strong>{t("responseTarget")}</strong><span>{t("responseTime")}</span></div>
+        <a href="#top">{t("talkToTeam")} <FiArrowRight /></a>
+      </div>
+    </div></section>
   </main>;
 }

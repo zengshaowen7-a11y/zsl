@@ -1,0 +1,80 @@
+/* Current-stage selector only. The parent section retains its existing background and gutters. */
+.hiw-track-selector { container-type: inline-size; }
+.hiw-track-selector-heading { max-width: 880px; margin: 0 auto 36px; text-align: center; }
+.hiw-track-selector-heading .hiw-kicker { margin-bottom: 14px; }
+body main.hiw-page.hiw-page[class][class] section.hiw-tracks.hiw-tracks[class][class] .hiw-track-selector-heading h2 {
+  max-width: none !important;
+  margin: 0 !important;
+  color: #000 !important;
+  font-size: clamp(28px, 4.45cqw, 32px) !important;
+  line-height: 1.12 !important;
+  white-space: normal !important;
+  text-wrap: balance !important;
+}
+.hiw-track-selector-heading > p:last-child { max-width: 70ch; margin: 17px auto 0; color: var(--muted); font-size: 16px; line-height: 1.65; text-wrap: pretty; }
+.hiw-track-workbench { display: grid; grid-template-columns: minmax(320px, .72fr) minmax(0, 1.28fr); min-height: 540px; overflow: hidden; border: 1px solid rgb(22 116 73 / 18%); border-radius: 12px; background: rgb(250 253 251 / 68%); box-shadow: 0 24px 56px rgb(22 73 53 / 10%); }
+.hiw-track-tabs { display: flex; flex-direction: column; padding: 18px; border-right: 1px solid rgb(22 116 73 / 18%); }
+.hiw-track-tabs button { position: relative; display: grid; width: 100%; flex: 1; grid-template-columns: 30px 42px minmax(0, 1fr) 22px; align-items: start; gap: 13px; padding: 22px 14px; border: 0; border-bottom: 1px solid rgb(22 116 73 / 15%); background: transparent; color: #163e2d; font: inherit; text-align: left; cursor: pointer; transition: background 220ms ease, color 220ms ease; }
+.hiw-track-tabs button:last-child { border-bottom: 0; }
+.hiw-track-tabs button::before { content: ""; position: absolute; inset: 15px auto 15px 0; width: 3px; border-radius: 3px; background: var(--green); opacity: 0; transform: scaleY(.35); transition: opacity 220ms ease, transform 280ms cubic-bezier(.16,1,.3,1); }
+.hiw-track-tabs button[aria-selected="true"] { background: rgb(224 245 234 / 70%); }
+.hiw-track-tabs button[aria-selected="true"]::before { opacity: 1; transform: scaleY(1); }
+.hiw-track-tab-number { padding-top: 5px; color: var(--green); font-size: 11px; font-weight: 850; font-variant-numeric: tabular-nums; }
+.hiw-track-tab-icon { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgb(22 116 73 / 15%); border-radius: 9px; background: rgb(255 255 255 / 72%); color: var(--green); }
+.hiw-track-tab-icon svg { width: 19px; height: 19px; }
+.hiw-track-tab-copy { display: grid; gap: 6px; }
+.hiw-track-tab-copy small { color: var(--green); font-size: 10px; font-weight: 850; line-height: 1.35; }
+.hiw-track-tab-copy strong { color: #18251f; font-size: 18px; line-height: 1.25; text-wrap: pretty; }
+.hiw-track-tab-copy > span { max-height: 0; overflow: hidden; color: var(--muted); font-size: 13px; line-height: 1.55; opacity: 0; transition: max-height 340ms cubic-bezier(.16,1,.3,1), opacity 200ms ease, margin 200ms ease; }
+.hiw-track-tabs button[aria-selected="true"] .hiw-track-tab-copy > span { max-height: 100px; margin-top: 3px; opacity: 1; }
+.hiw-track-tab-arrow { align-self: center; color: var(--green); opacity: .45; transition: opacity 220ms ease, transform 220ms ease; }
+.hiw-track-tabs button[aria-selected="true"] .hiw-track-tab-arrow { opacity: 1; transform: translateX(3px); }
+.hiw-track-tabs button:hover { background: rgb(233 248 240 / 65%); }
+.hiw-track-tabs button:focus-visible { z-index: 1; outline: 3px solid var(--green); outline-offset: -3px; border-radius: 7px; }
+.hiw-track-panel { position: relative; min-width: 0; min-height: 540px; overflow: hidden; background: #cfe7da; }
+.hiw-track-panel > img { object-fit: cover; }
+.hiw-track-panel-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(5 30 21 / 4%) 28%, rgb(5 30 21 / 70%) 100%); pointer-events: none; }
+.hiw-track-panel-status { position: absolute; top: 22px; left: 22px; display: flex; min-height: 44px; align-items: center; gap: 11px; padding: 0 14px; border: 1px solid rgb(255 255 255 / 52%); border-radius: 8px; background: rgb(248 252 249 / 86%); color: #163e2d; backdrop-filter: blur(12px); }
+.hiw-track-panel-status span { color: var(--green); font-size: 12px; font-weight: 850; }
+.hiw-track-panel-status i { width: 28px; height: 1px; background: rgb(22 116 73 / 28%); }
+.hiw-track-panel-status strong { font-size: 11px; letter-spacing: .02em; }
+.hiw-track-panel-copy { position: absolute; right: 24px; bottom: 24px; left: 24px; display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; color: #fff; }
+.hiw-track-panel-copy p { max-width: 55ch; margin: 0; color: #fff; font-size: 15px; line-height: 1.6; text-shadow: 0 2px 16px rgb(0 0 0 / 25%); text-wrap: pretty; }
+.hiw-track-panel-copy a { display: inline-flex; min-height: 48px; flex: 0 0 auto; align-items: center; gap: 10px; padding: 0 18px; border-radius: 7px; background: #fff; color: #163e2d; font-size: 13px; font-weight: 850; text-decoration: none; transition: transform 220ms ease, background 220ms ease; }
+.hiw-track-panel-copy a:hover { background: #e6f6ed; transform: translateY(-2px); }
+.hiw-track-panel-copy a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  .hiw-track-selector[data-entered="true"] .hiw-track-selector-heading { animation: hiw-track-rise 650ms cubic-bezier(.16,1,.3,1) both; }
+  .hiw-track-selector[data-entered="true"] .hiw-track-tabs button { animation: hiw-track-rise 650ms cubic-bezier(.16,1,.3,1) var(--track-delay, 0ms) both; }
+  .hiw-track-selector[data-entered="true"] .hiw-track-panel { animation: hiw-track-panel-in 820ms cubic-bezier(.16,1,.3,1) 100ms both; }
+  .hiw-track-panel > img { animation: hiw-track-image-in 620ms cubic-bezier(.16,1,.3,1) both; }
+  @keyframes hiw-track-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes hiw-track-panel-in { from { opacity: 0; transform: translateX(38px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes hiw-track-image-in { from { opacity: .6; transform: scale(1.035); } to { opacity: 1; transform: scale(1); } }
+}
+@media (max-width: 850px) {
+  .hiw-track-workbench { grid-template-columns: 1fr; }
+  .hiw-track-tabs { display: grid; grid-template-columns: repeat(3, 1fr); padding: 10px; border-right: 0; border-bottom: 1px solid rgb(22 116 73 / 18%); }
+  .hiw-track-tabs button { min-height: 96px; grid-template-columns: 1fr; align-content: center; justify-items: center; gap: 6px; padding: 12px 8px; border-right: 1px solid rgb(22 116 73 / 15%); border-bottom: 0; text-align: center; }
+  .hiw-track-tabs button:last-child { border-right: 0; }
+  .hiw-track-tabs button::before { inset: auto 12px 0; width: auto; height: 3px; transform: scaleX(.35); }
+  .hiw-track-tabs button[aria-selected="true"]::before { transform: scaleX(1); }
+  .hiw-track-tab-number, .hiw-track-tab-copy > span, .hiw-track-tab-arrow { display: none; }
+  .hiw-track-tab-icon { width: 34px; height: 34px; }
+  .hiw-track-tab-copy strong { font-size: 13px; }
+  .hiw-track-panel { min-height: 460px; }
+}
+@media (max-width: 560px) {
+  .hiw-track-selector-heading { margin-bottom: 28px; }
+  .hiw-track-workbench { border-radius: 10px; }
+  .hiw-track-tabs button { min-height: 88px; }
+  .hiw-track-tab-copy strong { font-size: 11px; }
+  .hiw-track-panel { min-height: 390px; }
+  .hiw-track-panel-status { top: 14px; left: 14px; }
+  .hiw-track-panel-copy { right: 14px; bottom: 14px; left: 14px; display: grid; gap: 16px; }
+  .hiw-track-panel-copy p { font-size: 13px; }
+  .hiw-track-panel-copy a { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .hiw-track-selector *, .hiw-track-selector *::before, .hiw-track-selector *::after { animation: none !important; transition: none !important; }
+}

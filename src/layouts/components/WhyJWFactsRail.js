@@ -23,7 +23,7 @@ function WhyJWFactsRail({ items }) {
     return () => observer.disconnect();
   }, []);
 
-  const [activeTitle, activeCopy] = items[activeIndex];
+  const [activeTitle, activeCopy, activeDetails = []] = items[activeIndex];
   const ActiveIcon = icons[activeIndex];
 
   const selectStep = (index, moveFocus = false) => {
@@ -67,11 +67,23 @@ function WhyJWFactsRail({ items }) {
           <span className="wjw-operating-focus-icon"><ActiveIcon aria-hidden="true" /></span>
           <div><h3>{activeTitle}</h3><p>{activeCopy}</p></div>
         </div>
-        <div className="wjw-operating-handoff" aria-hidden="true">
-          <span><ActiveIcon /></span>
-          <i />
-          <span><FiCheck /></span>
-        </div>
+        {activeDetails.length > 0 ? (
+          <dl className="wjw-operating-details">
+            {activeDetails.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+            <span className="wjw-operating-details-check" aria-hidden="true"><FiCheck /></span>
+          </dl>
+        ) : (
+          <div className="wjw-operating-handoff" aria-hidden="true">
+            <span><ActiveIcon /></span>
+            <i />
+            <span><FiCheck /></span>
+          </div>
+        )}
       </article>
 
       <div className="wjw-operating-steps" role="tablist" aria-label={activeTitle} onKeyDown={handleKeyDown}>

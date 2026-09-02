@@ -3,7 +3,7 @@ import Logo from "@components/Logo";
 import BrandBackdrop from "@layouts/components/BrandBackdrop";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { FiGlobe, FiMail, FiMapPin, FiMessageCircle, FiPhone } from "react-icons/fi";
+import { FiGlobe, FiMail, FiMapPin, FiMessageCircle } from "react-icons/fi";
 
 export default function Footer() {
   const locale = useLocale();
@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className="ff-footer jw-scene jw-footer-atmosphere" data-jw-motion="playing">
-      <BrandBackdrop variant="network" globe={false} watermark motifs={["plane", "parcel"]} />
+      <BrandBackdrop variant="network" globe={false} />
       <div className="container">
         <div className="ff-footer-main">
           <div className="ff-footer-brand">
@@ -43,7 +43,6 @@ export default function Footer() {
             <h3>{t("contactUs")}</h3>
             <div className="ff-footer-contact-list">
               <p><FiMessageCircle aria-hidden="true" /><span><strong>{t("whatsapp")}</strong>+86 191 5771 1156</span></p>
-              <p><FiPhone aria-hidden="true" /><span><strong>{t("wechat")}</strong>JW-Dropshipping-001</span></p>
               <p><FiMail aria-hidden="true" /><span><strong>{t("email")}</strong>hello@jwdropshipping.com</span></p>
               <p><FiMapPin aria-hidden="true" /><span><strong>{t("locationLabel")}</strong>{t("location")}</span></p>
             </div>

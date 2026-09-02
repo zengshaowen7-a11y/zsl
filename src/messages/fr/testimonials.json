@@ -25,12 +25,12 @@
     "fiveStars": "Revue cinq étoiles",
     "hero": {
       "kicker": "SELLERS",
-      "title": "C'est clair.",
-      "lead": "Un support clair, un traitement régulier des commandes et un suivi rapide d'une équipe de vendeurs peuvent effectivement utiliser.",
+      "title": "Des témoignages clairs.",
+      "lead": "Un suivi clair, des commandes bien gérées et des réponses rapides pour chaque vendeur.",
       "proofs": [
-        "Aide alimentaire",
-        "Mises à jour de QC",
-        "Suivi de l ' exécution"
+        ["Accompagnement sourcing", "Les questions produit, les options fournisseur et les devis restent liés dès la première demande."],
+        ["Mises à jour QC", "Les notes d'inspection, les photos et les validations restent visibles avant le déplacement des marchandises."],
+        ["Suivi du fulfillment", "L'emballage, l'expédition et les exceptions sont suivis jusqu'au bout par une équipe responsable."]
       ],
       "primary": "Obtenir un devis gratuit",
       "secondary": "Lire les histoires des vendeurs",
