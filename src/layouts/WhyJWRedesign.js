@@ -4,14 +4,13 @@ import { useTranslations } from "next-intl";
 import {
   FiArrowRight,
   FiCheck,
-  FiCheckCircle,
   FiClipboard,
-  FiMessageCircle,
   FiPackage,
   FiShield,
   FiUsers,
   FiX,
 } from "react-icons/fi";
+import WhyJWFactsRail from "./components/WhyJWFactsRail";
 
 export default function WhyJWRedesign() {
   const t = useTranslations("WhyUs");
@@ -30,7 +29,6 @@ export default function WhyJWRedesign() {
   const faq = t.raw("faq");
   const final = t.raw("final");
   const principleIcons = [FiUsers, FiShield, FiClipboard, FiPackage];
-  const supportIcons = [FiMessageCircle, FiShield, FiClipboard, FiPackage];
   return (
     <main className="wjw-page">
       <section className="wjw-hero">
@@ -57,14 +55,7 @@ export default function WhyJWRedesign() {
       </section>
 
       <section className="wjw-facts">
-        <div className="wjw-container">
-          {heroSupportCards.map(([title, copy], index) => { const Icon = supportIcons[index]; return (
-            <article key={title}>
-              <Icon aria-hidden="true" />
-              <div><strong>{title}</strong><span>{copy}</span></div>
-            </article>
-          );})}
-        </div>
+        <WhyJWFactsRail items={heroSupportCards} />
       </section>
 
       <section className="wjw-compare" id="jw-difference">

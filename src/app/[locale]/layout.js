@@ -93,6 +93,7 @@ import "../../styles/localization-layout-fixes.css";
 import "../../styles/brand-atmosphere.css";
 import "../../styles/home-atmosphere.css";
 import "../../styles/footer-atmosphere.css";
+import "../../styles/why-jw-facts-rail-v2.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
