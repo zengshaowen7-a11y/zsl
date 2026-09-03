@@ -2229,6 +2229,92 @@
   transition: transform 320ms ease, filter 320ms ease;
 }
 
+/* Reserve the media area immediately and reveal decoded assets without a white flash. */
+.fh-home .fh-progressive-media,
+.fh-home .fh-progressive-video {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #edf8f2;
+}
+
+.fh-home .fh-progressive-media img,
+.fh-home .fh-progressive-video video {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 360ms ease;
+}
+
+.fh-home .fh-progressive-media.is-ready img,
+.fh-home .fh-progressive-video.is-ready video {
+  opacity: 1;
+}
+
+.fh-home .fh-media-skeleton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(69, 190, 124, 0.18), transparent 30%),
+    linear-gradient(135deg, #eff9f3 0%, #e2f4e9 52%, #f4faf6 100%);
+  transition: opacity 240ms ease, visibility 240ms ease;
+}
+
+.fh-home .fh-media-skeleton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.7) 48%, transparent 72%);
+  transform: translateX(-100%);
+  animation: fh-media-shimmer 1.35s ease-in-out infinite;
+}
+
+.fh-home .fh-media-skeleton span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(22, 116, 73, 0.18);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 10px rgba(22, 116, 73, 0.05), 0 0 0 20px rgba(22, 116, 73, 0.025);
+}
+
+.fh-home .is-ready > .fh-media-skeleton,
+.fh-home .is-error > .fh-media-skeleton {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fh-home .fh-media-error {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: #edf8f2;
+  color: rgba(22, 116, 73, 0.58);
+}
+
+.fh-home .fh-media-error svg {
+  width: 34px;
+  height: 34px;
+}
+
+@keyframes fh-media-shimmer {
+  to { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-home .fh-media-skeleton::before { animation: none; }
+  .fh-home .fh-progressive-media img,
+  .fh-home .fh-progressive-video video { transition: none; }
+}
+
 .fh-home .fh-advantage-gallery:hover img {
   filter: saturate(1.04) contrast(1.02);
 }

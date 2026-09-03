@@ -51,6 +51,61 @@ const platformLogos = [
   { name: "Squarespace", Icon: SiSquarespace, color: "#111111" },
 ];
 
+const MEDIA_BLUR_DATA_URL =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Crect width='16' height='12' fill='%23edf8f2'/%3E%3Cpath d='M-2 11 5 5l3 3 3-2 7 6' fill='none' stroke='%23cdebd9' stroke-width='1.2'/%3E%3C/svg%3E";
+
+function ProgressiveImage({ src, alt, sizes, priority = false, eager = false }) {
+  const [status, setStatus] = useState("loading");
+
+  return (
+    <div className={`fh-progressive-media is-${status}`}>
+      <div className="fh-media-skeleton" aria-hidden="true"><span /></div>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={sizes}
+        {...(priority ? { priority: true } : { loading: eager ? "eager" : "lazy" })}
+        placeholder="blur"
+        blurDataURL={MEDIA_BLUR_DATA_URL}
+        onLoad={() => setStatus("ready")}
+        onError={() => setStatus("error")}
+      />
+      {status === "error" && (
+        <div className="fh-media-error" role="img" aria-label={`${alt}: media unavailable`}>
+          <FiImage aria-hidden="true" />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ProgressiveVideo({ children, className = "", videoRef, ...props }) {
+  const [status, setStatus] = useState("loading");
+
+  return (
+    <div className={`fh-progressive-video is-${status}`}>
+      <div className="fh-media-skeleton" aria-hidden="true"><span /></div>
+      <video
+        {...props}
+        ref={videoRef}
+        className={className}
+        onLoadedData={(event) => {
+          setStatus("ready");
+          props.onLoadedData?.(event);
+        }}
+        onError={(event) => {
+          setStatus("error");
+          props.onError?.(event);
+        }}
+      >
+        {children}
+      </video>
+      {status === "error" && <div className="fh-media-error" aria-hidden="true"><FiVideo /></div>}
+    </div>
+  );
+}
+
 function AnimatedStat({ value, number, suffix = "" }) {
   const statRef = useRef(null);
   const [displayValue, setDisplayValue] = useState(number === undefined ? value : `0${suffix}`);
@@ -86,7 +141,7 @@ function MaterialSlot({ item, kind = "image", className = "" }) {
   if (kind === "video" && item.src) {
     return (
       <div className={`fh-material-slot fh-material-video ${className}`.trim()}>
-        <video src={item.src} poster={item.poster || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
+        <ProgressiveVideo src={item.src} poster={item.poster || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={item.title} />
         <div className="fh-material-video-shade" />
         <div className="fh-material-video-copy"><span><FiVideo />{item.label}</span><strong>{item.title}</strong><p>{item.brief}</p><small>{item.credit}</small></div>
       </div>
@@ -95,7 +150,7 @@ function MaterialSlot({ item, kind = "image", className = "" }) {
   if (item.src) {
     return (
       <figure className={`fh-material-slot fh-material-image ${className}`.trim()}>
-        <Image src={item.src} alt={item.title} fill sizes="(max-width: 767px) 100vw, 42vw" priority={item === homeMaterialPlan.media.heroVideo} loading={item === homeMaterialPlan.media.heroVideo ? "eager" : "lazy"} unoptimized={item.src.includes("/images/generated/")} />
+        <ProgressiveImage src={item.src} alt={item.title} sizes="(max-width: 767px) 100vw, 42vw" priority={item === homeMaterialPlan.media.heroVideo} />
         <figcaption className="fh-material-media-copy">
           <span><Icon aria-hidden="true" />{item.label}</span>
           <strong>{item.title}</strong>
@@ -208,8 +263,8 @@ export default function FulfillmentHome({ lang = "en" }) {
                   <a href="/videos/packing-boxes-pexels-4277472.mp4" target="_blank" rel="noreferrer" aria-label={section.watchVideoLabel}>{section.watchVideo}<FiExternalLink /></a>
                 </div>
                 <div className="fh-hero-player-screen">
-                  <video
-                    ref={heroVideoRef}
+                  <ProgressiveVideo
+                    videoRef={heroVideoRef}
                     muted
                     loop
                     playsInline
@@ -220,7 +275,7 @@ export default function FulfillmentHome({ lang = "en" }) {
                     onPlay={() => setIsHeroVideoPlaying(true)}
                   >
                     <source src="/videos/packing-boxes-pexels-4277472.mp4" type="video/mp4" />
-                  </video>
+                  </ProgressiveVideo>
                   {!isHeroVideoPlaying && (
                     <button
                       type="button"
@@ -292,9 +347,14 @@ export default function FulfillmentHome({ lang = "en" }) {
                     onScroll={(event) => syncAdvantageSlide(galleryIndex, event.currentTarget)}
                     aria-label={`${title} image gallery`}
                   >
-                    {images.map(([src, alt]) => (
+                    {images.map(([src, alt], slideIndex) => (
                       <figure className="fh-advantage-slide" key={src}>
-                        <Image src={src} alt={alt} fill sizes="(max-width: 767px) 100vw, 33vw" unoptimized />
+                        <ProgressiveImage
+                          src={src}
+                          alt={alt}
+                          sizes="(max-width: 767px) 100vw, 33vw"
+                          eager={slideIndex === 0}
+                        />
                       </figure>
                     ))}
                   </div>
