@@ -1,10 +1,10 @@
 export const servicePages = [
   {
     "slug": "dropshipping-supplier",
-    "menuTitle": "Fournisseur de décrochage",
-    "eyebrow": "COMPLÉMENTAIRE D'EXPLOITATION",
-    "title": "La Chine abandonne le soutien derrière chaque ordre.",
-    "lead": "Apportez le sourcing, les contrôles de qualité, l'inventaire, l'emballage et la livraison internationale dans un workflow coordonné pour votre boutique en ligne.",
+    "menuTitle": "Fournisseur dropshipping",
+    "eyebrow": "FOURNISSEUR DROPSHIPPING",
+    "title": "Un service de dropshipping en Chine derrière chaque commande.",
+    "lead": "Regroupez le sourcing, les contrôles qualité, le stock, l’emballage et la livraison internationale dans un même flux de travail pour votre boutique en ligne.",
     "image": "/images/generated/dropshipping-supplier-hero.webp",
     "heroPoints": [
       "Une équipe de l'approvisionnement à l'expédition",

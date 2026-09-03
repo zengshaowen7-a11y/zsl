@@ -66,6 +66,41 @@
 .ff-footer.jw-footer-atmosphere a:focus-visible { outline: 2px solid #167449; outline-offset: 5px; }
 .ff-footer.jw-footer-atmosphere .ff-footer-bottom { border-color: rgb(22 116 73 / .17); }
 
+.ff-footer .ff-footer-brand .ff-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ff-footer .ff-footer-socials a {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--social-brand) 25%, transparent);
+  border-radius: 10px;
+  color: var(--social-brand) !important;
+  background: color-mix(in srgb, var(--social-brand) 7%, white);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--social-brand) 9%, transparent);
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.ff-footer .ff-footer-socials a svg {
+  width: 19px;
+  height: 19px;
+}
+
+.ff-footer .ff-footer-socials a:hover {
+  color: var(--social-brand) !important;
+  border-color: color-mix(in srgb, var(--social-brand) 48%, transparent);
+  background: color-mix(in srgb, var(--social-brand) 12%, white);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--social-brand) 15%, transparent);
+  transform: translateY(-2px);
+}
+
+.ff-footer .ff-footer-socials a:active { transform: translateY(0) scale(.97); }
+
 @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
   .jw-footer-atmosphere .jw-backdrop__motif--1 { animation: jw-footer-flight 8s ease-in-out infinite alternate; }
   .jw-footer-atmosphere .jw-backdrop__flow i::after { animation-duration: 10s; }

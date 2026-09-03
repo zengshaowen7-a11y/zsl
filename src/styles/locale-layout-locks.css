@@ -1,0 +1,41 @@
+/* Final locale layout locks. Keep after every service-page stylesheet. */
+@media (min-width: 900px) {
+  body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    .sdr-hero .sdr-hero-copy h1 {
+    width: 100% !important;
+    max-width: 650px !important;
+    font-size: clamp(30px, 1.9vw, 38px) !important;
+    line-height: 1.08 !important;
+    text-wrap: wrap !important;
+  }
+
+  body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    section.sdr-case .sdr-case-grid > div:first-child h2 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    font-size: clamp(22px, 1.3vw, 28px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.015em !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    text-wrap: nowrap !important;
+  }
+
+
+  html[lang="fr"] body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    section.sdr-case .sdr-case-grid > div:first-child h2 {
+    font-size: clamp(21px, 1.15vw, 25px) !important;
+  }
+
+  html[lang="es"] body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    section.sdr-case .sdr-case-grid > div:first-child h2 {
+    font-size: clamp(20px, 1.1vw, 24px) !important;
+  }
+
+  html[lang="pl"] body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    section.sdr-case .sdr-case-grid > div:first-child h2 {
+    font-size: clamp(19px, 1vw, 22px) !important;
+  }
+}

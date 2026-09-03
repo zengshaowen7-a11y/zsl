@@ -5,8 +5,8 @@ import { FiArrowRight, FiLock } from "react-icons/fi";
 import PhoneCountryInput from "./components/PhoneCountryInput";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
+import { FORMSPREE_ENDPOINT } from "@config/forms";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpaknaj";
 const countryCodeOptions = [
   ["US", "+1"], ["GB", "+44"], ["CA", "+1"], ["AU", "+61"],
   ["DE", "+49"], ["FR", "+33"], ["IT", "+39"], ["ES", "+34"],

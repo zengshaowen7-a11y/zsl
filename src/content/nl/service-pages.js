@@ -2,9 +2,9 @@ export const servicePages = [
   {
     "slug": "dropshipping-supplier",
     "menuTitle": "Dropshipping Leverancier",
-    "eyebrow": "DROPSHIPPING SUPPLIER",
-    "title": "China dropshipping ondersteuning achter elke bestelling.",
-    "lead": "Breng sourcing, kwaliteitscontroles, inventaris, verpakking en internationale levering in één gecoördineerde workflow voor uw online winkel.",
+    "eyebrow": "DROPSHIPPING-LEVERANCIER",
+    "title": "Dropshippingondersteuning uit China voor elke bestelling.",
+    "lead": "Breng inkoop, kwaliteitscontroles, voorraad, verpakking en internationale levering samen in één gecoördineerd proces voor uw webshop.",
     "image": "/images/generated/dropshipping-supplier-hero.webp",
     "heroPoints": [
       "Een team van sourcing tot verzending",

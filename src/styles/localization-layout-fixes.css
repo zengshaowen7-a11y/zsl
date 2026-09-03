@@ -139,6 +139,39 @@ body main.fh-home[class][class] .fh-hero-title > span {
   }
 }
 
+/* Longer translated contact headlines fit the desktop copy column as one phrase. */
+@media (min-width: 900px) {
+  :is(html[lang="de"], html[lang="pl"], html[lang="es"])
+    body main.ctw-page.ctw-page[class][class][class] .ctw-intro h1 {
+    width: max-content;
+    max-width: none;
+    font-size: clamp(28px, 1.75vw, 32px) !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+
+  /* Keep the representative case name on one line in every locale. */
+  body main.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    .sdr-case .sdr-case-grid > div:first-child h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(18px, 1.05vw, 21px) !important;
+    line-height: 1.12 !important;
+    white-space: nowrap !important;
+    text-wrap: nowrap !important;
+  }
+
+  /* Keep the partnership-launch headline complete and within two lines in every locale. */
+  body main.sdr-page.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier.sdr-page-dropshipping-supplier
+    .sdr-dropship-launch .sdr-dropship-launch-copy h2 {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: clamp(17px, 1.25vw, 26px) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance !important;
+  }
+}
+
 @media (max-width: 1279px) {
   .header #nav-menu {
     grid-column: 1 / -1;

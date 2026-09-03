@@ -5,6 +5,7 @@ import Footer from "@layouts/partials/Footer";
 import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
 import GlobalPageAtmosphere from "@layouts/components/GlobalPageAtmosphere";
+import HomepageChatWidget from "@layouts/components/HomepageChatWidget";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -107,6 +108,8 @@ import "../../styles/why-jw-facts-rail-v2.css";
 import "../../styles/why-jw-compare-board-v2.css";
 import "../../styles/testimonials-hero-v2.css";
 import "../../styles/why-jw-facts-rail-v3.css";
+import "../../styles/homepage-chat-widget.css";
+import "../../styles/locale-layout-locks.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -184,6 +187,7 @@ export default async function RootLayout({ children, params }) {
           <ScrollReveal />
           <GlobalPageAtmosphere />
           <Providers>{children}</Providers>
+          <HomepageChatWidget />
           <Footer />
         </NextIntlClientProvider>
       </body>
