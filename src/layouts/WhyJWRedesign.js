@@ -49,9 +49,10 @@ export default function WhyJWRedesign() {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster="/images/generated/why-jw-operations-video-poster.png"
             aria-label={hero.videoLabel}
+            data-critical-media
           >
             <source src="/videos/why-jw-team-operations.mp4" type="video/mp4" />
           </video>

@@ -6,6 +6,7 @@ import Header from "@layouts/partials/Header";
 import Providers from "@layouts/partials/Providers";
 import GlobalPageAtmosphere from "@layouts/components/GlobalPageAtmosphere";
 import HomepageChatWidget from "@layouts/components/HomepageChatWidget";
+import PageMediaGate from "@layouts/components/PageMediaGate";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -110,6 +111,7 @@ import "../../styles/testimonials-hero-v2.css";
 import "../../styles/why-jw-facts-rail-v3.css";
 import "../../styles/homepage-chat-widget.css";
 import "../../styles/locale-layout-locks.css";
+import "../../styles/page-media-gate.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -183,12 +185,14 @@ export default async function RootLayout({ children, params }) {
       </head>
       <body className="jw-green-buttons" suppressHydrationWarning>
         <NextIntlClientProvider>
-          <Header servicePages={serviceMenu} />
-          <ScrollReveal />
-          <GlobalPageAtmosphere />
-          <Providers>{children}</Providers>
-          <HomepageChatWidget />
-          <Footer />
+          <PageMediaGate locale={locale}>
+            <Header servicePages={serviceMenu} />
+            <ScrollReveal />
+            <GlobalPageAtmosphere />
+            <Providers>{children}</Providers>
+            <HomepageChatWidget />
+            <Footer />
+          </PageMediaGate>
         </NextIntlClientProvider>
       </body>
     </html>

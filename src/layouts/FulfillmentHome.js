@@ -70,6 +70,7 @@ function ProgressiveImage({ src, alt, sizes, priority = false, eager = false }) 
         blurDataURL={MEDIA_BLUR_DATA_URL}
         onLoad={() => setStatus("ready")}
         onError={() => setStatus("error")}
+        data-critical-media={priority ? "true" : undefined}
       />
       {status === "error" && (
         <div className="fh-media-error" role="img" aria-label={`${alt}: media unavailable`}>
@@ -80,7 +81,7 @@ function ProgressiveImage({ src, alt, sizes, priority = false, eager = false }) 
   );
 }
 
-function ProgressiveVideo({ children, className = "", videoRef, ...props }) {
+function ProgressiveVideo({ children, className = "", videoRef, critical = false, ...props }) {
   const [status, setStatus] = useState("loading");
 
   return (
@@ -90,6 +91,7 @@ function ProgressiveVideo({ children, className = "", videoRef, ...props }) {
         {...props}
         ref={videoRef}
         className={className}
+        data-critical-media={critical ? "true" : undefined}
         onLoadedData={(event) => {
           setStatus("ready");
           props.onLoadedData?.(event);
@@ -265,11 +267,12 @@ export default function FulfillmentHome({ lang = "en" }) {
                 <div className="fh-hero-player-screen">
                   <ProgressiveVideo
                     videoRef={heroVideoRef}
+                    critical
                     muted
                     loop
                     playsInline
                     controls={isHeroVideoPlaying}
-                    preload="metadata"
+                    preload="auto"
                     poster="/images/generated/jw-branded-packing-v3.png"
                     aria-label={section.videoLabel}
                     onPlay={() => setIsHeroVideoPlaying(true)}

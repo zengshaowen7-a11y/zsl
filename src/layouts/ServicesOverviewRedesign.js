@@ -133,6 +133,7 @@ export default function ServicesOverviewRedesign() {
             fill
             priority
             sizes="100vw"
+            data-critical-media
           />
         </div>
       </section>
