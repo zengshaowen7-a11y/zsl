@@ -3,7 +3,7 @@ export const testimonials = [
     name: "Oliver",
     country: "United Kingdom",
     flagSrc: "https://flagcdn.com/gb.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-01.jpg",
+    avatar: "/images/material-library/team-avatar-01.webp",
     service: "Order handling",
     manager: "Working with Yuri",
     quote:
@@ -13,7 +13,7 @@ export const testimonials = [
     name: "Mia",
     country: "Canada",
     flagSrc: "https://flagcdn.com/ca.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-02.jpg",
+    avatar: "/images/material-library/team-avatar-02.webp",
     service: "Daily support",
     manager: "Working with Jessica",
     quote:
@@ -23,7 +23,7 @@ export const testimonials = [
     name: "Sophie",
     country: "France",
     flagSrc: "https://flagcdn.com/fr.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-03.jpg",
+    avatar: "/images/material-library/team-avatar-03.webp",
     service: "Product sourcing",
     manager: "Working with Emma",
     quote:
@@ -33,7 +33,7 @@ export const testimonials = [
     name: "Daniel",
     country: "Germany",
     flagSrc: "https://flagcdn.com/de.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-04.jpg",
+    avatar: "/images/material-library/team-avatar-04.webp",
     service: "Fulfillment",
     manager: "Working with the JW team",
     quote:
@@ -43,7 +43,7 @@ export const testimonials = [
     name: "Luca",
     country: "Italy",
     flagSrc: "https://flagcdn.com/it.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-05.jpg",
+    avatar: "/images/material-library/team-avatar-05.webp",
     service: "Order processing",
     manager: "Working with JW",
     quote:
@@ -53,7 +53,7 @@ export const testimonials = [
     name: "Nina",
     country: "Denmark",
     flagSrc: "https://flagcdn.com/dk.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-06.jpg",
+    avatar: "/images/material-library/team-avatar-06.webp",
     service: "Product sourcing",
     manager: "Working with Nancy",
     quote:
@@ -63,7 +63,7 @@ export const testimonials = [
     name: "Emma",
     country: "Australia",
     flagSrc: "https://flagcdn.com/au.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-07.jpg",
+    avatar: "/images/material-library/team-avatar-07.webp",
     service: "Shipping support",
     manager: "Working with Cindy",
     quote:
@@ -73,7 +73,7 @@ export const testimonials = [
     name: "Noah",
     country: "United States",
     flagSrc: "https://flagcdn.com/us.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-08.jpg",
+    avatar: "/images/material-library/team-avatar-08.webp",
     service: "Quality control",
     manager: "Working with Mia",
     quote:
@@ -83,7 +83,7 @@ export const testimonials = [
     name: "Grace",
     country: "Ireland",
     flagSrc: "https://flagcdn.com/ie.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-09.jpg",
+    avatar: "/images/material-library/team-avatar-09.webp",
     service: "Order coordination",
     manager: "Working with Katrina",
     quote:
@@ -93,7 +93,7 @@ export const testimonials = [
     name: "Adrian",
     country: "Spain",
     flagSrc: "https://flagcdn.com/es.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-10.jpg",
+    avatar: "/images/material-library/team-avatar-10.webp",
     service: "Inventory support",
     manager: "Working with Michael",
     quote:
@@ -103,7 +103,7 @@ export const testimonials = [
     name: "Chloe",
     country: "Singapore",
     flagSrc: "https://flagcdn.com/sg.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-11.jpg",
+    avatar: "/images/material-library/team-avatar-11.webp",
     service: "Packaging review",
     manager: "Working with Iris",
     quote:
@@ -113,7 +113,7 @@ export const testimonials = [
     name: "Ben",
     country: "France",
     flagSrc: "https://flagcdn.com/fr.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-12.jpg",
+    avatar: "/images/material-library/team-avatar-12.webp",
     service: "Quotation comparison",
     manager: "Working with Alice",
     quote:
@@ -123,7 +123,7 @@ export const testimonials = [
     name: "Priya",
     country: "United Kingdom",
     flagSrc: "https://flagcdn.com/gb.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-13.jpg",
+    avatar: "/images/material-library/team-avatar-13.webp",
     service: "Quality review",
     manager: "Working with Coco",
     quote:
@@ -133,7 +133,7 @@ export const testimonials = [
     name: "Ethan",
     country: "United Arab Emirates",
     flagSrc: "https://flagcdn.com/ae.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-14.jpg",
+    avatar: "/images/material-library/team-avatar-14.webp",
     service: "Dispatch follow-up",
     manager: "Working with Grey",
     quote:
@@ -143,7 +143,7 @@ export const testimonials = [
     name: "Laura",
     country: "Italy",
     flagSrc: "https://flagcdn.com/it.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-15.jpg",
+    avatar: "/images/material-library/team-avatar-15.webp",
     service: "Sample review",
     manager: "Working with Mia",
     quote:
@@ -153,7 +153,7 @@ export const testimonials = [
     name: "Victor",
     country: "Portugal",
     flagSrc: "https://flagcdn.com/pt.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-16.jpg",
+    avatar: "/images/material-library/team-avatar-16.webp",
     service: "Supplier shortlist",
     manager: "Working with Katrina",
     quote:
@@ -163,7 +163,7 @@ export const testimonials = [
     name: "Hannah",
     country: "Sweden",
     flagSrc: "https://flagcdn.com/se.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-17.jpg",
+    avatar: "/images/material-library/team-avatar-17.webp",
     service: "Account support",
     manager: "Working with Cindy",
     quote:
@@ -173,7 +173,7 @@ export const testimonials = [
     name: "Samuel",
     country: "Netherlands",
     flagSrc: "https://flagcdn.com/nl.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-18.jpg",
+    avatar: "/images/material-library/team-avatar-18.webp",
     service: "Brand packing",
     manager: "Working with JW",
     quote:
@@ -183,7 +183,7 @@ export const testimonials = [
     name: "Isabella",
     country: "Australia",
     flagSrc: "https://flagcdn.com/au.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-19.jpg",
+    avatar: "/images/material-library/team-avatar-19.webp",
     service: "Label checks",
     manager: "Working with Iris",
     quote:
@@ -193,7 +193,7 @@ export const testimonials = [
     name: "Thomas",
     country: "Germany",
     flagSrc: "https://flagcdn.com/de.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-20.jpg",
+    avatar: "/images/material-library/team-avatar-20.webp",
     service: "Inventory planning",
     manager: "Working with Michael",
     quote:
@@ -203,7 +203,7 @@ export const testimonials = [
     name: "Aisha",
     country: "United States",
     flagSrc: "https://flagcdn.com/us.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-21.jpg",
+    avatar: "/images/material-library/team-avatar-21.webp",
     service: "Documents",
     manager: "Working with Coco",
     quote:
@@ -213,7 +213,7 @@ export const testimonials = [
     name: "Leo",
     country: "Canada",
     flagSrc: "https://flagcdn.com/ca.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-22.jpg",
+    avatar: "/images/material-library/team-avatar-22.webp",
     service: "Urgent orders",
     manager: "Working with Grey",
     quote:
@@ -223,7 +223,7 @@ export const testimonials = [
     name: "Maria",
     country: "Belgium",
     flagSrc: "https://flagcdn.com/be.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-23.jpg",
+    avatar: "/images/material-library/team-avatar-23.webp",
     service: "Reorders",
     manager: "Working with Mia",
     quote:
@@ -233,7 +233,7 @@ export const testimonials = [
     name: "James",
     country: "New Zealand",
     flagSrc: "https://flagcdn.com/nz.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-24.jpg",
+    avatar: "/images/material-library/team-avatar-24.webp",
     service: "Listing launch",
     manager: "Working with Alice",
     quote:
@@ -243,7 +243,7 @@ export const testimonials = [
     name: "Yara",
     country: "Saudi Arabia",
     flagSrc: "https://flagcdn.com/sa.svg",
-    avatar: "/images/testimonials/avatars/seller-avatar-25.jpg",
+    avatar: "/images/material-library/team-avatar-25.webp",
     service: "Issue resolution",
     manager: "Working with Katrina",
     quote:

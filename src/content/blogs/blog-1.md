@@ -1,7 +1,7 @@
 ---
 title: "How to compare China suppliers beyond unit price"
 description: "Compare specifications, samples, MOQ, lead time and fulfillment impact before choosing a factory."
-image: "/images/generated/product-sourcing-hero.webp"
+image: "/images/material-library/client-meeting.webp"
 date: 2026-04-04T05:00:00Z
 draft: false
 ---

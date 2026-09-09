@@ -1,7 +1,7 @@
 ---
 title: "How to choose a shipping route for cross-border orders"
 description: "Balance delivery speed, tracking, parcel profile, product restrictions and customer expectations."
-image: "/images/generated/jw-dispatch-v2.png"
+image: "/images/material-library/sortation-floor.webp"
 date: 2026-08-04T05:00:00Z
 draft: false
 ---

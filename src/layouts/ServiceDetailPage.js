@@ -31,12 +31,12 @@ const serviceVisualIcons = {
 };
 
 const mediaLibrary = {
-  receive: { src: "/images/generated/jw-receiving-team-v3.png", label: "RECEIVE", title: "Goods received and matched to the product brief" },
-  check: { src: "/images/generated/jw-qc-inspection-v3.png", label: "CHECK", title: "Product details checked before fulfillment" },
-  pack: { src: "/images/generated/jw-branded-packing-v3.png", label: "PACK", title: "Packing rules applied to each order" },
-  dispatch: { src: "/images/generated/jw-dispatch-scan-v3.png", label: "DISPATCH", title: "Parcels scanned for carrier handoff" },
-  support: { src: "/images/generated/jw-account-support-v3.png", label: "COORDINATE", title: "One contact keeps decisions connected" },
-  pod: { src: "/images/generated/jw-pod-production-v3.png", label: "PRODUCE", title: "Small-batch production checked at source" },
+  receive: { src: "/images/material-library/receiving-team.webp", label: "RECEIVE", title: "Goods received and matched to the product brief" },
+  check: { src: "/images/material-library/package-scan.webp", label: "CHECK", title: "Product details checked before fulfillment" },
+  pack: { src: "/images/material-library/warehouse-packing.webp", label: "PACK", title: "Packing rules applied to each order" },
+  dispatch: { src: "/images/material-library/label-scanning.webp", label: "DISPATCH", title: "Parcels scanned for carrier handoff" },
+  support: { src: "/images/material-library/account-support.webp", label: "COORDINATE", title: "One contact keeps decisions connected" },
+  pod: { src: "/images/material-library/product-assembly.webp", label: "PRODUCE", title: "Small-batch production checked at source" },
 };
 
 const serviceMediaMap = {

@@ -29,7 +29,7 @@ export const proofContent = {
   "product-sourcing": {
     "eyebrow": "BEISPIEL ZUM VERGLEICHEN VON VERSORGERN",
     "title": "Lieferantenangebote vergleichen.",
-    "image": "/images/generated/product-sourcing-hero.webp",
+    "image": "/images/material-library/client-meeting.webp",
     "columns": [
       "Lieferanten",
       "Stückpreis",
@@ -61,7 +61,7 @@ export const proofContent = {
   "quality-control-inspection": {
     "eyebrow": "BEISPIEL QC RELEASE RECORD",
     "title": "Machen Sie den Release Call.",
-    "image": "/images/generated/jw-qc-inspection-v3.png",
+    "image": "/images/material-library/package-scan.webp",
     "columns": [
       "Kontrollpunkt",
       "Geprüft",
@@ -93,7 +93,7 @@ export const proofContent = {
   "3pl-fulfillment-services": {
     "eyebrow": "BEISPIEL VORSCHRIFTEN",
     "title": "Der Bestand bleibt sichtbar.",
-    "image": "/images/generated/3pl-fulfillment-hero.webp",
+    "image": "/images/material-library/fulfillment-warehouse.webp",
     "columns": [
       "SKU",
       "Empfangen",
@@ -125,7 +125,7 @@ export const proofContent = {
   "pod-fulfillment": {
     "eyebrow": "POD GENEHMIGUNGSGATEN",
     "title": "Halten Sie Kunstwerke, Varianten und physische Genehmigung verbunden.",
-    "image": "/images/generated/jw-pod-production-v3.png",
+    "image": "/images/material-library/product-assembly.webp",
     "columns": [
       "Tor",
       "Erforderlicher Input",
@@ -157,7 +157,7 @@ export const proofContent = {
   "private-label": {
     "eyebrow": "BRANDBEREICHSPLANER",
     "title": "Wählen Sie Markenelemente nach Impact, MOQ und Timing.",
-    "image": "/images/brand-showcase/paper-packaging-detail.jpg",
+    "image": "/images/material-library/package-weighing.webp",
     "columns": [
       "Markenelement",
       "Typischer Input",
@@ -189,7 +189,7 @@ export const proofContent = {
   "automatic-order-fulfillment": {
     "eyebrow": "AUFTRAGKONTROLLE",
     "title": "Befehle bereit zum Umzug.",
-    "image": "/images/generated/automatic-fulfillment-hero.webp",
+    "image": "/images/material-library/automated-sorter.webp",
     "columns": [
       "Signal",
       "Status",
@@ -235,7 +235,7 @@ export const proofContent = {
   "china-fulfillment-center": {
     "eyebrow": "WARENKONTROLLZONE",
     "title": "Karte jede Handoff, bevor es Schiffe.",
-    "image": "/images/evidence/warehouse-walkthrough-aisle.jpg",
+    "image": "/images/material-library/fulfillment-warehouse.webp",
     "columns": [
       "Zone",
       "Tätigkeit",
@@ -267,7 +267,7 @@ export const proofContent = {
   "dropshipping-supplier": {
     "eyebrow": "KONTROLLE DES AUFTRAGS",
     "title": "Halten Sie Produkt-, Verpackungs- und Versandkontext zusammen.",
-    "image": "/images/generated/dropshipping-supplier-hero.webp",
+    "image": "/images/material-library/parcel-processing.webp",
     "columns": [
       "Phase",
       "Teamaktion",

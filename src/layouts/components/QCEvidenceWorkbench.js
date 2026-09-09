@@ -6,10 +6,10 @@ import { FiArrowRight, FiCheck, FiChevronRight } from "react-icons/fi";
 import { Link } from "@/i18n/navigation";
 
 const images = [
-  "/images/generated/jw-qc-inspection-v3.png",
-  "/images/quality-gallery/shelf-parcel-inspection.jpg",
-  "/images/generated/jw-quality-check-v2.png",
-  "/images/quality-gallery/clipboard-package-check.jpg",
+  "/images/material-library/package-scan.webp",
+  "/images/material-library/packed-orders.webp",
+  "/images/material-library/quality-check.webp",
+  "/images/material-library/label-scanning.webp",
 ];
 
 function QCEvidenceWorkbench({ content }) {

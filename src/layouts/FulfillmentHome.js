@@ -450,9 +450,9 @@ export default function FulfillmentHome({ lang = "en" }) {
             </article>
           </div>
           <div className="fh-difference-media" aria-label={section.differenceMediaLabel}>
-            <figure className="fh-difference-main"><Image src="/images/generated/jw-qc-inspection-v3.png" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" unoptimized /><figcaption>{section.differenceMedia[0][1]}</figcaption></figure>
-            <figure><Image src="/images/quality-gallery/tablet-quality-check.jpg" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[1][1]}</figcaption></figure>
-            <figure><Image src="/images/quality-gallery/fragile-box-inspection.jpg" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[2][1]}</figcaption></figure>
+            <figure className="fh-difference-main"><Image src="/images/material-library/package-scan.webp" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" unoptimized /><figcaption>{section.differenceMedia[0][1]}</figcaption></figure>
+            <figure><Image src="/images/material-library/quality-check.webp" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[1][1]}</figcaption></figure>
+            <figure><Image src="/images/material-library/inbound-parcels.webp" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[2][1]}</figcaption></figure>
           </div>
         </div>
       </section>

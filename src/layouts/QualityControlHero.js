@@ -5,9 +5,9 @@ import { useState } from "react";
 import { FiArrowRight, FiCamera, FiCheck, FiClipboard, FiPlay, FiShield } from "react-icons/fi";
 
 const evidenceImages = [
-  ["/images/generated/jw-qc-inspection-v3.png", FiClipboard],
-  ["/images/quality-gallery/warehouse-package-check.jpg", FiCamera],
-  ["/images/quality-gallery/clipboard-package-check.jpg", FiShield],
+  ["/images/material-library/package-scan.webp", FiClipboard],
+  ["/images/material-library/package-scan.webp", FiCamera],
+  ["/images/material-library/label-scanning.webp", FiShield],
 ];
 
 export default function QualityControlHero({ service, ui }) {

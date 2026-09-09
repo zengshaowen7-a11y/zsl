@@ -30,7 +30,7 @@ export default async function ContactPage({ params }) {
 
   return <main className="ctw-page" id="top">
     <section className="ctw-hero">
-      <div className="ctw-intro"><div className="ctw-intro-copy"><p className="ctw-kicker">{t("heroKicker")}</p><h1 style={contactTitleStyle}>{t("heroTitle")}</h1><p>{t("heroLead")}</p><ul>{heroProofs.map((item) => <li key={item}><FiCheck /> {item}</li>)}</ul><div className="ctw-response"><FiClock /><div><strong>{t("responseTarget")}</strong><span>{t("responseTime")}</span></div></div></div><div className="ctw-intro-media"><Image src="/images/generated/jw-account-support-v3.png" alt={t("heroImageAlt")} fill priority sizes="(max-width: 900px) 100vw, 48vw" /></div></div>
+      <div className="ctw-intro"><div className="ctw-intro-copy"><p className="ctw-kicker">{t("heroKicker")}</p><h1 style={contactTitleStyle}>{t("heroTitle")}</h1><p>{t("heroLead")}</p><ul>{heroProofs.map((item) => <li key={item}><FiCheck /> {item}</li>)}</ul><div className="ctw-response"><FiClock /><div><strong>{t("responseTarget")}</strong><span>{t("responseTime")}</span></div></div></div><div className="ctw-intro-media"><Image src="/images/material-library/account-support.webp" alt={t("heroImageAlt")} fill priority sizes="(max-width: 900px) 100vw, 48vw" /></div></div>
       <div className="ctw-form-side"><ContactForm /></div>
     </section>
 

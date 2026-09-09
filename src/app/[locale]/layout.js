@@ -112,6 +112,10 @@ import "../../styles/why-jw-facts-rail-v3.css";
 import "../../styles/homepage-chat-widget.css";
 import "../../styles/locale-layout-locks.css";
 import "../../styles/page-media-gate.css";
+import "../../styles/related-services-taste.css";
+import "../../styles/private-label-case-taste.css";
+import "../../styles/private-label-planner-taste.css";
+import "../../styles/private-label-fit-taste.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

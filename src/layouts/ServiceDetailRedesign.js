@@ -119,7 +119,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
           </div>
           <div className={`sdr-hero-image${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-image" : ""}`}>
             <Image
-              src={service.image}
+              src={service.slug === "private-label" ? "/images/material-library/package-scan.webp" : service.image}
               alt={`${service.menuTitle} in operation`}
               fill
               priority
@@ -164,9 +164,24 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
       )}
 
       {service.slug !== "automatic-order-fulfillment" ? (
-      <section className="sdr-fit">
+      <section id={service.slug === "private-label" ? "private-label-fit" : undefined} className="sdr-fit">
         <div className="container">
-          {service.slug === "dropshipping-supplier" ? (
+          {service.slug === "private-label" ? (
+            <div className="sdr-private-label-fit-intro">
+              <span className="ff-kicker">{t("fitKicker")}</span>
+              <h2>Built around the operating result you need.</h2>
+              <p>A good private-label launch starts by separating what must ship now from what can wait for volume.</p>
+              <div className="sdr-private-label-fit-signal" aria-hidden="true"><FiCheck /><span>Brand-ready path</span></div>
+              <div className="sdr-private-label-launch-filter" aria-label="Private-label launch filter">
+                <strong>Launch filter</strong>
+                <dl>
+                  <div><dt><FiClipboard aria-hidden="true" />Launch now</dt><dd>Essential customer-facing details</dd></div>
+                  <div><dt><FiSearch aria-hidden="true" />Validate next</dt><dd>Supplier method and physical sample</dd></div>
+                  <div><dt><FiTruck aria-hidden="true" />Scale later</dt><dd>Stored materials and packing rules</dd></div>
+                </dl>
+              </div>
+            </div>
+          ) : service.slug === "dropshipping-supplier" ? (
             <div className="sdr-fit-intro">
               <div>
                 <span className="ff-kicker">{t("fitKicker")}</span>
@@ -247,7 +262,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 {service.slug === "quality-control-inspection" ? (
                   <div className="sdr-qc-fit-proof" aria-hidden="true">
                     <Image
-                      src="/images/generated/jw-qc-inspection-v3.png"
+                      src="/images/material-library/package-scan.webp"
                       alt=""
                       width={420}
                       height={210}
@@ -270,7 +285,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </h2>
             </div>
           )}
-          <div className={service.slug === "china-fulfillment-center" ? "sdr-fit-timeline" : service.slug === "quality-control-inspection" ? "sdr-fit-grid sdr-qc-fit-stream" : "sdr-fit-grid"}>
+          <div className={service.slug === "china-fulfillment-center" ? "sdr-fit-timeline" : service.slug === "quality-control-inspection" ? "sdr-fit-grid sdr-qc-fit-stream" : service.slug === "private-label" ? "sdr-fit-grid sdr-private-label-fit-path" : "sdr-fit-grid"}>
             {service.slug === "china-fulfillment-center" ? <span className="sdr-fit-timeline-particle" aria-hidden="true" /> : null}
             {service.outcomes.map(([title, text], index) => {
               const Icon = outcomeIcons[index % outcomeIcons.length];
@@ -280,7 +295,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                   <small>0{index + 1}</small>
                   {service.slug === "china-fulfillment-center" ? (
                     <span className="sdr-fit-step-icon" aria-hidden="true"><Icon /></span>
-                  ) : ["dropshipping-supplier", "3pl-fulfillment-services", "product-sourcing"].includes(service.slug) ? <Icon aria-hidden="true" /> : service.slug === "quality-control-inspection" ? <FiCheck className="sdr-qc-fit-check" aria-hidden="true" /> : null}
+                  ) : ["dropshipping-supplier", "3pl-fulfillment-services", "product-sourcing", "private-label"].includes(service.slug) ? <Icon aria-hidden="true" /> : service.slug === "quality-control-inspection" ? <FiCheck className="sdr-qc-fit-check" aria-hidden="true" /> : null}
                 </div>
                 {service.slug === "quality-control-inspection" ? (
                   <div className="sdr-qc-fit-visual" aria-hidden="true">
@@ -317,6 +332,8 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                   <strong>{ui.fit.dropshipTags[index]}</strong>
                 ) : service.slug === "3pl-fulfillment-services" ? (
                   <strong>{ui.fit.threePlTags[index]}</strong>
+                ) : service.slug === "private-label" ? (
+                  <strong className="sdr-private-label-fit-stage">{["Scope", "Supplier", "Sample", "Packing"][index]}</strong>
                 ) : null}
               </article>
               );
@@ -442,7 +459,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             <figure className="sdr-order-control-visual">
               <div className="sdr-order-control-photo sdr-order-control-photo-primary">
                 <Image
-                  src="/images/generated/jw-dispatch-scan-v3.png"
+                  src="/images/material-library/label-scanning.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 900px) 88vw, 34vw"
@@ -450,7 +467,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </div>
               <div className="sdr-order-control-photo sdr-order-control-photo-secondary">
                 <Image
-                  src="/images/generated/jw-branded-packing-v3.png"
+                  src="/images/material-library/warehouse-packing.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 560px) 66vw, (max-width: 900px) 46vw, 22vw"
@@ -535,6 +552,41 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <small className="sdr-qc-release-note">{proof.note}</small>
             </div>
           </div>
+        ) : service.slug === "private-label" ? (
+        <div id="private-label-scope-planner" className="container sdr-private-label-scope-planner">
+          <figure>
+            <Image
+              src="/images/material-library/package-weighing.webp"
+              alt={proof.title}
+              fill
+              sizes="(max-width: 760px) 100vw, 38vw"
+            />
+            <figcaption><FiLayers aria-hidden="true" /><span>{proof.note}</span></figcaption>
+          </figure>
+          <div className="sdr-private-label-scope-panel">
+            <header>
+              <span className="ff-kicker">{proof.eyebrow}</span>
+              <h2>{proof.title}</h2>
+            </header>
+            <ol aria-label={proof.title}>
+              {proof.rows.map((row, index) => {
+                const ScopeIcon = [FiClipboard, FiPackage, FiLayers][index];
+                return (
+                  <li key={row[0]}>
+                    <span className="sdr-private-label-scope-icon" aria-hidden="true"><ScopeIcon /></span>
+                    <div className="sdr-private-label-scope-name"><small>0{index + 1}</small><h3>{row[0]}</h3></div>
+                    <dl>
+                      {row.slice(1).map((cell, cellIndex) => (
+                        <div key={`${cell}-${cellIndex}`}><dt>{proof.columns[cellIndex + 1]}</dt><dd>{cell}</dd></div>
+                      ))}
+                    </dl>
+                    <FiArrowRight className="sdr-private-label-scope-arrow" aria-hidden="true" />
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        </div>
         ) : (
         <div className={`container sdr-proof-grid${service.slug === "china-fulfillment-center" ? " sdr-warehouse-control" : ""}`}>
           <figure className={service.slug === "china-fulfillment-center" ? "sdr-warehouse-control-visual" : undefined}>
@@ -1025,6 +1077,47 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 </blockquote>
               </div>
             </div>
+          ) : service.slug === "private-label" ? (
+            <div id="private-label-case" className="container sdr-private-label-case">
+              <aside className="sdr-private-label-case-story">
+                <figure>
+                  <Image
+                    src="/images/material-library/warehouse-packing.webp"
+                    alt="Private-label packaging materials prepared for a branded order"
+                    fill
+                    sizes="(max-width: 720px) 100vw, 42vw"
+                  />
+                </figure>
+                <div>
+                  <span className="ff-kicker">{conversion.caseStudy.eyebrow}</span>
+                  <h2 className={serviceTitleClass(conversion.caseStudy.title)}>
+                    {conversion.caseStudy.title}
+                  </h2>
+                  <p>{conversion.caseStudy.profile}</p>
+                </div>
+              </aside>
+              <div className="sdr-private-label-case-workflow">
+                <header>
+                  <strong>{ui.detail.challenge}</strong>
+                  <p>{conversion.caseStudy.challenge}</p>
+                </header>
+                <ol>
+                  {conversion.caseStudy.plan.map((step, index) => (
+                    <li key={step} style={{ "--private-label-case-index": index }}>
+                      <span>0{index + 1}</span>
+                      <div>
+                        <h3>{step}</h3>
+                        {conversion.caseStudy.evidence?.[index] ? <p>{conversion.caseStudy.evidence[index]}</p> : null}
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <blockquote>
+                  <FiCheck aria-hidden="true" />
+                  <p>{conversion.caseStudy.outcome}</p>
+                </blockquote>
+              </div>
+            </div>
           ) : (
           <div className="container sdr-case-grid">
             <div>
@@ -1081,7 +1174,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
         </div>
       </section>
 
-      <section className="sdr-related">
+      <section className="sdr-related" id="service-related">
         <div className="container">
           <div className="sdr-related-heading">
             <h2>{t("relatedServices")}</h2>
@@ -1095,7 +1188,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <Link href={`/services/${item.slug}`} key={item.slug} className={index === 0 ? "is-featured" : undefined}>
                 <figure className="sdr-related-media">
                   <Image
-                    src={item.image}
+                    src={service.slug === "private-label" && item.slug === "pod-fulfillment" ? "/images/material-library/product-assembly.webp" : item.image}
                     alt={`${item.menuTitle} service`}
                     fill
                     sizes="(max-width: 767px) 100vw, 34vw"

@@ -92,7 +92,7 @@ export default function FulfillmentServicesPage() {
           </div>
 
           <div className="fsp-hero-visual">
-            <Image className="fsp-hero-photo" src="/images/generated/jw-receiving-team-v3.png" alt="JW receiving team scanning incoming cartons" fill priority sizes="(max-width: 991px) 100vw, 48vw" unoptimized />
+            <Image className="fsp-hero-photo" src="/images/material-library/receiving-team.webp" alt="JW receiving team scanning incoming cartons" fill priority sizes="(max-width: 991px) 100vw, 48vw" unoptimized />
             <div className="fsp-visual-label"><FiGlobe /><span><strong>Worldwide delivery</strong><small>Route selected per order</small></span></div>
             <div className="fsp-flow-card">
               <small>ONE PARTNER · COMPLETE ORDER JOURNEY</small>

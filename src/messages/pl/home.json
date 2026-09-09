@@ -54,7 +54,7 @@
           "MOQ i przegląd czasu prowadzenia"
         ],
         "slug": "product-sourcing",
-        "image": "/images/services/product-sourcing.webp"
+        "image": "/images/material-library/client-meeting.webp"
       },
       {
         "title": "Kontrola jakości",
@@ -65,7 +65,7 @@
           "Kontrola opakowania"
         ],
         "slug": "quality-control-inspection",
-        "image": "/images/services/quality-control-inspection.webp"
+        "image": "/images/material-library/quality-check.webp"
       },
       {
         "title": "Prywatne etykiety i opakowania",
@@ -76,7 +76,7 @@
           "Zatwierdzenie próbki opakowania"
         ],
         "slug": "private-label",
-        "image": "/images/services/private-label.webp"
+        "image": "/images/material-library/package-weighing.webp"
       },
       {
         "title": "Upadkowe wypełnienie",
@@ -87,7 +87,7 @@
           "Ścieżki morskie na całym świecie"
         ],
         "slug": "dropshipping-supplier",
-        "image": "/images/services/dropshipping-supplier.webp"
+        "image": "/images/material-library/parcel-processing.webp"
       },
       {
         "title": "Chiny 3PL Spełnienie",
@@ -98,7 +98,7 @@
           "Zwraca koordynację"
         ],
         "slug": "3pl-fulfillment-services",
-        "image": "/images/services/3pl-fulfillment.webp"
+        "image": "/images/material-library/fulfillment-warehouse.webp"
       },
       {
         "title": "Automatyzacja zamówień",
@@ -109,7 +109,7 @@
           "Śledzenie przepływu zwrotnego"
         ],
         "slug": "automatic-order-fulfillment",
-        "image": "/images/services/order-automation.webp"
+        "image": "/images/material-library/automated-sorter.webp"
       }
     ],
     "comparisonItems": [
@@ -148,15 +148,15 @@
         "text": "Porównaj dostawców, próbki, MOQ i czasy realizacji",
         "images": [
           [
-            "/images/services/product-sourcing.webp",
+            "/images/material-library/client-meeting.webp",
             "Specjalista od pozyskiwania produktów porównujący opcje dostawcy"
           ],
           [
-            "/images/services/dropshipping-supplier.webp",
+            "/images/material-library/parcel-processing.webp",
             "Produkty dostawców przygotowane do przeglądu źródeł zaopatrzenia"
           ],
           [
-            "/images/generated/product-sourcing-hero.webp",
+            "/images/material-library/client-meeting.webp",
             "Chiński zespół dostawców koordynujący próbki produktów"
           ]
         ]
@@ -166,15 +166,15 @@
         "text": "Kontrola jakości w pełnym składzie przed wysyłką",
         "images": [
           [
-            "/images/services/quality-control-inspection.webp",
+            "/images/material-library/quality-check.webp",
             "Inspektor jakości sprawdzający produkty przed wysyłką"
           ],
           [
-            "/images/quality-gallery/warehouse-package-check.jpg",
+            "/images/material-library/package-scan.webp",
             "Zespół składu sprawdzający opakowania produktów"
           ],
           [
-            "/images/generated/jw-quality-check-v2.png",
+            "/images/material-library/quality-check.webp",
             "Specjalista ds. kontroli jakości JW dokonujący przeglądu elementu"
           ]
         ]
@@ -184,15 +184,15 @@
         "text": "Przechowywanie, pakowanie, wysyłka i śledzenie pod jednym przepływem pracy",
         "images": [
           [
-            "/images/services/3pl-fulfillment.webp",
+            "/images/material-library/fulfillment-warehouse.webp",
             "China magazyn realizacji operacji"
           ],
           [
-            "/images/process/warehouse-picking-overhead.jpg",
+            "/images/material-library/returns-shelving.webp",
             "Personel magazynowy zbierający produkty na zamówienia"
           ],
           [
-            "/images/generated/jw-dispatch-v2.png",
+            "/images/material-library/sortation-floor.webp",
             "Zespół JW przygotowuje paczki do wysyłki"
           ]
         ]

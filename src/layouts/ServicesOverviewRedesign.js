@@ -128,7 +128,7 @@ export default function ServicesOverviewRedesign() {
         </ServicesHeroEntrance>
         <div className="sov-hero-media">
           <Image
-            src="/images/generated/jw-receiving-team-v3.png"
+            src="/images/material-library/receiving-team.webp"
             alt={hero.imageAlt}
             fill
             priority

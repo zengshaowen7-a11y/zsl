@@ -54,7 +54,7 @@
           "MOQ und Vorlaufzeitüberprüfung"
         ],
         "slug": "product-sourcing",
-        "image": "/images/services/product-sourcing.webp"
+        "image": "/images/material-library/client-meeting.webp"
       },
       {
         "title": "Qualitätskontrolle",
@@ -65,7 +65,7 @@
           "Verpackungskontrolle"
         ],
         "slug": "quality-control-inspection",
-        "image": "/images/services/quality-control-inspection.webp"
+        "image": "/images/material-library/quality-check.webp"
       },
       {
         "title": "Private Label & Verpackung",
@@ -76,7 +76,7 @@
           "Genehmigung der Verpackungsmuster"
         ],
         "slug": "private-label",
-        "image": "/images/services/private-label.webp"
+        "image": "/images/material-library/package-weighing.webp"
       },
       {
         "title": "Dropshipping Fulfillment",
@@ -87,7 +87,7 @@
           "Weltweit verfolgter Versand"
         ],
         "slug": "dropshipping-supplier",
-        "image": "/images/services/dropshipping-supplier.webp"
+        "image": "/images/material-library/parcel-processing.webp"
       },
       {
         "title": "China 3PL Erfüllung",
@@ -98,7 +98,7 @@
           "Koordinierung der Rückführungen"
         ],
         "slug": "3pl-fulfillment-services",
-        "image": "/images/services/3pl-fulfillment.webp"
+        "image": "/images/material-library/fulfillment-warehouse.webp"
       },
       {
         "title": "Auftragsautomatisierung",
@@ -109,7 +109,7 @@
           "Rückgabe-Workflow"
         ],
         "slug": "automatic-order-fulfillment",
-        "image": "/images/services/order-automation.webp"
+        "image": "/images/material-library/automated-sorter.webp"
       }
     ],
     "comparisonItems": [
@@ -148,15 +148,15 @@
         "text": "Vergleichen Sie Lieferanten, Muster, MOQs & Vorlaufzeiten",
         "images": [
           [
-            "/images/services/product-sourcing.webp",
+            "/images/material-library/client-meeting.webp",
             "Produkt-Sourcing-Spezialist vergleicht Lieferantenoptionen"
           ],
           [
-            "/images/services/dropshipping-supplier.webp",
+            "/images/material-library/parcel-processing.webp",
             "Lieferantenprodukte vorbereitet für Sourcing Review"
           ],
           [
-            "/images/generated/product-sourcing-hero.webp",
+            "/images/material-library/client-meeting.webp",
             "China Sourcing Team koordiniert Produktproben"
           ]
         ]
@@ -166,15 +166,15 @@
         "text": "Vollständige Qualitätskontrolle vor dem Versand",
         "images": [
           [
-            "/images/services/quality-control-inspection.webp",
+            "/images/material-library/quality-check.webp",
             "Qualitätsprüfer überprüft Produkte vor dem Versand"
           ],
           [
-            "/images/quality-gallery/warehouse-package-check.jpg",
+            "/images/material-library/package-scan.webp",
             "Lagerteam überprüft Produktverpackung"
           ],
           [
-            "/images/generated/jw-quality-check-v2.png",
+            "/images/material-library/quality-check.webp",
             "JW Qualitätskontrolle Spezialist Überprüfung eines Artikels"
           ]
         ]
@@ -184,15 +184,15 @@
         "text": "Lagerung, Verpackung, Versand & Tracking unter einem Workflow",
         "images": [
           [
-            "/images/services/3pl-fulfillment.webp",
+            "/images/material-library/fulfillment-warehouse.webp",
             "China Warehouse Fulfillment Operation"
           ],
           [
-            "/images/process/warehouse-picking-overhead.jpg",
+            "/images/material-library/returns-shelving.webp",
             "Warehouse Personal Kommissionierung Produkte für Bestellungen"
           ],
           [
-            "/images/generated/jw-dispatch-v2.png",
+            "/images/material-library/sortation-floor.webp",
             "GW-Team bereitet Pakete für den Versand vor"
           ]
         ]
