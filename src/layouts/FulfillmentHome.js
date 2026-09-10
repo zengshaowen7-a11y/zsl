@@ -351,7 +351,7 @@ export default function FulfillmentHome({ lang = "en" }) {
                     aria-label={`${title} image gallery`}
                   >
                     {images.map(([src, alt], slideIndex) => (
-                      <figure className="fh-advantage-slide" key={src}>
+                      <figure className="fh-advantage-slide" key={`${src}-${slideIndex}`}>
                         <ProgressiveImage
                           src={src}
                           alt={alt}
