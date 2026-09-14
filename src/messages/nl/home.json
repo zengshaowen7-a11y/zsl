@@ -54,7 +54,7 @@
           "MOQ en beoordeling van de doorlooptijd"
         ],
         "slug": "product-sourcing",
-        "image": "/images/material-library/client-meeting.webp"
+        "image": "/images/jw-content/client-meeting.webp"
       },
       {
         "title": "Kwaliteitscontrole",
@@ -65,7 +65,7 @@
           "Verpakkingscontrole"
         ],
         "slug": "quality-control-inspection",
-        "image": "/images/material-library/quality-check.webp"
+        "image": "/images/jw-content/quality-check.webp"
       },
       {
         "title": "Privé-etiket en verpakking",
@@ -76,7 +76,7 @@
           "Goedkeuring van het verpakkingsmonster"
         ],
         "slug": "private-label",
-        "image": "/images/material-library/package-weighing.webp"
+        "image": "/images/jw-content/package-weighing.webp"
       },
       {
         "title": "Dropshipping Fulfillment",
@@ -87,7 +87,7 @@
           "Wereldwijd traced shipping"
         ],
         "slug": "dropshipping-supplier",
-        "image": "/images/material-library/parcel-processing.webp"
+        "image": "/images/jw-content/parcel-processing.webp"
       },
       {
         "title": "China 3PL Vervulling",
@@ -98,7 +98,7 @@
           "Returns coördinatie"
         ],
         "slug": "3pl-fulfillment-services",
-        "image": "/images/material-library/fulfillment-warehouse.webp"
+        "image": "/images/jw-content/fulfillment-warehouse.webp"
       },
       {
         "title": "Automatisch bestellen",
@@ -109,7 +109,7 @@
           "Tracking retour workflow"
         ],
         "slug": "automatic-order-fulfillment",
-        "image": "/images/material-library/automated-sorter.webp"
+        "image": "/images/jw-content/automated-sorter.webp"
       }
     ],
     "comparisonItems": [
@@ -148,15 +148,15 @@
         "text": "Vergelijk leveranciers, monsters, MOQs & doorlooptijden",
         "images": [
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "Product sourcing specialist vergelijken leverancier opties"
           ],
           [
-            "/images/material-library/parcel-processing.webp",
+            "/images/jw-content/parcel-processing.webp",
             "Leverancier producten bereid voor aankoop beoordeling"
           ],
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "China sourcing team coördineren productmonsters"
           ]
         ]
@@ -166,15 +166,15 @@
         "text": "Volledige kwaliteitskeuring vóór verzending",
         "images": [
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "Kwaliteit inspecteur controleren producten voor verzending"
           ],
           [
-            "/images/material-library/package-scan.webp",
+            "/images/jw-content/package-scan.webp",
             "Pakhuis team controleren product verpakking"
           ],
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "JW kwaliteitscontrole specialist beoordelen van een item"
           ]
         ]
@@ -184,15 +184,15 @@
         "text": "Opslag, verpakking, verzending en tracking onder één workflow",
         "images": [
           [
-            "/images/material-library/fulfillment-warehouse.webp",
+            "/images/jw-content/fulfillment-warehouse.webp",
             "China magazijn uitvoering operatie"
           ],
           [
-            "/images/material-library/returns-shelving.webp",
+            "/images/jw-content/returns-shelving.webp",
             "Pakhuispersoneel picking producten voor bestellingen"
           ],
           [
-            "/images/material-library/sortation-floor.webp",
+            "/images/jw-content/sortation-floor.webp",
             "JW-team dat pakketten klaarmaakt voor verzending"
           ]
         ]

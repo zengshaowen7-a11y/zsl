@@ -12,14 +12,14 @@ const serviceIcons = {
 };
 
 const serviceOverviewImages = {
-  "dropshipping-supplier": "/images/material-library/parcel-processing.webp",
-  "3pl-fulfillment-services": "/images/material-library/fulfillment-warehouse.webp",
-  "pod-fulfillment": "/images/material-library/packing-line.webp",
-  "private-label": "/images/material-library/package-weighing.webp",
-  "product-sourcing": "/images/material-library/client-meeting.webp",
-  "automatic-order-fulfillment": "/images/material-library/automated-sorter.webp",
-  "china-fulfillment-center": "/images/material-library/warehouse-exterior.webp",
-  "quality-control-inspection": "/images/material-library/quality-check.webp",
+  "dropshipping-supplier": "/images/jw-content/parcel-processing.webp",
+  "3pl-fulfillment-services": "/images/jw-content/fulfillment-warehouse.webp",
+  "pod-fulfillment": "/images/jw-content/packing-line.webp",
+  "private-label": "/images/jw-content/package-weighing.webp",
+  "product-sourcing": "/images/jw-content/client-meeting.webp",
+  "automatic-order-fulfillment": "/images/jw-content/automated-sorter.webp",
+  "china-fulfillment-center": "/images/jw-content/warehouse-exterior.webp",
+  "quality-control-inspection": "/images/jw-content/quality-check.webp",
 };
 
 // The overview, header dropdown and detail routes all use the same service source.

@@ -70,11 +70,11 @@ export const servicesWorkflowUi = {
 
 // Existing illustrative site assets, not documentary evidence of a specific project.
 export const servicesWorkflowImages = [
-  "/images/material-library/account-support.webp",
-  "/images/material-library/client-meeting.webp",
-  "/images/material-library/package-scan.webp",
-  "/images/material-library/warehouse-packing.webp",
-  "/images/material-library/label-scanning.webp",
+  "/images/jw-content/account-support.webp",
+  "/images/jw-content/client-meeting.webp",
+  "/images/jw-content/package-scan.webp",
+  "/images/jw-content/warehouse-packing.webp",
+  "/images/jw-content/label-scanning.webp",
 ];
 
 export function workflowKeyTarget(key, current, count) {

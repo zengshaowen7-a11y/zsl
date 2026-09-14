@@ -1,6 +1,6 @@
 export const servicesProofImages = [
-  "/images/material-library/receiving-team.webp",
-  "/images/material-library/package-scan.webp",
-  "/images/material-library/warehouse-packing.webp",
-  "/images/material-library/label-scanning.webp",
+  "/images/jw-content/receiving-team.webp",
+  "/images/jw-content/package-scan.webp",
+  "/images/jw-content/warehouse-packing.webp",
+  "/images/jw-content/label-scanning.webp",
 ];

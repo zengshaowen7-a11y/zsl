@@ -1,7 +1,7 @@
 ---
 title: "What a useful pre-shipment quality check should cover"
 description: "Define product, variant, packaging and evidence requirements before a batch is released."
-image: "/images/material-library/package-scan.webp"
+image: "/images/jw-content/package-scan.webp"
 date: 2026-05-04T05:00:00Z
 draft: false
 ---

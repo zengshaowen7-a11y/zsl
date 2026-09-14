@@ -5,7 +5,7 @@ export const servicePages = [
     "eyebrow": "DOSTAWCA DROPSHIPPINGOWY",
     "title": "Obsługa dropshippingu z Chin dla każdego zamówienia.",
     "lead": "Połącz pozyskiwanie produktów, kontrolę jakości, zapasy, pakowanie i dostawy międzynarodowe w jeden skoordynowany proces dla swojego sklepu internetowego.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "heroPoints": [
       "Jeden zespół od zaopatrzenia do wysyłki",
       "Uzgodnione punkty kontroli jakości",
@@ -155,7 +155,7 @@ export const servicePages = [
     "eyebrow": "3PL FULFILMENT",
     "title": "Magazyn inwentaryzacji w Chinach i wypełnić każde zamówienie z uporządkowanego przepływu pracy 3PL.",
     "lead": "Otrzymuj produkty od jednego lub wielu dostawców, organizuj inwentaryzację przez SKU, a następnie wybierz, spakuj i wysyłki zamówienia klientów, jak przybywają.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "heroPoints": [
       "Multi-SKU organizacja inwentaryzacji",
       "Zasady przyjmowania i pakowania",
@@ -310,7 +310,7 @@ export const servicePages = [
     "eyebrow": "PINT ON DEMAND SUPPORT",
     "title": "Koordynować druk, przygotowanie produktu i spełnienie w jednym strumieniu pracy POD.",
     "lead": "Przejście od grafiki i zatwierdzenia próbki do produkcji, pakowania i bezpośredniej dostawy odpowiednich produktów na żądanie.",
-    "image": "/images/material-library/packing-line.webp",
+    "image": "/images/jw-content/packing-line.webp",
     "heroPoints": [
       "Przegląd prac artystycznych i wymogów dotyczących produktu",
       "Zatwierdzenie próbki przed skalowaniem",
@@ -460,7 +460,7 @@ export const servicePages = [
     "eyebrow": "ETYKIETA PRIVATE I BRANDING",
     "title": "Build a private- markowe doświadczenie klientów pamiętać.",
     "lead": "Koordynować prywatne etykiety, szczegóły produktu, opakowania, wkładki i powtórzyć produkcję bez utraty z oczu kosztów, MOQ i czasu realizacji.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "heroPoints": [
       "Koordynacja prywatnych dostawców etykiet",
       "Niestandardowe opakowania i wkładki",
@@ -608,7 +608,7 @@ export const servicePages = [
     "eyebrow": "ZASOBY PRODUKTÓW",
     "title": "Najpierw porównaj dostawców.",
     "lead": "Zmień link produktu, zdjęcie lub specyfikację w briefing źródłowy, który sprawia, że cena, MOQ, próbki i założeń spełnienia łatwiej porównać.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "heroPoints": [
       "Jeden gotowy do pracy",
       "Porównywalne terminy MOQ i lead- time",
@@ -758,7 +758,7 @@ export const servicePages = [
     "eyebrow": "AUTOMACJA PORZĄDKU",
     "title": "Rozkazy, namierzanie.",
     "lead": "Daj każde czyste zamówienie bezpośrednią trasę od sklepu do magazynu, podczas gdy niekompletne zamówienia czekać w widocznym pasie wyjątków.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "heroPoints": [
       "Zlecenie przechowywania",
       "Pas wyjścia",
@@ -908,7 +908,7 @@ export const servicePages = [
     "eyebrow": "CHINY FULFILMENT CENTER",
     "title": "Chińskie wypełnienie, odwzorowane według strefy.",
     "lead": "Otrzymujemy towary fabryczne, sprawdzamy partie, przechowujemy zatwierdzone zapasy, dodajemy materiały marki i wysyłamy zamówienia klientów z jednego jasnego planu magazynu.",
-    "image": "/images/material-library/warehouse-handoff.webp",
+    "image": "/images/jw-content/warehouse-handoff.webp",
     "heroPoints": [
       "Otrzymywanie, QC i pobyt na osobnych pasach",
       "Materiały marki podróżują z prawej strony SKU",
@@ -1058,7 +1058,7 @@ export const servicePages = [
     "eyebrow": "KONTROLA JAKOŚCI I KONTROLA",
     "title": "Uwolnić partie z dowodami.",
     "lead": "Zdefiniować kontrole, które mają znaczenie, sprawdzić w stosunku do zatwierdzonej normy, i zdecydować przejść, przepracować lub trzymać przed inwentaryzacji idzie do przodu.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "heroPoints": [
       "Lista kontrolna dla poszczególnych grup",
       "Zdjęcia i notatki w jednym rekordzie",

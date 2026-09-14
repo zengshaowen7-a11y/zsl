@@ -54,7 +54,7 @@
           "MOQ und Vorlaufzeitüberprüfung"
         ],
         "slug": "product-sourcing",
-        "image": "/images/material-library/client-meeting.webp"
+        "image": "/images/jw-content/client-meeting.webp"
       },
       {
         "title": "Qualitätskontrolle",
@@ -65,7 +65,7 @@
           "Verpackungskontrolle"
         ],
         "slug": "quality-control-inspection",
-        "image": "/images/material-library/quality-check.webp"
+        "image": "/images/jw-content/quality-check.webp"
       },
       {
         "title": "Private Label & Verpackung",
@@ -76,7 +76,7 @@
           "Genehmigung der Verpackungsmuster"
         ],
         "slug": "private-label",
-        "image": "/images/material-library/package-weighing.webp"
+        "image": "/images/jw-content/package-weighing.webp"
       },
       {
         "title": "Dropshipping Fulfillment",
@@ -87,7 +87,7 @@
           "Weltweit verfolgter Versand"
         ],
         "slug": "dropshipping-supplier",
-        "image": "/images/material-library/parcel-processing.webp"
+        "image": "/images/jw-content/parcel-processing.webp"
       },
       {
         "title": "China 3PL Erfüllung",
@@ -98,7 +98,7 @@
           "Koordinierung der Rückführungen"
         ],
         "slug": "3pl-fulfillment-services",
-        "image": "/images/material-library/fulfillment-warehouse.webp"
+        "image": "/images/jw-content/fulfillment-warehouse.webp"
       },
       {
         "title": "Auftragsautomatisierung",
@@ -109,7 +109,7 @@
           "Rückgabe-Workflow"
         ],
         "slug": "automatic-order-fulfillment",
-        "image": "/images/material-library/automated-sorter.webp"
+        "image": "/images/jw-content/automated-sorter.webp"
       }
     ],
     "comparisonItems": [
@@ -148,15 +148,15 @@
         "text": "Vergleichen Sie Lieferanten, Muster, MOQs & Vorlaufzeiten",
         "images": [
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "Produkt-Sourcing-Spezialist vergleicht Lieferantenoptionen"
           ],
           [
-            "/images/material-library/parcel-processing.webp",
+            "/images/jw-content/parcel-processing.webp",
             "Lieferantenprodukte vorbereitet für Sourcing Review"
           ],
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "China Sourcing Team koordiniert Produktproben"
           ]
         ]
@@ -166,15 +166,15 @@
         "text": "Vollständige Qualitätskontrolle vor dem Versand",
         "images": [
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "Qualitätsprüfer überprüft Produkte vor dem Versand"
           ],
           [
-            "/images/material-library/package-scan.webp",
+            "/images/jw-content/package-scan.webp",
             "Lagerteam überprüft Produktverpackung"
           ],
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "JW Qualitätskontrolle Spezialist Überprüfung eines Artikels"
           ]
         ]
@@ -184,15 +184,15 @@
         "text": "Lagerung, Verpackung, Versand & Tracking unter einem Workflow",
         "images": [
           [
-            "/images/material-library/fulfillment-warehouse.webp",
+            "/images/jw-content/fulfillment-warehouse.webp",
             "China Warehouse Fulfillment Operation"
           ],
           [
-            "/images/material-library/returns-shelving.webp",
+            "/images/jw-content/returns-shelving.webp",
             "Warehouse Personal Kommissionierung Produkte für Bestellungen"
           ],
           [
-            "/images/material-library/sortation-floor.webp",
+            "/images/jw-content/sortation-floor.webp",
             "GW-Team bereitet Pakete für den Versand vor"
           ]
         ]

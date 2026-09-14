@@ -29,7 +29,7 @@ export const proofContent = {
   "product-sourcing": {
     "eyebrow": "PRZYKŁADOWY KOMPARISON WSPARCIA",
     "title": "Porównaj oferty dostawców.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "columns": [
       "Dostawca",
       "Cena jednostkowa",
@@ -61,7 +61,7 @@ export const proofContent = {
   "quality-control-inspection": {
     "eyebrow": "PRZYKŁAD QC RECORD",
     "title": "Wykonaj telefon.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "columns": [
       "Punkt kontrolny",
       "Kontrola",
@@ -93,7 +93,7 @@ export const proofContent = {
   "3pl-fulfillment-services": {
     "eyebrow": "PRZYKŁAD WIDOCZNY",
     "title": "Inwentarz pozostaje widoczny.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "columns": [
       "SKU",
       "Otrzymane",
@@ -125,7 +125,7 @@ export const proofContent = {
   "pod-fulfillment": {
     "eyebrow": "STATKI HOMOLOGACYJNE POD",
     "title": "Utrzymuj połączone grafiki, warianty i fizyczne zatwierdzenie.",
-    "image": "/images/material-library/product-assembly.webp",
+    "image": "/images/jw-content/product-assembly.webp",
     "columns": [
       "Brama",
       "Wymagane wejście",
@@ -157,7 +157,7 @@ export const proofContent = {
   "private-label": {
     "eyebrow": "PLANER ZAKRESU BRAND",
     "title": "Wybierz elementy marki po uderzeniu, MOQ i czasie.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "columns": [
       "Element marki",
       "Typowe wejście",
@@ -189,7 +189,7 @@ export const proofContent = {
   "automatic-order-fulfillment": {
     "eyebrow": "LOG KONTROLI ZAMKNIĘCIA",
     "title": "Rozkazy gotowe.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "columns": [
       "Sygnał",
       "Stan",
@@ -235,7 +235,7 @@ export const proofContent = {
   "china-fulfillment-center": {
     "eyebrow": "STREFY KONTROLI WAREHOUSU",
     "title": "Mapowanie każdego przekazania przed statkiem.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "columns": [
       "Obszar",
       "Działalność",
@@ -267,7 +267,7 @@ export const proofContent = {
   "dropshipping-supplier": {
     "eyebrow": "KONTROLA POZIOMU ZARZĄDZANIA",
     "title": "Przechowywać produkt, pakowania i transportu kontekst razem.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "columns": [
       "Etap",
       "Działanie zespołu",

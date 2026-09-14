@@ -1,7 +1,7 @@
 ---
 title: "How to introduce branded packaging without overcommitting"
 description: "Prioritize labels, inserts, mailers and boxes by customer impact, MOQ and storage needs."
-image: "/images/material-library/package-weighing.webp"
+image: "/images/jw-content/package-weighing.webp"
 date: 2026-07-04T05:00:00Z
 draft: false
 ---

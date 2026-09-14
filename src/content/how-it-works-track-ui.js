@@ -1,5 +1,5 @@
 export const howItWorksTrackImages = [
-  "/images/material-library/client-meeting.webp",
-  "/images/material-library/package-scan.webp",
-  "/images/material-library/label-scanning.webp",
+  "/images/jw-content/client-meeting.webp",
+  "/images/jw-content/package-scan.webp",
+  "/images/jw-content/label-scanning.webp",
 ];

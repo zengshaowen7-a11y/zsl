@@ -5,7 +5,7 @@ export const servicePages = [
     "eyebrow": "DROPSHIPPING-ANBIETER",
     "title": "Dropshipping-Support aus China für jede Bestellung.",
     "lead": "Bündeln Sie Beschaffung, Qualitätskontrolle, Lagerbestand, Verpackung und internationale Lieferung in einem koordinierten Ablauf für Ihren Onlineshop.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "heroPoints": [
       "Ein Team von Sourcing bis Shipping",
       "Vereinbarte Qualitätskontrollpunkte",
@@ -155,7 +155,7 @@ export const servicePages = [
     "eyebrow": "3PL FULFILLIERUNG",
     "title": "Lagerbestand in China und erfüllen jeden Auftrag mit einem strukturierten 3PL Workflow.",
     "lead": "Erhalten Sie Produkte von einem oder mehreren Lieferanten, organisieren Sie das Inventar von SKU, dann wählen, packen und versenden Sie Kundenaufträge, sobald sie ankommen.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "heroPoints": [
       "Multi-SKU Bestandsorganisation",
       "Annahme- und Verpackungsregeln",
@@ -310,7 +310,7 @@ export const servicePages = [
     "eyebrow": "PRÜFUNG AUF DER UNTERSTÜTZUNG DER ERFORDERUNG",
     "title": "Koordinieren Sie Druck, Produktvorbereitung und Fulfillment in einem POD Workflow.",
     "lead": "Wechseln Sie von der Artwork- und Mustergenehmigung zur Produktion, Verpackung und Direktlieferung für geeignete Print-on-Demand-Produkte.",
-    "image": "/images/material-library/packing-line.webp",
+    "image": "/images/jw-content/packing-line.webp",
     "heroPoints": [
       "Artwork und Product Requirement Review",
       "Genehmigung der Probe vor der Skalierung",
@@ -460,7 +460,7 @@ export const servicePages = [
     "eyebrow": "PRIVATE ETIKETT UND BRAND",
     "title": "Bauen Sie ein Private-Label-Markenerlebnis auf, an das sich Kunden erinnern.",
     "lead": "Koordinieren Sie Eigenmarken, Produktdetails, Verpackungen, Beilagen und Wiederholungsproduktion, ohne dabei Kosten, MOQ und Vorlaufzeit aus den Augen zu verlieren.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "heroPoints": [
       "Private Label Supplier Koordination",
       "Custom Packaging und Inserts",
@@ -608,7 +608,7 @@ export const servicePages = [
     "eyebrow": "PRODUKTQUELLE",
     "title": "Vergleichen Sie zuerst die Lieferanten.",
     "lead": "Verwandeln Sie einen Produktlink, ein Foto oder eine Spezifikation in ein Sourcing-Briefing, das Preis, MOQ, Muster und Erfüllungsannahmen leichter zu vergleichen macht.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "heroPoints": [
       "Ein lieferantenbereiter Auftrag",
       "Vergleichbare MOQ und Vorlaufzeitbedingungen",
@@ -758,7 +758,7 @@ export const servicePages = [
     "eyebrow": "AUFTRAGGENEHMIGUNG",
     "title": "Bestellungen ein, Tracking zurück.",
     "lead": "Geben Sie jeder sauberen Bestellung einen direkten Weg vom Laden zum Lager, während unvollständige Bestellungen in einer sichtbaren Ausnahmespur warten.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "heroPoints": [
       "Auftragseingang",
       "Ausnahmefahrstreifen",
@@ -908,7 +908,7 @@ export const servicePages = [
     "eyebrow": "CHINA FULFILLATIONSZENTRUM",
     "title": "China Erfüllung, kartiert nach Zone.",
     "lead": "Erhalten Sie Fabrikgüter, prüfen Sie Chargen, lagern Sie genehmigte Lagerbestände, fügen Sie Markenmaterialien hinzu und versenden Sie Kundenaufträge aus einem klaren Lagerplan.",
-    "image": "/images/material-library/warehouse-handoff.webp",
+    "image": "/images/jw-content/warehouse-handoff.webp",
     "heroPoints": [
       "Empfang, QC und Speicher bleiben in getrennten Spuren",
       "Markenmaterialien reisen mit dem richtigen SKU",
@@ -1058,7 +1058,7 @@ export const servicePages = [
     "eyebrow": "QUALITÄTSKONTROLLE UND INSPEKTION",
     "title": "Freisetzung von Chargen mit Beweisen.",
     "lead": "Definieren Sie die Prüfungen, die wichtig sind, prüfen Sie gegen einen genehmigten Standard und entscheiden Sie, ob Sie bestehen, nacharbeiten oder halten, bevor sich das Inventar vorwärts bewegt.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "heroPoints": [
       "Chargenspezifische Prüfliste",
       "Fotos und Notizen in einem Datensatz",

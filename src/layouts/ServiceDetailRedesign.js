@@ -119,7 +119,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
           </div>
           <div className={`sdr-hero-image${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-image" : ""}`}>
             <Image
-              src={service.slug === "private-label" ? "/images/material-library/package-scan.webp" : service.image}
+              src={service.slug === "private-label" ? "/images/jw-content/package-scan.webp" : service.image}
               alt={`${service.menuTitle} in operation`}
               fill
               priority
@@ -262,7 +262,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
                 {service.slug === "quality-control-inspection" ? (
                   <div className="sdr-qc-fit-proof" aria-hidden="true">
                     <Image
-                      src="/images/material-library/package-scan.webp"
+                      src="/images/jw-content/package-scan.webp"
                       alt=""
                       width={420}
                       height={210}
@@ -459,7 +459,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             <figure className="sdr-order-control-visual">
               <div className="sdr-order-control-photo sdr-order-control-photo-primary">
                 <Image
-                  src="/images/material-library/label-scanning.webp"
+                  src="/images/jw-content/label-scanning.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 900px) 88vw, 34vw"
@@ -467,7 +467,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </div>
               <div className="sdr-order-control-photo sdr-order-control-photo-secondary">
                 <Image
-                  src="/images/material-library/warehouse-packing.webp"
+                  src="/images/jw-content/warehouse-packing.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 560px) 66vw, (max-width: 900px) 46vw, 22vw"
@@ -556,7 +556,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
         <div id="private-label-scope-planner" className="container sdr-private-label-scope-planner">
           <figure>
             <Image
-              src="/images/material-library/package-weighing.webp"
+              src="/images/jw-content/package-weighing.webp"
               alt={proof.title}
               fill
               sizes="(max-width: 760px) 100vw, 38vw"
@@ -1082,7 +1082,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <aside className="sdr-private-label-case-story">
                 <figure>
                   <Image
-                    src="/images/material-library/warehouse-packing.webp"
+                    src="/images/jw-content/warehouse-packing.webp"
                     alt="Private-label packaging materials prepared for a branded order"
                     fill
                     sizes="(max-width: 720px) 100vw, 42vw"
@@ -1188,7 +1188,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <Link href={`/services/${item.slug}`} key={item.slug} className={index === 0 ? "is-featured" : undefined}>
                 <figure className="sdr-related-media">
                   <Image
-                    src={service.slug === "private-label" && item.slug === "pod-fulfillment" ? "/images/material-library/product-assembly.webp" : item.image}
+                    src={service.slug === "private-label" && item.slug === "pod-fulfillment" ? "/images/jw-content/product-assembly.webp" : item.image}
                     alt={`${item.menuTitle} service`}
                     fill
                     sizes="(max-width: 767px) 100vw, 34vw"

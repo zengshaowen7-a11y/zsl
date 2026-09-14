@@ -27,7 +27,7 @@ function ExceptionDecisionScene({ content }) {
   return (
     <div ref={rootRef} className="hiw-container hiw-exception-grid hiw-exception-stage" data-active={activeIndex + 1}>
       <figure className="hiw-exception-media">
-        <Image src="/images/material-library/package-scan.webp" alt={content.imageAlt} fill sizes="(max-width: 850px) 100vw, 48vw" />
+        <Image src="/images/jw-content/package-scan.webp" alt={content.imageAlt} fill sizes="(max-width: 850px) 100vw, 48vw" />
         <div className="hiw-exception-scan" aria-hidden="true" />
         <figcaption className="hiw-exception-status">
           <span>{content.statusLabel}</span>

@@ -6,10 +6,10 @@ import { FiCheckCircle, FiClipboard, FiMessageCircle, FiPackage } from "react-ic
 
 const icons = [FiMessageCircle, FiCheckCircle, FiClipboard, FiPackage];
 const images = [
-  "/images/material-library/support-consultation.webp",
-  "/images/material-library/client-meeting.webp",
-  "/images/material-library/operations-meeting.webp",
-  "/images/material-library/dispatch-station.webp",
+  "/images/jw-content/support-consultation.webp",
+  "/images/jw-content/client-meeting.webp",
+  "/images/jw-content/operations-meeting.webp",
+  "/images/jw-content/dispatch-station.webp",
 ];
 
 function AccountSupportScene({ content, cards }) {

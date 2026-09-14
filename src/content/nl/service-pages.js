@@ -5,7 +5,7 @@ export const servicePages = [
     "eyebrow": "DROPSHIPPING-LEVERANCIER",
     "title": "Dropshippingondersteuning uit China voor elke bestelling.",
     "lead": "Breng inkoop, kwaliteitscontroles, voorraad, verpakking en internationale levering samen in één gecoördineerd proces voor uw webshop.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "heroPoints": [
       "Een team van sourcing tot verzending",
       "Overeengekomen kwaliteitscontrolepunten",
@@ -155,7 +155,7 @@ export const servicePages = [
     "eyebrow": "3PL FULLMENT",
     "title": "Store inventaris in China en voldoen aan elke bestelling met een gestructureerde 3PL workflow.",
     "lead": "Ontvang producten van één of meerdere leveranciers, organiseren inventaris door SKU, dan pick, pack en verzenden klanten orders als ze aankomen.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "heroPoints": [
       "Multi-SKU inventaris organisatie",
       "Ontvangst- en verpakkingsvoorschriften",
@@ -310,7 +310,7 @@ export const servicePages = [
     "eyebrow": "DRUK OP DE STEUNMAATREGEL",
     "title": "Coördineer printen, productvoorbereiding en vervulling in één POD workflow.",
     "lead": "Verplaats van kunstwerk en monstergoedkeuring naar productie, verpakking en directe levering voor geschikte print-on-demand producten.",
-    "image": "/images/material-library/packing-line.webp",
+    "image": "/images/jw-content/packing-line.webp",
     "heroPoints": [
       "Evaluatie van de behoefte aan kunstwerken en producten",
       "Monstergoedkeuring voor het schalen",
@@ -460,7 +460,7 @@ export const servicePages = [
     "eyebrow": "PRIVÉ ETIKET EN BRANDSTOF",
     "title": "Bouw een eigen merk ervaring klanten onthouden.",
     "lead": "Coördineer private labels, productdetails, verpakkingen, inserts en herhaalde productie zonder kostenverlies, MOQ en doorlooptijd.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "heroPoints": [
       "Coördinatie van particuliere labelleveranciers",
       "Aangepaste verpakking en inzetstukken",
@@ -608,7 +608,7 @@ export const servicePages = [
     "eyebrow": "PRODUKTIEZUUR",
     "title": "Vergelijk leveranciers eerst.",
     "lead": "Verander een productlink, foto of specificatie in een sourcing-short die prijs, MOQ, monsters en vervulling veronderstellingen gemakkelijker te vergelijken maakt.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "heroPoints": [
       "Eén leverancier-ready brief",
       "Vergelijkbare MOQ- en doorlooptijden",
@@ -758,7 +758,7 @@ export const servicePages = [
     "eyebrow": "ORDER AUTOMATIE",
     "title": "Bevelen komen binnen, volgen terug.",
     "lead": "Geef elke schone bestelling een directe route van storefront naar magazijn, terwijl onvolledige bestellingen wachten in een zichtbare uitzonderingsbaan.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "heroPoints": [
       "Inname bestelling opslaan",
       "Uitzonderingsstrook",
@@ -908,7 +908,7 @@ export const servicePages = [
     "eyebrow": "CHINA FULLMENT CENTER",
     "title": "China vervulling, in kaart gebracht per zone.",
     "lead": "Ontvang fabrieksgoederen, inspecteren batches, opslaan goedgekeurde voorraad, merkmaterialen toevoegen en verzenden klant bestellingen van een duidelijke magazijnplan.",
-    "image": "/images/material-library/warehouse-handoff.webp",
+    "image": "/images/jw-content/warehouse-handoff.webp",
     "heroPoints": [
       "Ontvangst, QC en opslag in aparte rijstroken",
       "Brand materialen reizen met de juiste SKU",
@@ -1058,7 +1058,7 @@ export const servicePages = [
     "eyebrow": "KWALITEITSCONTROLE EN CONTROLE",
     "title": "Laat partijen vrij met bewijs.",
     "lead": "Definieer de controles die ertoe doen, inspecteer aan de hand van een goedgekeurde norm, en besluit pass, herwerken of houden voordat de inventaris vooruit gaat.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "heroPoints": [
       "Batchspecifieke inspectiechecklist",
       "Foto's en notities in één record",

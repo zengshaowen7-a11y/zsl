@@ -29,7 +29,7 @@ export const proofContent = {
 "product-sourcing": {
   eyebrow: "EXAMPLE SUPPLIER COMPARISON",
   title: "Compare supplier offers.",
-  image: "/images/material-library/client-meeting.webp",
+  image: "/images/jw-content/client-meeting.webp",
   columns: ["Supplier", "Unit price", "MOQ", "Lead time"],
   rows: [
     ["Supplier A", "$8.40", "300", "18 days"],
@@ -41,7 +41,7 @@ export const proofContent = {
 "quality-control-inspection": {
   eyebrow: "EXAMPLE QC RELEASE RECORD",
   title: "Make the release call.",
-  image: "/images/material-library/package-scan.webp",
+  image: "/images/jw-content/package-scan.webp",
   columns: ["Checkpoint", "Checked", "Issues", "Status"],
   rows: [
     ["SKU and variant", "50", "0", "Passed"],
@@ -53,7 +53,7 @@ export const proofContent = {
 "3pl-fulfillment-services": {
   eyebrow: "EXAMPLE INVENTORY VIEW",
   title: "Inventory stays visible.",
-  image: "/images/material-library/fulfillment-warehouse.webp",
+  image: "/images/jw-content/fulfillment-warehouse.webp",
   columns: ["SKU", "Received", "Available", "Status"],
   rows: [
     ["JW-BLK-S", "500", "472", "Available"],
@@ -65,7 +65,7 @@ export const proofContent = {
 "pod-fulfillment": {
   eyebrow: "POD APPROVAL GATES",
   title: "Keep artwork, variants and physical approval connected.",
-  image: "/images/material-library/product-assembly.webp",
+  image: "/images/jw-content/product-assembly.webp",
   columns: ["Gate", "Required input", "Owner", "Status"],
   rows: [
     ["Artwork", "Print-ready file", "Brand", "Approved"],
@@ -77,7 +77,7 @@ export const proofContent = {
 "private-label": {
   eyebrow: "BRAND SCOPE PLANNER",
   title: "Choose brand elements by impact, MOQ and timing.",
-  image: "/images/material-library/package-weighing.webp",
+  image: "/images/jw-content/package-weighing.webp",
   columns: ["Brand element", "Typical input", "MOQ impact", "Stage"],
   rows: [
     ["Printed insert", "Artwork", "Low", "Start"],
@@ -89,7 +89,7 @@ export const proofContent = {
 "automatic-order-fulfillment": {
   eyebrow: "ORDER CONTROL LOG",
   title: "Orders ready to move.",
-  image: "/images/material-library/automated-sorter.webp",
+  image: "/images/jw-content/automated-sorter.webp",
   columns: ["Signal", "Status", "Action", "Output"],
   rows: [
     ["New order", "Mapped", "Release", "Ready"],
@@ -106,7 +106,7 @@ export const proofContent = {
 "china-fulfillment-center": {
   eyebrow: "WAREHOUSE CONTROL ZONES",
   title: "Map each handoff before it ships.",
-  image: "/images/material-library/fulfillment-warehouse.webp",
+  image: "/images/jw-content/fulfillment-warehouse.webp",
   columns: ["Zone", "Activity", "Control", "Output"],
   rows: [
     ["Receiving", "Register goods", "Inbound plan", "Receipt"],
@@ -118,7 +118,7 @@ export const proofContent = {
 "dropshipping-supplier": {
   eyebrow: "ORDER-LEVEL CONTROL",
   title: "Keep product, packing and shipment context together.",
-  image: "/images/material-library/parcel-processing.webp",
+  image: "/images/jw-content/parcel-processing.webp",
   columns: ["Stage", "Team action", "Control", "Update"],
   rows: [
     ["Source", "Confirm supplier", "Product brief", "Quote"],

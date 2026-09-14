@@ -5,7 +5,7 @@ export const servicePages = [
     "eyebrow": "PROVEEDOR DE DROPSHIPPING",
     "title": "Soporte de dropshipping desde China para cada pedido.",
     "lead": "Integra el abastecimiento, los controles de calidad, el inventario, el embalaje y la entrega internacional en un único flujo de trabajo para tu tienda online.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "heroPoints": [
       "Un equipo de abastecimiento a envío",
       "Puestos de control de calidad convenidos",
@@ -155,7 +155,7 @@ export const servicePages = [
     "eyebrow": "3PL FULFILLMENTO",
     "title": "Almacene inventario en China y cumpla cada pedido con un flujo de trabajo 3PL estructurado.",
     "lead": "Recibir productos de uno o varios proveedores, organizar el inventario por SKU, luego recoger, empacar y enviar pedidos de clientes cuando lleguen.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "heroPoints": [
       "Multi-SKU organización de inventario",
       "Reglas de recepción y embalaje",
@@ -310,7 +310,7 @@ export const servicePages = [
     "eyebrow": "PRINT ON DEMAND SUPPORT",
     "title": "Impresión de coordenadas, preparación de productos y cumplimiento en un flujo de trabajo POD.",
     "lead": "Muévete de las obras de arte y la aprobación de muestras a la producción, embalaje y entrega directa para productos de impresión a demanda adecuados.",
-    "image": "/images/material-library/packing-line.webp",
+    "image": "/images/jw-content/packing-line.webp",
     "heroPoints": [
       "Revisión del requisito de obras y productos",
       "Aprobación de la muestra antes de escalar",
@@ -460,7 +460,7 @@ export const servicePages = [
     "eyebrow": "LABEL PRIVADO",
     "title": "Construir una experiencia de marca de marca privada recuerdan los clientes.",
     "lead": "Coordinar etiquetas privadas, detalles de productos, embalaje, inserción y repetición de producción sin perder de vista el costo, MOQ y tiempo de conducción.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "heroPoints": [
       "Coordinación de proveedores de etiquetas privadas",
       "Embalaje e inserción personalizados",
@@ -608,7 +608,7 @@ export const servicePages = [
     "eyebrow": "PRODUCT SOURCING",
     "title": "Compare primero a los proveedores.",
     "lead": "Convierta un enlace de producto, foto o especificación en un breve de suministro que hace más fácil comparar el precio, MOQ, muestras y supuestos de cumplimiento.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "heroPoints": [
       "Un breve proveedor",
       "Comparable MOQ y plazo de ejecución",
@@ -758,7 +758,7 @@ export const servicePages = [
     "eyebrow": "ORDER AUTOMATION",
     "title": "Ordenes adentro, rastreando hacia atrás.",
     "lead": "Dar a cada pedido limpio una ruta directa desde el almacén hasta el almacén, mientras que pedidos incompletos esperan en un carril de excepción visible.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "heroPoints": [
       "Compra del pedido de la tienda",
       "Excepcional carril",
@@ -908,7 +908,7 @@ export const servicePages = [
     "eyebrow": "CHINA FULFILLMENT CENTER",
     "title": "Cumplimiento de China, mapeado por zona.",
     "lead": "Recibir bienes de fábrica, inspeccionar lotes, almacenar acciones aprobadas, añadir materiales de marca y enviar pedidos de clientes de un plan de almacén claro.",
-    "image": "/images/material-library/warehouse-handoff.webp",
+    "image": "/images/jw-content/warehouse-handoff.webp",
     "heroPoints": [
       "Recepción, QC y estancia de almacenamiento en carriles separados",
       "Materiales de marca viajan con la derecha SKU",
@@ -1058,7 +1058,7 @@ export const servicePages = [
     "eyebrow": "CONTROL DE CALIDAD &QUOT; INSPECTION",
     "title": "Liberen lotes con pruebas.",
     "lead": "Definir los cheques que importan, inspeccionar contra un estándar aprobado, y decidir pasar, retraer o mantener antes de que el inventario avance.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "heroPoints": [
       "Lista de comprobación de la inspección específica del lote",
       "Fotos y notas en un solo registro",

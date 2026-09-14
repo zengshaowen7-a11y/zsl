@@ -1,7 +1,7 @@
 ---
 title: "When a growing store should move to 3PL fulfillment"
 description: "Recognize the signs that supplier-direct shipping is no longer enough for daily orders."
-image: "/images/material-library/fulfillment-warehouse.webp"
+image: "/images/jw-content/fulfillment-warehouse.webp"
 date: 2026-06-02T06:00:00Z
 draft: false
 ---

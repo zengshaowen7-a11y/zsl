@@ -11,7 +11,7 @@ export const aboutMaterialPlan = {
       title: "Meet JW Dropshipping",
       brief: "Temporary licensed footage showing a real parcel-sorting environment. Replace it with a 45–60 second founder-led introduction filmed inside your office and warehouse.",
       spec: "MP4/WebM, 1920×1080, English captions + poster image",
-      src: "/images/material-library/receiving-team.webp",
+      src: "/images/jw-content/receiving-team.webp",
       credit: "Licensed temporary footage · Pexels / Thanh Văn",
       visual: "film",
     },
@@ -21,7 +21,7 @@ export const aboutMaterialPlan = {
       brief: "A natural portrait in the workplace, supported by a short, factual founding story.",
       spec: "Landscape WebP/JPG, at least 1800px wide",
       visual: "founder",
-      src: "/images/material-library/account-support.webp",
+      src: "/images/jw-content/account-support.webp",
     },
     warehouseWide: {
       type: "IMAGE 02",
@@ -29,7 +29,7 @@ export const aboutMaterialPlan = {
       brief: "Show receiving, racking, SKU locations and the working team in one wide frame.",
       spec: "Landscape WebP/JPG, at least 2000px wide",
       visual: "warehouse",
-      src: "/images/material-library/receiving-team.webp",
+      src: "/images/jw-content/receiving-team.webp",
     },
     qualityCloseup: {
       type: "IMAGE 03",
@@ -37,7 +37,7 @@ export const aboutMaterialPlan = {
       brief: "A close-up of staff checking quantity, variants, function, appearance and packaging.",
       spec: "Landscape or portrait WebP/JPG, at least 1600px",
       visual: "quality",
-      src: "/images/material-library/package-scan.webp",
+      src: "/images/jw-content/package-scan.webp",
     },
     packingFilm: {
       type: "VIDEO 02",
@@ -45,7 +45,7 @@ export const aboutMaterialPlan = {
       brief: "A 30–45 second sequence covering picking, QC, branded packing, label printing and handoff.",
       spec: "MP4/WebM, horizontal, English captions + poster image",
       visual: "packing",
-      src: "/images/material-library/warehouse-packing.webp",
+      src: "/images/jw-content/warehouse-packing.webp",
     },
     dispatchPhoto: {
       type: "IMAGE 04",
@@ -53,7 +53,7 @@ export const aboutMaterialPlan = {
       brief: "Show labeled parcels, carrier collection and the actual dispatch environment.",
       spec: "Landscape WebP/JPG, at least 1800px wide",
       visual: "dispatch",
-      src: "/images/material-library/label-scanning.webp",
+      src: "/images/jw-content/label-scanning.webp",
     },
     teamGroup: {
       type: "IMAGE 05",
@@ -61,7 +61,7 @@ export const aboutMaterialPlan = {
       brief: "Founder, account managers, sourcing, QC, warehouse and logistics staff together.",
       spec: "Horizontal team photo + optional role portraits",
       visual: "team",
-      src: "/images/material-library/account-support.webp",
+      src: "/images/jw-content/account-support.webp",
     },
   },
   companyProfile: [

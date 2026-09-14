@@ -29,7 +29,7 @@ export const proofContent = {
   "product-sourcing": {
     "eyebrow": "VOORBEELDSONDERZOEK",
     "title": "Vergelijk leveranciersaanbiedingen.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "columns": [
       "Fabrikant",
       "Eenheidsprijs",
@@ -61,7 +61,7 @@ export const proofContent = {
   "quality-control-inspection": {
     "eyebrow": "VOORBEELD QC VRIJGIFTE",
     "title": "Bel de vrijlating.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "columns": [
       "Controlepunt",
       "Gecheckt",
@@ -93,7 +93,7 @@ export const proofContent = {
   "3pl-fulfillment-services": {
     "eyebrow": "VOORBEELD VAN INVENTARISATIE",
     "title": "De inventaris blijft zichtbaar.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "columns": [
       "SKU",
       "Ontvangen",
@@ -125,7 +125,7 @@ export const proofContent = {
   "pod-fulfillment": {
     "eyebrow": "POD GOEDKEURINGSGATTEN",
     "title": "Houd artwork, varianten en fysieke goedkeuring verbonden.",
-    "image": "/images/material-library/product-assembly.webp",
+    "image": "/images/jw-content/product-assembly.webp",
     "columns": [
       "Poort",
       "Vereiste invoer",
@@ -157,7 +157,7 @@ export const proofContent = {
   "private-label": {
     "eyebrow": "BRANDTOEPASSINGSGEBIEDPLANNER",
     "title": "Kies merkelementen door impact, MOQ en timing.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "columns": [
       "Merkelement",
       "Typische invoer",
@@ -189,7 +189,7 @@ export const proofContent = {
   "automatic-order-fulfillment": {
     "eyebrow": "ORDER CONTROL LOG",
     "title": "Bevel klaar om te gaan.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "columns": [
       "Signaal",
       "Status",
@@ -235,7 +235,7 @@ export const proofContent = {
   "china-fulfillment-center": {
     "eyebrow": "WAREHOUSE CONTROLEZONES",
     "title": "Kaart elke overdracht voordat het schip.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "columns": [
       "Gebied",
       "Activiteit",
@@ -267,7 +267,7 @@ export const proofContent = {
   "dropshipping-supplier": {
     "eyebrow": "ORDER-LEVELCONTROLE",
     "title": "Houd product, verpakking en verzending context samen.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "columns": [
       "Fase",
       "Teamactie",

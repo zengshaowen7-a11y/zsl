@@ -54,6 +54,33 @@ const platformLogos = [
 const MEDIA_BLUR_DATA_URL =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Crect width='16' height='12' fill='%23edf8f2'/%3E%3Cpath d='M-2 11 5 5l3 3 3-2 7 6' fill='none' stroke='%23cdebd9' stroke-width='1.2'/%3E%3C/svg%3E";
 
+const homeServiceImages = {
+  "product-sourcing": "/images/jw-content/home-service-sourcing.webp",
+  "quality-control-inspection": "/images/jw-content/home-service-quality.webp",
+  "private-label": "/images/jw-content/home-service-private-label.webp",
+  "dropshipping-supplier": "/images/jw-content/home-service-dropshipping.webp",
+  "3pl-fulfillment-services": "/images/jw-content/home-service-3pl.webp",
+  "automatic-order-fulfillment": "/images/jw-content/home-service-automation.webp",
+};
+
+const homeAdvantageImages = [
+  [
+    "/images/jw-content/home-source-01.webp",
+    "/images/jw-content/home-source-02.webp",
+    "/images/jw-content/home-source-03.webp",
+  ],
+  [
+    "/images/jw-content/home-quality-01.webp",
+    "/images/jw-content/home-quality-02.webp",
+    "/images/jw-content/home-quality-03.webp",
+  ],
+  [
+    "/images/jw-content/home-fulfill-01.webp",
+    "/images/jw-content/home-fulfill-02.webp",
+    "/images/jw-content/home-fulfill-03.webp",
+  ],
+];
+
 function ProgressiveImage({ src, alt, sizes, priority = false, eager = false }) {
   const [status, setStatus] = useState("loading");
 
@@ -273,7 +300,7 @@ export default function FulfillmentHome({ lang = "en" }) {
                     playsInline
                     controls={isHeroVideoPlaying}
                     preload="auto"
-                    poster="/images/generated/jw-branded-packing-v3.png"
+                    poster="/images/jw-content/home-hero-workflow.webp"
                     aria-label={section.videoLabel}
                     onPlay={() => setIsHeroVideoPlaying(true)}
                   >
@@ -350,8 +377,10 @@ export default function FulfillmentHome({ lang = "en" }) {
                     onScroll={(event) => syncAdvantageSlide(galleryIndex, event.currentTarget)}
                     aria-label={`${title} image gallery`}
                   >
-                    {images.map(([src, alt], slideIndex) => (
-                      <figure className="fh-advantage-slide" key={`${src}-${slideIndex}`}>
+                    {images.map(([, alt], slideIndex) => {
+                      const src = homeAdvantageImages[galleryIndex][slideIndex];
+                      return (
+                      <figure className="fh-advantage-slide" key={src}>
                         <ProgressiveImage
                           src={src}
                           alt={alt}
@@ -359,7 +388,7 @@ export default function FulfillmentHome({ lang = "en" }) {
                           eager={slideIndex === 0}
                         />
                       </figure>
-                    ))}
+                    );})}
                   </div>
                   <div className="fh-advantage-gallery-controls">
                     <button type="button" onClick={() => showAdvantageSlide(galleryIndex, advantageSlideIndexes[galleryIndex] - 1)} aria-label={`${section.previousImage}: ${title}`} title={section.previousImage}><FiChevronLeft /></button>
@@ -418,7 +447,7 @@ export default function FulfillmentHome({ lang = "en" }) {
             {homeServicesCopy.map((service) => (
               <Link className="fh-core-service-card" href={`/services/${service.slug}`} key={service.slug} aria-label={`Explore ${service.title}`}>
                 <div className="fh-core-service-image">
-                  <Image src={service.image} alt={service.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" />
+                  <Image src={homeServiceImages[service.slug] || service.image} alt={service.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" />
                 </div>
                 <div className="fh-core-service-body">
                   <h3>{service.title}</h3>
@@ -450,9 +479,9 @@ export default function FulfillmentHome({ lang = "en" }) {
             </article>
           </div>
           <div className="fh-difference-media" aria-label={section.differenceMediaLabel}>
-            <figure className="fh-difference-main"><Image src="/images/material-library/package-scan.webp" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" unoptimized /><figcaption>{section.differenceMedia[0][1]}</figcaption></figure>
-            <figure><Image src="/images/material-library/quality-check.webp" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[1][1]}</figcaption></figure>
-            <figure><Image src="/images/material-library/inbound-parcels.webp" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[2][1]}</figcaption></figure>
+            <figure className="fh-difference-main"><Image src="/images/jw-content/home-proof-01.webp" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" /><figcaption>{section.differenceMedia[0][1]}</figcaption></figure>
+            <figure><Image src="/images/jw-content/home-proof-02.webp" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[1][1]}</figcaption></figure>
+            <figure><Image src="/images/jw-content/home-proof-03.webp" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[2][1]}</figcaption></figure>
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ export const servicePages = [
     "eyebrow": "FOURNISSEUR DROPSHIPPING",
     "title": "Un service de dropshipping en Chine derrière chaque commande.",
     "lead": "Regroupez le sourcing, les contrôles qualité, le stock, l’emballage et la livraison internationale dans un même flux de travail pour votre boutique en ligne.",
-    "image": "/images/material-library/parcel-processing.webp",
+    "image": "/images/jw-content/parcel-processing.webp",
     "heroPoints": [
       "Une équipe de l'approvisionnement à l'expédition",
       "Points de contrôle de qualité convenus",
@@ -155,7 +155,7 @@ export const servicePages = [
     "eyebrow": "FULFMENT DE 3PL",
     "title": "Stockez l'inventaire en Chine et remplissez chaque commande avec un workflow 3PL structuré.",
     "lead": "Recevez les produits d'un ou plusieurs fournisseurs, organisez l'inventaire par SKU, puis choisissez, emballez et expédiez les commandes des clients à leur arrivée.",
-    "image": "/images/material-library/fulfillment-warehouse.webp",
+    "image": "/images/jw-content/fulfillment-warehouse.webp",
     "heroPoints": [
       "Organisation d'inventaire Multi-SKU",
       "Règles de réception et d'emballage",
@@ -310,7 +310,7 @@ export const servicePages = [
     "eyebrow": "IMPRIMER SUR LE SOUTIEN DE LA DEMANDE",
     "title": "Coordonner l'impression, la préparation et l'exécution du produit dans un workflow POD.",
     "lead": "Passer de l'approbation des oeuvres d'art et des échantillons à la production, à l'emballage et à la livraison directe pour les produits d'impression à la demande appropriés.",
-    "image": "/images/material-library/packing-line.webp",
+    "image": "/images/jw-content/packing-line.webp",
     "heroPoints": [
       "Examen des exigences en matière d'art et de produits",
       "Approbation de l'échantillon avant l'échelle",
@@ -460,7 +460,7 @@ export const servicePages = [
     "eyebrow": "ÉTIQUETAGE PRIVÉ ET MARQUE",
     "title": "Construisez une marque privée expérience des clients se souviennent.",
     "lead": "Coordonner les étiquettes privées, les détails du produit, l'emballage, les inserts et la production répétée sans perdre de vue le coût, MOQ et les délais.",
-    "image": "/images/material-library/package-weighing.webp",
+    "image": "/images/jw-content/package-weighing.webp",
     "heroPoints": [
       "Coordination des fournisseurs de marques privées",
       "Emballage et inserts personnalisés",
@@ -608,7 +608,7 @@ export const servicePages = [
     "eyebrow": "SOURCE DES PRODUITS",
     "title": "Comparez d'abord les fournisseurs.",
     "lead": "Transformez un lien de produit, une photo ou une spécification en un dossier d'approvisionnement qui facilite la comparaison des prix, MOQ, des échantillons et des hypothèses de réalisation.",
-    "image": "/images/material-library/client-meeting.webp",
+    "image": "/images/jw-content/client-meeting.webp",
     "heroPoints": [
       "Un mémoire prêt pour le fournisseur",
       "Termes comparables MOQ et temps d'attente",
@@ -758,7 +758,7 @@ export const servicePages = [
     "eyebrow": "COMMANDE AUTOMATIQUE",
     "title": "Ordres, suivi.",
     "lead": "Donnez à chaque commande propre un itinéraire direct de l'entrepôt à l'entrepôt, tandis que les commandes incomplètes attendent dans une voie d'exception visible.",
-    "image": "/images/material-library/automated-sorter.webp",
+    "image": "/images/jw-content/automated-sorter.webp",
     "heroPoints": [
       "Prise d'ordre",
       "Voie d'exception",
@@ -908,7 +908,7 @@ export const servicePages = [
     "eyebrow": "CENTRE DE DÉPLACEMENT DE LA CHINE",
     "title": "Réalisation de la Chine, cartographiée par zone.",
     "lead": "Recevoir les marchandises de l'usine, inspecter les lots, stocker les stocks approuvés, ajouter des matériaux de marque et expédier les commandes des clients d'un plan d'entrepôt clair.",
-    "image": "/images/material-library/warehouse-handoff.webp",
+    "image": "/images/jw-content/warehouse-handoff.webp",
     "heroPoints": [
       "Réception, QC et stockage restent dans des voies séparées",
       "Les matériaux de marque voyagent avec la droite SKU",
@@ -1058,7 +1058,7 @@ export const servicePages = [
     "eyebrow": "CONTRÔLE DE LA QUALITÉ ET INSPECTION",
     "title": "Libérer les lots avec des preuves.",
     "lead": "Définir les vérifications qui importent, inspecter en fonction d'une norme approuvée et décider de la réussite, du réaménagement ou de la tenue avant que l'inventaire ne progresse.",
-    "image": "/images/material-library/package-scan.webp",
+    "image": "/images/jw-content/package-scan.webp",
     "heroPoints": [
       "Liste de contrôle pour les inspections par lots",
       "Photos et notes dans un seul disque",

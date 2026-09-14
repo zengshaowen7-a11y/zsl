@@ -54,7 +54,7 @@
           "MOQ et examen des délais"
         ],
         "slug": "product-sourcing",
-        "image": "/images/material-library/client-meeting.webp"
+        "image": "/images/jw-content/client-meeting.webp"
       },
       {
         "title": "Contrôle qualité",
@@ -65,7 +65,7 @@
           "Inspection des emballages"
         ],
         "slug": "quality-control-inspection",
-        "image": "/images/material-library/quality-check.webp"
+        "image": "/images/jw-content/quality-check.webp"
       },
       {
         "title": "Étiquette et emballage privés",
@@ -76,7 +76,7 @@
           "Homologation de l'échantillon d'emballage"
         ],
         "slug": "private-label",
-        "image": "/images/material-library/package-weighing.webp"
+        "image": "/images/jw-content/package-weighing.webp"
       },
       {
         "title": "Préparation des commandes",
@@ -87,7 +87,7 @@
           "Expédition suivie dans le monde entier"
         ],
         "slug": "dropshipping-supplier",
-        "image": "/images/material-library/parcel-processing.webp"
+        "image": "/images/jw-content/parcel-processing.webp"
       },
       {
         "title": "Fulfillment 3PL en Chine",
@@ -98,7 +98,7 @@
           "Coordination des retours"
         ],
         "slug": "3pl-fulfillment-services",
-        "image": "/images/material-library/fulfillment-warehouse.webp"
+        "image": "/images/jw-content/fulfillment-warehouse.webp"
       },
       {
         "title": "Commandes automatisées",
@@ -109,7 +109,7 @@
           "Suivi du flux de retour"
         ],
         "slug": "automatic-order-fulfillment",
-        "image": "/images/material-library/automated-sorter.webp"
+        "image": "/images/jw-content/automated-sorter.webp"
       }
     ],
     "comparisonItems": [
@@ -148,15 +148,15 @@
         "text": "Comparer les fournisseurs, les échantillons, les MOQ et les délais",
         "images": [
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "Spécialiste de l'approvisionnement en produits comparant les options du fournisseur"
           ],
           [
-            "/images/material-library/parcel-processing.webp",
+            "/images/jw-content/parcel-processing.webp",
             "Produits des fournisseurs préparés pour l'examen de l'approvisionnement"
           ],
           [
-            "/images/material-library/client-meeting.webp",
+            "/images/jw-content/client-meeting.webp",
             "Équipe chinoise d'approvisionnement coordonnant les échantillons de produits"
           ]
         ]
@@ -166,15 +166,15 @@
         "text": "Inspection de qualité complète avant expédition",
         "images": [
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "Contrôle de la qualité des produits avant l'expédition"
           ],
           [
-            "/images/material-library/package-scan.webp",
+            "/images/jw-content/package-scan.webp",
             "L'équipe d'entrepôt vérifie l'emballage des produits"
           ],
           [
-            "/images/material-library/quality-check.webp",
+            "/images/jw-content/quality-check.webp",
             "JW spécialiste du contrôle qualité examinant un article"
           ]
         ]
@@ -184,15 +184,15 @@
         "text": "Stockage, emballage, expédition et suivi sous un seul flux de travail",
         "images": [
           [
-            "/images/material-library/fulfillment-warehouse.webp",
+            "/images/jw-content/fulfillment-warehouse.webp",
             "Exploitation de l ' entrepôt chinois"
           ],
           [
-            "/images/material-library/returns-shelving.webp",
+            "/images/jw-content/returns-shelving.webp",
             "Le personnel de l'entrepôt choisit des produits pour les commandes"
           ],
           [
-            "/images/material-library/sortation-floor.webp",
+            "/images/jw-content/sortation-floor.webp",
             "Équipe JW préparant les colis pour l'expédition"
           ]
         ]
