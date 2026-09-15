@@ -2180,14 +2180,31 @@
   transform: scale(1.06);
 }
 
-/* Home v4.3: manually controlled image galleries for the three advantages. */
+/* Home v4.3: one purpose-matched image for each core advantage. */
 .fh-home .fh-core-item {
   display: flex;
   flex-direction: column;
 }
 
 .fh-home .fh-core-item > p {
-  min-height: 82px;
+  width: min(100%, 31ch);
+  min-height: 3.1em;
+  margin: 0;
+  color: #52615b;
+  font-size: 15.5px;
+  font-weight: 470;
+  line-height: 1.55;
+  text-wrap: balance;
+}
+
+.fh-home .fh-core-item > h3 {
+  margin: 26px 0 12px;
+  color: #1f2d27;
+  font-size: clamp(20px, 1.55vw, 23px);
+  font-weight: 780;
+  line-height: 1.16;
+  letter-spacing: -0.025em !important;
+  text-wrap: balance;
 }
 
 .fh-home .fh-advantage-gallery-wrap {
@@ -2196,32 +2213,22 @@
 }
 
 .fh-home .fh-advantage-gallery {
-  display: flex;
+  position: relative;
   width: 100%;
-  overflow-x: auto;
+  margin: 0;
+  overflow: hidden;
   border: 1px solid rgba(31, 41, 55, 0.16);
   border-radius: 7px;
   background: rgba(255, 255, 255, 0.55);
   box-shadow: 0 16px 34px rgba(31, 41, 55, 0.1);
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  overscroll-behavior-inline: contain;
-}
-
-.fh-home .fh-advantage-gallery::-webkit-scrollbar {
-  display: none;
 }
 
 .fh-home .fh-advantage-slide {
   position: relative;
   width: 100%;
-  min-width: 100%;
   margin: 0;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 .fh-home .fh-advantage-slide img {
@@ -2319,63 +2326,6 @@
   filter: saturate(1.04) contrast(1.02);
 }
 
-.fh-home .fh-advantage-gallery-controls {
-  display: grid;
-  grid-template-columns: 34px 1fr 34px;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.fh-home .fh-advantage-gallery-controls > button {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  place-items: center;
-  border: 1px solid rgba(31, 41, 55, 0.25);
-  border-radius: 50%;
-  background: transparent;
-  color: #1f2937;
-  cursor: pointer;
-  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
-}
-
-.fh-home .fh-advantage-gallery-controls > button:hover {
-  border-color: #167449;
-  background: rgba(255, 255, 255, 0.62);
-  transform: translateY(-1px);
-}
-
-.fh-home .fh-advantage-gallery-controls svg {
-  width: 17px;
-  height: 17px;
-}
-
-.fh-home .fh-advantage-gallery-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-}
-
-.fh-home .fh-advantage-gallery-dots button {
-  width: 6px;
-  height: 6px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(31, 41, 55, 0.28);
-  cursor: pointer;
-  transition: width 180ms ease, border-radius 180ms ease, background 180ms ease;
-}
-
-.fh-home .fh-advantage-gallery-dots button.is-active {
-  width: 20px;
-  border-radius: 4px;
-  background: #167449;
-}
-
 .fh-home .fh-core-link {
   margin-top: 38px;
 }
@@ -2426,7 +2376,16 @@
   }
 
   .fh-home .fh-core-item > p {
+    width: auto;
     min-height: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .fh-home .fh-core-item > h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+    line-height: 1.25;
   }
 
   .fh-home .fh-advantage-gallery-wrap {
@@ -2434,14 +2393,6 @@
     margin-top: 22px;
   }
 
-  .fh-home .fh-advantage-gallery-controls {
-    grid-template-columns: 38px 1fr 38px;
-  }
-
-  .fh-home .fh-advantage-gallery-controls > button {
-    width: 38px;
-    height: 38px;
-  }
 }
 
 /* Home v4.4: improve readability of supporting trust and platform labels. */

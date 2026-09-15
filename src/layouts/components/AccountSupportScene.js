@@ -36,14 +36,13 @@ function AccountSupportScene({ content, cards }) {
       data-active={activeIndex + 1}
     >
       <header className="wjw-account-heading">
-        <p className="wjw-kicker">{content.kicker}</p>
         <h2>{content.title}</h2>
         <p>{content.lead}</p>
       </header>
 
       <div className="wjw-account-stage">
         <figure className="wjw-account-media">
-          {images.map((src, index) => (
+          {images.slice(0, relayItems.length).map((src, index) => (
             <Image
               className={activeIndex === index ? "is-active" : ""}
               src={src}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { FiChevronDown, FiMessageSquare, FiSend } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FORMSPREE_ENDPOINT } from "@config/forms";
@@ -11,12 +11,18 @@ const AUTO_OPEN_KEY = "jw-home-chat-seen";
 
 export default function HomepageChatWidget() {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isWhyUsPage = pathname === "/why-us" || pathname?.endsWith("/why-us");
+  const [openSource, setOpenSource] = useState(null);
+  const isOpen = openSource === "manual" || (openSource === "auto" && !isWhyUsPage);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
   const panelRef = useRef(null);
 
   useEffect(() => {
+    // Why Us is a long-form proof page: let visitors choose when to start a chat.
+    if (isWhyUsPage) return undefined;
+
     let hasSeenChat = false;
     try {
       hasSeenChat = window.sessionStorage.getItem(AUTO_OPEN_KEY) === "true";
@@ -26,7 +32,7 @@ export default function HomepageChatWidget() {
     if (hasSeenChat) return undefined;
 
     const timer = window.setTimeout(() => {
-      setIsOpen(true);
+      setOpenSource("auto");
       try {
         window.sessionStorage.setItem(AUTO_OPEN_KEY, "true");
       } catch {
@@ -35,19 +41,19 @@ export default function HomepageChatWidget() {
     }, 900);
 
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [isWhyUsPage]);
 
   useEffect(() => {
     if (!isOpen) return undefined;
     const handleKeyDown = (event) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") setOpenSource(null);
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
   const openChat = () => {
-    setIsOpen(true);
+    setOpenSource("manual");
     try {
       window.sessionStorage.setItem(AUTO_OPEN_KEY, "true");
     } catch {
@@ -94,7 +100,7 @@ export default function HomepageChatWidget() {
   };
 
   return (
-    <aside className={`jw-chat-dock ${isOpen ? "is-open" : ""}`} aria-label="Contact JW Dropshipping">
+    <aside className={`jw-chat-dock ${isOpen ? "is-open" : ""} ${isWhyUsPage ? "is-why-us" : ""}`} aria-label="Contact JW Dropshipping">
       {isOpen ? (
         <section ref={panelRef} className="jw-chat-panel" aria-label="Leave your contact details">
           <header className="jw-chat-panel-header">
@@ -102,7 +108,7 @@ export default function HomepageChatWidget() {
               <span>QUICK ENQUIRY</span>
               <strong>Leave your info for details</strong>
             </div>
-            <button type="button" onClick={() => setIsOpen(false)} aria-label="Minimize chat form">
+            <button type="button" onClick={() => setOpenSource(null)} aria-label="Minimize chat form">
               <FiChevronDown aria-hidden="true" />
             </button>
           </header>

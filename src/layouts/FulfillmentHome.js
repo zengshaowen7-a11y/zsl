@@ -13,8 +13,6 @@ import { FaAmazon } from "react-icons/fa";
 import {
   FiArrowRight,
   FiCheck,
-  FiChevronLeft,
-  FiChevronRight,
   FiClipboard,
   FiExternalLink,
   FiGlobe,
@@ -55,30 +53,18 @@ const MEDIA_BLUR_DATA_URL =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Crect width='16' height='12' fill='%23edf8f2'/%3E%3Cpath d='M-2 11 5 5l3 3 3-2 7 6' fill='none' stroke='%23cdebd9' stroke-width='1.2'/%3E%3C/svg%3E";
 
 const homeServiceImages = {
-  "product-sourcing": "/images/jw-content/home-service-sourcing.webp",
-  "quality-control-inspection": "/images/jw-content/home-service-quality.webp",
-  "private-label": "/images/jw-content/home-service-private-label.webp",
-  "dropshipping-supplier": "/images/jw-content/home-service-dropshipping.webp",
-  "3pl-fulfillment-services": "/images/jw-content/home-service-3pl.webp",
-  "automatic-order-fulfillment": "/images/jw-content/home-service-automation.webp",
+  "product-sourcing": "/images/jw-content/home-service-product-sourcing.png",
+  "quality-control-inspection": "/images/jw-content/home-service-quality-control.png",
+  "private-label": "/images/jw-content/home-service-private-label.png",
+  "dropshipping-supplier": "/images/jw-content/home-service-dropshipping-fulfillment.png",
+  "3pl-fulfillment-services": "/images/jw-content/home-service-china-3pl.png",
+  "automatic-order-fulfillment": "/images/jw-content/home-service-order-automation.png",
 };
 
 const homeAdvantageImages = [
-  [
-    "/images/jw-content/home-source-01.webp",
-    "/images/jw-content/home-source-02.webp",
-    "/images/jw-content/home-source-03.webp",
-  ],
-  [
-    "/images/jw-content/home-quality-01.webp",
-    "/images/jw-content/home-quality-02.webp",
-    "/images/jw-content/home-quality-03.webp",
-  ],
-  [
-    "/images/jw-content/home-fulfill-01.webp",
-    "/images/jw-content/home-fulfill-02.webp",
-    "/images/jw-content/home-fulfill-03.webp",
-  ],
+  "/images/jw-content/home-source-end-to-end.png",
+  "/images/jw-content/home-quality-end-to-end.png",
+  "/images/jw-content/home-fulfill-end-to-end.png",
 ];
 
 function ProgressiveImage({ src, alt, sizes, priority = false, eager = false }) {
@@ -217,26 +203,8 @@ export default function FulfillmentHome({ lang = "en" }) {
   const evidenceItems = t.raw("evidenceItems");
   const [openFaq, setOpenFaq] = useState(0);
   const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(false);
-  const [advantageSlideIndexes, setAdvantageSlideIndexes] = useState([0, 0, 0]);
   const heroVideoRef = useRef(null);
   const homeRef = useRef(null);
-  const advantageGalleryRefs = useRef([]);
-
-  const showAdvantageSlide = (galleryIndex, slideIndex) => {
-    const gallery = advantageGalleryRefs.current[galleryIndex];
-    const imageCount = coreAdvantagesCopy[galleryIndex].images.length;
-    const nextIndex = (slideIndex + imageCount) % imageCount;
-    if (gallery) gallery.scrollLeft = gallery.clientWidth * nextIndex;
-    setAdvantageSlideIndexes((current) => current.map((value, index) => index === galleryIndex ? nextIndex : value));
-  };
-
-  const syncAdvantageSlide = (galleryIndex, gallery) => {
-    if (!gallery.clientWidth) return;
-    const nextIndex = Math.round(gallery.scrollLeft / gallery.clientWidth);
-    setAdvantageSlideIndexes((current) => current[galleryIndex] === nextIndex
-      ? current
-      : current.map((value, index) => index === galleryIndex ? nextIndex : value));
-  };
 
   return (
     <main ref={homeRef} className="ff-site fh-home" data-jw-motion="playing">
@@ -371,40 +339,14 @@ export default function FulfillmentHome({ lang = "en" }) {
                 <h3>{title}</h3>
                 <p>{text}</p>
                 <div className="fh-advantage-gallery-wrap">
-                  <div
-                    className="fh-advantage-gallery"
-                    ref={(node) => { advantageGalleryRefs.current[galleryIndex] = node; }}
-                    onScroll={(event) => syncAdvantageSlide(galleryIndex, event.currentTarget)}
-                    aria-label={`${title} image gallery`}
-                  >
-                    {images.map(([, alt], slideIndex) => {
-                      const src = homeAdvantageImages[galleryIndex][slideIndex];
-                      return (
-                      <figure className="fh-advantage-slide" key={src}>
-                        <ProgressiveImage
-                          src={src}
-                          alt={alt}
-                          sizes="(max-width: 767px) 100vw, 33vw"
-                          eager={slideIndex === 0}
-                        />
-                      </figure>
-                    );})}
-                  </div>
-                  <div className="fh-advantage-gallery-controls">
-                    <button type="button" onClick={() => showAdvantageSlide(galleryIndex, advantageSlideIndexes[galleryIndex] - 1)} aria-label={`${section.previousImage}: ${title}`} title={section.previousImage}><FiChevronLeft /></button>
-                    <div className="fh-advantage-gallery-dots" aria-label={`${advantageSlideIndexes[galleryIndex] + 1} of ${images.length}`}>
-                      {images.map(([, alt], slideIndex) => (
-                        <button
-                          type="button"
-                          className={advantageSlideIndexes[galleryIndex] === slideIndex ? "is-active" : ""}
-                          onClick={() => showAdvantageSlide(galleryIndex, slideIndex)}
-                          aria-label={`Show image ${slideIndex + 1}: ${alt}`}
-                          key={alt}
-                        />
-                      ))}
-                    </div>
-                    <button type="button" onClick={() => showAdvantageSlide(galleryIndex, advantageSlideIndexes[galleryIndex] + 1)} aria-label={`${section.nextImage}: ${title}`} title={section.nextImage}><FiChevronRight /></button>
-                  </div>
+                  <figure className="fh-advantage-gallery fh-advantage-slide">
+                    <ProgressiveImage
+                      src={homeAdvantageImages[galleryIndex]}
+                      alt={images[0][1]}
+                      sizes="(max-width: 767px) 100vw, 33vw"
+                      eager
+                    />
+                  </figure>
                 </div>
               </article>
             );})}
@@ -479,9 +421,9 @@ export default function FulfillmentHome({ lang = "en" }) {
             </article>
           </div>
           <div className="fh-difference-media" aria-label={section.differenceMediaLabel}>
-            <figure className="fh-difference-main"><Image src="/images/jw-content/home-proof-01.webp" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" /><figcaption>{section.differenceMedia[0][1]}</figcaption></figure>
-            <figure><Image src="/images/jw-content/home-proof-02.webp" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[1][1]}</figcaption></figure>
-            <figure><Image src="/images/jw-content/home-proof-03.webp" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /><figcaption>{section.differenceMedia[2][1]}</figcaption></figure>
+            <figure className="fh-difference-main"><Image src="/images/jw-content/home-difference-warehouse-overview.png" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" /></figure>
+            <figure><Image src="/images/jw-content/home-difference-team-workflow.png" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /></figure>
+            <figure><Image src="/images/jw-content/home-difference-inventory-shelves.png" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /></figure>
           </div>
         </div>
       </section>
