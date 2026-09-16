@@ -105,6 +105,7 @@ import "../../styles/why-jw-qc-workbench.css";
 import "../../styles/why-jw-account-scene.css";
 import "../../styles/why-jw-final-diagnostic.css";
 import "../../styles/testimonials-final-cta.css";
+import "../../styles/why-jw-facts-rail-v2.css";
 import "../../styles/why-jw-compare-board-v2.css";
 import "../../styles/testimonials-hero-v2.css";
 import "../../styles/why-jw-facts-rail-v3.css";

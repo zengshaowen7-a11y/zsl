@@ -12,14 +12,14 @@ const serviceIcons = {
 };
 
 const serviceOverviewImages = {
-  "dropshipping-supplier": "/images/jw-content/parcel-processing.webp",
-  "3pl-fulfillment-services": "/images/jw-content/fulfillment-warehouse.webp",
-  "pod-fulfillment": "/images/jw-content/packing-line.webp",
-  "private-label": "/images/jw-content/package-weighing.webp",
-  "product-sourcing": "/images/jw-content/client-meeting.webp",
-  "automatic-order-fulfillment": "/images/jw-content/automated-sorter.webp",
-  "china-fulfillment-center": "/images/jw-content/warehouse-exterior.webp",
-  "quality-control-inspection": "/images/jw-content/quality-check.webp",
+  "dropshipping-supplier": "/images/jw-content/services-overview-dropshipping.png",
+  "3pl-fulfillment-services": "/images/jw-content/services-overview-3pl.png",
+  "pod-fulfillment": "/images/jw-content/services-overview-pod.png",
+  "private-label": "/images/jw-content/services-overview-private-label.png",
+  "product-sourcing": "/images/jw-content/services-overview-product-sourcing.png",
+  "automatic-order-fulfillment": "/images/jw-content/services-overview-order-automation.png",
+  "china-fulfillment-center": "/images/jw-content/services-overview-china-fulfillment.png",
+  "quality-control-inspection": "/images/jw-content/services-overview-quality-control.png",
 };
 
 // The overview, header dropdown and detail routes all use the same service source.

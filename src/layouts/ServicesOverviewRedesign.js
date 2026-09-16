@@ -18,12 +18,32 @@ import {
   FiTruck,
 } from "react-icons/fi";
 
-const serviceIcons = [FiPackage, FiTruck, FiClipboard, FiPackage, FiSearch, FiArrowRight, FiTruck, FiShield];
+const serviceIcons = {
+  "dropshipping-supplier": FiPackage,
+  "3pl-fulfillment-services": FiTruck,
+  "pod-fulfillment": FiClipboard,
+  "private-label": FiPackage,
+  "product-sourcing": FiSearch,
+  "automatic-order-fulfillment": FiArrowRight,
+  "china-fulfillment-center": FiTruck,
+  "quality-control-inspection": FiShield,
+};
+const serviceCatalogOrder = [
+  "product-sourcing",
+  "quality-control-inspection",
+  "dropshipping-supplier",
+  "3pl-fulfillment-services",
+  "china-fulfillment-center",
+  "private-label",
+  "pod-fulfillment",
+  "automatic-order-fulfillment",
+];
 
 export default function ServicesOverviewRedesign() {
   const locale = useLocale();
   const t = useTranslations("ServicesOverview");
-  const serviceCatalog = getServiceCatalog(locale);
+  const catalogBySlug = new Map(getServiceCatalog(locale).map((service) => [service.slug, service]));
+  const serviceCatalog = serviceCatalogOrder.map((slug) => catalogBySlug.get(slug)).filter(Boolean);
   const serviceComparison = getServiceComparison(locale);
   const serviceWorkflow = t.raw("workflowSteps");
   const serviceFaqs = t.raw("faqs");
@@ -149,7 +169,7 @@ export default function ServicesOverviewRedesign() {
           </div>
           <div className="sov-card-grid">
             {serviceCatalog.map((service, index) => {
-              const Icon = serviceIcons[index];
+              const Icon = serviceIcons[service.slug];
               return (
                 <Link className="sov-service-card" href={`/services/${service.slug}`} key={service.slug}>
                   <div className="sov-card-image">
@@ -182,7 +202,7 @@ export default function ServicesOverviewRedesign() {
               <thead><tr>{comparison.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead>
               <tbody>
                 {serviceComparison.map(([slug, title, bestFor, inventory, branding, prepare], index) => {
-                  const Icon = serviceIcons[index];
+                  const Icon = serviceIcons[slug];
                   return (
                     <tr key={slug}>
                       <th>

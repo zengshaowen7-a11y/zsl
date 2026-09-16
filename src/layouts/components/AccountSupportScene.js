@@ -6,9 +6,9 @@ import { FiCheckCircle, FiClipboard, FiMessageCircle, FiPackage } from "react-ic
 
 const icons = [FiMessageCircle, FiCheckCircle, FiClipboard, FiPackage];
 const images = [
-  "/images/jw-content/support-consultation.webp",
-  "/images/jw-content/client-meeting.webp",
-  "/images/jw-content/operations-meeting.webp",
+  "/images/jw-content/why-jw-support-01.png",
+  "/images/jw-content/why-jw-support-02.png",
+  "/images/jw-content/why-jw-support-03.png",
   "/images/jw-content/dispatch-station.webp",
 ];
 
@@ -36,13 +36,14 @@ function AccountSupportScene({ content, cards }) {
       data-active={activeIndex + 1}
     >
       <header className="wjw-account-heading">
+        <p className="wjw-kicker">{content.kicker}</p>
         <h2>{content.title}</h2>
         <p>{content.lead}</p>
       </header>
 
       <div className="wjw-account-stage">
         <figure className="wjw-account-media">
-          {images.slice(0, relayItems.length).map((src, index) => (
+          {images.map((src, index) => (
             <Image
               className={activeIndex === index ? "is-active" : ""}
               src={src}

@@ -197,37 +197,6 @@
   .jw-chat-launcher { min-height: 56px; padding: 0 20px; font-size: 15px; }
 }
 
-/* Keep the proof page readable until the visitor explicitly asks for contact. */
-@media (max-width: 640px) {
-  .jw-chat-dock.is-why-us:not(.is-open) {
-    right: 12px;
-    width: auto;
-  }
-
-  .jw-chat-dock.is-why-us:not(.is-open) .jw-whatsapp-launcher {
-    display: none;
-  }
-
-  .jw-chat-dock.is-why-us:not(.is-open) .jw-chat-launcher {
-    width: 52px;
-    min-width: 52px;
-    height: 52px;
-    padding: 0;
-    border-radius: 50%;
-  }
-
-  .jw-chat-dock.is-why-us:not(.is-open) .jw-chat-launcher span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .jw-chat-panel,
   .jw-whatsapp-launcher::before { animation: none; }

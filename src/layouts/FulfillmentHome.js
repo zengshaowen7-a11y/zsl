@@ -54,7 +54,7 @@ const MEDIA_BLUR_DATA_URL =
 
 const homeServiceImages = {
   "product-sourcing": "/images/jw-content/home-service-product-sourcing.png",
-  "quality-control-inspection": "/images/jw-content/home-service-quality-control.png",
+  "quality-control-inspection": "/images/jw-content/home-service-quality-control-v2.png",
   "private-label": "/images/jw-content/home-service-private-label.png",
   "dropshipping-supplier": "/images/jw-content/home-service-dropshipping-fulfillment.png",
   "3pl-fulfillment-services": "/images/jw-content/home-service-china-3pl.png",
@@ -421,9 +421,9 @@ export default function FulfillmentHome({ lang = "en" }) {
             </article>
           </div>
           <div className="fh-difference-media" aria-label={section.differenceMediaLabel}>
-            <figure className="fh-difference-main"><Image src="/images/jw-content/home-difference-warehouse-overview.png" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 900px) 100vw, 42vw" /></figure>
-            <figure><Image src="/images/jw-content/home-difference-team-workflow.png" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /></figure>
+            <figure className="fh-difference-main"><Image src="/images/jw-content/home-difference-team-workflow.png" alt={section.differenceMedia[1][0]} fill sizes="(max-width: 900px) 100vw, 42vw" /></figure>
             <figure><Image src="/images/jw-content/home-difference-inventory-shelves.png" alt={section.differenceMedia[2][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /></figure>
+            <figure><Image src="/images/jw-content/home-difference-warehouse-overview.png" alt={section.differenceMedia[0][0]} fill sizes="(max-width: 767px) 50vw, 18vw" /></figure>
           </div>
         </div>
       </section>

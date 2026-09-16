@@ -41,38 +41,13 @@ body main.wjw-page.wjw-page[class][class] section.wjw-compare.wjw-compare > .wjw
 }
 
 body main.wjw-page.wjw-page[class][class] .wjw-compare-board {
-  /* Hallmark · pre-emit critique: P4 H4 E5 S5 R5 V4 */
   display:grid !important;
   grid-template-columns:minmax(300px,.72fr) minmax(0,1.28fr) !important;
-  grid-template-areas:"control stage" "nav stage" !important;
-  grid-template-rows:auto minmax(0,1fr) !important;
+  grid-template-areas:"nav stage" !important;
   align-items:stretch !important;
   gap:18px !important;
   padding:18px !important;
 }
-
-.wjw-compare-autoplay {
-  grid-area:control;
-  justify-self:start;
-  display:inline-flex;
-  min-height:38px;
-  align-items:center;
-  gap:7px;
-  padding:0 13px;
-  border:1px solid rgba(22,116,73,.2);
-  border-radius:999px;
-  color:#285c46;
-  background:rgba(255,255,255,.72);
-  font-size:11px;
-  font-weight:760;
-  cursor:pointer;
-}
-.wjw-compare-autoplay svg { width:14px; height:14px; }
-.wjw-compare-autoplay:hover { background:#e9f8ef; }
-.wjw-compare-autoplay:focus-visible { outline:3px solid rgba(22,116,73,.3); outline-offset:2px; }
-.wjw-compare-autoplay:active { transform:translateY(1px); }
-.wjw-compare-autoplay:disabled { cursor:not-allowed; opacity:.55; }
-.wjw-compare-autoplay[aria-pressed="true"] { border-color:rgba(22,116,73,.34); background:#e9f8ef; }
 
 body main.wjw-page.wjw-page[class][class] .wjw-compare-board .wjw-compare-nav {
   grid-area:nav;
@@ -153,7 +128,7 @@ body main.wjw-page.wjw-page[class][class] .wjw-compare-board .wjw-compare-transf
 }
 
 @media (max-width:860px) {
-  body main.wjw-page.wjw-page[class][class] .wjw-compare-board { grid-template-columns:minmax(0,1fr) !important; grid-template-areas:"stage" "control" "nav" !important; grid-template-rows:auto auto auto !important; }
+  body main.wjw-page.wjw-page[class][class] .wjw-compare-board { grid-template-columns:minmax(0,1fr) !important; grid-template-areas:"stage" "nav" !important; }
   body main.wjw-page.wjw-page[class][class] .wjw-compare-board .wjw-compare-nav { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
 }
 

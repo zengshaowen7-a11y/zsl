@@ -1,15 +1,12 @@
 "use client";
 
 import { memo, useEffect, useRef, useState } from "react";
-import { FiArrowRight, FiCheck, FiPause, FiPlay, FiX } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiX } from "react-icons/fi";
 
 function WhyJWCompareBoard({ comparisons, details = [], typicalLabel, jwLabel }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isUserPaused, setIsUserPaused] = useState(false);
-  const [isPointerInside, setIsPointerInside] = useState(false);
-  const [isFocusInside, setIsFocusInside] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const rootRef = useRef(null);
-  const isPaused = isUserPaused || isPointerInside || isFocusInside;
 
   useEffect(() => {
     if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -36,11 +33,11 @@ function WhyJWCompareBoard({ comparisons, details = [], typicalLabel, jwLabel })
     <div
       ref={rootRef}
       className="wjw-compare-board"
-      onMouseEnter={() => setIsPointerInside(true)}
-      onMouseLeave={() => setIsPointerInside(false)}
-      onFocusCapture={() => setIsFocusInside(true)}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setIsFocusInside(false);
+        if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
       }}
     >
       <div className="wjw-compare-stage" key={activeIndex}>
@@ -55,17 +52,6 @@ function WhyJWCompareBoard({ comparisons, details = [], typicalLabel, jwLabel })
         </article>
       </div>
 
-      <button
-        type="button"
-        className="wjw-compare-autoplay"
-        aria-pressed={isUserPaused}
-        aria-label={isUserPaused ? "Play automatic comparison" : "Pause automatic comparison"}
-        onClick={() => setIsUserPaused((paused) => !paused)}
-      >
-        {isUserPaused ? <FiPlay aria-hidden="true" /> : <FiPause aria-hidden="true" />}
-        <span>{isUserPaused ? "Play" : "Pause"}</span>
-      </button>
-
       <div className="wjw-compare-nav" role="tablist" aria-label={jwLabel}>
         {comparisons.map(([before], index) => (
           <button
@@ -74,10 +60,7 @@ function WhyJWCompareBoard({ comparisons, details = [], typicalLabel, jwLabel })
             aria-selected={activeIndex === index}
             className={activeIndex === index ? "is-active" : ""}
             key={before}
-            onClick={() => {
-              setActiveIndex(index);
-              setIsUserPaused(true);
-            }}
+            onClick={() => setActiveIndex(index)}
           >
             <span>{String(index + 1).padStart(2, "0")}</span>
             <strong>{before}</strong>

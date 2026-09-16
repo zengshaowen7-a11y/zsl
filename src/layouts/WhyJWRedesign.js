@@ -10,7 +10,6 @@ import {
   FiUsers,
   FiX,
 } from "react-icons/fi";
-import WhyJWFactsRail from "./components/WhyJWFactsRail";
 import WhyJWCompareBoard from "./components/WhyJWCompareBoard";
 import QCEvidenceWorkbench from "./components/QCEvidenceWorkbench";
 import AccountSupportScene from "./components/AccountSupportScene";
@@ -59,21 +58,17 @@ export default function WhyJWRedesign() {
         </div>
       </section>
 
-      <section className="wjw-facts">
-        <WhyJWFactsRail items={heroSupportCards} />
-      </section>
-
       <section className="wjw-compare" id="jw-difference">
         <div className="wjw-container">
-          <header className="wjw-heading"><div><h2>{compare.title}</h2></div><p>{compare.lead}</p></header>
+          <header className="wjw-heading"><div><p className="wjw-kicker">{compare.kicker}</p><h2>{compare.title}</h2></div><p>{compare.lead}</p></header>
           <WhyJWCompareBoard comparisons={comparisons} details={compare.details} typicalLabel={compare.typical} jwLabel={compare.jw} />
         </div>
       </section>
 
       <section className="wjw-principles">
         <div className="wjw-container">
-          <header className="wjw-heading wjw-principle-heading"><div><h2>{principlesSection.title}</h2></div><p>{principlesSection.lead}</p></header>
-          <ol className="wjw-principle-flow">{principles.map(([title, copy], index) => { const Icon = principleIcons[index]; return <li key={title}><div className="wjw-principle-marker"><span>{String(index + 1).padStart(2, "0")}</span><Icon aria-hidden="true" /></div><div><h3>{title}</h3><p>{copy}</p></div></li>; })}</ol>
+          <header className="wjw-heading wjw-heading-centered"><div><p className="wjw-kicker">{principlesSection.kicker}</p><h2>{principlesSection.title}</h2></div><p>{principlesSection.lead}</p></header>
+          <div className="wjw-principle-grid">{principles.map(([title, copy], index) => { const Icon = principleIcons[index]; return <article key={title}><div><span>{String(index + 1).padStart(2, "0")}</span><Icon /></div><h3>{title}</h3><p>{copy}</p></article>; })}</div>
         </div>
       </section>
 
@@ -87,12 +82,12 @@ export default function WhyJWRedesign() {
 
       <section className="wjw-fit">
         <div className="wjw-container">
-          <header className="wjw-heading"><div><h2>{fit.title}</h2></div><p>{fit.lead}</p></header>
+          <header className="wjw-heading"><div><p className="wjw-kicker">{fit.kicker}</p><h2>{fit.title}</h2></div><p>{fit.lead}</p></header>
           <div className="wjw-fit-grid"><div><h3>{fit.good}</h3><ul>{fitItems.map(item => <li key={item}><FiCheck />{item}</li>)}</ul></div><div><h3>{fit.bad}</h3><ul>{notFitItems.map(item => <li key={item}><FiX />{item}</li>)}</ul></div></div>
         </div>
       </section>
 
-      <section className="wjw-faq"><div className="wjw-container wjw-faq-grid"><div><h2>{faq.title}</h2><p>{faq.lead}</p></div><div className="wjw-accordion">{faqs.map(([q,a],index)=><details name="wjw-faq" key={q} open={index===0}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
+      <section className="wjw-faq"><div className="wjw-container wjw-faq-grid"><div><p className="wjw-kicker">{faq.kicker}</p><h2>{faq.title}</h2><p>{faq.lead}</p></div><div className="wjw-accordion">{faqs.map(([q,a],index)=><details name="wjw-faq" key={q} open={index===0}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div></div></section>
 
       <section className="wjw-final"><FinalBottleneckCTA content={final} options={heroSupportCards} /></section>
     </main>

@@ -18,6 +18,14 @@ import {
   FiTruck,
 } from "react-icons/fi";
 
+const stageImages = [
+  "/images/jw-content/how-it-works-stage-01.png",
+  "/images/jw-content/how-it-works-stage-02.png",
+  "/images/jw-content/how-it-works-stage-03.png",
+  "/images/jw-content/how-it-works-stage-04.png",
+  "/images/jw-content/how-it-works-stage-05.png",
+];
+
 export default function HowItWorksRedesign() {
   const t = useTranslations("HowItWorks");
   const stageIcons = [FiSend, FiSearch, FiShield, FiPackage, FiTruck];
@@ -104,7 +112,7 @@ export default function HowItWorksRedesign() {
         <div className="hiw-container">
           <header className="hiw-heading"><div><p className="hiw-kicker">{journey.kicker}</p><h2>{journey.title}</h2></div><p>{journey.lead}</p></header>
           <div className="hiw-stage-list">
-            {stages.map(({ number, title, kicker, image, intro, provide, handle, receive }, index) => {
+            {stages.map(({ number, title, kicker, intro, provide, handle, receive }, index) => {
               const Icon = stageIcons[index];
               return (
               <article className="hiw-stage" key={number}>
@@ -113,7 +121,7 @@ export default function HowItWorksRedesign() {
                   <p className="hiw-kicker">{kicker}</p><h3>{title}</h3><p className="hiw-stage-intro">{intro}</p>
                   <dl><div><dt>{journey.provide}</dt><dd>{provide}</dd></div><div><dt>{journey.handle}</dt><dd>{handle}</dd></div><div><dt>{journey.receive}</dt><dd>{receive}</dd></div></dl>
                 </div>
-                <div className="hiw-stage-media"><Image src={image} alt="" fill sizes="(max-width: 800px) 100vw, 34vw" /></div>
+                <div className="hiw-stage-media"><Image src={stageImages[index]} alt="" fill sizes="(max-width: 800px) 100vw, 34vw" /></div>
               </article>
             );})}
           </div>

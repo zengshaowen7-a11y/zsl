@@ -2,23 +2,20 @@
 
 import Image from "next/image";
 import { memo, useEffect, useRef, useState } from "react";
-import { FiArrowRight, FiCheck, FiChevronRight, FiPause, FiPlay } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronRight } from "react-icons/fi";
 import { Link } from "@/i18n/navigation";
 
 const images = [
-  "/images/jw-content/package-scan.webp",
-  "/images/jw-content/packed-orders.webp",
-  "/images/jw-content/quality-check.webp",
-  "/images/jw-content/label-scanning.webp",
+  "/images/jw-content/why-jw-qc-01.png",
+  "/images/jw-content/why-jw-qc-02.png",
+  "/images/jw-content/why-jw-qc-03.png",
+  "/images/jw-content/why-jw-qc-04.png",
 ];
 
 function QCEvidenceWorkbench({ content }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isUserPaused, setIsUserPaused] = useState(false);
-  const [isPointerInside, setIsPointerInside] = useState(false);
-  const [isFocusInside, setIsFocusInside] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const rootRef = useRef(null);
-  const isPaused = isUserPaused || isPointerInside || isFocusInside;
 
   useEffect(() => {
     if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -43,11 +40,11 @@ function QCEvidenceWorkbench({ content }) {
       ref={rootRef}
       className="wjw-container wjw-qc-workbench"
       data-scene={activeIndex + 1}
-      onMouseEnter={() => setIsPointerInside(true)}
-      onMouseLeave={() => setIsPointerInside(false)}
-      onFocusCapture={() => setIsFocusInside(true)}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setIsFocusInside(false);
+        if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
       }}
     >
       <div className="wjw-qc-visual">
@@ -70,24 +67,12 @@ function QCEvidenceWorkbench({ content }) {
 
       <div className="wjw-qc-console">
         <header>
+          <p className="wjw-kicker">{content.kicker}</p>
           <h2>{content.title}</h2>
           <p>{content.lead}</p>
         </header>
 
-        <div className="wjw-qc-report-head">
-          <span>{content.review}</span>
-          <strong>SKU: JW-1024</strong>
-          <button
-            type="button"
-            className="wjw-qc-autoplay"
-            aria-pressed={isUserPaused}
-            aria-label={isUserPaused ? "Play automatic QC review" : "Pause automatic QC review"}
-            onClick={() => setIsUserPaused((paused) => !paused)}
-          >
-            {isUserPaused ? <FiPlay aria-hidden="true" /> : <FiPause aria-hidden="true" />}
-            <span>{isUserPaused ? "Play" : "Pause"}</span>
-          </button>
-        </div>
+        <div className="wjw-qc-report-head"><span>{content.review}</span><strong>SKU: JW-1024</strong></div>
 
         <dl className="wjw-qc-metrics">
           <div><dt>{content.checked}</dt><dd>50</dd></div>
@@ -102,10 +87,7 @@ function QCEvidenceWorkbench({ content }) {
               role="tab"
               aria-selected={activeIndex === index}
               className={activeIndex === index ? "is-active" : ""}
-              onClick={() => {
-                setActiveIndex(index);
-                setIsUserPaused(true);
-              }}
+              onClick={() => setActiveIndex(index)}
               key={item}
             >
               <span><FiCheck aria-hidden="true" /></span>
