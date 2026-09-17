@@ -228,5 +228,13 @@ export function getServiceConversion(slug, locale = "en") {
 }
 
 export function getServiceComparison(locale = "en") {
-  return localizedServiceComparison[locale] || serviceComparison;
+  const localizedRows = localizedServiceComparison[locale] || serviceComparison;
+
+  // Route slugs are identifiers, not translatable copy. Some localized content
+  // files translated the first column, which produced invalid links and left
+  // the overview without a matching icon during static rendering.
+  return localizedRows.map((row, index) => [
+    serviceComparison[index]?.[0] ?? row[0],
+    ...row.slice(1),
+  ]);
 }
