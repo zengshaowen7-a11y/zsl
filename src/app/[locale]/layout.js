@@ -116,6 +116,7 @@ import "../../styles/related-services-taste.css";
 import "../../styles/private-label-case-taste.css";
 import "../../styles/private-label-planner-taste.css";
 import "../../styles/private-label-fit-taste.css";
+import "../../styles/service-detail-heading-unification.css";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

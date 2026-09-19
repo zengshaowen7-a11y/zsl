@@ -5,9 +5,9 @@ import { useState } from "react";
 import { FiBox, FiSearch, FiTruck } from "react-icons/fi";
 
 const zoneAssets = [
-  ["/images/jw-content/receiving-team.webp", FiBox],
-  ["/images/jw-content/package-scan.webp", FiSearch],
-  ["/images/jw-content/label-scanning.webp", FiTruck],
+  ["/images/service-pages/china-center-receiving.webp", FiBox],
+  ["/images/service-pages/china-center-qc.webp", FiSearch],
+  ["/images/service-pages/china-center-dispatch.webp", FiTruck],
 ];
 
 export default function WarehouseControlZones({ proof, ui }) {

@@ -3144,6 +3144,42 @@ body main.sdr-page-quality-control-inspection[class][class][class][class][class]
   }
 }
 
+/* Keep the QC hero statement compact on desktop. */
+@media (min-width: 681px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .qch-copy h1 {
+    max-width: none !important;
+    font-size: clamp(24px, 1.8vw, 27px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal !important;
+    white-space: nowrap !important;
+  }
+
+  html[lang="de"] body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .qch-copy h1 {
+    max-width: 18ch !important;
+    font-size: clamp(23px, 1.7vw, 26px) !important;
+    line-height: 1.12 !important;
+    overflow-wrap: break-word !important;
+    text-wrap: balance !important;
+    white-space: normal !important;
+  }
+
+  html[lang="es"] body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .qch-actions {
+    width: min(100%, 320px) !important;
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  html[lang="es"] body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .qch-actions a {
+    width: 100% !important;
+    padding-inline: 16px !important;
+    font-size: 13px !important;
+  }
+}
+
 /* QC related services: image-led service preview gallery. */
 body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-heading {
   align-items: end !important;
@@ -3302,6 +3338,57 @@ body main.sdr-page-quality-control-inspection[class][class][class][class][class]
   body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class] .sdr-related-grid > a.is-featured {
     grid-column: auto;
   }
+}
+
+/* Replace the two warm panels with coordinated green surfaces. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-plan-matrix > .sdr-qc-plan-anchor {
+  background: linear-gradient(135deg, rgba(231, 248, 237, .96), rgba(218, 243, 228, .88)) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-case-challenge {
+  border-color: rgba(22, 132, 95, .42) !important;
+  border-left-color: #16845f !important;
+  background: linear-gradient(135deg, rgba(218, 246, 229, .96), rgba(199, 238, 216, .82)) !important;
+}
+
+/* Green status hierarchy for the pending summary and release decision. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-release-summary .is-pending {
+  color: #155f45 !important;
+  background: linear-gradient(135deg, #e1f7e9, #d3f0df) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-release-summary .is-pending :is(svg, small) {
+  color: #155f45 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-decision-gate {
+  border-color: rgba(22, 132, 95, .28) !important;
+  background: linear-gradient(135deg, #eefaf3, #ddf4e7) !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-decision-gate::before {
+  background: #16845f !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-decision-state {
+  color: #155f45 !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-decision-state i {
+  background: #16845f !important;
+}
+
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-decision-state i::after {
+  background: rgba(22, 132, 95, .16) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4597,5 +4684,93 @@ body main.sdr-page-quality-control-inspection[class][class][class][class][class]
   body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class]
     :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) {
     padding-block: 42px !important;
+  }
+}
+
+/* Match every section heading to the compact QC hero title scale. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) h2 {
+  font-size: clamp(24px, 1.8vw, 27px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    :is(.sdr-fit, .sdr-proof, .sdr-process, .sdr-planning, .sdr-case, .sdr-faq, .sdr-related, .sdr-quote) h2 {
+    font-size: clamp(20px, 5.8vw, 23px) !important;
+    line-height: 1.14 !important;
+  }
+}
+
+/* One line when it fits; otherwise form two visually balanced lines. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-fit-intro h2 {
+  width: 100% !important;
+  max-width: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  text-wrap: balance !important;
+}
+
+html:is([lang="de"], [lang="fr"], [lang="nl"], [lang="pl"], [lang="es"])
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-fit-intro h2 {
+  font-size: clamp(23px, 1.85vw, 27px) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 767px) {
+  html:is([lang="de"], [lang="fr"], [lang="nl"], [lang="pl"], [lang="es"])
+    body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .sdr-qc-fit-intro h2 {
+    font-size: clamp(19px, 5.6vw, 23px) !important;
+  }
+}
+
+/* Outcome-card titles stay compact and on one line in every locale. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-fit-copy h3 {
+  max-width: 100% !important;
+  padding-right: 0 !important;
+  font-size: clamp(15px, 1.25vw, 18px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  white-space: nowrap !important;
+}
+
+html:is([lang="de"], [lang="nl"], [lang="pl"])
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-fit-copy h3 {
+  font-size: clamp(14px, 1.12vw, 16px) !important;
+}
+
+/* Release-panel title: compact, substantial, and single-line in every locale. */
+body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-release-panel h2 {
+  width: max-content !important;
+  max-width: 100% !important;
+  font-size: clamp(22px, 1.9vw, 27px) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+  white-space: nowrap !important;
+}
+
+html:is([lang="de"], [lang="es"])
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+  .sdr-qc-release-panel h2 {
+  font-size: clamp(20px, 1.65vw, 24px) !important;
+}
+
+@media (max-width: 600px) {
+  body main.sdr-page-quality-control-inspection[class][class][class][class][class][class][class][class][class][class]
+    .sdr-qc-release-panel h2 {
+    font-size: clamp(16px, 5vw, 20px) !important;
   }
 }

@@ -43,6 +43,50 @@ const exceptionLaneIcons = [FiClipboard, FiLayers, FiUserCheck, FiTruck];
 const serviceTitleClass = (title) =>
   title.length > 48 ? "sdr-title-long" : undefined;
 
+const serviceHeroAssets = {
+  "dropshipping-supplier": "/images/service-pages/dropshipping-hero.webp",
+  "3pl-fulfillment-services": "/images/service-pages/3pl-hero.webp",
+  "pod-fulfillment": "/images/service-pages/pod-hero.webp",
+  "product-sourcing": "/images/service-pages/product-sourcing-hero.webp",
+  "china-fulfillment-center": "/images/service-pages/china-center-hero.webp",
+};
+
+const serviceProofAssets = {
+  "dropshipping-supplier": "/images/service-pages/dropshipping-context.webp",
+  "3pl-fulfillment-services": "/images/service-pages/3pl-inventory.webp",
+  "pod-fulfillment": "/images/service-pages/pod-artwork.webp",
+  "private-label": "/images/service-pages/private-label-elements.webp",
+  "product-sourcing": "/images/service-pages/product-sourcing-offers.webp",
+  "quality-control-inspection": "/images/service-pages/quality-release.webp",
+};
+
+const relatedServiceAssets = {
+  "dropshipping-supplier": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-packing.webp",
+    "pod-fulfillment": "/images/service-pages/related-pod.webp",
+    "private-label": "/images/service-pages/related-private-label.webp",
+  },
+  "private-label": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-packing.webp",
+    "pod-fulfillment": "/images/service-pages/related-pod.webp",
+  },
+  "product-sourcing": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-packing.webp",
+    "pod-fulfillment": "/images/service-pages/related-pod.webp",
+  },
+  "automatic-order-fulfillment": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-packing.webp",
+  },
+  "china-fulfillment-center": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-warehouse.webp",
+    "pod-fulfillment": "/images/service-pages/related-pod.webp",
+  },
+  "quality-control-inspection": {
+    "3pl-fulfillment-services": "/images/service-pages/related-3pl-warehouse.webp",
+    "pod-fulfillment": "/images/service-pages/related-pod.webp",
+  },
+};
+
 
 export default function ServiceDetailRedesign({ service, locale = "en" }) {
   const t = useTranslations("ServiceDetail");
@@ -58,8 +102,13 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
   } = getServiceDetailContent(locale);
   const conversion = getServiceConversion(service.slug, locale);
   const servicePages = getServicePages(locale);
-  const proof =
+  const baseProof =
     proofContent[service.slug] || proofContent["dropshipping-supplier"];
+  const proof = {
+    ...baseProof,
+    image: serviceProofAssets[service.slug] || baseProof.image,
+  };
+  const heroImage = serviceHeroAssets[service.slug] || service.image;
   const related = servicePages
     .filter((item) => item.slug !== service.slug)
     .slice(0, 3);
@@ -119,7 +168,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
           </div>
           <div className={`sdr-hero-image${service.slug === "china-fulfillment-center" ? " sdr-warehouse-hero-image" : ""}`}>
             <Image
-              src={service.slug === "private-label" ? "/images/jw-content/package-scan.webp" : service.image}
+              src={heroImage}
               alt={`${service.menuTitle} in operation`}
               fill
               priority
@@ -459,7 +508,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
             <figure className="sdr-order-control-visual">
               <div className="sdr-order-control-photo sdr-order-control-photo-primary">
                 <Image
-                  src="/images/jw-content/label-scanning.webp"
+                  src="/images/service-pages/automatic-orders-primary.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 900px) 88vw, 34vw"
@@ -467,7 +516,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               </div>
               <div className="sdr-order-control-photo sdr-order-control-photo-secondary">
                 <Image
-                  src="/images/jw-content/warehouse-packing.webp"
+                  src="/images/service-pages/automatic-orders-secondary.webp"
                   alt={proof.title}
                   fill
                   sizes="(max-width: 560px) 66vw, (max-width: 900px) 46vw, 22vw"
@@ -556,7 +605,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
         <div id="private-label-scope-planner" className="container sdr-private-label-scope-planner">
           <figure>
             <Image
-              src="/images/jw-content/package-weighing.webp"
+              src="/images/service-pages/private-label-elements.webp"
               alt={proof.title}
               fill
               sizes="(max-width: 760px) 100vw, 38vw"
@@ -1188,7 +1237,7 @@ export default function ServiceDetailRedesign({ service, locale = "en" }) {
               <Link href={`/services/${item.slug}`} key={item.slug} className={index === 0 ? "is-featured" : undefined}>
                 <figure className="sdr-related-media">
                   <Image
-                    src={service.slug === "private-label" && item.slug === "pod-fulfillment" ? "/images/jw-content/product-assembly.webp" : item.image}
+                    src={relatedServiceAssets[service.slug]?.[item.slug] || serviceHeroAssets[item.slug] || item.image}
                     alt={`${item.menuTitle} service`}
                     fill
                     sizes="(max-width: 767px) 100vw, 34vw"

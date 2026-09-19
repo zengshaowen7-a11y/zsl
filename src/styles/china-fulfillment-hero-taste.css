@@ -14,7 +14,7 @@ body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
   .sdr-warehouse-hero-grid {
   container-type: inline-size;
   min-height: clamp(620px, 44vw, 720px) !important;
-  background: linear-gradient(180deg, #fff 0 72%, #0c392c 100%) !important;
+  background: #fff !important;
   border-color: var(--warehouse-taste-line) !important;
   box-shadow: 0 26px 72px rgba(17, 76, 51, .14) !important;
 }

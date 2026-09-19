@@ -1,0 +1,67 @@
+/* Shared module-title scale for the six standard service detail pages. */
+body main:is(
+  .sdr-page-automatic-order-fulfillment,
+  .sdr-page-product-sourcing,
+  .sdr-page-private-label,
+  .sdr-page-pod-fulfillment,
+  .sdr-page-3pl-fulfillment-services,
+  .sdr-page-dropshipping-supplier
+)[class][class][class][class][class][class][class][class][class][class] h2 {
+  font-size: clamp(24px, 1.8vw, 27px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  text-wrap: balance !important;
+}
+
+@media (max-width: 767px) {
+  body main:is(
+    .sdr-page-automatic-order-fulfillment,
+    .sdr-page-product-sourcing,
+    .sdr-page-private-label,
+    .sdr-page-pod-fulfillment,
+    .sdr-page-3pl-fulfillment-services,
+    .sdr-page-dropshipping-supplier
+  )[class][class][class][class][class][class][class][class][class][class] h2 {
+    font-size: clamp(20px, 5.8vw, 23px) !important;
+    line-height: 1.14 !important;
+  }
+}
+
+/* China warehouse case: green story panel with locale-safe single-line title. */
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero-grid {
+  min-height: 0 !important;
+  background: #fff !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-hero-image {
+  margin-bottom: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-case-story {
+  background: #e3f5ea !important;
+}
+
+body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+  .sdr-warehouse-case-story h2 {
+  width: 100% !important;
+  max-width: none !important;
+  font-size: 18px !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.12 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 700px) {
+  body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center
+    .sdr-warehouse-case-story h2 {
+    font-size: clamp(11px, 3.6vw, 16px) !important;
+  }
+}

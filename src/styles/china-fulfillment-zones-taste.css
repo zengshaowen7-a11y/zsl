@@ -224,6 +224,23 @@ body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[cl
 @media (max-width:900px) { body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[class][class] .sdr-related-grid { grid-template-columns:1fr 1fr !important; } body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[class][class] .sdr-related-grid > a.is-featured { grid-column:1 / -1 !important; } }
 @media (max-width:600px) { body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[class][class] .sdr-related-grid { grid-template-columns:1fr !important; } body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[class][class] .sdr-related-grid > a.is-featured { grid-column:auto !important; } }
 
+/* Unify every China fulfillment module heading with the 24–27px QC scale. */
+body main.sdr-page-china-fulfillment-center[class][class][class][class][class][class][class][class][class][class] h2 {
+  font-size: clamp(24px, 1.8vw, 27px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  text-wrap: balance !important;
+}
+
+@media (max-width: 767px) {
+  body main.sdr-page-china-fulfillment-center[class][class][class][class][class][class][class][class][class][class] h2 {
+    font-size: clamp(20px, 5.8vw, 23px) !important;
+    line-height: 1.14 !important;
+  }
+}
+
 /* Quote brief: use the same structured brief panel as quality-control-inspection. */
 body main.sdr-page-china-fulfillment-center.sdr-page-china-fulfillment-center[class][class] .sdr-quote-grid > .sdr-quote-copy {
   position: relative !important;

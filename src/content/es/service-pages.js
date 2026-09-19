@@ -1055,7 +1055,7 @@ export const servicePages = [
   {
     "slug": "quality-control-inspection",
     "menuTitle": "Control de calidad e inspección",
-    "eyebrow": "CONTROL DE CALIDAD &QUOT; INSPECTION",
+    "eyebrow": "CONTROL DE CALIDAD E INSPECCIÓN",
     "title": "Liberen lotes con pruebas.",
     "lead": "Definir los cheques que importan, inspeccionar contra un estándar aprobado, y decidir pasar, retraer o mantener antes de que el inventario avance.",
     "image": "/images/jw-content/package-scan.webp",

@@ -27,14 +27,8 @@ body main.sdr-page[class] #service-related .sdr-related-heading h2 {
 }
 
 body main.sdr-page[class] #service-related .sdr-related-heading h2::before {
-  display: block !important;
-  margin: 0 0 10px !important;
-  color: #167449 !important;
-  content: "NEXT BRAND OPERATIONS" !important;
-  font-size: 11px !important;
-  font-weight: 850 !important;
-  letter-spacing: 0.11em !important;
-  line-height: 1.35 !important;
+  display: none !important;
+  content: none !important;
 }
 
 body main.sdr-page[class] #service-related .sdr-related-heading > a {
